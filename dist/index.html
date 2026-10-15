@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eef3f8">
+  <meta name="description" content="从研究工作出发，梳理力与触觉VLA的任务、benchmark、仿真与真机评测协议。">
+  <title>力与触觉 VLA · 研究地图</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="研究地图首页">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 28V12h16M8 20h20M20 8v24"/><circle cx="28" cy="20" r="5"/><circle cx="8" cy="12" r="3"/></svg>
+      <span>力与触觉 VLA<small>研究地图</small></span>
+    </a>
+    <nav id="navigation" aria-label="主导航">
+      <button data-view="overview" class="nav-item active"><span class="nav-symbol">◈</span>分类地图</button>
+      <button data-view="works" class="nav-item"><span class="nav-symbol">▤</span>工作索引<span id="work-count" class="nav-count"></span></button>
+      <button data-view="benchmarks" class="nav-item"><span class="nav-symbol">⌘</span>评测关系</button>
+      <button data-view="guide" class="nav-item"><span class="nav-symbol">◇</span>读懂评测</button>
+    </nav>
+    <div class="sidebar-divider"></div>
+    <p class="nav-caption">按研究方向探索</p>
+    <div id="family-navigation" class="family-navigation"></div>
+    <div class="sidebar-bottom">
+      <button id="source-button" class="source-button">原始文档与来源 <span>↗</span></button>
+      <p>文献快照 <time>2026.10.15</time><br>以论文原文和官方项目为依据</p>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <div class="breadcrumb"><span>调研工作台</span><span>/</span><strong id="current-view">分类地图</strong></div>
+      <button id="search-shortcut" class="search-shortcut"><span>搜索工作、任务或指标</span><kbd>/</kbd></button>
+      <button id="mobile-menu" class="mobile-menu" aria-label="展开导航" aria-expanded="false">☰</button>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer"><span>研究条目、任务集与评分口径分开整理</span><span>原文核查 ≠ 已完成复现</span></footer>
+  </div>
+
+  <div id="compare-tray" class="compare-tray" hidden></div>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><div id="detail-content"></div></dialog>
+  <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title"><div id="compare-content"></div></dialog>
+  <dialog id="sources-dialog" class="sources-dialog" aria-labelledby="sources-title"><div id="sources-content"></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
