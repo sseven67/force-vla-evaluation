@@ -1,31 +1,57 @@
-# 力与触觉 VLA 研究地图
+# Force-VLA Evaluation Atlas
 
-一个不依赖构建工具的静态研究导航网站。默认聚焦“末端六维力 + 夹爪”，可切换查看触觉、灵巧手、全身控制及相邻路线。
+基于 **React 19 + Vite 8** 的中文研究导航网站，沿用现有私有网址。收录78项研究，明确区分VLA/VTLA、相邻控制策略、表示学习与评测/硬件资源。默认展开全部路线，可筛选“末端六维力＋夹爪”主线。
 
-功能包括分类地图、六维度工作对照、搜索与筛选、最多三项并排比较、benchmark使用关系、逐实验目的与指标、一手来源及原始调研文档下载。
+四个主页面：论文库、评测任务库、Benchmark库、横向比较。保留研究路线图、评测解释、四份原始文档下载。支持论文卡片/紧凑表格、信号来源与动作接口筛选、引用/Stars/Forks分别排序、任务覆盖矩阵、同任务跨论文协议对照、原文定位，以及浏览器本地收藏和笔记。
 
-## 数据与本地预览
+## 本地运行
 
-在本目录执行：
+需要Node.js 22.12+及Python 3.9+。在本目录执行：
+
+```powershell
+npm ci
+python prepare_data.py
+npm run dev
+```
+
+开发预览默认 http://127.0.0.1:5173/ 。正式构建：
 
 ```powershell
 python prepare_data.py
 node check.mjs
-node --check dist/app.js
-python -m http.server 8765 --bind 127.0.0.1 --directory dist
+npm run build
+npm run preview
 ```
 
-访问 http://127.0.0.1:8765/ 。也可直接打开 dist/index.html；浏览器剪贴板功能可能需要 HTTP 或 HTTPS。
+dist由Vite生成，不手工修改。部署配置保存在.openai/hosting.json，继续复用同一Site。原有纯JS页面已由React组件替代。
 
-prepare_data.py 从上级目录的四份 Markdown 调研文档整理笔记，结合结构化字段生成 dist/data.js，并复制文档至 dist/documents/。原文数据快照为2026-10-15，不是实时排名或已完成实验复现声明。
+## 更新研究资料
 
-## 文件
+- src/App.jsx：React页面、筛选、任务关联、对比与个人笔记。
+- src/styles.css：桌面/移动端样式。
+- prepare_data.py：读取上级四份调研文档及原始32项结构化数据。
+- enrich_data.py：合并新增研究、关注度记录，生成任务交叉索引。
+- research/primary_additions.json：补充的直接VLA研究。
+- research/tactile_additions.json：触觉VLA、语言与表示前序。
+- research/contact_additions.json：力控、灵巧手、硬件与仿真前序。
+- research/attention.json、attention_new.json：带来源/日期的引用及GitHub计数。
+- public/catalogue.json、public/data.js：生成后的完整目录。
+- public/documents：四份原始调研文档的副本，原文件未改动。
 
-- dist/index.html：入口
-- dist/styles.css：响应式样式
-- dist/app.js：交互和关系视图
-- dist/data.js：生成的研究目录
-- prepare_data.py：目录与证据维护
-- check.mjs：目录、六个字段与方向性引用校验
+新增论文时，在研究JSON的works数组加入一条，保留唯一id、name/fullTitle、year、source、信号、输出以及任务/目的/指标/设置/对比/资源六项字段，然后运行python prepare_data.py。页面与任务覆盖索引自动更新，无需修改React组件。若要新增任务主题，在enrich_data.py的TASKS中增加明确的关键词映射。
 
-本站将原论文采用、自建任务、场景衍生、后续重新评测分开。未核验公开情况不等于未公开，任务同名不等于共享benchmark。界面不比较不同任务/硬件的成功率高低。
+experiments数组可填写task、purpose、metric、setting、success、locator、source，为同任务跨论文页提供具体协议。只有论文级信息的记录会明确显示“任务覆盖已确认，协议待抽取”，不会自动补齐成功判据。
+
+## 计数与证据口径
+
+快照日期2026-10-16，原始四份文档为2026-10-15。引用值是 **OpenAlex cited_by_count**，并非Google Scholar或全平台总引用。本轮未取得可核验Google Scholar计数。OpenAlex覆盖、合并和更新滞后可能明显低估引用。GitHub Stars/Forks是关注度代理，不等于真实使用量。共享仓库不重复归为每篇论文的独立影响力。
+
+null=未知/未获取，0=API明确返回0；缺失值排序在后。每个可用数值附原始API和记录链接。不生成无来源的综合热度分。
+
+任务同名不意味着共享benchmark。分别记录原论文采用、自建、上游衍生、后续重新评测。任务和能力映射为阅读归纳，未逐表核实的成绩不生成排行榜。论文原图使用作者/arXiv远程资源并注明出处；网络不可用时显示明确的任务示意与原图入口。
+
+收藏、阅读状态与笔记仅保存在当前浏览器localStorage，可在来源窗口导出JSON；不跨设备同步。
+
+## 检查
+
+node check.mjs检查数据完整性、计数溯源、任务关联和benchmark关系方向。browser_check.cjs使用本机现有Playwright与Edge，对构建后HTTP站点检查主要交互、文档下载与移动布局。需要先以8765端口服务dist。qa/截图不进入发布包。

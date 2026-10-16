@@ -1,0 +1,10466 @@
+window.RESEARCH_DATA = {
+  "updated": "2026-10-16",
+  "groups": [
+    {
+      "id": "wrist",
+      "name": "末端力与力矩",
+      "color": "#24768c",
+      "subtitle": "腕部 wrench、目标力与快速接触纠偏"
+    },
+    {
+      "id": "touch",
+      "name": "指尖力与触觉",
+      "color": "#7562a9",
+      "subtitle": "夹持、接触分布、力语言与多模态表示"
+    },
+    {
+      "id": "dex",
+      "name": "灵巧手与基础策略",
+      "color": "#377b60",
+      "subtitle": "多指协作、跨传感器与规模化触觉学习"
+    },
+    {
+      "id": "body",
+      "name": "全身与专用工具",
+      "color": "#ab7238",
+      "subtitle": "移动接触、身体补偿与探头交互"
+    },
+    {
+      "id": "related",
+      "name": "相关路线与评测框架",
+      "color": "#63738a",
+      "subtitle": "关节扭矩、蒸馏、世界模型与统一评测"
+    }
+  ],
+  "works": [
+    {
+      "id": "W01",
+      "name": "ForceVLA",
+      "year": 2025,
+      "family": "wrist",
+      "signal": "估计末端6D wrench",
+      "role": "力观测",
+      "platform": "Flexiv Rizon + 夹爪",
+      "summary": "将末端力作为 VLA 的独立输入，研究接触任务与物理泛化。",
+      "tasks": "按瓶、插头、USB、擦板、削皮",
+      "metrics": "成功率、削皮长度/次数",
+      "trials": "插接/按压20；擦板10；削皮15",
+      "warning": "力作为观测，动作仍是位姿与夹爪宽度。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "notes": "### W01 — ForceVLA（2025）\n\n**对应评测：ForceVLA 原论文自建五任务真机套件，训练数据名为 ForceVLA-Data。**不是在某个通用仿真榜单上得分。\n\n- 平台/力：Flexiv Rizon 7-DoF + Dahuan夹爪；TCP外部六维 wrench，原文称估计值；动作是TCP目标位姿与夹爪宽度。\n- 任务/试验：按瓶、插头、USB各20次，擦板10次，削黄瓜15次；每次削皮包含15个stroke。数据共244条轨迹。\n- 计分：以任务成功率为主；擦板区分完成擦拭动作与彻底擦除；削皮另计平均长度与清理所需stroke。\n- 泛化/对照：无力与简单加力的π0/π0-fast；新物体、高度变化、遮挡和不稳定插座。\n\n**值得收集：**五任务配置、擦板的两级成功定义、削皮质量指标、遮挡/不稳定插座测试。局限是没有系统给出外部目标 wrench 的六轴跟踪误差。\n\n来源：[ForceVLA §4.3、§5.1–5.3](https://arxiv.org/html/2505.22159v1)、[项目页](https://sites.google.com/view/forcevla2025/)。",
+      "relations": [
+        {
+          "benchmark": "suite-w01",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "插接/按压20；擦板10；削皮15"
+        }
+      ],
+      "baseline": "π0-base / π0-fast，无力与简单力输入版本；FVLMoE消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2505.22159v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "按瓶",
+          "purpose": "检验轴向接触与高度变化下的动作调整",
+          "metric": "任务成功率",
+          "setting": "20次；另有瓶型/高度泛化"
+        },
+        {
+          "task": "插头 / USB",
+          "purpose": "检验受约束接触下对齐与纠偏",
+          "metric": "完整插入成功率",
+          "setting": "各20次；插头另设遮挡/不稳定插座"
+        },
+        {
+          "task": "擦白板",
+          "purpose": "区分执行擦拭动作与真正清洁",
+          "metric": "擦拭动作成功、完全擦除",
+          "setting": "10次；不等于目标法向力跟踪"
+        },
+        {
+          "task": "削黄瓜",
+          "purpose": "检验工具持续接触与加工质量",
+          "metric": "平均削皮长度、最少stroke",
+          "setting": "15次，每次15个stroke"
+        }
+      ],
+      "purpose": "将末端力作为 VLA 的独立输入，研究接触任务与物理泛化。",
+      "arxiv": "2505.22159",
+      "fullTitle": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+      "locators": [
+        "§4.3 数据；§5.1 次数/指标；§5.3泛化"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 5,
+        "stars": 113,
+        "forks": 16,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2505.22159",
+        "citationRecord": "https://openalex.org/W4415037842",
+        "githubSource": "https://api.github.com/repos/ft-robotic/ForceVLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/ft-robotic/ForceVLA"
+    },
+    {
+      "id": "W02",
+      "name": "ForceVLA2",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "末端6D F/T",
+      "role": "显式力—位置",
+      "platform": "Flexiv Rizon 4s + DH AG-95",
+      "summary": "将力引入动作接口，覆盖持续接触与装配。",
+      "tasks": "按瓶、清洁花瓶、擦板、取盘、齿轮",
+      "metrics": "成功率、过载与接触表现",
+      "trials": "20次 / 任务",
+      "warning": "任务成功不自动等于完整六轴力/矩跟踪。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "notes": "### W02 — ForceVLA2（2026）\n\n**对应评测：ForceVLA2 原论文在 ForceVLA2-Dataset 对应的五个自建真机任务上测试。**\n\n- 平台/力：Flexiv Rizon 4s + DH AG-95夹爪；末端6D F/T，采集300 Hz；框架输出混合力—位置动作。\n- 任务：按瓶、清洁花瓶、擦板、取盘、齿轮装配；数据为1,000条轨迹。\n- 协议：每任务20次独立试验，主指标为任务成功率。\n- 对照：ACP、π0、π0.5、ForceVLA和简单力输入版本；分析力提示、融合模块与跟随/重定位表现。\n\n**值得收集：**清洁花瓶引入变化表面法向，取盘涉及受限空间与接触，齿轮装配涉及约束接触；比只做平面擦拭更丰富。不能将避免过载的现象描述等同于完整的六轴定量力控 benchmark。\n\n来源：[ForceVLA2 §4–5及附录](https://arxiv.org/html/2603.15169v1)、[CVPR正式论文](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf)、[项目](https://sites.google.com/view/force-vla2/home)。",
+      "relations": [
+        {
+          "benchmark": "suite-w02",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 任务"
+        }
+      ],
+      "baseline": "ACP、π0、π0.5、ForceVLA、π0简单力输入；力提示/融合组件消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2603.15169v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "按瓶 / 取盘",
+          "purpose": "检验不同接触阶段的混合力—位置操作",
+          "metric": "任务成功率",
+          "setting": "各20次独立试验"
+        },
+        {
+          "task": "清洁花瓶 / 擦板",
+          "purpose": "检验持续接触与变化表面",
+          "metric": "任务成功率、定性接触表现",
+          "setting": "各20次；没有系统六轴跟踪表"
+        },
+        {
+          "task": "齿轮装配",
+          "purpose": "检验装配约束下的接触执行",
+          "metric": "任务成功率",
+          "setting": "20次；对比同任务方法"
+        }
+      ],
+      "purpose": "将力引入动作接口，覆盖持续接触与装配。",
+      "arxiv": "2603.15169",
+      "fullTitle": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+      "locators": [
+        "§4硬件与数据；§5.1五任务20次；实验/附录"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "actionOutput": "显式目标力 + 运动",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2603.15169",
+        "citationRecord": "https://openalex.org/W7138018414",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W03",
+      "name": "FAVLA",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "腕部6D F/T",
+      "role": "快速反馈",
+      "platform": "Monte / X-ARM + 夹爪",
+      "summary": "通过快慢环与自适应更新频率应对接触变化。",
+      "tasks": "USB、齿轮、翻盒、擦板",
+      "metrics": "成功率、平均峰值力、频率消融",
+      "trials": "USB25 / 齿轮30 / 翻盒20 / 擦板10",
+      "warning": "峰值力下降不等于跟踪误差下降。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2602.23648v1",
+      "notes": "### W03 — FAVLA（2026）\n\n**对应评测：FAVLA 四任务真机套件，无独立正式 benchmark 名称。**\n\n- 平台：Monte双臂平台，X-ARM手臂，末端法兰6轴F/T及相机。\n- 任务/次数：USB插入25、齿轮装配30、翻盒20、擦板10。示教分别80/80/50/50条。\n- 指标：任务成功率；齿轮装配、翻盒另测每trial峰值接触力，再跨trial平均，结果分别为7.7 N、9.9 N。\n- 对照：π0、π0+Force、TA-VLA、ForceVLA；比较力注入、力变化预测及固定/自适应频率。\n\n**值得收集：**“成功率+峰值力+更新频率消融”的配套评测。峰值降低是控制过程证据，但不是目标力跟踪误差，也不是独立的无损判据。\n\n来源：[FAVLA §4.1–4.3及附录A.4](https://arxiv.org/html/2602.23648v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w03",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "USB25 / 齿轮30 / 翻盒20 / 擦板10"
+        }
+      ],
+      "baseline": "π0、π0+Force、TA-VLA、ForceVLA；力注入、预测、自适应频率消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2602.23648v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "USB / 齿轮装配",
+          "purpose": "检验精密接触与及时修正",
+          "metric": "成功率；齿轮平均峰值力",
+          "setting": "25 / 30次；频率消融"
+        },
+        {
+          "task": "翻盒",
+          "purpose": "检验动态接触与冲击控制",
+          "metric": "成功率、平均峰值力",
+          "setting": "20次"
+        },
+        {
+          "task": "擦板",
+          "purpose": "检验持续接触执行",
+          "metric": "成功率、组件消融",
+          "setting": "10次"
+        }
+      ],
+      "purpose": "通过快慢环与自适应更新频率应对接触变化。",
+      "arxiv": "2602.23648",
+      "fullTitle": "FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Rich Robotic Manipulation",
+      "locators": [
+        "§4.1设置；§4.2峰值力；§4.3频率；附录任务"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2602.23648",
+        "citationRecord": "https://openalex.org/W7133198499",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W04",
+      "name": "DAM-VLA（异步多模态）",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "机器人内部F/T",
+      "role": "快速反馈",
+      "platform": "Franka Panda + 夹爪",
+      "summary": "分离力、视觉记忆与异步处理的贡献。",
+      "tasks": "围巾、擦板、按钮、洗手液、插座、扫珠、Lego",
+      "metrics": "成功率、耗时、平滑、tracking lag",
+      "trials": "15次 / 任务",
+      "warning": "不要与同名 Dynamic Action Model DAM-VLA 混淆；100 Hz控制不等于100 Hz重规划。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "notes": "### W04 — DAM-VLA: Decoupled Asynchronous Multimodal（2026）\n\n**对应评测：这篇异步多模态 DAM-VLA 的七任务真机套件。**注意它不是另一篇同名 Dynamic Action Model DAM-VLA。\n\n- 平台/信号：Franka Panda，机器人内部提供F/T，主评测记录100 Hz；夹爪操作。\n- 任务：叠围巾、擦板、按按钮、按洗手液、插座插入、扫珠入簸箕、Lego排列；每任务15次。\n- 指标：成功率、平均episode时长；附录另测SPARC平滑性与tracking lag。\n- 对照：同X-VLA骨干、同数据划分，拆分异步、力、视觉记忆与融合方式。\n\n**值得收集：**通过多组对照辨别力、记忆、异步各自贡献。主表控制器为100 Hz，但DAM-VLA重规划约5.5 Hz；不能将其写成每10 ms重新感知并规划。附录还单独测试200 Hz控制器。\n\n来源：[原文 §4、附录D–F](https://arxiv.org/html/2606.12105v1)、[官方项目](https://intuitive-robots.github.io/DAM-VLA/)。",
+      "relations": [
+        {
+          "benchmark": "suite-w04",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "15次 / 任务"
+        }
+      ],
+      "baseline": "同X-VLA骨干：同步/异步、无力、无记忆、拼接与门控融合；同数据划分。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2606.12105v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "七类真机任务",
+          "purpose": "分辨异步、力与记忆对操作的贡献",
+          "metric": "成功率、平均episode时长",
+          "setting": "各15次，同X-VLA骨干与数据划分"
+        },
+        {
+          "task": "Sweep / 频率补充实验",
+          "purpose": "检验动作平滑与重规划响应",
+          "metric": "SPARC、tracking lag、成功",
+          "setting": "控制器100/200 Hz与实际重规划率分开"
+        }
+      ],
+      "purpose": "分离力、视觉记忆与异步处理的贡献。",
+      "arxiv": "2606.12105",
+      "fullTitle": "DAM-VLA: Decoupled Asynchronous Multimodal Vision Language Action model",
+      "locators": [
+        "§4；附录D–F平滑、时间与频率"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.12105",
+        "citationRecord": "https://openalex.org/W7164382079",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W05",
+      "name": "CR-VLA-Force",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "末端6D F/T",
+      "role": "显式力—位置",
+      "platform": "UR5e + UMI-like 夹爪",
+      "summary": "慢策略结合柔顺执行，定量检验恒力跟踪。",
+      "tasks": "急停按钮、充电插头、旋转窗、恒力擦板",
+      "metrics": "成功率、法向力相对误差、保护停机",
+      "trials": "24–25次 / 条件",
+      "warning": "主要量化法向力，不是六轴目标同时跟踪；40 N仅属于原实验。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "notes": "### W05 — CR-VLA-Force / CC-VLA（2026）\n\n**对应评测：CR-VLA-Force论文的自建四任务、多条件真机评测；正文方法称CC-VLA。**\n\n- 平台：UR5e、UMI-like夹爪、6D F/T；慢VLA与500 Hz柔顺控制器。\n- 任务/条件：急停按钮、充电插头、旋转窗、恒力擦白板；按钮/白板降低6 cm测试OOD；另设近插座、腕相机不可见孔位的PI-pro。每条件24–25次。\n- 关键指标：成功率；白板以40 N法向力为参考，计算平均相对绝对误差，base/OOD为5.52%/8.78%；75 N触发保护停机。\n\n**值得收集：定量恒力擦板协议。**它明确测“是否跟住目标力”，比只看擦干净更贴近力控。40 N、75 N只是该论文对象和硬件设置，不能当通用阈值；该项主要检验法向力而非完整六维跟踪。\n\n来源：[原文 §4.1–4.2、Table I](https://arxiv.org/html/2609.05832v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w05",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "24–25次 / 条件"
+        }
+      ],
+      "baseline": "DP、π0、π0.5、π0+Force、ForceVLA；训练阶段、历史力编码、柔顺控制器消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.05832v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "恒力擦板",
+          "purpose": "检验是否跟踪给定法向力",
+          "metric": "相对绝对误差；保护停机",
+          "setting": "参考40 N；75 N触发保护；每条件24–25次"
+        },
+        {
+          "task": "按钮 / 擦板高度OOD",
+          "purpose": "检验位置变化后的力调节",
+          "metric": "成功率；擦板跟踪误差",
+          "setting": "高度比示教低6 cm"
+        },
+        {
+          "task": "插头近起点 PI-pro",
+          "purpose": "检验视觉不可见孔位时的接触探索",
+          "metric": "插入成功率",
+          "setting": "近插座且腕相机不可见孔位"
+        },
+        {
+          "task": "旋转窗",
+          "purpose": "检验长程约束与柔顺操作",
+          "metric": "分阶段成功率、过载现象",
+          "setting": "先抓把手再抵住窗框打开"
+        }
+      ],
+      "purpose": "慢策略结合柔顺执行，定量检验恒力跟踪。",
+      "arxiv": "2609.05832",
+      "fullTitle": "CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation",
+      "locators": [
+        "§4；Table I力跟踪；Fig.6–8结果"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "真实F/T传感器",
+      "actionOutput": "显式目标力 + 运动",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.05832",
+        "citationRecord": "https://openalex.org/W7212017135",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W06",
+      "name": "TAO-Force",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "腕部6D F/T",
+      "role": "显式力—位置",
+      "platform": "AgiBot G1 双臂",
+      "summary": "通过反事实力输入检验动作是否真正依赖力。",
+      "tasks": "重量分拣、削皮、按泵、擦板、切割",
+      "metrics": "成功率、力/矩预测MSE、路由Flip Rate",
+      "trials": "30次 / 任务 / ID或OOD条件",
+      "warning": "反事实分析是离线轨迹响应；预测MSE不是执行误差。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "notes": "### W06 — TAO-Force（2026）\n\n**对应评测：TAO-Force五任务ID/OOD套件与离线反事实力输入实验。**\n\n- 平台：AgiBot G1双臂，腕部六轴F/T；VLA与高速导纳执行链路分层。\n- 任务：同外观重量分拣、削黄瓜、按泵头、擦板、切黄瓜；ID/OOD各30次/任务。OOD包括高度、工具、光照变化。\n- 指标：任务成功；力/力矩预测MSE；固定视觉、交换空/满罐力信号，统计轨迹误差与路由Flip Rate，使用20条测试轨迹。\n- 口径：主比较平均值只包含除重量分拣外的四任务；无力基线在分拣任务标N/A。\n\n**值得收集：反事实力输入测试。**它比仅展示注意力图更直接检查“动作是否依赖力”。但这是离线轨迹响应，不是新一轮真机反事实成功率；预测MSE也不等于执行跟踪误差。\n\n来源：[原文 §V-A–V-D](https://arxiv.org/html/2609.18497v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w06",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "30次 / 任务 / ID或OOD条件"
+        }
+      ],
+      "baseline": "主任务对照GR00T N1.7、π0.5；离线力融合比较DePost、FVLMoE；分拣对无力基线标N/A。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.18497v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "五任务ID / OOD",
+          "purpose": "检验物理和视觉变化后的执行",
+          "metric": "成功率",
+          "setting": "每任务每条件30次；平均值排除分拣"
+        },
+        {
+          "task": "空 / 满罐力信号交换",
+          "purpose": "检验动作是否依赖力而非仅视觉",
+          "metric": "离线轨迹MSE、Flip Rate",
+          "setting": "20条测试轨迹，固定视觉交换力"
+        },
+        {
+          "task": "削皮接触段",
+          "purpose": "检验未来力/矩预测",
+          "metric": "Force MSE、Torque MSE",
+          "setting": "离线接触窗口；不是控制跟踪误差"
+        }
+      ],
+      "purpose": "通过反事实力输入检验动作是否真正依赖力。",
+      "arxiv": "2609.18497",
+      "fullTitle": "TAO-Force: Unifying Force-Aware Perception and Fast-Slow Control for Contact-Rich Manipulation",
+      "locators": [
+        "§V-A–D；Tables I–III，ID/OOD与反事实",
+        "§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "真实F/T传感器",
+      "actionOutput": "动作chunk + 目标力chunk + 接触概率；高速导纳控制跟踪目标力",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.18497",
+        "citationRecord": "https://openalex.org/W7213517842",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W07",
+      "name": "ForceDelta-VLA",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "估计末端6D wrench",
+      "role": "快速反馈",
+      "platform": "Franka Panda / X Square 双臂",
+      "summary": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "tasks": "五单臂：翻物、USB、开柜、按键、擦板；四双臂：拔插头、插头插入、开抽屉、擦板",
+      "metrics": "成功率、成功样本峰值/时间、延迟",
+      "trials": "20次 / 任务",
+      "warning": "峰值力与耗时表仅统计成功trial；夹爪命令不由快纠偏头控制。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "notes": "### W07 — ForceDelta-VLA（2026）\n\n**对应评测：ForceDelta-VLA自建九任务，五单臂+四双臂。**\n\n- 力来源：Franka Panda与X Square平台均用机器人关节扭矩估计末端6D wrench；不是额外腕部F/T传感器。每任务200条示教、20次评测。\n- 任务：单臂翻物、USB、开柜、按键、擦板；双臂拔插头、插插头、开抽屉、擦板。\n- 指标：成功率；峰值力和时间按**成功trial**汇总；另测参考动作延迟、未见物体与组件消融。\n- 对照：ForceVLA、π0.5、TA-VLA、ImplicitRDP和Temporal Teacher；共享任务数据与控制限制。\n\n**值得收集：单/双臂任务套件及延迟鲁棒性协议。**读取峰值力表时必须保留“成功样本”分母；快纠偏只改位姿，夹爪命令来自参考动作，不应归为夹持力闭环控制。\n\n来源：[原文 §III-A、§IV](https://arxiv.org/html/2609.18242v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w07",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 任务"
+        }
+      ],
+      "baseline": "π0.5、ForceVLA、TA-VLA、ImplicitRDP、Temporal Teacher；纠偏/延迟与历史力消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.18242v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "五单臂 / 四双臂任务",
+          "purpose": "检验快速纠偏的任务表现",
+          "metric": "成功率、成功trial峰值/时间",
+          "setting": "每任务20次，同示教/初始分布/控制限制"
+        },
+        {
+          "task": "参考动作延迟实验",
+          "purpose": "检验旧参考下纠偏能力",
+          "metric": "延迟变化后的任务与接触表现",
+          "setting": "实际延迟设置需按原文表读取"
+        },
+        {
+          "task": "未见物体",
+          "purpose": "检验接触纠偏的泛化",
+          "metric": "任务成功与力表现",
+          "setting": "原文§IV-E；不与主表分母混用"
+        }
+      ],
+      "purpose": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "arxiv": "2609.18242",
+      "fullTitle": "ForceDelta-VLA: Distilling Force-Conditioned ActionCorrections for Contact-Rich Manipulation",
+      "locators": [
+        "§IV；Table I九任务；Table II成功样本力/时间"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.18242",
+        "citationRecord": "https://openalex.org/W7213504689",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W08",
+      "name": "ForceRFT",
+      "year": 2026,
+      "family": "wrist",
+      "signal": "腕部6D F/T",
+      "role": "残差适应",
+      "platform": "Franka FR3 + Robotiq 2F-85",
+      "summary": "以在线残差学习提升限时自主完成能力。",
+      "tasks": "插头、环套柱、擦板",
+      "metrics": "自主成功次数、在线预算、力反馈消融",
+      "trials": "30次 / 设置",
+      "warning": "正式评测固定策略；在线训练预算不等于测试时继续更新。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.22840v1",
+      "notes": "### W08 — ForceRFT（2026）\n\n**对应评测：ForceRFT自建三任务、限时自主成功协议。**\n\n- 平台：Franka FR3 + Robotiq 2F-85 + OnRobot HEX-E腕F/T。\n- 任务/判据：插头完整插入、环套柱完全就位后释放；擦板须去除全部文字、抬起擦子并停止。\n- 协议：每设置30次；插入/装配限60 s、擦板180 s；不允许人工介入、trial内重置或保护停机。每任务50条示教，在线变体统一30分钟预算，正式评测固定参数。\n- 对照：SmolVLA-SFT、力条件prior、残差模仿、ForceRFT；另消融执行时wrench及增量。\n\n**值得收集：完整自主终止与匹配在线预算。**能防止“人救回来也算成功”或“持续擦不停也算完成”。主要结果是自主成功次数，不应补写论文未报告的完整力跟踪分数。\n\n来源：[原文 §V-A–V-C](https://arxiv.org/html/2609.22840v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w08",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "30次 / 设置"
+        }
+      ],
+      "baseline": "SmolVLA-SFT、力条件prior、残差模仿；移除执行时wrench/增量，匹配在线预算。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.22840v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [
+        {
+          "task": "插头 / 环套柱",
+          "purpose": "检验无人救援下自主接触完成",
+          "metric": "成功次数 / 30",
+          "setting": "60秒内就位并释放；禁止介入/重置/保护停机"
+        },
+        {
+          "task": "擦板",
+          "purpose": "检验清洁及自主终止",
+          "metric": "成功次数 / 30",
+          "setting": "180秒内去除全部文字、抬起并停止"
+        },
+        {
+          "task": "执行时力反馈与在线学习",
+          "purpose": "检验残差对实时wrench的利用",
+          "metric": "成功率、训练过程检查点",
+          "setting": "各在线变体30分钟；测试固定参数"
+        }
+      ],
+      "purpose": "以在线残差学习提升限时自主完成能力。",
+      "arxiv": "2609.22840",
+      "fullTitle": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+      "locators": [
+        "§V；限时自主成功、在线预算和消融"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.22840",
+        "citationRecord": "https://openalex.org/W7214031113",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W09",
+      "name": "Tactile-VLA",
+      "year": 2025,
+      "family": "touch",
+      "signal": "双指触觉 / 力",
+      "role": "显式力—位置",
+      "platform": "触觉夹爪",
+      "summary": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "tasks": "USB/充电器插拔、无变形抓取、擦板",
+      "metrics": "成功率、施加力、无可见变形",
+      "trials": "抓取10次 / 物体；其他按实验",
+      "warning": "跨任务零样本指力语言迁移；充电器运动示教已见过。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "notes": "### W09 — Tactile-VLA（2025）\n\n**对应评测：Tactile-VLA三组自建能力测试。**\n\n1. 力语言迁移：USB学softly/hard；充电器学过运动、没学对应力副词，测试成功率和施加力；另测未见副词。\n2. 物理常识抓取：重、轻、易碎三类物体，ID/OOD；每物体10次；成功须单次抓起且无可见变形。\n3. 失败后调整：白板训练、黑板测试，比较带推理的调力行为。\n\n**值得收集：第一组的跨任务力语义benchmark，以及第二组的无变形抓取。**“零样本”指力语言迁移，不是充电器整个任务从未训练。它是双指触觉/力路线，不应写成腕部六轴F/T。\n\n来源：[Tactile-VLA §3.1–3.4、Tables 1–4](https://arxiv.org/html/2507.09160v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w09",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "抓取10次 / 物体；其他按实验"
+        }
+      ],
+      "baseline": "π0-base、π0-fast，带/不带CoT推理；语言、ID/OOD物体和任务迁移。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2507.09160v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "arxiv": "2507.09160",
+      "fullTitle": "Tactile-VLA: Unlocking Vision-Language-Action Model's Physical Knowledge for Tactile Generalization",
+      "locators": [
+        "§3.2语言；§3.3抓取；§3.4擦拭"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "显式目标力 + 运动",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": 1,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2507.09160",
+        "citationRecord": "https://openalex.org/W4414690772",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W10",
+      "name": "TaF-VLA",
+      "year": 2026,
+      "family": "touch",
+      "signal": "触觉—力对齐",
+      "role": "触觉反馈",
+      "platform": "触觉夹爪 / 工具",
+      "summary": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "tasks": "管插入、镊子提重、拔出、擦板、切片、抓取等八类",
+      "metrics": "任务特定成功率",
+      "trials": "15次 / 任务",
+      "warning": "TaF-VLA与TA-VLA是不同工作。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "notes": "### W10 — TaF-VLA（2026）\n\n**对应评测：TaF-VLA八类自建真实接触任务。**包含管插入、镊子提重、充电宝拔出、白板擦拭、果冻切片、重部件提起、夹具食物抓取、巧克力抓取。每模型每任务15次，按任务特定二元成功条件计分。对照ACT、DP、FreeTacMan、π0.5及适配器版本。\n\n**值得收集：工具把持与不同力需求的任务覆盖。**它用易碎、抗滑、阻力与持续接触检验触觉—力对齐；主结果仍以完成率为主，不是独立的六维目标力跟踪榜单。详细成功条件见原文附录B。\n\n来源：[TaF-VLA §V及附录B](https://arxiv.org/html/2601.20321v1)。注意TaF-VLA与TA-VLA不同。",
+      "relations": [
+        {
+          "benchmark": "suite-w10",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "15次 / 任务"
+        }
+      ],
+      "baseline": "ACT、DP、FreeTacMan、π0.5，以及TaF-Adapter版本；物理对齐表示比较。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2601.20321v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "arxiv": "2601.20321",
+      "fullTitle": "Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation",
+      "locators": [
+        "§V，附录B任务协议"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 21,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2601.20321",
+        "citationRecord": "https://openalex.org/W7126012586",
+        "githubSource": "https://api.github.com/repos/mrHuangyz/TaF-VLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/mrHuangyz/TaF-VLA"
+    },
+    {
+      "id": "W11",
+      "name": "Tabero",
+      "year": 2026,
+      "family": "touch",
+      "signal": "双指各3D力",
+      "role": "显式力—位置",
+      "platform": "Isaac Lab 触觉夹爪",
+      "summary": "分开评估夹持内力、对外作用力与轻柔指令。",
+      "tasks": "LIBERO衍生轻柔抓放 / 接触任务",
+      "metrics": "SR、AG、MG、AA、MA",
+      "trials": "统一每任务次数未确认",
+      "warning": "双指各3D拼接不是腕部6D；MG/MA是最高5%样本均值。",
+      "domains": [
+        "仿真"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2605.27886v1",
+      "notes": "### W11 — Tabero / Tabero-VTLA（2026）\n\n**对应评测：Tabero benchmark，复用LIBERO场景/轨迹并迁移到Isaac Lab触觉仿真。**因此应标成“LIBERO衍生的Tabero”，不能把分数直接写成原版LIBERO。\n\n- 输入是两指各3D力的拼接，不是腕部三力三力矩；输出解耦的运动与力目标。\n- 在firm/gentle指令下报告成功率，以及AG（接触期平均夹持力）、AA（接触期平均施加力）、MG/MA（对应最高5%样本均值）。本次未确认统一的每任务rollout数，不能擅自填20或50。\n- 官方仓库含环境、评测、资产/权重入口和训练仓库链接，README记录传感器绑定与版本差异。\n\n**值得收集：夹持内力和外部作用力分开计分。**MG/MA不是单点最大值，也不是P95分位数。\n\n来源：[Tabero §3.4–3.6及实验](https://arxiv.org/html/2605.27886v1)、[官方代码](https://github.com/NathanWu7/Tabero)。",
+      "relations": [
+        {
+          "benchmark": "tabero",
+          "type": "proposes",
+          "label": "提出并评测",
+          "domain": "仿真",
+          "note": "LIBERO衍生环境；统一每任务次数未确认"
+        }
+      ],
+      "baseline": "不同触觉表示与力反馈配置；firm/gentle条件；完整基线及次数以原表为准。",
+      "openness": {
+        "status": "有代码与资源入口",
+        "url": "https://github.com/NathanWu7/Tabero",
+        "note": "环境/评测仓库可见，有数据/权重链接；版本和传感器绑定影响复现，未实际运行。"
+      },
+      "experiments": [],
+      "purpose": "分开评估夹持内力、对外作用力与轻柔指令。",
+      "arxiv": "2605.27886",
+      "fullTitle": "Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language",
+      "locators": [
+        "§3.6过程指标；实验；README复现说明"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "actionOutput": "显式目标力 + 运动",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": 0,
+        "stars": 59,
+        "forks": 11,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2605.27886",
+        "citationRecord": "https://openalex.org/W7162638780",
+        "githubSource": "https://api.github.com/repos/NathanWu7/Tabero",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/NathanWu7/Tabero"
+    },
+    {
+      "id": "W12",
+      "name": "TORL-VLA",
+      "year": 2026,
+      "family": "touch",
+      "signal": "双指各6D wrench（合12D）",
+      "role": "残差适应",
+      "platform": "Piper + Pika / Tacta",
+      "summary": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "tasks": "杯子入架、搭扣、鸡蛋、串联全流程",
+      "metrics": "子任务/全流程成功、耗时、60分钟吞吐",
+      "trials": "子任务与全流程各30次",
+      "warning": "双指6D拼为12D；对照方法已适配到共同接口。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2606.09337v1",
+      "notes": "### W12 — TORL-VLA（2026）\n\n**对应评测：TORL-VLA自建latch-box套件，三子任务+一个完整流程。**\n\n- Piper+Pika夹爪、双Tacta指尖；每指SDK给6D wrench，拼为12D，不能标为单腕6D。\n- 杯子：抓取、放进狭窄杯架、释放后稳定；搭扣：翻转并压至锁定；鸡蛋：搬运放置、稳定且无可见损伤。\n- 子任务与全任务各30次；全任务须连续完成，无介入、重置、停机、掉落或损伤。另报60分钟成功吞吐量与成功全任务平均时间。\n- 正式评测不更新参数；ForceVLA/TA-VLA对照已移植到相同π0.5与双指wrench接口。\n\n**值得收集：接触、锁定、易碎抓取结合的全流程benchmark。**基线名字相同不代表原论文的原始实现条件相同。\n\n来源：[TORL-VLA §4、附录A.1–A.2](https://arxiv.org/html/2606.09337v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w12",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "子任务与全流程各30次"
+        }
+      ],
+      "baseline": "π0.5、TA-VLA、ForceVLA、w/o RL、RLT；对照均适配同π0.5与双指接口。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2606.09337v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "arxiv": "2606.09337",
+      "fullTitle": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
+      "locators": [
+        "§4；附录A.1成功条件；A.2指尖wrench定义"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "actionOutput": "未来力预测 + 运动（非目标力跟踪）",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.09337",
+        "citationRecord": "https://openalex.org/W7164019079",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W13",
+      "name": "TA-VLA",
+      "year": 2025,
+      "family": "related",
+      "signal": "关节 torque / effort",
+      "role": "预测监督",
+      "platform": "机械臂 + 夹爪",
+      "summary": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "tasks": "接触五项：按键、充电器插入、USB插入、插座拔出、门把转动；常规五项：抓放瓶、倒液、堆方块、推到目标、开抽屉",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "trials": "20次 / 任务",
+      "warning": "关节torque不是末端6D wrench。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "notes": "### W13 — TA-VLA（2025）\n\n**对应评测：TA-VLA自建十任务真机套件。**五接触任务为按键、充电器插入、USB插入、插座拔出、门把转动；五常规任务为抓放瓶、倒液、堆方块、推到目标、开抽屉。每任务20次。比较扭矩观测、扭矩预测及二者组合，并测试不同模型和机器人。\n\n**值得收集：五接触+五常规的分组方式。**它检验收益是否只在接触任务出现，以及是否损害常规能力；输入为关节effort，不应写成腕部6D wrench。正式仓库明确有observation.effort字段。\n\n来源：[TA-VLA §6、Table 5](https://arxiv.org/html/2509.07962v1)、[官方代码](https://github.com/ZZongzheng0918/TA-VLA)。",
+      "relations": [
+        {
+          "benchmark": "suite-w13",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 任务"
+        }
+      ],
+      "baseline": "ACT、RDT、π0；torque观测、预测及组合；输入位置/历史编码消融。",
+      "openness": {
+        "status": "有官方代码",
+        "url": "https://github.com/ZZongzheng0918/TA-VLA",
+        "note": "代码与effort字段可查；完整真机资产和统一评测器未完成核验。"
+      },
+      "experiments": [],
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "arxiv": "2509.07962",
+      "fullTitle": "TA-VLA: Elucidating the Design Space of Torque-aware Vision-Language-Action Models",
+      "locators": [
+        "§6 Table 5十任务；effort数据字段"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "未来力预测 + 运动（非目标力跟踪）",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 123,
+        "forks": 19,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2509.07962",
+        "citationRecord": "https://openalex.org/W4416068640",
+        "githubSource": "https://api.github.com/repos/ZZongzheng0918/TA-VLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/ZZongzheng0918/TA-VLA"
+    },
+    {
+      "id": "W14",
+      "name": "FD-VLA",
+      "year": 2026,
+      "family": "related",
+      "signal": "训练用力，部署不读真实力",
+      "role": "力蒸馏",
+      "platform": "UR5e + 夹爪",
+      "summary": "把训练期力知识蒸馏到部署时可用表示。",
+      "tasks": "擦板、急停按钮、插头",
+      "metrics": "成功率、蒸馏与直接力输入对照",
+      "trials": "30次 / 任务",
+      "warning": "部署时不读真实力；不要与ForceDelta-VLA混淆。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2602.02142v2",
+      "notes": "### W14 — FD-VLA（2026，核对v2）\n\n**对应评测：FD-VLA自建UR5e三任务套件。**擦白板、压急停按钮、插头入插座；每任务50条示教、30次独立测试。分别要求擦除全部可见标记、按钮充分压下且不回弹、插头完全就位。比较DP3、π0、SmolVLA及真实力输入/蒸馏变体。\n\n**值得收集：传感器输入与力蒸馏的相同任务对照。**训练采集真实力，部署不读真实力，所以归入力知识蒸馏分支，不能和实时力反馈方法不加标记地混排。不要把FD-VLA与ForceDelta-VLA混淆。\n\n来源：[FD-VLA v2 §IV](https://arxiv.org/html/2602.02142v2)。",
+      "relations": [
+        {
+          "benchmark": "suite-w14",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "30次 / 任务"
+        }
+      ],
+      "baseline": "DP3、π0、SmolVLA，真实力输入、蒸馏token与模块消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2602.02142v2",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "把训练期力知识蒸馏到部署时可用表示。",
+      "arxiv": "2602.02142",
+      "fullTitle": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+      "locators": [
+        "§IV，50条示教/30次；成功标准"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "仅训练期触觉 / 力",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2602.02142",
+        "citationRecord": "https://openalex.org/W7127314369",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W15",
+      "name": "MoSS",
+      "year": 2026,
+      "family": "touch",
+      "signal": "触觉 + 关节 torque",
+      "role": "触觉反馈",
+      "platform": "FR3 + Robotiq / AnySkin",
+      "summary": "在同一骨干与任务下比较多种物理模态。",
+      "tasks": "拆杯、鸡蛋抓放、擦板、插头（v1）",
+      "metrics": "成功率、多模态与训练消融",
+      "trials": "24次 / 任务（v1）",
+      "warning": "原文v1四任务与当前主页扩展演示分开。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "notes": "### W15 — MoSS（2026，原文v1与当前主页分开）\n\n**对应评测：MoSS v1夹爪真机四任务套件。**Unstack Cup、PnP Egg、Board Erase、Plug Insertion；每任务24次；杯子分大/小各12，插头三种各8，擦板组合高度等条件。Franka FR3+Robotiq 2F-85+双AnySkin，另用关节torque。联合多任务数据微调GR00T N1.5与π0，比较触觉、torque及其组合。\n\n**值得收集：多种物理模态在同骨干上的比较协议。**平均值旁的标准差要核对统计单位，不能自动解释成多随机训练seed。当前主页另有双OpenArm+RH56F1手的纸张/重量分拣演示，不能把它们直接并入v1的四任务分数。\n\n来源：[MoSS v1 §4与附录A](https://arxiv.org/html/2604.23272v1)、[当前主页](https://jiminlx.github.io/MoSS/)。",
+      "relations": [
+        {
+          "benchmark": "suite-w15",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "24次 / 任务（v1）"
+        }
+      ],
+      "baseline": "GR00T N1.5、π0，加Tactile-VLA/ForceVLA/TA-VLA适配；单模态和多模态组合。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2604.23272v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "在同一骨干与任务下比较多种物理模态。",
+      "arxiv": "2604.23272",
+      "fullTitle": "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2604.23272",
+        "citationRecord": "https://openalex.org/W7156637228",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "W16",
+      "name": "CompVLA",
+      "year": 2026,
+      "family": "related",
+      "signal": "训练含F/T，评测策略不读F/T",
+      "role": "柔顺性",
+      "platform": "Franka FR3",
+      "summary": "评估可变柔顺性，并保留普通抓放对照。",
+      "tasks": "擦板、Pivot、Cup Dispense、Pick & Place",
+      "metrics": "成功率、常规能力保持",
+      "trials": "评测次数未确认",
+      "warning": "评测时策略不读F/T；试验次数和重复seed未确认。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "项目页核查",
+      "source": "https://compvla.github.io/",
+      "notes": "### W16 — CompVLA（当前官方项目资料）\n\n**对应评测：CompVLA自建柔顺性任务套件。**擦白板、Pivot、Cup Dispense，外加常规Pick & Place；平台Franka FR3。项目说明每任务100条示教、10 Hz同步，数据包含F/T，但评测时策略不使用F/T输入。\n\n**值得收集：不同柔顺需求+常规任务对照。**它回答可变柔顺性是否有用，不是测实时六维力融合。主页提供均值±标准差，但本次未确认对应训练重复数和每任务评测次数，保持未确认。\n\n来源：[CompVLA官方项目页](https://compvla.github.io/)。",
+      "relations": [
+        {
+          "benchmark": "suite-w16",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "评测次数未确认"
+        }
+      ],
+      "baseline": "π0、ForceVLA、TA-VLA、DP、ACT；项目页表格，重复次数未确认。",
+      "openness": {
+        "status": "项目页可查",
+        "url": "https://compvla.github.io/",
+        "note": "数据发布说明可查；试验次数和全部可运行资源未确认。"
+      },
+      "experiments": [],
+      "purpose": "评估可变柔顺性，并保留普通抓放对照。",
+      "arxiv": null,
+      "fullTitle": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "仅训练期触觉 / 力",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": null,
+        "stars": null,
+        "forks": null,
+        "citationSource": null,
+        "citationRecord": null,
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "原始来源标题一致；引用未取得"
+      },
+      "github": null
+    },
+    {
+      "id": "W17",
+      "name": "ForceFlow",
+      "year": 2026,
+      "family": "related",
+      "signal": "末端力历史",
+      "role": "相邻系统",
+      "platform": "机械臂 + 工具",
+      "summary": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "tasks": "盖章、插头、按压、USB、擦板、花瓶",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "trials": "20次 / 主任务",
+      "warning": "VLM定位加局部策略；Force Fidelity不是六轴逐时刻RMSE。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "边界参考",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "notes": "### W17 — ForceFlow（2026）\n\n**对应评测：ForceFlow自建六真机任务。**盖章、插头、按压、USB插入、擦白板、清洁花瓶；每任务20次。成功率之外，Force Fidelity比较trial的力统计量与专家参考：短接触用峰值，持续接触用接触期均值；另设物理/空间OOD测试。\n\n**值得收集：平面/曲面持续接触和物理/位置泛化分开。**该误差不是逐时刻六维wrench跟踪；其VLM定位后切换接触策略的结构，应与端到端VLA区分。\n\n来源：[ForceFlow §4.1–4.4](https://arxiv.org/html/2605.11048v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w17",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 主任务"
+        }
+      ],
+      "baseline": "π0.5、ACT、DP、ForceVLA、无力版本；接触阶段去视觉及OOD。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2605.11048v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "arxiv": "2605.11048",
+      "fullTitle": "ForceFlow: Learning to Feel and Act via Contact-Driven Flow Matching",
+      "locators": [
+        "§4.1力统计；§4.4 OOD"
+      ],
+      "kind": "相邻系统（非标准VLA）",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 13,
+        "forks": 1,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2605.11048",
+        "citationRecord": "https://openalex.org/W7161025723",
+        "githubSource": "https://api.github.com/repos/JokerESC/ForceFlow",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/JokerESC/ForceFlow"
+    },
+    {
+      "id": "W18",
+      "name": "FAWAM",
+      "year": 2026,
+      "family": "related",
+      "signal": "腕部6D F/T",
+      "role": "相邻系统",
+      "platform": "Franka + ATI F/T",
+      "summary": "世界动作模型结合力预测与残差纠偏。",
+      "tasks": "擦板、削皮、翻盒、擦花瓶",
+      "metrics": "成功率、时间、观测/预测/残差消融",
+      "trials": "20次 / 任务，最长60秒",
+      "warning": "World Action Model路线，不能只因比较VLA就归为标准VLA。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "边界参考",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "notes": "### W18 — FAWAM（2026）\n\n**对应评测：FAWAM自建四真机任务。**擦白板、削黄瓜、翻盒、擦花瓶；每方法每任务20次、每次最长60秒。Franka平台，ATI腕传感器120 Hz。对照π0.5、GE-Act、ForceVLA、TA-VLA及无残差版本，报告成功率并分析执行时间、力观测/预测/残差贡献。\n\n**值得收集：力预测与执行时残差纠偏的消融。**它是world action model路线，不能仅因比较对象含VLA就重新归类为标准VLA；也不能默认拥有统一通用benchmark。\n\n来源：[FAWAM §4、附录A](https://arxiv.org/html/2606.08555v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-w18",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 任务，最长60秒"
+        }
+      ],
+      "baseline": "π0.5、GE-Act、ForceVLA、TA-VLA；力观测/未来预测/残差纠偏拆分。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2606.08555v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "世界动作模型结合力预测与残差纠偏。",
+      "arxiv": "2606.08555",
+      "fullTitle": "FAWAM: Force-Aware World Action Models for Closed-Loop Contact-Rich Manipulation",
+      "locators": [
+        "§4与附录A；20次/60秒与传感器"
+      ],
+      "kind": "相邻系统（非标准VLA）",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.08555",
+        "citationRecord": "https://openalex.org/W7163998684",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E01",
+      "name": "FuSe / Beyond Sight",
+      "year": 2025,
+      "family": "touch",
+      "signal": "DIGIT触觉图像 + 声音",
+      "role": "触觉反馈",
+      "platform": "WidowX 250",
+      "summary": "用语言连接异质感官，分别验证Octo与VLA。",
+      "tasks": "桌面抓取、袋中抓取、按钮、跨模态组合",
+      "metrics": "成功率、未见物体与组合语义",
+      "trials": "5次 / 具体scenario",
+      "warning": "多数主实验是Octo；另有PaliGemma VLA实验，不混用成绩。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2501.04693v1",
+      "notes": "### E01 — FuSe / Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding\n\n**对应评测：FuSe论文的自建多模态真机任务集。**WidowX有双DIGIT触觉、相机与麦克风，评测桌面/袋中抓取、按钮和组合指令，包括看起来相似但触感不同的对象，以及声音与视觉语义组合。每个具体scenario重复5次，含未见物体。\n\n论文多数主实验使用Octo，另外单独验证PaliGemma 3B VLA。收集其结果时必须标清骨干，不能把所有Octo数字记为VLA成绩。官方仓库发布26,866条多模态轨迹及模型入口。\n\n**值得收集：购物袋遮挡抓取、跨模态组合指令。**它主要测试触觉信息对任务选择/动作的帮助，没有用目标力误差证明显式力伺服。\n\n来源：[原文§IV-A–G](https://arxiv.org/html/2501.04693v1)、[项目](https://fuse-model.github.io/)、[代码](https://github.com/fuse-model/FuSe)。",
+      "relations": [
+        {
+          "benchmark": "suite-e01",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "5次 / 具体scenario"
+        }
+      ],
+      "baseline": "视觉基线、不同辅助损失；Octo主实验与PaliGemma VLA实验分开。",
+      "openness": {
+        "status": "有代码与资源入口",
+        "url": "https://github.com/fuse-model/FuSe",
+        "note": "代码、26,866条轨迹和模型入口可查；未下载运行。"
+      },
+      "experiments": [],
+      "purpose": "用语言连接异质感官，分别验证Octo与VLA。",
+      "arxiv": "2501.04693",
+      "fullTitle": "Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "基础策略 + VLA实验",
+      "sensorOrigin": "触觉图像",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 14,
+        "stars": 72,
+        "forks": 2,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2501.04693",
+        "citationRecord": "https://openalex.org/W4413917725",
+        "githubSource": "https://api.github.com/repos/fuse-model/FuSe",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/fuse-model/FuSe"
+    },
+    {
+      "id": "E02",
+      "name": "VTLA",
+      "year": 2025,
+      "family": "touch",
+      "signal": "双指触觉图像",
+      "role": "触觉反馈",
+      "platform": "UR3 + Robotiq / GelStereo",
+      "summary": "从接触动作预测到闭环插孔，再验证仿真到真机。",
+      "tasks": "五孔形、不同装配间隙",
+      "metrics": "GCR、分轴L1、成功率、尝试步数",
+      "trials": "真机20次 / 设置",
+      "warning": "初始已握住零件；评测局部接触纠偏而非全流程抓取。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2505.09577v1",
+      "notes": "### E02 — VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation\n\n**对应评测：VTLA自建插孔套件，沿用TLA的动作构造并扩展视觉与DPO。**仿真五类孔形、0.6–2.0 mm间隙；UR3+Robotiq 2F-85+双GelStereo 2.0进行真机验证，每设置20次。一次episode最多15次插入尝试，超过算失败。\n\n离线报告GCR（x/y/rz动作均正确）和分轴L1；闭环报告成功率和尝试步数。真实验证还比较间隙、未见孔形、TLA/VLA对照。旋转误差单位为度，不能与毫米直接求平均。\n\n**值得收集：动作预测准确度 → 闭环成功/步数 → Sim2Real的三层评测。**触觉来自接触图像，不能把其成功率当作指定牛顿力跟踪能力。\n\n来源：[VTLA原文§3–4与Tables 5–7](https://arxiv.org/html/2505.09577v1)、[正式期刊页](https://www.sciencedirect.com/science/article/pii/S2667379726000616)。",
+      "relations": [
+        {
+          "benchmark": "suite-e02",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "仿真 + 真机",
+          "note": "真机20次 / 设置"
+        }
+      ],
+      "baseline": "DP、VLA、TLA；DPO-1k/2k与无DPO；仿真和真机孔形/间隙比较。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2505.09577v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "从接触动作预测到闭环插孔，再验证仿真到真机。",
+      "arxiv": "2505.09577",
+      "fullTitle": "VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "触觉图像",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 7,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2505.09577",
+        "citationRecord": "https://openalex.org/W4414940030",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E03",
+      "name": "FTP-1",
+      "year": 2026,
+      "family": "dex",
+      "signal": "多类触觉传感器",
+      "role": "触觉反馈",
+      "platform": "Franka / Sharpa / Dexmate / Flexiv",
+      "summary": "同一触觉基础策略跨传感器与本体适配。",
+      "tasks": "UniVTAC六项：Lift Bottle、Pull-out Key、Lift Can、Put Bottle、Insert Hole、Insert Tube；真机：气球、装配、拧盖、翻书、擦盘；未见传感器：Hanoi插入、USB、擦白板",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "trials": "仿真100；真机20次 / 任务",
+      "warning": "只使用UniVTAC六任务；真机套件另建，非六任务原样迁移。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "notes": "### E03 — FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation\n\n**对应评测：FTP-1的UniVTAC六任务子集+自建多本体真机套件。**仿真每任务100次；真机20次。六项仿真为Lift Bottle、Pull-out Key、Lift Can、Put Bottle、Insert Hole、Insert Tube；另外报告排除两个lift任务的平均，以避免视觉已能解决的任务稀释触觉贡献。\n\n真机含Sharpa North的气球、修手/小件装配、拧盖，以及Sharpa&Dexmate翻书/擦盘；Fix Hand表中有Tear/Finish两列，不能当成独立物体任务随意计数。未见传感器另测Insert Hanoi、USB、Wipe Board。\n\n**值得收集：跨传感器迁移+去除视觉容易任务的分组统计。**官方预训练覆盖多传感器类型，但输出动作并不统一等于指定力闭环。\n\n来源：[FTP-1§3–4、附录E](https://arxiv.org/html/2606.13102v1)、[项目](https://ftp1-policy.github.io/)、[代码](https://github.com/michaelyuancb/ftp1-policy)。",
+      "relations": [
+        {
+          "benchmark": "univtac",
+          "type": "adopts",
+          "label": "采用6任务子集",
+          "domain": "仿真",
+          "note": "每任务50条官方示教；100次闭环仿真"
+        },
+        {
+          "benchmark": "suite-e03",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "仿真100；真机20次 / 任务"
+        }
+      ],
+      "baseline": "π0.5、Tactile-VLA、未做FTP-1预训练版本；原表星号基线引用原benchmark结果。",
+      "openness": {
+        "status": "有代码与资源入口",
+        "url": "https://github.com/michaelyuancb/ftp1-policy",
+        "note": "官方代码/模型/数据入口可查；各真机对象与硬件需自行搭建。"
+      },
+      "experiments": [],
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "arxiv": "2606.13102",
+      "fullTitle": "FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 133,
+        "forks": 8,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.13102",
+        "citationRecord": "https://openalex.org/W7164573771",
+        "githubSource": "https://api.github.com/repos/michaelyuancb/ftp1-policy",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/michaelyuancb/ftp1-policy"
+    },
+    {
+      "id": "E04",
+      "name": "N₀-VTLA",
+      "year": 2026,
+      "family": "dex",
+      "signal": "潜在触觉 tokens",
+      "role": "触觉反馈",
+      "platform": "单臂 / 双臂",
+      "summary": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "tasks": "UniVTAC八项（含抓取、钥匙、插孔、管/HDMI插入及分类）；NeoReal九项含插头、纸箱/毛巾折叠、瓶站立与装袋；NeoSim十二项另计",
+      "metrics": "成功率、100分阶段rubric",
+      "trials": "按任务分配；不统一填次数",
+      "warning": "NeoData是训练数据，NeoReal/NeoSim是评测；阶段进度和SR不同。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "notes": "### E04 — N₀-VTLA: Scaling Vision–Tactile–Language–Action Model with Latent Tactile Tokens\n\n**对应评测：NeoReal九任务、UniVTAC八任务+NeoSim十二任务，以及ALTER长流程改进。**NeoReal同时报告成功率与100分阶段rubric；例如插座插接、纸箱折叠、瓶站立、毛巾折叠/装袋等任务或阶段。每任务trial预算不同，本文不擅自统一成20或30。\n\n仿真二十任务按八个UniVTAC与十二个NeoSim分别统计；每任务100条示教。ALTER是在固定部署数据上做离线策略改进，不能与未使用这些数据的基础模型无说明混排。\n\n**值得收集：NeoReal/NeoSim与阶段rubric。**预训练数据NeoData、仿真benchmark NeoSim和真实benchmark NeoReal是不同资源；任务进度分不等于全任务成功率。\n\n来源：[N₀-VTLA§5、附录E](https://arxiv.org/html/2607.23782v1)、[项目](https://research.neoteai.com/n0-vtla/)、[代码](https://github.com/neoteai/N0-VTLA)。",
+      "relations": [
+        {
+          "benchmark": "univtac",
+          "type": "adopts",
+          "label": "采用8个任务",
+          "domain": "仿真",
+          "note": "八项原始任务，与NeoSim十二项分开统计"
+        },
+        {
+          "benchmark": "neoreal",
+          "type": "adopts",
+          "label": "采用并评测",
+          "domain": "真机",
+          "note": "见配套报告与任务协议"
+        },
+        {
+          "benchmark": "neosim",
+          "type": "adopts",
+          "label": "采用并评测",
+          "domain": "仿真",
+          "note": "见配套报告与任务协议"
+        }
+      ],
+      "baseline": "ACT、π0.5及多种基础策略；无触觉退化与ALTER固定数据改进。",
+      "openness": {
+        "status": "有官方代码",
+        "url": "https://github.com/neoteai/N0-VTLA",
+        "note": "官方仓库与项目可查；NeoReal每任务资源完整性未运行核验。"
+      },
+      "experiments": [],
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "arxiv": "2607.23782",
+      "fullTitle": "$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 197,
+        "forks": 12,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2607.23782",
+        "citationRecord": "https://openalex.org/W7171491879",
+        "githubSource": "https://api.github.com/repos/neoteai/N0-VTLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/neoteai/N0-VTLA"
+    },
+    {
+      "id": "E05",
+      "name": "T-Rex",
+      "year": 2026,
+      "family": "dex",
+      "signal": "指端力向量 + 形变图",
+      "role": "快速反馈",
+      "platform": "Dexmate Vega-1 + 双22-DoF手",
+      "summary": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "tasks": "翻页、移蛋、擦盘、挤膏、拆杯、开锁等十二项",
+      "metrics": "任务分数、多阶段progress rubric",
+      "trials": "16次 / 任务",
+      "warning": "多阶段含progress评分，不能当成全任务二元成功率。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "notes": "### E05 — T-Rex: Tactile-Reactive Dexterous Manipulation\n\n**对应评测：T-Rex自建12任务灵巧手套件。**双臂Dexmate Vega-1+两只22-DoF Sharpa Wave手，输入各指力向量及形变图。十二项包括翻页、移蛋、擦盘、挤膏、拆杯、麻将分拣、开锁、补药片、酸碱中和、抽卡、发牌、拧灯泡。\n\n每任务16次，位置/旋转随机；多阶段采用progress-based rubric，所以其平均“success rate”需结合附录评分读取，不能简单当192次整任务二元成功。对照π0.5、加触觉版本、EgoScale、Tactile-VLA、RDP等，另测力/形变模态、异步、示教效率。\n\n**值得收集：T-Rex十二任务及评分rubric。**覆盖夹爪难完成的多指、形变与轻柔操作；不是逐轴wrench跟踪基准。\n\n来源：[T-Rex§5.1–5.3、附录F](https://arxiv.org/html/2606.17055v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-e05",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "16次 / 任务"
+        }
+      ],
+      "baseline": "ViTacFormer、RDP、Tactile-VLA、π0.5、EgoScale、π0.5+tactile；去触觉/形变/异步。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2606.17055v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "arxiv": "2606.17055",
+      "fullTitle": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 340,
+        "forks": 40,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.17055",
+        "citationRecord": "https://openalex.org/W7164883918",
+        "githubSource": "https://api.github.com/repos/ZhuoyangLiu2005/T-Rex",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/ZhuoyangLiu2005/T-Rex"
+    },
+    {
+      "id": "E06",
+      "name": "STAR",
+      "year": 2026,
+      "family": "dex",
+      "signal": "稀疏大面积触觉",
+      "role": "触觉反馈",
+      "platform": "双臂灵巧手",
+      "summary": "针对触觉的空间、时间与信息稀疏性学习。",
+      "tasks": "耳机翻转、叠书取出、明信片、多物体抓取",
+      "metrics": "SR、TCR、去/掩码触觉消融",
+      "trials": "20次 / 任务",
+      "warning": "物体进入任务后训练；不是完全未见物体零样本。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.12549v1",
+      "notes": "### E06 — STAR: Sparse Tactile Representation Learning in Vision–Tactile–Language–Action Models for Dexterous Manipulation\n\n**对应评测：STAR自建四任务真机套件。**耳机180°翻转、紧叠书取出、明信片滑移拾取、多物体分指抓取。每任务20次，共用随机初始配置；每项后训练100条轨迹，测试物体未进入200小时预训练集，但进入了任务后训练，不能称为完全未见物体零样本。\n\n同时报告SR和TCR（子任务完成比例）；例如书任务按拉出/抓取/取出/放置分阶段。另消融去触觉、推理时掩码触觉、稀疏/全局tokens和未来触觉预测。\n\n**值得收集：多指接触丰富与接触稀疏任务的成对分析。**避免所有触觉收益都来自额外数据，原文有同数据无触觉对照。\n\n来源：[STAR§V、附录任务描述](https://arxiv.org/html/2609.12549v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-e06",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 任务"
+        }
+      ],
+      "baseline": "GR00T N1.7、LDA-1B、π0.5、同数据Dex版本；去/掩码触觉与训练组件。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.12549v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "针对触觉的空间、时间与信息稀疏性学习。",
+      "arxiv": "2609.12549",
+      "fullTitle": "STAR: Sparse Tactile Representation Learning in Vision-Tactile-Language-Action Models for Dexterous Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.12549",
+        "citationRecord": "https://openalex.org/W7212586568",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E07",
+      "name": "TacVLA",
+      "year": 2026,
+      "family": "touch",
+      "signal": "15×8压力阵列",
+      "role": "触觉反馈",
+      "platform": "Franka Panda + 单指传感器",
+      "summary": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "tasks": "四类约束锁定拆解（按压、扭转、滑动等）＋箱内抓取",
+      "metrics": "成功率、遮挡与运行扰动",
+      "trials": "20次 / 主任务",
+      "warning": "部分原表基线百分比与次数冲突，需逐格复核。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2603.12665v1",
+      "notes": "### E07 — TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation\n\n**对应评测：TacVLA自建四类约束锁定拆解+箱内拾取。**Franka单指15×8压力阵列，π0.5骨干；每任务50条示教、主结果20次评测。拆解需要按压、扭转、滑动等特定动作；箱内取物限制相机可见性，另测遮挡与人扰动。\n\n**值得收集：约束锁定拆解与遮挡条件。**比较无触觉、无门控触觉和接触门控，回答“接触阶段才用触觉是否有效”。原表部分基线百分比与成功次数出现不一致，不建议照抄有冲突单元格；优先保存原表与复核分母。\n\n来源：[TacVLA§IV、Table II](https://arxiv.org/html/2603.12665v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-e07",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "20次 / 主任务"
+        }
+      ],
+      "baseline": "π0.5、DP+tactile、3D DP+tactile、无门控；原表有个别次数/百分比冲突。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2603.12665v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "arxiv": "2603.12665",
+      "fullTitle": "TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2603.12665",
+        "citationRecord": "https://openalex.org/W7136130211",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E08",
+      "name": "FWBC-VLA",
+      "year": 2026,
+      "family": "body",
+      "signal": "关节残差估力",
+      "role": "全身补偿",
+      "platform": "M20S 轮足 + CM1机械臂",
+      "summary": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "tasks": "移动开门、闭门器负载、擦白板",
+      "metrics": "阶段/最终成功率、估力误差",
+      "trials": "25次 / 任务",
+      "warning": "身体/腿参与补偿，与固定臂结果不能直接排行。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2609.03889v2",
+      "notes": "### E08 — FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation\n\n**对应评测：FWBC-VLA自建移动开门与擦白板套件。**DeepRobotics M20S轮足机器人+机械臂+夹爪，核心扩展是机器人身体参与接触补偿，力由关节残差等估计，不是固定台式机械臂的腕力输入问题。\n\n每任务25次，按接近、抓取、操作、放置/推门、离开/过门分阶段；开门有/无闭门器，带闭门器需约50 N推力。擦板污迹ID/OOD比例1:2。另做估力准确度/接触识别，以及force interface、body compensation消融；对照含真实F/T输入版本。\n\n**值得收集：阶段成功率与最终完成率。**“门把压下”或“擦干净”不等于完成离开/穿门全流程；力估计误差和整任务成功也分开计分。\n\n来源：[FWBC-VLA v2§5、Tables 1–3](https://arxiv.org/html/2609.03889v2)。",
+      "relations": [
+        {
+          "benchmark": "suite-e08",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "25次 / 任务"
+        }
+      ],
+      "baseline": "OpenVLA、StarVLA、π0.5、GR00T、ACP、ForceVLA、真实力GT；全身补偿消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2609.03889v2",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "arxiv": "2609.03889",
+      "fullTitle": "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2609.03889",
+        "citationRecord": "https://openalex.org/W7208757530",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E09",
+      "name": "Opt2VLA",
+      "year": 2026,
+      "family": "body",
+      "signal": "关节 torque 历史",
+      "role": "显式力—位置",
+      "platform": "Digit 人形机器人",
+      "summary": "将任务完成、力意图和实际力实现联合计分。",
+      "tasks": "搬箱、推箱、擦拭；轻/中/重力指令",
+      "metrics": "Task + Intent + Tracking、MAE",
+      "trials": "仿真90次 / 变体；VLA真机45次",
+      "warning": "主要依据官方项目页；三关联合成功与RL-only试验分开。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "项目页核查",
+      "source": "https://opt2vla.github.io/",
+      "notes": "### E09 — Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation\n\n**对应评测：Opt2VLA在Digit上的搬箱、架上推箱、表面擦拭。**关节torque历史作为反馈，策略输出双手/双脚位置与双手接触力参考；是全身协调和目标力接口，并非夹爪宽度控制。\n\n项目页对九种VLA配置分别运行90个仿真episode（每任务30），共用FCT低层控制器；另有45次VLA闭环真机测力。评分串联三关：任务完成、发出的力命令符合语言力区间、实际力与命令均值差满足阈值；低层控制器另测force MAE。\n\n**值得收集：Task+Intent+Tracking联合成功。**取样窗口与无效接触trial处理有单独说明；应与RL-only控制器试验分开。当前主要核查官方项目，未据此认定已是高引用经典。\n\n来源：[官方项目的Closed-loop evaluation与硬件结果](https://opt2vla.github.io/)。",
+      "relations": [
+        {
+          "benchmark": "suite-e09",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "仿真 + 真机",
+          "note": "仿真90次 / 变体；VLA真机45次"
+        }
+      ],
+      "baseline": "九种共同FCT控制器的VLA配置；torque历史/预测/编码与骨干微调。",
+      "openness": {
+        "status": "项目页可查",
+        "url": "https://opt2vla.github.io/",
+        "note": "含评测记录和计分说明；未核验完整可复现代码/数据包。"
+      },
+      "experiments": [],
+      "purpose": "将任务完成、力意图和实际力实现联合计分。",
+      "arxiv": null,
+      "fullTitle": "Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "actionOutput": "显式目标力 + 运动",
+      "actionMode": "显式目标力",
+      "attention": {
+        "citations": null,
+        "stars": null,
+        "forks": null,
+        "citationSource": null,
+        "citationRecord": null,
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "原始来源标题一致；引用未取得"
+      },
+      "github": null
+    },
+    {
+      "id": "E10",
+      "name": "ForceU-VLA",
+      "year": 2026,
+      "family": "body",
+      "signal": "6D F/T + 超声图像",
+      "role": "力观测",
+      "platform": "超声探头工具",
+      "summary": "以专业成像结果与接触过程共同验证策略。",
+      "tasks": "肝 / 肾五个标准超声切面",
+      "metrics": "切面获取成功、扫描步数、力信号",
+      "trials": "45次 / 任务，BMI组各15",
+      "warning": "标准切面为专业任务结果；力曲线不等于全面舒适/安全证实。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "notes": "### E10 — ForceU-VLA: A Force-Aware Vision–Language–Action Model for Embodied Ultrasound Scanning\n\n**对应评测：ForceU-VLA-Data对应肝/肾五种标准超声切面。**专用探头接触身体，联合RGB、超声图像与6D F/T；不属于夹爪抓放。数据450条示教。\n\n每任务45次，三BMI组各15；成功定义为获得目标标准切面，另报扫描步数与力信号，比较π0/π0.5/ForceVLA及模态消融。这里的任务目标是成像质量/标准切面获取，接触力是过程质量因素。\n\n**值得收集：任务专业结果+交互过程的联合观察。**论文力曲线对舒适/安全属于间接证据，不能写成已验证所有受试者舒适性。原文和当前仓库对示教参与者/操作者口径存在差异，450条可核验，但不把“10名操作者”写成确定事实。\n\n来源：[原文§4–5](https://arxiv.org/html/2608.15009v1)、[官方仓库](https://github.com/VMVLab/ForceU-VLA)。",
+      "relations": [
+        {
+          "benchmark": "suite-e10",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "45次 / 任务，BMI组各15"
+        }
+      ],
+      "baseline": "π0、π0.5、ForceVLA及US/F/阶段调制消融。",
+      "openness": {
+        "status": "部分数据入口",
+        "url": "https://github.com/VMVLab/ForceU-VLA",
+        "note": "仓库与部分数据入口可查；操作者/受试者口径需进一步核对。"
+      },
+      "experiments": [],
+      "purpose": "以专业成像结果与接触过程共同验证策略。",
+      "arxiv": "2608.15009",
+      "fullTitle": "ForceU-VLA: A Force-Aware Vision-Language-Action Model for Embodied Ultrasound Scanning",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "触觉图像",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 5,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2608.15009",
+        "citationRecord": "https://openalex.org/W7203693916",
+        "githubSource": "https://api.github.com/repos/VMVLab/ForceU-VLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/VMVLab/ForceU-VLA"
+    },
+    {
+      "id": "E11",
+      "name": "TLA",
+      "year": 2025,
+      "family": "related",
+      "signal": "触觉 + 语言，无视觉",
+      "role": "前序工作",
+      "platform": "插孔环境",
+      "summary": "早期触觉—语言—动作模型，局部纠偏而非完整抓取。",
+      "tasks": "不同孔形与间隙的插孔",
+      "metrics": "GCR、L1、闭环成功率/步数",
+      "trials": "闭环50次 / 设置",
+      "warning": "不含视觉，作为TLA前序单列。",
+      "domains": [
+        "仿真"
+      ],
+      "scope": "边界参考",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2503.08548v1",
+      "notes": "### E11 — TLA: Tactile-Language-Action Model for Contact-Rich Manipulation\n\n**对应评测：TLA插孔数据与闭环插入套件。**这是触觉+语言动作模型，不含视觉输入，因此作为VTLA前序收集。\n\n离线用24k触觉—动作—指令样本，测GCR和分轴L1；闭环对不同孔形、1.0/1.6/2.0 mm间隙，每设置50次，最多15次尝试；报告成功率与成功episode平均步数。孔已握在手中，从近孔位开始，不涵盖完整视觉定位抓取。\n\n**值得收集：孔形/间隙泛化和局部接触纠偏。**VTLA后续加入真机Sim2Real比较，不能将后续论文的真机结果反写成TLA原论文结果。\n\n来源：[TLA§V](https://arxiv.org/html/2503.08548v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-e11",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "仿真",
+          "note": "闭环50次 / 设置"
+        }
+      ],
+      "baseline": "BC、DP、单孔/多孔TLA；ID/OOD孔形与公差。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2503.08548v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "早期触觉—语言—动作模型，局部纠偏而非完整抓取。",
+      "arxiv": "2503.08548",
+      "fullTitle": "TLA: Tactile-Language-Action Model for Contact-Rich Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "相邻系统（非标准VLA）",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 10,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2503.08548",
+        "citationRecord": "https://openalex.org/W7122803719",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": null
+    },
+    {
+      "id": "E12",
+      "name": "OmniVTA",
+      "year": 2026,
+      "family": "related",
+      "signal": "视觉—触觉世界模型",
+      "role": "相邻系统",
+      "platform": "触觉机械臂 / 工具",
+      "summary": "规划与反射控制结合，主动扰动接触再恢复。",
+      "tasks": "擦、削、切、装配、抓取、调姿",
+      "metrics": "成功/加工比例、物体/工具/扰动泛化",
+      "trials": "常规10次 / 物体；泛化另设",
+      "warning": "世界模型+反射控制相邻系统，非典型通用VLA。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "边界参考",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2603.19201v1",
+      "notes": "### E12 — OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation\n\n**对应评测：OmniVTA六类自建任务。**擦拭、削皮、切割、装配、抓取、调姿，视觉—触觉世界模型+扩散规划器+触觉反射控制。它是相邻系统，不因比较VLA就自动称为通用VLA。\n\n每类2–4物体、每物体10次；高度泛化每物体每高度5次，换刀具10次，突然上/下移动对象以破坏接触的扰动试验每任务10次。计分含加工长度比例、完整插入/无损抓取、调姿角度等，也约束不损坏触觉传感器。\n\n**值得收集：主动打断接触再恢复的扰动协议。**比只看初始位置随机化更直接测在线反馈；成功率、加工比例和传感器无损需按原文任务分别解释。\n\n来源：[OmniVTA§V-A–B](https://arxiv.org/html/2603.19201v1)。",
+      "relations": [
+        {
+          "benchmark": "suite-e12",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "常规10次 / 物体；泛化另设"
+        }
+      ],
+      "baseline": "原文视觉/触觉策略与RDP；无反射控制器版本；完整接口以原文为准。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2603.19201v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "规划与反射控制结合，主动扰动接触再恢复。",
+      "arxiv": "2603.19201",
+      "fullTitle": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "相邻系统（非标准VLA）",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 60,
+        "forks": 1,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2603.19201",
+        "citationRecord": "https://openalex.org/W7139961659",
+        "githubSource": "https://api.github.com/repos/MrSecant/OmniVTA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/MrSecant/OmniVTA"
+    },
+    {
+      "id": "B01",
+      "name": "ForceBench",
+      "year": 2026,
+      "family": "related",
+      "signal": "仿真腕部6D反力",
+      "role": "评测框架",
+      "platform": "Isaac Lab / Franka",
+      "summary": "固定数据、骨干与种子，比较六维力接入设计。",
+      "tasks": "仿真八项：重量分拣、重心分拣、水龙头转动/方向、炉灶旋转/按压、抽屉拉动、螺母旋入；五项真机验证另计",
+      "metrics": "任务/类别成功率、诊断结果",
+      "trials": "仿真200；真机20次 / 任务-方法",
+      "warning": "2026-10-14新发布；完整发布包未确认；主要配置50步执行完才再查询。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "评测研究",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "notes": "### ForceBench 的使用关系\n\nForceBench包含八个仿真任务与五个真实验证任务，以统一数据、骨干与种子比较力接入方案。原文仿真每任务—方法200次。\n\nForceBench重新评估ForceVLA和ForceFlow等外部方法。这个方向是“后续评测”，不意味着早期方法原论文已采用ForceBench。\n\n来源：[原文§III、§V](https://arxiv.org/html/2610.19604v1)。",
+      "relations": [
+        {
+          "benchmark": "forcebench",
+          "type": "proposes",
+          "label": "提出并评测",
+          "domain": "仿真 + 真机",
+          "note": "八仿真任务、五真机验证任务"
+        }
+      ],
+      "baseline": "同π0.5骨干无力+六种融合设计；π0、ForceVLA、ForceFlow作外部比较。",
+      "openness": {
+        "status": "完整发布包待核验",
+        "url": "https://forcebench-platform.github.io/",
+        "note": "论文已发布；尚未确认完整代码、数据、权重和可运行环境。"
+      },
+      "experiments": [],
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "arxiv": "2610.19604",
+      "fullTitle": "ForceBench: Benchmarking Force Integration for Robotic Manipulation",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "评测资源",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "attention": {
+        "citations": null,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2610.19604",
+        "citationRecord": null,
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "原始来源标题一致；引用未取得"
+      },
+      "github": null
+    },
+    {
+      "id": "X01",
+      "name": "SimpleTouch",
+      "year": 2026,
+      "family": "dex",
+      "signal": "预训练触觉表示",
+      "role": "触觉反馈",
+      "platform": "UniVTAC / 真机",
+      "summary": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "tasks": "UniVTAC六项：Lift Bottle、Pull-out Key、Lift Can、Put Bottle、Insert Hole、Insert Tube；另四项真机任务",
+      "metrics": "成功率、执行horizon消融",
+      "trials": "仿真100；真机20次 / 任务",
+      "warning": "仅为本轮补充核验；不将原表基线结果都称为重新测试。",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "evidence": "原文核查",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "notes": "### SimpleTouch：补充核验\n\n在UniVTAC六任务子集上微调与闭环评测，沿用FTP-1排除Grasp Classify和Insert HDMI。每任务50条示教、100次仿真，另有四个真实任务、20次/任务。\n\n附录明确使用官方任务随机化与成功定义。接触插入任务缩短执行horizon，控制率、预测块长、重规划间隔需要分别记录。\n\n来源：[原文与附录](https://arxiv.org/html/2610.02784v1)。",
+      "relations": [
+        {
+          "benchmark": "univtac",
+          "type": "adopts",
+          "label": "采用6任务子集",
+          "domain": "仿真",
+          "note": "每任务50条官方示教；100次闭环仿真"
+        },
+        {
+          "benchmark": "suite-x01",
+          "type": "self",
+          "label": "自建并评测",
+          "domain": "真机",
+          "note": "仿真100；真机20次 / 任务"
+        }
+      ],
+      "baseline": "π0.5、Tactile-VLA、FTP-π0.5、FTP-1；编码器/未来预测/执行horizon消融。",
+      "openness": {
+        "status": "公开情况待核验",
+        "url": "https://arxiv.org/html/2610.02784v1",
+        "note": "论文原文已核查；代码、数据、评测环境的完整公开情况尚未逐项确认，不等于未公开。"
+      },
+      "experiments": [],
+      "purpose": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "arxiv": "2610.02784",
+      "fullTitle": "SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?",
+      "locators": [
+        "原调研笔记中的实验章节与表格；见下方来源"
+      ],
+      "kind": "VLA / VTLA",
+      "sensorOrigin": "其他 / 待核验",
+      "actionOutput": "运动动作；力用于观测 / 纠偏",
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 17,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2610.02784",
+        "citationRecord": "https://openalex.org/W7220470568",
+        "githubSource": "https://api.github.com/repos/ccyydd/SimpleTouch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "github": "https://github.com/ccyydd/SimpleTouch"
+    },
+    {
+      "id": "P01",
+      "name": "FACT（接触诊断）",
+      "fullTitle": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+      "year": 2026,
+      "family": "wrist",
+      "kind": "VLA",
+      "arxiv": "2608.01402",
+      "github": "https://github.com/stanford-iprl-lab/fact",
+      "source": "https://arxiv.org/html/2608.01402v1",
+      "project": "https://stanford-iprl-lab.github.io/fact/",
+      "signal": "Bota SensONE 腕部六轴F/T，400 Hz",
+      "sensorOrigin": "真实F/T传感器",
+      "role": "力观测",
+      "platform": "Franka FR3 + Robotiq夹爪",
+      "actionOutput": "末端位姿增量；1 kHz笛卡尔阻抗控制",
+      "summary": "区分精度失败与力失败，用同骨干对照和信号替换检查模型是否真正用力。",
+      "purpose": "区分噪声训练日程与力融合本身的贡献。",
+      "tasks": "插头、USB、按钮、擦白板、钥匙插入",
+      "metrics": "成功率、Fisher精确检验p值；不是目标力跟踪误差",
+      "trials": "每方法每任务40次，60秒超时；目标32×20 cm、起点5 cm立方体随机化；训练与测试分布相同。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "baseline": "同π0.5和100条/任务示教：π0.5、ForceVLA、TA-VLA；LN日程、当前力/历史/门控消融；真实力替换高斯噪声。",
+      "warning": "与另一篇Force–Action–Track FACT不同；主评测同分布，p值不是效果量。",
+      "openness": {
+        "status": "项目与仓库入口",
+        "url": "https://stanford-iprl-lab.github.io/fact/",
+        "note": "原文承诺代码和STL；是否完整发布需检查仓库，不自动视为通用benchmark。"
+      },
+      "locators": [
+        "§6、Tables 1–4",
+        "Appendix A–B、Table A.1"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
+        "caption": "FACT 插头插入实验，原文Figure 1（局部）",
+        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
+      },
+      "experiments": [
+        {
+          "task": "插头 / USB",
+          "purpose": "亚毫米对齐与接触纠偏",
+          "metric": "成功率及Fisher检验",
+          "setting": "各40次；60秒",
+          "success": "在60秒内完全插入；附录A细分对齐与就位失败",
+          "locator": "§6、Appendix A",
+          "source": "https://arxiv.org/html/2608.01402v1#S6"
+        },
+        {
+          "task": "擦白板",
+          "purpose": "持续接触质量",
+          "metric": "任务成功率",
+          "setting": "40次，改变墨迹",
+          "success": "擦除标记区域，维持有效接触",
+          "locator": "Appendix A",
+          "source": "https://arxiv.org/html/2608.01402v1#A1"
+        },
+        {
+          "task": "钥匙 / 按钮",
+          "purpose": "利用终点力特征而非仅视觉",
+          "metric": "成功率、去真实力消融",
+          "setting": "钥匙视觉模糊；不同长度钥匙外观相似",
+          "success": "钥匙正确就位；按钮触发锁定",
+          "locator": "Appendix A、Table A.1",
+          "source": "https://arxiv.org/html/2608.01402v1#A1"
+        }
+      ],
+      "notes": "自建五任务；USB组件来自NIST assembly board，但整体协议不等同NIST统一benchmark。来源：原文§6及附录A–B。",
+      "resultHighlights": [
+        {
+          "text": "五任务平均成功率66.0%；同π0.5骨干ForceVLA为40.5%，π0.5为39.0%。",
+          "locator": "Table 1",
+          "source": "https://arxiv.org/html/2608.01402v1#S6.T1",
+          "condition": "每方法每任务40次，同分布随机初态，60秒超时。"
+        }
+      ],
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-p01",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 15,
+        "forks": 2,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2608.01402",
+        "citationRecord": "https://openalex.org/W7172446485",
+        "githubSource": "https://api.github.com/repos/stanford-iprl-lab/fact",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "P02",
+      "name": "FACT（人机灵巧迁移）",
+      "fullTitle": "FACT: A Multimodal Force–Action–Track Foundation Model for Human-to-Robot Dexterity",
+      "year": 2026,
+      "family": "dex",
+      "kind": "VTLA基础策略",
+      "arxiv": "2610.19155",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "signal": "每指尖六轴力；人类触觉手套与机器人力数据",
+      "sensorOrigin": "指尖力传感器",
+      "role": "快速反馈",
+      "platform": "双臂YAM + 两只Sharpa Wave 22关节手",
+      "actionOutput": "灵巧手和手臂动作，联合未来力预测",
+      "summary": "人类与机器人力动作预训练，验证多指接触和人机数据迁移。",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "tasks": "移液、试管开盖、翻盖、系鞋带、洗牌、多物体抓取、螺丝刀、竖琴、木琴、移液器调量",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "trials": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "同数据π0.5、T-Rex；无未来力、无track、人机数据比例及仅机器人数据消融。",
+      "warning": "不同评分不能混成二元成功率；Table I与正文某些T-Rex数值不一致，需逐表核对；新论文不代表已高引用。",
+      "openness": {
+        "status": "发布情况待核验",
+        "url": "https://arxiv.org/abs/2610.19155",
+        "note": "论文公开；完整代码数据发布状态未确认。"
+      },
+      "locators": [
+        "§V-A、Table I",
+        "Appendix E"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
+        "caption": "FACT 十任务真机评测随机化，原文Figure 4",
+        "source": "https://arxiv.org/html/2610.19155v1#S5"
+      },
+      "experiments": [
+        {
+          "task": "移液器调量",
+          "purpose": "避免只报成功接触后的精度掩盖接触失败",
+          "metric": "接触次数/10；接触样本体积MAE",
+          "setting": "420 μL起始，400 μL目标",
+          "success": "未接触拨盘计失败，不参与有读数样本的MAE",
+          "locator": "§V-A、Table I、Appendix E",
+          "source": "https://arxiv.org/html/2610.19155v1#S5"
+        }
+      ],
+      "notes": "自建十任务真机套件。二元任务、连续发声和条件化体积误差分开报告。",
+      "github": null,
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-p02",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": null,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2610.19155",
+        "citationRecord": null,
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "引用未取得"
+      }
+    },
+    {
+      "id": "P03",
+      "name": "HapticVLA",
+      "fullTitle": "HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing",
+      "year": 2026,
+      "family": "related",
+      "kind": "VLA",
+      "arxiv": "2603.15257",
+      "source": "https://arxiv.org/html/2603.15257v1",
+      "signal": "训练期双指200 taxel压力；部署学生不读触觉",
+      "sensorOrigin": "仅训练期触觉",
+      "role": "力蒸馏",
+      "platform": "双SO-101，右臂触觉平行夹爪",
+      "actionOutput": "SmolVLA动作，视觉/状态预测触觉token",
+      "summary": "通过力相关奖励和蒸馏，把轻柔夹持能力迁移到无触觉部署。",
+      "purpose": "检验奖励加权与触觉蒸馏能否保护易碎物体。",
+      "tasks": "果酱塑料罐、华夫饼、鸡蛋抓取放置",
+      "metrics": "无损放置成功率",
+      "trials": "每方法每任务20次；固定任务场景；初态分布本轮未抽取。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "SmolVLA、X-VLA、VLA-0同数据微调；有/无TD、有/无异步、SA-RWFM。",
+      "warning": "学生部署不读实时触觉；成功率不等同六轴力跟踪。",
+      "openness": {
+        "status": "论文可查，资源待核验",
+        "url": "https://arxiv.org/abs/2603.15257",
+        "note": "未确认完整数据与代码发布包。"
+      },
+      "locators": [
+        "§IV-A–D、Figure 6、Table I"
+      ],
+      "experiments": [
+        {
+          "task": "鸡蛋 / 华夫饼无损抓放",
+          "purpose": "精细控制夹持避免破损",
+          "metric": "成功次数/20",
+          "setting": "每模型每任务20次",
+          "success": "物体完整且放入指定位置；饼干不可裂碎，鸡蛋须放正确槽位",
+          "locator": "§IV-B",
+          "source": "https://arxiv.org/html/2603.15257v1#S4.SS2"
+        }
+      ],
+      "notes": "自建三任务真实评测。训练用压力阵列不意味着部署读腕部六维力。",
+      "resultHighlights": [
+        {
+          "text": "无触觉部署学生三任务平均成功率86.7%；有触觉、无TD同步配置为75.0%。",
+          "locator": "Table I",
+          "source": "https://arxiv.org/html/2603.15257v1#S4.T1",
+          "condition": "每任务20次；无损放置标准；两配置不是单纯传感器有无的孤立比较。"
+        }
+      ],
+      "github": null,
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-p03",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2603.15257",
+        "citationRecord": "https://openalex.org/W7138465127",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "P04",
+      "name": "DEFT-VLA",
+      "fullTitle": "DEFT-VLA: Stage-Localized Force Specialization for Contact-Rich Robotic Manipulation",
+      "year": 2026,
+      "family": "wrist",
+      "kind": "VLA",
+      "arxiv": "2610.14854",
+      "source": "https://arxiv.org/html/2610.14854v1",
+      "signal": "双腕六轴F/T",
+      "sensorOrigin": "真实F/T传感器",
+      "role": "力观测",
+      "platform": "Mercury B2双臂，三相机，15Hz策略",
+      "actionOutput": "π0.5动作，按阶段路由base/contact专家",
+      "summary": "保留接近定位能力，只在接触阶段训练力专家。",
+      "purpose": "用分阶段成功率区分定位与接触收益，并检验抓持高度OOD。",
+      "tasks": "移液器吸头安装、双臂吸液、擦白板",
+      "metrics": "整体/非接触/接触阶段成功率；成功吸液样本体积MAE",
+      "trials": "每方法每任务20次；共享随机物体位置；130/50/50条示教；另设未见抓取高度。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "baseline": "π0.5、Force Token、全程FAC、双专家无局部FAC；状态token掩码消融。",
+      "warning": "接触阶段SR以此前阶段成功为条件；体积MAE仅成功吸液样本；擦板阶段切换人工触发。",
+      "openness": {
+        "status": "论文公开，发布包待核验",
+        "url": "https://arxiv.org/abs/2610.14854",
+        "note": "新近论文，不依据发布日期认定已高热或资源完整。"
+      },
+      "locators": [
+        "§IV-A–D、Tables I–III"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
+        "caption": "DEFT-VLA 三类真机任务及阶段分解，原文Figure 4",
+        "source": "https://arxiv.org/html/2610.14854v1#S4"
+      },
+      "experiments": [
+        {
+          "task": "擦白板",
+          "purpose": "接近抓取与接触擦拭分开计分",
+          "metric": "阶段成功率及整体成功率",
+          "setting": "20次；人工切换阶段",
+          "success": "目标标记去除且板擦持续有效接触",
+          "locator": "§IV-A、Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4"
+        },
+        {
+          "task": "吸头安装 / 双臂吸液",
+          "purpose": "接触终点感知及高度泛化",
+          "metric": "成功率；成功样本体积MAE",
+          "setting": "各20次；另设未见抓持高度",
+          "success": "吸头撤回仍固定；有效吸液；体积参考1000 μL",
+          "locator": "§IV-A–C、Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4"
+        }
+      ],
+      "notes": "自建三任务；分阶段SR的分母与整体SR不同，需要保留条件化定义。",
+      "resultHighlights": [
+        {
+          "text": "吸头安装、双臂吸液、擦白板整体成功率分别70%、50%、90%。",
+          "locator": "Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4.T1",
+          "condition": "每任务20次；接触阶段SR另以此前阶段成功为分母，不能替代整体SR。"
+        }
+      ],
+      "github": null,
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-p04",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2610.14854",
+        "citationRecord": "https://openalex.org/W7221808187",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "P05",
+      "name": "HapTile",
+      "fullTitle": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning",
+      "year": 2026,
+      "family": "touch",
+      "kind": "数据集与策略评测",
+      "arxiv": "2606.04825",
+      "source": "https://arxiv.org/html/2606.04825v1",
+      "project": "https://haptile-dataset.github.io/",
+      "signal": "双指光学触觉图与marker位移；操作者振动反馈",
+      "sensorOrigin": "触觉图像",
+      "role": "触觉反馈",
+      "platform": "机械臂 + 双指触觉夹爪",
+      "actionOutput": "DP/π0动作；不是显式目标六轴力",
+      "summary": "结合触觉、语言、动作和触觉辅助遥操作的数据集，用模态消融评估接触任务。",
+      "purpose": "对比原始触觉图与marker特征是否在不同任务均有帮助。",
+      "tasks": "瓶子扶正、擦白板、倒液、插销",
+      "metrics": "成功率；逐任务模态消融",
+      "trials": "原文§5.1称over 10 demonstrations，Table 2按10样本量级报告；测试单位措辞有歧义，保留原口径。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "DP与LoRA微调π0；各自V-only、V+T、V+TM。",
+      "warning": "训练示教每任务30–60不是测试次数；触觉收益强依任务；遥操作振动反馈收益缺少独立无反馈对照。",
+      "openness": {
+        "status": "有数据项目入口",
+        "url": "https://haptile-dataset.github.io/",
+        "note": "数据与说明入口可查；完整硬件/环境资源未运行核验。"
+      },
+      "locators": [
+        "§5.1、Table 2",
+        "Appendix A.3–A.4"
+      ],
+      "experiments": [
+        {
+          "task": "擦白板",
+          "purpose": "检验触觉图与marker位移对持续接触的作用",
+          "metric": "任务成功率",
+          "setting": "DP/π0各三种模态；测试分母措辞待复核",
+          "success": "本轮已确认抓海绵后擦指定墨迹；完整自动成功判定尚未抽取",
+          "locator": "Table 2、Appendix A.3",
+          "source": "https://arxiv.org/html/2606.04825v1#A1.SS3"
+        }
+      ],
+      "notes": "HapTile为数据集与自建四任务评测；论文称擦板沿用已有任务形式，不等同复用了统一跨论文评分环境。",
+      "resultHighlights": [
+        {
+          "text": "π0插销任务：V-only 0%，V+T 90%，V+TM 40%；触觉表示并非越多越好。",
+          "locator": "Table 2",
+          "source": "https://arxiv.org/html/2606.04825v1#S5.T2",
+          "condition": "仅该任务与模态配置；原文测试分母使用demonstrations措辞，有待复核。"
+        }
+      ],
+      "github": null,
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-p05",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.04825",
+        "citationRecord": "https://openalex.org/W7163575556",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "VLA-Touch",
+      "title": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback",
+      "year": 2025,
+      "venue": "RA-L 2026（官方仓库）",
+      "arxiv": "2507.17294",
+      "category": "tactile-vla",
+      "repo": "https://github.com/clear-nus/vla-touch",
+      "project": "https://arxiv.org/abs/2507.17294",
+      "tasks": "杯子含水判断与放置；海绵粗糙度选择及擦墨；芒果硬度选择及削皮",
+      "purpose": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "metrics": "规划正确率；分阶段与整任务成功次数；完整/部分擦拭和削皮",
+      "setting": "Franka Panda + Robotiq 2F-140；单指GelSight Mini；真机。",
+      "trials": "每个条件20次；Tables 1–2以n/20报告。",
+      "comparisons": [
+        "GPT-4o无触觉/原触觉图/Octopi语言反馈",
+        "RDT vs LSTM残差 vs Interpolant控制器",
+        "去规划触觉/去控制触觉",
+        "去视觉/去触觉"
+      ],
+      "signal": "GelSight图像；控制用marker聚合(X,Y,M)，并非腕部6D F/T。",
+      "action": "RDT动作chunk经触觉Interpolant纠偏；非显式目标力输出。",
+      "benchmark": "自建3任务；代码公开，不能等同通用benchmark。",
+      "locators": [
+        "§4.1–4.5",
+        "Tables 1–2",
+        "Figure 2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2507.17294v2",
+        "https://github.com/clear-nus/vla-touch"
+      ],
+      "status": "论文评测已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
+        "caption": "三类真机实验流程",
+        "locator": "Figure 2",
+        "sourceUrl": "https://arxiv.org/html/2507.17294v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T01",
+      "name": "VLA-Touch",
+      "fullTitle": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "github": "https://github.com/clear-nus/vla-touch",
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "Franka Panda + Robotiq 2F-140；单指GelSight Mini；真机。",
+      "actionOutput": "RDT动作chunk经触觉Interpolant纠偏；非显式目标力输出。",
+      "summary": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "baseline": "GPT-4o无触觉/原触觉图/Octopi语言反馈；RDT vs LSTM残差 vs Interpolant控制器；去规划触觉/去控制触觉；去视觉/去触觉",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文评测已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/clear-nus/vla-touch",
+        "note": "自建3任务；代码公开，不能等同通用benchmark。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
+        "caption": "三类真机实验流程；Figure 2",
+        "source": "https://arxiv.org/html/2507.17294v2"
+      },
+      "notes": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback\n自建3任务；代码公开，不能等同通用benchmark。\n\n原文定位：§4.1–4.5；Tables 1–2；Figure 2\n核查来源：https://arxiv.org/html/2507.17294v2 https://github.com/clear-nus/vla-touch",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t01",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建3任务；代码公开，不能等同通用benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 8,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2507.17294",
+        "citationRecord": "https://openalex.org/W4414879557",
+        "githubSource": "https://api.github.com/repos/clear-nus/vla-touch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "OmniVTLA",
+      "title": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing",
+      "year": 2025,
+      "arxiv": "2508.08706",
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://readerek.github.io/Objtac.github.io/",
+      "tasks": "抓取放置4物体（夹爪）；抓取放置与未见物体（灵巧手）；方/三角/圆块插入；软物体泛化",
+      "purpose": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "metrics": "真机成功率；完成步数；末端加速度变异；夹爪动作平均绝对变化；离线状态MSE",
+      "setting": "UR5；两指夹爪2触觉传感器/灵巧手11传感器；网格化初态；真机加离线验证。",
+      "trials": "抓放32 rollouts(夹爪)/16 rollouts(灵巧手)；插入每物体10次；每次最多1500步。",
+      "comparisons": [
+        "π0、DP",
+        "随机初始化/视觉预训练/触觉语义对齐",
+        "参数量匹配双编码器",
+        "去对齐目标"
+      ],
+      "signal": "Paxini Gen2磁式触觉阵列力分布，归一化重排为3通道图；非腕部6D。",
+      "action": "末端位置+6D旋转表示+夹爪开度或16关节；状态维数10/25。",
+      "benchmark": "自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。",
+      "locators": [
+        "v3 §4.1",
+        "Tables 3–7",
+        "Figure 4"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2508.08706v3",
+        "https://readerek.github.io/Objtac.github.io/"
+      ],
+      "status": "v3评测已核实；代码仓库待核实",
+      "warning": "与OmniVTA为不同论文。",
+      "figure": {
+        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
+        "caption": "夹爪、灵巧手平台与实验物体",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2508.08706v3",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T02",
+      "name": "OmniVTLA",
+      "fullTitle": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing",
+      "source": "https://arxiv.org/html/2508.08706v3",
+      "github": null,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "UR5；两指夹爪2触觉传感器/灵巧手11传感器；网格化初态；真机加离线验证。",
+      "actionOutput": "末端位置+6D旋转表示+夹爪开度或16关节；状态维数10/25。",
+      "summary": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "baseline": "π0、DP；随机初始化/视觉预训练/触觉语义对齐；参数量匹配双编码器；去对齐目标",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "v3评测已核实；代码仓库待核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://readerek.github.io/Objtac.github.io/",
+        "note": "自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
+        "caption": "夹爪、灵巧手平台与实验物体；Figure 4",
+        "source": "https://arxiv.org/html/2508.08706v3"
+      },
+      "notes": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing\n自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。\n\n原文定位：v3 §4.1；Tables 3–7；Figure 4\n核查来源：https://arxiv.org/html/2508.08706v3 https://readerek.github.io/Objtac.github.io/",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "relations": [
+        {
+          "benchmark": "suite-t02",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2508.08706",
+        "citationRecord": "https://openalex.org/W6929507265",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "AT-VLA",
+      "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "CVPR 2026 Oral（官方仓库）",
+      "arxiv": "2605.07308",
+      "category": "tactile-vla",
+      "repo": "https://github.com/clorislili/AT-VLA",
+      "project": "https://sites.google.com/view/at-vla",
+      "tasks": "拉开包拉链；盖章；擦花瓶；拧盖；胡萝卜抓取放置；开抽屉",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "AgiBot Genie1双臂夹爪；Xense触觉；全真机；每任务30–50示范。",
+      "trials": "每任务15次测试。",
+      "comparisons": [
+        "GO-1、π0.5、VTLA、RDP",
+        "自适应注入/双流模块消融",
+        "触觉表示格式对照"
+      ],
+      "signal": "Xense触觉反馈，比较力/marker/触觉图像格式。",
+      "action": "GO-1 DiT动作专家；3:1快触觉/慢视觉语言流。",
+      "benchmark": "自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。",
+      "locators": [
+        "§4.1–4.4",
+        "Tables 1–3"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2605.07308v1",
+        "https://github.com/clorislili/AT-VLA"
+      ],
+      "status": "论文评测已核实",
+      "warning": "VTLA/RDP基线仅测试人工初始化后的接触段，与完整流程列不可直接混比较。",
+      "figure": {
+        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
+        "caption": "四项接触任务的执行进展",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2605.07308v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T03",
+      "name": "AT-VLA",
+      "fullTitle": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "github": "https://github.com/clorislili/AT-VLA",
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "AgiBot Genie1双臂夹爪；Xense触觉；全真机；每任务30–50示范。",
+      "actionOutput": "GO-1 DiT动作专家；3:1快触觉/慢视觉语言流。",
+      "summary": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "baseline": "GO-1、π0.5、VTLA、RDP；自适应注入/双流模块消融；触觉表示格式对照",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文评测已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/clorislili/AT-VLA",
+        "note": "自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
+        "caption": "四项接触任务的执行进展；Figure 4",
+        "source": "https://arxiv.org/html/2605.07308v1"
+      },
+      "notes": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models\n自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。\n\n原文定位：§4.1–4.4；Tables 1–3\n核查来源：https://arxiv.org/html/2605.07308v1 https://github.com/clorislili/AT-VLA",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t03",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 21,
+        "forks": 1,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2605.07308",
+        "citationRecord": "https://openalex.org/W7160867151",
+        "githubSource": "https://api.github.com/repos/clorislili/AT-VLA",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "OpenViTac / OpenVTLA",
+      "title": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework",
+      "year": 2026,
+      "arxiv": "2610.10384",
+      "category": "tactile-vla-benchmark",
+      "repo": "https://github.com/FVL-Repo/OpenViTac",
+      "project": "https://arxiv.org/abs/2610.10384",
+      "tasks": "重量/硬度/粗糙度分类；粗糙度引导再抓取；空罐选择；薯片无损抓取；齿轮装配；拉抽屉；USB插入；块插入v1/v2",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "11仿真任务，8配对真机任务；逐任务独立训练；平衡预设条件。",
+      "trials": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "comparisons": [
+        "6 VLA、3 WAM、FTP-1",
+        "SigLIP/T3/Sparsh/AnyTouch2",
+        "5种融合接口",
+        "真机单域vs仿真真机共训练"
+      ],
+      "signal": "GelSight/Xense/Neote触觉表示；OpenVTLA用AnyTouch2历史触觉token。",
+      "action": "π0.5原动作生成通路，触觉token前缀融合。",
+      "benchmark": "提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。",
+      "locators": [
+        "§3.1–3.3",
+        "Tables 2–3",
+        "Appendix B",
+        "Figure 2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.10384v1",
+        "https://github.com/FVL-Repo/OpenViTac"
+      ],
+      "status": "2026-10-07预印本；论文评测已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
+        "caption": "真机与仿真任务对应关系",
+        "locator": "Figure 2b",
+        "sourceUrl": "https://arxiv.org/html/2610.10384v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T04",
+      "name": "OpenViTac / OpenVTLA",
+      "fullTitle": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "github": "https://github.com/FVL-Repo/OpenViTac",
+      "kind": "VLA / VTLA + Benchmark",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "11仿真任务，8配对真机任务；逐任务独立训练；平衡预设条件。",
+      "actionOutput": "π0.5原动作生成通路，触觉token前缀融合。",
+      "summary": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "baseline": "6 VLA、3 WAM、FTP-1；SigLIP/T3/Sparsh/AnyTouch2；5种融合接口；真机单域vs仿真真机共训练",
+      "scope": "扩展相关",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "evidence": "2026-10-07预印本；论文评测已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/FVL-Repo/OpenViTac",
+        "note": "提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
+        "caption": "真机与仿真任务对应关系；Figure 2b",
+        "source": "https://arxiv.org/html/2610.10384v1"
+      },
+      "notes": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework\n提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。\n\n原文定位：§3.1–3.3；Tables 2–3；Appendix B；Figure 2\n核查来源：https://arxiv.org/html/2610.10384v1 https://github.com/FVL-Repo/OpenViTac",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t04",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 13,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2610.10384",
+        "citationRecord": "https://openalex.org/W7220962753",
+        "githubSource": "https://api.github.com/repos/FVL-Repo/OpenViTac",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "DT-TacVLA",
+      "title": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation",
+      "year": 2026,
+      "arxiv": null,
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://dt-tacvla.github.io/",
+      "tasks": "电源插头插入；USB插入；试管放置",
+      "purpose": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "metrics": "每任务成功率；3任务平均成功率",
+      "setting": "UR5 + Inspire EG2-4C2夹爪；双Vitai GF255；每任务100专家示范；真机。",
+      "trials": "每方法每任务20次（官网明确）。",
+      "comparisons": [
+        "DP、π0.5、SmolVLA、TacVLA*",
+        "作者报告消融，但官网未完整列出消融表"
+      ],
+      "signal": "触觉图像历史和marker位移；非腕部6D。",
+      "action": "SmolVLA连续动作chunk经触觉adapter调制。",
+      "benchmark": "自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。",
+      "locators": [
+        "官网 Contact-Rich Manipulation Tasks",
+        "官网 Main Results"
+      ],
+      "sources": [
+        "https://dt-tacvla.github.io/"
+      ],
+      "status": "官网协议已核实；论文元信息待核实",
+      "figure": {
+        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
+        "caption": "三类真机接触操作",
+        "locator": "官网任务图",
+        "sourceUrl": "https://dt-tacvla.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T05",
+      "name": "DT-TacVLA",
+      "fullTitle": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation",
+      "source": "https://dt-tacvla.github.io/",
+      "github": null,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "UR5 + Inspire EG2-4C2夹爪；双Vitai GF255；每任务100专家示范；真机。",
+      "actionOutput": "SmolVLA连续动作chunk经触觉adapter调制。",
+      "summary": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "baseline": "DP、π0.5、SmolVLA、TacVLA*；作者报告消融，但官网未完整列出消融表",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官网协议已核实；论文元信息待核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://dt-tacvla.github.io/",
+        "note": "自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
+        "caption": "三类真机接触操作；官网任务图",
+        "source": "https://dt-tacvla.github.io/"
+      },
+      "notes": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation\n自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。\n\n原文定位：官网 Contact-Rich Manipulation Tasks；官网 Main Results\n核查来源：https://dt-tacvla.github.io/",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t05",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": null,
+        "stars": null,
+        "forks": null,
+        "citationSource": null,
+        "citationRecord": null,
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "引用未取得"
+      }
+    },
+    {
+      "short": "DreamTacVLA",
+      "title": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
+      "year": 2025,
+      "arxiv": "2512.23864",
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://arxiv.org/abs/2512.23864",
+      "tasks": "Peg-in-Hole；USB插入；齿轮装配；工具稳定支撑",
+      "purpose": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "metrics": "各任务真机成功率；3次运行均值±标准差",
+      "setting": "IsaacSim+TacEx生成训练数据；Dobot Xtrainer+平行夹爪+双GelSight真机；100真机示范/任务。",
+      "trials": "文中§4.2为每任务100次，Table1注明3 runs；100次与3run分母对应关系需进一步核实。",
+      "comparisons": [
+        "ACT、DP、π0",
+        "HSA-only无dream",
+        "dream-only无HSA",
+        "world-model模态/数据量消融"
+      ],
+      "signal": "高分辨率GelSight图像和预测触觉latent。",
+      "action": "6D末端位姿+1D夹爪；45步chunk；Think-Dream-Act二次动作生成。",
+      "benchmark": "自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。",
+      "locators": [
+        "§4.1–4.3",
+        "Table 1",
+        "Figure 5"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2512.23864v1"
+      ],
+      "status": "论文评测已核实；官方代码归属待核实",
+      "warning": "不是另一篇2026 Dream-Tac WAM。",
+      "figure": {
+        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
+        "caption": "四项接触任务",
+        "locator": "Figure 5",
+        "sourceUrl": "https://arxiv.org/html/2512.23864v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T06",
+      "name": "DreamTacVLA",
+      "fullTitle": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
+      "source": "https://arxiv.org/html/2512.23864v1",
+      "github": null,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "role": "触觉反馈",
+      "platform": "IsaacSim+TacEx生成训练数据；Dobot Xtrainer+平行夹爪+双GelSight真机；100真机示范/任务。",
+      "actionOutput": "6D末端位姿+1D夹爪；45步chunk；Think-Dream-Act二次动作生成。",
+      "summary": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "baseline": "ACT、DP、π0；HSA-only无dream；dream-only无HSA；world-model模态/数据量消融",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文评测已核实；官方代码归属待核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://arxiv.org/abs/2512.23864",
+        "note": "自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
+        "caption": "四项接触任务；Figure 5",
+        "source": "https://arxiv.org/html/2512.23864v1"
+      },
+      "notes": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation\n自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。\n\n原文定位：§4.1–4.3；Table 1；Figure 5\n核查来源：https://arxiv.org/html/2512.23864v1",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t06",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2512.23864",
+        "citationRecord": "https://openalex.org/W7118005701",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "UniVTAC",
+      "title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
+      "year": 2026,
+      "arxiv": "2602.10093",
+      "category": "tactile-benchmark-not-vla",
+      "repo": "https://github.com/codingbabyguy/univtac",
+      "project": "https://univtac.github.io/",
+      "tasks": "Lift Bottle；Lift Can；Put Bottle in Shelf；Grasp Classify；Insert Hole；Insert Tube；Insert HDMI；Pull Out Key",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "Isaac Lab+TacEx/UIPC；GelSight Mini/ViTai GF225/XenseWS；另有Marvin+ViTai真机。",
+      "trials": "本轮未核实，未知。",
+      "comparisons": [
+        "ACT视觉only",
+        "VITaL",
+        "ACT+UniVTAC Encoder"
+      ],
+      "signal": "仿真光学触觉图与接触信息；非专为腕部F/T。",
+      "action": "ACT等操作策略；平台含抓取/放置/探测/旋转API。",
+      "benchmark": "本身包含平台、编码器和8任务benchmark；后来被FTP-1/N0/SimpleTouch采用不同子集。",
+      "locators": [
+        "官网 UniVTAC Benchmark",
+        "官网 Simulation Experiments",
+        "官网 Real-World Experiments"
+      ],
+      "sources": [
+        "https://univtac.github.io/",
+        "https://arxiv.org/abs/2602.10093",
+        "https://github.com/codingbabyguy/univtac"
+      ],
+      "status": "官方任务与来源已核实",
+      "figure": {
+        "url": "https://univtac.github.io/tasks.svg",
+        "caption": "八任务基准组成",
+        "locator": "官网 Benchmark Tasks",
+        "sourceUrl": "https://univtac.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T07",
+      "name": "UniVTAC",
+      "fullTitle": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
+      "source": "https://univtac.github.io/",
+      "github": "https://github.com/codingbabyguy/univtac",
+      "kind": "评测资源",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "Isaac Lab+TacEx/UIPC；GelSight Mini/ViTai GF225/XenseWS；另有Marvin+ViTai真机。",
+      "actionOutput": "ACT等操作策略；平台含抓取/放置/探测/旋转API。",
+      "summary": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "baseline": "ACT视觉only；VITaL；ACT+UniVTAC Encoder",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官方任务与来源已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/codingbabyguy/univtac",
+        "note": "本身包含平台、编码器和8任务benchmark；后来被FTP-1/N0/SimpleTouch采用不同子集。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://univtac.github.io/tasks.svg",
+        "caption": "八任务基准组成；官网 Benchmark Tasks",
+        "source": "https://univtac.github.io/"
+      },
+      "notes": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking\n本身包含平台、编码器和8任务benchmark；后来被FTP-1/N0/SimpleTouch采用不同子集。\n\n原文定位：官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments\n核查来源：https://univtac.github.io/ https://arxiv.org/abs/2602.10093 https://github.com/codingbabyguy/univtac",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "univtac",
+          "type": "proposes",
+          "label": "提出平台与Benchmark",
+          "domain": "仿真",
+          "note": "八任务闭环协议；平台、编码器与benchmark分开。"
+        }
+      ],
+      "attention": {
+        "citations": 0,
+        "stars": 0,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2602.10093",
+        "citationRecord": "https://openalex.org/W7128635010",
+        "githubSource": "https://api.github.com/repos/codingbabyguy/univtac",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "actionMode": "评测 / 仿真接口（非策略）"
+    },
+    {
+      "short": "Sparsh / TacBench",
+      "title": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+      "year": 2024,
+      "venue": "CoRL 2024",
+      "arxiv": "2410.24090",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/facebookresearch/sparsh",
+      "project": "https://sparsh-ssl.github.io/",
+      "tasks": "力估计；滑移检测；姿态估计；抓取稳定预测；纺织物识别；bead maze",
+      "purpose": "统一比较多传感器SSL表示、标注效率和下游迁移。",
+      "metrics": "力RMSE(mN)；滑移F1；姿态/分类任务指标；maze通过距离(cm)",
+      "setting": "460K+触觉图预训练；DIGIT/GelSight/GelSight Mini；多数为离线probe，maze物理操作单独报告。",
+      "trials": "六任务中多数离线probe；bead maze为物理操作。各测试分母本轮未逐项核实。",
+      "comparisons": [
+        "E2E任务专用模型",
+        "MAE、DINO、DINOv2、IJEPA表示",
+        "标签比例"
+      ],
+      "signal": "光学触觉图像。",
+      "action": "以编码器/下游预测为主；不是端到端语言动作策略。",
+      "benchmark": "提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。",
+      "locators": [
+        "Figure 1",
+        "TacBench T1–T6",
+        "官方repo downstream tasks"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2410.24090",
+        "https://sparsh-ssl.github.io/",
+        "https://github.com/facebookresearch/sparsh"
+      ],
+      "status": "官方任务和指标已核实",
+      "figure": {
+        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
+        "caption": "六类触觉感知与操作评测概览",
+        "locator": "官网主图",
+        "sourceUrl": "https://sparsh-ssl.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T08",
+      "name": "Sparsh / TacBench",
+      "fullTitle": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+      "source": "https://arxiv.org/abs/2410.24090",
+      "github": "https://github.com/facebookresearch/sparsh",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "460K+触觉图预训练；DIGIT/GelSight/GelSight Mini；多数为离线probe，maze物理操作单独报告。",
+      "actionOutput": "以编码器/下游预测为主；不是端到端语言动作策略。",
+      "summary": "统一比较多传感器SSL表示、标注效率和下游迁移。",
+      "baseline": "E2E任务专用模型；MAE、DINO、DINOv2、IJEPA表示；标签比例",
+      "scope": "扩展相关",
+      "domains": [
+        "离线",
+        "真机"
+      ],
+      "evidence": "官方任务和指标已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/facebookresearch/sparsh",
+        "note": "提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
+        "caption": "六类触觉感知与操作评测概览；官网主图",
+        "source": "https://sparsh-ssl.github.io/"
+      },
+      "notes": "Sparsh: Self-supervised touch representations for vision-based tactile sensing\n提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。\n\n原文定位：Figure 1；TacBench T1–T6；官方repo downstream tasks\n核查来源：https://arxiv.org/abs/2410.24090 https://sparsh-ssl.github.io/ https://github.com/facebookresearch/sparsh",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t08",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "离线",
+          "note": "提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 1,
+        "stars": 225,
+        "forks": 30,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.24090",
+        "citationRecord": "https://openalex.org/W4404348674",
+        "githubSource": "https://api.github.com/repos/facebookresearch/sparsh",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "UniTouch",
+      "title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+      "year": 2024,
+      "venue": "CVPR 2024",
+      "arxiv": "2401.18084",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/cfeng16/UniTouch",
+      "project": "https://cfeng16.github.io/UniTouch/",
+      "tasks": "材质分类；抓取稳定性预测；零样本触觉理解；触觉问答",
+      "purpose": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "metrics": "linear-probe accuracy；zero-shot accuracy",
+      "setting": "Touch-and-Go、ObjectFolder1/2/Real、YCB-Slide、SSVTP、Feeling of Success；域内外离线评测。",
+      "trials": "离线split评测；不是统一真机rollout；样本分母本轮未核实。",
+      "comparisons": [
+        "VT-CMC",
+        "SSVTP",
+        "ImageNet特征",
+        "sensor-specific tokens/sampling消融"
+      ],
+      "signal": "异构光学触觉图。",
+      "action": "输出embedding/属性/文本；无机器人动作接口。",
+      "benchmark": "复用多个既有表示数据集；不应归为VLA控制benchmark。",
+      "locators": [
+        "§4.1–4.2",
+        "Tables 2–3"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2401.18084",
+        "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.pdf"
+      ],
+      "status": "论文表示评测已核实",
+      "figure": {
+        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
+        "caption": "触觉跨模态任务概览",
+        "locator": "官网主图",
+        "sourceUrl": "https://cfeng16.github.io/UniTouch/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T09",
+      "name": "UniTouch",
+      "fullTitle": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+      "source": "https://arxiv.org/abs/2401.18084",
+      "github": "https://github.com/cfeng16/UniTouch",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "Touch-and-Go、ObjectFolder1/2/Real、YCB-Slide、SSVTP、Feeling of Success；域内外离线评测。",
+      "actionOutput": "输出embedding/属性/文本；无机器人动作接口。",
+      "summary": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "baseline": "VT-CMC；SSVTP；ImageNet特征；sensor-specific tokens/sampling消融",
+      "scope": "扩展相关",
+      "domains": [
+        "离线"
+      ],
+      "evidence": "论文表示评测已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/cfeng16/UniTouch",
+        "note": "复用多个既有表示数据集；不应归为VLA控制benchmark。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
+        "caption": "触觉跨模态任务概览；官网主图",
+        "source": "https://cfeng16.github.io/UniTouch/"
+      },
+      "notes": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations\n复用多个既有表示数据集；不应归为VLA控制benchmark。\n\n原文定位：§4.1–4.2；Tables 2–3\n核查来源：https://arxiv.org/abs/2401.18084 https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.pdf",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t09",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "离线",
+          "note": "复用多个既有表示数据集；不应归为VLA控制benchmark。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 57,
+        "stars": 95,
+        "forks": 6,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2401.18084",
+        "citationRecord": "https://openalex.org/W4402726993",
+        "githubSource": "https://api.github.com/repos/cfeng16/UniTouch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "short": "AnyTouch",
+      "title": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "arxiv": "2502.12191",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/GeWu-Lab/AnyTouch",
+      "project": "https://gewu-lab.github.io/AnyTouch/",
+      "tasks": "静态材质/属性识别；动态触觉感知；跨传感器迁移；真机倾倒",
+      "purpose": "检验统一静动态多传感器表示及迁移。",
+      "metrics": "分类/迁移任务指标；倾倒操作表现（具体指标待核实）",
+      "setting": "TacQuad四传感器对齐数据；离线数据评测及真机pouring。",
+      "trials": "各任务测试分母本轮未知。",
+      "comparisons": [
+        "已有触觉表示模型",
+        "静态/动态和跨传感器模块消融待逐表核实"
+      ],
+      "signal": "光学触觉图像与视频。",
+      "action": "表示模型；仅下游策略输出动作，不是VLA本体。",
+      "benchmark": "提出TacQuad数据集并复用多个下游数据；有真机迁移验证。",
+      "locators": [
+        "ICLR2025 official abstract",
+        "论文Experiment部分待深读"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2502.12191",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d893f766ab60e5337659b9e71883af4-Abstract-Conference.html"
+      ],
+      "status": "任务方向已核实；协议待深入",
+      "figure": {
+        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
+        "caption": "多传感器对齐数据采集示意",
+        "locator": "官网数据图",
+        "sourceUrl": "https://gewu-lab.github.io/AnyTouch/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T10",
+      "name": "AnyTouch",
+      "fullTitle": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
+      "source": "https://arxiv.org/abs/2502.12191",
+      "github": "https://github.com/GeWu-Lab/AnyTouch",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "TacQuad四传感器对齐数据；离线数据评测及真机pouring。",
+      "actionOutput": "表示模型；仅下游策略输出动作，不是VLA本体。",
+      "summary": "检验统一静动态多传感器表示及迁移。",
+      "baseline": "已有触觉表示模型；静态/动态和跨传感器模块消融待逐表核实",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "任务方向已核实；协议待深入",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/GeWu-Lab/AnyTouch",
+        "note": "提出TacQuad数据集并复用多个下游数据；有真机迁移验证。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
+        "caption": "多传感器对齐数据采集示意；官网数据图",
+        "source": "https://gewu-lab.github.io/AnyTouch/"
+      },
+      "notes": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors\n提出TacQuad数据集并复用多个下游数据；有真机迁移验证。\n\n原文定位：ICLR2025 official abstract；论文Experiment部分待深读\n核查来源：https://arxiv.org/abs/2502.12191 https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d893f766ab60e5337659b9e71883af4-Abstract-Conference.html",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t10",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "提出TacQuad数据集并复用多个下游数据；有真机迁移验证。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 1,
+        "stars": 96,
+        "forks": 9,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2502.12191",
+        "citationRecord": "https://openalex.org/W4407759177",
+        "githubSource": "https://api.github.com/repos/GeWu-Lab/AnyTouch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "short": "Octopi",
+      "title": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
+      "year": 2024,
+      "venue": "RSS 2024",
+      "arxiv": "2405.02794",
+      "category": "tactile-language-not-vla",
+      "repo": "https://github.com/clear-nus/octopi",
+      "project": "https://octopi-tactile-lvlm.github.io/",
+      "tasks": "硬度/粗糙度/凹凸描述；物理属性推理；场景常识问答",
+      "purpose": "触觉感知能否支持视觉难以判断的物理属性和中间描述辅助推理。",
+      "metrics": "物理属性与推理任务准确率",
+      "setting": "PhysiCLeAR手持GelSight压/转视频；离线语言理解，非闭环机器人控制。",
+      "trials": "离线测试集；具体样本分母本轮未知。",
+      "comparisons": [
+        "7B vs 13B",
+        "random baseline",
+        "是否给中间属性描述"
+      ],
+      "signal": "GelSight触觉视频。",
+      "action": "输出物理属性语言/推理答案，不输出机器人动作。",
+      "benchmark": "提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。",
+      "locators": [
+        "官网 Overview",
+        "官网 Scenario Reasoning"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2405.02794",
+        "https://octopi-tactile-lvlm.github.io/",
+        "https://github.com/clear-nus/octopi"
+      ],
+      "status": "定位与评测方向已核实",
+      "figure": {
+        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
+        "caption": "物理属性触觉数据物体",
+        "locator": "官网Dataset items",
+        "sourceUrl": "https://octopi-tactile-lvlm.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T11",
+      "name": "Octopi",
+      "fullTitle": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
+      "source": "https://arxiv.org/abs/2405.02794",
+      "github": "https://github.com/clear-nus/octopi",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "PhysiCLeAR手持GelSight压/转视频；离线语言理解，非闭环机器人控制。",
+      "actionOutput": "输出物理属性语言/推理答案，不输出机器人动作。",
+      "summary": "触觉感知能否支持视觉难以判断的物理属性和中间描述辅助推理。",
+      "baseline": "7B vs 13B；random baseline；是否给中间属性描述",
+      "scope": "扩展相关",
+      "domains": [
+        "离线"
+      ],
+      "evidence": "定位与评测方向已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/clear-nus/octopi",
+        "note": "提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
+        "caption": "物理属性触觉数据物体；官网Dataset items",
+        "source": "https://octopi-tactile-lvlm.github.io/"
+      },
+      "notes": "Octopi: Object Property Reasoning with Large Tactile-Language Models\n提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。\n\n原文定位：官网 Overview；官网 Scenario Reasoning\n核查来源：https://arxiv.org/abs/2405.02794 https://octopi-tactile-lvlm.github.io/ https://github.com/clear-nus/octopi",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t11",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "离线",
+          "note": "提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 35,
+        "stars": 79,
+        "forks": 5,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2405.02794",
+        "citationRecord": "https://openalex.org/W4402354011",
+        "githubSource": "https://api.github.com/repos/clear-nus/octopi",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "TVL",
+      "title": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
+      "year": 2024,
+      "venue": "ICML 2024",
+      "arxiv": "2402.13232",
+      "category": "tactile-language-not-vla",
+      "repo": "https://github.com/Max-Fu/tvl",
+      "project": "https://tactile-vlm.github.io/",
+      "tasks": "开放词表触觉语义分类；触觉文本生成；触觉视觉/语言对齐",
+      "purpose": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "metrics": "classification accuracy；跨模态对齐准确率；触觉理解评分",
+      "setting": "43,741接触图对：SSVTP 4,587 + HCT39,154；DIGIT+BRIO；离线评测。",
+      "trials": "采用数据集split；非机器人rollout，测试分母本轮未知。",
+      "comparisons": [
+        "GPT-4V",
+        "开源VLM",
+        "SSVTP-LLaMA",
+        "ViT模型大小"
+      ],
+      "signal": "DIGIT光学触觉图。",
+      "action": "语言输出，不生成机器人动作。",
+      "benchmark": "提出TVL数据和触觉语义理解评测；公开模型代码数据。",
+      "locators": [
+        "官网 The TVL Dataset",
+        "官网 Results"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2402.13232",
+        "https://tactile-vlm.github.io/",
+        "https://github.com/Max-Fu/tvl"
+      ],
+      "status": "官方数据规模与方向已核实",
+      "warning": "官网Paper按钮误链别篇；应使用2402.13232或ICML论文。",
+      "figure": {
+        "url": "https://tactile-vlm.github.io/images/sensor.png",
+        "caption": "手持视觉触觉采集装置",
+        "locator": "官网 The TVL Dataset",
+        "sourceUrl": "https://tactile-vlm.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T12",
+      "name": "TVL",
+      "fullTitle": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
+      "source": "https://arxiv.org/abs/2402.13232",
+      "github": "https://github.com/Max-Fu/tvl",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "43,741接触图对：SSVTP 4,587 + HCT39,154；DIGIT+BRIO；离线评测。",
+      "actionOutput": "语言输出，不生成机器人动作。",
+      "summary": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "baseline": "GPT-4V；开源VLM；SSVTP-LLaMA；ViT模型大小",
+      "scope": "扩展相关",
+      "domains": [
+        "离线"
+      ],
+      "evidence": "官方数据规模与方向已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/Max-Fu/tvl",
+        "note": "提出TVL数据和触觉语义理解评测；公开模型代码数据。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://tactile-vlm.github.io/images/sensor.png",
+        "caption": "手持视觉触觉采集装置；官网 The TVL Dataset",
+        "source": "https://tactile-vlm.github.io/"
+      },
+      "notes": "A Touch, Vision, and Language Dataset for Multimodal Alignment\n提出TVL数据和触觉语义理解评测；公开模型代码数据。\n\n原文定位：官网 The TVL Dataset；官网 Results\n核查来源：https://arxiv.org/abs/2402.13232 https://tactile-vlm.github.io/ https://github.com/Max-Fu/tvl",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t12",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "离线",
+          "note": "提出TVL数据和触觉语义理解评测；公开模型代码数据。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 8,
+        "stars": 103,
+        "forks": 9,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2402.13232",
+        "citationRecord": "https://openalex.org/W4392019819",
+        "githubSource": "https://api.github.com/repos/Max-Fu/tvl",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "T3",
+      "title": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks",
+      "year": 2024,
+      "arxiv": "2406.13640",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/alanzjl/t3",
+      "project": "https://t3.alanz.info/",
+      "tasks": "材质/物体识别；接触面积与织物属性；帧间3D/6D位姿变化；PCB开关/USB模块/VGA接口插入",
+      "purpose": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "metrics": "下游分类/回归指标；插入成功率",
+      "setting": "FoTa汇聚13传感器11任务3M+样本；真机Franka+平行夹爪双GelSight Wedge；插入间隙0.4mm。",
+      "trials": "各离线任务与插入rollout次数本轮未核实。",
+      "comparisons": [
+        "无触觉",
+        "从零训练编码器",
+        "预训练T3",
+        "网络规模/少样本迁移"
+      ],
+      "signal": "多种光学触觉原始图像。",
+      "action": "通用encoder；下游行为克隆输出操作动作；无语言动作本体。",
+      "benchmark": "提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。",
+      "locators": [
+        "§5",
+        "官网 Precision electronics insertion",
+        "论文附录硬件"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2406.13640",
+        "https://t3.alanz.info/",
+        "https://github.com/alanzjl/t3"
+      ],
+      "status": "官方任务与资源已核实",
+      "figure": {
+        "url": "https://t3.alanz.info/imgs/robot_perf.png",
+        "caption": "精密电子器件插入评测",
+        "locator": "官网插入评测",
+        "sourceUrl": "https://t3.alanz.info/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T13",
+      "name": "T3",
+      "fullTitle": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks",
+      "source": "https://arxiv.org/abs/2406.13640",
+      "github": "https://github.com/alanzjl/t3",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "FoTa汇聚13传感器11任务3M+样本；真机Franka+平行夹爪双GelSight Wedge；插入间隙0.4mm。",
+      "actionOutput": "通用encoder；下游行为克隆输出操作动作；无语言动作本体。",
+      "summary": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "baseline": "无触觉；从零训练编码器；预训练T3；网络规模/少样本迁移",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官方任务与资源已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/alanzjl/t3",
+        "note": "提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://t3.alanz.info/imgs/robot_perf.png",
+        "caption": "精密电子器件插入评测；官网插入评测",
+        "source": "https://t3.alanz.info/"
+      },
+      "notes": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks\n提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。\n\n原文定位：§5；官网 Precision electronics insertion；论文附录硬件\n核查来源：https://arxiv.org/abs/2406.13640 https://t3.alanz.info/ https://github.com/alanzjl/t3",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t13",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 1,
+        "stars": 64,
+        "forks": 8,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2406.13640",
+        "citationRecord": "https://openalex.org/W4399913003",
+        "githubSource": "https://api.github.com/repos/alanzjl/t3",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "Touch and Go",
+      "title": "Touch and Go: Learning from Human-Collected Vision and Touch",
+      "year": 2022,
+      "venue": "NeurIPS 2022 Datasets and Benchmarks",
+      "arxiv": "2211.12498",
+      "category": "tactile-dataset-not-vla",
+      "repo": null,
+      "project": "https://touch-and-go.github.io/",
+      "tasks": "视觉触觉表示学习；材质识别；触觉引导图像风格化；未来触觉帧预测",
+      "purpose": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "metrics": "分类指标；图像生成/未来预测指标（各定义待深读）",
+      "setting": "手持GelSight+第一视角视频；3971物体、13.9K触碰；室内/外；离线评测。",
+      "trials": "数据split评测；不涉及真机策略成功次数。",
+      "comparisons": [
+        "触觉only vs 视觉触觉未来预测",
+        "其他既有触觉数据集"
+      ],
+      "signal": "人类探触时GelSight视频。",
+      "action": "不输出机器人动作。",
+      "benchmark": "公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。",
+      "locators": [
+        "官网 Applications",
+        "论文Table1"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2211.12498",
+        "https://touch-and-go.github.io/"
+      ],
+      "status": "数据定位已核实",
+      "figure": {
+        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
+        "caption": "自然场景中的手持触觉采集",
+        "locator": "官网 Human-Powered Data Collection",
+        "sourceUrl": "https://touch-and-go.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T14",
+      "name": "Touch and Go",
+      "fullTitle": "Touch and Go: Learning from Human-Collected Vision and Touch",
+      "source": "https://arxiv.org/abs/2211.12498",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "family": "related",
+      "role": "触觉反馈",
+      "platform": "手持GelSight+第一视角视频；3971物体、13.9K触碰；室内/外；离线评测。",
+      "actionOutput": "不输出机器人动作。",
+      "summary": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "baseline": "触觉only vs 视觉触觉未来预测；其他既有触觉数据集",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "数据定位已核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://touch-and-go.github.io/",
+        "note": "公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
+        "caption": "自然场景中的手持触觉采集；官网 Human-Powered Data Collection",
+        "source": "https://touch-and-go.github.io/"
+      },
+      "notes": "Touch and Go: Learning from Human-Collected Vision and Touch\n公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。\n\n原文定位：官网 Applications；论文Table1\n核查来源：https://arxiv.org/abs/2211.12498 https://touch-and-go.github.io/",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t14",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 31,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2211.12498",
+        "citationRecord": "https://openalex.org/W7133182857",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "VITaL Pretraining",
+      "title": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies",
+      "year": 2024,
+      "venue": "ICRA 2025（作者项目页）",
+      "arxiv": "2403.11898",
+      "category": "tactile-policy-not-vla",
+      "repo": "https://github.com/Abraham190137/TactileACT",
+      "project": "https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining",
+      "tasks": "USB线缆插入；细长方块堆叠；立方块堆叠",
+      "purpose": "区分训练时触觉预训练收益与部署时触觉反馈收益；比较触觉相关/不相关任务。",
+      "metrics": "成功率；每步切向绝对应变及跨运行中位数",
+      "setting": "Franka Panda+夹爪+GelSight；真机；100示范/任务，80训练20验证；插USB固定目标初位并加入2.5mm标准差动作噪声。",
+      "trials": "每种实验20次；USB最多300步。",
+      "comparisons": [
+        "ACT与DP",
+        "有/无预训练×有/无部署触觉",
+        "tactile-only"
+      ],
+      "signal": "GelSight应变xyz图；应变是相对力代理，非牛顿标定腕力。",
+      "action": "相对末端目标xyz+夹爪宽度；底层阻抗控制。",
+      "benchmark": "自建3任务；代码入口在作者项目页。",
+      "locators": [
+        "§IV-A/B",
+        "Figure7",
+        "§III-C"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2403.11898v2",
+        "https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining"
+      ],
+      "status": "论文协议已核实",
+      "warning": "与2025 ViTaL Local和2026 ViTaL Steering是3篇独立工作。",
+      "figure": {
+        "url": "https://arxiv.org/html/2403.11898v2/figures/Scene_layout_all_tasks.jpg",
+        "caption": "USB插入与两项积木堆叠实验",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2403.11898v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T15",
+      "name": "VITaL Pretraining",
+      "fullTitle": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies",
+      "source": "https://arxiv.org/html/2403.11898v2",
+      "github": "https://github.com/Abraham190137/TactileACT",
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "Franka Panda+夹爪+GelSight；真机；100示范/任务，80训练20验证；插USB固定目标初位并加入2.5mm标准差动作噪声。",
+      "actionOutput": "相对末端目标xyz+夹爪宽度；底层阻抗控制。",
+      "summary": "区分训练时触觉预训练收益与部署时触觉反馈收益；比较触觉相关/不相关任务。",
+      "baseline": "ACT与DP；有/无预训练×有/无部署触觉；tactile-only",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文协议已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/Abraham190137/TactileACT",
+        "note": "自建3任务；代码入口在作者项目页。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2403.11898v2/figures/Scene_layout_all_tasks.jpg",
+        "caption": "USB插入与两项积木堆叠实验；Figure 4",
+        "source": "https://arxiv.org/html/2403.11898v2"
+      },
+      "notes": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies\n自建3任务；代码入口在作者项目页。\n\n原文定位：§IV-A/B；Figure7；§III-C\n核查来源：https://arxiv.org/html/2403.11898v2 https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t15",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建3任务；代码入口在作者项目页。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 6,
+        "stars": 49,
+        "forks": 3,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2403.11898",
+        "citationRecord": "https://openalex.org/W4413925006",
+        "githubSource": "https://api.github.com/repos/Abraham190137/TactileACT",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "short": "ViTaL Local",
+      "title": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
+      "year": 2025,
+      "arxiv": "2506.13762",
+      "category": "vlm-tactile-hierarchical-policy",
+      "repo": null,
+      "project": "https://vitalprecise.github.io/",
+      "tasks": "电源插头插入；USB插入；刷卡；钥匙插锁；拿面包控制任务",
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "metrics": "分条件任务成功次数；泛化成功率",
+      "setting": "真机局部视觉+触觉BC/残差RL；固定绿幕基准以及位置、杂乱场景和联合扰动。",
+      "trials": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "comparisons": [
+        "BAKU",
+        "ViSk",
+        "RLPD",
+        "ViTaL-BC",
+        "无触觉/语义增强/残差RL消融"
+      ],
+      "signal": "AnySkin磁式触觉读数与腕部视觉；非腕F/T。",
+      "action": "VLM粗定位+局部视触觉动作策略；并非单一端到端触觉VLA。",
+      "benchmark": "自建精密接触+泛化协议；资源入口官方project。",
+      "locators": [
+        "§4.4–4.7",
+        "Tables1–5"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2506.13762v1",
+        "https://vitalprecise.github.io/"
+      ],
+      "status": "论文协议已核实",
+      "warning": "主泛化表人工初始化近目标，不能当完整VLM导航成功率；导航单列Table5。",
+      "figure": {
+        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
+        "caption": "四类精密接触操作真机轨迹",
+        "locator": "Figure 3",
+        "sourceUrl": "https://arxiv.org/html/2506.13762v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T16",
+      "name": "ViTaL Local",
+      "fullTitle": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "真机局部视觉+触觉BC/残差RL；固定绿幕基准以及位置、杂乱场景和联合扰动。",
+      "actionOutput": "VLM粗定位+局部视触觉动作策略；并非单一端到端触觉VLA。",
+      "summary": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "baseline": "BAKU；ViSk；RLPD；ViTaL-BC；无触觉/语义增强/残差RL消融",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文协议已核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://vitalprecise.github.io/",
+        "note": "自建精密接触+泛化协议；资源入口官方project。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
+        "caption": "四类精密接触操作真机轨迹；Figure 3",
+        "source": "https://arxiv.org/html/2506.13762v1"
+      },
+      "notes": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation\n自建精密接触+泛化协议；资源入口官方project。\n\n原文定位：§4.4–4.7；Tables1–5\n核查来源：https://arxiv.org/html/2506.13762v1 https://vitalprecise.github.io/",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "relations": [
+        {
+          "benchmark": "suite-t16",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建精密接触+泛化协议；资源入口官方project。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 1,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2506.13762",
+        "citationRecord": "https://openalex.org/W4415109351",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "ViTaL Steering",
+      "title": "Inference-time Policy Steering via Vision and Touch",
+      "year": 2026,
+      "arxiv": "2606.14981",
+      "category": "language-guided-tactile-policy",
+      "repo": null,
+      "project": "https://yilin-wu98.github.io/vital_website/",
+      "tasks": "移液至指定颜色杯；擦除指定颜色白板痕迹；插入指定孔位",
+      "purpose": "验证视觉长时语义选模与触觉短时接触纠偏互补。",
+      "metrics": "视觉任务成功率；接触成功率；整体成功率；二项标准误",
+      "setting": "三个真机任务；每任务2条语言条件；GelSight与视觉未来world model；冻结生成策略推理时引导。",
+      "trials": "每任务20次，2个语言条件各10次。",
+      "comparisons": [
+        "基础diffusion policy",
+        "仅视觉steering",
+        "仅触觉steering",
+        "简单多模态融合"
+      ],
+      "signal": "GelSight图像，文本条件触觉reward作用于预测latent。",
+      "action": "采样验证选动作序列，触觉引导diffusion editing短时修正；无目标力输出。",
+      "benchmark": "自建3任务；官网逐次视频；代码Coming Soon。",
+      "locators": [
+        "官网 Evaluation of ViTaL",
+        "官网 Results"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2606.14981",
+        "https://yilin-wu98.github.io/vital_website/"
+      ],
+      "status": "官方协议已核实",
+      "figure": {
+        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
+        "caption": "视觉选目标与触觉调接触的概览",
+        "locator": "官网方法概览（非单纯实验照片）",
+        "sourceUrl": "https://yilin-wu98.github.io/vital_website/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T17",
+      "name": "ViTaL Steering",
+      "fullTitle": "Inference-time Policy Steering via Vision and Touch",
+      "source": "https://arxiv.org/abs/2606.14981",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "三个真机任务；每任务2条语言条件；GelSight与视觉未来world model；冻结生成策略推理时引导。",
+      "actionOutput": "采样验证选动作序列，触觉引导diffusion editing短时修正；无目标力输出。",
+      "summary": "验证视觉长时语义选模与触觉短时接触纠偏互补。",
+      "baseline": "基础diffusion policy；仅视觉steering；仅触觉steering；简单多模态融合",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官方协议已核实",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://yilin-wu98.github.io/vital_website/",
+        "note": "自建3任务；官网逐次视频；代码Coming Soon。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
+        "caption": "视觉选目标与触觉调接触的概览；官网方法概览（非单纯实验照片）",
+        "source": "https://yilin-wu98.github.io/vital_website/"
+      },
+      "notes": "Inference-time Policy Steering via Vision and Touch\n自建3任务；官网逐次视频；代码Coming Soon。\n\n原文定位：官网 Evaluation of ViTaL；官网 Results\n核查来源：https://arxiv.org/abs/2606.14981 https://yilin-wu98.github.io/vital_website/",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t17",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建3任务；官网逐次视频；代码Coming Soon。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2606.14981",
+        "citationRecord": "https://openalex.org/W7164925006",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "ViTacFormer",
+      "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+      "year": 2025,
+      "venue": "RSS 2026（官方repo）",
+      "arxiv": "2506.15953",
+      "category": "dexterous-tactile-policy-not-vla",
+      "repo": "https://github.com/RoboVerseOrg/ViTacFormer",
+      "project": "https://roboverseorg.github.io/ViTacFormerPage/",
+      "tasks": "Peg Insertion；Cap Twist；Vase Wipe；Book Flip；11阶段制作汉堡",
+      "purpose": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "metrics": "成功率；Human Normalized Score；长任务连续完成阶段",
+      "setting": "双Realman臂+双SharpaWave17DoF灵巧手；高分辨率指尖触觉；真机。",
+      "trials": "每任务测试次数本轮未核实。",
+      "comparisons": [
+        "ACT",
+        "DP",
+        "触觉融合/预测头消融待逐表深读"
+      ],
+      "signal": "指尖高分辨率触觉与视觉。",
+      "action": "绝对关节角target，chunk+temporal ensemble；不含语言输入。",
+      "benchmark": "自建4短程+1长程任务；官方代码与示例数据公开。",
+      "locators": [
+        "官网 Experiment Results",
+        "论文Figure2",
+        "RINO作者海报"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2506.15953",
+        "https://roboverseorg.github.io/ViTacFormerPage/",
+        "https://github.com/RoboVerseOrg/ViTacFormer",
+        "https://rino-workshop.github.io/imgs/posters/RINO_HENG.pdf"
+      ],
+      "status": "官方任务与接口已核实",
+      "figure": {
+        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
+        "caption": "双臂灵巧手真机与遥操作装置",
+        "locator": "官网 Hardware Setup",
+        "sourceUrl": "https://roboverseorg.github.io/ViTacFormerPage/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T18",
+      "name": "ViTacFormer",
+      "fullTitle": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+      "source": "https://arxiv.org/abs/2506.15953",
+      "github": "https://github.com/RoboVerseOrg/ViTacFormer",
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "双Realman臂+双SharpaWave17DoF灵巧手；高分辨率指尖触觉；真机。",
+      "actionOutput": "绝对关节角target，chunk+temporal ensemble；不含语言输入。",
+      "summary": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "baseline": "ACT；DP；触觉融合/预测头消融待逐表深读",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官方任务与接口已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/RoboVerseOrg/ViTacFormer",
+        "note": "自建4短程+1长程任务；官方代码与示例数据公开。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
+        "caption": "双臂灵巧手真机与遥操作装置；官网 Hardware Setup",
+        "source": "https://roboverseorg.github.io/ViTacFormerPage/"
+      },
+      "notes": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation\n自建4短程+1长程任务；官方代码与示例数据公开。\n\n原文定位：官网 Experiment Results；论文Figure2；RINO作者海报\n核查来源：https://arxiv.org/abs/2506.15953 https://roboverseorg.github.io/ViTacFormerPage/ https://github.com/RoboVerseOrg/ViTacFormer https://rino-workshop.github.io/imgs/posters/RINO_HENG.pdf",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "relations": [
+        {
+          "benchmark": "suite-t18",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建4短程+1长程任务；官方代码与示例数据公开。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 2,
+        "stars": 121,
+        "forks": 11,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2506.15953",
+        "citationRecord": "https://openalex.org/W4417537399",
+        "githubSource": "https://api.github.com/repos/RoboVerseOrg/ViTacFormer",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "AnyTouch 2",
+      "title": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "arxiv": "2602.09617",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/GeWu-Lab/AnyTouch2",
+      "project": "https://gewu-lab.github.io/AnyTouch2/",
+      "tasks": "触觉抓取；擦白板；USB插入；薯片移动；离线静态属性/动作/力及delta-force预测",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "ToucHD 2,426,174接触样本；仿真原子动作、真机操作、触觉与3D力配对；下游4项真机。",
+      "trials": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "comparisons": [
+        "触觉基础表示模型对照",
+        "跨传感器DIGIT泛化",
+        "不同动态学习目标消融待逐表核实"
+      ],
+      "signal": "光学触觉视频；训练力标签由腕部力传感器记录3D力。",
+      "action": "表示编码器供下游策略；自身非语言动作模型。",
+      "benchmark": "提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。",
+      "locators": [
+        "官网 Online Real-World Manipulation",
+        "官网 Offline Benchmark Evaluation",
+        "论文Experiment"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2602.09617v1",
+        "https://gewu-lab.github.io/AnyTouch2/",
+        "https://github.com/GeWu-Lab/AnyTouch2"
+      ],
+      "status": "官方任务和规模已核实",
+      "figure": {
+        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
+        "caption": "四项真机操作评测",
+        "locator": "官网 Online Real-World Manipulation",
+        "sourceUrl": "https://gewu-lab.github.io/AnyTouch2/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T19",
+      "name": "AnyTouch 2",
+      "fullTitle": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "github": "https://github.com/GeWu-Lab/AnyTouch2",
+      "kind": "表示学习 / 语言理解",
+      "family": "related",
+      "role": "前序工作",
+      "platform": "ToucHD 2,426,174接触样本；仿真原子动作、真机操作、触觉与3D力配对；下游4项真机。",
+      "actionOutput": "表示编码器供下游策略；自身非语言动作模型。",
+      "summary": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "baseline": "触觉基础表示模型对照；跨传感器DIGIT泛化；不同动态学习目标消融待逐表核实",
+      "scope": "扩展相关",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "evidence": "官方任务和规模已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/GeWu-Lab/AnyTouch2",
+        "note": "提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。"
+      },
+      "warning": "相邻方法 / 资源，不作为带力VLA本体计数。",
+      "experiments": [],
+      "image": {
+        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
+        "caption": "四项真机操作评测；官网 Online Real-World Manipulation",
+        "source": "https://gewu-lab.github.io/AnyTouch2/"
+      },
+      "notes": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception\n提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。\n\n原文定位：官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment\n核查来源：https://arxiv.org/html/2602.09617v1 https://gewu-lab.github.io/AnyTouch2/ https://github.com/GeWu-Lab/AnyTouch2",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t19",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。"
+        }
+      ],
+      "actionMode": "表示与下游任务（非VLA）",
+      "attention": {
+        "citations": 0,
+        "stars": 66,
+        "forks": 6,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2602.09617",
+        "citationRecord": "https://openalex.org/W7128621746",
+        "githubSource": "https://api.github.com/repos/GeWu-Lab/AnyTouch2",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "See, Hear, and Feel",
+      "title": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation",
+      "year": 2022,
+      "venue": "CoRL 2022",
+      "arxiv": "2212.03858",
+      "category": "multisensory-tactile-policy-not-vla",
+      "repo": "https://github.com/JunzheJosephZhu/see_hear_feel",
+      "project": "https://arxiv.org/abs/2212.03858",
+      "tasks": "dense packing；pouring",
+      "purpose": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "metrics": "任务成功率（具体阶段指标待查原表）",
+      "setting": "真机相机、接触麦克风、GelSight；附录测试倾倒新初态。",
+      "trials": "每任务次数本轮未知。",
+      "comparisons": [
+        "各模态组合消融",
+        "MSA融合模型",
+        "Franka内部力输入消融",
+        "腕部相机消融"
+      ],
+      "signal": "GelSight+接触音频；附录额外比较机器人力感知。",
+      "action": "模仿学习动作策略；无语言输入。",
+      "benchmark": "自建2任务；官方代码及示例数据公开。",
+      "locators": [
+        "论文Experiments",
+        "Supplement §6 force sensing ablation",
+        "官方repo ablation flags"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2212.03858",
+        "https://ruohangao.github.io/assets/supps/seel_hear_feel_supp.pdf",
+        "https://github.com/JunzheJosephZhu/see_hear_feel"
+      ],
+      "status": "官方定位与消融已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2212.03858v2/setup_pack.png",
+        "caption": "紧密装箱操作实验装置",
+        "locator": "论文实验装置图",
+        "sourceUrl": "https://arxiv.org/html/2212.03858v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T20",
+      "name": "See, Hear, and Feel",
+      "fullTitle": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation",
+      "source": "https://arxiv.org/abs/2212.03858",
+      "github": "https://github.com/JunzheJosephZhu/see_hear_feel",
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "真机相机、接触麦克风、GelSight；附录测试倾倒新初态。",
+      "actionOutput": "模仿学习动作策略；无语言输入。",
+      "summary": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "baseline": "各模态组合消融；MSA融合模型；Franka内部力输入消融；腕部相机消融",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "官方定位与消融已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/JunzheJosephZhu/see_hear_feel",
+        "note": "自建2任务；官方代码及示例数据公开。"
+      },
+      "warning": "不同任务、对象、控制器和评分协议的成功率不能直接合并排行。",
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2212.03858v2/setup_pack.png",
+        "caption": "紧密装箱操作实验装置；论文实验装置图",
+        "source": "https://arxiv.org/html/2212.03858v2"
+      },
+      "notes": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation\n自建2任务；官方代码及示例数据公开。\n\n原文定位：论文Experiments；Supplement §6 force sensing ablation；官方repo ablation flags\n核查来源：https://arxiv.org/abs/2212.03858 https://ruohangao.github.io/assets/supps/seel_hear_feel_supp.pdf https://github.com/JunzheJosephZhu/see_hear_feel",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-t20",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建2任务；官方代码及示例数据公开。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 10,
+        "stars": 46,
+        "forks": 2,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2212.03858",
+        "citationRecord": "https://openalex.org/W4310995851",
+        "githubSource": "https://api.github.com/repos/JunzheJosephZhu/see_hear_feel",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "short": "ManiWAV",
+      "title": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data",
+      "year": 2024,
+      "venue": "CoRL 2024",
+      "arxiv": "2406.19464",
+      "category": "contact-audio-policy-not-vla",
+      "repo": "https://github.com/real-stanford/maniwav",
+      "project": "https://maniwav.github.io/",
+      "tasks": "铲子翻贝果；擦白板；摇杯判断并倒骰子；辨别魔术贴钩/毛面并绑线",
+      "purpose": "被动接触事件和主动感知属性能否借接触音频补充视觉；环境泛化。",
+      "metrics": "整任务成功率；子阶段成功率",
+      "setting": "UMI手持示范+UR5部署；接触麦克风；噪声/高度/工具/图案/未见场景条件。",
+      "trials": "翻贝果正文20次但情形分项以40为总分母，需保留歧义；擦白板20；倒骰12；魔术贴10。",
+      "comparisons": [
+        "vision-only",
+        "MLP策略/融合",
+        "ResNet/AVID音频encoder",
+        "音频历史长度",
+        "环境麦克风",
+        "去噪增强"
+      ],
+      "signal": "接触麦克风振动声，不是六维力或触觉图。",
+      "action": "音视频条件diffusion policy输出UMI末端运动与夹爪控制。",
+      "benchmark": "自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。",
+      "locators": [
+        "§4.1–4.4",
+        "Figures5–8",
+        "Appendix B.2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2406.19464v1",
+        "https://github.com/real-stanford/maniwav"
+      ],
+      "status": "论文协议已核实",
+      "warning": "不是VLA，也不应把audio当力值；翻转试次分母有原文歧义。",
+      "figure": {
+        "url": "https://arxiv.org/html/2406.19464v1/audio_wipe.png",
+        "caption": "擦白板条件、失败案例与成功率",
+        "locator": "Figure 6",
+        "sourceUrl": "https://arxiv.org/html/2406.19464v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      },
+      "id": "T21",
+      "name": "ManiWAV",
+      "fullTitle": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data",
+      "source": "https://arxiv.org/html/2406.19464v1",
+      "github": "https://github.com/real-stanford/maniwav",
+      "kind": "基础策略（非VLA）",
+      "family": "dex",
+      "role": "触觉反馈",
+      "platform": "UMI手持示范+UR5部署；接触麦克风；噪声/高度/工具/图案/未见场景条件。",
+      "actionOutput": "音视频条件diffusion policy输出UMI末端运动与夹爪控制。",
+      "summary": "被动接触事件和主动感知属性能否借接触音频补充视觉；环境泛化。",
+      "baseline": "vision-only；MLP策略/融合；ResNet/AVID音频encoder；音频历史长度；环境麦克风；去噪增强",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "evidence": "论文协议已核实",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/real-stanford/maniwav",
+        "note": "自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。"
+      },
+      "experiments": [],
+      "image": {
+        "url": "https://arxiv.org/html/2406.19464v1/audio_wipe.png",
+        "caption": "擦白板条件、失败案例与成功率；Figure 6",
+        "source": "https://arxiv.org/html/2406.19464v1"
+      },
+      "notes": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data\n自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。\n\n原文定位：§4.1–4.4；Figures5–8；Appendix B.2\n核查来源：https://arxiv.org/html/2406.19464v1 https://github.com/real-stanford/maniwav",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-t21",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 1,
+        "stars": 68,
+        "forks": 7,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2406.19464",
+        "citationRecord": "https://openalex.org/W4400222297",
+        "githubSource": "https://api.github.com/repos/real-stanford/maniwav",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C01",
+      "name": "ForceMimic / HybridIL",
+      "fullTitle": "ForceMimic: Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation",
+      "year": 2024,
+      "publication": "ICRA 2025；预印本2024",
+      "arxiv": "2410.07554",
+      "family": "wrist",
+      "tier": "力控模仿学习前序",
+      "signal": "示教记录6D F/T；执行低层读取力反馈",
+      "sensorSource": "专用F/T传感器",
+      "role": "显式力—位置",
+      "output": "未来位姿与wrench；正交混合力位控制",
+      "platform": "Flexiv Rizon 4；执行臂固定削皮工具、另一臂夹爪固定蔬菜",
+      "domains": [
+        "真机"
+      ],
+      "summary": "通过ForceCapture采集力—运动示教，HybridIL预测目标wrench并交给混合控制器执行。",
+      "purpose": "区分加入力输入与显式预测/执行力目标的作用；比较采集效率与连续削皮质量。",
+      "tasks": "西葫芦削皮；完整削皮流程的采集效率研究",
+      "metrics": "不损伤且剥下皮的动作成功率；连续皮长>10cm的严格成功率；采集时间；力曲线",
+      "trials": "Raw DP、HybridIL各20；Force DP、Force+Hybrid DP各10次削皮动作",
+      "baselines": "Raw DP；Force DP；Force+Hybrid DP；所有模型500epoch。",
+      "benchmark": "自建西葫芦削皮实验",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/ForceMimic/hybridil",
+        "note": "自建西葫芦削皮实验"
+      },
+      "warning": "非VLA，无语言条件；主定量评测仅一个技能，且基线测试次数不相等。HybridIL不应描述为直接以实时力作策略输入。",
+      "locator": "§III-C；§IV-A/B；Table I；Figs.5–6",
+      "source": "https://arxiv.org/html/2410.07554v2",
+      "project": "https://forcemimic.github.io/",
+      "repo": "https://github.com/ForceMimic/hybridil",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/ForceMimic/hybridil",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "未来位姿与wrench；正交混合力位控制",
+      "baseline": "Raw DP；Force DP；Force+Hybrid DP；所有模型500epoch。",
+      "scope": "扩展相关",
+      "locators": [
+        "§III-C；§IV-A/B；Table I；Figs.5–6"
+      ],
+      "experiments": [],
+      "notes": "ForceMimic: Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation\n自建西葫芦削皮实验\nICRA 2025；预印本2024\n原文定位：§III-C；§IV-A/B；Table I；Figs.5–6\n核查来源：https://arxiv.org/html/2410.07554v2",
+      "sensorOrigin": "真实F/T传感器",
+      "relations": [
+        {
+          "benchmark": "suite-c01",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建西葫芦削皮实验"
+        }
+      ],
+      "actionMode": "显式目标力 / 力控参数",
+      "attention": {
+        "citations": 26,
+        "stars": 49,
+        "forks": 3,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.07554",
+        "citationRecord": "https://openalex.org/W4413925274",
+        "githubSource": "https://api.github.com/repos/ForceMimic/hybridil",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C02",
+      "name": "FoAR",
+      "fullTitle": "FoAR: Force-Aware Reactive Policy for Contact-Rich Robotic Manipulation",
+      "year": 2024,
+      "publication": "RA-L / IROS 2025；预印本2024",
+      "arxiv": "2411.15753",
+      "family": "wrist",
+      "tier": "力反馈模仿学习前序",
+      "signal": "腕部6D F/T历史，100Hz",
+      "sensorSource": "OptoForce F/T",
+      "role": "快速反馈",
+      "output": "末端位姿/夹爪动作和未来接触概率；按当前力细化位置",
+      "platform": "Flexiv Rizon + Dahuan AG-95",
+      "domains": [
+        "真机"
+      ],
+      "summary": "预测未来接触状态来门控视觉—力融合，在位置控制接口上加接触反应。",
+      "purpose": "测试持续表面接触、瞬时冲击及外部扰动下的在线修正。",
+      "tasks": "擦白板（固定/任意方向）、削黄瓜、切辣椒",
+      "metrics": "任务质量Score、分阶段动作成功率ASR；切段数量及归一化长度均值/标准差",
+      "trials": "擦拭、削皮每方法20；切割仅FoAR与RISE各10",
+      "baselines": "ACT、DP、RISE、RISE force-token/concat、FoAR 3D-cls；反应控制与接触模块消融。",
+      "benchmark": "自建三任务；擦板额外方向泛化",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/Alan-Heoooh/FoAR",
+        "note": "自建三任务；擦板额外方向泛化"
+      },
+      "warning": "非语言VLA；ASR只判断动作完成，不等于质量Score；反应位置控制不是显式目标力追踪。",
+      "locator": "§IV-A–D；Table I；切割质量Fig.5",
+      "source": "https://arxiv.org/html/2411.15753v2",
+      "project": "https://tonyfang.net/FoAR/",
+      "repo": "https://github.com/Alan-Heoooh/FoAR",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/Alan-Heoooh/FoAR",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "末端位姿/夹爪动作和未来接触概率；按当前力细化位置",
+      "baseline": "ACT、DP、RISE、RISE force-token/concat、FoAR 3D-cls；反应控制与接触模块消融。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A–D；Table I；切割质量Fig.5"
+      ],
+      "experiments": [],
+      "notes": "FoAR: Force-Aware Reactive Policy for Contact-Rich Robotic Manipulation\n自建三任务；擦板额外方向泛化\nRA-L / IROS 2025；预印本2024\n原文定位：§IV-A–D；Table I；切割质量Fig.5\n核查来源：https://arxiv.org/html/2411.15753v2",
+      "sensorOrigin": "真实F/T传感器",
+      "relations": [
+        {
+          "benchmark": "suite-c02",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建三任务；擦板额外方向泛化"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 14,
+        "stars": 70,
+        "forks": 4,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2411.15753",
+        "citationRecord": "https://openalex.org/W4409426912",
+        "githubSource": "https://api.github.com/repos/Alan-Heoooh/FoAR",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C03",
+      "name": "FARM",
+      "fullTitle": "Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation",
+      "year": 2025,
+      "publication": "arXiv 2025",
+      "arxiv": "2510.13324",
+      "family": "touch",
+      "tier": "夹爪显式力控模仿学习",
+      "signal": "GelSight Mini图像经FEATS估计接触力分布与总法向夹持力",
+      "sensorSource": "视觉触觉估力",
+      "role": "显式力—位置",
+      "output": "末端位姿、夹爪宽度、目标夹持力；25Hz夹爪闭环",
+      "platform": "Franka FR3 + Actuated UMI gripper",
+      "domains": [
+        "真机"
+      ],
+      "summary": "把触觉转换成力分布，同时把目标夹持力纳入动作空间。",
+      "purpose": "用高力、低力与动态用力三种需求分离触觉表示和力动作接口的收益。",
+      "tasks": "塑料植物插土、完整摘取葡萄入碗、内六角工具拧紧螺丝",
+      "metrics": "任务特定成功率；螺丝操作力分布比较",
+      "trials": "每任务每方法20次；每任务30条示教",
+      "baselines": "同DP骨干：Vision-only、原始触觉Tactile-aware、标量力Force-aware、完整力分布FARM。",
+      "benchmark": "自建三种力需求任务",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://tactile-farm.github.io/",
+        "note": "自建三种力需求任务"
+      },
+      "warning": "不是VLA，也不是腕部6D力控制；Vision-only使用二值夹爪而力版本扩展动作空间，比较同时改变输入和控制接口。",
+      "locator": "§III-C–E；§IV-A/B；Fig.5",
+      "source": "https://arxiv.org/html/2510.13324v1",
+      "project": "https://tactile-farm.github.io/",
+      "repo": null,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "末端位姿、夹爪宽度、目标夹持力；25Hz夹爪闭环",
+      "baseline": "同DP骨干：Vision-only、原始触觉Tactile-aware、标量力Force-aware、完整力分布FARM。",
+      "scope": "扩展相关",
+      "locators": [
+        "§III-C–E；§IV-A/B；Fig.5"
+      ],
+      "experiments": [],
+      "notes": "Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation\n自建三种力需求任务\narXiv 2025\n原文定位：§III-C–E；§IV-A/B；Fig.5\n核查来源：https://arxiv.org/html/2510.13324v1",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "relations": [
+        {
+          "benchmark": "suite-c03",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建三种力需求任务"
+        }
+      ],
+      "actionMode": "显式目标力 / 力控参数",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2510.13324",
+        "citationRecord": "https://openalex.org/W4415275663",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C04",
+      "name": "ViSk / VisuoSkin",
+      "fullTitle": "Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins",
+      "year": 2024,
+      "publication": "CoRL 2024 SAFE-ROL workshop",
+      "arxiv": "2410.17246",
+      "family": "touch",
+      "tier": "视觉—触觉模仿学习前序",
+      "signal": "AnySkin低维磁场触觉，非已校准wrench",
+      "sensorSource": "磁性触觉皮肤",
+      "role": "触觉反馈",
+      "output": "末端位姿增量和夹爪状态，10Hz",
+      "platform": "xArm 7 + 双指夹爪；单指AnySkin",
+      "domains": [
+        "真机"
+      ],
+      "summary": "在BAKU中把皮肤读数作为token，验证低维触觉能否改善精密接触与空间泛化。",
+      "purpose": "用相同策略比较视觉、触觉、腕视相机和本体输入；在未见目标位置及新任务变体检验接触搜索。",
+      "tasks": "插头插入、USB插入、信用卡刷卡、书架取书",
+      "metrics": "成功率（3seed均值/标准差）；未见任务配置成功率",
+      "trials": "3个随机seed×10个held-out配置，每项30次",
+      "baselines": "视觉only、不同相机/本体组合、DIGIT替换；所有主评测固定十个未见目标配置。",
+      "benchmark": "自建四项精密真机任务",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/raunaqbhirangi/visuoskin",
+        "note": "自建四项精密真机任务"
+      },
+      "warning": "非语言VLA；前三任务初始已握物，不能当完整抓取—插入流程；触觉读数不是6D F/T。",
+      "locator": "§IV-A–F；Table I；Fig.4",
+      "source": "https://arxiv.org/html/2410.17246v2",
+      "project": "https://visuoskin.github.io/",
+      "repo": "https://github.com/raunaqbhirangi/visuoskin",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/raunaqbhirangi/visuoskin",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "末端位姿增量和夹爪状态，10Hz",
+      "baseline": "视觉only、不同相机/本体组合、DIGIT替换；所有主评测固定十个未见目标配置。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A–F；Table I；Fig.4"
+      ],
+      "experiments": [],
+      "notes": "Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins\n自建四项精密真机任务\nCoRL 2024 SAFE-ROL workshop\n原文定位：§IV-A–F；Table I；Fig.4\n核查来源：https://arxiv.org/html/2410.17246v2",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "relations": [
+        {
+          "benchmark": "suite-c04",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建四项精密真机任务"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 35,
+        "forks": 8,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.17246",
+        "citationRecord": "https://openalex.org/W4404313120",
+        "githubSource": "https://api.github.com/repos/raunaqbhirangi/visuoskin",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C05",
+      "name": "AnySkin",
+      "fullTitle": "AnySkin: Plug-and-play Skin Sensing for Robotic Touch",
+      "year": 2024,
+      "publication": "arXiv 2024",
+      "arxiv": "2409.08276",
+      "family": "touch",
+      "tier": "传感器与闭环策略验证",
+      "signal": "5磁力计×3轴磁通；未校准触觉",
+      "sensorSource": "磁性触觉皮肤",
+      "role": "触觉反馈",
+      "output": "BAKU行为克隆预测10步动作块",
+      "platform": "xArm 7 + 双指夹爪",
+      "domains": [
+        "真机"
+      ],
+      "summary": "重点评测换传感器实例后策略能否继续使用，兼顾滑移识别和换皮效率。",
+      "purpose": "将传感器物理替换、信号一致性与真正的策略跨实例泛化分别量化。",
+      "tasks": "插头插入、USB插入、刷卡；滑移检测与换皮研究",
+      "metrics": "原皮/新皮成功率；滑移分类准确率；替换时间",
+      "trials": "策略3个seed、每个10rollout；每任务96条示教",
+      "baselines": "Vision-only；ReSkin、DIGIT换实例对照；原实例与新实例配对。",
+      "benchmark": "自建跨实例任务协议",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/raunaqbhirangi/anyskin",
+        "note": "自建跨实例任务协议"
+      },
+      "warning": "硬件论文而非VLA；跨实例与跨物体泛化需分开；不要把原始磁通15维称为15维接触力。",
+      "locator": "§V-B/D；Tables II–IV；Fig.6",
+      "source": "https://arxiv.org/html/2409.08276v3",
+      "project": "https://any-skin.github.io/",
+      "repo": "https://github.com/raunaqbhirangi/anyskin",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/raunaqbhirangi/anyskin",
+      "kind": "硬件与感知资源",
+      "actionOutput": "BAKU行为克隆预测10步动作块",
+      "baseline": "Vision-only；ReSkin、DIGIT换实例对照；原实例与新实例配对。",
+      "scope": "扩展相关",
+      "locators": [
+        "§V-B/D；Tables II–IV；Fig.6"
+      ],
+      "experiments": [],
+      "notes": "AnySkin: Plug-and-play Skin Sensing for Robotic Touch\n自建跨实例任务协议\narXiv 2024\n原文定位：§V-B/D；Tables II–IV；Fig.6\n核查来源：https://arxiv.org/html/2409.08276v3",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-c05",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建跨实例任务协议"
+        }
+      ],
+      "actionMode": "硬件与下游控制（非VLA）",
+      "attention": {
+        "citations": 11,
+        "stars": 89,
+        "forks": 10,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2409.08276",
+        "citationRecord": "https://openalex.org/W4413925665",
+        "githubSource": "https://api.github.com/repos/raunaqbhirangi/anyskin",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C06",
+      "name": "Sparsh-skin",
+      "fullTitle": "Self-supervised perception for tactile skin covered dexterous hands",
+      "year": 2025,
+      "publication": "CoRL 2025",
+      "arxiv": "2505.11420",
+      "family": "dex",
+      "tier": "触觉表示＋闭环策略",
+      "signal": "Allegro整手Xela uSkin磁性触觉与运动学历史",
+      "sensorSource": "全手磁性触觉",
+      "role": "触觉反馈",
+      "output": "预训练embedding；下游插入策略输出绝对末端位姿动作块",
+      "platform": "Franka 7DoF + Allegro hand",
+      "domains": [
+        "真机"
+      ],
+      "summary": "覆盖掌面和指节的触觉表示，不只做离线感知，也以插头闭环验证。",
+      "purpose": "分别测力/摇杆状态/物体位姿估计和真实接触控制，考察预训练与标注量。",
+      "tasks": "三轴力估计、摇杆状态、物体位姿、插头插入",
+      "metrics": "前三项RMSE和位姿准确率；插入成功率",
+      "trials": "插入20次/策略，起始位姿随机；100条插入示教",
+      "baselines": "Vision-only、端到端V+T、冻结/微调Sparsh-skin、MAE/BYOL；ViSk成绩取原论文。",
+      "benchmark": "四项下游套件；插入借鉴已有任务、改变末端本体",
+      "benchmarkKind": "论文自建下游协议",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+        "note": "四项下游套件；插入借鉴已有任务、改变末端本体"
+      },
+      "warning": "非语言VLA；引用的ViSk基线不是相同硬件重测；离线力估计RMSE不同于闭环力跟踪。",
+      "locator": "§4.1–4.2；Table 1；Fig.7",
+      "source": "https://arxiv.org/html/2505.11420v1",
+      "repo": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "预训练embedding；下游插入策略输出绝对末端位姿动作块",
+      "baseline": "Vision-only、端到端V+T、冻结/微调Sparsh-skin、MAE/BYOL；ViSk成绩取原论文。",
+      "scope": "扩展相关",
+      "locators": [
+        "§4.1–4.2；Table 1；Fig.7"
+      ],
+      "experiments": [],
+      "notes": "Self-supervised perception for tactile skin covered dexterous hands\n四项下游套件；插入借鉴已有任务、改变末端本体\nCoRL 2025\n原文定位：§4.1–4.2；Table 1；Fig.7\n核查来源：https://arxiv.org/html/2505.11420v1",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-c06",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "四项下游套件；插入借鉴已有任务、改变末端本体"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 52,
+        "forks": 8,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2505.11420",
+        "citationRecord": "https://openalex.org/W4417094346",
+        "githubSource": "https://api.github.com/repos/facebookresearch/sparsh-multisensory-touch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。"
+    },
+    {
+      "id": "C07",
+      "name": "Sparsh-X",
+      "fullTitle": "Tactile Beyond Pixels: Multisensory Touch Representations for Robot Manipulation",
+      "year": 2025,
+      "publication": "CoRL 2025 Oral",
+      "arxiv": "2506.14754",
+      "family": "dex",
+      "tier": "多模态触觉表示＋闭环策略",
+      "signal": "Digit360触觉图像、音频、IMU、压力",
+      "sensorSource": "多模态指尖传感器",
+      "role": "触觉反馈",
+      "output": "插入ACT绝对末端位姿；旋转策略触觉适配输出关节动作",
+      "platform": "Allegro手；插入配机械臂",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "把多感官触觉用于插入模仿学习及仿真旋转策略的真实触觉适配。",
+      "purpose": "消融触觉模态和预训练；检查收益来自实时触觉而非只来自筛选成功轨迹。",
+      "tasks": "插头插入、杯状物手内旋转；物体动作/材料数量/力估计",
+      "metrics": "插入SR；旋转垂向漂移与Time-to-fall；离线物理属性指标",
+      "trials": "插入20次；旋转每策略10次×最长60秒；改变质量/摩擦条件5次",
+      "baselines": "Vision-only、端到端、单/多触觉模态；Hora、Hora微调、本体only IL、ControlNet E2E。",
+      "benchmark": "自建下游评测；旋转采用Hora公开基础策略",
+      "benchmarkKind": "论文自建下游协议",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+        "note": "自建下游评测；旋转采用Hora公开基础策略"
+      },
+      "warning": "非VLA；旋转基础策略仿真训练，触觉适配在真实数据上训练，不是全方法零样本sim2real。",
+      "locator": "§4；Figs.5–7",
+      "source": "https://arxiv.org/html/2506.14754v1",
+      "repo": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "插入ACT绝对末端位姿；旋转策略触觉适配输出关节动作",
+      "baseline": "Vision-only、端到端、单/多触觉模态；Hora、Hora微调、本体only IL、ControlNet E2E。",
+      "scope": "扩展相关",
+      "locators": [
+        "§4；Figs.5–7"
+      ],
+      "experiments": [],
+      "notes": "Tactile Beyond Pixels: Multisensory Touch Representations for Robot Manipulation\n自建下游评测；旋转采用Hora公开基础策略\nCoRL 2025 Oral\n原文定位：§4；Figs.5–7\n核查来源：https://arxiv.org/html/2506.14754v1",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-c07",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "自建下游评测；旋转采用Hora公开基础策略"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 0,
+        "stars": 52,
+        "forks": 8,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2506.14754",
+        "citationRecord": "https://openalex.org/W4415312740",
+        "githubSource": "https://api.github.com/repos/facebookresearch/sparsh-multisensory-touch",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。"
+    },
+    {
+      "id": "C08",
+      "name": "Touch Dexterity",
+      "fullTitle": "Rotating without Seeing: Towards In-hand Dexterity through Touch",
+      "year": 2023,
+      "publication": "RSS 2023",
+      "arxiv": "2303.10880",
+      "family": "dex",
+      "tier": "触觉强化学习经典前序",
+      "signal": "整手16个FSR二值接触＋关节状态，无视觉",
+      "sensorSource": "力敏电阻二值化",
+      "role": "触觉反馈",
+      "output": "Allegro手关节目标",
+      "platform": "16DoF Allegro hand；IsaacGym",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "在仿真学多物体手内旋转，直接部署真手并测未见真实物体。",
+      "purpose": "测触觉对稳定性、形状理解、跨物体和sim2real的作用。",
+      "tasks": "手内绕各轴旋转；陌生日常物体旋转；形状重建诊断",
+      "metrics": "仿真累计旋转奖励CRR；真实累计旋转圈数CRA；掉落时间TTF",
+      "trials": "仿真学习曲线3seed；统一真机每物体重复次数本轮未确认",
+      "baselines": "No-Sensor、低灵敏LS-Sensor、测试时禁用DS-Sensor；真实开环和连续触觉输入。",
+      "benchmark": "自建几何物体训练与未见真物体套件",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/YingYuan0414/in-hand-rotation",
+        "note": "自建几何物体训练与未见真物体套件"
+      },
+      "warning": "非VLA、无语言、无视觉；二值触觉不等于力值控制。CRA真人计数，不能当统一客观力追踪指标。 官网关联仓库对应Robot Synesthesia及其TouchDex基线，不能把整库星标归为该论文独立使用量。",
+      "locator": "§V-A–E；Figs.6–8",
+      "source": "https://arxiv.org/html/2303.10880v4",
+      "project": "https://touchdexterity.github.io/",
+      "repo": "https://github.com/YingYuan0414/in-hand-rotation",
+      "repoShared": true,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "Allegro手关节目标",
+      "baseline": "No-Sensor、低灵敏LS-Sensor、测试时禁用DS-Sensor；真实开环和连续触觉输入。",
+      "scope": "扩展相关",
+      "locators": [
+        "§V-A–E；Figs.6–8"
+      ],
+      "experiments": [],
+      "notes": "Rotating without Seeing: Towards In-hand Dexterity through Touch\n自建几何物体训练与未见真物体套件\nRSS 2023\n原文定位：§V-A–E；Figs.6–8\n核查来源：https://arxiv.org/html/2303.10880v4",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-c08",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "自建几何物体训练与未见真物体套件"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 2,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2303.10880",
+        "citationRecord": "https://openalex.org/W4360818631",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "relatedRepo": "https://github.com/YingYuan0414/in-hand-rotation"
+    },
+    {
+      "id": "C09",
+      "name": "RotateIt",
+      "fullTitle": "General In-hand Object Rotation with Vision and Touch",
+      "year": 2023,
+      "publication": "CoRL 2023",
+      "arxiv": "2309.09979",
+      "family": "dex",
+      "tier": "视觉—触觉强化学习前序",
+      "signal": "外部深度、全向指尖触觉、本体状态",
+      "sensorSource": "视觉触觉指尖",
+      "role": "触觉反馈",
+      "output": "16关节位置目标，20Hz；300Hz PD执行",
+      "platform": "Allegro hand + RealSense D435；IsaacGym",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "先学带特权物理信息的策略，再蒸馏到实际视觉/触觉输入，完成多轴旋转。",
+      "purpose": "分离视觉、触觉与物体形状信息对多轴操作和陌生物体泛化的贡献。",
+      "tasks": "手内x/y/z多轴旋转；15个held-out挑战物体与真实日常物体",
+      "metrics": "归一化掉落时间TTF（20秒上限）；旋转奖励RotR；非期望旋转RotP；真机旋转弧度",
+      "trials": "每配置真实重复次数本轮未确认；报告15个held-out挑战物体",
+      "baselines": "本体only、视觉only、触觉only、视觉＋触觉；无形状点云及前序策略。",
+      "benchmark": "EGAD/GSO/YCB/ContactDB筛选物体构建的旋转套件",
+      "benchmarkKind": "公开资源衍生任务",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://haozhi.io/rotateit/",
+        "note": "EGAD/GSO/YCB/ContactDB筛选物体构建的旋转套件"
+      },
+      "warning": "非语言VLA；复用物体资产不等于采用这些数据集的统一机器人评测。",
+      "locator": "§4–5；Table 1；Fig.6；§5.4真机",
+      "source": "https://arxiv.org/html/2309.09979v1",
+      "repo": null,
+      "project": "https://haozhi.io/rotateit/",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "16关节位置目标，20Hz；300Hz PD执行",
+      "baseline": "本体only、视觉only、触觉only、视觉＋触觉；无形状点云及前序策略。",
+      "scope": "扩展相关",
+      "locators": [
+        "§4–5；Table 1；Fig.6；§5.4真机"
+      ],
+      "experiments": [],
+      "notes": "General In-hand Object Rotation with Vision and Touch\nEGAD/GSO/YCB/ContactDB筛选物体构建的旋转套件\nCoRL 2023\n原文定位：§4–5；Table 1；Fig.6；§5.4真机\n核查来源：https://arxiv.org/html/2309.09979v1",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "relations": [
+        {
+          "benchmark": "suite-c09",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "EGAD/GSO/YCB/ContactDB筛选物体构建的旋转套件"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 6,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2309.09979",
+        "citationRecord": "https://openalex.org/W4386874604",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C10",
+      "name": "TacSL",
+      "fullTitle": "TacSL: A Library for Visuotactile Sensor Simulation and Learning",
+      "year": 2024,
+      "publication": "arXiv 2024",
+      "arxiv": "2408.06506",
+      "family": "related",
+      "tier": "触觉仿真库与策略评测",
+      "signal": "仿真触觉RGB/接触力场；真机GelSight触觉图像",
+      "sensorSource": "触觉仿真＋真机传感",
+      "role": "评测框架",
+      "output": "多模态RL/蒸馏策略控制末端运动",
+      "platform": "Isaac Gym；Franka＋GelSight夹爪",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "GPU触觉仿真、接触任务、AACD蒸馏和sim2real工具组成的库。",
+      "purpose": "评价触觉仿真、模态组合、在线蒸馏和增强方法能否转化为实际接触控制。",
+      "tasks": "Peg placement、Peg insertion；不同尺寸资产及接触力场边缘测试",
+      "metrics": "闭环SR、学习样本效率；仿真性能和图像/力场保真验证",
+      "trials": "真机placement/insertion各81个组合trial；不同资产实验512trial",
+      "baselines": "不同模态与RL/蒸馏；Vanilla/ColorAug/Diff/Concat；三种socket位置、夹内偏移与角度。",
+      "benchmark": "TacSL配套接触任务；上游复用Factory/IndustReal模块",
+      "benchmarkKind": "公开任务框架",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/isaac-sim/IsaacGymEnvs/tree/tacsl",
+        "note": "TacSL配套接触任务；上游复用Factory/IndustReal模块"
+      },
+      "warning": "仿真平台与配套任务需分开；不是VLA专用统一benchmark，真机触觉RGB策略迁移不代表所有力场模态已迁移。",
+      "locator": "§VI；Fig.12；Appendix C Table IX",
+      "source": "https://arxiv.org/html/2408.06506v2",
+      "project": "https://iakinola23.github.io/tacsl/",
+      "repo": "https://github.com/isaac-sim/IsaacGymEnvs/tree/tacsl",
+      "repoShared": true,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/isaac-sim/IsaacGymEnvs/tree/tacsl",
+      "kind": "评测资源",
+      "actionOutput": "多模态RL/蒸馏策略控制末端运动",
+      "baseline": "不同模态与RL/蒸馏；Vanilla/ColorAug/Diff/Concat；三种socket位置、夹内偏移与角度。",
+      "scope": "扩展相关",
+      "locators": [
+        "§VI；Fig.12；Appendix C Table IX"
+      ],
+      "experiments": [],
+      "notes": "TacSL: A Library for Visuotactile Sensor Simulation and Learning\nTacSL配套接触任务；上游复用Factory/IndustReal模块\narXiv 2024\n原文定位：§VI；Fig.12；Appendix C Table IX\n核查来源：https://arxiv.org/html/2408.06506v2",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-c10",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "TacSL配套接触任务；上游复用Factory/IndustReal模块"
+        }
+      ],
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "attention": {
+        "citations": 26,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2408.06506",
+        "citationRecord": "https://openalex.org/W4409395271",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "repoNote": "IsaacGymEnvs的TacSL分支，通用平台仓库的Stars不归为TacSL独立关注度。"
+    },
+    {
+      "id": "C11",
+      "name": "ManiFeel",
+      "fullTitle": "ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning",
+      "year": 2025,
+      "publication": "arXiv 2025；v2 2026-01",
+      "arxiv": "2505.18472",
+      "family": "related",
+      "tier": "视觉—触觉策略benchmark",
+      "signal": "视觉＋TacRGB或分布式法/切向力场TacFF",
+      "sensorSource": "TacSL仿真；真实GelSight R1.5",
+      "role": "评测框架",
+      "output": "监督策略末端运动和夹爪动作；各任务自由度受约束",
+      "platform": "IsaacGym/TacSL；Franka；真实GelSight",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "系统比较视觉、触觉图像与触觉力场在插入、旋紧、探索任务中的作用。",
+      "purpose": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "tasks": "v2九仿真主任务：peg/USB/插头/齿轮、螺母/灯泡、盲调姿/搜索/低光分球；真机齿轮/灯泡/正常与暗光分球",
+      "metrics": "成功率均值±标准差、训练曲线、不同模态的配对比较",
+      "trials": "仿真3seed×50初始化×最后10epoch，约1500评估；真机每设置15次",
+      "baselines": "Vision-only、V+TacRGB、V+TacFF；DP/Equivariant DP/Flow Matching及触觉编码器。",
+      "benchmark": "ManiFeel；基于TacSL衍生，九项主仿真与四真机设置",
+      "benchmarkKind": "独立公开benchmark",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/purdue-mars/manifeel",
+        "note": "ManiFeel；基于TacSL衍生，九项主仿真与四真机设置"
+      },
+      "warning": "非VLA专用。v1是六仿真/两真机场景，不能混用v2九仿真/四真机。1500包含多个checkpoint的评估，不是单一冻结checkpoint的1500独立重复。",
+      "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "project": "https://zhengtongxu.github.io/manifeel-website/",
+      "repo": "https://github.com/purdue-mars/manifeel",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/purdue-mars/manifeel",
+      "kind": "评测资源",
+      "actionOutput": "监督策略末端运动和夹爪动作；各任务自由度受约束",
+      "baseline": "Vision-only、V+TacRGB、V+TacFF；DP/Equivariant DP/Flow Matching及触觉编码器。",
+      "scope": "扩展相关",
+      "locators": [
+        "v2 §III-A/IV-A–D；Table II–V；Appendix A/B"
+      ],
+      "experiments": [],
+      "notes": "ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning\nManiFeel；基于TacSL衍生，九项主仿真与四真机设置\narXiv 2025；v2 2026-01\n原文定位：v2 §III-A/IV-A–D；Table II–V；Appendix A/B\n核查来源：https://arxiv.org/html/2505.18472v2",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-c11",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "ManiFeel；基于TacSL衍生，九项主仿真与四真机设置"
+        }
+      ],
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "attention": {
+        "citations": 1,
+        "stars": 66,
+        "forks": 13,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2505.18472",
+        "citationRecord": "https://openalex.org/W4414581382",
+        "githubSource": "https://api.github.com/repos/purdue-mars/manifeel",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C12",
+      "name": "Tactile Gym 2.0",
+      "fullTitle": "Tactile Gym 2.0: Sim-to-real Deep Reinforcement Learning for Comparing Low-cost High-Resolution Robot Touch",
+      "year": 2022,
+      "publication": "RA-L 2022",
+      "arxiv": "2207.10763",
+      "family": "related",
+      "tier": "经典触觉RL任务框架",
+      "signal": "TacTip / DIGIT / DigiTac触觉图像",
+      "sensorSource": "光学触觉",
+      "role": "触觉反馈",
+      "output": "二维任务运动变量（位置或转角），任务特定控制",
+      "platform": "PyBullet；Dobot MG400桌面4DoF臂",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "比较三种触觉硬件，通过相同sim2real方法迁移PPO策略。",
+      "purpose": "检验跨传感器的触觉控制、接触几何泛化和软硬材料影响。",
+      "tasks": "物体推送、沿边缘、沿曲面；每类多种几何和轨迹",
+      "metrics": "实际轨迹到CAD/ArUco真值的平均欧氏距离；图像翻译SSIM；RL回报",
+      "trials": "每配置物理重复次数本轮未确认；推送250step/episode；图像训练/验证5000/2000",
+      "baselines": "三传感器相同PPO及sim2real流程；DIGIT额外物体配重以检验接触形变假说。",
+      "benchmark": "Tactile Gym 2.0；继承1.0三个控制任务",
+      "benchmarkKind": "独立公开benchmark",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/ac-93/tactile_gym",
+        "note": "Tactile Gym 2.0；继承1.0三个控制任务"
+      },
+      "warning": "无语言VLA；工具式触觉接触而非夹爪6D力；轨迹误差指标不能当目标力跟踪误差。",
+      "locator": "§III-F；§IV；Tables III–VII",
+      "source": "https://arxiv.org/html/2207.10763v2",
+      "repo": "https://github.com/ac-93/tactile_gym",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/ac-93/tactile_gym",
+      "kind": "评测资源",
+      "actionOutput": "二维任务运动变量（位置或转角），任务特定控制",
+      "baseline": "三传感器相同PPO及sim2real流程；DIGIT额外物体配重以检验接触形变假说。",
+      "scope": "扩展相关",
+      "locators": [
+        "§III-F；§IV；Tables III–VII"
+      ],
+      "experiments": [],
+      "notes": "Tactile Gym 2.0: Sim-to-real Deep Reinforcement Learning for Comparing Low-cost High-Resolution Robot Touch\nTactile Gym 2.0；继承1.0三个控制任务\nRA-L 2022\n原文定位：§III-F；§IV；Tables III–VII\n核查来源：https://arxiv.org/html/2207.10763v2",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-c12",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "Tactile Gym 2.0；继承1.0三个控制任务"
+        }
+      ],
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "attention": {
+        "citations": 0,
+        "stars": 185,
+        "forks": 26,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2207.10763",
+        "citationRecord": "https://openalex.org/W4288043628",
+        "githubSource": "https://api.github.com/repos/ac-93/tactile_gym",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C13",
+      "name": "DIGIT",
+      "fullTitle": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+      "year": 2020,
+      "publication": "RA-L 2020",
+      "arxiv": "2005.14679",
+      "family": "dex",
+      "tier": "经典硬件与模型控制前序",
+      "signal": "小型相机式指尖高分辨触觉图像",
+      "sensorSource": "视觉触觉传感器",
+      "role": "触觉反馈",
+      "output": "深度学习模型驱动的多指玻璃球操作控制",
+      "platform": "多指机械手配DIGIT",
+      "domains": [
+        "真机"
+      ],
+      "summary": "低成本紧凑触觉硬件，原论文用手内玻璃球操作验证其控制用途。",
+      "purpose": "验证传感器可制造性与对实际灵巧闭环控制的可用性。",
+      "tasks": "手内玻璃球操纵",
+      "metrics": "原文定量控制指标与试验次数本轮未核实",
+      "trials": "未确认",
+      "baselines": "本轮核实到模型控制演示；完整对比设计需读原文实验部分。",
+      "benchmark": "自建传感器与玻璃球控制实验",
+      "benchmarkKind": "硬件/控制验证资源",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/facebookresearch/digit-interface",
+        "note": "自建传感器与玻璃球控制实验"
+      },
+      "warning": "是传感器工作，不是VLA或独立统一控制benchmark；仅核实摘要和官方资料，不能给出未读的细节。",
+      "locator": "原文Abstract及应用实验（细节待深入核验）",
+      "source": "https://arxiv.org/abs/2005.14679",
+      "project": "https://digit.ml/",
+      "repo": "https://github.com/facebookresearch/digit-interface",
+      "evidence": "摘要/官方资源核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/facebookresearch/digit-interface",
+      "kind": "硬件与感知资源",
+      "actionOutput": "深度学习模型驱动的多指玻璃球操作控制",
+      "baseline": "本轮核实到模型控制演示；完整对比设计需读原文实验部分。",
+      "scope": "扩展相关",
+      "locators": [
+        "原文Abstract及应用实验（细节待深入核验）"
+      ],
+      "experiments": [],
+      "notes": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation\n自建传感器与玻璃球控制实验\nRA-L 2020\n原文定位：原文Abstract及应用实验（细节待深入核验）\n核查来源：https://arxiv.org/abs/2005.14679",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-c13",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建传感器与玻璃球控制实验"
+        }
+      ],
+      "actionMode": "硬件与下游控制（非VLA）",
+      "attention": {
+        "citations": 553,
+        "stars": 93,
+        "forks": 31,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2005.14679",
+        "citationRecord": "https://openalex.org/W3008303301",
+        "githubSource": "https://api.github.com/repos/facebookresearch/digit-interface",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C14",
+      "name": "TACTO",
+      "fullTitle": "TACTO: A Fast, Flexible, and Open-source Simulator for High-Resolution Vision-based Tactile Sensors",
+      "year": 2020,
+      "publication": "RA-L 2022；预印本2020",
+      "arxiv": "2012.08456",
+      "family": "related",
+      "tier": "经典触觉仿真平台",
+      "signal": "仿真DIGIT / OmniTact触觉RGB",
+      "sensorSource": "触觉仿真",
+      "role": "评测框架",
+      "output": "抓取稳定性分类、Bayesian optimization玻璃球控制；位姿估计",
+      "platform": "PyBullet＋TACTO；双DIGIT平行夹爪",
+      "domains": [
+        "仿真",
+        "真机数据"
+      ],
+      "summary": "高分辨触觉渲染器，配套感知、控制与sim2real感知实验。",
+      "purpose": "检验模拟触觉能否复现真实触觉学习规律及低样本触觉控制。",
+      "tasks": "抓取稳定性、双指滚玻璃球、圆柱接触位姿估计",
+      "metrics": "分类准确率、控制学习曲线、位置mm/角度deg误差、运行效率",
+      "trials": "抓取100万采样；玻璃球30次优化实验；sim2real位姿估计5次重复",
+      "baselines": "Vision-only/Touch-only/V+T；Bayesian optimization vs random；sim2sim/real2real/增强/混合数据。",
+      "benchmark": "TACTO示例实验；非固定VLA任务榜单",
+      "benchmarkKind": "公开仿真平台",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/facebookresearch/tacto",
+        "note": "TACTO示例实验；非固定VLA任务榜单"
+      },
+      "warning": "真机部分是位姿估计的感知迁移，不能写成真实机器人闭环控制benchmark；百万grasps是采样量，不是策略测试次数。",
+      "locator": "§IV-A/B；§V；Figs.10–11；Table II",
+      "source": "https://arxiv.org/html/2012.08456v2",
+      "repo": "https://github.com/facebookresearch/tacto",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/facebookresearch/tacto",
+      "kind": "评测资源",
+      "actionOutput": "抓取稳定性分类、Bayesian optimization玻璃球控制；位姿估计",
+      "baseline": "Vision-only/Touch-only/V+T；Bayesian optimization vs random；sim2sim/real2real/增强/混合数据。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A/B；§V；Figs.10–11；Table II"
+      ],
+      "experiments": [],
+      "notes": "TACTO: A Fast, Flexible, and Open-source Simulator for High-Resolution Vision-based Tactile Sensors\nTACTO示例实验；非固定VLA任务榜单\nRA-L 2022；预印本2020\n原文定位：§IV-A/B；§V；Figs.10–11；Table II\n核查来源：https://arxiv.org/html/2012.08456v2",
+      "sensorOrigin": "触觉图像",
+      "relations": [
+        {
+          "benchmark": "suite-c14",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机数据",
+          "note": "TACTO示例实验；非固定VLA任务榜单"
+        }
+      ],
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "attention": {
+        "citations": 144,
+        "stars": 472,
+        "forks": 87,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2012.08456",
+        "citationRecord": "https://openalex.org/W3112669067",
+        "githubSource": "https://api.github.com/repos/facebookresearch/tacto",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C15",
+      "name": "FACTR",
+      "fullTitle": "FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning",
+      "year": 2025,
+      "publication": "RSS 2025",
+      "arxiv": "2502.17432",
+      "family": "related",
+      "tier": "关节力矩模仿学习前序",
+      "signal": "机械臂外部关节torque；夹爪电流用于遥操作反馈",
+      "sensorSource": "机器人内部外力矩",
+      "role": "力观测",
+      "output": "Action Chunking Transformer预测关节位置目标",
+      "platform": "Franka/KUKA双臂及双向低成本leader",
+      "domains": [
+        "真机"
+      ],
+      "summary": "逐步减弱视觉模糊的课程训练，防止行为克隆忽略力模态。",
+      "purpose": "测未见外观/形状物体泛化、接触模式切换和物体被打落后的恢复。",
+      "tasks": "双臂抬盒、夹持pivot、果蔬抓放、擀面团；抬盒打落再抓",
+      "metrics": "已见/未见物体SR；恢复SR；遥操作完成率、耗时、主观难度",
+      "trials": "主实验每物体5–10；恢复每物体5；pivot课程消融5物体×5",
+      "baselines": "ACT Vision-only、ACT V+Force、FACTR；模糊/降采样、像素/latent、不同调度及固定强度。",
+      "benchmark": "自建四任务与恢复测试",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/RaindragonD/factr",
+        "note": "自建四任务与恢复测试"
+      },
+      "warning": "不是VLA；关节torque不是腕部6D F/T；不要和2026年两篇FACT混淆。",
+      "locator": "§V-B–D；Tables I–II；Appendix XII",
+      "source": "https://arxiv.org/html/2502.17432v2",
+      "project": "https://jasonjzliu.com/factr/",
+      "repo": "https://github.com/RaindragonD/factr",
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/RaindragonD/FACTR",
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "Action Chunking Transformer预测关节位置目标",
+      "baseline": "ACT Vision-only、ACT V+Force、FACTR；模糊/降采样、像素/latent、不同调度及固定强度。",
+      "scope": "扩展相关",
+      "locators": [
+        "§V-B–D；Tables I–II；Appendix XII"
+      ],
+      "experiments": [],
+      "notes": "FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning\n自建四任务与恢复测试\nRSS 2025\n原文定位：§V-B–D；Tables I–II；Appendix XII\n核查来源：https://arxiv.org/html/2502.17432v2",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "relations": [
+        {
+          "benchmark": "suite-c15",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建四任务与恢复测试"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 17,
+        "stars": 85,
+        "forks": 11,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2502.17432",
+        "citationRecord": "https://openalex.org/W4414050728",
+        "githubSource": "https://api.github.com/repos/RaindragonD/factr",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    },
+    {
+      "id": "C16",
+      "name": "MOMA-Force",
+      "fullTitle": "MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation",
+      "year": 2023,
+      "publication": "arXiv 2023",
+      "arxiv": "2308.03624",
+      "family": "body",
+      "tier": "移动操作力模仿前序",
+      "signal": "Robotiq FT300-S末端6D F/T用于导纳跟踪；视觉检索专家wrench",
+      "sensorSource": "专用腕部F/T",
+      "role": "显式力—位置",
+      "output": "SE(3)运动、夹爪、目标6D wrench和终止标志",
+      "platform": "差速底盘＋Kinova Gen2＋Robotiq 2F-85",
+      "domains": [
+        "真机"
+      ],
+      "summary": "用视觉近邻检索示教动作和力目标，再用全身导纳控制降低移动接触误差。",
+      "purpose": "检验力模仿能否改善移动操作成功并降低接触强度和振荡。",
+      "tasks": "开橱柜抽屉、抽屉、左右门、旋水龙头、开洗衣机六项",
+      "metrics": "完成至少80%的SR；各轴平均绝对力/力矩及方差；离线动作/wrench MSE",
+      "trials": "每方法每任务10；每任务30示教；起始末端位姿随机",
+      "baselines": "BC；去力控制；同时去力控制和旋转；视觉编码器比较。",
+      "benchmark": "自建六项家庭移动接触任务",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://visual-force-imitation.github.io/",
+        "note": "自建六项家庭移动接触任务"
+      },
+      "warning": "非语言VLA；80%进度门槛不是全任务完成；力统计只纳入成功抓取的trial。",
+      "locator": "§IV-A/B；Tables I–II；Fig.5",
+      "source": "https://arxiv.org/html/2308.03624v1",
+      "project": "https://visual-force-imitation.github.io/",
+      "repo": null,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "SE(3)运动、夹爪、目标6D wrench和终止标志",
+      "baseline": "BC；去力控制；同时去力控制和旋转；视觉编码器比较。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A/B；Tables I–II；Fig.5"
+      ],
+      "experiments": [],
+      "notes": "MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation\n自建六项家庭移动接触任务\narXiv 2023\n原文定位：§IV-A/B；Tables I–II；Fig.5\n核查来源：https://arxiv.org/html/2308.03624v1",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "relations": [
+        {
+          "benchmark": "suite-c16",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建六项家庭移动接触任务"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 16,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2308.03624",
+        "citationRecord": "https://openalex.org/W4389665520",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C17",
+      "name": "TacDiffusion",
+      "fullTitle": "TacDiffusion: Force-domain Diffusion Policy for Precise Tactile Manipulation",
+      "year": 2024,
+      "publication": "ICRA 2025；预印本2024",
+      "arxiv": "2409.11047",
+      "family": "wrist",
+      "tier": "无视觉力域模仿学习",
+      "signal": "外部wrench、内部wrench及末端速度，共18D观测",
+      "sensorSource": "机器人力/力矩估计",
+      "role": "显式力—位置",
+      "output": "6D前馈wrench；动态系统滤波到1000Hz执行",
+      "platform": "Franka Panda",
+      "domains": [
+        "真机"
+      ],
+      "summary": "从单一插入技能示教学习力域扩散策略，零样本迁移新装配几何。",
+      "purpose": "检验精密插入跨形状泛化、模型大小与推理速度权衡、滤波弥合控制频差。",
+      "tasks": "长方体训练；钥匙、小/大圆柱、八角柱四个新插入任务",
+      "metrics": "SR；执行时间中位数/IQR；完成率÷平均时间；推理频率",
+      "trials": "每模型—物体50随机初始位姿×每位姿2次=100；训练1500专家演示",
+      "baselines": "前序行为树专家；四种网络规模；有/无动态系统滤波。",
+      "benchmark": "自建五种精密插入，间隙0.02–0.1mm（钥匙另列）",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://arxiv.org/html/2409.11047v1",
+        "note": "自建五种精密插入，间隙0.02–0.1mm（钥匙另列）"
+      },
+      "warning": "不是VLA，无视觉语言；95.7%是最佳模型在四个新对象的平均，不是所有模型/所有五任务均值。",
+      "locator": "§IV-A/C；Tables II–III；Fig.6",
+      "source": "https://arxiv.org/html/2409.11047v1",
+      "repo": null,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "6D前馈wrench；动态系统滤波到1000Hz执行",
+      "baseline": "前序行为树专家；四种网络规模；有/无动态系统滤波。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A/C；Tables II–III；Fig.6"
+      ],
+      "experiments": [],
+      "notes": "TacDiffusion: Force-domain Diffusion Policy for Precise Tactile Manipulation\n自建五种精密插入，间隙0.02–0.1mm（钥匙另列）\nICRA 2025；预印本2024\n原文定位：§IV-A/C；Tables II–III；Fig.6\n核查来源：https://arxiv.org/html/2409.11047v1",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "relations": [
+        {
+          "benchmark": "suite-c17",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "自建五种精密插入，间隙0.02–0.1mm（钥匙另列）"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 15,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2409.11047",
+        "citationRecord": "https://openalex.org/W4413925798",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C18",
+      "name": "AFORCE",
+      "fullTitle": "Learning Robotic Manipulation Skills Using an Adaptive Force-Impedance Action Space",
+      "year": 2021,
+      "publication": "arXiv 2021",
+      "arxiv": "2110.09904",
+      "family": "wrist",
+      "tier": "力—阻抗动作空间前序",
+      "signal": "外部wrench估计、末端状态；真机擦点位置",
+      "sensorSource": "内部估计力",
+      "role": "柔顺性",
+      "output": "慢策略给目标位姿/可选目标wrench；快自适应控制更新阻抗/前馈力",
+      "platform": "机械臂；robosuite仿真",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "将慢RL决策与快自适应控制通过力—阻抗动作接口连接。",
+      "purpose": "比较动作空间的样本效率、能耗、轨迹误差和接触表现。",
+      "tasks": "仿真Door/Lift/Wipe；真机10N圆周擦拭",
+      "metrics": "RL平均回报；Joule/action；总能耗；位置/姿态跟踪误差",
+      "trials": "仿真每1万训练步评估10episode、多seed（数量本轮未确认）；真机重复数未确认",
+      "baselines": "固定低/中/高阻抗、可变阻抗及力控组合。",
+      "benchmark": "robosuite三任务＋真机自建擦拭",
+      "benchmarkKind": "已有环境＋自建真机",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://arxiv.org/html/2110.09904v2",
+        "note": "robosuite三任务＋真机自建擦拭"
+      },
+      "warning": "非VLA；真机擦拭是专家高层计划，不能写成真机RL端到端自主学习。",
+      "locator": "§V-A/B；Fig.2–3；Table I",
+      "source": "https://arxiv.org/html/2110.09904v2",
+      "repo": null,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "慢策略给目标位姿/可选目标wrench；快自适应控制更新阻抗/前馈力",
+      "baseline": "固定低/中/高阻抗、可变阻抗及力控组合。",
+      "scope": "扩展相关",
+      "locators": [
+        "§V-A/B；Fig.2–3；Table I"
+      ],
+      "experiments": [],
+      "notes": "Learning Robotic Manipulation Skills Using an Adaptive Force-Impedance Action Space\nrobosuite三任务＋真机自建擦拭\narXiv 2021\n原文定位：§V-A/B；Fig.2–3；Table I\n核查来源：https://arxiv.org/html/2110.09904v2",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "relations": [
+        {
+          "benchmark": "suite-c18",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "robosuite三任务＋真机自建擦拭"
+        }
+      ],
+      "actionMode": "显式目标力 / 力控参数",
+      "attention": {
+        "citations": 0,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2110.09904",
+        "citationRecord": "https://openalex.org/W3205641566",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C19",
+      "name": "Impedance-IRL",
+      "fullTitle": "Learning Variable Impedance Control via Inverse Reinforcement Learning for Force-Related Tasks",
+      "year": 2021,
+      "publication": "arXiv 2021",
+      "arxiv": "2102.06838",
+      "family": "related",
+      "tier": "变阻抗逆强化学习前序",
+      "signal": "位姿跟踪误差和速度；6D F/T用于示教数据采集",
+      "sensorSource": "示教专用F/T",
+      "role": "柔顺性",
+      "output": "变阻抗增益；与直接force动作空间比较",
+      "platform": "MuJoCo；FANUC LR Mate 200iD/7L",
+      "domains": [
+        "仿真",
+        "真机"
+      ],
+      "summary": "从示教恢复奖励与变阻抗策略，比较增益和力动作空间的迁移。",
+      "purpose": "改变孔倾角、几何尺寸和初始位置后比较策略和奖励迁移能力。",
+      "tasks": "仿真Peg-in-Hole、Cup-on-Plate；真机Cup-on-Plate",
+      "metrics": "SR、相对专家性能分差、平均轨迹与最终位置偏差",
+      "trials": "仿真报告3run均值；部分迁移选5run中最佳3，真机重复次数未确认",
+      "baselines": "Gain-AIRL、Force-AIRL、Gain/Force-BC、常增益；历史状态消融。",
+      "benchmark": "自建两任务和参数变化测试",
+      "benchmarkKind": "论文自建任务集",
+      "openness": {
+        "status": "完整发布情况待核验",
+        "url": "https://msc.berkeley.edu/research/impedance-irl.html",
+        "note": "自建两任务和参数变化测试"
+      },
+      "warning": "非VLA；全文说明其简化阻抗律未用外力闭环解耦，不能因为采集F/T就称策略部署时读力。",
+      "locator": "§IV-A/B；Tables I–V；Conclusion limitations",
+      "source": "https://arxiv.org/html/2102.06838v1",
+      "project": "https://msc.berkeley.edu/research/impedance-irl.html",
+      "repo": null,
+      "evidence": "原文核查",
+      "verifiedAt": "2026-10-16",
+      "github": null,
+      "kind": "基础策略（非VLA）",
+      "actionOutput": "变阻抗增益；与直接force动作空间比较",
+      "baseline": "Gain-AIRL、Force-AIRL、Gain/Force-BC、常增益；历史状态消融。",
+      "scope": "扩展相关",
+      "locators": [
+        "§IV-A/B；Tables I–V；Conclusion limitations"
+      ],
+      "experiments": [],
+      "notes": "Learning Variable Impedance Control via Inverse Reinforcement Learning for Force-Related Tasks\n自建两任务和参数变化测试\narXiv 2021\n原文定位：§IV-A/B；Tables I–V；Conclusion limitations\n核查来源：https://arxiv.org/html/2102.06838v1",
+      "sensorOrigin": "F/T读数（测量链待核验）",
+      "relations": [
+        {
+          "benchmark": "suite-c19",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "仿真 + 真机",
+          "note": "自建两任务和参数变化测试"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 118,
+        "stars": null,
+        "forks": null,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2102.06838",
+        "citationRecord": "https://openalex.org/W3130500701",
+        "githubSource": null,
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + 标题一致"
+      }
+    },
+    {
+      "id": "C20",
+      "name": "ReSkin",
+      "fullTitle": "ReSkin: versatile, replaceable, lasting tactile skins",
+      "year": 2021,
+      "publication": "CoRL 2021",
+      "arxiv": "2111.00071",
+      "family": "touch",
+      "tier": "经典触觉硬件/感知资源",
+      "signal": "弹性磁性皮肤的磁场读数",
+      "sensorSource": "磁性触觉皮肤",
+      "role": "触觉表示",
+      "output": "接触定位/力感知预测，非通用动作策略",
+      "platform": "多种软皮肤形状及末端安装",
+      "domains": [
+        "真机数据"
+      ],
+      "summary": "将易损弹性皮与电子板分开，用学习减轻跨皮肤和随时间变化的校准偏差。",
+      "purpose": "检验软触觉的可替换性、持久性及跨传感器学习。",
+      "tasks": "接触/力定位、不同皮肤实例与长期使用表征；多种实际感知展示",
+      "metrics": "接触定位/力预测与随磨损、换实例变化；完整指标次数本轮待深入核验",
+      "trials": "本轮未确认统一策略试验次数（本工作不是闭环策略benchmark）",
+      "baselines": "多实例学习与自监督适配；详细原文表格待进一步提取。",
+      "benchmark": "自建传感器表征与跨实例测试",
+      "benchmarkKind": "硬件/感知验证资源",
+      "openness": {
+        "status": "有官方代码入口",
+        "url": "https://github.com/raunaqbhirangi/reskin_sensor",
+        "note": "自建传感器表征与跨实例测试"
+      },
+      "warning": "不能作为带力控制VLA计数；用于了解感知来源和跨实例评测，非VLA控制成绩。",
+      "locator": "原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读",
+      "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+      "project": "https://reskin.dev/",
+      "repo": "https://github.com/raunaqbhirangi/reskin_sensor",
+      "evidence": "摘要/官方资源核查",
+      "verifiedAt": "2026-10-16",
+      "github": "https://github.com/raunaqbhirangi/reskin_sensor",
+      "kind": "硬件与感知资源",
+      "actionOutput": "接触定位/力感知预测，非通用动作策略",
+      "baseline": "多实例学习与自监督适配；详细原文表格待进一步提取。",
+      "scope": "扩展相关",
+      "locators": [
+        "原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读"
+      ],
+      "experiments": [],
+      "notes": "ReSkin: versatile, replaceable, lasting tactile skins\n自建传感器表征与跨实例测试\nCoRL 2021\n原文定位：原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读\n核查来源：https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+      "sensorOrigin": "其他 / 待核验",
+      "relations": [
+        {
+          "benchmark": "suite-c20",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机数据",
+          "note": "自建传感器表征与跨实例测试"
+        }
+      ],
+      "actionMode": "硬件与下游控制（非VLA）",
+      "attention": {
+        "citations": 4,
+        "stars": 137,
+        "forks": 23,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2111.00071",
+        "citationRecord": "https://openalex.org/W3210461608",
+        "githubSource": "https://api.github.com/repos/raunaqbhirangi/reskin_sensor",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "沿已核实官方链接抓取GitHub API"
+      }
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "univtac",
+      "name": "UniVTAC Benchmark",
+      "kind": "公开任务框架",
+      "domain": "仿真",
+      "focus": "视觉—触觉策略",
+      "detail": "平台支持触觉仿真与数据合成；Encoder为表示学习模块；Benchmark为八个闭环操作任务。三者不混用。",
+      "source": "https://arxiv.org/html/2602.10093v1",
+      "tasks": [
+        "Lift Bottle",
+        "Pull-out Key",
+        "Lift Can",
+        "Put Bottle in Shelf",
+        "Insert Hole",
+        "Insert HDMI",
+        "Insert Tube",
+        "Grasp Classify"
+      ]
+    },
+    {
+      "id": "forcebench",
+      "name": "ForceBench",
+      "kind": "公开评测研究",
+      "domain": "仿真 + 真机",
+      "focus": "腕部六维力融合",
+      "detail": "统一数据、骨干和测试种子比较力接入设计；新近发布，完整可运行发布包尚未确认。",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "tasks": [
+        "Weight Sort",
+        "CoM Sort",
+        "Faucet Turn",
+        "Faucet Direction",
+        "Stove Turn",
+        "Stove Press",
+        "Drawer Pull",
+        "Nut Thread"
+      ]
+    },
+    {
+      "id": "tabero",
+      "name": "Tabero Benchmark",
+      "kind": "论文提出的框架",
+      "domain": "仿真",
+      "focus": "轻柔指令与夹持力",
+      "detail": "LIBERO场景/轨迹迁移至Isaac Lab触觉环境；属于衍生环境，不等于原版LIBERO分数。",
+      "source": "https://arxiv.org/html/2605.27886v1",
+      "tasks": [
+        "firm / gentle指令",
+        "夹持力AG / MG",
+        "施加力AA / MA"
+      ]
+    },
+    {
+      "id": "libero",
+      "name": "LIBERO（上游资源）",
+      "kind": "上游场景/轨迹",
+      "domain": "仿真",
+      "focus": "通用操作资源",
+      "detail": "在本关系图中标记Tabero的场景/轨迹来源，不标为所有触觉方法原论文的测试集。",
+      "source": "https://arxiv.org/html/2605.27886v1",
+      "tasks": []
+    },
+    {
+      "id": "neoreal",
+      "name": "NeoReal",
+      "kind": "论文自建命名套件",
+      "domain": "真机",
+      "focus": "精细接触与长流程",
+      "detail": "九项任务，成功率与100分阶段rubric并列；各任务试验预算不统一。",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "tasks": []
+    },
+    {
+      "id": "neosim",
+      "name": "NeoSim",
+      "kind": "论文自建命名套件",
+      "domain": "仿真",
+      "focus": "单臂 / 双臂接触",
+      "detail": "十二个任务，和UniVTAC八任务分组统计。",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "tasks": []
+    },
+    {
+      "id": "suite-w01",
+      "name": "ForceVLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "将末端力作为 VLA 的独立输入，研究接触任务与物理泛化。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "tasks": [
+        "按瓶",
+        "插头",
+        "USB",
+        "擦板",
+        "削皮"
+      ]
+    },
+    {
+      "id": "suite-w02",
+      "name": "ForceVLA2 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "将力引入动作接口，覆盖持续接触与装配。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "tasks": [
+        "按瓶",
+        "清洁花瓶",
+        "擦板",
+        "取盘",
+        "齿轮"
+      ]
+    },
+    {
+      "id": "suite-w03",
+      "name": "FAVLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "通过快慢环与自适应更新频率应对接触变化。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2602.23648v1",
+      "tasks": [
+        "USB",
+        "齿轮",
+        "翻盒",
+        "擦板"
+      ]
+    },
+    {
+      "id": "suite-w04",
+      "name": "DAM-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "分离力、视觉记忆与异步处理的贡献。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "tasks": [
+        "围巾",
+        "擦板",
+        "按钮",
+        "洗手液",
+        "插座",
+        "扫珠",
+        "Lego"
+      ]
+    },
+    {
+      "id": "suite-w05",
+      "name": "CR-VLA-Force 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "慢策略结合柔顺执行，定量检验恒力跟踪。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "tasks": [
+        "急停按钮",
+        "充电插头",
+        "旋转窗",
+        "恒力擦板"
+      ]
+    },
+    {
+      "id": "suite-w06",
+      "name": "TAO-Force 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "通过反事实力输入检验动作是否真正依赖力。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "tasks": [
+        "重量分拣",
+        "削皮",
+        "按泵",
+        "擦板",
+        "切割"
+      ]
+    },
+    {
+      "id": "suite-w07",
+      "name": "ForceDelta-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "tasks": [
+        "五单臂任务",
+        "四双臂任务"
+      ]
+    },
+    {
+      "id": "suite-w08",
+      "name": "ForceRFT 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "以在线残差学习提升限时自主完成能力。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.22840v1",
+      "tasks": [
+        "插头",
+        "环套柱",
+        "擦板"
+      ]
+    },
+    {
+      "id": "suite-w09",
+      "name": "Tactile-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "tasks": [
+        "USB/充电器插拔",
+        "无变形抓取",
+        "擦板"
+      ]
+    },
+    {
+      "id": "suite-w10",
+      "name": "TaF-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "tasks": [
+        "管插入",
+        "镊子提重",
+        "拔出",
+        "擦板",
+        "切片",
+        "抓取等八类"
+      ]
+    },
+    {
+      "id": "suite-w12",
+      "name": "TORL-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2606.09337v1",
+      "tasks": [
+        "杯子入架",
+        "搭扣",
+        "鸡蛋",
+        "串联全流程"
+      ]
+    },
+    {
+      "id": "suite-w13",
+      "name": "TA-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "tasks": [
+        "五接触任务 + 五常规任务"
+      ]
+    },
+    {
+      "id": "suite-w14",
+      "name": "FD-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "把训练期力知识蒸馏到部署时可用表示。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2602.02142v2",
+      "tasks": [
+        "擦板",
+        "急停按钮",
+        "插头"
+      ]
+    },
+    {
+      "id": "suite-w15",
+      "name": "MoSS 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "在同一骨干与任务下比较多种物理模态。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "tasks": [
+        "拆杯",
+        "鸡蛋抓放",
+        "擦板",
+        "插头（v1）"
+      ]
+    },
+    {
+      "id": "suite-w16",
+      "name": "CompVLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "评估可变柔顺性，并保留普通抓放对照。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://compvla.github.io/",
+      "tasks": [
+        "擦板",
+        "Pivot",
+        "Cup Dispense",
+        "Pick & Place"
+      ]
+    },
+    {
+      "id": "suite-w17",
+      "name": "ForceFlow 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "tasks": [
+        "盖章",
+        "插头",
+        "按压",
+        "USB",
+        "擦板",
+        "花瓶"
+      ]
+    },
+    {
+      "id": "suite-w18",
+      "name": "FAWAM 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "世界动作模型结合力预测与残差纠偏。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "tasks": [
+        "擦板",
+        "削皮",
+        "翻盒",
+        "擦花瓶"
+      ]
+    },
+    {
+      "id": "suite-e01",
+      "name": "FuSe / Beyond Sight 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "用语言连接异质感官，分别验证Octo与VLA。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2501.04693v1",
+      "tasks": [
+        "桌面抓取",
+        "袋中抓取",
+        "按钮",
+        "跨模态组合"
+      ]
+    },
+    {
+      "id": "suite-e02",
+      "name": "VTLA 任务套件",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "从接触动作预测到闭环插孔，再验证仿真到真机。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2505.09577v1",
+      "tasks": [
+        "五孔形",
+        "不同装配间隙"
+      ]
+    },
+    {
+      "id": "suite-e03",
+      "name": "FTP-1 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "同一触觉基础策略跨传感器与本体适配。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "tasks": [
+        "UniVTAC六任务 + 多本体真机任务"
+      ]
+    },
+    {
+      "id": "suite-e05",
+      "name": "T-Rex 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "tasks": [
+        "翻页",
+        "移蛋",
+        "擦盘",
+        "挤膏",
+        "拆杯",
+        "开锁等十二项"
+      ]
+    },
+    {
+      "id": "suite-e06",
+      "name": "STAR 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "针对触觉的空间、时间与信息稀疏性学习。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.12549v1",
+      "tasks": [
+        "耳机翻转",
+        "叠书取出",
+        "明信片",
+        "多物体抓取"
+      ]
+    },
+    {
+      "id": "suite-e07",
+      "name": "TacVLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2603.12665v1",
+      "tasks": [
+        "四项约束拆解 + 箱内取物"
+      ]
+    },
+    {
+      "id": "suite-e08",
+      "name": "FWBC-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2609.03889v2",
+      "tasks": [
+        "移动开门",
+        "闭门器负载",
+        "擦白板"
+      ]
+    },
+    {
+      "id": "suite-e09",
+      "name": "Opt2VLA 任务套件",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "将任务完成、力意图和实际力实现联合计分。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://opt2vla.github.io/",
+      "tasks": [
+        "搬箱",
+        "推箱",
+        "擦拭；轻/中/重力指令"
+      ]
+    },
+    {
+      "id": "suite-e10",
+      "name": "ForceU-VLA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "以专业成像结果与接触过程共同验证策略。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "tasks": [
+        "肝 / 肾五个标准超声切面"
+      ]
+    },
+    {
+      "id": "suite-e11",
+      "name": "TLA 任务套件",
+      "kind": "论文自建任务集",
+      "domain": "仿真",
+      "focus": "早期触觉—语言—动作模型，局部纠偏而非完整抓取。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2503.08548v1",
+      "tasks": [
+        "不同孔形与间隙的插孔"
+      ]
+    },
+    {
+      "id": "suite-e12",
+      "name": "OmniVTA 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "规划与反射控制结合，主动扰动接触再恢复。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2603.19201v1",
+      "tasks": [
+        "擦",
+        "削",
+        "切",
+        "装配",
+        "抓取",
+        "调姿"
+      ]
+    },
+    {
+      "id": "suite-x01",
+      "name": "SimpleTouch 真机套件",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "detail": "描述名用于索引，不意味着作者发布了独立同名benchmark。具体任务与计分见对应工作的原文。",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "tasks": [
+        "UniVTAC六任务 + 四个真机任务"
+      ]
+    },
+    {
+      "id": "suite-p01",
+      "name": "FACT（接触诊断） 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "区分噪声训练日程与力融合本身的贡献。",
+      "detail": "自建五任务；USB组件来自NIST assembly board，但整体协议不等同NIST统一benchmark。来源：原文§6及附录A–B。",
+      "source": "https://arxiv.org/html/2608.01402v1",
+      "tasks": [
+        "插头",
+        "USB",
+        "按钮",
+        "擦白板",
+        "钥匙插入"
+      ]
+    },
+    {
+      "id": "suite-p02",
+      "name": "FACT（人机灵巧迁移） 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "detail": "自建十任务真机套件。二元任务、连续发声和条件化体积误差分开报告。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "tasks": [
+        "移液",
+        "试管开盖",
+        "翻盖",
+        "系鞋带",
+        "洗牌",
+        "多物体抓取",
+        "螺丝刀",
+        "竖琴",
+        "木琴",
+        "移液器调量"
+      ]
+    },
+    {
+      "id": "suite-p03",
+      "name": "HapticVLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "检验奖励加权与触觉蒸馏能否保护易碎物体。",
+      "detail": "自建三任务真实评测。训练用压力阵列不意味着部署读腕部六维力。",
+      "source": "https://arxiv.org/html/2603.15257v1",
+      "tasks": [
+        "果酱塑料罐",
+        "华夫饼",
+        "鸡蛋抓取放置"
+      ]
+    },
+    {
+      "id": "suite-p04",
+      "name": "DEFT-VLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "用分阶段成功率区分定位与接触收益，并检验抓持高度OOD。",
+      "detail": "自建三任务；分阶段SR的分母与整体SR不同，需要保留条件化定义。",
+      "source": "https://arxiv.org/html/2610.14854v1",
+      "tasks": [
+        "移液器吸头安装",
+        "双臂吸液",
+        "擦白板"
+      ]
+    },
+    {
+      "id": "suite-p05",
+      "name": "HapTile 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机",
+      "focus": "对比原始触觉图与marker特征是否在不同任务均有帮助。",
+      "detail": "HapTile为数据集与自建四任务评测；论文称擦板沿用已有任务形式，不等同复用了统一跨论文评分环境。",
+      "source": "https://arxiv.org/html/2606.04825v1",
+      "tasks": [
+        "瓶子扶正",
+        "擦白板",
+        "倒液",
+        "插销"
+      ]
+    },
+    {
+      "id": "suite-t01",
+      "name": "VLA-Touch 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "detail": "自建3任务；代码公开，不能等同通用benchmark。",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "tasks": [
+        "杯子含水判断与放置",
+        "海绵粗糙度选择及擦墨",
+        "芒果硬度选择及削皮"
+      ]
+    },
+    {
+      "id": "suite-t02",
+      "name": "OmniVTLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "detail": "自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。",
+      "source": "https://arxiv.org/html/2508.08706v3",
+      "tasks": [
+        "抓取放置4物体（夹爪）",
+        "抓取放置与未见物体（灵巧手）",
+        "方/三角/圆块插入",
+        "软物体泛化"
+      ]
+    },
+    {
+      "id": "suite-t03",
+      "name": "AT-VLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "detail": "自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "tasks": [
+        "拉开包拉链",
+        "盖章",
+        "擦花瓶",
+        "拧盖",
+        "胡萝卜抓取放置",
+        "开抽屉"
+      ]
+    },
+    {
+      "id": "suite-t04",
+      "name": "OpenViTac / OpenVTLA",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "仿真 + 真机",
+      "focus": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "detail": "提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "tasks": [
+        "重量/硬度/粗糙度分类",
+        "粗糙度引导再抓取",
+        "空罐选择",
+        "薯片无损抓取",
+        "齿轮装配",
+        "拉抽屉",
+        "USB插入",
+        "块插入v1/v2"
+      ]
+    },
+    {
+      "id": "suite-t05",
+      "name": "DT-TacVLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "detail": "自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。",
+      "source": "https://dt-tacvla.github.io/",
+      "tasks": [
+        "电源插头插入",
+        "USB插入",
+        "试管放置"
+      ]
+    },
+    {
+      "id": "suite-t06",
+      "name": "DreamTacVLA 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "detail": "自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。",
+      "source": "https://arxiv.org/html/2512.23864v1",
+      "tasks": [
+        "Peg-in-Hole",
+        "USB插入",
+        "齿轮装配",
+        "工具稳定支撑"
+      ]
+    },
+    {
+      "id": "suite-t08",
+      "name": "Sparsh / TacBench",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "离线",
+      "focus": "统一比较多传感器SSL表示、标注效率和下游迁移。",
+      "detail": "提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。",
+      "source": "https://arxiv.org/abs/2410.24090",
+      "tasks": [
+        "力估计",
+        "滑移检测",
+        "姿态估计",
+        "抓取稳定预测",
+        "纺织物识别",
+        "bead maze"
+      ]
+    },
+    {
+      "id": "suite-t09",
+      "name": "UniTouch 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "离线",
+      "focus": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "detail": "复用多个既有表示数据集；不应归为VLA控制benchmark。",
+      "source": "https://arxiv.org/abs/2401.18084",
+      "tasks": [
+        "材质分类",
+        "抓取稳定性预测",
+        "零样本触觉理解",
+        "触觉问答"
+      ]
+    },
+    {
+      "id": "suite-t10",
+      "name": "AnyTouch 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机",
+      "focus": "检验统一静动态多传感器表示及迁移。",
+      "detail": "提出TacQuad数据集并复用多个下游数据；有真机迁移验证。",
+      "source": "https://arxiv.org/abs/2502.12191",
+      "tasks": [
+        "静态材质/属性识别",
+        "动态触觉感知",
+        "跨传感器迁移",
+        "真机倾倒"
+      ]
+    },
+    {
+      "id": "suite-t11",
+      "name": "Octopi 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "离线",
+      "focus": "触觉感知能否支持视觉难以判断的物理属性和中间描述辅助推理。",
+      "detail": "提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。",
+      "source": "https://arxiv.org/abs/2405.02794",
+      "tasks": [
+        "硬度/粗糙度/凹凸描述",
+        "物理属性推理",
+        "场景常识问答"
+      ]
+    },
+    {
+      "id": "suite-t12",
+      "name": "TVL 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "离线",
+      "focus": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "detail": "提出TVL数据和触觉语义理解评测；公开模型代码数据。",
+      "source": "https://arxiv.org/abs/2402.13232",
+      "tasks": [
+        "开放词表触觉语义分类",
+        "触觉文本生成",
+        "触觉视觉/语言对齐"
+      ]
+    },
+    {
+      "id": "suite-t13",
+      "name": "T3 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机",
+      "focus": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "detail": "提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。",
+      "source": "https://arxiv.org/abs/2406.13640",
+      "tasks": [
+        "材质/物体识别",
+        "接触面积与织物属性",
+        "帧间3D/6D位姿变化",
+        "PCB开关/USB模块/VGA接口插入"
+      ]
+    },
+    {
+      "id": "suite-t14",
+      "name": "Touch and Go 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "detail": "公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。",
+      "source": "https://arxiv.org/abs/2211.12498",
+      "tasks": [
+        "视觉触觉表示学习",
+        "材质识别",
+        "触觉引导图像风格化",
+        "未来触觉帧预测"
+      ]
+    },
+    {
+      "id": "suite-t15",
+      "name": "VITaL Pretraining 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "区分训练时触觉预训练收益与部署时触觉反馈收益；比较触觉相关/不相关任务。",
+      "detail": "自建3任务；代码入口在作者项目页。",
+      "source": "https://arxiv.org/html/2403.11898v2",
+      "tasks": [
+        "USB线缆插入",
+        "细长方块堆叠",
+        "立方块堆叠"
+      ]
+    },
+    {
+      "id": "suite-t16",
+      "name": "ViTaL Local 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "detail": "自建精密接触+泛化协议；资源入口官方project。",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "tasks": [
+        "电源插头插入",
+        "USB插入",
+        "刷卡",
+        "钥匙插锁",
+        "拿面包控制任务"
+      ]
+    },
+    {
+      "id": "suite-t17",
+      "name": "ViTaL Steering 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "验证视觉长时语义选模与触觉短时接触纠偏互补。",
+      "detail": "自建3任务；官网逐次视频；代码Coming Soon。",
+      "source": "https://arxiv.org/abs/2606.14981",
+      "tasks": [
+        "移液至指定颜色杯",
+        "擦除指定颜色白板痕迹",
+        "插入指定孔位"
+      ]
+    },
+    {
+      "id": "suite-t18",
+      "name": "ViTacFormer 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "detail": "自建4短程+1长程任务；官方代码与示例数据公开。",
+      "source": "https://arxiv.org/abs/2506.15953",
+      "tasks": [
+        "Peg Insertion",
+        "Cap Twist",
+        "Vase Wipe",
+        "Book Flip",
+        "11阶段制作汉堡"
+      ]
+    },
+    {
+      "id": "suite-t19",
+      "name": "AnyTouch 2 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "仿真 + 真机",
+      "focus": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "detail": "提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "tasks": [
+        "触觉抓取",
+        "擦白板",
+        "USB插入",
+        "薯片移动",
+        "离线静态属性/动作/力及delta-force预测"
+      ]
+    },
+    {
+      "id": "suite-t20",
+      "name": "See, Hear, and Feel 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "detail": "自建2任务；官方代码及示例数据公开。",
+      "source": "https://arxiv.org/abs/2212.03858",
+      "tasks": [
+        "dense packing",
+        "pouring"
+      ]
+    },
+    {
+      "id": "suite-t21",
+      "name": "ManiWAV 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "被动接触事件和主动感知属性能否借接触音频补充视觉；环境泛化。",
+      "detail": "自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。",
+      "source": "https://arxiv.org/html/2406.19464v1",
+      "tasks": [
+        "铲子翻贝果",
+        "擦白板",
+        "摇杯判断并倒骰子",
+        "辨别魔术贴钩/毛面并绑线"
+      ]
+    },
+    {
+      "id": "suite-c01",
+      "name": "ForceMimic / HybridIL 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "区分加入力输入与显式预测/执行力目标的作用；比较采集效率与连续削皮质量。",
+      "detail": "自建西葫芦削皮实验",
+      "source": "https://arxiv.org/html/2410.07554v2",
+      "tasks": [
+        "西葫芦削皮；完整削皮流程的采集效率研究"
+      ]
+    },
+    {
+      "id": "suite-c02",
+      "name": "FoAR 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "测试持续表面接触、瞬时冲击及外部扰动下的在线修正。",
+      "detail": "自建三任务；擦板额外方向泛化",
+      "source": "https://arxiv.org/html/2411.15753v2",
+      "tasks": [
+        "擦白板（固定/任意方向）",
+        "削黄瓜",
+        "切辣椒"
+      ]
+    },
+    {
+      "id": "suite-c03",
+      "name": "FARM 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "用高力、低力与动态用力三种需求分离触觉表示和力动作接口的收益。",
+      "detail": "自建三种力需求任务",
+      "source": "https://arxiv.org/html/2510.13324v1",
+      "tasks": [
+        "塑料植物插土",
+        "完整摘取葡萄入碗",
+        "内六角工具拧紧螺丝"
+      ]
+    },
+    {
+      "id": "suite-c04",
+      "name": "ViSk / VisuoSkin 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "用相同策略比较视觉、触觉、腕视相机和本体输入；在未见目标位置及新任务变体检验接触搜索。",
+      "detail": "自建四项精密真机任务",
+      "source": "https://arxiv.org/html/2410.17246v2",
+      "tasks": [
+        "插头插入",
+        "USB插入",
+        "信用卡刷卡",
+        "书架取书"
+      ]
+    },
+    {
+      "id": "suite-c05",
+      "name": "AnySkin 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机",
+      "focus": "将传感器物理替换、信号一致性与真正的策略跨实例泛化分别量化。",
+      "detail": "自建跨实例任务协议",
+      "source": "https://arxiv.org/html/2409.08276v3",
+      "tasks": [
+        "插头插入",
+        "USB插入",
+        "刷卡；滑移检测与换皮研究"
+      ]
+    },
+    {
+      "id": "suite-c06",
+      "name": "Sparsh-skin 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "分别测力/摇杆状态/物体位姿估计和真实接触控制，考察预训练与标注量。",
+      "detail": "四项下游套件；插入借鉴已有任务、改变末端本体",
+      "source": "https://arxiv.org/html/2505.11420v1",
+      "tasks": [
+        "三轴力估计",
+        "摇杆状态",
+        "物体位姿",
+        "插头插入"
+      ]
+    },
+    {
+      "id": "suite-c07",
+      "name": "Sparsh-X 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "消融触觉模态和预训练；检查收益来自实时触觉而非只来自筛选成功轨迹。",
+      "detail": "自建下游评测；旋转采用Hora公开基础策略",
+      "source": "https://arxiv.org/html/2506.14754v1",
+      "tasks": [
+        "插头插入",
+        "杯状物手内旋转；物体动作/材料数量/力估计"
+      ]
+    },
+    {
+      "id": "suite-c08",
+      "name": "Touch Dexterity 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "测触觉对稳定性、形状理解、跨物体和sim2real的作用。",
+      "detail": "自建几何物体训练与未见真物体套件",
+      "source": "https://arxiv.org/html/2303.10880v4",
+      "tasks": [
+        "手内绕各轴旋转；陌生日常物体旋转；形状重建诊断"
+      ]
+    },
+    {
+      "id": "suite-c09",
+      "name": "RotateIt 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "分离视觉、触觉与物体形状信息对多轴操作和陌生物体泛化的贡献。",
+      "detail": "EGAD/GSO/YCB/ContactDB筛选物体构建的旋转套件",
+      "source": "https://arxiv.org/html/2309.09979v1",
+      "tasks": [
+        "手内x/y/z多轴旋转；15个held-out挑战物体与真实日常物体"
+      ]
+    },
+    {
+      "id": "suite-c10",
+      "name": "TacSL",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "仿真 + 真机",
+      "focus": "评价触觉仿真、模态组合、在线蒸馏和增强方法能否转化为实际接触控制。",
+      "detail": "TacSL配套接触任务；上游复用Factory/IndustReal模块",
+      "source": "https://arxiv.org/html/2408.06506v2",
+      "tasks": [
+        "Peg placement",
+        "Peg insertion；不同尺寸资产及接触力场边缘测试"
+      ]
+    },
+    {
+      "id": "suite-c11",
+      "name": "ManiFeel",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "仿真 + 真机",
+      "focus": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "detail": "ManiFeel；基于TacSL衍生，九项主仿真与四真机设置",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "tasks": [
+        "v2九仿真主任务：peg/USB/插头/齿轮",
+        "螺母/灯泡",
+        "盲调姿/搜索/低光分球；真机齿轮/灯泡/正常与暗光分球"
+      ]
+    },
+    {
+      "id": "suite-c12",
+      "name": "Tactile Gym 2.0",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "仿真 + 真机",
+      "focus": "检验跨传感器的触觉控制、接触几何泛化和软硬材料影响。",
+      "detail": "Tactile Gym 2.0；继承1.0三个控制任务",
+      "source": "https://arxiv.org/html/2207.10763v2",
+      "tasks": [
+        "物体推送",
+        "沿边缘",
+        "沿曲面；每类多种几何和轨迹"
+      ]
+    },
+    {
+      "id": "suite-c13",
+      "name": "DIGIT 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机",
+      "focus": "验证传感器可制造性与对实际灵巧闭环控制的可用性。",
+      "detail": "自建传感器与玻璃球控制实验",
+      "source": "https://arxiv.org/abs/2005.14679",
+      "tasks": [
+        "手内玻璃球操纵"
+      ]
+    },
+    {
+      "id": "suite-c14",
+      "name": "TACTO",
+      "kind": "公开评测 / 仿真框架",
+      "domain": "仿真 + 真机数据",
+      "focus": "检验模拟触觉能否复现真实触觉学习规律及低样本触觉控制。",
+      "detail": "TACTO示例实验；非固定VLA任务榜单",
+      "source": "https://arxiv.org/html/2012.08456v2",
+      "tasks": [
+        "抓取稳定性",
+        "双指滚玻璃球",
+        "圆柱接触位姿估计"
+      ]
+    },
+    {
+      "id": "suite-c15",
+      "name": "FACTR 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "测未见外观/形状物体泛化、接触模式切换和物体被打落后的恢复。",
+      "detail": "自建四任务与恢复测试",
+      "source": "https://arxiv.org/html/2502.17432v2",
+      "tasks": [
+        "双臂抬盒",
+        "夹持pivot",
+        "果蔬抓放",
+        "擀面团；抬盒打落再抓"
+      ]
+    },
+    {
+      "id": "suite-c16",
+      "name": "MOMA-Force 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "检验力模仿能否改善移动操作成功并降低接触强度和振荡。",
+      "detail": "自建六项家庭移动接触任务",
+      "source": "https://arxiv.org/html/2308.03624v1",
+      "tasks": [
+        "开橱柜抽屉",
+        "抽屉",
+        "左右门",
+        "旋水龙头",
+        "开洗衣机六项"
+      ]
+    },
+    {
+      "id": "suite-c17",
+      "name": "TacDiffusion 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "检验精密插入跨形状泛化、模型大小与推理速度权衡、滤波弥合控制频差。",
+      "detail": "自建五种精密插入，间隙0.02–0.1mm（钥匙另列）",
+      "source": "https://arxiv.org/html/2409.11047v1",
+      "tasks": [
+        "长方体训练；钥匙",
+        "小/大圆柱",
+        "八角柱四个新插入任务"
+      ]
+    },
+    {
+      "id": "suite-c18",
+      "name": "AFORCE 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "比较动作空间的样本效率、能耗、轨迹误差和接触表现。",
+      "detail": "robosuite三任务＋真机自建擦拭",
+      "source": "https://arxiv.org/html/2110.09904v2",
+      "tasks": [
+        "仿真Door/Lift/Wipe；真机10N圆周擦拭"
+      ]
+    },
+    {
+      "id": "suite-c19",
+      "name": "Impedance-IRL 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "仿真 + 真机",
+      "focus": "改变孔倾角、几何尺寸和初始位置后比较策略和奖励迁移能力。",
+      "detail": "自建两任务和参数变化测试",
+      "source": "https://arxiv.org/html/2102.06838v1",
+      "tasks": [
+        "仿真Peg-in-Hole",
+        "Cup-on-Plate；真机Cup-on-Plate"
+      ]
+    },
+    {
+      "id": "suite-c20",
+      "name": "ReSkin 评测方案",
+      "kind": "论文评测 / 配套资源",
+      "domain": "真机数据",
+      "focus": "检验软触觉的可替换性、持久性及跨传感器学习。",
+      "detail": "自建传感器表征与跨实例测试",
+      "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+      "tasks": [
+        "接触/力定位",
+        "不同皮肤实例与长期使用表征；多种实际感知展示"
+      ]
+    }
+  ],
+  "extraRelations": [
+    {
+      "fromWork": "W01",
+      "toBenchmark": "forcebench",
+      "type": "later",
+      "label": "后续重新评测",
+      "note": "ForceBench论文中的外部比较，不是ForceVLA原论文的评测。",
+      "source": "https://arxiv.org/html/2610.19604v1"
+    },
+    {
+      "fromWork": "W17",
+      "toBenchmark": "forcebench",
+      "type": "later",
+      "label": "后续重新评测",
+      "note": "由ForceBench纳入外部比较。",
+      "source": "https://arxiv.org/html/2610.19604v1"
+    },
+    {
+      "fromBenchmark": "tabero",
+      "toBenchmark": "libero",
+      "type": "derived",
+      "label": "场景 / 轨迹衍生",
+      "note": "复用资源并改变触觉/控制环境，不能直接等同原版成绩。",
+      "source": "https://arxiv.org/html/2605.27886v1"
+    }
+  ],
+  "features": [
+    {
+      "work": "W06",
+      "title": "模型真的在利用力吗？",
+      "text": "固定视觉交换力输入，区分离线路由响应与实际执行。"
+    },
+    {
+      "work": "W07",
+      "title": "参考动作延迟时还能纠偏吗？",
+      "text": "单臂与双臂分别测，峰值和耗时保留成功样本口径。"
+    },
+    {
+      "work": "W05",
+      "title": "有没有跟住目标力？",
+      "text": "恒力擦拭与高度OOD，明确参考力、误差和保护停机。"
+    },
+    {
+      "work": "W09",
+      "title": "“轻一点”能否跨任务？",
+      "text": "把已见运动与未见力语言分开，测真实施加力。"
+    },
+    {
+      "work": "W12",
+      "title": "能否无损完成全流程？",
+      "text": "杯子、搭扣、鸡蛋，子任务与完整自主流程分别计分。"
+    },
+    {
+      "work": "E05",
+      "title": "多指操作怎样计分？",
+      "text": "十二类灵巧操作；完整成功与分阶段进度要读清。"
+    },
+    {
+      "work": "E03",
+      "title": "传感器换了还能用吗？",
+      "text": "UniVTAC仿真与真实硬件分开，已见/未见传感器分组。"
+    },
+    {
+      "work": "E09",
+      "title": "做成了，也用对力了吗？",
+      "text": "任务完成、命令力意图、实际力跟踪三关联合。"
+    }
+  ],
+  "documents": [
+    {
+      "name": "带力控制VLA扩展调研_简易版",
+      "url": "documents/带力控制VLA扩展调研_简易版.md"
+    },
+    {
+      "name": "带力控制VLA扩展调研_详细版",
+      "url": "documents/带力控制VLA扩展调研_详细版.md"
+    },
+    {
+      "name": "带力控制VLA评测调研_简易版",
+      "url": "documents/带力控制VLA评测调研_简易版.md"
+    },
+    {
+      "name": "带力控制VLA评测调研_详细版",
+      "url": "documents/带力控制VLA评测调研_详细版.md"
+    }
+  ],
+  "originalSnapshot": "2026-10-15",
+  "taskGroups": [
+    {
+      "id": "precision",
+      "name": "短时接触与精密操作",
+      "description": "连接器、插孔和按钮：接触对齐、就位和终点判断。",
+      "color": "#24768c",
+      "icon": "insertion",
+      "image": {
+        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
+        "caption": "FACT 插头插入实验，Figure 1局部",
+        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
+      }
+    },
+    {
+      "id": "surface",
+      "name": "持续接触与工具加工",
+      "description": "擦拭、削切和打磨：持续接触、作用力与加工质量。",
+      "color": "#3868a6",
+      "icon": "wipe",
+      "image": {
+        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
+        "caption": "DEFT-VLA 任务阶段图，Figure 4（含擦板）",
+        "source": "https://arxiv.org/html/2610.14854v1#S4"
+      }
+    },
+    {
+      "id": "assembly",
+      "name": "多阶段装配与机构操作",
+      "description": "齿轮、螺纹、门与锁：约束变化和连续接触决策。",
+      "color": "#8d6c3b",
+      "icon": "assembly",
+      "image": null
+    },
+    {
+      "id": "grasp",
+      "name": "轻柔夹持与灵巧操作",
+      "description": "易碎物、滑移、多指操作：夹持力、稳定性和无损完成。",
+      "color": "#7562a9",
+      "icon": "grasp",
+      "image": {
+        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
+        "caption": "FACT 灵巧手真机评测随机化，Figure 4",
+        "source": "https://arxiv.org/html/2610.19155v1#S5"
+      }
+    },
+    {
+      "id": "reason",
+      "name": "物理属性与力反馈决策",
+      "description": "重量、硬度和阻力：分开看离线感知与闭环决策。",
+      "color": "#377b60",
+      "icon": "weigh",
+      "image": null
+    },
+    {
+      "id": "special",
+      "name": "专业操作与交互资源",
+      "description": "超声、全身接触、采集和表示评测：保留方法边界。",
+      "color": "#63738a",
+      "icon": "medical",
+      "image": null
+    }
+  ],
+  "taskTypes": [
+    {
+      "id": "usb",
+      "name": "USB 插入",
+      "group": "precision"
+    },
+    {
+      "id": "plug",
+      "name": "插头与充电器插接",
+      "group": "precision"
+    },
+    {
+      "id": "peg",
+      "name": "插销与孔配合",
+      "group": "precision"
+    },
+    {
+      "id": "tube",
+      "name": "管与吸头插接",
+      "group": "precision"
+    },
+    {
+      "id": "key",
+      "name": "钥匙插拔",
+      "group": "precision"
+    },
+    {
+      "id": "press",
+      "name": "按压与盖章",
+      "group": "precision"
+    },
+    {
+      "id": "whiteboard",
+      "name": "擦白板",
+      "group": "surface"
+    },
+    {
+      "id": "curved",
+      "name": "曲面与表面擦拭",
+      "group": "surface"
+    },
+    {
+      "id": "peel",
+      "name": "削皮与切割",
+      "group": "surface"
+    },
+    {
+      "id": "assembly",
+      "name": "齿轮与螺纹装配",
+      "group": "assembly"
+    },
+    {
+      "id": "articulated",
+      "name": "开门、抽屉与锁扣",
+      "group": "assembly"
+    },
+    {
+      "id": "fragile",
+      "name": "易碎 / 无损抓放",
+      "group": "grasp"
+    },
+    {
+      "id": "grasp",
+      "name": "稳定抓取与滑移",
+      "group": "grasp"
+    },
+    {
+      "id": "dex",
+      "name": "多指与手内操作",
+      "group": "grasp"
+    },
+    {
+      "id": "deform",
+      "name": "柔性与双臂协作",
+      "group": "grasp"
+    },
+    {
+      "id": "property",
+      "name": "物理属性感知与推理",
+      "group": "reason"
+    },
+    {
+      "id": "pipette",
+      "name": "移液与专业接触",
+      "group": "special"
+    },
+    {
+      "id": "pour",
+      "name": "倾倒与液体操作",
+      "group": "special"
+    },
+    {
+      "id": "medical",
+      "name": "超声与医学成像",
+      "group": "special"
+    },
+    {
+      "id": "body",
+      "name": "全身接触与搬推",
+      "group": "special"
+    },
+    {
+      "id": "representation",
+      "name": "触觉表示与跨传感器",
+      "group": "special"
+    }
+  ],
+  "taskInstances": [
+    {
+      "id": "W01-usb",
+      "work": "W01",
+      "task": "usb",
+      "label": "插头 / USB",
+      "purpose": "检验受约束接触下对齐与纠偏",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "完整插入成功率",
+      "setting": "各20次；插头另设遮挡/不稳定插座",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "§4.3 数据；§5.1 次数/指标；§5.3泛化",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W01-plug",
+      "work": "W01",
+      "task": "plug",
+      "label": "插头 / USB",
+      "purpose": "检验受约束接触下对齐与纠偏",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "完整插入成功率",
+      "setting": "各20次；插头另设遮挡/不稳定插座",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "§4.3 数据；§5.1 次数/指标；§5.3泛化",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W01-press",
+      "work": "W01",
+      "task": "press",
+      "label": "按瓶",
+      "purpose": "检验轴向接触与高度变化下的动作调整",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率",
+      "setting": "20次；另有瓶型/高度泛化",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "§4.3 数据；§5.1 次数/指标；§5.3泛化",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W01-whiteboard",
+      "work": "W01",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "区分执行擦拭动作与真正清洁",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "擦拭动作成功、完全擦除",
+      "setting": "10次；不等于目标法向力跟踪",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "§4.3 数据；§5.1 次数/指标；§5.3泛化",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W01-peel",
+      "work": "W01",
+      "task": "peel",
+      "label": "削黄瓜",
+      "purpose": "检验工具持续接触与加工质量",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "平均削皮长度、最少stroke",
+      "setting": "15次，每次15个stroke",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "§4.3 数据；§5.1 次数/指标；§5.3泛化",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W02-press",
+      "work": "W02",
+      "task": "press",
+      "label": "按瓶 / 取盘",
+      "purpose": "检验不同接触阶段的混合力—位置操作",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率",
+      "setting": "各20次独立试验",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "locator": "§4硬件与数据；§5.1五任务20次；实验/附录",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W02-whiteboard",
+      "work": "W02",
+      "task": "whiteboard",
+      "label": "清洁花瓶 / 擦板",
+      "purpose": "检验持续接触与变化表面",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率、定性接触表现",
+      "setting": "各20次；没有系统六轴跟踪表",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "locator": "§4硬件与数据；§5.1五任务20次；实验/附录",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W02-curved",
+      "work": "W02",
+      "task": "curved",
+      "label": "清洁花瓶 / 擦板",
+      "purpose": "检验持续接触与变化表面",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率、定性接触表现",
+      "setting": "各20次；没有系统六轴跟踪表",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "locator": "§4硬件与数据；§5.1五任务20次；实验/附录",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W02-assembly",
+      "work": "W02",
+      "task": "assembly",
+      "label": "齿轮装配",
+      "purpose": "检验装配约束下的接触执行",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率",
+      "setting": "20次；对比同任务方法",
+      "source": "https://arxiv.org/html/2603.15169v1",
+      "locator": "§4硬件与数据；§5.1五任务20次；实验/附录",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W03-usb",
+      "work": "W03",
+      "task": "usb",
+      "label": "USB / 齿轮装配",
+      "purpose": "检验精密接触与及时修正",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；齿轮平均峰值力",
+      "setting": "25 / 30次；频率消融",
+      "source": "https://arxiv.org/html/2602.23648v1",
+      "locator": "§4.1设置；§4.2峰值力；§4.3频率；附录任务",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W03-whiteboard",
+      "work": "W03",
+      "task": "whiteboard",
+      "label": "擦板",
+      "purpose": "检验持续接触执行",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、组件消融",
+      "setting": "10次",
+      "source": "https://arxiv.org/html/2602.23648v1",
+      "locator": "§4.1设置；§4.2峰值力；§4.3频率；附录任务",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W03-assembly",
+      "work": "W03",
+      "task": "assembly",
+      "label": "USB / 齿轮装配",
+      "purpose": "检验精密接触与及时修正",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；齿轮平均峰值力",
+      "setting": "25 / 30次；频率消融",
+      "source": "https://arxiv.org/html/2602.23648v1",
+      "locator": "§4.1设置；§4.2峰值力；§4.3频率；附录任务",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W04-plug",
+      "work": "W04",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "分离力、视觉记忆与异步处理的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、耗时、平滑、tracking lag",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "locator": "§4；附录D–F平滑、时间与频率",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W04-press",
+      "work": "W04",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "分离力、视觉记忆与异步处理的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、耗时、平滑、tracking lag",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "locator": "§4；附录D–F平滑、时间与频率",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W04-whiteboard",
+      "work": "W04",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "分离力、视觉记忆与异步处理的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、耗时、平滑、tracking lag",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "locator": "§4；附录D–F平滑、时间与频率",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W04-deform",
+      "work": "W04",
+      "task": "deform",
+      "label": "柔性与双臂协作",
+      "purpose": "分离力、视觉记忆与异步处理的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、耗时、平滑、tracking lag",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2606.12105v1",
+      "locator": "§4；附录D–F平滑、时间与频率",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W05-plug",
+      "work": "W05",
+      "task": "plug",
+      "label": "插头近起点 PI-pro",
+      "purpose": "检验视觉不可见孔位时的接触探索",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "插入成功率",
+      "setting": "近插座且腕相机不可见孔位",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "locator": "§4；Table I力跟踪；Fig.6–8结果",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W05-press",
+      "work": "W05",
+      "task": "press",
+      "label": "按钮 / 擦板高度OOD",
+      "purpose": "检验位置变化后的力调节",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；擦板跟踪误差",
+      "setting": "高度比示教低6 cm",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "locator": "§4；Table I力跟踪；Fig.6–8结果",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W05-whiteboard",
+      "work": "W05",
+      "task": "whiteboard",
+      "label": "恒力擦板",
+      "purpose": "检验是否跟踪给定法向力",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "相对绝对误差；保护停机",
+      "setting": "参考40 N；75 N触发保护；每条件24–25次",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "locator": "§4；Table I力跟踪；Fig.6–8结果",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W05-articulated",
+      "work": "W05",
+      "task": "articulated",
+      "label": "旋转窗",
+      "purpose": "检验长程约束与柔顺操作",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率、过载现象",
+      "setting": "先抓把手再抵住窗框打开",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "locator": "§4；Table I力跟踪；Fig.6–8结果",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W05-dex",
+      "work": "W05",
+      "task": "dex",
+      "label": "旋转窗",
+      "purpose": "检验长程约束与柔顺操作",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率、过载现象",
+      "setting": "先抓把手再抵住窗框打开",
+      "source": "https://arxiv.org/html/2609.05832v1",
+      "locator": "§4；Table I力跟踪；Fig.6–8结果",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W06-press",
+      "work": "W06",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "通过反事实力输入检验动作是否真正依赖力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、力/矩预测MSE、路由Flip Rate",
+      "setting": "30次 / 任务 / ID或OOD条件",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "§V-A–D；Tables I–III，ID/OOD与反事实；§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W06-whiteboard",
+      "work": "W06",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "通过反事实力输入检验动作是否真正依赖力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、力/矩预测MSE、路由Flip Rate",
+      "setting": "30次 / 任务 / ID或OOD条件",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "§V-A–D；Tables I–III，ID/OOD与反事实；§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W06-peel",
+      "work": "W06",
+      "task": "peel",
+      "label": "削皮接触段",
+      "purpose": "检验未来力/矩预测",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "Force MSE、Torque MSE",
+      "setting": "离线接触窗口；不是控制跟踪误差",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "§V-A–D；Tables I–III，ID/OOD与反事实；§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W06-property",
+      "work": "W06",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "通过反事实力输入检验动作是否真正依赖力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、力/矩预测MSE、路由Flip Rate",
+      "setting": "30次 / 任务 / ID或OOD条件",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "§V-A–D；Tables I–III，ID/OOD与反事实；§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W07-usb",
+      "work": "W07",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、成功样本峰值/时间、延迟",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "locator": "§IV；Table I九任务；Table II成功样本力/时间",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W07-plug",
+      "work": "W07",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、成功样本峰值/时间、延迟",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "locator": "§IV；Table I九任务；Table II成功样本力/时间",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W07-whiteboard",
+      "work": "W07",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、成功样本峰值/时间、延迟",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "locator": "§IV；Table I九任务；Table II成功样本力/时间",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W07-articulated",
+      "work": "W07",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "在参考动作更新间隙学习接触纠偏与延迟修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、成功样本峰值/时间、延迟",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.18242v1",
+      "locator": "§IV；Table I九任务；Table II成功样本力/时间",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W08-plug",
+      "work": "W08",
+      "task": "plug",
+      "label": "插头 / 环套柱",
+      "purpose": "检验无人救援下自主接触完成",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功次数 / 30",
+      "setting": "60秒内就位并释放；禁止介入/重置/保护停机",
+      "source": "https://arxiv.org/html/2609.22840v1",
+      "locator": "§V；限时自主成功、在线预算和消融",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W08-whiteboard",
+      "work": "W08",
+      "task": "whiteboard",
+      "label": "擦板",
+      "purpose": "检验清洁及自主终止",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功次数 / 30",
+      "setting": "180秒内去除全部文字、抬起并停止",
+      "source": "https://arxiv.org/html/2609.22840v1",
+      "locator": "§V；限时自主成功、在线预算和消融",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "W09-usb",
+      "work": "W09",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、施加力、无可见变形",
+      "setting": "抓取10次 / 物体；其他按实验",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "locator": "§3.2语言；§3.3抓取；§3.4擦拭",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W09-plug",
+      "work": "W09",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、施加力、无可见变形",
+      "setting": "抓取10次 / 物体；其他按实验",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "locator": "§3.2语言；§3.3抓取；§3.4擦拭",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W09-whiteboard",
+      "work": "W09",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、施加力、无可见变形",
+      "setting": "抓取10次 / 物体；其他按实验",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "locator": "§3.2语言；§3.3抓取；§3.4擦拭",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W09-fragile",
+      "work": "W09",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、施加力、无可见变形",
+      "setting": "抓取10次 / 物体；其他按实验",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "locator": "§3.2语言；§3.3抓取；§3.4擦拭",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W09-grasp",
+      "work": "W09",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "把力语言迁移、物理常识和失败后调力分别测试。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、施加力、无可见变形",
+      "setting": "抓取10次 / 物体；其他按实验",
+      "source": "https://arxiv.org/html/2507.09160v1",
+      "locator": "§3.2语言；§3.3抓取；§3.4擦拭",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W10-tube",
+      "work": "W10",
+      "task": "tube",
+      "label": "管与吸头插接",
+      "purpose": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务特定成功率",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "locator": "§V，附录B任务协议",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W10-whiteboard",
+      "work": "W10",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务特定成功率",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "locator": "§V，附录B任务协议",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W10-peel",
+      "work": "W10",
+      "task": "peel",
+      "label": "削皮与切割",
+      "purpose": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务特定成功率",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "locator": "§V，附录B任务协议",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W10-grasp",
+      "work": "W10",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "利用物理接触表示覆盖抗滑、易碎与工具操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务特定成功率",
+      "setting": "15次 / 任务",
+      "source": "https://arxiv.org/html/2601.20321v1",
+      "locator": "§V，附录B任务协议",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W11-fragile",
+      "work": "W11",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "分开评估夹持内力、对外作用力与轻柔指令。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、AG、MG、AA、MA",
+      "setting": "统一每任务次数未确认",
+      "source": "https://arxiv.org/html/2605.27886v1",
+      "locator": "§3.6过程指标；实验；README复现说明",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W11-grasp",
+      "work": "W11",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "分开评估夹持内力、对外作用力与轻柔指令。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、AG、MG、AA、MA",
+      "setting": "统一每任务次数未确认",
+      "source": "https://arxiv.org/html/2605.27886v1",
+      "locator": "§3.6过程指标；实验；README复现说明",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W12-articulated",
+      "work": "W12",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "子任务/全流程成功、耗时、60分钟吞吐",
+      "setting": "子任务与全流程各30次",
+      "source": "https://arxiv.org/html/2606.09337v1",
+      "locator": "§4；附录A.1成功条件；A.2指尖wrench定义",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W12-fragile",
+      "work": "W12",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "子任务/全流程成功、耗时、60分钟吞吐",
+      "setting": "子任务与全流程各30次",
+      "source": "https://arxiv.org/html/2606.09337v1",
+      "locator": "§4；附录A.1成功条件；A.2指尖wrench定义",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W12-grasp",
+      "work": "W12",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "将精密接触、机械锁定与易碎搬运串为完整流程。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "子任务/全流程成功、耗时、60分钟吞吐",
+      "setting": "子任务与全流程各30次",
+      "source": "https://arxiv.org/html/2606.09337v1",
+      "locator": "§4；附录A.1成功条件；A.2指尖wrench定义",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-usb",
+      "work": "W13",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-plug",
+      "work": "W13",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-articulated",
+      "work": "W13",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-grasp",
+      "work": "W13",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-dex",
+      "work": "W13",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W13-pour",
+      "work": "W13",
+      "task": "pour",
+      "label": "倾倒与液体操作",
+      "purpose": "研究历史扭矩与未来预测，同时检查常规能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、跨模型与跨本体测试",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2509.07962v1",
+      "locator": "§6 Table 5十任务；effort数据字段",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W14-plug",
+      "work": "W14",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "把训练期力知识蒸馏到部署时可用表示。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、蒸馏与直接力输入对照",
+      "setting": "30次 / 任务",
+      "source": "https://arxiv.org/html/2602.02142v2",
+      "locator": "§IV，50条示教/30次；成功标准",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W14-press",
+      "work": "W14",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "把训练期力知识蒸馏到部署时可用表示。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、蒸馏与直接力输入对照",
+      "setting": "30次 / 任务",
+      "source": "https://arxiv.org/html/2602.02142v2",
+      "locator": "§IV，50条示教/30次；成功标准",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W14-whiteboard",
+      "work": "W14",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "把训练期力知识蒸馏到部署时可用表示。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、蒸馏与直接力输入对照",
+      "setting": "30次 / 任务",
+      "source": "https://arxiv.org/html/2602.02142v2",
+      "locator": "§IV，50条示教/30次；成功标准",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W15-plug",
+      "work": "W15",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "在同一骨干与任务下比较多种物理模态。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、多模态与训练消融",
+      "setting": "24次 / 任务（v1）",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W15-whiteboard",
+      "work": "W15",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "在同一骨干与任务下比较多种物理模态。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、多模态与训练消融",
+      "setting": "24次 / 任务（v1）",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W15-fragile",
+      "work": "W15",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "在同一骨干与任务下比较多种物理模态。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、多模态与训练消融",
+      "setting": "24次 / 任务（v1）",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W15-grasp",
+      "work": "W15",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "在同一骨干与任务下比较多种物理模态。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、多模态与训练消融",
+      "setting": "24次 / 任务（v1）",
+      "source": "https://arxiv.org/html/2604.23272v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W16-whiteboard",
+      "work": "W16",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "评估可变柔顺性，并保留普通抓放对照。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、常规能力保持",
+      "setting": "评测次数未确认",
+      "source": "https://compvla.github.io/",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W17-usb",
+      "work": "W17",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.1力统计；§4.4 OOD",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W17-plug",
+      "work": "W17",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.1力统计；§4.4 OOD",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W17-press",
+      "work": "W17",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.1力统计；§4.4 OOD",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W17-whiteboard",
+      "work": "W17",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.1力统计；§4.4 OOD",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W17-curved",
+      "work": "W17",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "VLM定位与接触策略分阶段，分析力统计与物理泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、专家力统计偏差、OOD",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.1力统计；§4.4 OOD",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W18-whiteboard",
+      "work": "W18",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "世界动作模型结合力预测与残差纠偏。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、时间、观测/预测/残差消融",
+      "setting": "20次 / 任务，最长60秒",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "locator": "§4与附录A；20次/60秒与传感器",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W18-curved",
+      "work": "W18",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "世界动作模型结合力预测与残差纠偏。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、时间、观测/预测/残差消融",
+      "setting": "20次 / 任务，最长60秒",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "locator": "§4与附录A；20次/60秒与传感器",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "W18-peel",
+      "work": "W18",
+      "task": "peel",
+      "label": "削皮与切割",
+      "purpose": "世界动作模型结合力预测与残差纠偏。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、时间、观测/预测/残差消融",
+      "setting": "20次 / 任务，最长60秒",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "locator": "§4与附录A；20次/60秒与传感器",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E01-press",
+      "work": "E01",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "用语言连接异质感官，分别验证Octo与VLA。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、未见物体与组合语义",
+      "setting": "5次 / 具体scenario",
+      "source": "https://arxiv.org/html/2501.04693v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E01-grasp",
+      "work": "E01",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "用语言连接异质感官，分别验证Octo与VLA。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、未见物体与组合语义",
+      "setting": "5次 / 具体scenario",
+      "source": "https://arxiv.org/html/2501.04693v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E02-peg",
+      "work": "E02",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "从接触动作预测到闭环插孔，再验证仿真到真机。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "GCR、分轴L1、成功率、尝试步数",
+      "setting": "真机20次 / 设置",
+      "source": "https://arxiv.org/html/2505.09577v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-usb",
+      "work": "E03",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-peg",
+      "work": "E03",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-tube",
+      "work": "E03",
+      "task": "tube",
+      "label": "管与吸头插接",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-key",
+      "work": "E03",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-whiteboard",
+      "work": "E03",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-curved",
+      "work": "E03",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-articulated",
+      "work": "E03",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E03-grasp",
+      "work": "E03",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "同一触觉基础策略跨传感器与本体适配。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、已见/未见传感器迁移",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-plug",
+      "work": "E04",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-peg",
+      "work": "E04",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-tube",
+      "work": "E04",
+      "task": "tube",
+      "label": "管与吸头插接",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-key",
+      "work": "E04",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-grasp",
+      "work": "E04",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-deform",
+      "work": "E04",
+      "task": "deform",
+      "label": "柔性与双臂协作",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-property",
+      "work": "E04",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E04-representation",
+      "work": "E04",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "同时评估真实长流程、仿真任务与离线策略改进。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、100分阶段rubric",
+      "setting": "按任务分配；不统一填次数",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E05-curved",
+      "work": "E05",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务分数、多阶段progress rubric",
+      "setting": "16次 / 任务",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E05-articulated",
+      "work": "E05",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务分数、多阶段progress rubric",
+      "setting": "16次 / 任务",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E05-grasp",
+      "work": "E05",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务分数、多阶段progress rubric",
+      "setting": "16次 / 任务",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E05-dex",
+      "work": "E05",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务分数、多阶段progress rubric",
+      "setting": "16次 / 任务",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E05-deform",
+      "work": "E05",
+      "task": "deform",
+      "label": "柔性与双臂协作",
+      "purpose": "以触觉快速细化多指动作，覆盖复杂物体交互。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务分数、多阶段progress rubric",
+      "setting": "16次 / 任务",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E06-grasp",
+      "work": "E06",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "针对触觉的空间、时间与信息稀疏性学习。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、TCR、去/掩码触觉消融",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.12549v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E06-dex",
+      "work": "E06",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "针对触觉的空间、时间与信息稀疏性学习。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、TCR、去/掩码触觉消融",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.12549v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E06-deform",
+      "work": "E06",
+      "task": "deform",
+      "label": "柔性与双臂协作",
+      "purpose": "针对触觉的空间、时间与信息稀疏性学习。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、TCR、去/掩码触觉消融",
+      "setting": "20次 / 任务",
+      "source": "https://arxiv.org/html/2609.12549v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E07-press",
+      "work": "E07",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、遮挡与运行扰动",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2603.12665v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E07-articulated",
+      "work": "E07",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、遮挡与运行扰动",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2603.12665v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E07-grasp",
+      "work": "E07",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "接触门控决定何时使用触觉，验证受限/遮挡操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、遮挡与运行扰动",
+      "setting": "20次 / 主任务",
+      "source": "https://arxiv.org/html/2603.12665v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E08-whiteboard",
+      "work": "E08",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "阶段/最终成功率、估力误差",
+      "setting": "25次 / 任务",
+      "source": "https://arxiv.org/html/2609.03889v2",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E08-articulated",
+      "work": "E08",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "阶段/最终成功率、估力误差",
+      "setting": "25次 / 任务",
+      "source": "https://arxiv.org/html/2609.03889v2",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E08-body",
+      "work": "E08",
+      "task": "body",
+      "label": "全身接触与搬推",
+      "purpose": "身体参与接触补偿，单独核验力估计和流程结果。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "阶段/最终成功率、估力误差",
+      "setting": "25次 / 任务",
+      "source": "https://arxiv.org/html/2609.03889v2",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E09-body",
+      "work": "E09",
+      "task": "body",
+      "label": "全身接触与搬推",
+      "purpose": "将任务完成、力意图和实际力实现联合计分。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "Task + Intent + Tracking、MAE",
+      "setting": "仿真90次 / 变体；VLA真机45次",
+      "source": "https://opt2vla.github.io/",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E10-medical",
+      "work": "E10",
+      "task": "medical",
+      "label": "超声与医学成像",
+      "purpose": "以专业成像结果与接触过程共同验证策略。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "切面获取成功、扫描步数、力信号",
+      "setting": "45次 / 任务，BMI组各15",
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E11-peg",
+      "work": "E11",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "早期触觉—语言—动作模型，局部纠偏而非完整抓取。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "GCR、L1、闭环成功率/步数",
+      "setting": "闭环50次 / 设置",
+      "source": "https://arxiv.org/html/2503.08548v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "E12-grasp",
+      "work": "E12",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "规划与反射控制结合，主动扰动接触再恢复。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功/加工比例、物体/工具/扰动泛化",
+      "setting": "常规10次 / 物体；泛化另设",
+      "source": "https://arxiv.org/html/2603.19201v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "B01-press",
+      "work": "B01",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/类别成功率、诊断结果",
+      "setting": "仿真200；真机20次 / 任务-方法",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "B01-assembly",
+      "work": "B01",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/类别成功率、诊断结果",
+      "setting": "仿真200；真机20次 / 任务-方法",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "B01-articulated",
+      "work": "B01",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/类别成功率、诊断结果",
+      "setting": "仿真200；真机20次 / 任务-方法",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "B01-dex",
+      "work": "B01",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/类别成功率、诊断结果",
+      "setting": "仿真200；真机20次 / 任务-方法",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "B01-property",
+      "work": "B01",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "固定数据、骨干与种子，比较六维力接入设计。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/类别成功率、诊断结果",
+      "setting": "仿真200；真机20次 / 任务-方法",
+      "source": "https://arxiv.org/html/2610.19604v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "X01-peg",
+      "work": "X01",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、执行horizon消融",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "X01-tube",
+      "work": "X01",
+      "task": "tube",
+      "label": "管与吸头插接",
+      "purpose": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、执行horizon消融",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "X01-key",
+      "work": "X01",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、执行horizon消融",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "X01-grasp",
+      "work": "X01",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "以单阶段任务微调检验是否必须做额外触觉策略预训练。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率、执行horizon消融",
+      "setting": "仿真100；真机20次 / 任务",
+      "source": "https://arxiv.org/html/2610.02784v1",
+      "locator": "原调研笔记中的实验章节与表格；见下方来源",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P01-usb",
+      "work": "P01",
+      "task": "usb",
+      "label": "插头 / USB",
+      "purpose": "亚毫米对齐与接触纠偏",
+      "success": "在60秒内完全插入；附录A细分对齐与就位失败",
+      "metrics": "成功率及Fisher检验",
+      "setting": "各40次；60秒",
+      "source": "https://arxiv.org/html/2608.01402v1#S6",
+      "locator": "§6、Appendix A",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P01-plug",
+      "work": "P01",
+      "task": "plug",
+      "label": "插头 / USB",
+      "purpose": "亚毫米对齐与接触纠偏",
+      "success": "在60秒内完全插入；附录A细分对齐与就位失败",
+      "metrics": "成功率及Fisher检验",
+      "setting": "各40次；60秒",
+      "source": "https://arxiv.org/html/2608.01402v1#S6",
+      "locator": "§6、Appendix A",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P01-key",
+      "work": "P01",
+      "task": "key",
+      "label": "钥匙 / 按钮",
+      "purpose": "利用终点力特征而非仅视觉",
+      "success": "钥匙正确就位；按钮触发锁定",
+      "metrics": "成功率、去真实力消融",
+      "setting": "钥匙视觉模糊；不同长度钥匙外观相似",
+      "source": "https://arxiv.org/html/2608.01402v1#A1",
+      "locator": "Appendix A、Table A.1",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P01-press",
+      "work": "P01",
+      "task": "press",
+      "label": "钥匙 / 按钮",
+      "purpose": "利用终点力特征而非仅视觉",
+      "success": "钥匙正确就位；按钮触发锁定",
+      "metrics": "成功率、去真实力消融",
+      "setting": "钥匙视觉模糊；不同长度钥匙外观相似",
+      "source": "https://arxiv.org/html/2608.01402v1#A1",
+      "locator": "Appendix A、Table A.1",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P01-whiteboard",
+      "work": "P01",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "持续接触质量",
+      "success": "擦除标记区域，维持有效接触",
+      "metrics": "任务成功率",
+      "setting": "40次，改变墨迹",
+      "source": "https://arxiv.org/html/2608.01402v1#A1",
+      "locator": "Appendix A",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P02-assembly",
+      "work": "P02",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "setting": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "§V-A、Table I；Appendix E",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P02-articulated",
+      "work": "P02",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "setting": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "§V-A、Table I；Appendix E",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P02-grasp",
+      "work": "P02",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "setting": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "§V-A、Table I；Appendix E",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P02-dex",
+      "work": "P02",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "setting": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "§V-A、Table I；Appendix E",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P02-pipette",
+      "work": "P02",
+      "task": "pipette",
+      "label": "移液器调量",
+      "purpose": "避免只报成功接触后的精度掩盖接触失败",
+      "success": "未接触拨盘计失败，不参与有读数样本的MAE",
+      "metrics": "接触次数/10；接触样本体积MAE",
+      "setting": "420 μL起始，400 μL目标",
+      "source": "https://arxiv.org/html/2610.19155v1#S5",
+      "locator": "§V-A、Table I、Appendix E",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P03-fragile",
+      "work": "P03",
+      "task": "fragile",
+      "label": "鸡蛋 / 华夫饼无损抓放",
+      "purpose": "精细控制夹持避免破损",
+      "success": "物体完整且放入指定位置；饼干不可裂碎，鸡蛋须放正确槽位",
+      "metrics": "成功次数/20",
+      "setting": "每模型每任务20次",
+      "source": "https://arxiv.org/html/2603.15257v1#S4.SS2",
+      "locator": "§IV-B",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P03-grasp",
+      "work": "P03",
+      "task": "grasp",
+      "label": "鸡蛋 / 华夫饼无损抓放",
+      "purpose": "精细控制夹持避免破损",
+      "success": "物体完整且放入指定位置；饼干不可裂碎，鸡蛋须放正确槽位",
+      "metrics": "成功次数/20",
+      "setting": "每模型每任务20次",
+      "source": "https://arxiv.org/html/2603.15257v1#S4.SS2",
+      "locator": "§IV-B",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P04-tube",
+      "work": "P04",
+      "task": "tube",
+      "label": "吸头安装 / 双臂吸液",
+      "purpose": "接触终点感知及高度泛化",
+      "success": "吸头撤回仍固定；有效吸液；体积参考1000 μL",
+      "metrics": "成功率；成功样本体积MAE",
+      "setting": "各20次；另设未见抓持高度",
+      "source": "https://arxiv.org/html/2610.14854v1#S4",
+      "locator": "§IV-A–C、Table I",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P04-whiteboard",
+      "work": "P04",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "接近抓取与接触擦拭分开计分",
+      "success": "目标标记去除且板擦持续有效接触",
+      "metrics": "阶段成功率及整体成功率",
+      "setting": "20次；人工切换阶段",
+      "source": "https://arxiv.org/html/2610.14854v1#S4",
+      "locator": "§IV-A、Table I",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P04-pipette",
+      "work": "P04",
+      "task": "pipette",
+      "label": "吸头安装 / 双臂吸液",
+      "purpose": "接触终点感知及高度泛化",
+      "success": "吸头撤回仍固定；有效吸液；体积参考1000 μL",
+      "metrics": "成功率；成功样本体积MAE",
+      "setting": "各20次；另设未见抓持高度",
+      "source": "https://arxiv.org/html/2610.14854v1#S4",
+      "locator": "§IV-A–C、Table I",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P05-peg",
+      "work": "P05",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "对比原始触觉图与marker特征是否在不同任务均有帮助。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；逐任务模态消融",
+      "setting": "原文§5.1称over 10 demonstrations，Table 2按10样本量级报告；测试单位措辞有歧义，保留原口径。",
+      "source": "https://arxiv.org/html/2606.04825v1",
+      "locator": "§5.1、Table 2；Appendix A.3–A.4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "P05-whiteboard",
+      "work": "P05",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "检验触觉图与marker位移对持续接触的作用",
+      "success": "本轮已确认抓海绵后擦指定墨迹；完整自动成功判定尚未抽取",
+      "metrics": "任务成功率",
+      "setting": "DP/π0各三种模态；测试分母措辞待复核",
+      "source": "https://arxiv.org/html/2606.04825v1#A1.SS3",
+      "locator": "Table 2、Appendix A.3",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "P05-pour",
+      "work": "P05",
+      "task": "pour",
+      "label": "倾倒与液体操作",
+      "purpose": "对比原始触觉图与marker特征是否在不同任务均有帮助。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；逐任务模态消融",
+      "setting": "原文§5.1称over 10 demonstrations，Table 2按10样本量级报告；测试单位措辞有歧义，保留原口径。",
+      "source": "https://arxiv.org/html/2606.04825v1",
+      "locator": "§5.1、Table 2；Appendix A.3–A.4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T01-peel",
+      "work": "T01",
+      "task": "peel",
+      "label": "削皮与切割",
+      "purpose": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "规划正确率；分阶段与整任务成功次数；完整/部分擦拭和削皮",
+      "setting": "每个条件20次；Tables 1–2以n/20报告。",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "locator": "§4.1–4.5；Tables 1–2；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T01-grasp",
+      "work": "T01",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "规划正确率；分阶段与整任务成功次数；完整/部分擦拭和削皮",
+      "setting": "每个条件20次；Tables 1–2以n/20报告。",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "locator": "§4.1–4.5；Tables 1–2；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T01-property",
+      "work": "T01",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "规划正确率；分阶段与整任务成功次数；完整/部分擦拭和削皮",
+      "setting": "每个条件20次；Tables 1–2以n/20报告。",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "locator": "§4.1–4.5；Tables 1–2；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T02-peg",
+      "work": "T02",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "真机成功率；完成步数；末端加速度变异；夹爪动作平均绝对变化；离线状态MSE",
+      "setting": "抓放32 rollouts(夹爪)/16 rollouts(灵巧手)；插入每物体10次；每次最多1500步。",
+      "source": "https://arxiv.org/html/2508.08706v3",
+      "locator": "v3 §4.1；Tables 3–7；Figure 4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T02-grasp",
+      "work": "T02",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "真机成功率；完成步数；末端加速度变异；夹爪动作平均绝对变化；离线状态MSE",
+      "setting": "抓放32 rollouts(夹爪)/16 rollouts(灵巧手)；插入每物体10次；每次最多1500步。",
+      "source": "https://arxiv.org/html/2508.08706v3",
+      "locator": "v3 §4.1；Tables 3–7；Figure 4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T02-dex",
+      "work": "T02",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "真机成功率；完成步数；末端加速度变异；夹爪动作平均绝对变化；离线状态MSE",
+      "setting": "抓放32 rollouts(夹爪)/16 rollouts(灵巧手)；插入每物体10次；每次最多1500步。",
+      "source": "https://arxiv.org/html/2508.08706v3",
+      "locator": "v3 §4.1；Tables 3–7；Figure 4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T03-press",
+      "work": "T03",
+      "task": "press",
+      "label": "按压与盖章",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "每任务15次测试。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1–4.4；Tables 1–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T03-curved",
+      "work": "T03",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "每任务15次测试。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1–4.4；Tables 1–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T03-articulated",
+      "work": "T03",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "每任务15次测试。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1–4.4；Tables 1–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T03-grasp",
+      "work": "T03",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "每任务15次测试。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1–4.4；Tables 1–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T03-deform",
+      "work": "T03",
+      "task": "deform",
+      "label": "柔性与双臂协作",
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分阶段成功率；整任务成功率；0.04s触觉流推理延迟",
+      "setting": "每任务15次测试。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1–4.4；Tables 1–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-usb",
+      "work": "T04",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-peg",
+      "work": "T04",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-assembly",
+      "work": "T04",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-articulated",
+      "work": "T04",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-fragile",
+      "work": "T04",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-grasp",
+      "work": "T04",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-property",
+      "work": "T04",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T04-representation",
+      "work": "T04",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务二元成功率；不加权任务均值；仿真真机Pearson相关；MMRV",
+      "setting": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "source": "https://arxiv.org/html/2610.10384v1",
+      "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T05-usb",
+      "work": "T05",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "每任务成功率；3任务平均成功率",
+      "setting": "每方法每任务20次（官网明确）。",
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；官网 Main Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T05-plug",
+      "work": "T05",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "每任务成功率；3任务平均成功率",
+      "setting": "每方法每任务20次（官网明确）。",
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；官网 Main Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T05-pipette",
+      "work": "T05",
+      "task": "pipette",
+      "label": "移液与专业接触",
+      "purpose": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "每任务成功率；3任务平均成功率",
+      "setting": "每方法每任务20次（官网明确）。",
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；官网 Main Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T06-usb",
+      "work": "T06",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "各任务真机成功率；3次运行均值±标准差",
+      "setting": "文中§4.2为每任务100次，Table1注明3 runs；100次与3run分母对应关系需进一步核实。",
+      "source": "https://arxiv.org/html/2512.23864v1",
+      "locator": "§4.1–4.3；Table 1；Figure 5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T06-peg",
+      "work": "T06",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "各任务真机成功率；3次运行均值±标准差",
+      "setting": "文中§4.2为每任务100次，Table1注明3 runs；100次与3run分母对应关系需进一步核实。",
+      "source": "https://arxiv.org/html/2512.23864v1",
+      "locator": "§4.1–4.3；Table 1；Figure 5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T06-assembly",
+      "work": "T06",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "各任务真机成功率；3次运行均值±标准差",
+      "setting": "文中§4.2为每任务100次，Table1注明3 runs；100次与3run分母对应关系需进一步核实。",
+      "source": "https://arxiv.org/html/2512.23864v1",
+      "locator": "§4.1–4.3；Table 1；Figure 5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T07-peg",
+      "work": "T07",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "本轮未核实，未知。",
+      "source": "https://univtac.github.io/",
+      "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T07-tube",
+      "work": "T07",
+      "task": "tube",
+      "label": "管与吸头插接",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "本轮未核实，未知。",
+      "source": "https://univtac.github.io/",
+      "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T07-key",
+      "work": "T07",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "本轮未核实，未知。",
+      "source": "https://univtac.github.io/",
+      "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T07-grasp",
+      "work": "T07",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "本轮未核实，未知。",
+      "source": "https://univtac.github.io/",
+      "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T07-property",
+      "work": "T07",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "8任务成功率；平均成功率；真机迁移成功率",
+      "setting": "本轮未核实，未知。",
+      "source": "https://univtac.github.io/",
+      "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T08-grasp",
+      "work": "T08",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "统一比较多传感器SSL表示、标注效率和下游迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "力RMSE(mN)；滑移F1；姿态/分类任务指标；maze通过距离(cm)",
+      "setting": "六任务中多数离线probe；bead maze为物理操作。各测试分母本轮未逐项核实。",
+      "source": "https://arxiv.org/abs/2410.24090",
+      "locator": "Figure 1；TacBench T1–T6；官方repo downstream tasks",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T09-property",
+      "work": "T09",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "linear-probe accuracy；zero-shot accuracy",
+      "setting": "离线split评测；不是统一真机rollout；样本分母本轮未核实。",
+      "source": "https://arxiv.org/abs/2401.18084",
+      "locator": "§4.1–4.2；Tables 2–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": true
+    },
+    {
+      "id": "T09-representation",
+      "work": "T09",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "linear-probe accuracy；zero-shot accuracy",
+      "setting": "离线split评测；不是统一真机rollout；样本分母本轮未核实。",
+      "source": "https://arxiv.org/abs/2401.18084",
+      "locator": "§4.1–4.2；Tables 2–3",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": true
+    },
+    {
+      "id": "T10-property",
+      "work": "T10",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "检验统一静动态多传感器表示及迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类/迁移任务指标；倾倒操作表现（具体指标待核实）",
+      "setting": "各任务测试分母本轮未知。",
+      "source": "https://arxiv.org/abs/2502.12191",
+      "locator": "ICLR2025 official abstract；论文Experiment部分待深读",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T10-pour",
+      "work": "T10",
+      "task": "pour",
+      "label": "倾倒与液体操作",
+      "purpose": "检验统一静动态多传感器表示及迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类/迁移任务指标；倾倒操作表现（具体指标待核实）",
+      "setting": "各任务测试分母本轮未知。",
+      "source": "https://arxiv.org/abs/2502.12191",
+      "locator": "ICLR2025 official abstract；论文Experiment部分待深读",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T10-representation",
+      "work": "T10",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "检验统一静动态多传感器表示及迁移。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类/迁移任务指标；倾倒操作表现（具体指标待核实）",
+      "setting": "各任务测试分母本轮未知。",
+      "source": "https://arxiv.org/abs/2502.12191",
+      "locator": "ICLR2025 official abstract；论文Experiment部分待深读",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T11-property",
+      "work": "T11",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "触觉感知能否支持视觉难以判断的物理属性和中间描述辅助推理。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "物理属性与推理任务准确率",
+      "setting": "离线测试集；具体样本分母本轮未知。",
+      "source": "https://arxiv.org/abs/2405.02794",
+      "locator": "官网 Overview；官网 Scenario Reasoning",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": true
+    },
+    {
+      "id": "T12-property",
+      "work": "T12",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "classification accuracy；跨模态对齐准确率；触觉理解评分",
+      "setting": "采用数据集split；非机器人rollout，测试分母本轮未知。",
+      "source": "https://arxiv.org/abs/2402.13232",
+      "locator": "官网 The TVL Dataset；官网 Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": true
+    },
+    {
+      "id": "T12-representation",
+      "work": "T12",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "classification accuracy；跨模态对齐准确率；触觉理解评分",
+      "setting": "采用数据集split；非机器人rollout，测试分母本轮未知。",
+      "source": "https://arxiv.org/abs/2402.13232",
+      "locator": "官网 The TVL Dataset；官网 Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": true
+    },
+    {
+      "id": "T13-usb",
+      "work": "T13",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游分类/回归指标；插入成功率",
+      "setting": "各离线任务与插入rollout次数本轮未核实。",
+      "source": "https://arxiv.org/abs/2406.13640",
+      "locator": "§5；官网 Precision electronics insertion；论文附录硬件",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T13-property",
+      "work": "T13",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游分类/回归指标；插入成功率",
+      "setting": "各离线任务与插入rollout次数本轮未核实。",
+      "source": "https://arxiv.org/abs/2406.13640",
+      "locator": "§5；官网 Precision electronics insertion；论文附录硬件",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T14-property",
+      "work": "T14",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类指标；图像生成/未来预测指标（各定义待深读）",
+      "setting": "数据split评测；不涉及真机策略成功次数。",
+      "source": "https://arxiv.org/abs/2211.12498",
+      "locator": "官网 Applications；论文Table1",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T14-representation",
+      "work": "T14",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类指标；图像生成/未来预测指标（各定义待深读）",
+      "setting": "数据split评测；不涉及真机策略成功次数。",
+      "source": "https://arxiv.org/abs/2211.12498",
+      "locator": "官网 Applications；论文Table1",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T15-usb",
+      "work": "T15",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "区分训练时触觉预训练收益与部署时触觉反馈收益；比较触觉相关/不相关任务。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；每步切向绝对应变及跨运行中位数",
+      "setting": "每种实验20次；USB最多300步。",
+      "source": "https://arxiv.org/html/2403.11898v2",
+      "locator": "§IV-A/B；Figure7；§III-C",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T16-usb",
+      "work": "T16",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分条件任务成功次数；泛化成功率",
+      "setting": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "locator": "§4.4–4.7；Tables1–5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T16-plug",
+      "work": "T16",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分条件任务成功次数；泛化成功率",
+      "setting": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "locator": "§4.4–4.7；Tables1–5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T16-key",
+      "work": "T16",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分条件任务成功次数；泛化成功率",
+      "setting": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "locator": "§4.4–4.7；Tables1–5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T16-articulated",
+      "work": "T16",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分条件任务成功次数；泛化成功率",
+      "setting": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "source": "https://arxiv.org/html/2506.13762v1",
+      "locator": "§4.4–4.7；Tables1–5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T17-pipette",
+      "work": "T17",
+      "task": "pipette",
+      "label": "移液与专业接触",
+      "purpose": "验证视觉长时语义选模与触觉短时接触纠偏互补。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "视觉任务成功率；接触成功率；整体成功率；二项标准误",
+      "setting": "每任务20次，2个语言条件各10次。",
+      "source": "https://arxiv.org/abs/2606.14981",
+      "locator": "官网 Evaluation of ViTaL；官网 Results",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T18-peg",
+      "work": "T18",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；Human Normalized Score；长任务连续完成阶段",
+      "setting": "每任务测试次数本轮未核实。",
+      "source": "https://arxiv.org/abs/2506.15953",
+      "locator": "官网 Experiment Results；论文Figure2；RINO作者海报",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T18-curved",
+      "work": "T18",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率；Human Normalized Score；长任务连续完成阶段",
+      "setting": "每任务测试次数本轮未核实。",
+      "source": "https://arxiv.org/abs/2506.15953",
+      "locator": "官网 Experiment Results；论文Figure2；RINO作者海报",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T19-usb",
+      "work": "T19",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T19-whiteboard",
+      "work": "T19",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T19-grasp",
+      "work": "T19",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T19-property",
+      "work": "T19",
+      "task": "property",
+      "label": "物理属性感知与推理",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T19-body",
+      "work": "T19",
+      "task": "body",
+      "label": "全身接触与搬推",
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "下游操作成功率；离线分类/力预测指标（细分待核实）",
+      "setting": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "source": "https://arxiv.org/html/2602.09617v1",
+      "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T20-grasp",
+      "work": "T20",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率（具体阶段指标待查原表）",
+      "setting": "每任务次数本轮未知。",
+      "source": "https://arxiv.org/abs/2212.03858",
+      "locator": "论文Experiments；Supplement §6 force sensing ablation；官方repo ablation flags",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T20-pour",
+      "work": "T20",
+      "task": "pour",
+      "label": "倾倒与液体操作",
+      "purpose": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务成功率（具体阶段指标待查原表）",
+      "setting": "每任务次数本轮未知。",
+      "source": "https://arxiv.org/abs/2212.03858",
+      "locator": "论文Experiments；Supplement §6 force sensing ablation；官方repo ablation flags",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "T21-whiteboard",
+      "work": "T21",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "被动接触事件和主动感知属性能否借接触音频补充视觉；环境泛化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "整任务成功率；子阶段成功率",
+      "setting": "翻贝果正文20次但情形分项以40为总分母，需保留歧义；擦白板20；倒骰12；魔术贴10。",
+      "source": "https://arxiv.org/html/2406.19464v1",
+      "locator": "§4.1–4.4；Figures5–8；Appendix B.2",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C01-peel",
+      "work": "C01",
+      "task": "peel",
+      "label": "削皮与切割",
+      "purpose": "区分加入力输入与显式预测/执行力目标的作用；比较采集效率与连续削皮质量。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "不损伤且剥下皮的动作成功率；连续皮长>10cm的严格成功率；采集时间；力曲线",
+      "setting": "Raw DP、HybridIL各20；Force DP、Force+Hybrid DP各10次削皮动作",
+      "source": "https://arxiv.org/html/2410.07554v2",
+      "locator": "§III-C；§IV-A/B；Table I；Figs.5–6",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C02-whiteboard",
+      "work": "C02",
+      "task": "whiteboard",
+      "label": "擦白板",
+      "purpose": "测试持续表面接触、瞬时冲击及外部扰动下的在线修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务质量Score、分阶段动作成功率ASR；切段数量及归一化长度均值/标准差",
+      "setting": "擦拭、削皮每方法20；切割仅FoAR与RISE各10",
+      "source": "https://arxiv.org/html/2411.15753v2",
+      "locator": "§IV-A–D；Table I；切割质量Fig.5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C02-peel",
+      "work": "C02",
+      "task": "peel",
+      "label": "削皮与切割",
+      "purpose": "测试持续表面接触、瞬时冲击及外部扰动下的在线修正。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务质量Score、分阶段动作成功率ASR；切段数量及归一化长度均值/标准差",
+      "setting": "擦拭、削皮每方法20；切割仅FoAR与RISE各10",
+      "source": "https://arxiv.org/html/2411.15753v2",
+      "locator": "§IV-A–D；Table I；切割质量Fig.5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C03-assembly",
+      "work": "C03",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "用高力、低力与动态用力三种需求分离触觉表示和力动作接口的收益。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务特定成功率；螺丝操作力分布比较",
+      "setting": "每任务每方法20次；每任务30条示教",
+      "source": "https://arxiv.org/html/2510.13324v1",
+      "locator": "§III-C–E；§IV-A/B；Fig.5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C04-usb",
+      "work": "C04",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "用相同策略比较视觉、触觉、腕视相机和本体输入；在未见目标位置及新任务变体检验接触搜索。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率（3seed均值/标准差）；未见任务配置成功率",
+      "setting": "3个随机seed×10个held-out配置，每项30次",
+      "source": "https://arxiv.org/html/2410.17246v2",
+      "locator": "§IV-A–F；Table I；Fig.4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C04-plug",
+      "work": "C04",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "用相同策略比较视觉、触觉、腕视相机和本体输入；在未见目标位置及新任务变体检验接触搜索。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率（3seed均值/标准差）；未见任务配置成功率",
+      "setting": "3个随机seed×10个held-out配置，每项30次",
+      "source": "https://arxiv.org/html/2410.17246v2",
+      "locator": "§IV-A–F；Table I；Fig.4",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C05-usb",
+      "work": "C05",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "将传感器物理替换、信号一致性与真正的策略跨实例泛化分别量化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "原皮/新皮成功率；滑移分类准确率；替换时间",
+      "setting": "策略3个seed、每个10rollout；每任务96条示教",
+      "source": "https://arxiv.org/html/2409.08276v3",
+      "locator": "§V-B/D；Tables II–IV；Fig.6",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C05-plug",
+      "work": "C05",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "将传感器物理替换、信号一致性与真正的策略跨实例泛化分别量化。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "原皮/新皮成功率；滑移分类准确率；替换时间",
+      "setting": "策略3个seed、每个10rollout；每任务96条示教",
+      "source": "https://arxiv.org/html/2409.08276v3",
+      "locator": "§V-B/D；Tables II–IV；Fig.6",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C06-plug",
+      "work": "C06",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "分别测力/摇杆状态/物体位姿估计和真实接触控制，考察预训练与标注量。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "前三项RMSE和位姿准确率；插入成功率",
+      "setting": "插入20次/策略，起始位姿随机；100条插入示教",
+      "source": "https://arxiv.org/html/2505.11420v1",
+      "locator": "§4.1–4.2；Table 1；Fig.7",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C07-plug",
+      "work": "C07",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "消融触觉模态和预训练；检查收益来自实时触觉而非只来自筛选成功轨迹。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "插入SR；旋转垂向漂移与Time-to-fall；离线物理属性指标",
+      "setting": "插入20次；旋转每策略10次×最长60秒；改变质量/摩擦条件5次",
+      "source": "https://arxiv.org/html/2506.14754v1",
+      "locator": "§4；Figs.5–7",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C07-dex",
+      "work": "C07",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "消融触觉模态和预训练；检查收益来自实时触觉而非只来自筛选成功轨迹。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "插入SR；旋转垂向漂移与Time-to-fall；离线物理属性指标",
+      "setting": "插入20次；旋转每策略10次×最长60秒；改变质量/摩擦条件5次",
+      "source": "https://arxiv.org/html/2506.14754v1",
+      "locator": "§4；Figs.5–7",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C08-dex",
+      "work": "C08",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "测触觉对稳定性、形状理解、跨物体和sim2real的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "仿真累计旋转奖励CRR；真实累计旋转圈数CRA；掉落时间TTF",
+      "setting": "仿真学习曲线3seed；统一真机每物体重复次数本轮未确认",
+      "source": "https://arxiv.org/html/2303.10880v4",
+      "locator": "§V-A–E；Figs.6–8",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C09-dex",
+      "work": "C09",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "分离视觉、触觉与物体形状信息对多轴操作和陌生物体泛化的贡献。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "归一化掉落时间TTF（20秒上限）；旋转奖励RotR；非期望旋转RotP；真机旋转弧度",
+      "setting": "每配置真实重复次数本轮未确认；报告15个held-out挑战物体",
+      "source": "https://arxiv.org/html/2309.09979v1",
+      "locator": "§4–5；Table 1；Fig.6；§5.4真机",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C10-peg",
+      "work": "C10",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "评价触觉仿真、模态组合、在线蒸馏和增强方法能否转化为实际接触控制。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "闭环SR、学习样本效率；仿真性能和图像/力场保真验证",
+      "setting": "真机placement/insertion各81个组合trial；不同资产实验512trial",
+      "source": "https://arxiv.org/html/2408.06506v2",
+      "locator": "§VI；Fig.12；Appendix C Table IX",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C11-usb",
+      "work": "C11",
+      "task": "usb",
+      "label": "USB 插入",
+      "purpose": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率均值±标准差、训练曲线、不同模态的配对比较",
+      "setting": "仿真3seed×50初始化×最后10epoch，约1500评估；真机每设置15次",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C11-plug",
+      "work": "C11",
+      "task": "plug",
+      "label": "插头与充电器插接",
+      "purpose": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率均值±标准差、训练曲线、不同模态的配对比较",
+      "setting": "仿真3seed×50初始化×最后10epoch，约1500评估；真机每设置15次",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C11-peg",
+      "work": "C11",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率均值±标准差、训练曲线、不同模态的配对比较",
+      "setting": "仿真3seed×50初始化×最后10epoch，约1500评估；真机每设置15次",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C11-assembly",
+      "work": "C11",
+      "task": "assembly",
+      "label": "齿轮与螺纹装配",
+      "purpose": "以统一环境检查何时触觉有益、何种模态适合何任务，以及真仿结论一致性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "成功率均值±标准差、训练曲线、不同模态的配对比较",
+      "setting": "仿真3seed×50初始化×最后10epoch，约1500评估；真机每设置15次",
+      "source": "https://arxiv.org/html/2505.18472v2",
+      "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C12-curved",
+      "work": "C12",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "检验跨传感器的触觉控制、接触几何泛化和软硬材料影响。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "实际轨迹到CAD/ArUco真值的平均欧氏距离；图像翻译SSIM；RL回报",
+      "setting": "每配置物理重复次数本轮未确认；推送250step/episode；图像训练/验证5000/2000",
+      "source": "https://arxiv.org/html/2207.10763v2",
+      "locator": "§III-F；§IV；Tables III–VII",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C13-dex",
+      "work": "C13",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "验证传感器可制造性与对实际灵巧闭环控制的可用性。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "原文定量控制指标与试验次数本轮未核实",
+      "setting": "未确认",
+      "source": "https://arxiv.org/abs/2005.14679",
+      "locator": "原文Abstract及应用实验（细节待深入核验）",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C14-grasp",
+      "work": "C14",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "检验模拟触觉能否复现真实触觉学习规律及低样本触觉控制。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "分类准确率、控制学习曲线、位置mm/角度deg误差、运行效率",
+      "setting": "抓取100万采样；玻璃球30次优化实验；sim2real位姿估计5次重复",
+      "source": "https://arxiv.org/html/2012.08456v2",
+      "locator": "§IV-A/B；§V；Figs.10–11；Table II",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C15-grasp",
+      "work": "C15",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "测未见外观/形状物体泛化、接触模式切换和物体被打落后的恢复。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "已见/未见物体SR；恢复SR；遥操作完成率、耗时、主观难度",
+      "setting": "主实验每物体5–10；恢复每物体5；pivot课程消融5物体×5",
+      "source": "https://arxiv.org/html/2502.17432v2",
+      "locator": "§V-B–D；Tables I–II；Appendix XII",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C16-articulated",
+      "work": "C16",
+      "task": "articulated",
+      "label": "开门、抽屉与锁扣",
+      "purpose": "检验力模仿能否改善移动操作成功并降低接触强度和振荡。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "完成至少80%的SR；各轴平均绝对力/力矩及方差；离线动作/wrench MSE",
+      "setting": "每方法每任务10；每任务30示教；起始末端位姿随机",
+      "source": "https://arxiv.org/html/2308.03624v1",
+      "locator": "§IV-A/B；Tables I–II；Fig.5",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C17-peg",
+      "work": "C17",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "检验精密插入跨形状泛化、模型大小与推理速度权衡、滤波弥合控制频差。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR；执行时间中位数/IQR；完成率÷平均时间；推理频率",
+      "setting": "每模型—物体50随机初始位姿×每位姿2次=100；训练1500专家演示",
+      "source": "https://arxiv.org/html/2409.11047v1",
+      "locator": "§IV-A/C；Tables II–III；Fig.6",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C17-key",
+      "work": "C17",
+      "task": "key",
+      "label": "钥匙插拔",
+      "purpose": "检验精密插入跨形状泛化、模型大小与推理速度权衡、滤波弥合控制频差。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR；执行时间中位数/IQR；完成率÷平均时间；推理频率",
+      "setting": "每模型—物体50随机初始位姿×每位姿2次=100；训练1500专家演示",
+      "source": "https://arxiv.org/html/2409.11047v1",
+      "locator": "§IV-A/C；Tables II–III；Fig.6",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C18-curved",
+      "work": "C18",
+      "task": "curved",
+      "label": "曲面与表面擦拭",
+      "purpose": "比较动作空间的样本效率、能耗、轨迹误差和接触表现。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "RL平均回报；Joule/action；总能耗；位置/姿态跟踪误差",
+      "setting": "仿真每1万训练步评估10episode、多seed（数量本轮未确认）；真机重复数未确认",
+      "source": "https://arxiv.org/html/2110.09904v2",
+      "locator": "§V-A/B；Fig.2–3；Table I",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C19-peg",
+      "work": "C19",
+      "task": "peg",
+      "label": "插销与孔配合",
+      "purpose": "改变孔倾角、几何尺寸和初始位置后比较策略和奖励迁移能力。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "SR、相对专家性能分差、平均轨迹与最终位置偏差",
+      "setting": "仿真报告3run均值；部分迁移选5run中最佳3，真机重复次数未确认",
+      "source": "https://arxiv.org/html/2102.06838v1",
+      "locator": "§IV-A/B；Tables I–V；Conclusion limitations",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "C20-representation",
+      "work": "C20",
+      "task": "representation",
+      "label": "触觉表示与跨传感器",
+      "purpose": "检验软触觉的可替换性、持久性及跨传感器学习。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "接触定位/力预测与随磨损、换实例变化；完整指标次数本轮待深入核验",
+      "setting": "本轮未确认统一策略试验次数（本工作不是闭环策略benchmark）",
+      "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+      "locator": "原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    }
+  ],
+  "attentionMethodology": {
+    "citationProvider": "OpenAlex API cited_by_count",
+    "githubProvider": "GitHub REST API stargazers_count / forks_count",
+    "googleScholar": "未取得可核验数值，全部 null；不冒充 Google 引用",
+    "usage": "GitHub fork 是使用活跃程度的代理，不是下载或真实部署次数",
+    "missing": "null 是未知/不可得；0 仅在 API 明确返回0时使用",
+    "ranking": "同一指标内降序，缺失排最后；不得混合多个提供方计算总分",
+    "limits": "OpenAlex 新论文引用更新及版本归并滞后，此值通常低于其他平台，不用于断言论文无人引用。"
+  }
+};

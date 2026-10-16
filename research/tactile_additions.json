@@ -1,0 +1,1063 @@
+{
+  "snapshot": "2026-10-16",
+  "note": "均以论文/作者项目为来源；unknown不代表未报告。非VLA前序须保持独立分类。Google Scholar引用未核验，不能补猜。",
+  "works": [
+    {
+      "short": "VLA-Touch",
+      "title": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback",
+      "year": 2025,
+      "venue": "RA-L 2026（官方仓库）",
+      "arxiv": "2507.17294",
+      "category": "tactile-vla",
+      "repo": "https://github.com/clear-nus/vla-touch",
+      "project": "https://arxiv.org/abs/2507.17294",
+      "tasks": [
+        "杯子含水判断与放置",
+        "海绵粗糙度选择及擦墨",
+        "芒果硬度选择及削皮"
+      ],
+      "purpose": "分别验证触觉语言用于规划、触觉用于动作纠偏及双层反馈的必要性。",
+      "metrics": [
+        "规划正确率",
+        "分阶段与整任务成功次数",
+        "完整/部分擦拭和削皮"
+      ],
+      "setting": "Franka Panda + Robotiq 2F-140；单指GelSight Mini；真机。",
+      "trials": "每个条件20次；Tables 1–2以n/20报告。",
+      "comparisons": [
+        "GPT-4o无触觉/原触觉图/Octopi语言反馈",
+        "RDT vs LSTM残差 vs Interpolant控制器",
+        "去规划触觉/去控制触觉",
+        "去视觉/去触觉"
+      ],
+      "signal": "GelSight图像；控制用marker聚合(X,Y,M)，并非腕部6D F/T。",
+      "action": "RDT动作chunk经触觉Interpolant纠偏；非显式目标力输出。",
+      "benchmark": "自建3任务；代码公开，不能等同通用benchmark。",
+      "locators": [
+        "§4.1–4.5",
+        "Tables 1–2",
+        "Figure 2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2507.17294v2",
+        "https://github.com/clear-nus/vla-touch"
+      ],
+      "status": "论文评测已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
+        "caption": "三类真机实验流程",
+        "locator": "Figure 2",
+        "sourceUrl": "https://arxiv.org/html/2507.17294v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "OmniVTLA",
+      "title": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing",
+      "year": 2025,
+      "arxiv": "2508.08706",
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://readerek.github.io/Objtac.github.io/",
+      "tasks": [
+        "抓取放置4物体（夹爪）",
+        "抓取放置与未见物体（灵巧手）",
+        "方/三角/圆块插入",
+        "软物体泛化"
+      ],
+      "purpose": "验证触觉语义对齐、双编码器及跨物体/本体泛化。",
+      "metrics": [
+        "真机成功率",
+        "完成步数",
+        "末端加速度变异",
+        "夹爪动作平均绝对变化",
+        "离线状态MSE"
+      ],
+      "setting": "UR5；两指夹爪2触觉传感器/灵巧手11传感器；网格化初态；真机加离线验证。",
+      "trials": "抓放32 rollouts(夹爪)/16 rollouts(灵巧手)；插入每物体10次；每次最多1500步。",
+      "comparisons": [
+        "π0、DP",
+        "随机初始化/视觉预训练/触觉语义对齐",
+        "参数量匹配双编码器",
+        "去对齐目标"
+      ],
+      "signal": "Paxini Gen2磁式触觉阵列力分布，归一化重排为3通道图；非腕部6D。",
+      "action": "末端位置+6D旋转表示+夹爪开度或16关节；状态维数10/25。",
+      "benchmark": "自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。",
+      "locators": [
+        "v3 §4.1",
+        "Tables 3–7",
+        "Figure 4"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2508.08706v3",
+        "https://readerek.github.io/Objtac.github.io/"
+      ],
+      "status": "v3评测已核实；代码仓库待核实",
+      "warning": "与OmniVTA为不同论文。",
+      "figure": {
+        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
+        "caption": "夹爪、灵巧手平台与实验物体",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2508.08706v3",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "AT-VLA",
+      "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "CVPR 2026 Oral（官方仓库）",
+      "arxiv": "2605.07308",
+      "category": "tactile-vla",
+      "repo": "https://github.com/clorislili/AT-VLA",
+      "project": "https://sites.google.com/view/at-vla",
+      "tasks": [
+        "拉开包拉链",
+        "盖章",
+        "擦花瓶",
+        "拧盖",
+        "胡萝卜抓取放置",
+        "开抽屉"
+      ],
+      "purpose": "同时检查接触段反应改善与非接触预训练能力保留。",
+      "metrics": [
+        "分阶段成功率",
+        "整任务成功率",
+        "0.04s触觉流推理延迟"
+      ],
+      "setting": "AgiBot Genie1双臂夹爪；Xense触觉；全真机；每任务30–50示范。",
+      "trials": "每任务15次测试。",
+      "comparisons": [
+        "GO-1、π0.5、VTLA、RDP",
+        "自适应注入/双流模块消融",
+        "触觉表示格式对照"
+      ],
+      "signal": "Xense触觉反馈，比较力/marker/触觉图像格式。",
+      "action": "GO-1 DiT动作专家；3:1快触觉/慢视觉语言流。",
+      "benchmark": "自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。",
+      "locators": [
+        "§4.1–4.4",
+        "Tables 1–3"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2605.07308v1",
+        "https://github.com/clorislili/AT-VLA"
+      ],
+      "status": "论文评测已核实",
+      "warning": "VTLA/RDP基线仅测试人工初始化后的接触段，与完整流程列不可直接混比较。",
+      "figure": {
+        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
+        "caption": "四项接触任务的执行进展",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2605.07308v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "OpenViTac / OpenVTLA",
+      "title": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework",
+      "year": 2026,
+      "arxiv": "2610.10384",
+      "category": "tactile-vla-benchmark",
+      "repo": "https://github.com/FVL-Repo/OpenViTac",
+      "project": "https://arxiv.org/abs/2610.10384",
+      "tasks": [
+        "重量/硬度/粗糙度分类",
+        "粗糙度引导再抓取",
+        "空罐选择",
+        "薯片无损抓取",
+        "齿轮装配",
+        "拉抽屉",
+        "USB插入",
+        "块插入v1/v2"
+      ],
+      "purpose": "比较VLA/WAM/VTLA；分解物理属性、易损操作、持续接触、精密操作；检查仿真真机排名一致性。",
+      "metrics": [
+        "任务二元成功率",
+        "不加权任务均值",
+        "仿真真机Pearson相关",
+        "MMRV"
+      ],
+      "setting": "11仿真任务，8配对真机任务；逐任务独立训练；平衡预设条件。",
+      "trials": "真机Table3多数20次，块插入v2为30次；仿真次数需查Appendix B。",
+      "comparisons": [
+        "6 VLA、3 WAM、FTP-1",
+        "SigLIP/T3/Sparsh/AnyTouch2",
+        "5种融合接口",
+        "真机单域vs仿真真机共训练"
+      ],
+      "signal": "GelSight/Xense/Neote触觉表示；OpenVTLA用AnyTouch2历史触觉token。",
+      "action": "π0.5原动作生成通路，触觉token前缀融合。",
+      "benchmark": "提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。",
+      "locators": [
+        "§3.1–3.3",
+        "Tables 2–3",
+        "Appendix B",
+        "Figure 2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2610.10384v1",
+        "https://github.com/FVL-Repo/OpenViTac"
+      ],
+      "status": "2026-10-07预印本；论文评测已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
+        "caption": "真机与仿真任务对应关系",
+        "locator": "Figure 2b",
+        "sourceUrl": "https://arxiv.org/html/2610.10384v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "DT-TacVLA",
+      "title": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation",
+      "year": 2026,
+      "arxiv": null,
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://dt-tacvla.github.io/",
+      "tasks": [
+        "电源插头插入",
+        "USB插入",
+        "试管放置"
+      ],
+      "purpose": "验证慢触觉语义上下文与快marker反射对自由运动/接触切换的作用。",
+      "metrics": [
+        "每任务成功率",
+        "3任务平均成功率"
+      ],
+      "setting": "UR5 + Inspire EG2-4C2夹爪；双Vitai GF255；每任务100专家示范；真机。",
+      "trials": "每方法每任务20次（官网明确）。",
+      "comparisons": [
+        "DP、π0.5、SmolVLA、TacVLA*",
+        "作者报告消融，但官网未完整列出消融表"
+      ],
+      "signal": "触觉图像历史和marker位移；非腕部6D。",
+      "action": "SmolVLA连续动作chunk经触觉adapter调制。",
+      "benchmark": "自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。",
+      "locators": [
+        "官网 Contact-Rich Manipulation Tasks",
+        "官网 Main Results"
+      ],
+      "sources": [
+        "https://dt-tacvla.github.io/"
+      ],
+      "status": "官网协议已核实；论文元信息待核实",
+      "figure": {
+        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
+        "caption": "三类真机接触操作",
+        "locator": "官网任务图",
+        "sourceUrl": "https://dt-tacvla.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "DreamTacVLA",
+      "title": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
+      "year": 2025,
+      "arxiv": "2512.23864",
+      "category": "tactile-vla",
+      "repo": null,
+      "project": "https://arxiv.org/abs/2512.23864",
+      "tasks": [
+        "Peg-in-Hole",
+        "USB插入",
+        "齿轮装配",
+        "工具稳定支撑"
+      ],
+      "purpose": "检验触觉空间对齐和未来触觉预测能否改善接触调整。",
+      "metrics": [
+        "各任务真机成功率",
+        "3次运行均值±标准差"
+      ],
+      "setting": "IsaacSim+TacEx生成训练数据；Dobot Xtrainer+平行夹爪+双GelSight真机；100真机示范/任务。",
+      "trials": "文中§4.2为每任务100次，Table1注明3 runs；100次与3run分母对应关系需进一步核实。",
+      "comparisons": [
+        "ACT、DP、π0",
+        "HSA-only无dream",
+        "dream-only无HSA",
+        "world-model模态/数据量消融"
+      ],
+      "signal": "高分辨率GelSight图像和预测触觉latent。",
+      "action": "6D末端位姿+1D夹爪；45步chunk；Think-Dream-Act二次动作生成。",
+      "benchmark": "自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。",
+      "locators": [
+        "§4.1–4.3",
+        "Table 1",
+        "Figure 5"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2512.23864v1"
+      ],
+      "status": "论文评测已核实；官方代码归属待核实",
+      "warning": "不是另一篇2026 Dream-Tac WAM。",
+      "figure": {
+        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
+        "caption": "四项接触任务",
+        "locator": "Figure 5",
+        "sourceUrl": "https://arxiv.org/html/2512.23864v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "UniVTAC",
+      "title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
+      "year": 2026,
+      "arxiv": "2602.10093",
+      "category": "tactile-benchmark-not-vla",
+      "repo": "https://github.com/codingbabyguy/univtac",
+      "project": "https://univtac.github.io/",
+      "tasks": [
+        "Lift Bottle",
+        "Lift Can",
+        "Put Bottle in Shelf",
+        "Grasp Classify",
+        "Insert Hole",
+        "Insert Tube",
+        "Insert HDMI",
+        "Pull Out Key"
+      ],
+      "purpose": "验证触觉表示在姿态、形状和接触任务的贡献以及sim-to-real迁移。",
+      "metrics": [
+        "8任务成功率",
+        "平均成功率",
+        "真机迁移成功率"
+      ],
+      "setting": "Isaac Lab+TacEx/UIPC；GelSight Mini/ViTai GF225/XenseWS；另有Marvin+ViTai真机。",
+      "trials": "本轮未核实，未知。",
+      "comparisons": [
+        "ACT视觉only",
+        "VITaL",
+        "ACT+UniVTAC Encoder"
+      ],
+      "signal": "仿真光学触觉图与接触信息；非专为腕部F/T。",
+      "action": "ACT等操作策略；平台含抓取/放置/探测/旋转API。",
+      "benchmark": "本身包含平台、编码器和8任务benchmark；后来被FTP-1/N0/SimpleTouch采用不同子集。",
+      "locators": [
+        "官网 UniVTAC Benchmark",
+        "官网 Simulation Experiments",
+        "官网 Real-World Experiments"
+      ],
+      "sources": [
+        "https://univtac.github.io/",
+        "https://arxiv.org/abs/2602.10093",
+        "https://github.com/codingbabyguy/univtac"
+      ],
+      "status": "官方任务与来源已核实",
+      "figure": {
+        "url": "https://univtac.github.io/tasks.svg",
+        "caption": "八任务基准组成",
+        "locator": "官网 Benchmark Tasks",
+        "sourceUrl": "https://univtac.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "Sparsh / TacBench",
+      "title": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+      "year": 2024,
+      "venue": "CoRL 2024",
+      "arxiv": "2410.24090",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/facebookresearch/sparsh",
+      "project": "https://sparsh-ssl.github.io/",
+      "tasks": [
+        "力估计",
+        "滑移检测",
+        "姿态估计",
+        "抓取稳定预测",
+        "纺织物识别",
+        "bead maze"
+      ],
+      "purpose": "统一比较多传感器SSL表示、标注效率和下游迁移。",
+      "metrics": [
+        "力RMSE(mN)",
+        "滑移F1",
+        "姿态/分类任务指标",
+        "maze通过距离(cm)"
+      ],
+      "setting": "460K+触觉图预训练；DIGIT/GelSight/GelSight Mini；多数为离线probe，maze物理操作单独报告。",
+      "trials": "不能套用统一rollout次数；本轮未核实各任务样本/maze重复次数。",
+      "comparisons": [
+        "E2E任务专用模型",
+        "MAE、DINO、DINOv2、IJEPA表示",
+        "标签比例"
+      ],
+      "signal": "光学触觉图像。",
+      "action": "以编码器/下游预测为主；不是端到端语言动作策略。",
+      "benchmark": "提出6任务TacBench；公开代码数据模型；不能把离线力预测等同闭环力控制。",
+      "locators": [
+        "Figure 1",
+        "TacBench T1–T6",
+        "官方repo downstream tasks"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2410.24090",
+        "https://sparsh-ssl.github.io/",
+        "https://github.com/facebookresearch/sparsh"
+      ],
+      "status": "官方任务和指标已核实",
+      "figure": {
+        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
+        "caption": "六类触觉感知与操作评测概览",
+        "locator": "官网主图",
+        "sourceUrl": "https://sparsh-ssl.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "UniTouch",
+      "title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+      "year": 2024,
+      "venue": "CVPR 2024",
+      "arxiv": "2401.18084",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/cfeng16/UniTouch",
+      "project": "https://cfeng16.github.io/UniTouch/",
+      "tasks": [
+        "材质分类",
+        "抓取稳定性预测",
+        "零样本触觉理解",
+        "触觉问答"
+      ],
+      "purpose": "验证跨传感器、跨数据集和跨模态语义迁移。",
+      "metrics": [
+        "linear-probe accuracy",
+        "zero-shot accuracy"
+      ],
+      "setting": "Touch-and-Go、ObjectFolder1/2/Real、YCB-Slide、SSVTP、Feeling of Success；域内外离线评测。",
+      "trials": "离线split评测；不是统一真机rollout；样本分母本轮未核实。",
+      "comparisons": [
+        "VT-CMC",
+        "SSVTP",
+        "ImageNet特征",
+        "sensor-specific tokens/sampling消融"
+      ],
+      "signal": "异构光学触觉图。",
+      "action": "输出embedding/属性/文本；无机器人动作接口。",
+      "benchmark": "复用多个既有表示数据集；不应归为VLA控制benchmark。",
+      "locators": [
+        "§4.1–4.2",
+        "Tables 2–3"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2401.18084",
+        "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.pdf"
+      ],
+      "status": "论文表示评测已核实",
+      "figure": {
+        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
+        "caption": "触觉跨模态任务概览",
+        "locator": "官网主图",
+        "sourceUrl": "https://cfeng16.github.io/UniTouch/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "AnyTouch",
+      "title": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "arxiv": "2502.12191",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/GeWu-Lab/AnyTouch",
+      "project": "https://gewu-lab.github.io/AnyTouch/",
+      "tasks": [
+        "静态材质/属性识别",
+        "动态触觉感知",
+        "跨传感器迁移",
+        "真机倾倒"
+      ],
+      "purpose": "检验统一静动态多传感器表示及迁移。",
+      "metrics": [
+        "分类/迁移任务指标",
+        "倾倒操作表现（具体指标待核实）"
+      ],
+      "setting": "TacQuad四传感器对齐数据；离线数据评测及真机pouring。",
+      "trials": "各任务测试分母本轮未知。",
+      "comparisons": [
+        "已有触觉表示模型",
+        "静态/动态和跨传感器模块消融待逐表核实"
+      ],
+      "signal": "光学触觉图像与视频。",
+      "action": "表示模型；仅下游策略输出动作，不是VLA本体。",
+      "benchmark": "提出TacQuad数据集并复用多个下游数据；有真机迁移验证。",
+      "locators": [
+        "ICLR2025 official abstract",
+        "论文Experiment部分待深读"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2502.12191",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d893f766ab60e5337659b9e71883af4-Abstract-Conference.html"
+      ],
+      "status": "任务方向已核实；协议待深入",
+      "figure": {
+        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
+        "caption": "多传感器对齐数据采集示意",
+        "locator": "官网数据图",
+        "sourceUrl": "https://gewu-lab.github.io/AnyTouch/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "Octopi",
+      "title": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
+      "year": 2024,
+      "venue": "RSS 2024",
+      "arxiv": "2405.02794",
+      "category": "tactile-language-not-vla",
+      "repo": "https://github.com/clear-nus/octopi",
+      "project": "https://octopi-tactile-lvlm.github.io/",
+      "tasks": [
+        "硬度/粗糙度/凹凸描述",
+        "物理属性推理",
+        "场景常识问答"
+      ],
+      "purpose": "触觉感知能否支持视觉难以判断的物理属性和中间描述辅助推理。",
+      "metrics": [
+        "物理属性与推理任务准确率"
+      ],
+      "setting": "PhysiCLeAR手持GelSight压/转视频；离线语言理解，非闭环机器人控制。",
+      "trials": "离线测试集；具体样本分母本轮未知。",
+      "comparisons": [
+        "7B vs 13B",
+        "random baseline",
+        "是否给中间属性描述"
+      ],
+      "signal": "GelSight触觉视频。",
+      "action": "输出物理属性语言/推理答案，不输出机器人动作。",
+      "benchmark": "提出PhysiCLeAR及五类语言任务；后来被VLA-Touch用作规划组件。",
+      "locators": [
+        "官网 Overview",
+        "官网 Scenario Reasoning"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2405.02794",
+        "https://octopi-tactile-lvlm.github.io/",
+        "https://github.com/clear-nus/octopi"
+      ],
+      "status": "定位与评测方向已核实",
+      "figure": {
+        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
+        "caption": "物理属性触觉数据物体",
+        "locator": "官网Dataset items",
+        "sourceUrl": "https://octopi-tactile-lvlm.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "TVL",
+      "title": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
+      "year": 2024,
+      "venue": "ICML 2024",
+      "arxiv": "2402.13232",
+      "category": "tactile-language-not-vla",
+      "repo": "https://github.com/Max-Fu/tvl",
+      "project": "https://tactile-vlm.github.io/",
+      "tasks": [
+        "开放词表触觉语义分类",
+        "触觉文本生成",
+        "触觉视觉/语言对齐"
+      ],
+      "purpose": "验证少量人工标签+VLM伪标签是否获得触觉语言对齐。",
+      "metrics": [
+        "classification accuracy",
+        "跨模态对齐准确率",
+        "触觉理解评分"
+      ],
+      "setting": "43,741接触图对：SSVTP 4,587 + HCT39,154；DIGIT+BRIO；离线评测。",
+      "trials": "采用数据集split；非机器人rollout，测试分母本轮未知。",
+      "comparisons": [
+        "GPT-4V",
+        "开源VLM",
+        "SSVTP-LLaMA",
+        "ViT模型大小"
+      ],
+      "signal": "DIGIT光学触觉图。",
+      "action": "语言输出，不生成机器人动作。",
+      "benchmark": "提出TVL数据和触觉语义理解评测；公开模型代码数据。",
+      "locators": [
+        "官网 The TVL Dataset",
+        "官网 Results"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2402.13232",
+        "https://tactile-vlm.github.io/",
+        "https://github.com/Max-Fu/tvl"
+      ],
+      "status": "官方数据规模与方向已核实",
+      "warning": "官网Paper按钮误链别篇；应使用2402.13232或ICML论文。",
+      "figure": {
+        "url": "https://tactile-vlm.github.io/images/sensor.png",
+        "caption": "手持视觉触觉采集装置",
+        "locator": "官网 The TVL Dataset",
+        "sourceUrl": "https://tactile-vlm.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "T3",
+      "title": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks",
+      "year": 2024,
+      "arxiv": "2406.13640",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/alanzjl/t3",
+      "project": "https://t3.alanz.info/",
+      "tasks": [
+        "材质/物体识别",
+        "接触面积与织物属性",
+        "帧间3D/6D位姿变化",
+        "PCB开关/USB模块/VGA接口插入"
+      ],
+      "purpose": "验证异构传感器任务共享表示、未见配对迁移及精密操作收益。",
+      "metrics": [
+        "下游分类/回归指标",
+        "插入成功率"
+      ],
+      "setting": "FoTa汇聚13传感器11任务3M+样本；真机Franka+平行夹爪双GelSight Wedge；插入间隙0.4mm。",
+      "trials": "各离线任务与插入rollout次数本轮未核实。",
+      "comparisons": [
+        "无触觉",
+        "从零训练编码器",
+        "预训练T3",
+        "网络规模/少样本迁移"
+      ],
+      "signal": "多种光学触觉原始图像。",
+      "action": "通用encoder；下游行为克隆输出操作动作；无语言动作本体。",
+      "benchmark": "提出FoTa聚合数据；PCB三部件自建评测；代码权重数据公开。",
+      "locators": [
+        "§5",
+        "官网 Precision electronics insertion",
+        "论文附录硬件"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2406.13640",
+        "https://t3.alanz.info/",
+        "https://github.com/alanzjl/t3"
+      ],
+      "status": "官方任务与资源已核实",
+      "figure": {
+        "url": "https://t3.alanz.info/imgs/robot_perf.png",
+        "caption": "精密电子器件插入评测",
+        "locator": "官网插入评测",
+        "sourceUrl": "https://t3.alanz.info/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "Touch and Go",
+      "title": "Touch and Go: Learning from Human-Collected Vision and Touch",
+      "year": 2022,
+      "venue": "NeurIPS 2022 Datasets and Benchmarks",
+      "arxiv": "2211.12498",
+      "category": "tactile-dataset-not-vla",
+      "repo": null,
+      "project": "https://touch-and-go.github.io/",
+      "tasks": [
+        "视觉触觉表示学习",
+        "材质识别",
+        "触觉引导图像风格化",
+        "未来触觉帧预测"
+      ],
+      "purpose": "自然环境人类触觉数据是否支持多模态表示、生成和时序预测。",
+      "metrics": [
+        "分类指标",
+        "图像生成/未来预测指标（各定义待深读）"
+      ],
+      "setting": "手持GelSight+第一视角视频；3971物体、13.9K触碰；室内/外；离线评测。",
+      "trials": "数据split评测；不涉及真机策略成功次数。",
+      "comparisons": [
+        "触觉only vs 视觉触觉未来预测",
+        "其他既有触觉数据集"
+      ],
+      "signal": "人类探触时GelSight视频。",
+      "action": "不输出机器人动作。",
+      "benchmark": "公开原始同步视频、触碰时间与材质标签；后来多个触觉基础模型复用，使用率证据应另列复用论文而非编下载数。",
+      "locators": [
+        "官网 Applications",
+        "论文Table1"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2211.12498",
+        "https://touch-and-go.github.io/"
+      ],
+      "status": "数据定位已核实",
+      "figure": {
+        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
+        "caption": "自然场景中的手持触觉采集",
+        "locator": "官网 Human-Powered Data Collection",
+        "sourceUrl": "https://touch-and-go.github.io/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "VITaL Pretraining",
+      "title": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies",
+      "year": 2024,
+      "venue": "ICRA 2025（作者项目页）",
+      "arxiv": "2403.11898",
+      "category": "tactile-policy-not-vla",
+      "repo": "https://github.com/Abraham190137/TactileACT",
+      "project": "https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining",
+      "tasks": [
+        "USB线缆插入",
+        "细长方块堆叠",
+        "立方块堆叠"
+      ],
+      "purpose": "区分训练时触觉预训练收益与部署时触觉反馈收益；比较触觉相关/不相关任务。",
+      "metrics": [
+        "成功率",
+        "每步切向绝对应变及跨运行中位数"
+      ],
+      "setting": "Franka Panda+夹爪+GelSight；真机；100示范/任务，80训练20验证；插USB固定目标初位并加入2.5mm标准差动作噪声。",
+      "trials": "每种实验20次；USB最多300步。",
+      "comparisons": [
+        "ACT与DP",
+        "有/无预训练×有/无部署触觉",
+        "tactile-only"
+      ],
+      "signal": "GelSight应变xyz图；应变是相对力代理，非牛顿标定腕力。",
+      "action": "相对末端目标xyz+夹爪宽度；底层阻抗控制。",
+      "benchmark": "自建3任务；代码入口在作者项目页。",
+      "locators": [
+        "§IV-A/B",
+        "Figure7",
+        "§III-C"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2403.11898v2",
+        "https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining"
+      ],
+      "status": "论文协议已核实",
+      "warning": "与2025 ViTaL Local和2026 ViTaL Steering是3篇独立工作。",
+      "figure": {
+        "url": "https://arxiv.org/html/2403.11898v2/figures/Scene_layout_all_tasks.jpg",
+        "caption": "USB插入与两项积木堆叠实验",
+        "locator": "Figure 4",
+        "sourceUrl": "https://arxiv.org/html/2403.11898v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "ViTaL Local",
+      "title": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
+      "year": 2025,
+      "arxiv": "2506.13762",
+      "category": "vlm-tactile-hierarchical-policy",
+      "repo": null,
+      "project": "https://vitalprecise.github.io/",
+      "tasks": [
+        "电源插头插入",
+        "USB插入",
+        "刷卡",
+        "钥匙插锁",
+        "拿面包控制任务"
+      ],
+      "purpose": "拆开局部精密策略、场景/位置泛化、触觉作用与VLM全局定位。",
+      "metrics": [
+        "分条件任务成功次数",
+        "泛化成功率"
+      ],
+      "setting": "真机局部视觉+触觉BC/残差RL；固定绿幕基准以及位置、杂乱场景和联合扰动。",
+      "trials": "域内每任务10次；空间/场景泛化各3配置×10次；VLM导航5位置×5次。",
+      "comparisons": [
+        "BAKU",
+        "ViSk",
+        "RLPD",
+        "ViTaL-BC",
+        "无触觉/语义增强/残差RL消融"
+      ],
+      "signal": "AnySkin磁式触觉读数与腕部视觉；非腕F/T。",
+      "action": "VLM粗定位+局部视触觉动作策略；并非单一端到端触觉VLA。",
+      "benchmark": "自建精密接触+泛化协议；资源入口官方project。",
+      "locators": [
+        "§4.4–4.7",
+        "Tables1–5"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2506.13762v1",
+        "https://vitalprecise.github.io/"
+      ],
+      "status": "论文协议已核实",
+      "warning": "主泛化表人工初始化近目标，不能当完整VLM导航成功率；导航单列Table5。",
+      "figure": {
+        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
+        "caption": "四类精密接触操作真机轨迹",
+        "locator": "Figure 3",
+        "sourceUrl": "https://arxiv.org/html/2506.13762v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "ViTaL Steering",
+      "title": "Inference-time Policy Steering via Vision and Touch",
+      "year": 2026,
+      "arxiv": "2606.14981",
+      "category": "language-guided-tactile-policy",
+      "repo": null,
+      "project": "https://yilin-wu98.github.io/vital_website/",
+      "tasks": [
+        "移液至指定颜色杯",
+        "擦除指定颜色白板痕迹",
+        "插入指定孔位"
+      ],
+      "purpose": "验证视觉长时语义选模与触觉短时接触纠偏互补。",
+      "metrics": [
+        "视觉任务成功率",
+        "接触成功率",
+        "整体成功率",
+        "二项标准误"
+      ],
+      "setting": "三个真机任务；每任务2条语言条件；GelSight与视觉未来world model；冻结生成策略推理时引导。",
+      "trials": "每任务20次，2个语言条件各10次。",
+      "comparisons": [
+        "基础diffusion policy",
+        "仅视觉steering",
+        "仅触觉steering",
+        "简单多模态融合"
+      ],
+      "signal": "GelSight图像，文本条件触觉reward作用于预测latent。",
+      "action": "采样验证选动作序列，触觉引导diffusion editing短时修正；无目标力输出。",
+      "benchmark": "自建3任务；官网逐次视频；代码Coming Soon。",
+      "locators": [
+        "官网 Evaluation of ViTaL",
+        "官网 Results"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2606.14981",
+        "https://yilin-wu98.github.io/vital_website/"
+      ],
+      "status": "官方协议已核实",
+      "figure": {
+        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
+        "caption": "视觉选目标与触觉调接触的概览",
+        "locator": "官网方法概览（非单纯实验照片）",
+        "sourceUrl": "https://yilin-wu98.github.io/vital_website/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "ViTacFormer",
+      "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+      "year": 2025,
+      "venue": "RSS 2026（官方repo）",
+      "arxiv": "2506.15953",
+      "category": "dexterous-tactile-policy-not-vla",
+      "repo": "https://github.com/RoboVerseOrg/ViTacFormer",
+      "project": "https://roboverseorg.github.io/ViTacFormerPage/",
+      "tasks": [
+        "Peg Insertion",
+        "Cap Twist",
+        "Vase Wipe",
+        "Book Flip",
+        "11阶段制作汉堡"
+      ],
+      "purpose": "视觉触觉交叉融合及未来触觉预测是否改善精密和长程灵巧操作。",
+      "metrics": [
+        "成功率",
+        "Human Normalized Score",
+        "长任务连续完成阶段"
+      ],
+      "setting": "双Realman臂+双SharpaWave17DoF灵巧手；高分辨率指尖触觉；真机。",
+      "trials": "每任务测试次数本轮未核实。",
+      "comparisons": [
+        "ACT",
+        "DP",
+        "触觉融合/预测头消融待逐表深读"
+      ],
+      "signal": "指尖高分辨率触觉与视觉。",
+      "action": "绝对关节角target，chunk+temporal ensemble；不含语言输入。",
+      "benchmark": "自建4短程+1长程任务；官方代码与示例数据公开。",
+      "locators": [
+        "官网 Experiment Results",
+        "论文Figure2",
+        "RINO作者海报"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2506.15953",
+        "https://roboverseorg.github.io/ViTacFormerPage/",
+        "https://github.com/RoboVerseOrg/ViTacFormer",
+        "https://rino-workshop.github.io/imgs/posters/RINO_HENG.pdf"
+      ],
+      "status": "官方任务与接口已核实",
+      "figure": {
+        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
+        "caption": "双臂灵巧手真机与遥操作装置",
+        "locator": "官网 Hardware Setup",
+        "sourceUrl": "https://roboverseorg.github.io/ViTacFormerPage/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "AnyTouch 2",
+      "title": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "arxiv": "2602.09617",
+      "category": "tactile-representation-not-vla",
+      "repo": "https://github.com/GeWu-Lab/AnyTouch2",
+      "project": "https://gewu-lab.github.io/AnyTouch2/",
+      "tasks": [
+        "触觉抓取",
+        "擦白板",
+        "USB插入",
+        "薯片移动",
+        "离线静态属性/动作/力及delta-force预测"
+      ],
+      "purpose": "验证五层动态触觉金字塔能力和跨传感器、力敏感操作。",
+      "metrics": [
+        "下游操作成功率",
+        "离线分类/力预测指标（细分待核实）"
+      ],
+      "setting": "ToucHD 2,426,174接触样本；仿真原子动作、真机操作、触觉与3D力配对；下游4项真机。",
+      "trials": "各真机任务次数本轮未知，不能用数据样本量代替rollout次数。",
+      "comparisons": [
+        "触觉基础表示模型对照",
+        "跨传感器DIGIT泛化",
+        "不同动态学习目标消融待逐表核实"
+      ],
+      "signal": "光学触觉视频；训练力标签由腕部力传感器记录3D力。",
+      "action": "表示编码器供下游策略；自身非语言动作模型。",
+      "benchmark": "提出ToucHD/ToucHD Bench并用离线触觉bench+自建真机4任务；代码数据模型公开。",
+      "locators": [
+        "官网 Online Real-World Manipulation",
+        "官网 Offline Benchmark Evaluation",
+        "论文Experiment"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2602.09617v1",
+        "https://gewu-lab.github.io/AnyTouch2/",
+        "https://github.com/GeWu-Lab/AnyTouch2"
+      ],
+      "status": "官方任务和规模已核实",
+      "figure": {
+        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
+        "caption": "四项真机操作评测",
+        "locator": "官网 Online Real-World Manipulation",
+        "sourceUrl": "https://gewu-lab.github.io/AnyTouch2/",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "See, Hear, and Feel",
+      "title": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation",
+      "year": 2022,
+      "venue": "CoRL 2022",
+      "arxiv": "2212.03858",
+      "category": "multisensory-tactile-policy-not-vla",
+      "repo": "https://github.com/JunzheJosephZhu/see_hear_feel",
+      "project": "https://arxiv.org/abs/2212.03858",
+      "tasks": [
+        "dense packing",
+        "pouring"
+      ],
+      "purpose": "检验视觉全局状态、音频事件和触觉局部几何的互补。",
+      "metrics": [
+        "任务成功率（具体阶段指标待查原表）"
+      ],
+      "setting": "真机相机、接触麦克风、GelSight；附录测试倾倒新初态。",
+      "trials": "每任务次数本轮未知。",
+      "comparisons": [
+        "各模态组合消融",
+        "MSA融合模型",
+        "Franka内部力输入消融",
+        "腕部相机消融"
+      ],
+      "signal": "GelSight+接触音频；附录额外比较机器人力感知。",
+      "action": "模仿学习动作策略；无语言输入。",
+      "benchmark": "自建2任务；官方代码及示例数据公开。",
+      "locators": [
+        "论文Experiments",
+        "Supplement §6 force sensing ablation",
+        "官方repo ablation flags"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2212.03858",
+        "https://ruohangao.github.io/assets/supps/seel_hear_feel_supp.pdf",
+        "https://github.com/JunzheJosephZhu/see_hear_feel"
+      ],
+      "status": "官方定位与消融已核实",
+      "figure": {
+        "url": "https://arxiv.org/html/2212.03858v2/setup_pack.png",
+        "caption": "紧密装箱操作实验装置",
+        "locator": "论文实验装置图",
+        "sourceUrl": "https://arxiv.org/html/2212.03858v2",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    },
+    {
+      "short": "ManiWAV",
+      "title": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data",
+      "year": 2024,
+      "venue": "CoRL 2024",
+      "arxiv": "2406.19464",
+      "category": "contact-audio-policy-not-vla",
+      "repo": "https://github.com/real-stanford/maniwav",
+      "project": "https://maniwav.github.io/",
+      "tasks": [
+        "铲子翻贝果",
+        "擦白板",
+        "摇杯判断并倒骰子",
+        "辨别魔术贴钩/毛面并绑线"
+      ],
+      "purpose": "被动接触事件和主动感知属性能否借接触音频补充视觉；环境泛化。",
+      "metrics": [
+        "整任务成功率",
+        "子阶段成功率"
+      ],
+      "setting": "UMI手持示范+UR5部署；接触麦克风；噪声/高度/工具/图案/未见场景条件。",
+      "trials": "翻贝果正文20次但情形分项以40为总分母，需保留歧义；擦白板20；倒骰12；魔术贴10。",
+      "comparisons": [
+        "vision-only",
+        "MLP策略/融合",
+        "ResNet/AVID音频encoder",
+        "音频历史长度",
+        "环境麦克风",
+        "去噪增强"
+      ],
+      "signal": "接触麦克风振动声，不是六维力或触觉图。",
+      "action": "音视频条件diffusion policy输出UMI末端运动与夹爪控制。",
+      "benchmark": "自建4任务；代码数据模型公开；Appendix B有逐条件成功和失败原因，值得借鉴。",
+      "locators": [
+        "§4.1–4.4",
+        "Figures5–8",
+        "Appendix B.2"
+      ],
+      "sources": [
+        "https://arxiv.org/html/2406.19464v1",
+        "https://github.com/real-stanford/maniwav"
+      ],
+      "status": "论文协议已核实",
+      "warning": "不是VLA，也不应把audio当力值；翻转试次分母有原文歧义。",
+      "figure": {
+        "url": "https://arxiv.org/html/2406.19464v1/audio_wipe.png",
+        "caption": "擦白板条件、失败案例与成功率",
+        "locator": "Figure 6",
+        "sourceUrl": "https://arxiv.org/html/2406.19464v1",
+        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
+        "httpStatus": 200
+      }
+    }
+  ]
+}

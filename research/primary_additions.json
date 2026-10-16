@@ -1,0 +1,315 @@
+{
+  "snapshot": "2026-10-16",
+  "works": [
+    {
+      "id": "P01",
+      "name": "FACT（接触诊断）",
+      "fullTitle": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+      "year": 2026,
+      "family": "wrist",
+      "kind": "VLA",
+      "arxiv": "2608.01402",
+      "github": "https://github.com/stanford-iprl-lab/fact",
+      "source": "https://arxiv.org/html/2608.01402v1",
+      "project": "https://stanford-iprl-lab.github.io/fact/",
+      "signal": "Bota SensONE 腕部六轴F/T，400 Hz",
+      "sensorOrigin": "真实F/T传感器",
+      "role": "力观测",
+      "platform": "Franka FR3 + Robotiq夹爪",
+      "actionOutput": "末端位姿增量；1 kHz笛卡尔阻抗控制",
+      "summary": "区分精度失败与力失败，用同骨干对照和信号替换检查模型是否真正用力。",
+      "purpose": "区分噪声训练日程与力融合本身的贡献。",
+      "tasks": "插头、USB、按钮、擦白板、钥匙插入",
+      "metrics": "成功率、Fisher精确检验p值；不是目标力跟踪误差",
+      "trials": "每方法每任务40次，60秒超时；目标32×20 cm、起点5 cm立方体随机化；训练与测试分布相同。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "baseline": "同π0.5和100条/任务示教：π0.5、ForceVLA、TA-VLA；LN日程、当前力/历史/门控消融；真实力替换高斯噪声。",
+      "warning": "与另一篇Force–Action–Track FACT不同；主评测同分布，p值不是效果量。",
+      "openness": {
+        "status": "项目与仓库入口",
+        "url": "https://stanford-iprl-lab.github.io/fact/",
+        "note": "原文承诺代码和STL；是否完整发布需检查仓库，不自动视为通用benchmark。"
+      },
+      "locators": [
+        "§6、Tables 1–4",
+        "Appendix A–B、Table A.1"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
+        "caption": "FACT 插头插入实验，原文Figure 1（局部）",
+        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
+      },
+      "experiments": [
+        {
+          "task": "插头 / USB",
+          "purpose": "亚毫米对齐与接触纠偏",
+          "metric": "成功率及Fisher检验",
+          "setting": "各40次；60秒",
+          "success": "在60秒内完全插入；附录A细分对齐与就位失败",
+          "locator": "§6、Appendix A",
+          "source": "https://arxiv.org/html/2608.01402v1#S6"
+        },
+        {
+          "task": "擦白板",
+          "purpose": "持续接触质量",
+          "metric": "任务成功率",
+          "setting": "40次，改变墨迹",
+          "success": "擦除标记区域，维持有效接触",
+          "locator": "Appendix A",
+          "source": "https://arxiv.org/html/2608.01402v1#A1"
+        },
+        {
+          "task": "钥匙 / 按钮",
+          "purpose": "利用终点力特征而非仅视觉",
+          "metric": "成功率、去真实力消融",
+          "setting": "钥匙视觉模糊；不同长度钥匙外观相似",
+          "success": "钥匙正确就位；按钮触发锁定",
+          "locator": "Appendix A、Table A.1",
+          "source": "https://arxiv.org/html/2608.01402v1#A1"
+        }
+      ],
+      "notes": "自建五任务；USB组件来自NIST assembly board，但整体协议不等同NIST统一benchmark。来源：原文§6及附录A–B。",
+      "resultHighlights": [
+        {
+          "text": "五任务平均成功率66.0%；同π0.5骨干ForceVLA为40.5%，π0.5为39.0%。",
+          "locator": "Table 1",
+          "source": "https://arxiv.org/html/2608.01402v1#S6.T1",
+          "condition": "每方法每任务40次，同分布随机初态，60秒超时。"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "FACT（人机灵巧迁移）",
+      "fullTitle": "FACT: A Multimodal Force–Action–Track Foundation Model for Human-to-Robot Dexterity",
+      "year": 2026,
+      "family": "dex",
+      "kind": "VTLA基础策略",
+      "arxiv": "2610.19155",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "signal": "每指尖六轴力；人类触觉手套与机器人力数据",
+      "sensorOrigin": "指尖力传感器",
+      "role": "快速反馈",
+      "platform": "双臂YAM + 两只Sharpa Wave 22关节手",
+      "actionOutput": "灵巧手和手臂动作，联合未来力预测",
+      "summary": "人类与机器人力动作预训练，验证多指接触和人机数据迁移。",
+      "purpose": "验证未来力/视觉轨迹预测和人类示教对灵巧操作的贡献。",
+      "tasks": "移液、试管开盖、翻盖、系鞋带、洗牌、多物体抓取、螺丝刀、竖琴、木琴、移液器调量",
+      "metrics": "七项二元成功；两项清晰发声数/10；调量接触次数/10及已接触样本体积MAE",
+      "trials": "每任务10次；物体位置逐次随机；每任务10机器人+90人类示教微调。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "同数据π0.5、T-Rex；无未来力、无track、人机数据比例及仅机器人数据消融。",
+      "warning": "不同评分不能混成二元成功率；Table I与正文某些T-Rex数值不一致，需逐表核对；新论文不代表已高引用。",
+      "openness": {
+        "status": "发布情况待核验",
+        "url": "https://arxiv.org/abs/2610.19155",
+        "note": "论文公开；完整代码数据发布状态未确认。"
+      },
+      "locators": [
+        "§V-A、Table I",
+        "Appendix E"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
+        "caption": "FACT 十任务真机评测随机化，原文Figure 4",
+        "source": "https://arxiv.org/html/2610.19155v1#S5"
+      },
+      "experiments": [
+        {
+          "task": "移液器调量",
+          "purpose": "避免只报成功接触后的精度掩盖接触失败",
+          "metric": "接触次数/10；接触样本体积MAE",
+          "setting": "420 μL起始，400 μL目标",
+          "success": "未接触拨盘计失败，不参与有读数样本的MAE",
+          "locator": "§V-A、Table I、Appendix E",
+          "source": "https://arxiv.org/html/2610.19155v1#S5"
+        }
+      ],
+      "notes": "自建十任务真机套件。二元任务、连续发声和条件化体积误差分开报告。"
+    },
+    {
+      "id": "P03",
+      "name": "HapticVLA",
+      "fullTitle": "HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing",
+      "year": 2026,
+      "family": "related",
+      "kind": "VLA",
+      "arxiv": "2603.15257",
+      "source": "https://arxiv.org/html/2603.15257v1",
+      "signal": "训练期双指200 taxel压力；部署学生不读触觉",
+      "sensorOrigin": "仅训练期触觉",
+      "role": "力蒸馏",
+      "platform": "双SO-101，右臂触觉平行夹爪",
+      "actionOutput": "SmolVLA动作，视觉/状态预测触觉token",
+      "summary": "通过力相关奖励和蒸馏，把轻柔夹持能力迁移到无触觉部署。",
+      "purpose": "检验奖励加权与触觉蒸馏能否保护易碎物体。",
+      "tasks": "果酱塑料罐、华夫饼、鸡蛋抓取放置",
+      "metrics": "无损放置成功率",
+      "trials": "每方法每任务20次；固定任务场景；初态分布本轮未抽取。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "SmolVLA、X-VLA、VLA-0同数据微调；有/无TD、有/无异步、SA-RWFM。",
+      "warning": "学生部署不读实时触觉；成功率不等同六轴力跟踪。",
+      "openness": {
+        "status": "论文可查，资源待核验",
+        "url": "https://arxiv.org/abs/2603.15257",
+        "note": "未确认完整数据与代码发布包。"
+      },
+      "locators": [
+        "§IV-A–D、Figure 6、Table I"
+      ],
+      "experiments": [
+        {
+          "task": "鸡蛋 / 华夫饼无损抓放",
+          "purpose": "精细控制夹持避免破损",
+          "metric": "成功次数/20",
+          "setting": "每模型每任务20次",
+          "success": "物体完整且放入指定位置；饼干不可裂碎，鸡蛋须放正确槽位",
+          "locator": "§IV-B",
+          "source": "https://arxiv.org/html/2603.15257v1#S4.SS2"
+        }
+      ],
+      "notes": "自建三任务真实评测。训练用压力阵列不意味着部署读腕部六维力。",
+      "resultHighlights": [
+        {
+          "text": "无触觉部署学生三任务平均成功率86.7%；有触觉、无TD同步配置为75.0%。",
+          "locator": "Table I",
+          "source": "https://arxiv.org/html/2603.15257v1#S4.T1",
+          "condition": "每任务20次；无损放置标准；两配置不是单纯传感器有无的孤立比较。"
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "DEFT-VLA",
+      "fullTitle": "DEFT-VLA: Stage-Localized Force Specialization for Contact-Rich Robotic Manipulation",
+      "year": 2026,
+      "family": "wrist",
+      "kind": "VLA",
+      "arxiv": "2610.14854",
+      "source": "https://arxiv.org/html/2610.14854v1",
+      "signal": "双腕六轴F/T",
+      "sensorOrigin": "真实F/T传感器",
+      "role": "力观测",
+      "platform": "Mercury B2双臂，三相机，15Hz策略",
+      "actionOutput": "π0.5动作，按阶段路由base/contact专家",
+      "summary": "保留接近定位能力，只在接触阶段训练力专家。",
+      "purpose": "用分阶段成功率区分定位与接触收益，并检验抓持高度OOD。",
+      "tasks": "移液器吸头安装、双臂吸液、擦白板",
+      "metrics": "整体/非接触/接触阶段成功率；成功吸液样本体积MAE",
+      "trials": "每方法每任务20次；共享随机物体位置；130/50/50条示教；另设未见抓取高度。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "核心相关",
+      "baseline": "π0.5、Force Token、全程FAC、双专家无局部FAC；状态token掩码消融。",
+      "warning": "接触阶段SR以此前阶段成功为条件；体积MAE仅成功吸液样本；擦板阶段切换人工触发。",
+      "openness": {
+        "status": "论文公开，发布包待核验",
+        "url": "https://arxiv.org/abs/2610.14854",
+        "note": "新近论文，不依据发布日期认定已高热或资源完整。"
+      },
+      "locators": [
+        "§IV-A–D、Tables I–III"
+      ],
+      "image": {
+        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
+        "caption": "DEFT-VLA 三类真机任务及阶段分解，原文Figure 4",
+        "source": "https://arxiv.org/html/2610.14854v1#S4"
+      },
+      "experiments": [
+        {
+          "task": "擦白板",
+          "purpose": "接近抓取与接触擦拭分开计分",
+          "metric": "阶段成功率及整体成功率",
+          "setting": "20次；人工切换阶段",
+          "success": "目标标记去除且板擦持续有效接触",
+          "locator": "§IV-A、Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4"
+        },
+        {
+          "task": "吸头安装 / 双臂吸液",
+          "purpose": "接触终点感知及高度泛化",
+          "metric": "成功率；成功样本体积MAE",
+          "setting": "各20次；另设未见抓持高度",
+          "success": "吸头撤回仍固定；有效吸液；体积参考1000 μL",
+          "locator": "§IV-A–C、Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4"
+        }
+      ],
+      "notes": "自建三任务；分阶段SR的分母与整体SR不同，需要保留条件化定义。",
+      "resultHighlights": [
+        {
+          "text": "吸头安装、双臂吸液、擦白板整体成功率分别70%、50%、90%。",
+          "locator": "Table I",
+          "source": "https://arxiv.org/html/2610.14854v1#S4.T1",
+          "condition": "每任务20次；接触阶段SR另以此前阶段成功为分母，不能替代整体SR。"
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "HapTile",
+      "fullTitle": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning",
+      "year": 2026,
+      "family": "touch",
+      "kind": "数据集与策略评测",
+      "arxiv": "2606.04825",
+      "source": "https://arxiv.org/html/2606.04825v1",
+      "project": "https://haptile-dataset.github.io/",
+      "signal": "双指光学触觉图与marker位移；操作者振动反馈",
+      "sensorOrigin": "触觉图像",
+      "role": "触觉反馈",
+      "platform": "机械臂 + 双指触觉夹爪",
+      "actionOutput": "DP/π0动作；不是显式目标六轴力",
+      "summary": "结合触觉、语言、动作和触觉辅助遥操作的数据集，用模态消融评估接触任务。",
+      "purpose": "对比原始触觉图与marker特征是否在不同任务均有帮助。",
+      "tasks": "瓶子扶正、擦白板、倒液、插销",
+      "metrics": "成功率；逐任务模态消融",
+      "trials": "原文§5.1称over 10 demonstrations，Table 2按10样本量级报告；测试单位措辞有歧义，保留原口径。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "DP与LoRA微调π0；各自V-only、V+T、V+TM。",
+      "warning": "训练示教每任务30–60不是测试次数；触觉收益强依任务；遥操作振动反馈收益缺少独立无反馈对照。",
+      "openness": {
+        "status": "有数据项目入口",
+        "url": "https://haptile-dataset.github.io/",
+        "note": "数据与说明入口可查；完整硬件/环境资源未运行核验。"
+      },
+      "locators": [
+        "§5.1、Table 2",
+        "Appendix A.3–A.4"
+      ],
+      "experiments": [
+        {
+          "task": "擦白板",
+          "purpose": "检验触觉图与marker位移对持续接触的作用",
+          "metric": "任务成功率",
+          "setting": "DP/π0各三种模态；测试分母措辞待复核",
+          "success": "本轮已确认抓海绵后擦指定墨迹；完整自动成功判定尚未抽取",
+          "locator": "Table 2、Appendix A.3",
+          "source": "https://arxiv.org/html/2606.04825v1#A1.SS3"
+        }
+      ],
+      "notes": "HapTile为数据集与自建四任务评测；论文称擦板沿用已有任务形式，不等同复用了统一跨论文评分环境。",
+      "resultHighlights": [
+        {
+          "text": "π0插销任务：V-only 0%，V+T 90%，V+TM 40%；触觉表示并非越多越好。",
+          "locator": "Table 2",
+          "source": "https://arxiv.org/html/2606.04825v1#S5.T2",
+          "condition": "仅该任务与模态配置；原文测试分母使用demonstrations措辞，有待复核。"
+        }
+      ]
+    }
+  ]
+}

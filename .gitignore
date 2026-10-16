@@ -1,3 +1,7 @@
 qa/
 *.zip
 __pycache__/
+node_modules/
+dist/
+*.tar.gz
+.sites-runtime/
