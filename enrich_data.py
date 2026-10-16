@@ -190,5 +190,11 @@ def enrich(data):
     used={i['task'] for i in instances};categories=[t for t in categories if t['id'] in used]
     for t in categories:t.pop('pattern',None)
     data.update(updated=DATE,originalSnapshot='2026-10-15',taskGroups=TASK_GROUPS,taskTypes=categories,taskInstances=instances,attentionMethodology=attention.get('methodology',{}))
+    # Physical embodiment and signal form are distinct from model encodings and sensor origin.
+    forms=json.loads((ROOT/'research'/'embodiment_force_forms.json').read_text(encoding='utf-8'))
+    profiles={r[0]:dict(zip(forms['columns'][1:],r[1:])) for r in forms['records']}
+    for w in works:
+        profile=profiles.get(w['id'],dict(embodimentBrief='本体类型待核实',robotModel=w['platform'],effectorModel='末端执行器型号未核实',forceBrief='原始信号形式待核实',forceDetail=w['signal']))
+        w['physicalProfile']={**profile, 'source':forms['sourceOverrides'].get(w['id'],dict(url=w['source'],locator='；'.join(w['locators'])))}
     from selection import apply_selection
     return apply_selection(data)

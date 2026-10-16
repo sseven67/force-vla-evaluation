@@ -117,6 +117,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/ft-robotic/ForceVLA",
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋自适应夹爪",
+        "robotModel": "Flexiv Rizon（7自由度）",
+        "effectorModel": "Dahuan 自适应夹爪；具体型号未核实",
+        "forceBrief": "估计末端六维力／力矩",
+        "forceDetail": "末端 Fx、Fy、Fz 三维力＋Mx、My、Mz 三维力矩；机器人内部估计的外部 wrench，以世界坐标系表示。",
+        "source": {
+          "url": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§3 Force-aware VLA Model；§4.3 Experimental Setup"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -211,6 +222,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋平行夹爪",
+        "robotModel": "Flexiv Rizon 4s",
+        "effectorModel": "DH AG-95",
+        "forceBrief": "末端六维力／力矩",
+        "forceDetail": "三维力＋三维力矩；具体传感与估计链路仍待核实，不能直接归为独立外置 F/T 传感器。",
+        "source": {
+          "url": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4硬件与数据；§5.1五任务20次；实验/附录"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -305,6 +327,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋夹爪",
+        "robotModel": "Monte / X-ARM（不同配置）",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "腕部六维力／力矩",
+        "forceDetail": "腕部 F/T 向量：三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1设置；§4.2峰值力；§4.3频率；附录任务"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -389,6 +422,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋夹爪",
+        "robotModel": "Franka Panda",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "机器人内部力／力矩",
+        "forceDetail": "机器人内部提供的 F/T 反馈；具体通道维度待核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4；附录D–F平滑、时间与频率"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -485,6 +529,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋夹爪",
+        "robotModel": "UR5e",
+        "effectorModel": "UMI 风格夹爪；具体型号未核实",
+        "forceBrief": "末端六维力／力矩",
+        "forceDetail": "末端 F/T 向量：三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4；Table I力跟踪；Fig.6–8结果"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -576,6 +631,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "双臂平台",
+        "robotModel": "AgiBot G1",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "腕部六维力／力矩",
+        "forceDetail": "腕部 F/T 反馈；三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III，ID/OOD与反事实；§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -666,6 +732,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂／双臂＋夹爪",
+        "robotModel": "Franka Panda / X Square 双臂（不同实验）",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "估计末端六维力／力矩",
+        "forceDetail": "机器人估计的末端三维外力＋三维力矩；按单臂／双臂配置分别理解。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Table I九任务；Table II成功样本力/时间"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -756,6 +833,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋两指夹爪",
+        "robotModel": "Franka FR3",
+        "effectorModel": "Robotiq 2F-85",
+        "forceBrief": "腕部六维力／力矩",
+        "forceDetail": "腕部 F/T 传感器测量的三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V；限时自主成功、在线预算和消融"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -827,6 +915,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋双指触觉夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "双高分辨率触觉传感器的 UMI 风格夹爪；具体型号未核实",
+        "forceBrief": "双指法向／剪切接触力",
+        "forceDetail": "双触觉传感器测量法向与剪切接触力；时序触觉测量经 MLP 编码。各指通道数未核实，不按腕部六维 F/T 计。",
+        "source": {
+          "url": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§2.1 Policy Architecture；§2.4 Data Collection"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -898,6 +997,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/mrHuangyz/TaF-VLA",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋触觉夹爪／工具",
+        "robotModel": "不同实验配置；具体型号待逐项核实",
+        "effectorModel": "触觉夹爪／工具；型号未核实",
+        "forceBrief": "触觉图像／视频与力的配对数据",
+        "forceDetail": "触觉图像／视频用于触觉表示；预训练还配对 F/T、压力等数据，不能把所有数据源都当成部署时的力输入。",
+        "source": {
+          "url": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V，附录B任务协议"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -969,6 +1079,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/NathanWu7/Tabero",
+      "physicalProfile": {
+        "embodimentBrief": "仿真机械臂＋双指夹爪",
+        "robotModel": "Isaac Lab 仿真；机器人型号未核实",
+        "effectorModel": "双指触觉夹爪；型号未核实",
+        "forceBrief": "两指各三维接触力",
+        "forceDetail": "每指三维力，两指合计六个力分量；这不等于腕部的三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6过程指标；实验；README复现说明"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -1040,6 +1161,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指触觉夹爪",
+        "robotModel": "Piper",
+        "effectorModel": "Pika / Tacta 触觉配置",
+        "forceBrief": "两指各六维力／力矩",
+        "forceDetail": "每指三维力＋三维力矩；两指合计12维 wrench 反馈，区别于单个腕部六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；附录A.1成功条件；A.2指尖wrench定义"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1111,6 +1243,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/ZZongzheng0918/TA-VLA",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "关节力矩／effort",
+        "forceDetail": "按关节提供的力矩或 effort 读数；维数随机器人关节数变化，不直接等于末端六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6 Table 5十任务；effort数据字段"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -1182,6 +1325,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋夹爪",
+        "robotModel": "UR5e",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "训练时六维 F/T；部署时无实测力输入",
+        "forceDetail": "六维力／力矩用于训练和蒸馏；部署策略以视觉／状态推断力相关表征，不能当作在线接收 F/T 的方法。",
+        "source": {
+          "url": "https://arxiv.org/html/2602.02142v2",
+          "locator": "§IV，50条示教/30次；成功标准"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1253,6 +1407,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋触觉夹爪",
+        "robotModel": "Franka FR3",
+        "effectorModel": "Robotiq 夹爪＋AnySkin；夹爪具体型号未核实",
+        "forceBrief": "磁触觉读数＋关节力矩",
+        "forceDetail": "AnySkin 磁传感器读数与关节力矩等多模态反馈；磁场读数不是标定后的末端六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2604.23272v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1324,6 +1489,17 @@
         "matchStatus": "原始来源标题一致；引用未取得"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂平台",
+        "robotModel": "Franka FR3",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "训练时 F/T；部署时不输入 F/T",
+        "forceDetail": "力／力矩作为训练期信息；策略执行不依赖实测 F/T 输入，具体力通道维数待核实。",
+        "source": {
+          "url": "https://compvla.github.io/",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1395,6 +1571,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/JokerESC/ForceFlow",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋接触工具",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "工具／末端执行器型号未核实",
+        "forceBrief": "末端力／力矩历史",
+        "forceDetail": "接触 wrench 的时间序列；具体向量维数尚待原文逐项核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1力统计；§4.4 OOD"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1466,6 +1653,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋接触末端",
+        "robotModel": "Franka（具体型号未核实）",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "腕部六维力／力矩",
+        "forceDetail": "ATI F/T 传感器的三维力＋三维力矩；传感器具体型号未核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4与附录A；20次/60秒与传感器"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1537,6 +1735,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/fuse-model/FuSe",
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋触觉夹爪",
+        "robotModel": "WidowX 250",
+        "effectorModel": "夹爪型号未核实；DIGIT 触觉传感器",
+        "forceBrief": "触觉 RGB 图像＋音频",
+        "forceDetail": "DIGIT 光学触觉图像与音频等输入；不是直接测得的腕部六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2501.04693v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -1609,6 +1818,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指触觉夹爪",
+        "robotModel": "UR3",
+        "effectorModel": "Robotiq 夹爪＋GelStereo；夹爪具体型号未核实",
+        "forceBrief": "双指触觉图像",
+        "forceDetail": "GelStereo 触觉图像反馈；具体图像通道与派生几何量按实验配置。",
+        "source": {
+          "url": "https://arxiv.org/html/2505.09577v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1688,6 +1908,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/michaelyuancb/ftp1-policy",
+      "physicalProfile": {
+        "embodimentBrief": "多本体：夹爪／灵巧手",
+        "robotModel": "Franka / Sharpa / Dexmate / Flexiv 等实验配置；型号需逐项核对",
+        "effectorModel": "多种触觉夹爪／灵巧手，非统一末端",
+        "forceBrief": "触觉图像与力向量（随传感器变化）",
+        "forceDetail": "跨传感器触觉预训练与下游策略；仿真、真机和未见传感器实验的原始输入形式不同，不合并为同一种六维力接口。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -1774,6 +2005,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/neoteai/N0-VTLA",
+      "physicalProfile": {
+        "embodimentBrief": "单臂／双臂＋触觉夹爪",
+        "robotModel": "ARX X5 / UR5e / Flexiv / Franka / Piper（多平台语料）；真机任务按配置区分",
+        "effectorModel": "Neo TacUMI 等触觉夹爪；机器人夹爪具体型号未逐项核实",
+        "forceBrief": "双指／四指触觉图像",
+        "forceDetail": "每个夹爪手指一条自研视觉触觉图像流；单臂2路、双臂4路。接触差分图编码为 latent tokens；不是直接测得的低维力向量。",
+        "source": {
+          "url": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§3 Tactile Collection Convention；Appendix A Data Card"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -1845,6 +2087,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/ZhuoyangLiu2005/T-Rex",
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋双五指灵巧手",
+        "robotModel": "Dexmate Vega-1",
+        "effectorModel": "两只 Sharpa Wave（各22自由度）",
+        "forceBrief": "10指六维力／力矩＋指尖形变图",
+        "forceDetail": "10个指尖各有六维力／力矩（每指三维力＋三维力矩，合计60维）及逐指单通道形变图；不是10维力，也不是单个腕部六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix C Multi-Modal Encoders；Appendix D Real-Robot Experiments"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -1916,6 +2169,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋灵巧手",
+        "robotModel": "机器人型号未核实",
+        "effectorModel": "双灵巧手；具体型号未核实",
+        "forceBrief": "稀疏分布式触觉读数",
+        "forceDetail": "大面积分布式触觉反馈；各测点的物理通道和维度尚待核实，不按腕部六维力计。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.12549v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -1987,6 +2251,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋触觉夹爪",
+        "robotModel": "Franka Panda",
+        "effectorModel": "夹爪型号未核实；单指15×8压力阵列",
+        "forceBrief": "单指压力阵列（120测点）",
+        "forceDetail": "15×8触觉压力测点；属于分布式接触压力，不是末端六维力／力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2603.12665v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2058,6 +2333,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "轮足底盘＋机械臂",
+        "robotModel": "M20S 轮足平台＋CM1 机械臂",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "关节残差／力估计",
+        "forceDetail": "由关节等信号估计接触作用；具体维数待核实，不直接标成实测末端六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2609.03889v2",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2130,6 +2416,17 @@
         "matchStatus": "原始来源标题一致；引用未取得"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "人形机器人",
+        "robotModel": "Digit",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "关节力矩历史",
+        "forceDetail": "关节级力矩信息及控制命令；具体通道随全身配置，区别于腕部六维 F/T。",
+        "source": {
+          "url": "https://opt2vla.github.io/",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2201,6 +2498,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/VMVLab/ForceU-VLA",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋超声探头",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "超声探头；型号未核实",
+        "forceBrief": "六维力／力矩＋超声图像",
+        "forceDetail": "接触 F/T 的三维力＋三维力矩，并结合超声图像。",
+        "source": {
+          "url": "https://arxiv.org/html/2608.15009v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2272,6 +2580,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "触觉插入操作平台",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "触觉观测（原始形式待核实）",
+        "forceDetail": "触觉与语言驱动插孔操作；具体传感器、信号通道尚未逐项核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2503.08548v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -2343,6 +2662,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/MrSecant/OmniVTA",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋触觉末端",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "触觉末端型号未核实",
+        "forceBrief": "触觉图像＋预测触觉表征",
+        "forceDetail": "实测触觉图像及世界模型预测的触觉 latent；预测表征不等同于实测力向量。",
+        "source": {
+          "url": "https://arxiv.org/html/2603.19201v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -2415,6 +2745,17 @@
         "matchStatus": "原始来源标题一致；引用未取得"
       },
       "github": null,
+      "physicalProfile": {
+        "embodimentBrief": "仿真单臂＋夹爪；另有真机验证",
+        "robotModel": "Isaac Lab 中的 Franka；真机配置另计",
+        "effectorModel": "仿真夹爪；具体型号未核实",
+        "forceBrief": "仿真六维力／力矩",
+        "forceDetail": "仿真接触反力／力矩构成六维反馈；真机验证的传感配置需与仿真分别阅读。",
+        "source": {
+          "url": "https://arxiv.org/html/2610.19604v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2494,6 +2835,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "github": "https://github.com/ccyydd/SimpleTouch",
+      "physicalProfile": {
+        "embodimentBrief": "多传感器触觉表示与操作平台",
+        "robotModel": "UniVTAC 仿真及真机配置；型号待逐项核实",
+        "effectorModel": "随下游实验变化；型号未核实",
+        "forceBrief": "触觉观测（传感器相关）",
+        "forceDetail": "触觉表示学习及下游操作使用的原始信号需按传感器区分；不能把表示维数当作力维数。",
+        "source": {
+          "url": "https://arxiv.org/html/2610.02784v1",
+          "locator": "原调研笔记中的实验章节与表格；见下方来源"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2608,6 +2960,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋夹爪",
+        "robotModel": "Franka FR3",
+        "effectorModel": "Robotiq；夹爪具体型号未核实",
+        "forceBrief": "六维力／力矩",
+        "forceDetail": "Bota SensONE F/T 传感器；三维力＋三维力矩（400 Hz）。",
+        "source": {
+          "url": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6、Tables 1–4；Appendix A–B、Table A.1"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2694,6 +3057,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "引用未取得"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋双五指灵巧手",
+        "robotModel": "YAM 双臂",
+        "effectorModel": "两只 Sharpa Wave（各22关节）",
+        "forceBrief": "10指六维力／力矩",
+        "forceDetail": "两手各5个指尖，每个指尖六维 F/T，合计60维；人类触觉手套用于预训练，不应与机器人输入混算。",
+        "source": {
+          "url": "https://arxiv.org/html/2610.19155v1",
+          "locator": "Robot platform / tactile hand configuration"
+        }
       },
       "screening": {
         "grade": "C",
@@ -2783,6 +3157,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋双指夹爪",
+        "robotModel": "两台 SO-101",
+        "effectorModel": "右侧触觉双指夹爪；具体型号未核实",
+        "forceBrief": "训练时双指压力阵列；学生部署不输入触觉",
+        "forceDetail": "两指各10×10压力测点，合计200 taxels；用于教师训练／蒸馏，部署学生策略不直接接收该触觉输入。",
+        "source": {
+          "url": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D、Figure 6、Table I"
+        }
       },
       "screening": {
         "grade": "C",
@@ -2887,6 +3272,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋夹爪",
+        "robotModel": "Mercury B2",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "双腕六维力／力矩",
+        "forceDetail": "两侧腕部 F/T 反馈；每腕为三维力＋三维力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D、Tables I–III"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -2977,6 +3373,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋双指触觉夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "双指触觉夹爪；型号未核实",
+        "forceBrief": "触觉图像＋标记点位移",
+        "forceDetail": "视觉触觉传感器图像与标记点形变／位移；操作者振动反馈属于人机接口，不是额外的机器人 F/T 输入。",
+        "source": {
+          "url": "https://arxiv.org/html/2606.04825v1",
+          "locator": "§5.1、Table 2；Appendix A.3–A.4"
+        }
       },
       "screening": {
         "grade": "C",
@@ -3084,6 +3491,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指夹爪",
+        "robotModel": "Franka Panda",
+        "effectorModel": "Robotiq 2F-140＋单个 GelSight Mini",
+        "forceBrief": "触觉图像＋标记点反馈",
+        "forceDetail": "GelSight Mini 图像及标记点 X、Y、M 等派生反馈；区别于腕部六维力／力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1–4.5；Tables 1–2；Figure 2"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -3189,6 +3607,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋双指夹爪／多传感器手",
+        "robotModel": "UR5 等不同配置",
+        "effectorModel": "双指配置2个触觉传感器；手部配置11个，手型号未核实",
+        "forceBrief": "磁触觉力阵列（转为三通道图像）",
+        "forceDetail": "Paxini Gen2 的磁触觉测量按空间排布为三通道图像；不同末端传感器数量不同，不是统一腕部六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables 3–7；Figure 4"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -3292,6 +3721,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋触觉夹爪",
+        "robotModel": "AgiBot Genie-1",
+        "effectorModel": "夹爪型号未核实；Xense 触觉传感器",
+        "forceBrief": "触觉图像／标记点／派生力",
+        "forceDetail": "论文比较多种触觉反馈形式；各形式属于不同实验配置，派生力的具体维数待核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables 1–3"
+        }
       },
       "screening": {
         "grade": "C",
@@ -3400,6 +3840,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "仿真／真机触觉操作平台",
+        "robotModel": "多种平台；机械臂型号待逐项核实",
+        "effectorModel": "触觉夹爪；具体型号未核实",
+        "forceBrief": "触觉图像及历史帧",
+        "forceDetail": "GelSight、Xense、Neote 等触觉图像经编码形成 tokens；token 维数不是物理力维数。",
+        "source": {
+          "url": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables 2–3；Appendix B；Figure 2"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -3500,6 +3951,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "引用未取得"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指触觉夹爪",
+        "robotModel": "UR5",
+        "effectorModel": "Inspire EG2-4C2＋两个 Vitai GF255",
+        "forceBrief": "双指触觉图像＋标记点",
+        "forceDetail": "触觉图像历史及标记点反馈；不按腕部六维力计。",
+        "source": {
+          "url": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；官网 Main Results"
+        }
       },
       "screening": {
         "grade": "C",
@@ -3604,6 +4066,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "双臂平台＋平行触觉夹爪",
+        "robotModel": "Dobot Xtrainer；另有 Isaac Sim / TacEx 仿真",
+        "effectorModel": "平行夹爪＋两个 GelSight；夹爪型号未核实",
+        "forceBrief": "高分辨率触觉图像＋预测表征",
+        "forceDetail": "实测／仿真触觉图像及预测触觉 latent；图像表征不直接等于标定的 F/T 向量。",
+        "source": {
+          "url": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table 1；Figure 5"
+        }
       },
       "screening": {
         "grade": "C",
@@ -3710,6 +4183,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "actionMode": "评测 / 仿真接口（非策略）",
+      "physicalProfile": {
+        "embodimentBrief": "仿真／真机触觉夹爪平台",
+        "robotModel": "Isaac Lab / TacEx / UIPC；真机 Marvin 配置",
+        "effectorModel": "多种触觉末端；具体夹爪型号未核实",
+        "forceBrief": "多传感器触觉图像／仿真接触信号",
+        "forceDetail": "覆盖 GelSight Mini、ViTai GF225、Xense WS 等传感器配置；各任务观测与仿真通道需分开核对。",
+        "source": {
+          "url": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；官网 Simulation Experiments；官网 Real-World Experiments"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -3817,6 +4301,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "多传感器表示评测；下游本体随任务变化",
+        "robotModel": "不绑定统一机器人",
+        "effectorModel": "DIGIT / GelSight / GelSight Mini 等传感器；非统一执行器",
+        "forceBrief": "光学触觉图像",
+        "forceDetail": "多传感器触觉图像用于离线 probe 与下游任务；模型表示不是直接六维力输入。",
+        "source": {
+          "url": "https://arxiv.org/abs/2410.24090",
+          "locator": "Figure 1；TacBench T1–T6；官方repo downstream tasks"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -3922,6 +4417,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "跨传感器触觉表示平台",
+        "robotModel": "不绑定统一机器人",
+        "effectorModel": "多类触觉传感器；非统一执行器",
+        "forceBrief": "光学触觉图像",
+        "forceDetail": "跨传感器图像表征；下游机器人本体按具体任务变化。",
+        "source": {
+          "url": "https://arxiv.org/abs/2401.18084",
+          "locator": "§4.1–4.2；Tables 2–3"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -4024,6 +4530,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "多传感器表示＋真机下游操作",
+        "robotModel": "下游机械臂型号未核实",
+        "effectorModel": "TacQuad 等触觉配置；执行器型号未核实",
+        "forceBrief": "触觉图像／视频",
+        "forceDetail": "光学触觉帧与时序表征；不是统一的末端 F/T 接口。",
+        "source": {
+          "url": "https://arxiv.org/abs/2502.12191",
+          "locator": "ICLR2025 official abstract；论文Experiment部分待深读"
+        }
       },
       "screening": {
         "grade": "B",
@@ -4129,6 +4646,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "手持触觉采集；非机器人动作策略",
+        "robotModel": "无统一机器人本体",
+        "effectorModel": "手持 GelSight 传感器；非夹爪控制器",
+        "forceBrief": "触觉视频",
+        "forceDetail": "光学触觉视频用于触觉语言理解，不等于闭环机器人力控输入。",
+        "source": {
+          "url": "https://arxiv.org/abs/2405.02794",
+          "locator": "官网 Overview；官网 Scenario Reasoning"
+        }
       },
       "screening": {
         "grade": "H",
@@ -4236,6 +4764,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "手持视觉／触觉采集",
+        "robotModel": "无统一机器人本体",
+        "effectorModel": "手持 DIGIT＋BRIO 相机；非统一机器人执行器",
+        "forceBrief": "触觉 RGB 图像",
+        "forceDetail": "DIGIT 光学触觉图像，与视觉／语言配对用于表示评测。",
+        "source": {
+          "url": "https://arxiv.org/abs/2402.13232",
+          "locator": "官网 The TVL Dataset；官网 Results"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -4342,6 +4881,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "多传感器表示＋夹爪下游操作",
+        "robotModel": "下游 Franka；具体型号未核实",
+        "effectorModel": "平行夹爪＋双 GelSight Wedge；夹爪型号未核实",
+        "forceBrief": "多传感器触觉图像",
+        "forceDetail": "表示学习覆盖13类传感器；下游夹爪用光学触觉图像，传感器种类数不是力维数。",
+        "source": {
+          "url": "https://arxiv.org/abs/2406.13640",
+          "locator": "§5；官网 Precision electronics insertion；论文附录硬件"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -4444,6 +4994,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "人手持传感器采集",
+        "robotModel": "无统一机器人本体",
+        "effectorModel": "手持 GelSight；非机器人夹爪",
+        "forceBrief": "触觉视频",
+        "forceDetail": "人手与物体接触得到的光学触觉视频，配对视觉视频。",
+        "source": {
+          "url": "https://arxiv.org/abs/2211.12498",
+          "locator": "官网 Applications；论文Table1"
+        }
       },
       "screening": {
         "grade": "H",
@@ -4550,6 +5111,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋触觉夹爪",
+        "robotModel": "Franka Panda",
+        "effectorModel": "夹爪型号未核实；GelSight",
+        "forceBrief": "触觉形变／应变图",
+        "forceDetail": "GelSight 派生的 xyz 应变图作为相对力相关表征；不是直接以牛顿标定的末端六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2403.11898v2",
+          "locator": "§IV-A/B；Figure7；§III-C"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -4655,6 +5227,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋磁触觉夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "夹爪型号未核实；AnySkin",
+        "forceBrief": "磁触觉向量",
+        "forceDetail": "AnySkin 原始磁传感读数，结合视觉；不能直接标成六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -4758,6 +5341,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋触觉夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "夹爪型号未核实；GelSight",
+        "forceBrief": "触觉图像及预测表征",
+        "forceDetail": "GelSight 图像、预测 latent 与文本相关奖励；latent 不代表直接测得的力值。",
+        "source": {
+          "url": "https://arxiv.org/abs/2606.14981",
+          "locator": "官网 Evaluation of ViTaL；官网 Results"
+        }
       },
       "screening": {
         "grade": "C",
@@ -4866,6 +5460,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "双臂＋双灵巧手",
+        "robotModel": "两台 Realman 机械臂",
+        "effectorModel": "两只 Sharpa Wave（记录中的17自由度配置）",
+        "forceBrief": "高分辨率指尖触觉图像",
+        "forceDetail": "多指触觉图像输入；图像数量及对应通道需按该论文配置，不套用其他 Sharpa Wave 实验。",
+        "source": {
+          "url": "https://arxiv.org/abs/2506.15953",
+          "locator": "官网 Experiment Results；论文Figure2；RINO作者海报"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -4973,6 +5578,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "多传感器表示＋真机下游操作",
+        "robotModel": "下游机械臂型号未核实",
+        "effectorModel": "多类触觉传感器；执行器型号未核实",
+        "forceBrief": "触觉视频；预训练配对三维力",
+        "forceDetail": "触觉视频表示学习，预训练包含配对三维力标签；力标签不自动等于部署时力输入。",
+        "source": {
+          "url": "https://arxiv.org/html/2602.09617v1",
+          "locator": "官网 Online Real-World Manipulation；官网 Offline Benchmark Evaluation；论文Experiment"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -5079,6 +5695,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋触觉夹爪",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "夹爪型号未核实；GelSight",
+        "forceBrief": "触觉图像＋接触音频",
+        "forceDetail": "GelSight 光学触觉与接触音频；附录中的机械臂力信号应按具体实验另行核对。",
+        "source": {
+          "url": "https://arxiv.org/abs/2212.03858",
+          "locator": "论文Experiments；Supplement §6 force sensing ablation；官方repo ablation flags"
+        }
       },
       "screening": {
         "grade": "H",
@@ -5188,6 +5815,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂操作＋手持示教夹爪",
+        "robotModel": "UR5",
+        "effectorModel": "UMI 风格采集夹爪；执行夹爪型号未核实",
+        "forceBrief": "接触麦克风振动／音频",
+        "forceDetail": "接触麦克风采集物体交互振动；属于听觉／振动信息，不是六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2406.19464v1",
+          "locator": "§4.1–4.4；Figures5–8；Appendix B.2"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -5269,6 +5907,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋工具；协作夹持配置另计",
+        "robotModel": "Flexiv Rizon 4",
+        "effectorModel": "接触工具；辅助夹持末端型号未核实",
+        "forceBrief": "六维示教力／目标力与底层反馈",
+        "forceDetail": "示教中的三维力＋三维力矩及执行时底层力反馈；应区分策略目标力输出与策略是否直接输入实测 wrench。",
+        "source": {
+          "url": "https://arxiv.org/html/2410.07554v2",
+          "locator": "§III-C；§IV-A/B；Table I；Figs.5–6"
+        }
       },
       "screening": {
         "grade": "A",
@@ -5357,6 +6006,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋自适应夹爪",
+        "robotModel": "Flexiv Rizon",
+        "effectorModel": "Dahuan AG95",
+        "forceBrief": "六维力／力矩历史",
+        "forceDetail": "OptoForce 测量的末端三维力＋三维力矩时间序列。",
+        "source": {
+          "url": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -5444,6 +6104,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋触觉夹爪",
+        "robotModel": "Franka FR3",
+        "effectorModel": "Actuated UMI 夹爪＋GelSight Mini",
+        "forceBrief": "触觉图像→力分布／总法向夹持力",
+        "forceDetail": "GelSight Mini 经 FEATS 估计接触力分布与总法向夹持力；总夹持力标量不是腕部六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -5525,6 +6196,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指夹爪",
+        "robotModel": "xArm7",
+        "effectorModel": "双指夹爪型号未核实；单个 AnySkin",
+        "forceBrief": "磁触觉读数",
+        "forceDetail": "磁传感原始向量；不是标定后的六维力／力矩。",
+        "source": {
+          "url": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4"
+        }
       },
       "screening": {
         "grade": "C",
@@ -5608,6 +6290,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋双指夹爪",
+        "robotModel": "xArm7",
+        "effectorModel": "双指夹爪型号未核实；AnySkin",
+        "forceBrief": "15维磁场读数",
+        "forceDetail": "5个三轴磁传感器，共15个磁场分量；不是15维接触力。",
+        "source": {
+          "url": "https://arxiv.org/html/2409.08276v3",
+          "locator": "§V-B/D；Tables II–IV；Fig.6"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -5690,6 +6383,17 @@
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
       "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋灵巧手",
+        "robotModel": "Franka 7自由度机械臂；具体型号未核实",
+        "effectorModel": "Allegro 灵巧手＋Xela uSkin",
+        "forceBrief": "分布式磁触觉＋运动学状态",
+        "forceDetail": "uSkin 磁触觉观测与关节等历史；具体触觉通道数待核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.1–4.2；Table 1；Fig.7"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -5773,6 +6477,17 @@
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
       "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。",
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋灵巧手",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "Allegro 灵巧手＋Digit 360",
+        "forceBrief": "触觉图像＋音频／IMU／压力",
+        "forceDetail": "Digit 360 多模态指尖触觉信号；不合并标注为腕部六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Figs.5–7"
+        }
+      },
       "screening": {
         "grade": "C",
         "label": "待观察",
@@ -5858,6 +6573,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "relatedRepo": "https://github.com/YingYuan0414/in-hand-rotation",
+      "physicalProfile": {
+        "embodimentBrief": "灵巧手",
+        "robotModel": "不以统一机械臂型号为前提",
+        "effectorModel": "Allegro（16自由度）",
+        "forceBrief": "16点二值接触信号",
+        "forceDetail": "全手 FSR 信号转为二值接触状态，结合关节状态；不是连续力值或六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V-A–E；Figs.6–8"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -5940,6 +6666,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "灵巧手＋视觉",
+        "robotModel": "机械臂型号未核实",
+        "effectorModel": "Allegro 灵巧手；RealSense D435 为相机",
+        "forceBrief": "全向指尖触觉＋深度／本体状态",
+        "forceDetail": "指尖触觉配合深度与关节状态；触觉原始通道形式仍待核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2309.09979v1",
+          "locator": "§4–5；Table 1；Fig.6；§5.4真机"
+        }
       },
       "screening": {
         "grade": "H",
@@ -6026,6 +6763,17 @@
         "matchStatus": "arXiv DOI + 标题一致"
       },
       "repoNote": "IsaacGymEnvs的TacSL分支，通用平台仓库的Stars不归为TacSL独立关注度。",
+      "physicalProfile": {
+        "embodimentBrief": "仿真／真机单臂＋触觉夹爪",
+        "robotModel": "Isaac Gym 中的 Franka；真机配置另计",
+        "effectorModel": "GelSight 触觉夹爪；夹爪型号未核实",
+        "forceBrief": "仿真触觉 RGB／接触力场",
+        "forceDetail": "仿真生成触觉图像与接触力场；真机光学触觉图像需与仿真观测分开看。",
+        "source": {
+          "url": "https://arxiv.org/html/2408.06506v2",
+          "locator": "§VI；Fig.12；Appendix C Table IX"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -6109,6 +6857,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "仿真单臂＋触觉夹爪",
+        "robotModel": "Isaac Gym / TacSL 中的 Franka",
+        "effectorModel": "GelSight 触觉夹爪；夹爪型号未核实",
+        "forceBrief": "触觉 RGB 或法向／剪切力场",
+        "forceDetail": "分别评测 TacRGB 与分布式接触力场 TacFF；力场不是单个腕部六维 wrench。",
+        "source": {
+          "url": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV-A–D；Table II–V；Appendix A/B"
+        }
+      },
       "screening": {
         "grade": "B",
         "label": "补充参考",
@@ -6190,6 +6949,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "仿真机械臂＋触觉探头",
+        "robotModel": "PyBullet；Dobot MG400（4自由度）等配置",
+        "effectorModel": "TacTip / DIGIT / DigiTac 触觉探头",
+        "forceBrief": "仿真触觉图像",
+        "forceDetail": "光学触觉图像用于接触移动控制；没有统一腕部六维 F/T 接口。",
+        "source": {
+          "url": "https://arxiv.org/html/2207.10763v2",
+          "locator": "§III-F；§IV；Tables III–VII"
+        }
       },
       "screening": {
         "grade": "H",
@@ -6273,6 +7043,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "多指手／夹爪的触觉硬件",
+        "robotModel": "随集成平台变化；无统一机器人",
+        "effectorModel": "DIGIT 传感器；手／夹爪型号按实验配置",
+        "forceBrief": "触觉 RGB 图像",
+        "forceDetail": "相机观测软胶接触变形；传感器不是独立机器人执行器，也不直接输出腕部六维力。",
+        "source": {
+          "url": "https://arxiv.org/abs/2005.14679",
+          "locator": "原文Abstract及应用实验（细节待深入核验）"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -6355,6 +7136,17 @@
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
+      "physicalProfile": {
+        "embodimentBrief": "仿真夹爪／多指平台",
+        "robotModel": "PyBullet；多种本体配置",
+        "effectorModel": "DIGIT / OmniTact 等触觉传感器配置",
+        "forceBrief": "仿真触觉 RGB 图像",
+        "forceDetail": "仿真光学触觉图像及相关物理接触信息；具体接口按传感器与环境配置。",
+        "source": {
+          "url": "https://arxiv.org/html/2012.08456v2",
+          "locator": "§IV-A/B；§V；Figs.10–11；Table II"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -6436,6 +7228,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "双臂双向遥操作平台",
+        "robotModel": "Franka / KUKA（不同配置）",
+        "effectorModel": "夹爪型号未核实",
+        "forceBrief": "关节力矩＋夹爪电流反馈",
+        "forceDetail": "关节级力矩与夹爪电流用于遥操作力反馈；不把关节力矩或电流直接称为末端六维力。",
+        "source": {
+          "url": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-B–D；Tables I–II；Appendix XII"
+        }
       },
       "screening": {
         "grade": "A",
@@ -6523,6 +7326,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "移动底盘＋单臂＋双指夹爪",
+        "robotModel": "差速底盘＋Kinova Gen2",
+        "effectorModel": "Robotiq 2F-85",
+        "forceBrief": "六维力／力矩与专家 wrench",
+        "forceDetail": "Robotiq FT300S 的三维力＋三维力矩用于底层导纳等环节；专家 wrench 检索与在线输入应分别理解。",
+        "source": {
+          "url": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Tables I–II；Fig.5"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -6603,6 +7417,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "单臂接触操作平台",
+        "robotModel": "Franka Panda",
+        "effectorModel": "末端执行器型号未核实",
+        "forceBrief": "内部／外部六维 wrench＋末端速度",
+        "forceDetail": "内部、外部各六维力／力矩，加六维末端速度构成18维观测；18维并非全部都是力。",
+        "source": {
+          "url": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        }
       },
       "screening": {
         "grade": "H",
@@ -6685,6 +7510,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "机械臂＋接触工具",
+        "robotModel": "真机型号未核实；另有 robosuite 仿真",
+        "effectorModel": "工具型号未核实",
+        "forceBrief": "外部 wrench 估计",
+        "forceDetail": "接触力／力矩估计与末端状态；具体力向量维数待核实。",
+        "source": {
+          "url": "https://arxiv.org/html/2110.09904v2",
+          "locator": "§V-A/B；Fig.2–3；Table I"
+        }
       },
       "screening": {
         "grade": "H",
@@ -6769,6 +7605,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂＋接触工具",
+        "robotModel": "FANUC LR Mate 200iD/7L",
+        "effectorModel": "接触工具；型号未核实",
+        "forceBrief": "示教期六维 F/T；在线位置／速度反馈",
+        "forceDetail": "六维力／力矩用于示教；在线策略使用位置误差、速度等，不能归为持续输入六维力的策略。",
+        "source": {
+          "url": "https://arxiv.org/html/2102.06838v1",
+          "locator": "§IV-A/B；Tables I–V；Conclusion limitations"
+        }
+      },
       "screening": {
         "grade": "H",
         "label": "前序参考",
@@ -6850,6 +7697,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "多本体软磁触觉硬件",
+        "robotModel": "随集成平台变化；无统一机器人",
+        "effectorModel": "ReSkin 软磁触觉皮肤；非统一执行器",
+        "forceBrief": "磁场读数",
+        "forceDetail": "磁传感器感知软皮肤形变；原始磁场不是直接标定的末端六维 F/T。",
+        "source": {
+          "url": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读"
+        }
       },
       "screening": {
         "grade": "H",
@@ -6944,6 +7802,17 @@
         "googleScholar": null,
         "matchStatus": "arXiv DOI + title matched"
       },
+      "physicalProfile": {
+        "embodimentBrief": "单臂／双臂＋触觉夹爪",
+        "robotModel": "Flexiv Rizon",
+        "effectorModel": "Grav 夹爪；GelSight Mini / MCT 触觉配置",
+        "forceBrief": "触觉图像；力版本用估计六维 wrench",
+        "forceDetail": "不同版本分别使用触觉图像／形变或估计末端六维力／力矩；按具体模型配置区分，不能认为同时输入全部信号。",
+        "source": {
+          "url": "https://arxiv.org/html/2503.02881v1",
+          "locator": "§IV-A、§V、Appendix E；官网Tables II–IV"
+        }
+      },
       "screening": {
         "grade": "A",
         "label": "优先考察",
@@ -7021,6 +7890,17 @@
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + title matched"
+      },
+      "physicalProfile": {
+        "embodimentBrief": "低成本双臂＋软双指夹爪",
+        "robotModel": "低成本双臂平台；具体型号未核实",
+        "effectorModel": "软双指夹爪；具体型号未核实",
+        "forceBrief": "四块16×16压力阵列",
+        "forceDetail": "双臂各两指，共4块压力阵列，合计1024个法向压力测点；不是腕部六维 F/T。",
+        "source": {
+          "url": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§3.1、实验章节；官网Capability Experiments"
+        }
       },
       "screening": {
         "grade": "B",
