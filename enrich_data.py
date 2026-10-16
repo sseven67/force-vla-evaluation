@@ -197,4 +197,5 @@ def enrich(data):
         profile=profiles.get(w['id'],dict(embodimentBrief='本体类型待核实',robotModel=w['platform'],effectorModel='末端执行器型号未核实',forceBrief='原始信号形式待核实',forceDetail=w['signal']))
         w['physicalProfile']={**profile, 'source':forms['sourceOverrides'].get(w['id'],dict(url=w['source'],locator='；'.join(w['locators'])))}
     from selection import apply_selection
-    return apply_selection(data)
+    from taxonomy import apply_taxonomy
+    return apply_taxonomy(apply_selection(data))

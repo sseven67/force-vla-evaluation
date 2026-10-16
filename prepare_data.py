@@ -10,13 +10,6 @@ SOURCE = ROOT.parent
 DIST = ROOT / 'public'
 DIST.mkdir(exist_ok=True)
 
-GROUPS = [
-    dict(id='wrist', name='末端力与力矩', color='#24768c', subtitle='腕部 wrench、目标力与快速接触纠偏'),
-    dict(id='touch', name='指尖力与触觉', color='#7562a9', subtitle='夹持、接触分布、力语言与多模态表示'),
-    dict(id='dex', name='灵巧手与基础策略', color='#377b60', subtitle='多指协作、跨传感器与规模化触觉学习'),
-    dict(id='body', name='全身与专用工具', color='#ab7238', subtitle='移动接触、身体补偿与探头交互'),
-    dict(id='related', name='相关路线与评测框架', color='#63738a', subtitle='关节扭矩、蒸馏、世界模型与统一评测'),
-]
 
 # id, name, year, family, signal, role, platform, short contribution, tasks, metrics
 ROWS = [
@@ -244,7 +237,7 @@ for p in sorted(SOURCE.glob('*.md')):
     documents.append(dict(name=p.stem,url='documents/'+p.name))
 
 from enrich_data import enrich
-data=enrich(dict(updated='2026-10-15',groups=GROUPS,works=works,benchmarks=benchmarks,extraRelations=EXTRA,features=FEATURES,documents=documents))
+data=enrich(dict(updated='2026-10-15',groups=[],works=works,benchmarks=benchmarks,extraRelations=EXTRA,features=FEATURES,documents=documents))
 (DIST/'data.js').write_text('window.RESEARCH_DATA = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 (DIST/'catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(works=len(works),benchmarks=len(benchmarks),sources=len(documents),missingNotes=[w['id'] for w in works if not w['notes']]),ensure_ascii=False))

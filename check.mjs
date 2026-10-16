@@ -3,6 +3,20 @@ import assert from 'node:assert/strict';
 const d=JSON.parse(fs.readFileSync('public/catalogue.json','utf8'));
 assert.ok(d.works.length>=75);
 const ids=new Set(d.works.map(w=>w.id));assert.equal(ids.size,d.works.length);
+const categories=new Set(d.groups.map(g=>g.id));
+assert.equal(categories.size,4,'Exactly four paper categories');
+for(const w of d.works){
+ assert.equal('family' in w,false,'Remove legacy exclusive classification');
+ assert.ok(w.categories.every(id=>categories.has(id)),w.id+': unknown category');
+ assert.equal(w.categories.length===0,w.resourceOnly,w.id+': resources stay outside paper categories');
+ assert.equal(w.categories.length,new Set(w.categories).size,w.id+': duplicate membership');
+}
+assert.deepEqual(d.works.find(w=>w.id==='E05').categories,['dexterous'],'Finger 6D force is not wrist 6D');
+assert.deepEqual(d.works.find(w=>w.id==='W11').categories,['gripper-touch'],'Two 3D fingertip forces are not wrist 6D');
+assert.deepEqual(d.works.find(w=>w.id==='R01').categories,['gripper-wrench','gripper-touch']);
+assert.deepEqual(d.works.find(w=>w.id==='C16').categories,['gripper-wrench','other']);
+assert.ok(d.works.find(w=>w.id==='W14').classificationNote.includes('部署时不读取'));
+assert.ok(d.works.find(w=>w.id==='T07').resourceOnly);
 const benches=new Set(d.benchmarks.map(b=>b.id)), tasks=new Set(d.taskTypes.map(t=>t.id));
 for(const w of d.works){
  for(const k of ['tasks','purpose','metrics','trials','baseline','openness','source','kind','sensorOrigin','actionOutput','actionMode'])assert.ok(w[k],w.id+': '+k);
