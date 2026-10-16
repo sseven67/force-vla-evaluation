@@ -1,0 +1,20 @@
+{
+  "updated":"2026-10-16",
+  "window":{"start":"2024-10-16","end":"2026-10-16","label":"近两年：2024-10-16 至 2026-10-16"},
+  "rules":{
+    "A":"在时间范围内，且官方仓库Stars≥100，或OpenAlex收录引用≥20，或Stars≥50且收录引用≥10。共享仓库数值不用于单篇入选。",
+    "B":"在时间范围内，有已核实正式发表，或Stars≥50，或OpenAlex收录引用≥10，但未达到A门槛。",
+    "C":"时间范围内，当前关注证据不足或缺失：待观察，不推断论文不可靠。",
+    "H":"时间范围外的前序参考；日期缺失导致不能判定时单独标记。"
+  },
+  "limitations":["这些数值门槛是本轮调研的阅读筛选规则，不是领域公认质量标准，也不是论文可靠性评分。","OpenAlex计数有索引与版本合并滞后；0与未知均不能推出无人引用。未取得Google Scholar计数。","Stars/Forks不等于真实部署量；不同仓库与发布时长影响计数。","正式发表、被列为基线或公开代码均不等同已独立复现；实验可信性仍需读协议和对照。"],
+  "publicationEvidence":{
+    "W01":{"venue":"NeurIPS 2025","year":2025,"source":"https://papers.nips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf"},
+    "W02":{"venue":"CVPR 2026","year":2026,"source":"https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf"},
+    "C01":{"venue":"ICRA 2025","year":2025,"source":"https://forcemimic.github.io/","note":"预印本2024-10-10，按范围内正式发表2025纳入。"},
+    "C02":{"venue":"RA-L 2025","year":2025,"date":"2025-04-14","source":"https://ieeexplore.ieee.org/document/10964857/"},
+    "C15":{"venue":"RSS 2025","year":2025,"source":"https://roboticsproceedings.org/rss21/p079.html"},
+    "R01":{"venue":"RSS 2025","year":2025,"source":"https://roboticsproceedings.org/rss21/p052.html"},
+    "R02":{"venue":"CoRL 2024","year":2024,"source":"https://binghao-huang.github.io/3D-ViTac/"}
+  }
+}

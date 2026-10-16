@@ -1,0 +1,36 @@
+{
+  "works": [
+    {
+      "workId": "R01",
+      "title": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+      "arxiv": "2503.02881",
+      "github": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy",
+      "citations": 45,
+      "stars": 390,
+      "forks": 30,
+      "date": "2026-10-16",
+      "provider": "OpenAlex",
+      "errors": [],
+      "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2503.02881",
+      "citationRecord": "https://openalex.org/W4414050525",
+      "matchStatus": "arXiv DOI + title matched",
+      "githubSource": "https://api.github.com/repos/xiaoxiaoxh/reactive_diffusion_policy"
+    },
+    {
+      "workId": "R02",
+      "title": "3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing",
+      "arxiv": "2410.24091",
+      "github": "https://github.com/binghao-huang/3d-vitac-training-code",
+      "citations": 2,
+      "stars": 10,
+      "forks": 0,
+      "date": "2026-10-16",
+      "provider": "OpenAlex",
+      "errors": [],
+      "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.24091",
+      "citationRecord": "https://openalex.org/W4404348677",
+      "matchStatus": "arXiv DOI + title matched",
+      "githubSource": "https://api.github.com/repos/binghao-huang/3d-vitac-training-code"
+    }
+  ]
+}

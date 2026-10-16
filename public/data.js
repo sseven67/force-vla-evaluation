@@ -116,7 +116,22 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/ft-robotic/ForceVLA"
+      "github": "https://github.com/ft-robotic/ForceVLA",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 113 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）；正式发表 NeurIPS 2025",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2505.22159",
+        "publication": {
+          "venue": "NeurIPS 2025",
+          "year": 2025,
+          "source": "https://papers.nips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf"
+        },
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W02",
@@ -195,7 +210,22 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "已核实 CVPR 2026；当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）；正式发表 CVPR 2026",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2603.15169",
+        "publication": {
+          "venue": "CVPR 2026",
+          "year": 2026,
+          "source": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf"
+        },
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W03",
@@ -274,7 +304,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2602.23648",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W04",
@@ -347,7 +388,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.12105",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W05",
@@ -432,7 +484,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.05832",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W06",
@@ -512,7 +575,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.18497",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W07",
@@ -591,7 +665,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.18242",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W08",
@@ -670,7 +755,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.22840",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W09",
@@ -730,7 +826,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2507.09160",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W10",
@@ -790,7 +897,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/mrHuangyz/TaF-VLA"
+      "github": "https://github.com/mrHuangyz/TaF-VLA",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2601.20321",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W11",
@@ -850,7 +968,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/NathanWu7/Tabero"
+      "github": "https://github.com/NathanWu7/Tabero",
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2605.27886",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W12",
@@ -910,7 +1039,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.09337",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W13",
@@ -970,7 +1110,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/ZZongzheng0918/TA-VLA"
+      "github": "https://github.com/ZZongzheng0918/TA-VLA",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 123 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2509.07962",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W14",
@@ -1030,7 +1181,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2602.02142",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W15",
@@ -1090,7 +1252,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2604.23272",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W16",
@@ -1150,7 +1323,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "原始来源标题一致；引用未取得"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://compvla.github.io/",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W17",
@@ -1210,7 +1394,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/JokerESC/ForceFlow"
+      "github": "https://github.com/JokerESC/ForceFlow",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2605.11048",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "W18",
@@ -1270,7 +1465,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.08555",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E01",
@@ -1330,7 +1536,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/fuse-model/FuSe"
+      "github": "https://github.com/fuse-model/FuSe",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "72 Stars 且 14 收录引用，满足双证据门槛",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2501.04693",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E02",
@@ -1391,7 +1608,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2505.09577",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E03",
@@ -1459,7 +1687,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/michaelyuancb/ftp1-policy"
+      "github": "https://github.com/michaelyuancb/ftp1-policy",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 133 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.13102",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E04",
@@ -1534,7 +1773,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/neoteai/N0-VTLA"
+      "github": "https://github.com/neoteai/N0-VTLA",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 197 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2607.23782",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E05",
@@ -1594,7 +1844,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/ZhuoyangLiu2005/T-Rex"
+      "github": "https://github.com/ZhuoyangLiu2005/T-Rex",
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 340 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.17055",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E06",
@@ -1654,7 +1915,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.12549",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E07",
@@ -1714,7 +1986,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2603.12665",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E08",
@@ -1774,7 +2057,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2609.03889",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E09",
@@ -1835,7 +2129,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "原始来源标题一致；引用未取得"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://opt2vla.github.io/",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E10",
@@ -1895,7 +2200,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/VMVLab/ForceU-VLA"
+      "github": "https://github.com/VMVLab/ForceU-VLA",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2608.15009",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E11",
@@ -1955,7 +2271,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2503.08548",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "E12",
@@ -2015,7 +2342,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/MrSecant/OmniVTA"
+      "github": "https://github.com/MrSecant/OmniVTA",
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2603.19201",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "B01",
@@ -2076,7 +2414,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "原始来源标题一致；引用未取得"
       },
-      "github": null
+      "github": null,
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2610.19604",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "X01",
@@ -2144,7 +2493,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "github": "https://github.com/ccyydd/SimpleTouch"
+      "github": "https://github.com/ccyydd/SimpleTouch",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2610.02784",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "P01",
@@ -2247,6 +2607,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2608.01402",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2323,6 +2694,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "引用未取得"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2610.19155",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2401,6 +2783,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2603.15257",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2493,6 +2886,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2610.14854",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2573,6 +2977,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.04825",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2668,6 +3083,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2507.17294",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2762,6 +3188,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2508.08706",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2855,6 +3292,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2605.07308",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -2951,6 +3399,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2610.10384",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3041,6 +3500,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "引用未取得"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://dt-tacvla.github.io/",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3134,6 +3604,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2512.23864",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3228,7 +3709,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "actionMode": "评测 / 仿真接口（非策略）"
+      "actionMode": "评测 / 仿真接口（非策略）",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2602.10093",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "short": "Sparsh / TacBench",
@@ -3324,6 +3816,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 225 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开 2024-10-31",
+        "firstPublicDate": "2024-10-31",
+        "dateSource": "https://arxiv.org/abs/2410.24090",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3418,6 +3921,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-01-31",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-01-31",
+        "firstPublicDate": "2024-01-31",
+        "dateSource": "https://arxiv.org/abs/2401.18084",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3510,6 +4024,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2502.12191",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3604,6 +4129,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-05-05",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-05-05",
+        "firstPublicDate": "2024-05-05",
+        "dateSource": "https://arxiv.org/abs/2405.02794",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3699,6 +4235,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-02-20",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-02-20",
+        "firstPublicDate": "2024-02-20",
+        "dateSource": "https://arxiv.org/abs/2402.13232",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3794,6 +4341,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-06-19",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-06-19",
+        "firstPublicDate": "2024-06-19",
+        "dateSource": "https://arxiv.org/abs/2406.13640",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3886,6 +4444,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2022（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2022（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2211.12498",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -3980,6 +4549,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-03-18",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-03-18",
+        "firstPublicDate": "2024-03-18",
+        "dateSource": "https://arxiv.org/abs/2403.11898",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4074,6 +4654,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2506.13762",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4167,6 +4758,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2606.14981",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4263,6 +4865,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 121 Stars ≥100",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2506.15953",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4359,6 +4972,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2026（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2602.09617",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4455,6 +5079,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2022（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2022（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2212.03858",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4552,6 +5187,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-06-27",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-06-27",
+        "firstPublicDate": "2024-06-27",
+        "dateSource": "https://arxiv.org/abs/2406.19464",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4623,6 +5269,22 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "OpenAlex收录引用 26 ≥20",
+        "inWindow": true,
+        "timeBasis": "首次公开 2024-10-10；正式发表 ICRA 2025",
+        "firstPublicDate": "2024-10-10",
+        "dateSource": "https://arxiv.org/abs/2410.07554",
+        "publication": {
+          "venue": "ICRA 2025",
+          "year": 2025,
+          "source": "https://forcemimic.github.io/",
+          "note": "预印本2024-10-10，按范围内正式发表2025纳入。"
+        },
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4694,6 +5356,22 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "70 Stars 且 14 收录引用，满足双证据门槛",
+        "inWindow": true,
+        "timeBasis": "首次公开 2024-11-24；正式发表 RA-L 2025",
+        "firstPublicDate": "2024-11-24",
+        "dateSource": "https://arxiv.org/abs/2411.15753",
+        "publication": {
+          "venue": "RA-L 2025",
+          "year": 2025,
+          "date": "2025-04-14",
+          "source": "https://ieeexplore.ieee.org/document/10964857/"
+        },
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4765,6 +5443,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2510.13324",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4836,6 +5525,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开 2024-10-22",
+        "firstPublicDate": "2024-10-22",
+        "dateSource": "https://arxiv.org/abs/2410.17246",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4907,6 +5607,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-09-12",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-09-12",
+        "firstPublicDate": "2024-09-12",
+        "dateSource": "https://arxiv.org/abs/2409.08276",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -4978,7 +5689,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
-      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。"
+      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2505.11420",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "C07",
@@ -5050,7 +5772,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
       },
-      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。"
+      "repoNote": "Sparsh-skin / Sparsh-X 共享官方仓库，不把计数相加。",
+      "screening": {
+        "grade": "C",
+        "label": "待观察",
+        "reason": "现有关注数值不足或缺失，尚未达到本轮筛选门槛；不据此判为不可靠。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2506.14754",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "C08",
@@ -5124,7 +5857,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "relatedRepo": "https://github.com/YingYuan0414/in-hand-rotation"
+      "relatedRepo": "https://github.com/YingYuan0414/in-hand-rotation",
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2023（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2023（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2303.10880",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "C09",
@@ -5196,6 +5940,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2023（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2023（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2309.09979",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5270,7 +6025,18 @@ window.RESEARCH_DATA = {
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
       },
-      "repoNote": "IsaacGymEnvs的TacSL分支，通用平台仓库的Stars不归为TacSL独立关注度。"
+      "repoNote": "IsaacGymEnvs的TacSL分支，通用平台仓库的Stars不归为TacSL独立关注度。",
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-08-12",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-08-12",
+        "firstPublicDate": "2024-08-12",
+        "dateSource": "https://arxiv.org/abs/2408.06506",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
     },
     {
       "id": "C11",
@@ -5342,6 +6108,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2505.18472",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5413,6 +6190,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2022（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2022（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2207.10763",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5484,6 +6272,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2020（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2020（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2005.14679",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5555,6 +6354,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2020（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2020（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2012.08456",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5626,6 +6436,21 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "85 Stars 且 17 收录引用，满足双证据门槛",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）；正式发表 RSS 2025",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2502.17432",
+        "publication": {
+          "venue": "RSS 2025",
+          "year": 2025,
+          "source": "https://roboticsproceedings.org/rss21/p079.html"
+        },
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5697,6 +6522,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2023（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2023（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2308.03624",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5767,6 +6603,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开 2024-09-17",
+        "inWindow": false,
+        "timeBasis": "首次公开 2024-09-17",
+        "firstPublicDate": "2024-09-17",
+        "dateSource": "https://arxiv.org/abs/2409.11047",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5838,6 +6685,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2021（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2021（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2110.09904",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5910,6 +6768,17 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "arXiv DOI + 标题一致"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2021（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2021（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2102.06838",
+        "publication": null,
+        "asOf": "2026-10-16"
       }
     },
     {
@@ -5981,6 +6850,192 @@ window.RESEARCH_DATA = {
         "provider": "OpenAlex",
         "googleScholar": null,
         "matchStatus": "沿已核实官方链接抓取GitHub API"
+      },
+      "screening": {
+        "grade": "H",
+        "label": "前序参考",
+        "reason": "按当前已核实日期列为前序；后续补核实正式发表日期可能调整。首次公开年份 2021（具体日期未抽取）",
+        "inWindow": false,
+        "timeBasis": "首次公开年份 2021（具体日期未抽取）",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2111.00071",
+        "publication": null,
+        "asOf": "2026-10-16"
+      }
+    },
+    {
+      "id": "R01",
+      "name": "Reactive Diffusion Policy / RDP",
+      "fullTitle": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+      "year": 2025,
+      "family": "wrist",
+      "kind": "基础策略（非VLA）",
+      "arxiv": "2503.02881",
+      "github": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy",
+      "project": "https://reactive-diffusion-policy.github.io/",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "publication": "RSS 2025；Best Student Paper Finalist（官方项目）",
+      "signal": "GelSight Mini、MCTac；另测机器人内部估计6D wrench",
+      "sensorOrigin": "机器人内部估计 / 关节力矩",
+      "role": "快速反馈",
+      "platform": "Flexiv Rizon + Grav夹爪；含双臂",
+      "actionOutput": "慢策略动作潜变量＋快触觉/力解码，输出运动动作",
+      "summary": "较早系统评测快慢触觉/六维力反馈，包含扰动与加工质量，适合作为VLA评测的相邻参照。",
+      "purpose": "在同一任务上区分无扰动、接触前扰动和接触后扰动，并比较不同传感器。",
+      "tasks": "削黄瓜、擦花瓶、双臂夹持提纸杯",
+      "metrics": "削皮长度归一化质量分；擦拭残留0/0.5/1；夹持/提起成功率与无压坏质量分",
+      "trials": "削皮/擦拭各三条件×10次；双臂提杯软/硬各10次。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "DP、DP+触觉图/embedding、时间集成/短chunk；GelSight/MCTac/Force配置与采集反馈对照。",
+      "warning": "非语言VLA；包含6D wrench版本但不等于六轴目标力跟踪；质量分不同于二元成功率。",
+      "openness": {
+        "status": "代码、数据与模型入口",
+        "url": "https://reactive-diffusion-policy.github.io/",
+        "note": "官方页面提供RDP、TactAR、HF数据与模型；未在本机运行真机部署。"
+      },
+      "locators": [
+        "§IV-A、§V、Appendix E",
+        "官网Tables II–IV"
+      ],
+      "experiments": [
+        {
+          "task": "削皮",
+          "purpose": "高频反馈能否应对接触丢失",
+          "metric": "归一化削皮长度质量分",
+          "setting": "无扰动/接触前/接触后扰动各10次",
+          "success": "以加工比例评分，不压成单一二元成功率",
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "Task1、Table II"
+        },
+        {
+          "task": "擦花瓶",
+          "purpose": "曲面跟随及扰动恢复",
+          "metric": "擦除质量0/0.5/1",
+          "setting": "三种条件各10次",
+          "success": "人类示教残留水平为1；轻微残留0.5；显著残留0",
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "Task2、Table III"
+        }
+      ],
+      "notes": "自建三任务真实评测。官方RSS2025与代码入口均可追溯。Force版本输入6D wrench，但仍输出运动动作。",
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-r01",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 45,
+        "stars": 390,
+        "forks": 30,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2503.02881",
+        "citationRecord": "https://openalex.org/W4414050525",
+        "githubSource": "https://api.github.com/repos/xiaoxiaoxh/reactive_diffusion_policy",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + title matched"
+      },
+      "screening": {
+        "grade": "A",
+        "label": "优先考察",
+        "reason": "官方仓库 390 Stars ≥100；OpenAlex收录引用 45 ≥20",
+        "inWindow": true,
+        "timeBasis": "首次公开年份 2025（具体日期未抽取）；正式发表 RSS 2025",
+        "firstPublicDate": null,
+        "dateSource": "https://arxiv.org/abs/2503.02881",
+        "publication": {
+          "venue": "RSS 2025",
+          "year": 2025,
+          "source": "https://roboticsproceedings.org/rss21/p052.html"
+        },
+        "asOf": "2026-10-16"
+      }
+    },
+    {
+      "id": "R02",
+      "name": "3D-ViTac",
+      "fullTitle": "3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing",
+      "year": 2024,
+      "family": "touch",
+      "kind": "基础策略（非VLA）",
+      "arxiv": "2410.24091",
+      "github": "https://github.com/binghao-huang/3d-vitac-training-code",
+      "project": "https://binghao-huang.github.io/3D-ViTac/",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "publication": "CoRL 2024",
+      "signal": "夹爪四片16×16压阻触觉阵列，与视觉点云对齐",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "role": "触觉反馈",
+      "platform": "低成本双臂＋柔性触觉夹爪",
+      "actionOutput": "3D视触觉条件Diffusion Policy动作；无语言条件",
+      "summary": "以易碎物和手内调整评估3D视触觉融合，是相关操作评测的前序参照。",
+      "purpose": "比较视觉、触觉图与空间对齐表示对无损操作、遮挡与手内调整的作用。",
+      "tasks": "鸡蛋搬放/蒸蛋流程、水果准备、六角扳手手内调整与插入、三明治制作",
+      "metrics": "任务/分阶段完成表现；具体分数与分母需逐表进一步抽取",
+      "trials": "本轮未核实每任务完整试验分母，不以示教数替代测试次数。",
+      "domains": [
+        "真机"
+      ],
+      "scope": "扩展相关",
+      "baseline": "视觉基线、RGB+触觉图、对齐视触觉点；去触觉及对象/几何变化对照。",
+      "warning": "主要测局部法向压力，不是腕部6D wrench；是非VLA前序。",
+      "openness": {
+        "status": "训练代码与硬件资源入口",
+        "url": "https://binghao-huang.github.io/3D-ViTac/",
+        "note": "官方页面链接方法代码、硬件代码、制作指南和材料表；未完整复现。"
+      },
+      "locators": [
+        "§3.1、实验章节",
+        "官网Capability Experiments"
+      ],
+      "experiments": [],
+      "notes": "CoRL2024自建双臂任务。源于官方项目与论文；不能将触觉压力阵列冒充六轴力传感器，也不虚填未核实测试分母。",
+      "evidence": "论文 / 项目核查",
+      "relations": [
+        {
+          "benchmark": "suite-r02",
+          "type": "self",
+          "label": "论文评测方案",
+          "domain": "真机",
+          "note": "使用关系见原文，不能自动认定复用统一benchmark。"
+        }
+      ],
+      "actionMode": "力辅助运动 / 预测",
+      "attention": {
+        "citations": 2,
+        "stars": 10,
+        "forks": 0,
+        "citationSource": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.24091",
+        "citationRecord": "https://openalex.org/W4404348677",
+        "githubSource": "https://api.github.com/repos/binghao-huang/3d-vitac-training-code",
+        "date": "2026-10-16",
+        "provider": "OpenAlex",
+        "googleScholar": null,
+        "matchStatus": "arXiv DOI + title matched"
+      },
+      "screening": {
+        "grade": "B",
+        "label": "补充参考",
+        "reason": "已核实 CoRL 2024；当前关注证据未达到优先考察门槛，保留定向阅读。",
+        "inWindow": true,
+        "timeBasis": "首次公开 2024-10-31；正式发表 CoRL 2024",
+        "firstPublicDate": "2024-10-31",
+        "dateSource": "https://arxiv.org/abs/2410.24091",
+        "publication": {
+          "venue": "CoRL 2024",
+          "year": 2024,
+          "source": "https://binghao-huang.github.io/3D-ViTac/"
+        },
+        "asOf": "2026-10-16"
       }
     }
   ],
@@ -7141,6 +8196,35 @@ window.RESEARCH_DATA = {
       "tasks": [
         "接触/力定位",
         "不同皮肤实例与长期使用表征；多种实际感知展示"
+      ]
+    },
+    {
+      "id": "suite-r01",
+      "name": "Reactive Diffusion Policy / RDP 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "在同一任务上区分无扰动、接触前扰动和接触后扰动，并比较不同传感器。",
+      "detail": "自建三任务真实评测。官方RSS2025与代码入口均可追溯。Force版本输入6D wrench，但仍输出运动动作。",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "tasks": [
+        "削黄瓜",
+        "擦花瓶",
+        "双臂夹持提纸杯"
+      ]
+    },
+    {
+      "id": "suite-r02",
+      "name": "3D-ViTac 评测方案",
+      "kind": "论文自建任务集",
+      "domain": "真机",
+      "focus": "比较视觉、触觉图与空间对齐表示对无损操作、遮挡与手内调整的作用。",
+      "detail": "CoRL2024自建双臂任务。源于官方项目与论文；不能将触觉压力阵列冒充六轴力传感器，也不虚填未核实测试分母。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "tasks": [
+        "鸡蛋搬放/蒸蛋流程",
+        "水果准备",
+        "六角扳手手内调整与插入",
+        "三明治制作"
       ]
     }
   ],
@@ -10452,6 +11536,76 @@ window.RESEARCH_DATA = {
       "locator": "原文实验章节；本轮核实Abstract及官方硬件资料，细节待深读",
       "level": "已确认任务覆盖；协议见论文级记录",
       "offline": false
+    },
+    {
+      "id": "R01-curved",
+      "work": "R01",
+      "task": "curved",
+      "label": "擦花瓶",
+      "purpose": "曲面跟随及扰动恢复",
+      "success": "人类示教残留水平为1；轻微残留0.5；显著残留0",
+      "metrics": "擦除质量0/0.5/1",
+      "setting": "三种条件各10次",
+      "source": "https://reactive-diffusion-policy.github.io/",
+      "locator": "Task2、Table III",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "R01-peel",
+      "work": "R01",
+      "task": "peel",
+      "label": "削皮",
+      "purpose": "高频反馈能否应对接触丢失",
+      "success": "以加工比例评分，不压成单一二元成功率",
+      "metrics": "归一化削皮长度质量分",
+      "setting": "无扰动/接触前/接触后扰动各10次",
+      "source": "https://reactive-diffusion-policy.github.io/",
+      "locator": "Task1、Table II",
+      "level": "逐实验已抽取",
+      "offline": false
+    },
+    {
+      "id": "R01-grasp",
+      "work": "R01",
+      "task": "grasp",
+      "label": "稳定抓取与滑移",
+      "purpose": "在同一任务上区分无扰动、接触前扰动和接触后扰动，并比较不同传感器。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "削皮长度归一化质量分；擦拭残留0/0.5/1；夹持/提起成功率与无压坏质量分",
+      "setting": "削皮/擦拭各三条件×10次；双臂提杯软/硬各10次。",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "locator": "§IV-A、§V、Appendix E；官网Tables II–IV",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "R02-fragile",
+      "work": "R02",
+      "task": "fragile",
+      "label": "易碎 / 无损抓放",
+      "purpose": "比较视觉、触觉图与空间对齐表示对无损操作、遮挡与手内调整的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/分阶段完成表现；具体分数与分母需逐表进一步抽取",
+      "setting": "本轮未核实每任务完整试验分母，不以示教数替代测试次数。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "§3.1、实验章节；官网Capability Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
+    },
+    {
+      "id": "R02-dex",
+      "work": "R02",
+      "task": "dex",
+      "label": "多指与手内操作",
+      "purpose": "比较视觉、触觉图与空间对齐表示对无损操作、遮挡与手内调整的作用。",
+      "success": "任务级成功判据尚未单独抽取；请核对原文。",
+      "metrics": "任务/分阶段完成表现；具体分数与分母需逐表进一步抽取",
+      "setting": "本轮未核实每任务完整试验分母，不以示教数替代测试次数。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "§3.1、实验章节；官网Capability Experiments",
+      "level": "已确认任务覆盖；协议见论文级记录",
+      "offline": false
     }
   ],
   "attentionMethodology": {
@@ -10462,5 +11616,64 @@ window.RESEARCH_DATA = {
     "missing": "null 是未知/不可得；0 仅在 API 明确返回0时使用",
     "ranking": "同一指标内降序，缺失排最后；不得混合多个提供方计算总分",
     "limits": "OpenAlex 新论文引用更新及版本归并滞后，此值通常低于其他平台，不用于断言论文无人引用。"
+  },
+  "selectionPolicy": {
+    "updated": "2026-10-16",
+    "window": {
+      "start": "2024-10-16",
+      "end": "2026-10-16",
+      "label": "近两年：2024-10-16 至 2026-10-16"
+    },
+    "rules": {
+      "A": "在时间范围内，且官方仓库Stars≥100，或OpenAlex收录引用≥20，或Stars≥50且收录引用≥10。共享仓库数值不用于单篇入选。",
+      "B": "在时间范围内，有已核实正式发表，或Stars≥50，或OpenAlex收录引用≥10，但未达到A门槛。",
+      "C": "时间范围内，当前关注证据不足或缺失：待观察，不推断论文不可靠。",
+      "H": "时间范围外的前序参考；日期缺失导致不能判定时单独标记。"
+    },
+    "limitations": [
+      "这些数值门槛是本轮调研的阅读筛选规则，不是领域公认质量标准，也不是论文可靠性评分。",
+      "OpenAlex计数有索引与版本合并滞后；0与未知均不能推出无人引用。未取得Google Scholar计数。",
+      "Stars/Forks不等于真实部署量；不同仓库与发布时长影响计数。",
+      "正式发表、被列为基线或公开代码均不等同已独立复现；实验可信性仍需读协议和对照。"
+    ],
+    "publicationEvidence": {
+      "W01": {
+        "venue": "NeurIPS 2025",
+        "year": 2025,
+        "source": "https://papers.nips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf"
+      },
+      "W02": {
+        "venue": "CVPR 2026",
+        "year": 2026,
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf"
+      },
+      "C01": {
+        "venue": "ICRA 2025",
+        "year": 2025,
+        "source": "https://forcemimic.github.io/",
+        "note": "预印本2024-10-10，按范围内正式发表2025纳入。"
+      },
+      "C02": {
+        "venue": "RA-L 2025",
+        "year": 2025,
+        "date": "2025-04-14",
+        "source": "https://ieeexplore.ieee.org/document/10964857/"
+      },
+      "C15": {
+        "venue": "RSS 2025",
+        "year": 2025,
+        "source": "https://roboticsproceedings.org/rss21/p079.html"
+      },
+      "R01": {
+        "venue": "RSS 2025",
+        "year": 2025,
+        "source": "https://roboticsproceedings.org/rss21/p052.html"
+      },
+      "R02": {
+        "venue": "CoRL 2024",
+        "year": 2024,
+        "source": "https://binghao-huang.github.io/3D-ViTac/"
+      }
+    }
   }
 };

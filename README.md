@@ -1,6 +1,6 @@
 # Force-VLA Evaluation Atlas
 
-基于 **React 19 + Vite 8** 的中文研究导航网站，沿用现有私有网址。收录78项研究，明确区分VLA/VTLA、相邻控制策略、表示学习与评测/硬件资源。默认展开全部路线，可筛选“末端六维力＋夹爪”主线。
+基于 **React 19 + Vite 8** 的中文研究导航网站，沿用现有私有网址。收录80项研究，明确区分VLA/VTLA、相邻控制策略、表示学习与评测/硬件资源。默认展示近两年内满足关注证据门槛的工作；与六维力＋夹爪的契合度标签单独保留。
 
 四个主页面：论文库、评测任务库、Benchmark库、横向比较。保留研究路线图、评测解释、四份原始文档下载。支持论文卡片/紧凑表格、信号来源与动作接口筛选、引用/Stars/Forks分别排序、任务覆盖矩阵、同任务跨论文协议对照、原文定位，以及浏览器本地收藏和笔记。
 
@@ -31,6 +31,9 @@ dist由Vite生成，不手工修改。部署配置保存在.openai/hosting.json�
 - src/styles.css：桌面/移动端样式。
 - prepare_data.py：读取上级四份调研文档及原始32项结构化数据。
 - enrich_data.py：合并新增研究、关注度记录，生成任务交叉索引。
+- selection.py、research/selection_policy.json：可审查的关注优先规则与正式发表证据。
+- research/publication_dates.json：2024年边界工作首次公开日期及arXiv来源。
+- research/priority_additions.json：本轮补入的RDP与3D-ViTac；priority_attention.json保存对应API数值。
 - research/primary_additions.json：补充的直接VLA研究。
 - research/tactile_additions.json：触觉VLA、语言与表示前序。
 - research/contact_additions.json：力控、灵巧手、硬件与仿真前序。
@@ -43,6 +46,12 @@ dist由Vite生成，不手工修改。部署配置保存在.openai/hosting.json�
 experiments数组可填写task、purpose、metric、setting、success、locator、source，为同任务跨论文页提供具体协议。只有论文级信息的记录会明确显示“任务覆盖已确认，协议待抽取”，不会自动补齐成功判据。
 
 ## 计数与证据口径
+
+近两年按2024-10-16至2026-10-16筛选，首次公开或已核实正式发表落在范围内均可纳入。ForceMimic预印本较早，但ICRA2025正式发表，仍在范围内；日期依据在详情单列。旧资料保留为前序参考。
+
+本轮自定阅读门槛：范围内的官方仓库Stars≥100，或OpenAlex收录引用≥20，或Stars≥50且收录引用≥10，标为“优先考察”；未达此门槛但有正式发表或部分关注证据，标为“补充参考”；关注不足或未知，标为“待观察”。共享仓库Stars不用于给单篇论文过门槛。该规则不是领域质量标准，不以0引用或缺失计数判定论文不可靠，也不将公开代码/被作基线当作已独立复现。
+
+论文库和任务库默认显示优先考察；可展开全部目录。原先10项“核心相关”仍只是契合度标签，只有同时满足关注门槛者进入“六维力VLA优先”，不固定凑数。
 
 快照日期2026-10-16，原始四份文档为2026-10-15。引用值是 **OpenAlex cited_by_count**，并非Google Scholar或全平台总引用。本轮未取得可核验Google Scholar计数。OpenAlex覆盖、合并和更新滞后可能明显低估引用。GitHub Stars/Forks是关注度代理，不等于真实使用量。共享仓库不重复归为每篇论文的独立影响力。
 

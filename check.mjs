@@ -24,4 +24,13 @@ assert.ok(d.extraRelations.some(r=>r.fromWork==='W01'&&r.toBenchmark==='forceben
 assert.equal(d.works.find(w=>w.id==='C08').attention.stars,null);
 for(const doc of d.documents)assert.ok(fs.existsSync('public/'+doc.url));
 assert.ok(fs.readFileSync('src/main.jsx','utf8').includes('createRoot'));
+assert.ok(d.works.every(w=>w.screening&&['A','B','C','H'].includes(w.screening.grade)));
+assert.equal(d.works.find(w=>w.id==='W01').screening.grade,'A');
+assert.equal(d.works.find(w=>w.id==='W02').screening.grade,'B');
+assert.equal(d.works.find(w=>w.id==='P04').screening.grade,'C');
+assert.equal(d.works.find(w=>w.id==='C01').screening.inWindow,true,'ForceMimic qualifies by ICRA2025 publication');
+assert.equal(d.works.find(w=>w.id==='C13').screening.grade,'H','Older DIGIT hardware must not dominate current priorities');
+assert.equal(d.works.find(w=>w.id==='R01').screening.grade,'A');
+assert.ok(d.works.filter(w=>w.screening.grade==='A').every(w=>w.screening.inWindow));
+assert.equal(d.selectionPolicy.window.start,'2024-10-16');
 console.log(`PASS: ${d.works.length} records, ${d.taskInstances.length} task links, six dimensions, typed methods, attributable counters, directional provenance and documents.`);

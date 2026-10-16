@@ -116,7 +116,7 @@ def enrich(data):
             w['actionOutput']='动作chunk + 目标力chunk + 接触概率；高速导纳控制跟踪目标力'
             w['actionMode']='显式目标力'
             w['locators'].append('§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差')
-    for filename,prefix in [('primary_additions.json','P'),('tactile_additions.json','T'),('contact_additions.json','C')]:
+    for filename,prefix in [('primary_additions.json','P'),('tactile_additions.json','T'),('contact_additions.json','C'),('priority_additions.json','R')]:
         rows=load(filename).get('works',[])
         for i,raw in enumerate(rows,1):
             w=normalise(raw,i,prefix)
@@ -135,7 +135,7 @@ def enrich(data):
             w['actionMode']='显式目标力' if '显式目标力' in w['actionOutput'] and '非显式' not in w['actionOutput'] else '无动作输出' if any(x in w['kind'] for x in ['表示','理解']) else '力辅助运动 / 预测'
             works.append(w)
     attention=load('attention.json'); records=attention.get('works',[])
-    for name in ['attention_new.json','attention_additions.json']:
+    for name in ['attention_new.json','attention_additions.json','priority_attention.json']:
         more=load(name);records.extend(more.get('works',[]) if isinstance(more,dict) else more)
     for w in works:
         candidates=[r for r in records if r.get('workId')==w['id'] or r.get('workId')==w['name'] or (r.get('arxiv') and re.sub(r'v\d+$','',str(r['arxiv']))==w.get('arxiv')) or r.get('title')==w.get('fullTitle')]
@@ -190,4 +190,5 @@ def enrich(data):
     used={i['task'] for i in instances};categories=[t for t in categories if t['id'] in used]
     for t in categories:t.pop('pattern',None)
     data.update(updated=DATE,originalSnapshot='2026-10-15',taskGroups=TASK_GROUPS,taskTypes=categories,taskInstances=instances,attentionMethodology=attention.get('methodology',{}))
-    return data
+    from selection import apply_selection
+    return apply_selection(data)
