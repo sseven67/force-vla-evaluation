@@ -1,0 +1,79 @@
+{
+  "works": [
+    {
+      "workId": "N01",
+      "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+      "arxiv": "2607.18231",
+      "github": "https://github.com/qft-333/FM-VLA",
+      "citations": 0,
+      "stars": 6,
+      "forks": 0,
+      "date": "2026-10-22",
+      "provider": "OpenAlex",
+      "citationSource": "https://api.openalex.org/works/W7169875807",
+      "citationRecord": "https://openalex.org/W7169875807",
+      "githubSource": "https://api.github.com/repos/qft-333/FM-VLA",
+      "matchStatus": "原文标题与arXiv链接匹配；不合并不同发表版本"
+    },
+    {
+      "workId": "N02",
+      "title": "Tactile Modality Fusion for Vision-Language-Action Models",
+      "arxiv": "2603.14604",
+      "github": null,
+      "citations": 0,
+      "stars": null,
+      "forks": null,
+      "date": "2026-10-22",
+      "provider": "OpenAlex",
+      "citationSource": "https://api.openalex.org/works/W7138099466",
+      "citationRecord": "https://openalex.org/W7138099466",
+      "githubSource": null,
+      "matchStatus": "原文标题与arXiv链接匹配；不合并不同发表版本"
+    },
+    {
+      "workId": "N03",
+      "title": "UniTacVLA: Unified Tactile Understanding and Prediction in Vision Language Action Models",
+      "arxiv": "2606.31723",
+      "github": null,
+      "citations": 0,
+      "stars": null,
+      "forks": null,
+      "date": "2026-10-22",
+      "provider": "OpenAlex",
+      "citationSource": "https://api.openalex.org/works/W7166871254",
+      "citationRecord": "https://openalex.org/W7166871254",
+      "githubSource": null,
+      "matchStatus": "原文标题与arXiv链接匹配；不合并不同发表版本"
+    },
+    {
+      "workId": "N04",
+      "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+      "arxiv": "2607.07287",
+      "github": null,
+      "citations": 0,
+      "stars": null,
+      "forks": null,
+      "date": "2026-10-22",
+      "provider": "OpenAlex",
+      "citationSource": "https://api.openalex.org/works/W7167798204",
+      "citationRecord": "https://openalex.org/W7167798204",
+      "githubSource": null,
+      "matchStatus": "原文标题与arXiv链接匹配；不合并不同发表版本"
+    },
+    {
+      "workId": "N05",
+      "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+      "arxiv": "2608.01824",
+      "github": null,
+      "citations": 0,
+      "stars": null,
+      "forks": null,
+      "date": "2026-10-22",
+      "provider": "OpenAlex",
+      "citationSource": "https://api.openalex.org/works/W7172398188",
+      "citationRecord": "https://openalex.org/W7172398188",
+      "githubSource": null,
+      "matchStatus": "原文标题与arXiv链接匹配；不合并不同发表版本"
+    }
+  ]
+}

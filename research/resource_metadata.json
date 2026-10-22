@@ -1,0 +1,813 @@
+{
+  "checked": "2026-10-22",
+  "scholar": {
+    "B01": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=ForceBench%3A+Benchmarking+Force+Integration+for+Robotic+Manipulation",
+      "status": "count-not-displayed",
+      "date": "2026-10-22",
+      "title": "ForceBench: Benchmarking Force Integration for Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "P05": {
+      "count": 5,
+      "source": "https://scholar.google.com/scholar?cites=3431750001436596376",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T08": {
+      "count": 130,
+      "source": "https://scholar.google.com/scholar?cites=9014749620569693014",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T09": {
+      "count": 207,
+      "source": "https://scholar.google.com/scholar?cites=6941724312886999427",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T10": {
+      "count": 89,
+      "source": "https://scholar.google.com/scholar?cites=1315394360175923640",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T11": {
+      "count": 102,
+      "source": "https://scholar.google.com/scholar?cites=15745098623161926696",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T12": {
+      "count": 149,
+      "source": "https://scholar.google.com/scholar?cites=14014622488087069248",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T13": {
+      "count": 108,
+      "source": "https://scholar.google.com/scholar?cites=7776981543618384609",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T14": {
+      "count": 183,
+      "source": "https://scholar.google.com/scholar?cites=12844674276143710165",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Touch and Go: Learning from Human-Collected Vision and Touch",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T19": {
+      "count": 23,
+      "source": "https://scholar.google.com/scholar?cites=12705573214231613011",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C05": {
+      "count": 72,
+      "source": "https://scholar.google.com/scholar?cites=12987846226247269388",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "AnySkin: Plug-and-play Skin Sensing for Robotic Touch",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C10": {
+      "count": 99,
+      "source": "https://scholar.google.com/scholar?cites=6829542848343716553",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "TacSL: A Library for Visuotactile Sensor Simulation and Learning",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C11": {
+      "count": 34,
+      "source": "https://scholar.google.com/scholar?cites=1351092828520372871",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C12": {
+      "count": 91,
+      "source": "https://scholar.google.com/scholar?cites=2563739037257402362",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "Tactile Gym 2.0: Sim-to-real Deep Reinforcement Learning for Comparing Low-cost High-Resolution Robot Touch",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C13": {
+      "count": 985,
+      "source": "https://scholar.google.com/scholar?cites=4872611698340090764",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C14": {
+      "count": 263,
+      "source": "https://scholar.google.com/scholar?cites=5910960976573639700",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "TACTO: A Fast, Flexible, and Open-source Simulator for High-Resolution Vision-based Tactile Sensors",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "C20": {
+      "count": 177,
+      "source": "https://scholar.google.com/scholar?cites=4376570632271114035",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "ReSkin: versatile, replaceable, lasting tactile skins",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "T07": {
+      "count": 27,
+      "source": "https://scholar.google.com/scholar?cites=13008926755849174886",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "taco": {
+      "count": 5,
+      "source": "https://scholar.google.com/scholar?cites=1793417164664098283",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "TacO: Benchmarking Tactile Sensors for Object Manipulation",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "bench2dex": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=Bench2Dex%3A+Benchmarking+Visuo-Tactile+Bimanual+Dexterous+Manipulation+Across+Dexterous+Hands",
+      "status": "count-not-displayed",
+      "date": "2026-10-22",
+      "title": "Bench2Dex: Benchmarking Visuo-Tactile Bimanual Dexterous Manipulation Across Dexterous Hands",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "tactidex": {
+      "count": 4,
+      "source": "https://scholar.google.com/scholar?cites=13371372399870420441",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "TactiDex: A Real-World Tactile-Guided Benchmark for Human-Like Dexterous Manipulation",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "tacverse": {
+      "count": 3,
+      "source": "https://scholar.google.com/scholar?cites=130680415116422454",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "TacVerse: A Multisensor Dataset and Benchmark for Cross-Sensor Vision-Based Tactile Perception",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "libero": {
+      "count": 2245,
+      "source": "https://scholar.google.com/scholar?cites=1396820234644351601",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "maniskill-vitac-2025": {
+      "count": 6,
+      "source": "https://scholar.google.com/scholar?cites=257122011026660744",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "ManiSkill-ViTac 2025: Challenge on Manipulation Skill Learning With Vision and Tactile Sensing",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "n0-foundation": {
+      "count": 4,
+      "source": "https://scholar.google.com/scholar?cites=2195482688521168425",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "N0-Foundation: Towards the Age of Tactile Intelligence",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "robotwin": {
+      "count": 574,
+      "source": "https://scholar.google.com/scholar?cites=2311484535701248068",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "dexjoco": {
+      "count": 20,
+      "source": "https://scholar.google.com/scholar?cites=15465366128433810332",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "visible-touch": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=Visible+Touch%3A+Rendering+Contact+for+Visuomotor+Policies",
+      "status": "count-not-displayed",
+      "date": "2026-10-22",
+      "title": "Visible Touch: Rendering Contact for Visuomotor Policies",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "me-dex": {
+      "count": 1,
+      "source": "https://scholar.google.com/scholar?cites=7862705379098866103",
+      "status": "verified",
+      "date": "2026-10-22",
+      "title": "ME-Dex 1.0: Bringing Heterogeneous Tactile Sensing into World Action Modeling",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    },
+    "tactildm": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=TactiLDM+for+VLA%3A+Learning+Unified+Visual-Text-Tactile+Representations+to+Empower+Vision-Language-Action+Policies",
+      "status": "not-found",
+      "date": "2026-10-22",
+      "title": "TactiLDM for VLA: Learning Unified Visual-Text-Tactile Representations to Empower Vision-Language-Action Policies",
+      "checkedVia": "用户 Edge 浏览器 Google Scholar 搜索结果；匹配标题与论文编号，不累加重复版本。"
+    }
+  },
+  "repositories": {
+    "Abraham190137/TactileACT": {
+      "stars": 49,
+      "forks": 3,
+      "url": "https://github.com/Abraham190137/TactileACT",
+      "source": "https://api.github.com/repos/Abraham190137/TactileACT",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2023-12-12T17:02:48Z"
+    },
+    "Alan-Heoooh/FoAR": {
+      "stars": 70,
+      "forks": 5,
+      "url": "https://github.com/Alan-Heoooh/FoAR",
+      "source": "https://api.github.com/repos/Alan-Heoooh/FoAR",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-12-04T08:09:27Z"
+    },
+    "Bench2Dex/Bench2Dex": {
+      "stars": 93,
+      "forks": 9,
+      "url": "https://github.com/Bench2Dex/Bench2Dex",
+      "source": "https://api.github.com/repos/Bench2Dex/Bench2Dex",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-08-14T04:03:53Z"
+    },
+    "FVL-Repo/OpenViTac": {
+      "stars": 18,
+      "forks": 3,
+      "url": "https://github.com/FVL-Repo/OpenViTac",
+      "source": "https://api.github.com/repos/FVL-Repo/OpenViTac",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-10-06T08:26:20Z"
+    },
+    "ForceMimic/hybridil": {
+      "stars": 49,
+      "forks": 3,
+      "url": "https://github.com/ForceMimic/hybridil",
+      "source": "https://api.github.com/repos/ForceMimic/hybridil",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-02-14T14:27:29Z"
+    },
+    "GeWu-Lab/AnyTouch": {
+      "stars": 97,
+      "forks": 9,
+      "url": "https://github.com/GeWu-Lab/AnyTouch",
+      "source": "https://api.github.com/repos/GeWu-Lab/AnyTouch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-02-06T02:54:58Z"
+    },
+    "GeWu-Lab/AnyTouch2": {
+      "stars": 66,
+      "forks": 6,
+      "url": "https://github.com/GeWu-Lab/AnyTouch2",
+      "source": "https://api.github.com/repos/GeWu-Lab/AnyTouch2",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-01-28T18:02:11Z"
+    },
+    "JokerESC/ForceFlow": {
+      "stars": 13,
+      "forks": 1,
+      "url": "https://github.com/JokerESC/ForceFlow",
+      "source": "https://api.github.com/repos/JokerESC/ForceFlow",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-05-05T06:21:01Z"
+    },
+    "JunzheJosephZhu/see_hear_feel": {
+      "stars": 46,
+      "forks": 2,
+      "url": "https://github.com/JunzheJosephZhu/see_hear_feel",
+      "source": "https://api.github.com/repos/JunzheJosephZhu/see_hear_feel",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2022-01-22T11:13:33Z"
+    },
+    "LannWei/Tactile_Database": {
+      "stars": 3,
+      "forks": 0,
+      "url": "https://github.com/LannWei/Tactile_Database",
+      "source": "https://api.github.com/repos/LannWei/Tactile_Database",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-04-01T15:48:48Z"
+    },
+    "Lifelong-Robot-Learning/LIBERO": {
+      "stars": 2458,
+      "forks": 517,
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "source": "https://api.github.com/repos/Lifelong-Robot-Learning/LIBERO",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2023-04-08T18:58:55Z"
+    },
+    "MachEmbodied/ME-Dex-1.0": {
+      "stars": 23,
+      "forks": 1,
+      "url": "https://github.com/MachEmbodied/ME-Dex-1.0",
+      "source": "https://api.github.com/repos/MachEmbodied/ME-Dex-1.0",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-09-14T03:33:27Z"
+    },
+    "Max-Fu/tvl": {
+      "stars": 103,
+      "forks": 9,
+      "url": "https://github.com/Max-Fu/tvl",
+      "source": "https://api.github.com/repos/Max-Fu/tvl",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-02-20T21:25:34Z"
+    },
+    "MrSecant/OmniVTA": {
+      "stars": 60,
+      "forks": 1,
+      "url": "https://github.com/MrSecant/OmniVTA",
+      "source": "https://api.github.com/repos/MrSecant/OmniVTA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-03-01T18:11:44Z"
+    },
+    "NathanWu7/Tabero": {
+      "stars": 60,
+      "forks": 11,
+      "url": "https://github.com/NathanWu7/Tabero",
+      "source": "https://api.github.com/repos/NathanWu7/Tabero",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-05-20T06:42:29Z"
+    },
+    "RaindragonD/FACTR": {
+      "stars": 86,
+      "forks": 11,
+      "url": "https://github.com/RaindragonD/FACTR",
+      "source": "https://api.github.com/repos/RaindragonD/FACTR",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-03-25T03:17:28Z"
+    },
+    "RaindragonD/factr": {
+      "stars": 86,
+      "forks": 11,
+      "url": "https://github.com/RaindragonD/FACTR",
+      "source": "https://api.github.com/repos/RaindragonD/factr",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-03-25T03:17:28Z"
+    },
+    "RoboTwin-Platform/RoboTwin": {
+      "stars": 2994,
+      "forks": 530,
+      "url": "https://github.com/RoboTwin-Platform/RoboTwin",
+      "source": "https://api.github.com/repos/RoboTwin-Platform/RoboTwin",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-09-18T12:26:19Z"
+    },
+    "RoboVerseOrg/ViTacFormer": {
+      "stars": 121,
+      "forks": 11,
+      "url": "https://github.com/RoboVerseOrg/ViTacFormer",
+      "source": "https://api.github.com/repos/RoboVerseOrg/ViTacFormer",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-07-02T05:11:07Z"
+    },
+    "TacObench/TacO": {
+      "stars": 5,
+      "forks": 1,
+      "url": "https://github.com/TacObench/TacO",
+      "source": "https://api.github.com/repos/TacObench/TacO",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-07-20T08:03:36Z"
+    },
+    "VMVLab/ForceU-VLA": {
+      "stars": 5,
+      "forks": 0,
+      "url": "https://github.com/VMVLab/ForceU-VLA",
+      "source": "https://api.github.com/repos/VMVLab/ForceU-VLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-07-10T14:57:41Z"
+    },
+    "ZZongzheng0918/TA-VLA": {
+      "stars": 124,
+      "forks": 19,
+      "url": "https://github.com/ZZongzheng0918/TA-VLA",
+      "source": "https://api.github.com/repos/ZZongzheng0918/TA-VLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-09-09T14:27:48Z"
+    },
+    "ZhuoyangLiu2005/T-Rex": {
+      "stars": 344,
+      "forks": 40,
+      "url": "https://github.com/ZhuoyangLiu2005/T-Rex",
+      "source": "https://api.github.com/repos/ZhuoyangLiu2005/T-Rex",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-05-31T10:48:28Z"
+    },
+    "ac-93/tactile_gym": {
+      "stars": 185,
+      "forks": 26,
+      "url": "https://github.com/ac-93/tactile_gym",
+      "source": "https://api.github.com/repos/ac-93/tactile_gym",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2021-06-11T08:26:18Z"
+    },
+    "alanzjl/t3": {
+      "stars": 64,
+      "forks": 8,
+      "url": "https://github.com/alanzjl/t3",
+      "source": "https://api.github.com/repos/alanzjl/t3",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-06-19T17:15:10Z"
+    },
+    "binghao-huang/3d-vitac-training-code": {
+      "stars": 10,
+      "forks": 0,
+      "url": "https://github.com/binghao-huang/3d-vitac-training-code",
+      "source": "https://api.github.com/repos/binghao-huang/3d-vitac-training-code",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-10-26T21:18:50Z"
+    },
+    "brave-eai/dexjoco": {
+      "stars": 234,
+      "forks": 29,
+      "url": "https://github.com/brave-eai/dexjoco",
+      "source": "https://api.github.com/repos/brave-eai/dexjoco",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-05-07T09:06:09Z"
+    },
+    "ccyydd/SimpleTouch": {
+      "stars": 26,
+      "forks": 0,
+      "url": "https://github.com/ccyydd/SimpleTouch",
+      "source": "https://api.github.com/repos/ccyydd/SimpleTouch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-09-30T01:26:41Z"
+    },
+    "cfeng16/UniTouch": {
+      "stars": 95,
+      "forks": 6,
+      "url": "https://github.com/cfeng16/UniTouch",
+      "source": "https://api.github.com/repos/cfeng16/UniTouch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2023-11-28T05:43:10Z"
+    },
+    "clear-nus/octopi": {
+      "stars": 79,
+      "forks": 5,
+      "url": "https://github.com/clear-nus/octopi",
+      "source": "https://api.github.com/repos/clear-nus/octopi",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-05-04T23:59:48Z"
+    },
+    "clear-nus/vla-touch": {
+      "stars": 8,
+      "forks": 0,
+      "url": "https://github.com/clear-nus/vla-touch",
+      "source": "https://api.github.com/repos/clear-nus/vla-touch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-04-29T07:43:12Z"
+    },
+    "clorislili/AT-VLA": {
+      "stars": 21,
+      "forks": 1,
+      "url": "https://github.com/clorislili/AT-VLA",
+      "source": "https://api.github.com/repos/clorislili/AT-VLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-05-14T07:37:25Z"
+    },
+    "codingbabyguy/univtac": {
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/codingbabyguy/univtac",
+      "source": "https://api.github.com/repos/codingbabyguy/univtac",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-04-22T08:48:57Z"
+    },
+    "cyliizyz/ManiSkill-ViTac2025": {
+      "stars": 60,
+      "forks": 7,
+      "url": "https://github.com/chuanyune/ManiSkill-ViTac2025",
+      "source": "https://api.github.com/repos/cyliizyz/ManiSkill-ViTac2025",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-10-09T13:39:13Z"
+    },
+    "facebookresearch/digit-interface": {
+      "stars": 93,
+      "forks": 31,
+      "url": "https://github.com/facebookresearch/digit-interface",
+      "source": "https://api.github.com/repos/facebookresearch/digit-interface",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2019-11-18T20:15:16Z"
+    },
+    "facebookresearch/sparsh": {
+      "stars": 225,
+      "forks": 31,
+      "url": "https://github.com/facebookresearch/sparsh",
+      "source": "https://api.github.com/repos/facebookresearch/sparsh",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-10-11T22:13:43Z"
+    },
+    "facebookresearch/sparsh-multisensory-touch": {
+      "stars": 52,
+      "forks": 8,
+      "url": "https://github.com/facebookresearch/sparsh-multisensory-touch",
+      "source": "https://api.github.com/repos/facebookresearch/sparsh-multisensory-touch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-08-14T22:43:30Z"
+    },
+    "facebookresearch/tacto": {
+      "stars": 472,
+      "forks": 87,
+      "url": "https://github.com/facebookresearch/tacto",
+      "source": "https://api.github.com/repos/facebookresearch/tacto",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2020-12-15T01:26:39Z"
+    },
+    "ft-robotic/ForceVLA": {
+      "stars": 115,
+      "forks": 16,
+      "url": "https://github.com/ft-robotic/ForceVLA",
+      "source": "https://api.github.com/repos/ft-robotic/ForceVLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-12-26T13:55:51Z"
+    },
+    "fuse-model/FuSe": {
+      "stars": 72,
+      "forks": 2,
+      "url": "https://github.com/fuse-model/FuSe",
+      "source": "https://api.github.com/repos/fuse-model/FuSe",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2024-12-19T22:15:00Z"
+    },
+    "isaac-sim/IsaacGymEnvs": {
+      "stars": 2951,
+      "forks": 514,
+      "url": "https://github.com/isaac-sim/IsaacGymEnvs",
+      "source": "https://api.github.com/repos/isaac-sim/IsaacGymEnvs",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2021-08-27T02:36:51Z"
+    },
+    "lzy001Yuki/TactiLDM": {
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/lzy001Yuki/TactiLDM",
+      "source": "https://api.github.com/repos/lzy001Yuki/TactiLDM",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-11-11T06:46:48Z"
+    },
+    "michaelyuancb/ftp1-policy": {
+      "stars": 135,
+      "forks": 8,
+      "url": "https://github.com/michaelyuancb/ftp1-policy",
+      "source": "https://api.github.com/repos/michaelyuancb/ftp1-policy",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-06-02T21:52:12Z"
+    },
+    "mrHuangyz/TaF-VLA": {
+      "stars": 21,
+      "forks": 0,
+      "url": "https://github.com/mrHuangyz/TaF-VLA",
+      "source": "https://api.github.com/repos/mrHuangyz/TaF-VLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-11-30T09:15:21Z"
+    },
+    "neoteai/N0-VTLA": {
+      "stars": 199,
+      "forks": 12,
+      "url": "https://github.com/neoteai/N0-VTLA",
+      "source": "https://api.github.com/repos/neoteai/N0-VTLA",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-07-25T08:19:47Z"
+    },
+    "purdue-mars/manifeel": {
+      "stars": 66,
+      "forks": 13,
+      "url": "https://github.com/purdue-mars/manifeel",
+      "source": "https://api.github.com/repos/purdue-mars/manifeel",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2025-07-29T23:18:49Z"
+    },
+    "qaz1678249/visibletouch": {
+      "stars": 0,
+      "forks": 0,
+      "url": "https://github.com/qaz1678249/visibletouch",
+      "source": "https://api.github.com/repos/qaz1678249/visibletouch",
+      "checked": "2026-10-22",
+      "httpStatus": 200,
+      "createdAt": "2026-06-11T01:09:23Z"
+    },
+    "raunaqbhirangi/anyskin": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/raunaqbhirangi/anyskin",
+      "source": "https://api.github.com/repos/raunaqbhirangi/anyskin",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    },
+    "raunaqbhirangi/reskin_sensor": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/raunaqbhirangi/reskin_sensor",
+      "source": "https://api.github.com/repos/raunaqbhirangi/reskin_sensor",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    },
+    "raunaqbhirangi/visuoskin": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/raunaqbhirangi/visuoskin",
+      "source": "https://api.github.com/repos/raunaqbhirangi/visuoskin",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    },
+    "real-stanford/maniwav": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/real-stanford/maniwav",
+      "source": "https://api.github.com/repos/real-stanford/maniwav",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    },
+    "stanford-iprl-lab/fact": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/stanford-iprl-lab/fact",
+      "source": "https://api.github.com/repos/stanford-iprl-lab/fact",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    },
+    "univtac/UniVTAC": {
+      "stars": 185,
+      "forks": 32,
+      "url": "https://github.com/univtac/UniVTAC",
+      "source": "https://github.com/univtac/UniVTAC",
+      "checked": "2026-10-22",
+      "checkedVia": "用户 Edge 浏览器公开仓库 Stars 区域"
+    },
+    "xiaoxiaoxh/reactive_diffusion_policy": {
+      "stars": null,
+      "forks": null,
+      "url": "https://github.com/xiaoxiaoxh/reactive_diffusion_policy",
+      "source": "https://api.github.com/repos/xiaoxiaoxh/reactive_diffusion_policy",
+      "checked": "2026-10-22",
+      "httpStatus": 403,
+      "createdAt": null
+    }
+  },
+  "dates": {
+    "univtac": {
+      "date": "2026-02-10",
+      "source": "https://arxiv.org/abs/2602.10093",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "libero": {
+      "date": "2023-06-05",
+      "source": "https://arxiv.org/abs/2306.03310",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "n0-foundation": {
+      "date": "2026-08-30",
+      "source": "https://arxiv.org/abs/2608.29601",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "taco": {
+      "date": "2026-05-21",
+      "source": "https://arxiv.org/abs/2605.21976",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "bench2dex": {
+      "date": "2026-09-14",
+      "source": "https://arxiv.org/abs/2609.15726",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "tactidex": {
+      "date": "2026-07-10",
+      "source": "https://arxiv.org/abs/2607.09190",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "visible-touch": {
+      "date": "2026-09-12",
+      "source": "https://arxiv.org/abs/2609.14156",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "me-dex": {
+      "date": "2026-09-18",
+      "source": "https://arxiv.org/abs/2609.21449",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "robotwin": {
+      "date": "2025-06-22",
+      "source": "https://arxiv.org/abs/2506.18088",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "dexjoco": {
+      "date": "2026-05-15",
+      "source": "https://arxiv.org/abs/2605.16257",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "maniskill-vitac-2025": {
+      "date": "2024-11-19",
+      "source": "https://arxiv.org/abs/2411.12503",
+      "basis": "arXiv v1 首次提交时间",
+      "checked": "2026-10-22"
+    },
+    "tactildm": {
+      "date": null,
+      "year": 2026,
+      "source": "https://lzy001yuki.github.io/TactiLDM/",
+      "basis": "项目页仅标注 ISAI 2026，首次公开日期未提供",
+      "checked": "2026-10-22"
+    },
+    "tacverse": {
+      "date": "2026-06-24",
+      "source": "https://arxiv.org/abs/2606.25877",
+      "basis": "arXiv 首次公开；期刊版为 2026-09-25",
+      "checked": "2026-10-22"
+    }
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "works": {
+    "W06": {
+      "checkedSource": "https://arxiv.org/html/2609.18497v1",
+      "checkedSections": [
+        "§V-A–E",
+        "Tables I–IV",
+        "全文无独立附录"
+      ],
+      "summary": "补齐五任务各自的未见条件；细化两个离线分析的测试方式。原文只按可见去除判断擦拭，不再凭空要求残留面积数字。",
+      "taskUpdates": {
+        "W06-e01": {
+          "setting": "AgiBot G1双臂、腕部六维力；常规条件和未见条件各30次。未见条件：灯光闪烁。",
+          "conditions": "相同外观罐头按重量放入正确箱。",
+          "review": {
+            "status": "verified",
+            "note": "逐任务成功要求与未见条件已核对；不额外要求论文没有采用的数值评分。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-A Experimental Tasks；Table II；§V-D"
+          }
+        },
+        "W06-e02": {
+          "setting": "AgiBot G1双臂、腕部六维力；常规条件和未见条件各30次。未见条件：台面降低3厘米。",
+          "conditions": "连续削下的皮长度超过黄瓜长度的一半。",
+          "review": {
+            "status": "verified",
+            "note": "逐任务成功要求与未见条件已核对；不额外要求论文没有采用的数值评分。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-A Experimental Tasks；Table II；§V-D"
+          }
+        },
+        "W06-e03": {
+          "setting": "AgiBot G1双臂、腕部六维力；常规条件和未见条件各30次。未见条件：瓶子高度增加2.5厘米。",
+          "conditions": "成功挤出液体且没有过度施力；原文未说明“过度施力”的数值界限。",
+          "review": {
+            "status": "not_reported",
+            "note": "逐任务成功要求与未见条件已核对；未给过大力的数值判线。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-A Experimental Tasks；Table II；§V-D"
+          }
+        },
+        "W06-e04": {
+          "setting": "AgiBot G1双臂、腕部六维力；常规条件和未见条件各30次。未见条件：更换板擦。",
+          "conditions": "目标字迹被明显擦除；原文按可见结果判断。",
+          "review": {
+            "status": "verified",
+            "note": "逐任务成功要求与未见条件已核对；不额外要求论文没有采用的数值评分。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-A Experimental Tasks；Table II；§V-D"
+          }
+        },
+        "W06-e05": {
+          "setting": "AgiBot G1双臂、腕部六维力；常规条件和未见条件各30次。未见条件：更换刀具。",
+          "conditions": "黄瓜被完全切断。",
+          "review": {
+            "status": "verified",
+            "note": "逐任务成功要求与未见条件已核对；不额外要求论文没有采用的数值评分。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-A Experimental Tasks；Table II；§V-D"
+          }
+        },
+        "W06-e06": {
+          "metric": "动作轨迹与原记录的均方误差；因替换力信号而改变分拣方向的比例。",
+          "setting": "离线20条轨迹，空罐与满罐各10条；视觉保持不变，交换力输入。",
+          "conditions": "在分拣路径开始分开的时刻生成动作；比较关节2动作片段最后16帧，不是真机重新分拣的成功率。",
+          "review": {
+            "status": "verified",
+            "note": "确认空、满罐各10条轨迹，比较关节2动作片段末16帧。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-B；Figure 3；Table I"
+          }
+        },
+        "W06-e07": {
+          "metric": "右腕三维力和三维力矩分别计算均方误差，即预测与记录差值平方的平均。",
+          "setting": "离线削黄瓜测试轨迹；在预测接触概率超过0.8的区间内均匀选取时刻。抽样总数原文未报告。",
+          "conditions": "每个时刻比较预测片段第一帧与真实记录；不是机器人执行时目标力跟踪误差。",
+          "review": {
+            "status": "not_reported",
+            "note": "抽样规则、手腕与预测时刻已核对；原文没有给出抽取的时刻总数。",
+            "source": "https://arxiv.org/html/2609.18497v1",
+            "locator": "§V-C；Figure 4；Table III"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "按泵头的过大力数值、离线力预测抽样数量",
+          "reason": "原文未说明",
+          "note": "已查§V-A、V-C和Tables II–III；这些数字不影响理解其成功率与预测误差评测。"
+        }
+      ]
+    },
+    "W07": {
+      "checkedSource": "https://arxiv.org/html/2609.18242v1",
+      "checkedSections": [
+        "全文§I–V",
+        "§IV-A–F",
+        "Figures 5–8；Tables I–V"
+      ],
+      "summary": "确认九任务主评测各20次；修正未见板擦泛化属于双臂擦白板，而非单臂。当前正文没有写九任务可逐项照搬的评分步骤，不编造完成角度或距离。",
+      "taskUpdates": {
+        "W07-e01": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "Franka Panda单臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。 未见物体另测，每方法、每任务10次。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II；Table V、Figure 8"
+          }
+        },
+        "W07-e02": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "Franka Panda单臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。 未见物体另测，每方法、每任务10次。 另测参考动作额外延迟0–200毫秒，每方法、每任务、每延迟10次。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II；Table V、Figure 8"
+          }
+        },
+        "W07-e03": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "Franka Panda单臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e04": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "Franka Panda单臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e05": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "Franka Panda单臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e06": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "X Square双臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e07": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "X Square双臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。 另测参考动作额外延迟0–200毫秒，每方法、每任务、每延迟10次。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e08": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "X Square双臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II"
+          }
+        },
+        "W07-e09": {
+          "metric": "任务成功率；峰值接触力和完成时间只汇总成功尝试，并按单臂／双臂分别合并任务。",
+          "setting": "X Square双臂；每方法、每任务20次真机；使用相同示教、初始位置变化范围和控制限制。 未见物体另测，每方法、每任务10次。",
+          "conditions": "论文报告该任务成功率，但当前正文未单独写明如何判定完成；不补写自行设定的距离、角度或触发要求。",
+          "review": {
+            "status": "pending",
+            "note": "已核对当前正文中的任务次数和主要设置；正文未给完整逐任务评分步骤，作者提到的独立补充材料尚未取得，因此具体评分细节仍标“尚未核实”。",
+            "source": "https://arxiv.org/html/2609.18242v1",
+            "locator": "§IV-A–F；Figure 5；Tables I–II；Table V、Figure 8"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "逐任务详细判分规则",
+          "reason": "原文未说明",
+          "note": "当前论文§IV、Figure 5与失败分析没有给出完整的任务评分步骤。正文提到独立补充材料，但本次未取得，不能断言其也未说明。"
+        },
+        {
+          "field": "独立补充材料中的评分细节",
+          "reason": "尚未核实",
+          "note": "当前HTML正文没有附录，提到的补充材料未取得；不影响已核实的主评测次数和额外测试归属。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "核查§IV-E、Figure 8及Table V：未见物体测试包括USB插入、翻物、双臂擦白板；每任务10次。主测试九任务每任务20次。逐任务详细评分步骤在当前论文中未说明；独立补充材料尚未取得。"
+      }
+    },
+    "W08": {
+      "checkedSource": "https://arxiv.org/html/2609.22840v1",
+      "checkedSections": [
+        "§V-A–D",
+        "Tables I–III",
+        "Implementation Details附录"
+      ],
+      "summary": "修正插头任务也要求完成后释放；确认限时、自主完成及固定策略评测要求。",
+      "taskUpdates": {
+        "W08-e01": {
+          "metric": "自主完成次数／30次。",
+          "conditions": "60秒内插头完全插入后松开夹爪。 测试中不能人工接管、重新摆好重试或触发保护停机；测试策略参数不更新。",
+          "review": {
+            "status": "verified",
+            "note": "任务完成动作、时间限制和30次自主测试均有明确原文。",
+            "source": "https://arxiv.org/html/2609.22840v1",
+            "locator": "§V-A Evaluation Protocol；Tables I–II"
+          }
+        },
+        "W08-e02": {
+          "metric": "自主完成次数／30次。",
+          "conditions": "60秒内环完全套到位后松开夹爪。 测试中不能人工接管、重新摆好重试或触发保护停机；测试策略参数不更新。",
+          "review": {
+            "status": "verified",
+            "note": "任务完成动作、时间限制和30次自主测试均有明确原文。",
+            "source": "https://arxiv.org/html/2609.22840v1",
+            "locator": "§V-A Evaluation Protocol；Tables I–II"
+          }
+        },
+        "W08-e03": {
+          "metric": "自主完成次数／30次。",
+          "conditions": "180秒内擦掉全部文字，抬起板擦并停止。 测试中不能人工接管、重新摆好重试或触发保护停机；测试策略参数不更新。",
+          "review": {
+            "status": "verified",
+            "note": "任务完成动作、时间限制和30次自主测试均有明确原文。",
+            "source": "https://arxiv.org/html/2609.22840v1",
+            "locator": "§V-A Evaluation Protocol；Tables I–II"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "W14": {
+      "checkedSource": "https://arxiv.org/html/2602.02142v2",
+      "checkedSections": [
+        "§IV-A–E",
+        "Figures 4–7；Table I",
+        "全文至§V，无附录"
+      ],
+      "summary": "三任务成功要求均可直接从原文补足；确认30次独立测试，新增背景、灯光变化只报告定性展示。",
+      "taskUpdates": {
+        "W14-e01": {
+          "conditions": "全部可见字迹被擦干净。 更换背景和灯光的泛化实验另有展示，没有另报测试次数及成功率。",
+          "review": {
+            "status": "verified",
+            "note": "50条示教、30次独立测试和完成要求明确；原文泛化部分为定性描述。",
+            "source": "https://arxiv.org/html/2602.02142v2",
+            "locator": "§IV-B；Figure 6；Table I；§IV-E"
+          }
+        },
+        "W14-e02": {
+          "conditions": "急停按钮完全压下并保持锁住，不回弹。 更换背景和灯光的泛化实验另有展示，没有另报测试次数及成功率。",
+          "review": {
+            "status": "verified",
+            "note": "50条示教、30次独立测试和完成要求明确；原文泛化部分为定性描述。",
+            "source": "https://arxiv.org/html/2602.02142v2",
+            "locator": "§IV-B；Figure 6；Table I；§IV-E"
+          }
+        },
+        "W14-e03": {
+          "conditions": "插头完整插到插座内。 更换背景和灯光的泛化实验另有展示，没有另报测试次数及成功率。",
+          "review": {
+            "status": "verified",
+            "note": "50条示教、30次独立测试和完成要求明确；原文泛化部分为定性描述。",
+            "source": "https://arxiv.org/html/2602.02142v2",
+            "locator": "§IV-B；Figure 6；Table I；§IV-E"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "背景、灯光变化实验的测试次数和成功率",
+          "reason": "原文未说明",
+          "note": "已查§IV-E与Figure 7，只有定性描述；主实验30次不能自动套到泛化展示。"
+        }
+      ]
+    },
+    "W18": {
+      "checkedSource": "https://arxiv.org/html/2606.08555v1",
+      "checkedSections": [
+        "§4.1–4.4",
+        "Appendix A.1–A.6",
+        "Tables 1–3；Figures 3–15"
+      ],
+      "summary": "确认20次／60秒、额外扰动5次及90条示教＋20条人工纠正数据；全文和附录没有给出完整逐任务成功评分规则。",
+      "taskUpdates": {
+        "W18-e01": {
+          "setting": "Franka FR3＋ATI Axia80-M8六维力传感器；每方法、每任务20次，最长60秒。额外扰动：改变白板倾斜程度，每设置5次。",
+          "conditions": "原文以任务成功／失败计分，但正文和附录没有完整说明该任务的判分步骤；不自行补出清洁比例、削皮长度或翻转角度。",
+          "review": {
+            "status": "not_reported",
+            "note": "任务、时间、次数和扰动已核实；原文没有写完整独立评分步骤。",
+            "source": "https://arxiv.org/html/2606.08555v1",
+            "locator": "§4.1–4.4；Tables 1–3；Appendix A.1、A.3–A.5"
+          }
+        },
+        "W18-e02": {
+          "setting": "Franka FR3＋ATI Axia80-M8六维力传感器；每方法、每任务20次，最长60秒。额外扰动：改变黄瓜高度，每设置5次。",
+          "conditions": "原文以任务成功／失败计分，但正文和附录没有完整说明该任务的判分步骤；不自行补出清洁比例、削皮长度或翻转角度。",
+          "review": {
+            "status": "not_reported",
+            "note": "任务、时间、次数和扰动已核实；原文没有写完整独立评分步骤。",
+            "source": "https://arxiv.org/html/2606.08555v1",
+            "locator": "§4.1–4.4；Tables 1–3；Appendix A.1、A.3–A.5"
+          }
+        },
+        "W18-e03": {
+          "setting": "Franka FR3＋ATI Axia80-M8六维力传感器；每方法、每任务20次，最长60秒。额外扰动：移动装沙的盒子，每设置5次。",
+          "conditions": "原文以任务成功／失败计分，但正文和附录没有完整说明该任务的判分步骤；不自行补出清洁比例、削皮长度或翻转角度。 扰动图9明确为翻盒；表3第三列标题却写为切黄瓜，因此不引用该列数字。",
+          "review": {
+            "status": "not_reported",
+            "note": "任务、时间、次数和扰动已核实；原文没有写完整独立评分步骤。",
+            "source": "https://arxiv.org/html/2606.08555v1",
+            "locator": "§4.1–4.4；Tables 1–3；Appendix A.1、A.3–A.5"
+          }
+        },
+        "W18-e04": {
+          "setting": "Franka FR3＋ATI Axia80-M8六维力传感器；每方法、每任务20次，最长60秒。额外扰动：改变花瓶尾部高度，每设置5次。",
+          "conditions": "原文以任务成功／失败计分，但正文和附录没有完整说明该任务的判分步骤；不自行补出清洁比例、削皮长度或翻转角度。",
+          "review": {
+            "status": "not_reported",
+            "note": "任务、时间、次数和扰动已核实；原文没有写完整独立评分步骤。",
+            "source": "https://arxiv.org/html/2606.08555v1",
+            "locator": "§4.1–4.4；Tables 1–3；Appendix A.1、A.3–A.5"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "四任务完整成功判分步骤",
+          "reason": "原文未说明",
+          "note": "已查§4、Appendix A.1–A.6及任务图；有成功次数，但未提供完整逐任务评分定义。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "本次核查确认：Franka FR3、ATI Axia80-M8腕部六维力，120Hz记录；各方法主测试每任务20次、最长60秒；扰动测试每设置5次。基模型与对照使用每任务90条示教，纠正模块另用20条人工纠正数据。任务评分细则正文及附录未完整说明。"
+      }
+    },
+    "P01": {
+      "checkedSource": "https://arxiv.org/html/2608.01402v1",
+      "checkedSections": [
+        "§6–7",
+        "Appendix A–G",
+        "Tables 1–4、A.1–A.2；Figures A.1–A.4"
+      ],
+      "summary": "补明钥匙测试刻意模糊图像且要停在正确深度；原文采用操作完成判定，不额外追问未使用的毫米数字。",
+      "taskUpdates": {
+        "P01-e01": {
+          "metric": "成功率；相对基础模型的差异检验（Fisher检验）。",
+          "conditions": "60秒内把两脚电源插头插到位；插头本体会遮住插孔。",
+          "review": {
+            "status": "verified",
+            "note": "已核对操作完成要求；不把原文没有采用的额外数值要求作为待补项目。",
+            "source": "https://arxiv.org/html/2608.01402v1",
+            "locator": "§6；Appendix A–B；Tables 1、A.1"
+          }
+        },
+        "P01-e02": {
+          "metric": "成功率；相对基础模型的差异检验（Fisher检验）。",
+          "conditions": "60秒内把USB-A插到位；连接器遮住端口，组件来自NIST装配板。",
+          "review": {
+            "status": "verified",
+            "note": "已核对操作完成要求；不把原文没有采用的额外数值要求作为待补项目。",
+            "source": "https://arxiv.org/html/2608.01402v1",
+            "locator": "§6；Appendix A–B；Tables 1、A.1"
+          }
+        },
+        "P01-e03": {
+          "metric": "成功率；相对基础模型的差异检验（Fisher检验）。",
+          "conditions": "60秒内按到按钮锁住；不能靠一直用最大力按来完成。",
+          "review": {
+            "status": "verified",
+            "note": "已核对操作完成要求；不把原文没有采用的额外数值要求作为待补项目。",
+            "source": "https://arxiv.org/html/2608.01402v1",
+            "locator": "§6；Appendix A–B；Tables 1、A.1"
+          }
+        },
+        "P01-e04": {
+          "metric": "成功率；相对基础模型的差异检验（Fisher检验）。",
+          "conditions": "60秒内擦掉标记区域；白板固定，每次改变字迹。",
+          "review": {
+            "status": "verified",
+            "note": "已核对操作完成要求；不把原文没有采用的额外数值要求作为待补项目。",
+            "source": "https://arxiv.org/html/2608.01402v1",
+            "locator": "§6；Appendix A–B；Tables 1、A.1"
+          }
+        },
+        "P01-e05": {
+          "metric": "成功率；相对基础模型的差异检验（Fisher检验）。",
+          "conditions": "60秒内钥匙停在正确深度，不能插得不够或越过应停位置；不同长度钥匙外观相同，图像另做模糊处理。",
+          "review": {
+            "status": "verified",
+            "note": "已核对操作完成要求；不把原文没有采用的额外数值要求作为待补项目。",
+            "source": "https://arxiv.org/html/2608.01402v1",
+            "locator": "§6；Appendix A–B；Tables 1、A.1"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "P04": {
+      "checkedSource": "https://arxiv.org/html/2610.14854v1",
+      "checkedSections": [
+        "§IV-A–D",
+        "Tables I–III",
+        "Figures 3–6；全文无独立附录"
+      ],
+      "summary": "确认三任务的准备／接触分阶段评测；逐任务拆开示教数，避免130／50／50混在各卡片。",
+      "taskUpdates": {
+        "P04-e01": {
+          "metric": "整体、准备阶段、接触阶段成功率。",
+          "setting": "Mercury B2双臂、双腕六维力；每方法主测试20次，随机摆放物体，各方法使用同一组位置。该任务有130条示教。 未见较低抓持位置另测10次。",
+          "conditions": "吸头压牢，移液器回撤后仍牢固安装。 整体成功需要两个阶段都完成；接触阶段成功率只看已完成准备阶段的尝试。",
+          "review": {
+            "status": "verified",
+            "note": "主测试与抓持高度测试规则均明确；保留会影响读结果的分阶段定义。",
+            "source": "https://arxiv.org/html/2610.14854v1",
+            "locator": "§IV-A–C；Table I注释、Table II；Figure 6"
+          }
+        },
+        "P04-e02": {
+          "metric": "整体、准备阶段、接触阶段成功率。 另报平均吸液量误差（微升）。",
+          "setting": "Mercury B2双臂、双腕六维力；每方法主测试20次，随机摆放物体，各方法使用同一组位置。该任务有50条示教。 未见较高、较低抓持位置各5次。",
+          "conditions": "完成有效吸液；吸液量与1000微升比较，体积误差只统计成功吸液的尝试。 整体成功需要两个阶段都完成；接触阶段成功率只看已完成准备阶段的尝试。",
+          "review": {
+            "status": "verified",
+            "note": "主测试与抓持高度测试规则均明确；保留会影响读结果的分阶段定义。",
+            "source": "https://arxiv.org/html/2610.14854v1",
+            "locator": "§IV-A–C；Table I注释、Table II；Figure 6"
+          }
+        },
+        "P04-e03": {
+          "metric": "整体、准备阶段、接触阶段成功率。",
+          "setting": "Mercury B2双臂、双腕六维力；每方法主测试20次，随机摆放物体，各方法使用同一组位置。该任务有50条示教。 从准备阶段切换到接触阶段由人工触发。",
+          "conditions": "板擦保持有效接触并去除目标字迹。 整体成功需要两个阶段都完成；接触阶段成功率只看已完成准备阶段的尝试。",
+          "review": {
+            "status": "verified",
+            "note": "主测试与抓持高度测试规则均明确；保留会影响读结果的分阶段定义。",
+            "source": "https://arxiv.org/html/2610.14854v1",
+            "locator": "§IV-A–C；Table I注释、Table II；Figure 6"
+          }
+        }
+      },
+      "remaining": []
+    }
+  }
+}

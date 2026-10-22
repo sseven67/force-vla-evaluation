@@ -1,0 +1,542 @@
+{
+  "updated": "2026-10-22",
+  "methodology": "使用用户 Edge 浏览器读取 Google Scholar 论文搜索结果中的引用次数，按完整标题或论文编号确认身份。只采用匹配论文主条目的计数，不与重复引用条目相加。页面未显示计数或未找到条目时保留空值并显示“—”，不视为0。此指标独立于 OpenAlex、Stars 与 Forks，不合成总分，也不自动改变现有优先考察门槛。",
+  "works": {
+    "W01": {
+      "count": 166,
+      "source": "https://scholar.google.com/scholar?cites=8875397870965409221",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W02": {
+      "count": 32,
+      "source": "https://scholar.google.com/scholar?cites=2110629863329348102",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W03": {
+      "count": 20,
+      "source": "https://scholar.google.com/scholar?cites=12821375055557499538",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Rich Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W04": {
+      "count": 3,
+      "source": "https://scholar.google.com/scholar?cites=11798460608803797870",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "DAM-VLA: Decoupled Asynchronous Multimodal Vision Language Action model",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W05": {
+      "count": 1,
+      "source": "https://scholar.google.com/scholar?cites=10190121048207243140",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W09": {
+      "count": 139,
+      "source": "https://scholar.google.com/scholar?cites=9212142364169382271",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tactile-VLA: Unlocking Vision-Language-Action Model's Physical Knowledge for Tactile Generalization",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W10": {
+      "count": 17,
+      "source": "https://scholar.google.com/scholar?cites=13972708286133312430",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W11": {
+      "count": 5,
+      "source": "https://scholar.google.com/scholar?cites=8682918684653725690",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W12": {
+      "count": 10,
+      "source": "https://scholar.google.com/scholar?cites=5896209519990318585",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W13": {
+      "count": 82,
+      "source": "https://scholar.google.com/scholar?cites=9338893904492112458",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TA-VLA: Elucidating the Design Space of Torque-aware Vision-Language-Action Models",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W14": {
+      "count": 21,
+      "source": "https://scholar.google.com/scholar?cites=16619042518082348334",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W15": {
+      "count": 2,
+      "source": "https://scholar.google.com/scholar?cites=5864414483514527164",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W17": {
+      "count": 5,
+      "source": "https://scholar.google.com/scholar?cites=15166798687818521088",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ForceFlow: Learning to Feel and Act via Contact-Driven Flow Matching",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W18": {
+      "count": 11,
+      "source": "https://scholar.google.com/scholar?cites=16017007724207843874",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FAWAM: Force-Aware World Action Models for Closed-Loop Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E01": {
+      "count": 86,
+      "source": "https://scholar.google.com/scholar?cites=7296314276128380353",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E02": {
+      "count": 109,
+      "source": "https://scholar.google.com/scholar?cites=1139092646027457637",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E03": {
+      "count": 24,
+      "source": "https://scholar.google.com/scholar?cites=7429876841910338955",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E04": {
+      "count": 7,
+      "source": "https://scholar.google.com/scholar?cites=14962072246076761499",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E05": {
+      "count": 29,
+      "source": "https://scholar.google.com/scholar?cites=8669518305468147051",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E06": {
+      "count": 2,
+      "source": "https://scholar.google.com/scholar?cites=5289071292506441314",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "STAR: Sparse Tactile Representation Learning in Vision-Tactile-Language-Action Models for Dexterous Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E07": {
+      "count": 29,
+      "source": "https://scholar.google.com/scholar?cites=16140100451170012141",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E08": {
+      "count": 2,
+      "source": "https://scholar.google.com/scholar?cites=2743127275745941970",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E11": {
+      "count": 91,
+      "source": "https://scholar.google.com/scholar?cites=11127666812459344757",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TLA: Tactile-Language-Action Model for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "E12": {
+      "count": 46,
+      "source": "https://scholar.google.com/scholar?cites=14006621842974927409",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "P01": {
+      "count": 4,
+      "source": "https://scholar.google.com/scholar?cites=9609181434178685699",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "P03": {
+      "count": 15,
+      "source": "https://scholar.google.com/scholar?cites=921571654137697914",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T01": {
+      "count": 101,
+      "source": "https://scholar.google.com/scholar?cites=1380918642638472665",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T02": {
+      "count": 79,
+      "source": "https://scholar.google.com/scholar?cites=13680044626247111477",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T03": {
+      "count": 20,
+      "source": "https://scholar.google.com/scholar?cites=8882877597606480092",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T06": {
+      "count": 21,
+      "source": "https://scholar.google.com/scholar?cites=16882966877696467186",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T15": {
+      "count": 41,
+      "source": "https://scholar.google.com/scholar?cites=17214574249533467313",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T16": {
+      "count": 29,
+      "source": "https://scholar.google.com/scholar?cites=3271985598493520417",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T17": {
+      "count": 2,
+      "source": "https://scholar.google.com/scholar?cites=5532843584993175612",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Inference-time Policy Steering via Vision and Touch",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T18": {
+      "count": 67,
+      "source": "https://scholar.google.com/scholar?cites=10658575052840078956",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T20": {
+      "count": 172,
+      "source": "https://scholar.google.com/scholar?cites=12754123598906236684",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "T21": {
+      "count": 102,
+      "source": "https://scholar.google.com/scholar?cites=7032372995606756233",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C01": {
+      "count": 127,
+      "source": "https://scholar.google.com/scholar?cites=3990769963851601488",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ForceMimic: Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C02": {
+      "count": 102,
+      "source": "https://scholar.google.com/scholar?cites=11242042099602898102",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FoAR: Force-Aware Reactive Policy for Contact-Rich Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C03": {
+      "count": 23,
+      "source": "https://scholar.google.com/scholar?cites=576318311571291873",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C04": {
+      "count": 18,
+      "source": "https://scholar.google.com/scholar?cites=8823152571035764528",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C06": {
+      "count": 18,
+      "source": "https://scholar.google.com/scholar?cites=13980526387480695851",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Self-supervised perception for tactile skin covered dexterous hands",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C07": {
+      "count": 33,
+      "source": "https://scholar.google.com/scholar?cites=2520109924293458675",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tactile Beyond Pixels: Multisensory Touch Representations for Robot Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C08": {
+      "count": 203,
+      "source": "https://scholar.google.com/scholar?cites=7803452156447166936",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Rotating without Seeing: Towards In-hand Dexterity through Touch",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C09": {
+      "count": 257,
+      "source": "https://scholar.google.com/scholar?cites=6254107485479000491",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "General In-hand Object Rotation with Vision and Touch",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C15": {
+      "count": 97,
+      "source": "https://scholar.google.com/scholar?cites=12970098698448097427",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C16": {
+      "count": 42,
+      "source": "https://scholar.google.com/scholar?cites=8540131773121087766",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C17": {
+      "count": 78,
+      "source": "https://scholar.google.com/scholar?cites=2767443727430252350",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TacDiffusion: Force-domain Diffusion Policy for Precise Tactile Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C18": {
+      "count": 13,
+      "source": "https://scholar.google.com/scholar?cites=1668549134726216054",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Learning Robotic Manipulation Skills Using an Adaptive Force-Impedance Action Space",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "C19": {
+      "count": 156,
+      "source": "https://scholar.google.com/scholar?cites=3792165837243815491",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Learning Variable Impedance Control via Inverse Reinforcement Learning for Force-Related Tasks",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "R01": {
+      "count": 278,
+      "source": "https://scholar.google.com/scholar?cites=10035935921120269413",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "R02": {
+      "count": 206,
+      "source": "https://scholar.google.com/scholar?cites=13755702249158399321",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing",
+      "checkedVia": "用户 Edge 浏览器的 Google Scholar 搜索结果，按标题或论文编号匹配；不叠加重复引用条目。"
+    },
+    "W06": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=TAO-Force%3A+Unifying+Force-Aware+Perception+and+Fast-Slow+Control+for+Contact-Rich+Manipulation",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "TAO-Force: Unifying Force-Aware Perception and Fast-Slow Control for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "W07": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=ForceDelta-VLA%3A+Distilling+Force-Conditioned+ActionCorrections+for+Contact-Rich+Manipulation",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "ForceDelta-VLA: Distilling Force-Conditioned ActionCorrections for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "W08": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=ForceRFT%3A+Refining+VLA+Actions+through+Force-Guided+Residual+Reinforcement+Learning",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "W16": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=CompVLA%3A+A+Variable+Compliance+Vision-Language-Action+Model+for+Contact-rich+Manipulation",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "E09": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=Opt2VLA%3A+Force-Aware+Vision-Language-Action+for+Contact-Rich+Humanoid+Whole-Body+Manipulation",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "E10": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=ForceU-VLA%3A+A+Force-Aware+Vision-Language-Action+Model+for+Embodied+Ultrasound+Scanning",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "ForceU-VLA: A Force-Aware Vision-Language-Action Model for Embodied Ultrasound Scanning",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "X01": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=SimpleTouch%3A+Can+Vision-Language-Action+Models+Master+Contact-Rich+Manipulation+Without+Tactile+Policy+Pretraining%3F",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "P02": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=FACT%3A+A+Multimodal+Force%E2%80%93Action%E2%80%93Track+Foundation+Model+for+Human-to-Robot+Dexterity",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "FACT: A Multimodal Force–Action–Track Foundation Model for Human-to-Robot Dexterity",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "P04": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=DEFT-VLA%3A+Stage-Localized+Force+Specialization+for+Contact-Rich+Robotic+Manipulation",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "DEFT-VLA: Stage-Localized Force Specialization for Contact-Rich Robotic Manipulation",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "T04": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=OpenViTac%3A+Learning+and+Benchmarking+Visuo-Tactile+Policies+in+a+Unified+Sim-and-Real+Framework",
+      "date": "2026-10-22",
+      "status": "count-not-displayed",
+      "title": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework",
+      "checkedVia": "用户 Edge 浏览器；已匹配论文条目，但页面没有显示引用次数，不推断为0。"
+    },
+    "T05": {
+      "count": null,
+      "source": "https://scholar.google.com/scholar?q=DT-TacVLA%3A+A+Dual-Timescale+Tactile-Enhanced+Vision-Language-Action+Model+for+Contact-Rich+Manipulation",
+      "date": "2026-10-22",
+      "status": "not-found",
+      "title": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation",
+      "checkedVia": "用户 Edge 浏览器；未检索到对应条目。"
+    },
+    "N01": {
+      "count": 5,
+      "source": "https://scholar.google.com/scholar?cites=9966605111508553898",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+      "checkedVia": "用户Edge浏览器Google Scholar结果；按论文标题匹配，不合并重复条目。"
+    },
+    "N02": {
+      "count": 7,
+      "source": "https://scholar.google.com/scholar?cites=16277709111848379163",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "Tactile Modality Fusion for Vision-Language-Action Models",
+      "checkedVia": "用户Edge浏览器Google Scholar结果；按论文标题匹配，不合并重复条目。"
+    },
+    "N03": {
+      "count": 10,
+      "source": "https://scholar.google.com/scholar?cites=11625990079224437374",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "UniTacVLA: Unified Tactile Understanding and Prediction in Vision Language Action Models",
+      "checkedVia": "用户Edge浏览器Google Scholar结果；按论文标题匹配，不合并重复条目。"
+    },
+    "N04": {
+      "count": 15,
+      "source": "https://scholar.google.com/scholar?cites=11872767412716213089",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+      "checkedVia": "用户Edge浏览器Google Scholar结果；按论文标题匹配，不合并重复条目。"
+    },
+    "N05": {
+      "count": 4,
+      "source": "https://scholar.google.com/scholar?cites=2616597255828097126",
+      "date": "2026-10-22",
+      "status": "verified",
+      "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+      "checkedVia": "用户Edge浏览器Google Scholar结果；按论文标题匹配，不合并重复条目。"
+    }
+  }
+}

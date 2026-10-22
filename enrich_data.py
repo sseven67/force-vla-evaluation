@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
-DATE='2026-10-16'
+DATE='2026-10-22'
 
 TASK_GROUPS=[
  dict(id='precision',name='短时接触与精密操作',description='连接器、插孔和按钮：接触对齐、就位和终点判断。',color='#24768c',icon='insertion'),
@@ -19,17 +19,17 @@ TASK_GROUPS=[
 TASKS=[
  ('usb','USB 插入','precision',r'USB|usb'),
  ('plug','插头与充电器插接','precision',r'插头|充电|插座|power plug|plug insertion'),
- ('peg','插销与孔配合','precision',r'插孔|插销|孔形|方.*插入|块插入|peg|Insert Hole'),
+ ('peg','插销与孔配合','precision',r'插孔|插销|圆销|方销|五边形销|孔形|方.*插入|块插入|peg|Insert Hole'),
  ('tube','管与吸头插接','precision',r'管插入|吸头|Insert Tube|HDMI'),
  ('key','钥匙插拔','precision',r'钥匙|Pull.out Key|key insertion'),
  ('press','按压与盖章','precision',r'按瓶|按压|按钮|按泵|急停|盖章|stamping|Stove Press'),
  ('whiteboard','擦白板','surface',r'擦白板|擦板|擦拭白板|whiteboard|board eraser'),
- ('curved','曲面与表面擦拭','surface',r'花瓶|曲面|擦盘|表面|圆周擦拭|Surface|surface wiping|Wipe'),
+ ('curved','曲面与表面擦拭','surface',r'花瓶|曲面|擦盘|擦碗|擦锅|表面|圆周擦拭|Surface|surface wiping|Wipe'),
  ('peel','削皮与切割','surface',r'削皮|削黄瓜|切割|切片|芒果|chopping|peeling'),
  ('assembly','齿轮与螺纹装配','assembly',r'齿轮|螺母|螺纹|螺丝|screw|thread|Nut Thread'),
  ('articulated','开门、抽屉与锁扣','assembly',r'抽屉|开门|旋转窗|锁|搭扣|拧盖|翻盖|开盖|Faucet|Drawer|Stove Turn'),
  ('fragile','易碎 / 无损抓放','grasp',r'鸡蛋|华夫|果酱|无变形|易碎|轻柔|无损|gentle|fragile'),
- ('grasp','稳定抓取与滑移','grasp',r'抓取|抓放|夹持|Lift |抓稳|拆杯|杯子|抗滑|箱内|装箱|dense packing|slip|grasp|pick.and.place'),
+ ('grasp','稳定抓取与滑移','grasp',r'抓取|抓放|夹持|揭杯|隐藏物块|Lift |抓稳|拆杯|杯子|抗滑|箱内|装箱|dense packing|slip|grasp|pick.and.place'),
  ('dex','多指与手内操作','grasp',r'翻页|洗牌|鞋带|多物体|灵巧|手内|转动|旋转|重定向|reorient|in.hand'),
  ('deform','柔性与双臂协作','grasp',r'围巾|拉链|明信片|叠书|耳机|挤膏|折|soft'),
  ('property','物理属性感知与推理','reason',r'重量|重心|硬度|材质|粗糙|属性|语义|分类|问答|分拣|阻力|reason|Weight|CoM|Grasp Classify'),
@@ -37,8 +37,22 @@ TASKS=[
  ('pour','倾倒与液体操作','special',r'倒液|倾倒|倒水|pour|Pour'),
  ('medical','超声与医学成像','special',r'超声|切面|肝|肾'),
  ('body','全身接触与搬推','special',r'搬箱|推箱|全身|移动|whole.body'),
- ('representation','触觉表示与跨传感器','special',r'跨传感器|表示|零样本触觉|线性探测|分类|深度|检索|传感器迁移|力定位'),
+ ('representation','触觉表示与跨传感器','special',r'跨传感器|表示|零样本触觉|线性探测|分类|深度|检索|传感器迁移|力定位|力估计|力预测|滑移检测|姿态估计|位姿估计|稳定性预测|帧.*预测|摇杆状态|force estimation'),
 ]
+# Keep original English task names searchable in the same cross-paper topics.
+TASK_ALIASES={
+ 'plug':r'Socket Plugging|Unplug and Plug Charger',
+ 'peg':r'Board Insertion',
+ 'whiteboard':r'Board Wiping',
+ 'assembly':r'Place Gears|Gear assembly|Nut.*bolt assembly|Bulb installation|Screw Bulb|Insert Screw',
+ 'articulated':r'Open Lock|Constraint.locked Disassembly',
+ 'fragile':r'Transfer Egg|Grasp Chip',
+ 'grasp':r'放入篮筐|In.box Picking|Cup Stacking|Fruit Collection|Bottle Standing|Bag Packing|Cup Handover|Stack Cups|Stack Plates|Stack Bowls|Unstack Bowl|Unstack Cup|Split Cup|Object search',
+ 'dex':r'玻璃球|Flip Page|Extract Card|Deal Poker|Sort Mahjong|Refill Tablet',
+ 'deform':r'Apply Toothpaste|Towel Folding|Cardboard Box Folding',
+ 'property':r'Ball sorting',
+ 'pipette':r'Acid.Base Neutralization',
+}
 
 def txt(value):
     if isinstance(value,list):return '；'.join(str(v) for v in value)
@@ -109,14 +123,17 @@ def enrich(data):
         w['sensorOrigin']=infer_sensor(w)
         w['actionOutput']='显式目标力 + 运动' if w['id'] in ['W02','W05','W09','W11','E09'] else '未来力预测 + 运动（非目标力跟踪）' if w['id'] in ['W06','W13','W12'] else '运动动作；力用于观测 / 纠偏'
         w['actionMode']='显式目标力' if w['id'] in ['W02','W05','W09','W11','E09'] else '力辅助运动 / 预测'
+        if w['id'] in ['W02','W03']:w['sensorOrigin']='真实F/T传感器'
         if w['id']=='W01':w['sensorOrigin']='机器人内部估计 / 关节力矩'
+        if w['id']=='W04':w['signal']='7维外部关节力矩估计（模型实际输入）'
+
         if w['id']=='W05':w['sensorOrigin']='真实F/T传感器'
         if w['id']=='W06':
             w['sensorOrigin']='真实F/T传感器'
             w['actionOutput']='动作chunk + 目标力chunk + 接触概率；高速导纳控制跟踪目标力'
             w['actionMode']='显式目标力'
             w['locators'].append('§III-B Eq.(2)、Figure 2：desired-force chunk；§V预测误差不等于跟踪误差')
-    for filename,prefix in [('primary_additions.json','P'),('tactile_additions.json','T'),('contact_additions.json','C'),('priority_additions.json','R')]:
+    for filename,prefix in [('primary_additions.json','P'),('tactile_additions.json','T'),('contact_additions.json','C'),('priority_additions.json','R'),('recent_additions.json','N')]:
         rows=load(filename).get('works',[])
         for i,raw in enumerate(rows,1):
             w=normalise(raw,i,prefix)
@@ -159,27 +176,30 @@ def enrich(data):
         if w['name']=='Sparsh / TacBench':
             w['domains']=['离线','真机']
             w['trials']='六任务中多数离线probe；bead maze为物理操作。各测试分母本轮未逐项核实。'
-    original_task_details={
-      'W07':'五单臂：翻物、USB、开柜、按键、擦板；四双臂：拔插头、插头插入、开抽屉、擦板',
-      'W13':'接触五项：按键、充电器插入、USB插入、插座拔出、门把转动；常规五项：抓放瓶、倒液、堆方块、推到目标、开抽屉',
-      'E03':'UniVTAC六项：Lift Bottle、Pull-out Key、Lift Can、Put Bottle、Insert Hole、Insert Tube；真机：气球、装配、拧盖、翻书、擦盘；未见传感器：Hanoi插入、USB、擦白板',
-      'E04':'UniVTAC八项（含抓取、钥匙、插孔、管/HDMI插入及分类）；NeoReal九项含插头、纸箱/毛巾折叠、瓶站立与装袋；NeoSim十二项另计',
-      'E07':'四类约束锁定拆解（按压、扭转、滑动等）＋箱内抓取',
-      'B01':'仿真八项：重量分拣、重心分拣、水龙头转动/方向、炉灶旋转/按压、抽屉拉动、螺母旋入；五项真机验证另计',
-      'X01':'UniVTAC六项：Lift Bottle、Pull-out Key、Lift Can、Put Bottle、Insert Hole、Insert Tube；另四项真机任务'
-    }
-    for w in works:
-        if w['id'] in original_task_details:w['tasks']=original_task_details[w['id']]
-    categories=[dict(id=a,name=b,group=c,pattern=d) for a,b,c,d in TASKS]
+    from task_protocols import apply_task_protocols
+    apply_task_protocols(works)
+    from review_data import apply_reviews
+    apply_reviews(works)
+    from scoring_data import apply_scoring
+    apply_scoring(works)
+    from evaluation_modes import apply_evaluation_modes
+    apply_evaluation_modes(works)
+    from force_evaluation import apply_force_evaluation
+    apply_force_evaluation(works)
+    from scoring_data import apply_metric_summaries
+    apply_metric_summaries(works)
+    from reader_copy import apply_reader_copy, clean_physical_profile
+    apply_reader_copy(works)
+    from research_objectives import apply_research_objectives
+    apply_research_objectives(works)
+    categories=[dict(id=a,name=b,group=c,pattern=d+('|'+TASK_ALIASES[a] if a in TASK_ALIASES else '')) for a,b,c,d in TASKS]
     instances=[]
     for w in works:
-        search=w['tasks']
-        is_offline=w['domains']==['离线']
         for task in categories:
-            if not re.search(task['pattern'],search,re.I):continue
-            if is_offline and task['id'] not in ['representation','property']:continue
-            ex=next((e for e in w['experiments'] if re.search(task['pattern'],e.get('task',''),re.I)),None)
-            instances.append(dict(id=w['id']+'-'+task['id'],work=w['id'],task=task['id'],label=ex['task'] if ex else task['name'],purpose=ex.get('purpose',w['purpose']) if ex else w['purpose'],success=ex.get('success','任务级成功判据尚未单独抽取；请核对原文。') if ex else '任务级成功判据尚未单独抽取；请核对原文。',metrics=ex.get('metric',w['metrics']) if ex else w['metrics'],setting=ex.get('setting',w['trials']) if ex else w['trials'],source=ex.get('source',w['source']) if ex else w['source'],locator=ex.get('locator','；'.join(w['locators'])) if ex else '；'.join(w['locators']),level='逐实验已抽取' if ex else '已确认任务覆盖；协议见论文级记录',offline=is_offline))
+            matches=[e for e in w['experiments'] if re.search(task['pattern'],e['task'],re.I)]
+            if not matches:continue
+            def collect(key):return '；'.join(e['task']+'：'+e[key] for e in matches)
+            instances.append(dict(id=w['id']+'-'+task['id'],work=w['id'],task=task['id'],label=task['name'],purpose=collect('purpose'),method=collect('method'),metrics=collect('metric'),setting=collect('setting'),source=matches[0]['source'],locator=collect('locator'),level='逐任务已整理',protocols=matches,offline=all(e['evaluationModes']==['离线'] for e in matches)))
     # Original evaluation figures, linked directly to authors/arXiv with attribution.
     images={
         'precision':dict(url='https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg',caption='FACT 插头插入实验，Figure 1局部',source='https://arxiv.org/html/2608.01402v1#S1.F1'),
@@ -190,12 +210,26 @@ def enrich(data):
     used={i['task'] for i in instances};categories=[t for t in categories if t['id'] in used]
     for t in categories:t.pop('pattern',None)
     data.update(updated=DATE,originalSnapshot='2026-10-15',taskGroups=TASK_GROUPS,taskTypes=categories,taskInstances=instances,attentionMethodology=attention.get('methodology',{}))
+    data['attentionMethodology'].pop('googleScholar',None)
     # Physical embodiment and signal form are distinct from model encodings and sensor origin.
     forms=json.loads((ROOT/'research'/'embodiment_force_forms.json').read_text(encoding='utf-8'))
     profiles={r[0]:dict(zip(forms['columns'][1:],r[1:])) for r in forms['records']}
     for w in works:
         profile=profiles.get(w['id'],dict(embodimentBrief='本体类型待核实',robotModel=w['platform'],effectorModel='末端执行器型号未核实',forceBrief='原始信号形式待核实',forceDetail=w['signal']))
         w['physicalProfile']={**profile, 'source':forms['sourceOverrides'].get(w['id'],dict(url=w['source'],locator='；'.join(w['locators'])))}
+        from review_data import readable
+        for key in ('embodimentBrief','forceBrief','forceDetail'):w['physicalProfile'][key]=readable(w['physicalProfile'][key])
+        clean_physical_profile(w['physicalProfile'])
     from selection import apply_selection
-    from taxonomy import apply_taxonomy
-    return apply_taxonomy(apply_selection(data))
+    from taxonomy import apply_taxonomy, apply_task_coordination
+    from evaluation_highlights import apply_evaluation_highlights
+    from comparison_methods import apply_comparison_methods
+    from benchmark_audit import apply_benchmark_audit
+    from result_summaries import apply_result_summaries
+    from plain_language import apply_plain_language
+    from evaluation_sections import apply_evaluation_sections
+    from benchmark_details import apply_benchmark_details
+    from task_names import apply_chinese_task_names
+    from scholar_attention import apply_scholar_attention
+    from resource_registry import apply_resource_registry
+    return apply_resource_registry(apply_scholar_attention(apply_chinese_task_names(apply_task_coordination(apply_benchmark_details(apply_evaluation_sections(apply_plain_language(apply_result_summaries(apply_benchmark_audit(apply_comparison_methods(apply_evaluation_highlights(apply_selection(apply_taxonomy(data)))))))))))))

@@ -1,58 +1,595 @@
 {
   "T08": {
     "firstPublicDate": "2024-10-31",
-    "source": "https://arxiv.org/abs/2410.24090"
+    "source": "https://arxiv.org/abs/2410.24090",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Sparsh: Self-supervised touch representations for vision-based tactile sensing"
   },
   "T09": {
     "firstPublicDate": "2024-01-31",
-    "source": "https://arxiv.org/abs/2401.18084"
+    "source": "https://arxiv.org/abs/2401.18084",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations"
   },
   "T11": {
     "firstPublicDate": "2024-05-05",
-    "source": "https://arxiv.org/abs/2405.02794"
+    "source": "https://arxiv.org/abs/2405.02794",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Octopi: Object Property Reasoning with Large Tactile-Language Models"
   },
   "T12": {
     "firstPublicDate": "2024-02-20",
-    "source": "https://arxiv.org/abs/2402.13232"
+    "source": "https://arxiv.org/abs/2402.13232",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "A Touch, Vision, and Language Dataset for Multimodal Alignment"
   },
   "T13": {
     "firstPublicDate": "2024-06-19",
-    "source": "https://arxiv.org/abs/2406.13640"
+    "source": "https://arxiv.org/abs/2406.13640",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks"
   },
   "T15": {
     "firstPublicDate": "2024-03-18",
-    "source": "https://arxiv.org/abs/2403.11898"
+    "source": "https://arxiv.org/abs/2403.11898",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "VITaL Pretraining: Visuo-Tactile Pretraining for Tactile and Non-Tactile Manipulation Policies"
   },
   "T21": {
     "firstPublicDate": "2024-06-27",
-    "source": "https://arxiv.org/abs/2406.19464"
+    "source": "https://arxiv.org/abs/2406.19464",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data"
   },
   "C01": {
     "firstPublicDate": "2024-10-10",
-    "source": "https://arxiv.org/abs/2410.07554"
+    "source": "https://arxiv.org/abs/2410.07554",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceMimic: Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation"
   },
   "C02": {
     "firstPublicDate": "2024-11-24",
-    "source": "https://arxiv.org/abs/2411.15753"
+    "source": "https://arxiv.org/abs/2411.15753",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FoAR: Force-Aware Reactive Policy for Contact-Rich Robotic Manipulation"
   },
   "C04": {
     "firstPublicDate": "2024-10-22",
-    "source": "https://arxiv.org/abs/2410.17246"
+    "source": "https://arxiv.org/abs/2410.17246",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins"
   },
   "C05": {
     "firstPublicDate": "2024-09-12",
-    "source": "https://arxiv.org/abs/2409.08276"
+    "source": "https://arxiv.org/abs/2409.08276",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "AnySkin: Plug-and-play Skin Sensing for Robotic Touch"
   },
   "C10": {
     "firstPublicDate": "2024-08-12",
-    "source": "https://arxiv.org/abs/2408.06506"
+    "source": "https://arxiv.org/abs/2408.06506",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TacSL: A Library for Visuotactile Sensor Simulation and Learning"
   },
   "C17": {
     "firstPublicDate": "2024-09-17",
-    "source": "https://arxiv.org/abs/2409.11047"
+    "source": "https://arxiv.org/abs/2409.11047",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TacDiffusion: Force-domain Diffusion Policy for Precise Tactile Manipulation"
   },
   "R02": {
     "firstPublicDate": "2024-10-31",
-    "source": "https://arxiv.org/abs/2410.24091"
+    "source": "https://arxiv.org/abs/2410.24091",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing"
+  },
+  "W01": {
+    "firstPublicDate": "2025-05-28",
+    "source": "https://arxiv.org/abs/2505.22159",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation"
+  },
+  "W02": {
+    "firstPublicDate": "2026-03-16",
+    "source": "https://arxiv.org/abs/2603.15169",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation"
+  },
+  "W03": {
+    "firstPublicDate": "2026-02-27",
+    "source": "https://arxiv.org/abs/2602.23648",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Rich Robotic Manipulation"
+  },
+  "W04": {
+    "firstPublicDate": "2026-06-10",
+    "source": "https://arxiv.org/abs/2606.12105",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "DAM-VLA: Decoupled Asynchronous Multimodal Vision Language Action model"
+  },
+  "W05": {
+    "firstPublicDate": "2026-09-05",
+    "source": "https://arxiv.org/abs/2609.05832",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "CR-VLA-Force: Learning Control-aware Compliance VLA Model for Robust Contact-rich Robotic Manipulation"
+  },
+  "W06": {
+    "firstPublicDate": "2026-09-16",
+    "source": "https://arxiv.org/abs/2609.18497",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TAO-Force: Unifying Force-Aware Perception and Fast-Slow Control for Contact-Rich Manipulation"
+  },
+  "W07": {
+    "firstPublicDate": "2026-09-16",
+    "source": "https://arxiv.org/abs/2609.18242",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceDelta-VLA: Distilling Force-Conditioned ActionCorrections for Contact-Rich Manipulation"
+  },
+  "W08": {
+    "firstPublicDate": "2026-09-19",
+    "source": "https://arxiv.org/abs/2609.22840",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning"
+  },
+  "W09": {
+    "firstPublicDate": "2025-07-12",
+    "source": "https://arxiv.org/abs/2507.09160",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tactile-VLA: Unlocking Vision-Language-Action Model's Physical Knowledge for Tactile Generalization"
+  },
+  "W10": {
+    "firstPublicDate": "2026-01-28",
+    "source": "https://arxiv.org/abs/2601.20321",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TaF-VLA: Tactile-Force Alignment in Vision-Language-Action Models for Force-aware Manipulation"
+  },
+  "W11": {
+    "firstPublicDate": "2026-05-27",
+    "source": "https://arxiv.org/abs/2605.27886",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tabero: Learning Gentle Manipulation with Closed-Loop Force Feedback from Vision, Touch, and Language"
+  },
+  "W12": {
+    "firstPublicDate": "2026-06-08",
+    "source": "https://arxiv.org/abs/2606.09337",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation"
+  },
+  "W13": {
+    "firstPublicDate": "2025-09-09",
+    "source": "https://arxiv.org/abs/2509.07962",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TA-VLA: Elucidating the Design Space of Torque-aware Vision-Language-Action Models"
+  },
+  "W14": {
+    "firstPublicDate": "2026-02-02",
+    "source": "https://arxiv.org/abs/2602.02142",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation"
+  },
+  "W15": {
+    "firstPublicDate": "2026-04-25",
+    "source": "https://arxiv.org/abs/2604.23272",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
+  },
+  "W16": {
+    "firstPublicDate": "2026-09-20",
+    "source": "https://arxiv.org/abs/2609.23614",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation"
+  },
+  "W17": {
+    "firstPublicDate": "2026-05-11",
+    "source": "https://arxiv.org/abs/2605.11048",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceFlow: Learning to Feel and Act via Contact-Driven Flow Matching"
+  },
+  "W18": {
+    "firstPublicDate": "2026-06-07",
+    "source": "https://arxiv.org/abs/2606.08555",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FAWAM: Force-Aware World Action Models for Closed-Loop Contact-Rich Manipulation"
+  },
+  "E01": {
+    "firstPublicDate": "2025-01-08",
+    "source": "https://arxiv.org/abs/2501.04693",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding"
+  },
+  "E02": {
+    "firstPublicDate": "2025-05-14",
+    "source": "https://arxiv.org/abs/2505.09577",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation"
+  },
+  "E03": {
+    "firstPublicDate": "2026-06-11",
+    "source": "https://arxiv.org/abs/2606.13102",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation"
+  },
+  "E04": {
+    "firstPublicDate": "2026-07-26",
+    "source": "https://arxiv.org/abs/2607.23782",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens"
+  },
+  "E05": {
+    "firstPublicDate": "2026-06-15",
+    "source": "https://arxiv.org/abs/2606.17055",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "T-Rex: Tactile-Reactive Dexterous Manipulation"
+  },
+  "E06": {
+    "firstPublicDate": "2026-09-11",
+    "source": "https://arxiv.org/abs/2609.12549",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "STAR: Sparse Tactile Representation Learning in Vision-Tactile-Language-Action Models for Dexterous Manipulation"
+  },
+  "E07": {
+    "firstPublicDate": "2026-03-13",
+    "source": "https://arxiv.org/abs/2603.12665",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation"
+  },
+  "E08": {
+    "firstPublicDate": "2026-09-03",
+    "source": "https://arxiv.org/abs/2609.03889",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation"
+  },
+  "E10": {
+    "firstPublicDate": "2026-08-15",
+    "source": "https://arxiv.org/abs/2608.15009",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceU-VLA: A Force-Aware Vision-Language-Action Model for Embodied Ultrasound Scanning"
+  },
+  "E11": {
+    "firstPublicDate": "2025-03-11",
+    "source": "https://arxiv.org/abs/2503.08548",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TLA: Tactile-Language-Action Model for Contact-Rich Manipulation"
+  },
+  "E12": {
+    "firstPublicDate": "2026-03-19",
+    "source": "https://arxiv.org/abs/2603.19201",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation"
+  },
+  "B01": {
+    "firstPublicDate": "2026-10-14",
+    "source": "https://arxiv.org/abs/2610.19604",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ForceBench: Benchmarking Force Integration for Robotic Manipulation"
+  },
+  "X01": {
+    "firstPublicDate": "2026-10-02",
+    "source": "https://arxiv.org/abs/2610.02784",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?"
+  },
+  "P01": {
+    "firstPublicDate": "2026-08-02",
+    "source": "https://arxiv.org/abs/2608.01402",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them"
+  },
+  "P02": {
+    "firstPublicDate": "2026-10-13",
+    "source": "https://arxiv.org/abs/2610.19155",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FACT: A Multimodal Force-Action-Track Foundation Model for Human-to-Robot Dexterity"
+  },
+  "P03": {
+    "firstPublicDate": "2026-03-16",
+    "source": "https://arxiv.org/abs/2603.15257",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing"
+  },
+  "P04": {
+    "firstPublicDate": "2026-10-10",
+    "source": "https://arxiv.org/abs/2610.14854",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "DEFT-VLA: Stage-Localized Force Specialization for Contact-Rich Robotic Manipulation"
+  },
+  "P05": {
+    "firstPublicDate": "2026-06-03",
+    "source": "https://arxiv.org/abs/2606.04825",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning"
+  },
+  "T01": {
+    "firstPublicDate": "2025-07-23",
+    "source": "https://arxiv.org/abs/2507.17294",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback"
+  },
+  "T02": {
+    "firstPublicDate": "2025-08-12",
+    "source": "https://arxiv.org/abs/2508.08706",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing"
+  },
+  "T03": {
+    "firstPublicDate": "2026-05-08",
+    "source": "https://arxiv.org/abs/2605.07308",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models"
+  },
+  "T04": {
+    "firstPublicDate": "2026-10-07",
+    "source": "https://arxiv.org/abs/2610.10384",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework"
+  },
+  "T06": {
+    "firstPublicDate": "2025-12-29",
+    "source": "https://arxiv.org/abs/2512.23864",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation"
+  },
+  "T07": {
+    "firstPublicDate": "2026-02-10",
+    "source": "https://arxiv.org/abs/2602.10093",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking"
+  },
+  "T10": {
+    "firstPublicDate": "2025-02-15",
+    "source": "https://arxiv.org/abs/2502.12191",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors"
+  },
+  "T14": {
+    "firstPublicDate": "2022-11-22",
+    "source": "https://arxiv.org/abs/2211.12498",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Touch and Go: Learning from Human-Collected Vision and Touch"
+  },
+  "T16": {
+    "firstPublicDate": "2025-06-16",
+    "source": "https://arxiv.org/abs/2506.13762",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation"
+  },
+  "T17": {
+    "firstPublicDate": "2026-06-12",
+    "source": "https://arxiv.org/abs/2606.14981",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Inference-time Policy Steering via Vision and Touch"
+  },
+  "T18": {
+    "firstPublicDate": "2025-06-19",
+    "source": "https://arxiv.org/abs/2506.15953",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation"
+  },
+  "T19": {
+    "firstPublicDate": "2026-02-10",
+    "source": "https://arxiv.org/abs/2602.09617",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception"
+  },
+  "T20": {
+    "firstPublicDate": "2022-12-07",
+    "source": "https://arxiv.org/abs/2212.03858",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "See, Hear, and Feel: Smart Sensory Fusion for Robotic Manipulation"
+  },
+  "C03": {
+    "firstPublicDate": "2025-10-15",
+    "source": "https://arxiv.org/abs/2510.13324",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation"
+  },
+  "C06": {
+    "firstPublicDate": "2025-05-16",
+    "source": "https://arxiv.org/abs/2505.11420",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Self-supervised perception for tactile skin covered dexterous hands"
+  },
+  "C07": {
+    "firstPublicDate": "2025-06-17",
+    "source": "https://arxiv.org/abs/2506.14754",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tactile Beyond Pixels: Multisensory Touch Representations for Robot Manipulation"
+  },
+  "C08": {
+    "firstPublicDate": "2023-03-20",
+    "source": "https://arxiv.org/abs/2303.10880",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Rotating without Seeing: Towards In-hand Dexterity through Touch"
+  },
+  "C09": {
+    "firstPublicDate": "2023-09-18",
+    "source": "https://arxiv.org/abs/2309.09979",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "General In-Hand Object Rotation with Vision and Touch"
+  },
+  "C11": {
+    "firstPublicDate": "2025-05-24",
+    "source": "https://arxiv.org/abs/2505.18472",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning"
+  },
+  "C12": {
+    "firstPublicDate": "2022-07-21",
+    "source": "https://arxiv.org/abs/2207.10763",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tactile Gym 2.0: Sim-to-real Deep Reinforcement Learning for Comparing Low-cost High-Resolution Robot Touch"
+  },
+  "C13": {
+    "firstPublicDate": "2020-05-29",
+    "source": "https://arxiv.org/abs/2005.14679",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation"
+  },
+  "C14": {
+    "firstPublicDate": "2020-12-15",
+    "source": "https://arxiv.org/abs/2012.08456",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TACTO: A Fast, Flexible, and Open-source Simulator for High-Resolution Vision-based Tactile Sensors"
+  },
+  "C15": {
+    "firstPublicDate": "2025-02-24",
+    "source": "https://arxiv.org/abs/2502.17432",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning"
+  },
+  "C16": {
+    "firstPublicDate": "2023-08-07",
+    "source": "https://arxiv.org/abs/2308.03624",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation"
+  },
+  "C18": {
+    "firstPublicDate": "2021-10-19",
+    "source": "https://arxiv.org/abs/2110.09904",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Learning Robotic Manipulation Skills Using an Adaptive Force-Impedance Action Space"
+  },
+  "C19": {
+    "firstPublicDate": "2021-02-13",
+    "source": "https://arxiv.org/abs/2102.06838",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Learning Variable Impedance Control via Inverse Reinforcement Learning for Force-Related Tasks"
+  },
+  "C20": {
+    "firstPublicDate": "2021-10-29",
+    "source": "https://arxiv.org/abs/2111.00071",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ReSkin: versatile, replaceable, lasting tactile skins"
+  },
+  "R01": {
+    "firstPublicDate": "2025-03-04",
+    "source": "https://arxiv.org/abs/2503.02881",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation"
+  },
+  "E09": {
+    "firstPublicDate": "2026-09-21",
+    "source": "https://arxiv.org/abs/2609.23968",
+    "checked": "2026-10-20",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Opt2VLA: Force-Aware Vision-Language-Action for Contact-Rich Humanoid Whole-Body Manipulation"
+  },
+  "T05": {
+    "source": "https://dt-tacvla.github.io/",
+    "checked": "2026-10-20",
+    "note": "项目页未注明首次公开日期，未找到可确认提交日期的预印本；不使用网页抓取时间或仓库提交时间代替论文公开时间。"
+  },
+  "N01": {
+    "firstPublicDate": "2026-07-20",
+    "source": "https://arxiv.org/abs/2607.18231",
+    "checked": "2026-10-22",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation"
+  },
+  "N02": {
+    "firstPublicDate": "2026-03-15",
+    "source": "https://arxiv.org/abs/2603.14604",
+    "checked": "2026-10-22",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "Tactile Modality Fusion for Vision-Language-Action Models"
+  },
+  "N03": {
+    "firstPublicDate": "2026-06-30",
+    "source": "https://arxiv.org/abs/2606.31723",
+    "checked": "2026-10-22",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "UniTacVLA: Unified Tactile Understanding and Prediction in Vision Language Action Models"
+  },
+  "N04": {
+    "firstPublicDate": "2026-07-08",
+    "source": "https://arxiv.org/abs/2607.07287",
+    "checked": "2026-10-22",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation"
+  },
+  "N05": {
+    "firstPublicDate": "2026-08-03",
+    "source": "https://arxiv.org/abs/2608.01824",
+    "checked": "2026-10-22",
+    "dateBasis": "arXiv v1 submission date",
+    "title": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction"
   }
 }

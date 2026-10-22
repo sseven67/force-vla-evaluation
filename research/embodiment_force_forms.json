@@ -22,23 +22,23 @@
       "Flexiv Rizon 4s",
       "DH AG-95",
       "末端六维力／力矩",
-      "三维力＋三维力矩；具体传感与估计链路仍待核实，不能直接归为独立外置 F/T 传感器。"
+      "末端外置六维力／力矩传感器，以300 Hz记录三维力和三维力矩（原文§4 Hardware and sensor setup）。传感器具体型号未说明。"
     ],
     [
       "W03",
       "机械臂＋夹爪",
-      "Monte / X-ARM（不同配置）",
+      "Monte双臂平台；每臂为7自由度X-ARM",
       "夹爪型号未核实",
       "腕部六维力／力矩",
       "腕部 F/T 向量：三维力＋三维力矩。"
     ],
     [
       "W04",
-      "单臂＋夹爪",
-      "Franka Panda",
-      "夹爪型号未核实",
-      "机器人内部力／力矩",
-      "机器人内部提供的 F/T 反馈；具体通道维度待核实。"
+      "单臂＋平行夹爪",
+      "Franka Emika Panda（7自由度）",
+      "Robotiq 2F-85",
+      "7维外部关节力矩估计",
+      "模型实际使用 Franka 内部估计的7个关节外部力矩。采集记录另含六维外部 wrench 与夹爪电流，但本方法不将完整14维记录作为输入。"
     ],
     [
       "W05",
@@ -147,10 +147,10 @@
     [
       "W18",
       "单臂＋接触末端",
-      "Franka（具体型号未核实）",
+      "Franka FR3",
       "末端执行器型号未核实",
       "腕部六维力／力矩",
-      "ATI F/T 传感器的三维力＋三维力矩；传感器具体型号未核实。"
+      "ATI Axia80-M8腕部传感器测量三维力和三维力矩；以120 Hz记录。"
     ],
     [
       "E01",
@@ -635,7 +635,7 @@
     [
       "R01",
       "单臂／双臂＋触觉夹爪",
-      "Flexiv Rizon",
+      "Flexiv Rizon 4（单臂／双臂配置）",
       "Grav 夹爪；GelSight Mini / MCT 触觉配置",
       "触觉图像；力版本用估计六维 wrench",
       "不同版本分别使用触觉图像／形变或估计末端六维力／力矩；按具体模型配置区分，不能认为同时输入全部信号。"
@@ -647,6 +647,46 @@
       "软双指夹爪；具体型号未核实",
       "四块16×16压力阵列",
       "双臂各两指，共4块压力阵列，合计1024个法向压力测点；不是腕部六维 F/T。"
+    ],
+    [
+      "N01",
+      "双臂＋两指夹爪",
+      "AgiBot G1；每臂7自由度",
+      "两组单自由度夹爪",
+      "腕部六维力／力矩",
+      "两腕装有六维传感器；模型使用右腕三维力＋三维力矩的历史，不把双腕拼成12维输入。"
+    ],
+    [
+      "N02",
+      "单臂＋平行夹爪",
+      "Franka Emika Panda",
+      "Franka hand；安装DIGIT触觉传感器",
+      "指尖视触觉图像",
+      "模型输入DIGIT触觉图像；评测另记录接触力，不把输入标为腕部六维力。"
+    ],
+    [
+      "N03",
+      "单臂＋平行夹爪",
+      "RealMan RM75B",
+      "三维打印平行夹爪；两枚DM-Tac W",
+      "三通道触觉形变图像",
+      "每指记录深度形变、x方向剪切形变、y方向剪切形变；不是六维力读数。ALOHA式主从示教不算双臂协作。"
+    ],
+    [
+      "N04",
+      "人形平台＋灵巧手",
+      "人形机器人平台",
+      "Wuji灵巧手；JQ-Industries触觉手套",
+      "手部触觉压力图像",
+      "视觉语言模块拆解任务，动作策略读取图像形式的触觉，快速纠正模块读取近期触觉历史；不是腕部六维力VLA。"
+    ],
+    [
+      "N05",
+      "单臂＋五指灵巧手",
+      "UR7e",
+      "XHand",
+      "五指分布式三维力阵列",
+      "每指120个测点，每点记录三个方向的力；按手指和接触区域编码，不是腕部六维力。"
     ]
   ],
   "sourceOverrides": {
@@ -669,6 +709,46 @@
     "E04": {
       "url": "https://arxiv.org/html/2607.23782v1",
       "locator": "§3 Tactile Collection Convention；Appendix A Data Card"
+    },
+    "W04": {
+      "url": "https://arxiv.org/html/2606.12105v1#A1",
+      "locator": "Appendix A Robot Platform and Sensor Suite；Appendix B Training Details"
+    },
+    "W02": {
+      "url": "https://arxiv.org/html/2603.15169v1",
+      "locator": "§4 Hardware and sensor setup"
+    },
+    "W03": {
+      "url": "https://arxiv.org/html/2602.23648v1",
+      "locator": "§4.1 Experimental Setups"
+    },
+    "R01": {
+      "url": "https://arxiv.org/html/2503.02881v1",
+      "locator": "§V-A.1 Hardware"
+    },
+    "W18": {
+      "url": "https://arxiv.org/html/2606.08555v1",
+      "locator": "Appendix A.1"
+    },
+    "N01": {
+      "url": "https://arxiv.org/html/2607.18231",
+      "locator": "§4；Table1–2；Fig.4；Appendix B、D–E"
+    },
+    "N02": {
+      "url": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1–4.3；Tables1–3；Fig.3–5；§5.1"
+    },
+    "N03": {
+      "url": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.3；Tables1–2；Appendix A、C"
+    },
+    "N04": {
+      "url": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.6；Tables1–3；Fig.3–4；§5"
+    },
+    "N05": {
+      "url": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1–4.4；Tables1–3；Appendix B.3–B.4、D.2–D.3"
     }
   }
 }

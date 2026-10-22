@@ -1,0 +1,500 @@
+{
+  "checked": "2026-10-17",
+  "definition": "只判断机器人自主执行时，论文是否用执行过程中的力数据评价执行效果。示教力波动、离线力预测、传感器标定或灵敏度演示、训练期受力统计均不计入。自主执行力与示教参考值的比较可以计入；保护停止阈值只属于设置。案例曲线与跨任务汇总须说明范围。",
+  "groups": [
+    {
+      "tasks": [
+        "W03-e02",
+        "W03-e03"
+      ],
+      "status": "reported",
+      "metrics": [
+        "每次操作最大接触力的平均值（N）"
+      ],
+      "kind": "execution",
+      "locator": "接触力比较；齿轮装配与翻盒结果",
+      "note": "每次执行先取最大接触力，再对测试取均值；原文的数值力比较只覆盖这两项任务。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "每次取最大接触力，再求平均；完成相同任务时，这个平均值越小越好。",
+        "comparison": "齿轮装配、翻盒各自比较力大小，成功率另算，不合成总分；其他任务没有这项力结果。"
+      },
+      "summary": "比较不同方法操作时是否用力过大。"
+    },
+    {
+      "tasks": [
+        "W05-e04"
+      ],
+      "status": "reported",
+      "metrics": [
+        "实际用力与40 N目标相差的百分比（取平均）"
+      ],
+      "kind": "execution",
+      "locator": "§4.2；TableI–II；Fig.7–8",
+      "note": "按时间点计算|实测力−40 N|÷40 N，再求平均并换算百分比；75 N只是保护停止参数，不属于这一误差指标。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "每个时刻计算实际力与40 N目标相差的百分比，再求平均；越小越准确。",
+        "comparison": "不同方法和控制设置按力误差比较，正常、变化场景分别报告；不与成功率合成总分。"
+      },
+      "summary": "比较实际用力能否准确达到目标。"
+    },
+    {
+      "tasks": [
+        "W06-e07"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "§V-C；TableIII",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。对接触窗口内预测片段第一帧和记录值求差值平方的平均；这是离线力预测，不是机器人执行时实际力与目标力的差距。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "W07-e01",
+        "W07-e02",
+        "W07-e03",
+        "W07-e04",
+        "W07-e05",
+        "W07-e06",
+        "W07-e07",
+        "W07-e08",
+        "W07-e09"
+      ],
+      "status": "reported",
+      "metrics": [
+        "最大接触力的平均值及波动（多个任务合在一起算）"
+      ],
+      "kind": "pooled",
+      "locator": "§IV；TableII、IV–V",
+      "note": "只取成功测试的最大力；同一单臂或双臂平台内跨任务合并统计。此任务参与对应平台评测，但论文没有单独公布此任务的最大力结果。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "只取成功测试中每次最大的力，计算平均值和波动；平均最大力越小越好。",
+        "comparison": "力、成功率和用时分别比较。单臂、双臂各自把多个任务合起来算，没有每个任务单独的力结果。"
+      },
+      "summary": "比较成功完成任务时是否用力更小。"
+    },
+    {
+      "tasks": [
+        "W09-e01",
+        "W09-e02"
+      ],
+      "status": "reported",
+      "metrics": [
+        "轻／重指令下实际施加的力（N）"
+      ],
+      "kind": "execution",
+      "locator": "§3.2；Table2",
+      "note": "比较softly、hard及未见近义词对应的实际施加力；表中以牛顿报告，不把语言指令本身当成力测量。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "给各方法相同指令，比较实际用力是否合理变化；不是力越小越好。",
+        "comparison": "比较指令理解能力，也测试没学过的词和新任务；没有统一力评分，力值不计入成功率。"
+      },
+      "summary": "检查机器人能否按“轻一点／重一点”调整用力。"
+    },
+    {
+      "tasks": [
+        "W09-e03"
+      ],
+      "status": "reported",
+      "metrics": [
+        "平均夹持力（N）",
+        "不同次测试的夹持力波动（标准差）"
+      ],
+      "kind": "execution",
+      "locator": "§3.3；Fig.6",
+      "note": "每物体另做5次力测量，以平均值和标准差报告；与10次无变形抓取成功率的测试分开。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "每个物体另测夹持力平均值和波动，看是否适合重、轻、易损物体；不是力越小越好。",
+        "comparison": "展示本方法的用力适应能力，不按力统一排名。测力与抓取成功率是两组实验，分别报告。"
+      },
+      "summary": "检查机器人能否根据物体调整夹持力。"
+    },
+    {
+      "tasks": [
+        "W09-e04"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "locator": "§3.4；Fig.7；Table4",
+      "note": "本任务报告白板／黑板成功率，并用案例说明模型提高用力；没有独立实测力统计，不把推理生成的3.5 N或6.7 N等用力数值当作统一测力指标。"
+    },
+    {
+      "tasks": [
+        "W11-e01",
+        "W11-e02",
+        "W11-e03",
+        "W11-e04",
+        "W11-e05",
+        "W11-e06",
+        "W11-e07",
+        "W11-e08",
+        "W11-e09"
+      ],
+      "status": "reported",
+      "metrics": [
+        "夹爪、机械臂用力的平均值",
+        "用力最大的5%读数的平均值（多个物体按轻／重指令合在一起算）"
+      ],
+      "kind": "pooled",
+      "locator": "§3.6；§4.4–4.5；Table3–4；附录E",
+      "note": "AG、MG分别表示接触期平均夹持力及最高5%夹持力的均值；AA、MA对机械臂作用力作相应统计。Table3给语言条件下AG，Table4给四项指标；不能当成每个物体独立的力结果。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "比较夹爪、机械臂的平均用力，以及用力最大的5%读数的平均值；看是否符合指令，不是越小越好。",
+        "comparison": "用于比较输入信息和训练设置的效果，不给统一力排名。多个物体按轻／重指令合起来算，没有单个物体的力结果。"
+      },
+      "summary": "检查机器人能否按轻／重指令改变用力。"
+    },
+    {
+      "tasks": [
+        "W17-e01",
+        "W17-e02",
+        "W17-e03",
+        "W17-e04"
+      ],
+      "status": "reported",
+      "metrics": [
+        "每次最大接触力与专家示范的平均差距（N）"
+      ],
+      "kind": "execution",
+      "locator": "主实验力保真度指标；短时接触任务结果",
+      "note": "盖章、插头、按泵瓶和USB按最大接触力与示教的差距评价；这与只要求不超过保护力上限不同。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "每次最大接触力与专家参考作比较，对差距求平均；越小越接近专家。",
+        "comparison": "各任务分别按力偏差比较方法，成功率另算，不合成总分。"
+      },
+      "summary": "比较短时接触中的用力是否接近专家。"
+    },
+    {
+      "tasks": [
+        "W17-e05",
+        "W17-e06"
+      ],
+      "status": "reported",
+      "metrics": [
+        "接触时的平均力与专家示范的平均差距（N）"
+      ],
+      "kind": "execution",
+      "locator": "主实验力保真度指标；持续接触任务结果",
+      "note": "只取力大于5 N的接触时段计算平均力，再与专家示教比较绝对差；5 N用于选取统计时段，不是保护停止参数。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "取力大于5 N的时段算平均力，再与专家参考比较并对差距求平均；越小越好。",
+        "comparison": "擦白板、擦花瓶分别比较力偏差，成功率另算。5 N只用于选统计时段，不是停止条件。"
+      },
+      "summary": "比较持续擦拭时的用力是否接近专家。"
+    },
+    {
+      "tasks": [
+        "E08-e04"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "estimation",
+      "locator": "§5.1；Table1",
+      "note": "本卡评估传感器或力估计能力，不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。用零载和已知重量参考评估外力估计；力矩均值及每段90百分位的中位数衡量空运动残留；接触识别另看AUC。不是开门／擦板执行的力跟随误差。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查传感器或模型测力准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "E09-e01",
+        "E09-e02",
+        "E09-e03"
+      ],
+      "status": "reported",
+      "metrics": [
+        "力指令符合轻／中／重要求的比例",
+        "任务完成且两项用力要求都达标的比例",
+        "实际力与指令力的平均差距（N）"
+      ],
+      "kind": "execution",
+      "locator": "官网Results：What each gate measures、Force error definitions；Hardware力统计",
+      "note": "仿真按有效力指令时段汇总，包括失败尝试；实际与指令平均力相差不超过5 N才通过跟随要求。另报逐时间点绝对误差均值及每次平均力误差；真机以各任务接触时段的力均值和测试间标准差报告。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "任务完成、力指令符合轻／中／重要求、实际与指令平均力相差不超过5 N，三项都满足才通过；另算力误差，越小越好。",
+        "comparison": "用力不达标会降低综合通过率，也单独比较力误差。这些规则用于仿真，失败测试也算；真机另报实际力及波动。"
+      },
+      "summary": "检查用力是否符合要求，并计入综合通过率。"
+    },
+    {
+      "tasks": [
+        "E10-e02"
+      ],
+      "status": "reported",
+      "metrics": [
+        "探头接触力随时间的变化（仅第2项任务的示例）"
+      ],
+      "kind": "case",
+      "locator": "§5.2；Fig.6",
+      "note": "原文明示Fig.6对比Task2两种方法的实测扫描力，讨论约7.5 N和力波动。只有案例曲线，没有五种切面各自的力误差表，不能把7.5 N作为统一达标要求。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "对比本方法与π₀.₅扫描时的力变化图，观察用力大小和波动。",
+        "comparison": "仅第2项任务的示例，用于解释扫描表现，不能按统一力成绩排名，也不计入图像获取成功率。"
+      },
+      "summary": "通过实际力变化分析扫描时的接触是否稳定。"
+    },
+    {
+      "tasks": [
+        "T08-e01"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "§5.1；附录D.3；Table5–6",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。与测力参考比较三轴力预测，报告均方根误差和置信区间；属于触觉表示的离线测力能力，不是策略执行中的力跟随。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "T19-e08"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "Sparsh Bench结果；附录力预测评测",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。输入连续触觉帧，预测力的变化并与参考变化比较；滑移F1与此误差是不同指标。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "T19-e09",
+        "T19-e10"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "主结果；附录15；Table11–13",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。在各自数据集的独立测试部分比较三轴预测与参考测力，区分沿表面方向的力和垂直表面的力；不套给四项真机策略任务。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "C01-e01"
+      ],
+      "status": "reported",
+      "metrics": [
+        "示例操作的平均接触力（N）",
+        "接触力随时间的变化"
+      ],
+      "kind": "case",
+      "locator": "§IV；Fig.6及相邻分析",
+      "note": "原文比较削皮力曲线并报告示例平均交互力：Raw DP约20 N、HybridIL约7.5 N，示教约6 N；这些是曲线分析，不能当作全部20次测试的均值。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "比较操作示例的力变化和平均力，看是否用力过大、与人工示范是否接近。",
+        "comparison": "用于解释削皮效果，不计入成功率；只是示例，不代表全部测试的平均表现，不能形成完整力排名。"
+      },
+      "summary": "通过接触力分析削皮时的用力是否合理。"
+    },
+    {
+      "tasks": [
+        "C03-e03"
+      ],
+      "status": "reported",
+      "metrics": [
+        "机器人与专家整体用力情况的差异值（N）"
+      ],
+      "kind": "execution",
+      "locator": "螺丝拧紧实验；Fig.6与力分布距离定义",
+      "note": "每条轨迹赋相同总权重，避免较长轨迹占更大权重，再比较执行与示教的力分布；只对拧螺丝任务报告此分析。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "比较机器人与专家各有多少时候用轻力、重力，把差别算成数值，越小越好；每次操作占相同比重。",
+        "comparison": "仅拧螺丝任务按此指标比较方法，成功率另算；用力接近专家也不保证任务成功。"
+      },
+      "summary": "比较拧螺丝时的整体用力方式是否接近专家。"
+    },
+    {
+      "tasks": [
+        "C06-e01"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "§4.2(1)；Fig.7a；附录B.1",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。以探头F/T读数作参考，测试三轴力估计及减少标注后的表现；不是机械臂跟随目标力的误差。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "C07-e05"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "§4.1；Fig.4右侧",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。用不同压入位置及力大小的样本，与参考测力比较，原文报告平均误差约35 mN；不当作插入或旋转策略的力误差。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "C16-e01",
+        "C16-e02",
+        "C16-e03",
+        "C16-e04",
+        "C16-e05",
+        "C16-e06"
+      ],
+      "status": "reported",
+      "metrics": [
+        "各方向推拉力、扭转力的平均大小",
+        "用力变化的大小（方差；最终给出六个任务的平均结果）"
+      ],
+      "kind": "pooled",
+      "locator": "§IV-B(2)；Fig.5",
+      "note": "每任务只统计成功抓住物体的测试，先求力与力矩绝对值均值、方差，再对六任务平均；不是所有测试统计，也没有六项任务各自独立的图表数值。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "分别计算各方向推拉力、扭转力的平均大小和波动；这些任务中，越小表示接触负担越少、越稳定，仍需结合完成情况。",
+        "comparison": "只算已抓住物体的测试，后来任务失败也算；最终给出六个任务的平均结果，成功率另算，没有单项任务的力结果。"
+      },
+      "summary": "比较接触时的用力大小和稳定程度。"
+    },
+    {
+      "tasks": [
+        "C16-e07"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "offline",
+      "locator": "§IV-B(3)；TableII",
+      "note": "本卡为离线预测评测，其力预测误差不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。用真实记录进行五折交叉验证比较视觉编码器，力与力矩预测误差属于离线评测，不是机器人执行中的用力误差。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查模型估计或预测力值准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "C18-e01",
+        "C18-e03"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "training",
+      "locator": "仿真任务定义；安全性分析两项指标",
+      "note": "本卡的受力统计来自训练阶段，不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。原文实际统计是否发生过力惩罚及惩罚大小，而不只给60 N参数。惩罚按超过上限的力大小增加；这些是训练安全性统计，不是部署成功率。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这些力的统计来自训练过程，不是训练完成后对自主操作效果的测试。"
+    },
+    {
+      "tasks": [
+        "C18-e04"
+      ],
+      "status": "reported",
+      "metrics": [
+        "以10 N为目标擦拭时的实际力变化（真实机器人示例）"
+      ],
+      "kind": "case",
+      "locator": "真机圆周擦拭实验；力与刚度轨迹图",
+      "note": "展示建立接触、达到10 N及圆周运动时的实际力与刚度变化；没有另给统一的力跟随误差均值，不将目标10 N本身当作指标。",
+      "evaluatesAutonomousExecution": true,
+      "explanation": {
+        "method": "观察真实机器人达到10 N并画圆擦拭时，实际力能否保持在目标附近。",
+        "comparison": "仅展示本方法的控制过程，没有各方法统一的力误差排名；主要比较能耗和运动偏差。"
+      },
+      "summary": "展示机器人能否达到并保持目标接触力。"
+    },
+    {
+      "tasks": [
+        "C20-e01",
+        "C20-e02",
+        "C20-e03",
+        "C20-e04",
+        "C20-e10"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "estimation",
+      "locator": "§5–6；柔性板迁移定量结果",
+      "note": "本卡评估传感器或力估计能力，不属于自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。预测力与参考测力比较，差值平方后求平均；按单皮肤、三轴力、磨损、跨皮肤或柔性板配置分别评价，不能套给没有参考测力的应用演示。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里只检查传感器或模型测力准不准，没有用机器人自主操作时的力来评价操作效果。"
+    },
+    {
+      "tasks": [
+        "C20-e05"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "case",
+      "locator": "§7：Force Sensitivity: Water in shot glass；补充视频S1",
+      "note": "这里是倒水载荷的传感器灵敏度演示，不属于机器人自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。杯中加水时传感读数随载荷增加，原文用小于20 mL水重（小于0.2 N）说明可辨认微小受力变化；这是灵敏度演示，没有重复检出率或力估计误差汇总。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里通过往杯里加水检查传感器能否感到很小的重量变化，不是测试机器人的自主操作效果。"
+    },
+    {
+      "tasks": [
+        "R01-e01"
+      ],
+      "status": "not_reported",
+      "metrics": [],
+      "kind": "collection",
+      "locator": "§V：Q6数据采集质量；Fig.11",
+      "note": "这里报告的是示教采集时的力波动，不属于机器人自主执行效果评测。 按本项定义，原文未报告自主执行效果的力评测。同一志愿者以两种遥操作方式采集削皮数据（10条示教），比较力的滚动标准差；此项评价采集质量，不是RDP策略执行的力统计。",
+      "evaluatesAutonomousExecution": false,
+      "scopeNote": "这里测的是人示范操作时的力变化，不是机器人自主操作时的表现。"
+    },
+    {
+      "tasks": [
+        "N01-e01",
+        "N01-e02",
+        "N01-e03"
+      ],
+      "status": "reported",
+      "metrics": [
+        "自主执行中的接触力变化示例"
+      ],
+      "kind": "execution",
+      "locator": "§4.4；Fig.4",
+      "note": "Fig.4给出各任务自主执行中选定方向的力变化；没有统一的力指标排序。",
+      "evaluatesAutonomousExecution": true,
+      "summary": "用接触力变化说明机器人如何记住接触事件。",
+      "explanation": {
+        "method": "把执行画面与某个方向的力曲线对齐，观察碰到物体、按钮按下或擦拭时的变化。",
+        "comparison": "用于解释任务行为；各方法正式按成功率比较，没有用力大小或力误差排高低。"
+      }
+    },
+    {
+      "tasks": [
+        "N02-e01",
+        "N02-e02",
+        "N02-e03",
+        "N02-e04",
+        "N02-e05",
+        "N02-e06",
+        "N02-e07",
+        "N02-e08",
+        "N02-e09"
+      ],
+      "status": "reported",
+      "metrics": [
+        "每次最大接触力的平均值（N）"
+      ],
+      "kind": "execution",
+      "locator": "§4.1–4.2；Table1",
+      "note": "按任务报告最大接触力的平均值；不把力与成功率合成总分。",
+      "evaluatesAutonomousExecution": true,
+      "summary": "独立比较各方法是否用力过大。",
+      "explanation": {
+        "method": "每次执行取最大的接触力，再求平均；完成相同任务时，平均最大力越小越好。",
+        "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+      }
+    }
+  ],
+  "explanationsChecked": "2026-10-19",
+  "wordingUpdated": "2026-10-20"
+}

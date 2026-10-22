@@ -1,0 +1,1799 @@
+{
+  "workUpdates": {
+    "W16": {
+      "trials": "Table 1：3次run，每run每任务20个真机episodes；100条/任务是示教数。",
+      "metrics": "擦白板：成功擦除字母比例；Pivot、Cup Dispense、Pick & Place：二元任务成功率；Table 1为三次run均值±标准差。",
+      "source": "https://arxiv.org/html/2609.23614v1",
+      "arxiv": "2609.23614",
+      "locators": [
+        "§5.1：任务与随机初态；Table 1：3 runs，每run20 episodes；Appendix B：数据采集"
+      ],
+      "notes": "CompVLA逐任务补核查：擦白板按擦除字母比例评分，Pivot、Cup Dispense和Pick & Place按二元成功计分。Table 1使用三次run，每run每任务20个episodes；每任务100条是训练示教数。部署策略不输入实测F/T。来源：https://arxiv.org/html/2609.23614v1 §5.1、Table 1、Appendix B。"
+    },
+    "R02": {
+      "trials": "Table 1：每主任务20个真机episodes；分阶段评估，示教数不作为测试次数。",
+      "metrics": "四个长流程任务的完成表现及步骤指标；最终成功分别要求无损蒸蛋准备、无损葡萄上盘、扳手插入、煎蛋放上面包。",
+      "locators": [
+        "§5.2：四任务成功定义；Table 1：20 episodes；Appendix B.2：逐步骤判据"
+      ]
+    },
+    "W11": {
+      "tasks": "Tabero Object九任务：字母汤罐、奶油奶酪、沙拉酱、烧烤酱、番茄酱、黄油、牛奶、巧克力布丁、橙汁分别放入篮筐。",
+      "locators": [
+        "§3.6：SR、AG、MG、AA、MA；§4.2–4.4：主消融；Appendix C Table 11：九任务；Appendix D：重放保留率"
+      ]
+    }
+  },
+  "works": {
+    "W01": [
+      {
+        "task": "按瓶",
+        "purpose": "轴向接触与按压深度适应",
+        "metric": "任务成功率",
+        "setting": "Flexiv Rizon＋Dahuan夹爪，真机闭环20次。",
+        "conditions": "完成按压；液体量／深度阈值未核实。另有瓶型与高度泛化。",
+        "source": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插头插入",
+        "purpose": "接触对齐与纠偏",
+        "metric": "完整插入成功率",
+        "setting": "同平台真机20次主评测。",
+        "conditions": "插头须完整插入；另有遮挡／不稳定插座，额外条件分母未核实。",
+        "source": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "小间隙插接与重试",
+        "metric": "完整插入成功率",
+        "setting": "同平台真机20次。",
+        "conditions": "USB完整插入；与插头任务分别计分。",
+        "source": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "区分擦拭动作与清洁效果",
+        "metric": "Wipe Board-1动作成功率；Board-2完全擦除率",
+        "setting": "同平台真机10次。",
+        "conditions": "两种判据分开：有效擦拭动作；彻底擦除标记。",
+        "source": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "削黄瓜",
+        "purpose": "持续接触与加工质量",
+        "metric": "成功率；每stroke平均削皮长度；充分削皮最少stroke",
+        "setting": "同平台真机15轮，每轮15个stroke。",
+        "conditions": "每轮15个stroke；累计覆盖的成功数值阈值未核实。",
+        "source": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W02": [
+      {
+        "task": "按瓶",
+        "purpose": "混合力—位置按压与过载适应",
+        "metric": "任务成功率",
+        "setting": "Flexiv Rizon 4s＋DH AG-95；每方法每任务20次真机独立测试。",
+        "conditions": "完成瓶头按压；定量出液／深度判据未核实。",
+        "source": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4–5；Table1；Figs.5–6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "清洁花瓶",
+        "purpose": "变化表面法向下维持接触",
+        "metric": "任务成功率；定性接触表现",
+        "setting": "Flexiv Rizon 4s＋DH AG-95；每方法每任务20次真机独立测试。",
+        "conditions": "含旋转花瓶后的法向变化；清洁残留阈值未核实。",
+        "source": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4–5；Table1；Figs.5–6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "持续接触并避免过载",
+        "metric": "任务成功率",
+        "setting": "Flexiv Rizon 4s＋DH AG-95；每方法每任务20次真机独立测试。",
+        "conditions": "比较擦拭与过载失败；擦除面积阈值未核实。",
+        "source": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4–5；Table1；Figs.5–6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "取盘",
+        "purpose": "视觉失效后的力探索与重抓取",
+        "metric": "任务成功率",
+        "setting": "Flexiv Rizon 4s＋DH AG-95；每方法每任务20次真机独立测试。",
+        "conditions": "沙箱中探索盘子并自主重试；最终成功判据细节未核实。",
+        "source": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4–5；Table1；Figs.5–6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "齿轮装配",
+        "purpose": "约束接触与装配对齐",
+        "metric": "任务成功率",
+        "setting": "Flexiv Rizon 4s＋DH AG-95；每方法每任务20次真机独立测试。",
+        "conditions": "装配完成计分；插入深度／间隙数值未核实。",
+        "source": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4–5；Table1；Figs.5–6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W03": [
+      {
+        "task": "USB插入",
+        "purpose": "高精度插接与快速纠偏",
+        "metric": "任务成功率",
+        "setting": "同平台真机25次。",
+        "conditions": "完整USB插入；另有组件／更新频率消融。",
+        "source": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§4.1–4.3；Table1；Appendix A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "齿轮装配",
+        "purpose": "装配对齐并限制冲击",
+        "metric": "成功率；平均峰值接触力",
+        "setting": "同平台真机30次。",
+        "conditions": "正确齿轮对齐；每trial取最大接触力再平均，不是力跟踪误差。",
+        "source": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§4.1–4.3；Table1；Appendix A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "翻盒",
+        "purpose": "动态接触下调节推力",
+        "metric": "成功率；平均峰值接触力",
+        "setting": "同平台真机20次。",
+        "conditions": "任务完成二元计分；终态角度容差未核实。",
+        "source": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§4.1–4.3；Table1；Appendix A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦板",
+        "purpose": "持续接触与组件贡献",
+        "metric": "任务成功率",
+        "setting": "同平台真机10次。",
+        "conditions": "任务完成二元计分；残留阈值未核实。",
+        "source": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§4.1–4.3；Table1；Appendix A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W04": [
+      {
+        "task": "叠围巾",
+        "purpose": "柔性物体操作与视觉记忆",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "精确折叠成功判据未核实；episode时长统计分母未完全抽取。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "持续接触下异步信息的作用",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "独立擦除残留阈值未核实。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "按按钮",
+        "purpose": "短时接触响应",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "按钮锁定／触发的具体成功判据未核实。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "按洗手液",
+        "purpose": "按压接触响应",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "出液／按压深度的具体成功判据未核实。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插座插入",
+        "purpose": "接触对齐与纠偏",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "完整就位的深度／保持判据未核实。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "扫珠入簸箕",
+        "purpose": "连续运动与重规划平滑性",
+        "metric": "成功率；平均episode时长；附录SPARC与tracking lag",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "入簸箕珠数阈值未核实；附录另测100／200 Hz控制，不与重规划频率混淆。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "Lego排列",
+        "purpose": "多阶段精细摆放",
+        "metric": "成功率；平均episode时长",
+        "setting": "Franka Panda＋夹爪，每任务15次真机；主表100 Hz控制，约5.5 Hz重规划；Appendix B输入为7D外部关节扭矩估计。",
+        "conditions": "排列目标位置／容差的具体判据未核实。",
+        "source": "https://arxiv.org/html/2606.12105v1",
+        "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W05": [
+      {
+        "task": "急停按钮",
+        "purpose": "依据接触状态判定接合",
+        "metric": "任务成功率",
+        "setting": "UR5e＋UMI-like夹爪＋6D F/T；每测试条件24–25次真机；500 Hz柔顺控制。",
+        "conditions": "常规／较示教低6 cm的OOD；按钮接合，精确锁定判据未完全抽取。",
+        "source": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§4.1–4.2；Table I；Figs.6–8",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "充电插头插入",
+        "purpose": "视觉受限时接触探索",
+        "metric": "插入成功率",
+        "setting": "UR5e＋UMI-like夹爪＋6D F/T；每测试条件24–25次真机；500 Hz柔顺控制。",
+        "conditions": "常规及PI-pro近插座起点；PI-pro腕相机看不到孔位；完整插入与过载失败分开。",
+        "source": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§4.1–4.2；Table I；Figs.6–8",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "旋转窗",
+        "purpose": "长程约束下柔顺操作",
+        "metric": "Window-opening-1／2阶段成功率",
+        "setting": "UR5e＋UMI-like夹爪＋6D F/T；每测试条件24–25次真机；500 Hz柔顺控制。",
+        "conditions": "先抓把手拉至指定角度，再抵住窗框继续打开；角度数值未核实，保护停机失败。",
+        "source": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§4.1–4.2；Table I；Figs.6–8",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "恒力擦白板",
+        "purpose": "跟踪明确目标法向力",
+        "metric": "成功率；法向力平均相对绝对误差；保护停机",
+        "setting": "UR5e＋UMI-like夹爪＋6D F/T；每测试条件24–25次真机；500 Hz柔顺控制。",
+        "conditions": "参考40 N，75 N保护停机；含高度低6 cm的OOD；法向单轴指标不是六轴跟踪。",
+        "source": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§4.1–4.2；Table I；Figs.6–8",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W06": [
+      {
+        "task": "重量分拣",
+        "purpose": "区分同外观物体的重量",
+        "metric": "任务成功率",
+        "setting": "AgiBot G1双臂＋腕六轴F/T；每任务ID／OOD各30次真机。",
+        "conditions": "罐按重量放入正确箱；不计入其他四任务平均，无力基线N/A。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "削黄瓜",
+        "purpose": "接触保持与工具适应",
+        "metric": "任务成功率",
+        "setting": "AgiBot G1双臂＋腕六轴F/T；每任务ID／OOD各30次真机。",
+        "conditions": "连续削皮长度超过黄瓜长度一半；ID／OOD分开。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "按泵头",
+        "purpose": "调节按压力而非复现终点",
+        "metric": "任务成功率",
+        "setting": "AgiBot G1双臂＋腕六轴F/T；每任务ID／OOD各30次真机。",
+        "conditions": "成功出液且不过度施力；过度力数值阈值未核实。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "持续接触的清洁能力",
+        "metric": "任务成功率",
+        "setting": "AgiBot G1双臂＋腕六轴F/T；每任务ID／OOD各30次真机。",
+        "conditions": "目标标记可见地去除；残留面积阈值未核实。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "切黄瓜",
+        "purpose": "克服材料阻力并切断",
+        "metric": "任务成功率",
+        "setting": "AgiBot G1双臂＋腕六轴F/T；每任务ID／OOD各30次真机。",
+        "conditions": "必须完全切断；OOD高度、工具、光照变化的逐任务对应关系未完全抽取。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "空／满罐反事实力交换（离线）",
+        "purpose": "验证动作依赖力输入",
+        "metric": "轨迹MSE；路由Flip Rate",
+        "setting": "20条测试轨迹，离线策略响应分析。",
+        "conditions": "固定视觉交换力；是离线响应而非反事实真机成功率。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "削皮接触窗口预测（离线）",
+        "purpose": "检验未来力／力矩预测",
+        "metric": "Force MSE；Torque MSE",
+        "setting": "离线接触窗口，独立片段分母未核实。",
+        "conditions": "预测与记录值比较，非执行跟踪误差。",
+        "source": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A–D；Tables I–III",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W07": [
+      {
+        "task": "单臂翻物",
+        "purpose": "动态接触纠偏",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "Franka Panda＋内部估计wrench，真机20次。",
+        "conditions": "翻物终态姿态容差未核实；Table II峰值／耗时仅成功样本、平台内跨任务池化。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "单臂USB插入",
+        "purpose": "小间隙插接与延迟鲁棒性",
+        "metric": "任务成功率；延迟条件成功率／成功样本峰值",
+        "setting": "Franka Panda＋内部估计wrench，主评测20次。",
+        "conditions": "主表20次；另加0–200 ms参考延迟，每方法／任务／延迟10次。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "单臂开柜",
+        "purpose": "摩擦和运动约束下纠偏",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "Franka Panda真机20次。",
+        "conditions": "柜门打开角度阈值未核实。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "单臂按键",
+        "purpose": "短时接触终点调节",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "Franka Panda真机20次。",
+        "conditions": "按钮触发／锁定的具体判据未核实。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "单臂擦白板",
+        "purpose": "持续接触与未见工具适应",
+        "metric": "任务成功率；成功trial峰值／耗时",
+        "setting": "Franka Panda真机20次主评测。",
+        "conditions": "清洁残留阈值未核实；未见板擦泛化另每方法／任务10次。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂拔插头",
+        "purpose": "双臂受约束拔出",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "X Square双臂真机20次。",
+        "conditions": "终态释放要求未核实；力／耗时仅统计成功trial。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂插头插入",
+        "purpose": "双臂插接与延迟纠偏",
+        "metric": "任务成功率；延迟条件成功率／成功样本峰值",
+        "setting": "X Square双臂＋内部估计wrench，主评测20次。",
+        "conditions": "另有0–200 ms延迟、每条件10次；就位深度容差未核实。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂开抽屉",
+        "purpose": "协调克服摩擦",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "X Square双臂真机20次。",
+        "conditions": "拉开距离阈值未核实；不能把成功样本分母套到成功率。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂擦白板",
+        "purpose": "双臂协调持续接触",
+        "metric": "任务成功率；平台级成功trial峰值／耗时",
+        "setting": "X Square双臂真机20次。",
+        "conditions": "擦除面积阈值未核实。",
+        "source": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV；Tables I–II、IV–V；Fig.7",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W08": [
+      {
+        "task": "插头插入",
+        "purpose": "无人救援下完整插接",
+        "metric": "自主成功次数／30",
+        "setting": "FR3＋Robotiq 2F-85＋HEX-E；每设置30次真机，参数固定；每任务50示教，在线变体预算30分钟。",
+        "conditions": "60秒内完整插入；禁止介入、trial内重置、保护停机。",
+        "source": "https://arxiv.org/html/2609.22840v1",
+        "locator": "§V-A–C；Tables I–II",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "环套柱",
+        "purpose": "自主装配与稳定释放",
+        "metric": "自主成功次数／30",
+        "setting": "FR3＋Robotiq 2F-85＋HEX-E；每设置30次真机，参数固定；每任务50示教，在线变体预算30分钟。",
+        "conditions": "60秒内完全就位并释放；禁止介入、trial内重置、保护停机。",
+        "source": "https://arxiv.org/html/2609.22840v1",
+        "locator": "§V-A–C；Tables I–II",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "完整清洁与自主终止",
+        "metric": "自主成功次数／30",
+        "setting": "FR3＋Robotiq 2F-85＋HEX-E；每设置30次真机，参数固定；每任务50示教，在线变体预算30分钟。",
+        "conditions": "180秒内去除全部文字、抬擦子并停止；禁止介入、重置、保护停机。",
+        "source": "https://arxiv.org/html/2609.22840v1",
+        "locator": "§V-A–C；Tables I–II",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W09": [
+      {
+        "task": "USB插拔",
+        "purpose": "学习soft／hard力语言",
+        "metric": "任务成功率；施加力",
+        "setting": "soft／hard各100条为示教，评测次数未核实。",
+        "conditions": "插拔成功的数值阈值和正式测试次数未核实；不以训练次数代替。",
+        "source": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§3.1–3.4；Tables1–4；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "充电器插拔",
+        "purpose": "跨任务力副词迁移",
+        "metric": "成功率；施加力",
+        "setting": "100条运动示教，正式测试次数未核实。",
+        "conditions": "已学运动但未学对应力副词；不是整个充电器任务零样本；另测未见副词。",
+        "source": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§3.1–3.4；Tables1–4；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "物理常识抓取",
+        "purpose": "按重量／易碎性选择夹力",
+        "metric": "单次无变形抓起成功率；平均夹持力",
+        "setting": "每物体10次成功率测试；平均力另按5次，不混用。",
+        "conditions": "重、轻、易碎分组；ID／OOD分开；单次牢固抬起且无可见形变。",
+        "source": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§3.1–3.4；Tables1–4；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "白板／黑板擦拭",
+        "purpose": "失败推理后的调力",
+        "metric": "擦拭完成表现；CoT对照",
+        "setting": "真机闭环，独立测试次数未核实。",
+        "conditions": "白板训练、黑板测试；测试分母和残留阈值未核实。",
+        "source": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§3.1–3.4；Tables1–4；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W10": [
+      {
+        "task": "管插入",
+        "purpose": "对齐并抑制横向卡滞",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "管完全插入紧配槽，无卡滞或猛烈碰撞。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "镊子提重",
+        "purpose": "工具传力与抗转动",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "至少转移并放下两个砝码，不掉落。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "充电宝拔出",
+        "purpose": "克服摩擦并避免滑脱",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "从紧配槽完全取出并放置，无滑脱／碰撞。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "连续法向与切向接触",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "沿指定轨迹去掉全部标记。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "果冻切片",
+        "purpose": "刚度突变感知与及时停止",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "切透气球上方果冻，不刺破气球。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "重部件提起",
+        "purpose": "抗重力滑移",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "重型汽车部件搬至目标，不滑脱或失去接触。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "夹具食物抓取",
+        "purpose": "柔性工具与不规则表面抗滑",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "夹起、搬运、放下食物，不掉落。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "巧克力抓取",
+        "purpose": "防滑与易碎保护平衡",
+        "metric": "二元任务成功率",
+        "setting": "真实接触任务，每模型每主任务15次；同训练数据与RTX4090推理。",
+        "conditions": "搬运且无断裂／表面损伤。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "薯片抓取（附录补充任务）",
+        "purpose": "极易碎物力过冲约束",
+        "metric": "附录二元成功条件；未确认纳入主表",
+        "setting": "补充任务测试分母未核实，不能自动套主表15次。",
+        "conditions": "完整搬运无开裂／粉碎；正文主套件8项，本项是附录额外列项，不并入8任务平均。",
+        "source": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W11": [
+      {
+        "task": "字母汤罐放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "奶油奶酪放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "沙拉酱放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "烧烤酱放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "番茄酱放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "黄油放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "牛奶放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "巧克力布丁放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      },
+      {
+        "task": "橙汁放入篮筐",
+        "purpose": "轻柔指令下兼顾任务完成与夹持力",
+        "metric": "SR；AG／MG；过程指标体系另含AA／MA",
+        "setting": "Isaac Lab触觉Franka夹爪，LIBERO Object衍生9任务子集；主策略每任务rollout数未核实。",
+        "conditions": "firmly／tightly与gently／softly；100%对25%或10%力。MG／MA取最高5%样本均值；Appendix D重放保留率不是策略rollout成功率。",
+        "source": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+        "verification": "9任务名称按Appendix C；测试分母仍未核实。"
+      }
+    ],
+    "W12": [
+      {
+        "task": "杯子入架",
+        "purpose": "窄槽接触对齐和稳定释放",
+        "metric": "子任务成功次数／30",
+        "setting": "Piper＋Pika夹爪＋双Tacta各6D（合12D）；各30次真机，正式参数固定。",
+        "conditions": "抓杯、放入窄杯架、释放后稳定。",
+        "source": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "搭扣锁定",
+        "purpose": "翻转与压锁接触状态转换",
+        "metric": "子任务成功次数／30",
+        "setting": "Piper＋Pika夹爪＋双Tacta各6D（合12D）；各30次真机，正式参数固定。",
+        "conditions": "搭扣翻转并压至锁定。",
+        "source": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "鸡蛋搬运放置",
+        "purpose": "无损夹持和稳定放置",
+        "metric": "子任务成功次数／30",
+        "setting": "Piper＋Pika夹爪＋双Tacta各6D（合12D）；各30次真机，正式参数固定。",
+        "conditions": "到目标后稳定，无可见损伤。",
+        "source": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "搭扣盒全流程",
+        "purpose": "子任务串联可靠性",
+        "metric": "全流程成功次数／30；成功流程平均时间；60分钟吞吐量",
+        "setting": "Piper＋Pika夹爪＋双Tacta各6D（合12D）；各30次真机，正式参数固定。",
+        "conditions": "连续完成，无介入、重置、停机、掉落或损伤；吞吐量与30次成功率分开。",
+        "source": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W13": [
+      {
+        "task": "按键",
+        "purpose": "接触终点判断",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "本任务按钮触发／锁定的精确判据未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "充电器插入",
+        "purpose": "接触对齐",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "插接终态深度／容差未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "小间隙接触对齐",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "本任务完整就位容差未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插座拔出",
+        "purpose": "克服拔出阻力",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "拔出后释放／放置判据未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "门把转动",
+        "purpose": "旋转受约束接触",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "转动角度／开门要求未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "抓放瓶",
+        "purpose": "常规抓放能力保持",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "放置位置／稳定时间容差未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "倒液",
+        "purpose": "常规工具姿态能力保持",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "液量与洒漏阈值未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "堆方块",
+        "purpose": "常规精细放置能力保持",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "堆叠终态稳定时间／容差未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "推到目标",
+        "purpose": "常规推物能力保持",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "目标区域／位置容差未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "开抽屉",
+        "purpose": "关节物体操纵能力保持",
+        "metric": "任务成功率",
+        "setting": "机械臂＋夹爪真机，每任务20次；关节effort输入／预测／二者组合对照。",
+        "conditions": "抽屉打开距离阈值未核实。",
+        "source": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§6；Table5；代码observation.effort",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W14": [
+      {
+        "task": "擦白板",
+        "purpose": "力蒸馏对持续接触的帮助",
+        "metric": "任务成功率",
+        "setting": "UR5e＋夹爪真机；每任务50示教、30独立测试；训练采力，部署策略不读真实力。",
+        "conditions": "全部可见标记擦除。",
+        "source": "https://arxiv.org/html/2602.02142v2",
+        "locator": "v2 §IV",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "急停按钮",
+        "purpose": "无部署力输入的按压完成",
+        "metric": "任务成功率",
+        "setting": "UR5e＋夹爪真机；每任务50示教、30独立测试；训练采力，部署策略不读真实力。",
+        "conditions": "按钮充分压下且不回弹。",
+        "source": "https://arxiv.org/html/2602.02142v2",
+        "locator": "v2 §IV",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插头插入",
+        "purpose": "无部署力输入的约束接触",
+        "metric": "任务成功率",
+        "setting": "UR5e＋夹爪真机；每任务50示教、30独立测试；训练采力，部署策略不读真实力。",
+        "conditions": "插头完全就位。",
+        "source": "https://arxiv.org/html/2602.02142v2",
+        "locator": "v2 §IV",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W15": [
+      {
+        "task": "拆杯",
+        "purpose": "区分顶部杯与整叠杯",
+        "metric": "任务成功率",
+        "setting": "FR3＋Robotiq 2F-85＋双AnySkin真机，每任务24次；仅v1四任务，不混当前主页灵巧手演示。",
+        "conditions": "只取顶部红杯放蓝杯旁；大／小杯各12次。",
+        "source": "https://arxiv.org/html/2604.23272v1",
+        "locator": "v1 §4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "鸡蛋抓放",
+        "purpose": "位置变化下易碎物操作",
+        "metric": "任务成功率",
+        "setting": "FR3＋Robotiq 2F-85＋双AnySkin真机，每任务24次；仅v1四任务，不混当前主页灵巧手演示。",
+        "conditions": "初始位置变化，放进金色碗；独立损伤阈值未核实。",
+        "source": "https://arxiv.org/html/2604.23272v1",
+        "locator": "v1 §4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "高度和外观变化下持续接触",
+        "metric": "任务成功率",
+        "setting": "FR3＋Robotiq 2F-85＋双AnySkin真机，每任务24次；仅v1四任务，不混当前主页灵巧手演示。",
+        "conditions": "三板高、红／灰板擦、尺寸与蓝／黑墨迹组合，各组合一次；残留阈值未核实。",
+        "source": "https://arxiv.org/html/2604.23272v1",
+        "locator": "v1 §4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插头插入",
+        "purpose": "外形与接触几何变化",
+        "metric": "任务成功率",
+        "setting": "FR3＋Robotiq 2F-85＋双AnySkin真机，每任务24次；仅v1四任务，不混当前主页灵巧手演示。",
+        "conditions": "黄／白／黑充电器各8次；就位深度容差未核实。",
+        "source": "https://arxiv.org/html/2604.23272v1",
+        "locator": "v1 §4；Appendix A.1–A.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W16": [
+      {
+        "task": "擦白板",
+        "purpose": "姿态不确定下柔顺表面跟踪",
+        "metric": "擦除字母比例（不是整任务二元SR）",
+        "setting": "FR3＋UMI指尖、三相机；Table1三次run，每run每任务20episodes；每任务100示教，F/T仅训练标签。",
+        "conditions": "按擦除字母占比评分；超时／FR3安全停机失败；具体时限未核实。",
+        "source": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "Pivot",
+        "purpose": "变化接触方向下柔顺性",
+        "metric": "二元任务成功率",
+        "setting": "FR3＋UMI指尖、三相机；Table1三次run，每run每任务20episodes；每任务100示教，F/T仅训练标签。",
+        "conditions": "终态角度阈值未核实；超时或安全停机失败。",
+        "source": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "Cup Dispense",
+        "purpose": "指定深度的受力按压",
+        "metric": "二元任务成功率",
+        "setting": "FR3＋UMI指尖、三相机；Table1三次run，每run每任务20episodes；每任务100示教，F/T仅训练标签。",
+        "conditions": "按压深度数值／具体时限未核实；安全停机失败。",
+        "source": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "Pick & Place",
+        "purpose": "常规抓放能力保持",
+        "metric": "二元任务成功率",
+        "setting": "FR3＋UMI指尖、三相机；Table1三次run，每run每任务20episodes；每任务100示教，F/T仅训练标签。",
+        "conditions": "随机初始环境；放置容差／时限未核实；安全停机失败。",
+        "source": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W17": [
+      {
+        "task": "盖章",
+        "purpose": "视觉高度歧义下调节压力",
+        "metric": "成功率；峰值力相对专家统计MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "纸堆厚度变化，需清晰印迹；厚度范围正文／附录有差异，未合并成单一值。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "插头插入",
+        "purpose": "接触摩擦下对齐推进",
+        "metric": "成功率；峰值力统计MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "起点随机、插座随机偏转；须完整插入。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "按泵瓶",
+        "purpose": "适应弹簧阈值和瓶高",
+        "metric": "成功率；峰值力统计MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "三种洗手液瓶，完整压下／释放；新瓶物理OOD另10次。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "力矩感知窄孔并防卡滞",
+        "metric": "成功率；峰值力统计MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "完整插入USB-A口；精确间隙数值未核实。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "平面持续接触和工具泛化",
+        "metric": "成功率；接触期平均力相对专家MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "去除标记；力范数>5 N为有效接触窗口；新刚度／厚度板擦OOD另10次。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦花瓶",
+        "purpose": "曲面法向变化下保持接触",
+        "metric": "成功率；接触期平均力相对专家MAE（N）",
+        "setting": "真实机器人＋工具／夹爪，各主任务20次、随机初态；去接触视觉消融另10次／任务。",
+        "conditions": "擦去目标标记；>5 N窗口统计；新板擦OOD另10次。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "削黄瓜（定性补充）",
+        "purpose": "展示连续接触力调节",
+        "metric": "定性力调节演示",
+        "setting": "真机定性补充，独立次数未核实。",
+        "conditions": "不在六任务主表；独立成功率／trial分母未核实。",
+        "source": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "W18": [
+      {
+        "task": "擦白板",
+        "purpose": "力预测与残差修正对持续接触的贡献",
+        "metric": "任务成功率；执行时间",
+        "setting": "Franka＋ATI腕六轴F/T120 Hz；各方法／任务20次真机、最长60秒；扰动另5次／设置。",
+        "conditions": "清洁残留阈值未核实；板姿态扰动对照另5次／设置。",
+        "source": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§4；Tables1–3；Appendix A.1、A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "削黄瓜",
+        "purpose": "高度变化时的接触修正",
+        "metric": "任务成功率；执行时间",
+        "setting": "Franka＋ATI腕六轴F/T120 Hz；各方法／任务20次真机、最长60秒；扰动另5次／设置。",
+        "conditions": "成功长度／覆盖阈值未核实；改变黄瓜高度的扰动另5次／设置。",
+        "source": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§4；Tables1–3；Appendix A.1、A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "翻盒",
+        "purpose": "方向和接触力的旋转效果",
+        "metric": "任务成功率；执行时间",
+        "setting": "Franka＋ATI腕六轴F/T120 Hz；各方法／任务20次真机、最长60秒；扰动另5次／设置。",
+        "conditions": "盒子终态角度阈值未核实；移动装沙盒子扰动另5次／设置。 正文称Pivot Box扰动，但Table 3列名为Slice cucumber；该列数值归属存在歧义，不直接套到翻盒。",
+        "source": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§4；Tables1–3；Appendix A.1、A.4",
+        "verification": "原文正文说明Pivot Box扰动，但Table 3对应列名写Slice cucumber；标题存在不一致，不把该列数字自动归到翻盒。"
+      },
+      {
+        "task": "擦花瓶",
+        "purpose": "曲面接触的残差调节",
+        "metric": "任务成功率；执行时间",
+        "setting": "Franka＋ATI腕六轴F/T120 Hz；各方法／任务20次真机、最长60秒；扰动另5次／设置。",
+        "conditions": "残留阈值未核实；改变花瓶尾部高度扰动另5次／设置。",
+        "source": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§4；Tables1–3；Appendix A.1、A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "P01": [
+      {
+        "task": "插头插入",
+        "purpose": "区分对齐和施力失败",
+        "metric": "成功率；相对π0.5的Fisher精确检验",
+        "setting": "FR3＋Robotiq夹爪＋Bota SensONE400 Hz；每方法／任务40次真机、60秒；目标32×20 cm均匀采样，home在5 cm立方体随机。",
+        "conditions": "60秒内完全插入；训练／测试相同分布；磁性底座固定执行中目标。",
+        "source": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§6；Appendix A–B；Table A.1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "精密对齐与去力对照",
+        "metric": "成功率；Fisher精确检验",
+        "setting": "FR3＋Robotiq夹爪＋Bota SensONE400 Hz；每方法／任务40次真机、60秒；目标32×20 cm均匀采样，home在5 cm立方体随机。",
+        "conditions": "60秒内完成插入；USB来自NIST装配板，整体协议不是NIST统一benchmark。",
+        "source": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§6；Appendix A–B；Table A.1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "按钮",
+        "purpose": "利用接触终点信息",
+        "metric": "成功率；去真实力消融",
+        "setting": "FR3＋Robotiq夹爪＋Bota SensONE400 Hz；每方法／任务40次真机、60秒；目标32×20 cm均匀采样，home在5 cm立方体随机。",
+        "conditions": "60秒内触发按钮锁定；机构3D打印。",
+        "source": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§6；Appendix A–B；Table A.1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "持续接触质量",
+        "metric": "成功率",
+        "setting": "FR3＋Robotiq夹爪＋Bota SensONE400 Hz；每方法／任务40次真机、60秒；目标32×20 cm均匀采样，home在5 cm立方体随机。",
+        "conditions": "60秒内擦除标记区域；板固定、每trial墨迹变化。",
+        "source": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§6；Appendix A–B；Table A.1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "钥匙插入",
+        "purpose": "视觉模糊时判断力学终点",
+        "metric": "成功率；去真实力消融",
+        "setting": "FR3＋Robotiq夹爪＋Bota SensONE400 Hz；每方法／任务40次真机、60秒；目标32×20 cm均匀采样，home在5 cm立方体随机。",
+        "conditions": "60秒内正确就位；相似外观不同长度；插入深度容差未核实。",
+        "source": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§6；Appendix A–B；Table A.1",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "P02": [
+      {
+        "task": "实验室移液",
+        "purpose": "双手协调与精确按压",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "液体进小试管、吸头弹入烧杯、移液器放回；移液器／试管不得掉落。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "试管旋盖",
+        "purpose": "指力传递扭矩与固定管身",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "盖完全分离，管体最终竖立在架中。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "微量离心管翻盖",
+        "purpose": "换手后拇指接触开盖",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "翻盖全开，管体回架并竖立。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "系鞋带",
+        "purpose": "双手重抓与力协调",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "双环蝴蝶结在释放后仍保持系紧。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "洗牌",
+        "purpose": "抗滑、弹性与力调节",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "两半牌交错合为单副，无牌掉落。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "多物体抓取",
+        "purpose": "手指重配置中保持物体",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "同手同时持铲、锤、球后，全放篮筐。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "使用螺丝刀",
+        "purpose": "轴向接触与抗旋转扭矩",
+        "metric": "二元成功次数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "螺丝完全取出，工具和被固定物放回桌面。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "弹竖琴",
+        "purpose": "指尖力幅度控制",
+        "metric": "每rollout清晰发声数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "拨10根指定琴弦，无声／杂音／断弦不计清晰音；部分得分。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "敲木琴",
+        "purpose": "敲击力度和反弹控制",
+        "metric": "每rollout清晰发声数／10",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "敲10个指定音条，过轻无声或反弹双击不计。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "移液器调量",
+        "purpose": "分开接触建立和接触后精度",
+        "metric": "拨盘接合次数／10；接合样本最终体积MAE（μL）",
+        "setting": "YAM双臂＋双Sharpa Wave22关节手；每任务10真机rollouts；物体位置逐轮随机、跨方法同场景物体。",
+        "conditions": "起始420 μL目标400 μL；转动才算接合；未接合算失败且不加入条件MAE。",
+        "source": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§V-A；Table I；Appendix E Tasks1–10",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "P03": [
+      {
+        "task": "果酱塑料罐抓放",
+        "purpose": "避免薄壁容器永久变形",
+        "metric": "无损放置成功率",
+        "setting": "双SO-101，右臂双指10×10压力阵列；每模型／任务20次真机；压力训练蒸馏，学生部署不读触觉。",
+        "conditions": "允许抓持时轻微表面变形，但操作后必须完全恢复原形且无可见结构损伤，放到指定目标。",
+        "source": "https://arxiv.org/html/2603.15257v1",
+        "locator": "§IV-A–D；Fig.6；Table I",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "华夫饼抓放",
+        "purpose": "脆性物夹持压力控制",
+        "metric": "无损放置成功率",
+        "setting": "双SO-101，右臂双指10×10压力阵列；每模型／任务20次真机；压力训练蒸馏，学生部署不读触觉。",
+        "conditions": "不可裂碎，放到指定位置。",
+        "source": "https://arxiv.org/html/2603.15257v1",
+        "locator": "§IV-A–D；Fig.6；Table I",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "鸡蛋双臂搬放",
+        "purpose": "无损交接与正确放置",
+        "metric": "无损放置成功率",
+        "setting": "双SO-101，右臂双指10×10压力阵列；每模型／任务20次真机；压力训练蒸馏，学生部署不读触觉。",
+        "conditions": "鸡蛋完整且放入正确槽位。",
+        "source": "https://arxiv.org/html/2603.15257v1",
+        "locator": "§IV-A–D；Fig.6；Table I",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "P04": [
+      {
+        "task": "移液器吸头安装",
+        "purpose": "分离定位和接触终点能力",
+        "metric": "整体／非接触／接触阶段SR",
+        "setting": "Mercury B2双臂＋双腕六轴F/T；每方法／任务20次真机，共享随机位置；130／50／50是示教数。",
+        "conditions": "回撤后吸头牢固；接触SR仅以到达接触阶段trial作分母；OOD另10次Low未见握高。",
+        "source": "https://arxiv.org/html/2610.14854v1",
+        "locator": "§IV-A–D；Tables I–III；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂吸液",
+        "purpose": "接触调节和吸液量精度",
+        "metric": "整体／分阶段SR；成功样本体积MAE（μL）",
+        "setting": "Mercury B2双臂＋双腕六轴F/T；每方法／任务20次真机，共享随机位置；130／50／50是示教数。",
+        "conditions": "须有效吸液；MAE仅成功trial相对1000 μL；OOD另10次（High5＋Low5），Normal不计。",
+        "source": "https://arxiv.org/html/2610.14854v1",
+        "locator": "§IV-A–D；Tables I–III；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "分离接近抓取与接触擦拭",
+        "metric": "整体／非接触／接触阶段SR",
+        "setting": "Mercury B2双臂＋双腕六轴F/T；每方法／任务20次真机，共享随机位置；130／50／50是示教数。",
+        "conditions": "去除标记并有效接触；人为阶段切换，不是完整自动阶段识别。",
+        "source": "https://arxiv.org/html/2610.14854v1",
+        "locator": "§IV-A–D；Tables I–III；Fig.6",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "P05": [
+      {
+        "task": "瓶子扶正",
+        "purpose": "曲面抓持与重定向",
+        "metric": "成功率；逐任务模态对比",
+        "setting": "双指光学触觉夹爪真机；DP／π0各三模态。§5.1称over 10 demonstrations，Table2按10个百分点报告；测试单位措辞歧义待澄清。",
+        "conditions": "横瓶抓稳、立起、释放并稳定；终态角度容差未核实。",
+        "source": "https://arxiv.org/html/2606.04825v1",
+        "locator": "§5.1；Table2；Appendix A.3–A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "触觉图与marker对持续接触的作用",
+        "metric": "成功率；V／V+T／V+TM对比",
+        "setting": "双指光学触觉夹爪真机；DP／π0各三模态。§5.1称over 10 demonstrations，Table2按10个百分点报告；测试单位措辞歧义待澄清。",
+        "conditions": "抓海绵、沿墨迹维持法向接触擦除；残留面积阈值未核实。",
+        "source": "https://arxiv.org/html/2606.04825v1",
+        "locator": "§5.1；Table2；Appendix A.3–A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "倒液",
+        "purpose": "触觉抓持和工具倾转",
+        "metric": "成功率；逐任务模态对比",
+        "setting": "双指光学触觉夹爪真机；DP／π0各三模态。§5.1称over 10 demonstrations，Table2按10个百分点报告；测试单位措辞歧义待澄清。",
+        "conditions": "按语言选两个碗之一，倾转清洁液瓶且避免洒漏；液量阈值未核实。",
+        "source": "https://arxiv.org/html/2606.04825v1",
+        "locator": "§5.1；Table2；Appendix A.3–A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "D形插销插入",
+        "purpose": "接触几何和插入对齐",
+        "metric": "成功率；逐任务模态对比",
+        "setting": "双指光学触觉夹爪真机；DP／π0各三模态。§5.1称over 10 demonstrations，Table2按10个百分点报告；测试单位措辞歧义待澄清。",
+        "conditions": "抓销、对齐并完全就位，失配需要重调。",
+        "source": "https://arxiv.org/html/2606.04825v1",
+        "locator": "§5.1；Table2；Appendix A.3–A.4",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "R01": [
+      {
+        "task": "削黄瓜",
+        "purpose": "高频反馈的接触丢失恢复",
+        "metric": "削皮长度归一化质量分",
+        "setting": "单臂真机，三条件各10次。",
+        "conditions": "无扰动／接触前／接触后扰动各10次；按长度比例评分，非单一二元SR。",
+        "source": "https://reactive-diffusion-policy.github.io/",
+        "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "擦花瓶",
+        "purpose": "曲面跟随与扰动恢复",
+        "metric": "擦除质量0／0.5／1",
+        "setting": "单臂真机，无扰动／接触前／接触后各10次。",
+        "conditions": "残留同人类示教为1，轻微残留0.5，显著残留0。",
+        "source": "https://reactive-diffusion-policy.github.io/",
+        "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "双臂夹持提纸杯",
+        "purpose": "抗滑和防压坏平衡",
+        "metric": "Clamp／Lift成功率；质量0／0.5／1",
+        "setting": "双臂夹持工具真机；软／硬纸杯各10次；Force和GelSight＋MCTac分别报告。",
+        "conditions": "按轨迹提起且无显著挤压为1；提起部分压瘪0.5；未提起或掉落0。",
+        "source": "https://reactive-diffusion-policy.github.io/",
+        "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "R02": [
+      {
+        "task": "蒸蛋流程",
+        "purpose": "遮挡下精细力调节与无损放置",
+        "metric": "整流程及四步骤完成表现",
+        "setting": "低成本双臂＋柔性压力夹爪；Table1每任务20真机episodes；三相机；分辨率／二值触觉消融单列。",
+        "conditions": "开蛋盒、抓蛋、放蛋、盖器；蛋无损且盖到位；掉落、压裂、长期卡蛋盒失败；蛋盒起点随机7–10 cm。",
+        "source": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§5.2–5.3；Table1；Appendix B.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "水果准备",
+        "purpose": "双手开袋和无损水果抓持",
+        "metric": "整流程及四步骤完成表现",
+        "setting": "低成本双臂＋柔性压力夹爪；Table1每任务20真机episodes；三相机；分辨率／二值触觉消融单列。",
+        "conditions": "取盘、协同开袋、取葡萄、放盘；葡萄上盘且无损。",
+        "source": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§5.2–5.3；Table1；Appendix B.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "六角扳手手内调整与插入",
+        "purpose": "遮挡时手内状态识别",
+        "metric": "整流程及四步骤完成表现",
+        "setting": "低成本双臂＋柔性压力夹爪；Table1每任务20真机episodes；三相机；分辨率／二值触觉消融单列。",
+        "conditions": "双手交接、手内调整后插入盒孔；成功插入为最终判据。",
+        "source": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§5.2–5.3；Table1；Appendix B.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      },
+      {
+        "task": "三明治制作",
+        "purpose": "工具接触状态与双臂协作",
+        "metric": "整流程及四步骤完成表现",
+        "setting": "低成本双臂＋柔性压力夹爪；Table1每任务20真机episodes；三相机；分辨率／二值触觉消融单列。",
+        "conditions": "持勺、抓锅柄倾锅、取煎蛋、放面包；煎蛋从锅内取出并上面包。",
+        "source": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§5.2–5.3；Table1；Appendix B.2",
+        "verification": "原文与已有来源核查记录；仍未核实的细项在字段内明确注明。"
+      }
+    ],
+    "N01": [
+      {
+        "task": "揭杯寻找隐藏物块",
+        "purpose": "检查是否记得已经查看过哪个杯子，并完成双臂分工。",
+        "metric": "成功率（完整完成／失败）",
+        "setting": "AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。物块藏在前杯、后杯各9次。",
+        "conditions": "右臂依次揭开杯子，左臂取走物块，右臂放回最后揭开的杯子；同一杯子不能重复查看。",
+        "locator": "§4.1–4.2；Appendix B.1–B.2",
+        "source": "https://arxiv.org/html/2607.18231",
+        "scoringExplanation": "上述步骤全部完成才记成功，成功次数除以18；不能只因找到物块就算完成。"
+      },
+      {
+        "task": "按指定次数蓝色按钮",
+        "purpose": "检查能否利用接触历史记住已经按了几次。",
+        "metric": "成功率（次数准确并停止／失败）",
+        "setting": "AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。要求按1、2、3次，各测6次；本任务用右臂操作。",
+        "conditions": "必须按出按钮的咔嗒声才算一次，恰好达到指令次数后张开夹爪停止；少按、多按都失败。",
+        "locator": "§4.1–4.2；Appendix B.1–B.2",
+        "source": "https://arxiv.org/html/2607.18231",
+        "scoringExplanation": "按规定次数完成并停止的次数除以18；不是按接触力大小评分。"
+      },
+      {
+        "task": "按指定次数擦碗",
+        "purpose": "检查是否能记住已经完成几轮接触擦拭。",
+        "metric": "成功率（轮数准确并停止／失败）",
+        "setting": "AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。要求擦1、2、3轮，各测6次；右臂持海绵。",
+        "conditions": "完整来回擦一次算一轮，每轮覆盖碗内左右两侧且中途不能失去接触；完成指定轮数后松开海绵停止。",
+        "locator": "§4.1–4.2；Appendix B.1–B.2",
+        "source": "https://arxiv.org/html/2607.18231",
+        "scoringExplanation": "完整轮数和停止动作都正确才记成功；不按擦掉多少污渍或力误差评分。"
+      }
+    ],
+    "N02": [
+      {
+        "task": "圆销插入（3 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法30次，属于训练相似条件。",
+        "conditions": "将圆销完整插入对应底座；孔与销之间预留3 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "圆销插入（2 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法30次，属于训练相似条件。",
+        "conditions": "将圆销完整插入对应底座；孔与销之间预留2 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "检查真实连接器接触后的对齐和恢复。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法30次；训练相似条件。",
+        "conditions": "将已夹住的USB连接器完整插入端口，允许调整后再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "拉开抽屉",
+        "purpose": "检查能否挂住把手并持续拉动。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT；每方法30次；使用夹爪挂住绿色把手。",
+        "conditions": "夹爪钩住顶层抽屉的把手并完全拉开；首次直接拉开与调整后拉开分开记录。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完全拉开抽屉才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "方销插入（3 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；使用训练中未见的销形状。",
+        "conditions": "将方销完整插入对应底座；孔与销之间预留3 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "五边形销插入（3 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；使用训练中未见的销形状。",
+        "conditions": "将五边形销完整插入对应底座；孔与销之间预留3 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "方销插入（2 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；使用训练中未见的销形状。",
+        "conditions": "将方销完整插入对应底座；孔与销之间预留2 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "五边形销插入（2 mm孔隙）",
+        "purpose": "检查接触后能否调整对齐，并减少反复尝试和硬推。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；使用训练中未见的销形状。",
+        "conditions": "将五边形销完整插入对应底座；孔与销之间预留2 mm间隙，允许接触后调整再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "HDMI插入",
+        "purpose": "检查换成训练中没见过的连接器后能否完成。",
+        "metric": "成功率；一次完成比例；每次最大接触力的平均值；平均完成时间",
+        "setting": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；从USB插入扩展到HDMI连接器。",
+        "conditions": "将已夹住的HDMI连接器完整插入端口，允许调整后再试。",
+        "locator": "§4.1–4.2；Table1",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "完整插入才算成功；第一次就完成另计一次完成比例。两种比例越高越好，平均完成时间越短越好；力的比较见下方。"
+      },
+      {
+        "task": "触觉编码器离线识别与力估计",
+        "purpose": "检查触觉特征是否保留旋转、接触和力大小信息。",
+        "metric": "旋转和接触分类准确率；力估计误差（越小越好）",
+        "setting": "使用T3和Sparsh/TacBench中的离线测试；比较四种预训练编码器。",
+        "conditions": "从保存的触觉样本判断旋转和接触状态，另预测力值并与参考值比较。",
+        "locator": "§4.3；Table3",
+        "source": "https://arxiv.org/html/2603.14604",
+        "scoringExplanation": "三项分类按判断正确的比例计分，越高越好；力估计用预测值与参考值的差距计分，越小越好。不是机器人自主操作评分。"
+      }
+    ],
+    "N03": [
+      {
+        "task": "调整铅笔并放入杯中",
+        "purpose": "检查能否根据接触调整细长物体的朝向。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起铅笔，调整朝向并放入杯中。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "调整管子并放入管架",
+        "purpose": "检查能否调整管子的角度并放到指定位置。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起管子，调整角度并放入管架。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "检查表面位置变化后能否保持接触并擦净。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起白板擦并把白板擦干净。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "擦花瓶",
+        "purpose": "检查曲面接触变化时能否持续擦拭。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起擦具并把花瓶表面擦干净。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "检查遮挡和目标方向改变时能否接触对齐。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起USB并插入端口。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "两脚电源插头插入",
+        "purpose": "检查能否在插接时纠正接触偏差。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起两脚插头并插入插座。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "大齿轮装配",
+        "purpose": "检查轴方向变化时能否对齐大齿轮。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起大齿轮并装到对应齿轮轴上。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      },
+      {
+        "task": "小齿轮装配",
+        "purpose": "检查较小零件接触时能否及时调整。",
+        "metric": "成功率（完成／失败）",
+        "setting": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+        "conditions": "抓起小齿轮并装到对应齿轮轴上。",
+        "locator": "§4.1–4.2；Table1；Appendix A.2",
+        "source": "https://arxiv.org/html/2606.31723",
+        "scoringExplanation": "按是否完成指定操作计成功率，正常和人为干扰分别计算；不按形变图像的大小给操作打分。"
+      }
+    ],
+    "N04": [
+      {
+        "task": "给花浇水",
+        "purpose": "检查多步骤任务安排与接触操作能否连贯完成。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "完成给花浇水的指令流程。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "清理桌面",
+        "purpose": "检查能否按子任务持续整理场景。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "完成桌面清理流程。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "杯子插入",
+        "purpose": "检查精细接触时能否调整对齐。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "把杯子插到目标位置。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "电源插头插入",
+        "purpose": "检查接触遮挡下的精密插接。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "将电源插头插入目标接口。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "擦锅",
+        "purpose": "检查持续擦拭中能否保持稳定接触。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "完成锅内擦拭操作。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "抽取纸巾",
+        "purpose": "检查柔软物体抓取和拉取是否稳定。",
+        "metric": "成功率（完成／失败）",
+        "setting": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。",
+        "conditions": "完成纸巾抽取操作。",
+        "locator": "§4.1–4.3；Fig.4；Table1",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "按是否完成整项任务计算成功率，正常与干扰分别统计；原文未列出此任务更细的逐步判分标准。"
+      },
+      {
+        "task": "未来接触的离线预测",
+        "purpose": "检查预测的接触时间和区域是否接近实际记录。",
+        "metric": "接触时机准确率；接触区域重合程度；三维接触形状重合程度",
+        "setting": "使用未参与训练的子任务片段；预测17帧，并与同轨迹实际未来片段对齐。",
+        "conditions": "比较预测与记录中何时发生接触、接触在哪里，以及接触形状是否一致。",
+        "locator": "§4.5；Table2",
+        "source": "https://arxiv.org/html/2607.07287",
+        "scoringExplanation": "接触时机按判断正确的比例评分；重合程度按共同区域占两者合并区域的比例评分，三项都是越高越好。"
+      }
+    ],
+    "N05": [
+      {
+        "task": "移液器按压",
+        "purpose": "检查抓取与按压深度控制。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒时限。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "抓住移液器并按下按钮。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "抓住得0.4分；按下至少三分之一行程加0.3分；达到一半行程再加0.3分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "抓取水瓶",
+        "purpose": "检查不同重量水瓶的提起与持稳。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测稳定提起后被向下拉落再自主恢复。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "提起水瓶并稳定保持。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "提离原支撑面至少15 cm得0.5分，保持3秒再得0.5分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "抓取玉米棒",
+        "purpose": "检查多指抓取是否稳定且不滑落。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测训练区域之外的物体位置。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "提起玉米棒，调整为稳定抓姿并保持。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "提起得0.4分；达到稳定抓姿加0.3分；3秒不滑落再加0.3分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "海绵擦白板",
+        "purpose": "检查持续接触的实际擦除效果。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测未训练过的2.5和5 cm操作高度。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "抓住海绵并擦除白板字迹。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "擦掉部分但仍有黑色痕迹得0.5分；无可见黑色痕迹再加0.5分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "按按钮",
+        "purpose": "检查小按钮是否真正被触发。",
+        "metric": "成功率（指示灯亮／未亮）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒时限。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "按下按钮使指示灯亮起。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "灯亮得1分，否则0分；20次平均值就是成功率。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "开抽屉取烧杯",
+        "purpose": "检查遮挡下的多步骤操作。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。120秒时限。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "打开中层抽屉，取出透明烧杯并放好。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "打开抽屉得0.5分；取出并放好烧杯再加0.5分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "移液到烧杯",
+        "purpose": "检查吸液、移动和放液的连续完成程度。",
+        "metric": "平均任务完成得分（可得部分分，越高越好）",
+        "setting": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。120秒；另测投影仪制造的动态光照变化。保护停止或无法恢复的越界会结束测试。",
+        "conditions": "用塑料滴管从量筒吸水，并转移到透明烧杯。",
+        "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "抓住滴管得0.3分；吸入液体加0.3分；移到烧杯上方并将所吸液体放入加0.4分。 每次最高1分；20次取平均后换成百分数，七任务再各占同样权重求平均。"
+      },
+      {
+        "task": "触觉编码器离线检查",
+        "purpose": "检查压缩后的触觉是否保留接触区域和力信息。",
+        "metric": "接触识别准确程度；力重建差距；接触区域分布差距",
+        "setting": "100条未参与训练的轨迹；相同编码器和训练量，比较仅力重建与三项监督。",
+        "conditions": "对保留样本重建各区域的接触、三维力和接触强度分布。",
+        "locator": "Appendix D.2；Table5",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "接触识别综合考虑误报与漏报，得分越高越好；力大小和分布的差距越小越好，力方向一致程度及大小变化相关程度越高越好。"
+      },
+      {
+        "task": "未来触觉与剩余动作离线预测",
+        "purpose": "检查接触后持续更新是否比固定初始预测更准确。",
+        "metric": "未来触觉特征相似程度；剩余动作的平均平方误差",
+        "setting": "同100条保留轨迹；分别检查接触前后，在一段动作中的第4、8、12步更新。",
+        "conditions": "持续更新与一次预测使用相同测试片段，比较预测和实际未来触觉、参考动作的差距。",
+        "locator": "§4.2；Appendix D.3；Table6",
+        "source": "https://arxiv.org/html/2608.01824",
+        "scoringExplanation": "未来触觉特征越相似越好；动作误差按预测与参考值之差的平方取平均，越小越好。不是自主执行时的用力控制误差。"
+      }
+    ]
+  }
+}

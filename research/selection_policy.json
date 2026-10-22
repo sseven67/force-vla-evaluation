@@ -1,20 +1,96 @@
 {
-  "updated":"2026-10-16",
-  "window":{"start":"2024-10-16","end":"2026-10-16","label":"近两年：2024-10-16 至 2026-10-16"},
-  "rules":{
-    "A":"在时间范围内，且官方仓库Stars≥100，或OpenAlex收录引用≥20，或Stars≥50且收录引用≥10。共享仓库数值不用于单篇入选。",
-    "B":"在时间范围内，有已核实正式发表，或Stars≥50，或OpenAlex收录引用≥10，但未达到A门槛。",
-    "C":"时间范围内，当前关注证据不足或缺失：待观察，不推断论文不可靠。",
-    "H":"时间范围外的前序参考；日期缺失导致不能判定时单独标记。"
+  "updated": "2026-10-16",
+  "window": {
+    "start": "2024-10-16",
+    "end": "2026-10-16",
+    "label": "近两年：2024-10-16 至 2026-10-16"
   },
-  "limitations":["这些数值门槛是本轮调研的阅读筛选规则，不是领域公认质量标准，也不是论文可靠性评分。","OpenAlex计数有索引与版本合并滞后；0与未知均不能推出无人引用。未取得Google Scholar计数。","Stars/Forks不等于真实部署量；不同仓库与发布时长影响计数。","正式发表、被列为基线或公开代码均不等同已独立复现；实验可信性仍需读协议和对照。"],
-  "publicationEvidence":{
-    "W01":{"venue":"NeurIPS 2025","year":2025,"source":"https://papers.nips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf"},
-    "W02":{"venue":"CVPR 2026","year":2026,"source":"https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf"},
-    "C01":{"venue":"ICRA 2025","year":2025,"source":"https://forcemimic.github.io/","note":"预印本2024-10-10，按范围内正式发表2025纳入。"},
-    "C02":{"venue":"RA-L 2025","year":2025,"date":"2025-04-14","source":"https://ieeexplore.ieee.org/document/10964857/"},
-    "C15":{"venue":"RSS 2025","year":2025,"source":"https://roboticsproceedings.org/rss21/p079.html"},
-    "R01":{"venue":"RSS 2025","year":2025,"source":"https://roboticsproceedings.org/rss21/p052.html"},
-    "R02":{"venue":"CoRL 2024","year":2024,"source":"https://binghao-huang.github.io/3D-ViTac/"}
-  }
+  "rules": {
+    "A": "①夹爪＋末端六维力：原文可查且有相关评测，不设引用或Stars门槛。其余三个方向：原文可查、有相关评测，且官方仓库Stars≥30或OpenAlex引用≥5，满足其中一项即可。",
+    "B": "原文可查且有相关评测，但不属于①、且暂未达到其余三个方向的关注门槛，保留为补充参考。独立资源另列，不占四类名额。",
+    "C": "原文是否可查、是否有相关评测尚未确认；不据此判定工作不可靠。",
+    "H": "未进入优先考察的较早工作，保留为前序参考；年份筛选与优先条件分开。"
+  },
+  "limitations": [
+    "这些条件用于选择阅读顺序，不是论文可靠性评分。",
+    "①不因引用或Stars较少被排除；一篇工作同时属于①和其他方向时按①纳入。",
+    "OpenAlex收录引用与GitHub Stars分别标明；数值缺失不当作0，Stars不等于实际使用量。",
+    "近两年／全部年份是独立筛选项，不改变论文是否符合优先条件。",
+    "共享的官方仓库若用于筛选，会明确标注共享；该数值不代表每篇工作各自独立的关注量。"
+  ],
+  "publicationEvidence": {
+    "W01": {
+      "venue": "NeurIPS 2025",
+      "year": 2025,
+      "source": "https://papers.nips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf",
+      "conferenceMonthRange": [
+        "2025-11",
+        "2025-12"
+      ],
+      "monthSource": "https://neurips.cc/Conferences/2025",
+      "monthNote": "正式论文集和DOI元数据只列2025年；会议跨2025-11和2025-12，会议月份不作为出版月份。",
+      "monthChecked": "2026-10-20"
+    },
+    "W02": {
+      "venue": "CVPR 2026",
+      "year": 2026,
+      "source": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf",
+      "month": "2026-06",
+      "monthType": "proceedings",
+      "monthSource": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
+      "monthChecked": "2026-10-20"
+    },
+    "C01": {
+      "venue": "ICRA 2025",
+      "year": 2025,
+      "source": "https://forcemimic.github.io/",
+      "note": "预印本2024-10-10，按范围内正式发表2025纳入。",
+      "month": "2025-05",
+      "monthType": "proceedings",
+      "monthSource": "https://api.crossref.org/works/10.1109/ICRA55743.2025.11128061",
+      "monthChecked": "2026-10-20"
+    },
+    "C02": {
+      "venue": "RA-L 2025",
+      "year": 2025,
+      "date": "2025-04-14",
+      "source": "https://ieeexplore.ieee.org/document/10964857/",
+      "month": "2025-04",
+      "monthType": "online",
+      "issueMonth": "2025-06",
+      "monthSource": "https://ieeexplore.ieee.org/document/10964857/",
+      "monthNote": "IEEE Date of Publication为2025-04-14，期刊卷期为2025-06；此处采用首次在线出版月份。",
+      "monthChecked": "2026-10-20"
+    },
+    "C15": {
+      "venue": "RSS 2025",
+      "year": 2025,
+      "source": "https://roboticsproceedings.org/rss21/p079.html",
+      "month": "2025-06",
+      "monthType": "proceedings",
+      "monthSource": "https://roboticsproceedings.org/rss21/p079.html",
+      "monthChecked": "2026-10-20"
+    },
+    "R01": {
+      "venue": "RSS 2025",
+      "year": 2025,
+      "source": "https://roboticsproceedings.org/rss21/p052.html",
+      "month": "2025-06",
+      "monthType": "proceedings",
+      "monthSource": "https://roboticsproceedings.org/rss21/p052.html",
+      "monthChecked": "2026-10-20"
+    },
+    "R02": {
+      "venue": "CoRL 2024",
+      "year": 2024,
+      "source": "https://binghao-huang.github.io/3D-ViTac/",
+      "month": "2025-01",
+      "monthType": "proceedings",
+      "conferenceMonth": "2024-11",
+      "monthSource": "https://proceedings.mlr.press/v270/",
+      "monthNote": "会议于2024-11-06至09日举行；PMLR第270卷于2025-01-12出版。",
+      "monthChecked": "2026-10-20"
+    }
+  },
+  "timeFilterIndependent": true
 }

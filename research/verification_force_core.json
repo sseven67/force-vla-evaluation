@@ -1,0 +1,509 @@
+{
+  "updated": "2026-10-16",
+  "works": {
+    "W01": {
+      "checkedSource": "https://arxiv.org/html/2505.22159v1",
+      "checkedSections": [
+        "§4.3",
+        "§5.1–5.3",
+        "Fig.5 / Tables1–2",
+        "Appendices A / D / E"
+      ],
+      "summary": "确认五项任务各自测试次数与擦板两种评分；将没有公开数字判据的情况与尚未查清分开。",
+      "taskUpdates": {
+        "W01-e01": {
+          "setting": "Flexiv Rizon＋Dahuan夹爪，真机操作；主实验20次；改变物体起始位置和朝向。",
+          "conditions": "向下按压瓶头；另测试未见瓶型和瓶子高度。所查实验正文与附录未说明按到多深或挤出多少液体才算成功。",
+          "review": {
+            "status": "not_reported",
+            "note": "已确认任务与主实验20次；原文未说明按压深度／液体量的数字标准，也未单列高度变化测试次数。",
+            "source": "https://arxiv.org/html/2505.22159v1",
+            "locator": "§4.3；§5.1–5.3；Fig.5 / Tables1–2；Appendices A / D / E"
+          },
+          "metric": "任务成功率"
+        },
+        "W01-e02": {
+          "setting": "Flexiv Rizon＋Dahuan夹爪，真机操作；主实验20次；改变物体起始位置和朝向。",
+          "conditions": "插头完整插入；另换插头类型、遮挡插头／插座、在插座下面放杂物使其不稳。泛化测试次数在所查§5.3及Table2未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "主实验次数和完整插入标准已确认；原文未说明各额外变化条件的独立测试次数。",
+            "source": "https://arxiv.org/html/2505.22159v1",
+            "locator": "§4.3；§5.1–5.3；Fig.5 / Tables1–2；Appendices A / D / E"
+          },
+          "metric": "完整插入成功率"
+        },
+        "W01-e03": {
+          "setting": "Flexiv Rizon＋Dahuan夹爪，真机操作；主实验20次；改变物体起始位置和朝向。",
+          "conditions": "USB完全插入对应接口，按成功次数计算比例。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2505.22159v1",
+            "locator": "§4.3；§5.1–5.3；Fig.5 / Tables1–2；Appendices A / D / E"
+          },
+          "metric": "完整插入成功率"
+        },
+        "W01-e04": {
+          "setting": "同平台真机10次。",
+          "conditions": "分别记录“做出擦拭动作”和“把字迹完全擦掉”，两者不能合并成同一成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2505.22159v1",
+            "locator": "§4.3；§5.1–5.3；Fig.5 / Tables1–2；Appendices A / D / E"
+          },
+          "metric": "擦拭动作成功率；字迹完全擦除成功率"
+        },
+        "W01-e05": {
+          "setting": "同平台真机15次，每次执行15次削皮动作。",
+          "conditions": "比较每次削掉的平均长度及把黄瓜明显削净所需的最少动作次数。论文没有给“削净”对应的数字覆盖比例。",
+          "review": {
+            "status": "not_reported",
+            "note": "Table1与§5.1明确次数和加工指标；“明显削净”未给统一数字覆盖比例。",
+            "source": "https://arxiv.org/html/2505.22159v1",
+            "locator": "§4.3；§5.1–5.3；Fig.5 / Tables1–2；Appendices A / D / E"
+          },
+          "metric": "平均削皮长度（cm）；削净所需最少动作次数；任务成功率"
+        }
+      },
+      "remaining": [
+        {
+          "field": "按瓶",
+          "reason": "原文未说明",
+          "note": "已确认任务与主实验20次；原文未说明按压深度／液体量的数字标准，也未单列高度变化测试次数。"
+        },
+        {
+          "field": "插头插入",
+          "reason": "原文未说明",
+          "note": "主实验次数和完整插入标准已确认；原文未说明各额外变化条件的独立测试次数。"
+        },
+        {
+          "field": "削黄瓜",
+          "reason": "原文未说明",
+          "note": "Table1与§5.1明确次数和加工指标；“明显削净”未给统一数字覆盖比例。"
+        }
+      ]
+    },
+    "W02": {
+      "checkedSource": "https://arxiv.org/html/2603.15169v1",
+      "checkedSections": [
+        "§4 Hardware and sensor setup",
+        "§5.1–5.3",
+        "Table1 / Figures5–6",
+        "Appendices B–C"
+      ],
+      "summary": "确认五任务每项20次，末端六维传感器300 Hz；区分主表成功率和动态移动物体的展示。",
+      "taskUpdates": {
+        "W02-e01": {
+          "setting": "Flexiv Rizon 4s＋DH AG-95，末端六维力／力矩300 Hz；每任务20次独立真机测试；两外部相机＋一腕相机。",
+          "conditions": "完成按瓶；额外展示接触前突然降低瓶子底座后能否继续按压。正文未给按压深度或挤出量的数字要求。",
+          "review": {
+            "status": "not_reported",
+            "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。",
+            "source": "https://arxiv.org/html/2603.15169v1",
+            "locator": "§4 Hardware and sensor setup；§5.1–5.3；Table1 / Figures5–6；Appendices B–C"
+          },
+          "metric": "任务成功率；过载及接触表现作为额外观察"
+        },
+        "W02-e02": {
+          "setting": "Flexiv Rizon 4s＋DH AG-95，末端六维力／力矩300 Hz；每任务20次独立真机测试；两外部相机＋一腕相机。",
+          "conditions": "完成花瓶表面擦拭；额外转动花瓶改变接触面朝向，查看能否保持接触；正文未给残留面积数字标准。",
+          "review": {
+            "status": "not_reported",
+            "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。",
+            "source": "https://arxiv.org/html/2603.15169v1",
+            "locator": "§4 Hardware and sensor setup；§5.1–5.3；Table1 / Figures5–6；Appendices B–C"
+          },
+          "metric": "任务成功率；过载及接触表现作为额外观察"
+        },
+        "W02-e03": {
+          "setting": "Flexiv Rizon 4s＋DH AG-95，末端六维力／力矩300 Hz；每任务20次独立真机测试；两外部相机＋一腕相机。",
+          "conditions": "完成白板擦拭且不过载；正文未给“擦干净”的数字判定或目标力误差表。",
+          "review": {
+            "status": "not_reported",
+            "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。",
+            "source": "https://arxiv.org/html/2603.15169v1",
+            "locator": "§4 Hardware and sensor setup；§5.1–5.3；Table1 / Figures5–6；Appendices B–C"
+          },
+          "metric": "任务成功率；过载及接触表现作为额外观察"
+        },
+        "W02-e04": {
+          "setting": "Flexiv Rizon 4s＋DH AG-95，末端六维力／力矩300 Hz；每任务20次独立真机测试；两外部相机＋一腕相机。",
+          "conditions": "通过接触探索找到并取出沙盒中的盘子；抓空后可重试。正文未说明取出后需保持多久等数字要求。",
+          "review": {
+            "status": "not_reported",
+            "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。",
+            "source": "https://arxiv.org/html/2603.15169v1",
+            "locator": "§4 Hardware and sensor setup；§5.1–5.3；Table1 / Figures5–6；Appendices B–C"
+          },
+          "metric": "任务成功率；过载及接触表现作为额外观察"
+        },
+        "W02-e05": {
+          "setting": "Flexiv Rizon 4s＋DH AG-95，末端六维力／力矩300 Hz；每任务20次独立真机测试；两外部相机＋一腕相机。",
+          "conditions": "把齿轮正确装到配合位置，比较成功率及过载失败；正文未提供插入深度或允许角度误差的数字要求。",
+          "review": {
+            "status": "not_reported",
+            "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。",
+            "source": "https://arxiv.org/html/2603.15169v1",
+            "locator": "§4 Hardware and sensor setup；§5.1–5.3；Table1 / Figures5–6；Appendices B–C"
+          },
+          "metric": "任务成功率；过载及接触表现作为额外观察"
+        }
+      },
+      "remaining": [
+        {
+          "field": "按瓶",
+          "reason": "原文未说明",
+          "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。"
+        },
+        {
+          "field": "清洁花瓶",
+          "reason": "原文未说明",
+          "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。"
+        },
+        {
+          "field": "擦白板",
+          "reason": "原文未说明",
+          "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。"
+        },
+        {
+          "field": "取盘",
+          "reason": "原文未说明",
+          "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。"
+        },
+        {
+          "field": "齿轮装配",
+          "reason": "原文未说明",
+          "note": "20次和任务动作已核实；原文主要按完成任务计成功，所查正文及附录未给更细的数字成功标准。动态展示不当作另一个有统一分母的成绩表。"
+        }
+      ]
+    },
+    "W03": {
+      "checkedSource": "https://arxiv.org/html/2602.23648v1",
+      "checkedSections": [
+        "§4.1–4.2",
+        "Fig.6 / Table1",
+        "Appendix A.4 Task Description",
+        "Appendix A.6 Qualitative results"
+      ],
+      "summary": "附录明确USB、齿轮、翻盒和擦板的完成动作；峰值力只在齿轮与翻盒中测，不套给USB和擦板。",
+      "taskUpdates": {
+        "W03-e01": {
+          "setting": "Monte双臂平台，使用7自由度X-ARM机械臂，六维力／力矩反馈；该任务真机25次；同任务对比相同设置。",
+          "conditions": "机器人起始已夹住USB，移到接口上方、对齐并完全插入。额外展示插座旋转至30°时的表现。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2602.23648v1",
+            "locator": "§4.1–4.2；Fig.6 / Table1；Appendix A.4 Task Description；Appendix A.6 Qualitative results"
+          },
+          "metric": "完整插入成功率"
+        },
+        "W03-e02": {
+          "setting": "Monte双臂平台，使用7自由度X-ARM机械臂，六维力／力矩反馈；该任务真机30次；同任务对比相同设置。",
+          "conditions": "齿轮中心孔套入柱子，并与两侧已有齿轮完全啮合；另展示未见颜色齿轮。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2602.23648v1",
+            "locator": "§4.1–4.2；Fig.6 / Table1；Appendix A.4 Task Description；Appendix A.6 Qualitative results"
+          },
+          "metric": "任务成功率；每次最大接触力的平均值（N）"
+        },
+        "W03-e03": {
+          "setting": "Monte双臂平台，使用7自由度X-ARM机械臂，六维力／力矩反馈；该任务真机20次；同任务对比相同设置。",
+          "conditions": "把横放的纸盒翻到竖直状态，同时避免压坏或滑脱。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2602.23648v1",
+            "locator": "§4.1–4.2；Fig.6 / Table1；Appendix A.4 Task Description；Appendix A.6 Qualitative results"
+          },
+          "metric": "任务成功率；每次最大接触力的平均值（N）"
+        },
+        "W03-e04": {
+          "setting": "Monte双臂平台，使用7自由度X-ARM机械臂，六维力／力矩反馈；该任务真机10次；同任务对比相同设置。",
+          "conditions": "抓住板擦并擦去白板字迹，保持有效接触；论文按任务是否完成作二元判断。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2602.23648v1",
+            "locator": "§4.1–4.2；Fig.6 / Table1；Appendix A.4 Task Description；Appendix A.6 Qualitative results"
+          },
+          "metric": "任务成功率"
+        }
+      },
+      "remaining": []
+    },
+    "W05": {
+      "checkedSource": "https://arxiv.org/html/2609.05832v1",
+      "checkedSections": [
+        "§4.1 Task definition / Experimental groups",
+        "§4.2",
+        "Figures6–8 / Tables I–II"
+      ],
+      "summary": "确认四任务、每条件24–25次；恒力擦板40 N、超过75 N停止，并把主设置与高度降低6 cm单列说明。",
+      "taskUpdates": {
+        "W05-e01": {
+          "setting": "UR5e＋UMI式夹爪＋六维力／力矩传感器；每测试条件24–25次真机；执行控制500 Hz。",
+          "conditions": "常规起始位置，以及把按钮放得比示教低6 cm；按到按钮接合。正文未给具体按下深度或触发电信号的判定细节。",
+          "review": {
+            "status": "not_reported",
+            "note": "次数、动作和改变高度的设置已确认；原文未说明更细的按压判定／指定开窗角度。",
+            "source": "https://arxiv.org/html/2609.05832v1",
+            "locator": "§4.1 Task definition / Experimental groups；§4.2；Figures6–8 / Tables I–II"
+          },
+          "metric": "任务成功率"
+        },
+        "W05-e02": {
+          "setting": "UR5e＋UMI式夹爪＋六维力／力矩传感器；每测试条件24–25次真机；执行控制500 Hz。",
+          "conditions": "充电插头完全插入；另从插座附近开始，此时腕相机看不到插孔，测试能否靠接触探索完成。",
+          "review": {
+            "status": "verified",
+            "note": "已核对本任务次数、完成动作和主要变化条件。",
+            "source": "https://arxiv.org/html/2609.05832v1",
+            "locator": "§4.1 Task definition / Experimental groups；§4.2；Figures6–8 / Tables I–II"
+          },
+          "metric": "任务成功率"
+        },
+        "W05-e03": {
+          "setting": "UR5e＋UMI式夹爪＋六维力／力矩传感器；每测试条件24–25次真机；执行控制500 Hz。",
+          "conditions": "第一阶段抓把手打开到指定角度；第二阶段抵住窗框边缘继续完全打开。触发保护停机判失败；指定角度的具体数值在所查正文未给出。",
+          "review": {
+            "status": "not_reported",
+            "note": "次数、动作和改变高度的设置已确认；原文未说明更细的按压判定／指定开窗角度。",
+            "source": "https://arxiv.org/html/2609.05832v1",
+            "locator": "§4.1 Task definition / Experimental groups；§4.2；Figures6–8 / Tables I–II"
+          },
+          "metric": "任务成功率（旋转窗分两阶段）"
+        },
+        "W05-e04": {
+          "setting": "UR5e＋UMI式夹爪＋六维力／力矩传感器；每测试条件24–25次真机；执行控制500 Hz。",
+          "conditions": "常规及白板降低6 cm两种条件；目标法向力40 N，瞬时力超过75 N触发停止。按实际力与40 N的平均相对偏差评分，同时记录是否完成擦拭。",
+          "review": {
+            "status": "verified",
+            "note": "已核对本任务次数、完成动作和主要变化条件。",
+            "source": "https://arxiv.org/html/2609.05832v1",
+            "locator": "§4.1 Task definition / Experimental groups；§4.2；Figures6–8 / Tables I–II"
+          },
+          "metric": "任务成功率；实际接触力相对40 N的平均偏差；保护停机情况"
+        }
+      },
+      "remaining": [
+        {
+          "field": "急停按钮",
+          "reason": "原文未说明",
+          "note": "次数、动作和改变高度的设置已确认；原文未说明更细的按压判定／指定开窗角度。"
+        },
+        {
+          "field": "旋转窗",
+          "reason": "原文未说明",
+          "note": "次数、动作和改变高度的设置已确认；原文未说明更细的按压判定／指定开窗角度。"
+        }
+      ]
+    },
+    "C02": {
+      "checkedSource": "https://arxiv.org/html/2411.15753v2",
+      "checkedSections": [
+        "§IV-A–E",
+        "Table I / Figure5 / Table IV",
+        "Appendix V-A"
+      ],
+      "summary": "核实擦板／削皮20次、切辣椒10次及各自评分；补充中途重写字迹、移动白板的干扰测试。",
+      "taskUpdates": {
+        "C02-e01": {
+          "setting": "Flexiv Rizon＋Dahuan AG-95真机；随机放置物体，各方法尽量对齐起始场景；每方法20次。",
+          "conditions": "固定方向擦拭：全擦净1分，部分擦净0.5分，没有擦掉0分；另计抓板擦和执行擦拭动作的成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已核对主实验次数及任务特有评分，不另追求论文未采用的二元成功阈值。",
+            "source": "https://arxiv.org/html/2411.15753v2",
+            "locator": "§IV-A–E；Table I / Figure5 / Table IV；Appendix V-A"
+          },
+          "metric": "任务质量0／0.5／1分；抓取／擦拭动作成功率"
+        },
+        "C02-e02": {
+          "setting": "Flexiv Rizon＋Dahuan AG-95真机；随机放置物体，各方法尽量对齐起始场景；每方法20次。",
+          "conditions": "任意方向擦拭；质量评分同固定方向。额外测试擦后新增字迹、移动白板、两者同时发生；论文未单列额外干扰条件各测多少次。",
+          "review": {
+            "status": "not_reported",
+            "note": "已核实主任务次数和质量评分；§IV-E未单独给出每个额外干扰条件的测试次数。",
+            "source": "https://arxiv.org/html/2411.15753v2",
+            "locator": "§IV-A–E；Table I / Figure5 / Table IV；Appendix V-A"
+          },
+          "metric": "任务质量0／0.5／1分；抓取／擦拭动作成功率"
+        },
+        "C02-e03": {
+          "setting": "Flexiv Rizon＋Dahuan AG-95真机；随机放置物体，各方法尽量对齐起始场景；每方法20次。",
+          "conditions": "计算削皮长度占黄瓜总长的比例，再除以示教数据平均比例0.778；抓工具和完成削皮动作另外计成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已核对主实验次数及任务特有评分，不另追求论文未采用的二元成功阈值。",
+            "source": "https://arxiv.org/html/2411.15753v2",
+            "locator": "§IV-A–E；Table I / Figure5 / Table IV；Appendix V-A"
+          },
+          "metric": "按长度计算的削皮质量分；抓取／削皮动作成功率"
+        },
+        "C02-e04": {
+          "setting": "Flexiv Rizon＋Dahuan AG-95真机；随机放置物体，各方法尽量对齐起始场景；FoAR与RISE各10次。",
+          "conditions": "切成多段，比较段数、每段长度占整根辣椒的平均比例及变化大小，不使用擦白板的三档评分。",
+          "review": {
+            "status": "verified",
+            "note": "已核对主实验次数及任务特有评分，不另追求论文未采用的二元成功阈值。",
+            "source": "https://arxiv.org/html/2411.15753v2",
+            "locator": "§IV-A–E；Table I / Figure5 / Table IV；Appendix V-A"
+          },
+          "metric": "切段数量；各段相对长度的平均值和标准差（反映切得是否均匀）"
+        }
+      },
+      "remaining": [
+        {
+          "field": "任意方向擦白板",
+          "reason": "原文未说明",
+          "note": "已核实主任务次数和质量评分；§IV-E未单独给出每个额外干扰条件的测试次数。"
+        }
+      ]
+    },
+    "C16": {
+      "checkedSource": "https://arxiv.org/html/2308.03624v1",
+      "checkedSections": [
+        "§IV-A.2–A.4",
+        "§IV-B / Tables I–II",
+        "Appendix B Experiment Details"
+      ],
+      "summary": "补充初始位置±2 cm、朝向±0.06 rad，任务至少完成80%判成功；超过40 N或过去1秒均力超过30 N停止。",
+      "taskUpdates": {
+        "C16-e01": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e02": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e03": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e04": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e05": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e06": {
+          "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85 / FT300-S；每方法每任务10次，30条示教；初始位置每方向随机±2 cm，朝向每轴随机±0.06 rad（约±3.4°）。",
+          "conditions": "抓住物体并完成至少80%的目标操作。力超过40 N或最近1秒平均力超过30 N时停止；最多200次决策（行为克隆对照250次）。力大小及波动只统计成功抓住物体的测试。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "任务成功率；各方向力／力矩绝对值的平均大小及变化程度"
+        },
+        "C16-e07": {
+          "setting": "六项任务的示教数据离线比较，不执行机器人；所查§IV-B未单列该表测试样本数量。",
+          "conditions": "比较预测动作、预测力／力矩与示教记录相差多少；不能据此当作真机成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已确认离线指标及目的；TableII及所查§IV-B未说明独立测试样本数。",
+            "source": "https://arxiv.org/html/2308.03624v1",
+            "locator": "§IV-A.2–A.4；§IV-B / Tables I–II；Appendix B Experiment Details"
+          },
+          "metric": "动作预测均方误差；力／力矩预测均方误差"
+        }
+      },
+      "remaining": [
+        {
+          "field": "离线动作及wrench预测",
+          "reason": "原文未说明",
+          "note": "已确认离线指标及目的；TableII及所查§IV-B未说明独立测试样本数。"
+        }
+      ]
+    },
+    "R01": {
+      "checkedSource": "https://arxiv.org/html/2503.02881v1",
+      "checkedSections": [
+        "§V-A.1–A.4",
+        "Tables II–IV",
+        "Appendix E Evaluation Protocols"
+      ],
+      "summary": "补全三任务的质量评分，擦花瓶轻微残留定义为不足字迹长度1/3；加入评估者不知道当前测试哪个模型的安排。",
+      "taskUpdates": {
+        "R01-e01": {
+          "setting": "单臂Flexiv Rizon 4＋Grav夹爪；视觉触觉版本与机器人估计六维力版本分别测试；评估者不知道当前测试的是哪个模型。",
+          "conditions": "削皮长度占黄瓜长度的比例，再按示教平均成绩换算。三种条件：物体不动、接触前移动、接触后移动使接触中断；每种10次。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2503.02881v1",
+            "locator": "§V-A.1–A.4；Tables II–IV；Appendix E Evaluation Protocols"
+          },
+          "metric": "削皮长度归一化质量分"
+        },
+        "R01-e02": {
+          "setting": "单臂Flexiv Rizon 4＋Grav夹爪；视觉触觉版本与机器人估计六维力版本分别测试；评估者不知道当前测试的是哪个模型。",
+          "conditions": "残留与人类示教相当为1分；只剩少量字迹且不足原字迹长度1/3为0.5分；明显残留为0分。三种移动干扰条件各10次。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2503.02881v1",
+            "locator": "§V-A.1–A.4；Tables II–IV；Appendix E Evaluation Protocols"
+          },
+          "metric": "擦除质量0／0.5／1"
+        },
+        "R01-e03": {
+          "setting": "双臂Flexiv Rizon 4＋Grav夹爪；视觉触觉版本与机器人估计六维力版本分别测试；评估者不知道当前测试的是哪个模型。",
+          "conditions": "沿指定路径提起且杯子没有明显被压扁为1分；提起但局部压扁0.5分；未提起或中途掉落0分。软杯、硬杯各10次；另外记录夹住和提起的成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已按原文核对任务目的、指标、试验设置和完成条件。",
+            "source": "https://arxiv.org/html/2503.02881v1",
+            "locator": "§V-A.1–A.4；Tables II–IV；Appendix E Evaluation Protocols"
+          },
+          "metric": "Clamp／Lift成功率；质量0／0.5／1"
+        }
+      },
+      "remaining": []
+    }
+  }
+}

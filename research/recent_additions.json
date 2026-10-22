@@ -1,0 +1,236 @@
+{
+  "checked": "2026-10-22",
+  "works": [
+    {
+      "id": "N01",
+      "name": "FM-VLA",
+      "arxiv": "2607.18231",
+      "fullTitle": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation",
+      "signal": "右腕六维力／力矩历史",
+      "sensorOrigin": "真实F/T传感器",
+      "summary": "记住过去的接触事件，测试机器人能否找到隐藏物块、按指定次数按钮或擦指定次数。",
+      "actionOutput": "输出双臂和夹爪的动作；力用于记忆接触过程，不输出目标力。",
+      "baseline": "π0.5无历史版本、重新实现的π-MEM视觉记忆、基于π0.5重新实现的TA-VLA；另比较仅力历史、仅状态历史及不同记忆编码器。",
+      "project": "https://qft-333.github.io/FM-VLA/",
+      "github": "https://github.com/qft-333/FM-VLA",
+      "year": 2026,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "source": "https://arxiv.org/html/2607.18231",
+      "purpose": "记住过去的接触事件，测试机器人能否找到隐藏物块、按指定次数按钮或擦指定次数。",
+      "platform": "双臂＋两指夹爪；AgiBot G1；每臂7自由度；两组单自由度夹爪",
+      "role": "利用力／触觉信息调整动作",
+      "scope": "核心相关",
+      "domains": [
+        "真机"
+      ],
+      "metrics": "三项任务各算成功率；另比较模型计算一次动作需要多久。力曲线用于说明接触过程。",
+      "trials": "AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。物块藏在前杯、后杯各9次。；AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。要求按1、2、3次，各测6次；本任务用右臂操作。；AgiBot G1双臂＋两指夹爪；腕部六维力传感器100 Hz，模型读取右腕力历史。每方法每任务18次。要求擦1、2、3轮，各测6次；右臂持海绵。",
+      "locators": [
+        "§4；Table1–2；Fig.4",
+        "Appendix B、D–E"
+      ],
+      "warning": "每任务18次，主要测试记忆接触次数；没有用力误差或最大接触力给各方法评分。",
+      "notes": "FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation\n原文已核对：§4；Table1–2；Fig.4；Appendix B、D–E\n每任务18次，主要测试记忆接触次数；没有用力误差或最大接触力给各方法评分。",
+      "openness": {
+        "status": "官方代码已公开",
+        "url": "https://github.com/qft-333/FM-VLA",
+        "note": "官方仓库提供实现与使用说明；真机任务由作者自建。"
+      },
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
+      "image": {
+        "url": "https://arxiv.org/html/2607.18231v1/teaser_v1.png",
+        "caption": "FM-VLA接触记忆任务示意，原文Figure 1",
+        "source": "https://arxiv.org/html/2607.18231"
+      }
+    },
+    {
+      "id": "N02",
+      "name": "TacFiLM",
+      "arxiv": "2603.14604",
+      "fullTitle": "Tactile Modality Fusion for Vision-Language-Action Models",
+      "signal": "DIGIT指尖触觉图像",
+      "sensorOrigin": "触觉图像",
+      "summary": "在同一OpenVLA-OFT模型中比较触觉融合方式，同时评价是否完成、是否一次完成、用力和用时。",
+      "actionOutput": "输出机械臂和夹爪动作；触觉帮助调整运动，不输出目标力。",
+      "baseline": "同OpenVLA-OFT基础模型：无触觉、触觉特征拼接、交叉注意力、TacFiLM；另比较触觉编码器、融合位置和视觉变差的情况。",
+      "project": "https://charliem7.github.io/projects/TacFilm/",
+      "github": null,
+      "year": 2026,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "source": "https://arxiv.org/html/2603.14604",
+      "purpose": "在同一OpenVLA-OFT模型中比较触觉融合方式，同时评价是否完成、是否一次完成、用力和用时。",
+      "platform": "单臂＋平行夹爪；Franka Emika Panda；Franka hand；安装DIGIT触觉传感器",
+      "role": "利用力／触觉信息调整动作",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "metrics": "成功率；一次完成比例；最大接触力的平均值；平均完成时间；另做离线触觉识别与力估计测试。",
+      "trials": "Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法30次，属于训练相似条件。；Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法30次；训练相似条件。；Franka Panda＋Franka两指夹爪＋DIGIT；每方法30次；使用夹爪挂住绿色把手。；Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；使用训练中未见的销形状。；Franka Panda＋Franka两指夹爪＋DIGIT触觉图像；插入前已夹住零件，不测试抓取。每方法15次；从USB插入扩展到HDMI连接器。；使用T3和Sparsh/TacBench中的离线测试；比较四种预训练编码器。",
+      "locators": [
+        "§4.1–4.3；Tables1–3",
+        "Fig.3–5；§5.1"
+      ],
+      "warning": "以插入和拉抽屉为主，插入前已经抓好物体；尚不能说明完整抓取装配流程或其他VLA模型有同样提升。",
+      "notes": "Tactile Modality Fusion for Vision-Language-Action Models\n原文已核对：§4.1–4.3；Tables1–3；Fig.3–5；§5.1\n以插入和拉抽屉为主，插入前已经抓好物体；尚不能说明完整抓取装配流程或其他VLA模型有同样提升。",
+      "openness": {
+        "status": "项目页和论文公开",
+        "url": "https://charliem7.github.io/projects/TacFilm/",
+        "note": "官网标注ECCV 2026已接收，代码和数据待公开；真机任务自建，离线编码器测试采用T3及TacBench。"
+      },
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
+      "image": {
+        "url": "https://arxiv.org/html/2603.14604v2/task_setup.png",
+        "caption": "TacFiLM插入和抽屉任务，原文Figure 3",
+        "source": "https://arxiv.org/html/2603.14604"
+      },
+      "relations": [
+        {
+          "benchmark": "suite-n02",
+          "type": "self",
+          "label": "论文自建真机评测",
+          "domain": "真机",
+          "note": "插入和拉抽屉任务由作者自建。"
+        },
+        {
+          "benchmark": "suite-t08",
+          "type": "adopts",
+          "label": "仅离线触觉编码器力估计",
+          "domain": "离线",
+          "note": "使用TacBench的力估计测试比较触觉编码器；不是用TacBench评价完整VLA自主操作。"
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "name": "UniTacVLA",
+      "arxiv": "2606.31723",
+      "fullTitle": "UniTacVLA: Unified Tactile Understanding and Prediction in Vision Language Action Models",
+      "signal": "指尖深度和两个方向的剪切形变图像",
+      "sensorOrigin": "触觉图像",
+      "summary": "在调整、擦拭、插入和齿轮装配中比较正常与有人干扰时的完成率，测试触觉预测和快速纠正动作的作用。",
+      "actionOutput": "输出机械臂和夹爪动作，并根据实时及预测触觉修正动作。",
+      "baseline": "π0、π0.5、基于π0.5重新实现的VTLA与TacVLA；另比较执行时无真实触觉、无触觉推理、无未来预测或无快速纠正的版本。",
+      "project": null,
+      "github": null,
+      "year": 2026,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "source": "https://arxiv.org/html/2606.31723",
+      "purpose": "在调整、擦拭、插入和齿轮装配中比较正常与有人干扰时的完成率，测试触觉预测和快速纠正动作的作用。",
+      "platform": "单臂＋平行夹爪；RealMan RM75B；三维打印平行夹爪；两枚DM-Tac W",
+      "role": "利用力／触觉信息调整动作",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "metrics": "八项任务的成功率，正常与人为干扰分开统计；触觉预测和接触状态另用图示分析。",
+      "trials": "RealMan RM75B单臂＋三维打印平行夹爪＋两枚DM-Tac W；每方法每任务正常和有人为干扰各50次，在规定时间内完成。",
+      "locators": [
+        "§4.1–4.3；Tables1–2",
+        "Appendix A、C"
+      ],
+      "warning": "主要按完成率比较；没有报告自主执行的力误差或最大接触力，也未充分测试严重遮挡和不完整指令。",
+      "notes": "UniTacVLA: Unified Tactile Understanding and Prediction in Vision Language Action Models\n原文已核对：§4.1–4.3；Tables1–2；Appendix A、C\n主要按完成率比较；没有报告自主执行的力误差或最大接触力，也未充分测试严重遮挡和不完整指令。",
+      "openness": {
+        "status": "论文全文公开",
+        "url": "https://arxiv.org/html/2606.31723",
+        "note": "论文提供平台、任务和实现说明；本轮未确认独立官方代码入口。"
+      },
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
+      "image": {
+        "url": "https://arxiv.org/html/2606.31723v1/setup.png",
+        "caption": "UniTacVLA硬件和任务，原文Figure 2",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    {
+      "id": "N04",
+      "name": "TouchWorld",
+      "arxiv": "2607.07287",
+      "fullTitle": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+      "signal": "灵巧手触觉压力图像与近期触觉历史",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "summary": "将任务规划、未来接触预测和快速触觉纠正分开，在六项真机操作中测试正常表现与受干扰后的完成能力。",
+      "actionOutput": "先生成子任务，再输出灵巧手及机器人动作，并用触觉反馈修正。",
+      "baseline": "π0.5、FTP-1、GR00T N1.7；另分别去掉任务规划、触觉世界模型、快速纠正和触觉输入。",
+      "project": "https://phanes-lab.github.io/TouchWorld-website/",
+      "github": null,
+      "year": 2026,
+      "kind": "含VLA的分层操作系统",
+      "family": "touch",
+      "source": "https://arxiv.org/html/2607.07287",
+      "purpose": "将任务规划、未来接触预测和快速触觉纠正分开，在六项真机操作中测试正常表现与受干扰后的完成能力。",
+      "platform": "人形平台＋灵巧手；人形机器人平台；Wuji灵巧手；JQ-Industries触觉手套",
+      "role": "利用力／触觉信息调整动作",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "metrics": "六项真机任务成功率；另离线比较未来接触预测的准确程度。",
+      "trials": "人形平台＋Wuji灵巧手＋JQ-Industries触觉手套；分别测试正常和人为干扰；原文称每任务100次评测，未明确两种条件如何分配。；使用未参与训练的子任务片段；预测17帧，并与同轨迹实际未来片段对齐。",
+      "locators": [
+        "§4.1–4.6；Tables1–3",
+        "Fig.3–4；§5"
+      ],
+      "warning": "只在六项任务和当前触觉手套布局上验证；没有证明换传感器、换手型或更长流程也能保持提升。",
+      "notes": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation\n原文已核对：§4.1–4.6；Tables1–3；Fig.3–4；§5\n只在六项任务和当前触觉手套布局上验证；没有证明换传感器、换手型或更长流程也能保持提升。",
+      "openness": {
+        "status": "项目页和论文公开",
+        "url": "https://phanes-lab.github.io/TouchWorld-website/",
+        "note": "项目页展示系统与实验；本轮未确认独立官方代码入口。"
+      },
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
+      "image": {
+        "url": "https://arxiv.org/html/2607.07287v2/task_setting.png",
+        "caption": "TouchWorld六项真机任务，原文Figure 4",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    {
+      "id": "N05",
+      "name": "ReTouch",
+      "arxiv": "2608.01824",
+      "fullTitle": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction",
+      "signal": "五指密集三维力阵列",
+      "sensorOrigin": "指尖力 / 压力阵列",
+      "summary": "执行过程中不断更新未来触觉和剩余动作，在七项真机任务中比较分步完成得分，并测试受干扰后的恢复。",
+      "actionOutput": "输出机械臂和灵巧手关节位置；执行途中更新剩余动作。",
+      "baseline": "RDP、ViTacFormer、π0、π0.5、直接加入触觉的π0和π0.5、Tactile-VLA；另去掉预测、执行中更新或分区域触觉编码。",
+      "project": null,
+      "github": null,
+      "year": 2026,
+      "kind": "VLA / VTLA",
+      "family": "touch",
+      "source": "https://arxiv.org/html/2608.01824",
+      "purpose": "执行过程中不断更新未来触觉和剩余动作，在七项真机任务中比较分步完成得分，并测试受干扰后的恢复。",
+      "platform": "单臂＋五指灵巧手；UR7e；XHand",
+      "role": "利用力／触觉信息调整动作",
+      "scope": "扩展相关",
+      "domains": [
+        "真机"
+      ],
+      "metrics": "七任务平均完成得分；按钮按成功／失败，其余任务按完成阶段计分；另做离线触觉与动作预测检查。",
+      "trials": "UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒时限。保护停止或无法恢复的越界会结束测试。；UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测稳定提起后被向下拉落再自主恢复。保护停止或无法恢复的越界会结束测试。；UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测训练区域之外的物体位置。保护停止或无法恢复的越界会结束测试。；UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。60秒；另测未训练过的2.5和5 cm操作高度。保护停止或无法恢复的越界会结束测试。；UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。120秒时限。保护停止或无法恢复的越界会结束测试。；UR7e单臂＋XHand五指灵巧手；每指120个三维力测点。每方法每任务20次，允许自主重试，不允许人工纠正。120秒；另测投影仪制造的动态光照变化。保护停止或无法恢复的越界会结束测试。；100条未参与训练的轨迹；相同编码器和训练量，比较仅力重建与三项监督。；同100条保留轨迹；分别检查接触前后，在一段动作中的第4、8、12步更新。",
+      "locators": [
+        "§4.1–4.4；Tables1–3",
+        "Appendix B.3–B.4、D.2–D.3"
+      ],
+      "warning": "除按钮外，部分完成也得分，不能把83.6%理解为83.6%的任务完整成功；真机测试未报告独立用力成绩。",
+      "notes": "ReTouch: Empowering Contact-Rich Dexterous Manipulation with Online-Refined Tactile Prediction\n原文已核对：§4.1–4.4；Tables1–3；Appendix B.3–B.4、D.2–D.3\n除按钮外，部分完成也得分，不能把83.6%理解为83.6%的任务完整成功；真机测试未报告独立用力成绩。",
+      "openness": {
+        "status": "论文全文公开",
+        "url": "https://arxiv.org/html/2608.01824",
+        "note": "正文和附录公开任务评分、测试划分及实现设置；本轮未确认独立官方代码入口。"
+      },
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
+      "image": {
+        "url": "https://arxiv.org/html/2608.01824v2/figure3.png",
+        "caption": "ReTouch七项真机任务，原文Figure 3",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    }
+  ]
+}

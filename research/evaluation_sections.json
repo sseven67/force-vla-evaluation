@@ -1,0 +1,66 @@
+{
+  "W06-e06": {
+    "comparison": "W06-comparison-1",
+    "name": "交换力输入，检查分拣决定是否改变（离线）"
+  },
+  "E04-e30": {
+    "comparison": "E04-comparison-2",
+    "name": "策略改进后重新测试：折毛巾"
+  },
+  "E04-e31": {
+    "comparison": "E04-comparison-2",
+    "name": "策略改进后重新测试：装袋"
+  },
+  "E04-e32": {
+    "comparison": "E04-comparison-2",
+    "name": "策略改进后重新测试：折纸箱"
+  },
+  "T10-e05": {
+    "comparison": "T10-comparison-1",
+    "name": "不同传感器记录同一次接触，模型提取的信息是否接近"
+  },
+  "C01-e02": {
+    "comparison": "C01-comparison-2",
+    "name": "手持示教与力反馈遥操作的数据采集效率"
+  },
+  "C05-e05": {
+    "comparison": "C05-comparison-1",
+    "name": "更换触觉皮肤需要多久，换完能否继续使用"
+  },
+  "C10-e03": {
+    "comparison": "C10-comparison-1",
+    "name": "换零件尺寸后，原有操作策略是否仍有效"
+  },
+  "C10-e04": {
+    "comparison": "C10-comparison-1",
+    "name": "仿真触觉与真实触觉的画面、受力和生成速度比较"
+  },
+  "C11-e14": {
+    "comparison": "C11-comparison-2",
+    "name": "仿真与真实触觉图像的差异"
+  },
+  "C12-e04": {
+    "comparison": "C12-comparison-1",
+    "name": "真实与仿真触觉图像转换的效果"
+  },
+  "C15-e06": {
+    "comparison": "C15-comparison-3",
+    "name": "不同力反馈遥操作方式的使用体验"
+  },
+  "N02-e10": {
+    "comparison": "N02-comparison-3",
+    "name": "触觉编码器离线识别与力估计"
+  },
+  "N04-e07": {
+    "comparison": "N04-comparison-3",
+    "name": "未来接触的离线预测"
+  },
+  "N05-e08": {
+    "comparison": "N05-comparison-3",
+    "name": "触觉编码器离线检查"
+  },
+  "N05-e09": {
+    "comparison": "N05-comparison-3",
+    "name": "未来触觉与剩余动作离线预测"
+  }
+}

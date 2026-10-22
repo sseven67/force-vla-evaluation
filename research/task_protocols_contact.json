@@ -1,0 +1,1396 @@
+{
+  "works": {
+    "C01": [
+      {
+        "task": "西葫芦单次削皮",
+        "purpose": "区分运动轨迹成功与连续削皮质量，验证显式力目标执行",
+        "metric": "无损剥皮动作成功率；连续皮长>10 cm的严格成功率；交互力曲线",
+        "setting": "Flexiv Rizon 4真机：一臂夹持、一臂固定削皮器；Raw DP/HybridIL各20动作，Force DP/Force+Hybrid DP各10动作",
+        "conditions": "TCP从示教一致的稍后上方开始；基础成功需剥下任意长度皮且无损伤；严格成功需连续皮长>10 cm",
+        "source": "https://arxiv.org/html/2410.07554v2",
+        "locator": "§III-C；§IV-A/B；Table I；Figs.5–6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "完整削皮流程的数据采集效率",
+        "purpose": "比较现场力动作采集和力反馈遥操作的采集效率",
+        "metric": "整根削皮用时；操作中断次数",
+        "setting": "人直接削皮、ForceCapture、力反馈遥操作案例对照；此为采集实验，非自主策略rollout；参与人数/重复数未抽取",
+        "conditions": "依次拿工具、削皮、放工具、抓菜转向，直到整根完成；不得把单次动作20次当本实验样本数",
+        "source": "https://arxiv.org/html/2410.07554v2",
+        "locator": "§III-C；§IV-A/B；Table I；Figs.5–6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C02": [
+      {
+        "task": "定向擦白板",
+        "purpose": "持续接触及擦除质量",
+        "metric": "任务质量Score；分阶段动作成功率ASR",
+        "setting": "Flexiv Rizon＋Dahuan AG-95真机；擦拭/削皮每方法20次",
+        "conditions": "白板全擦净=1、部分=0.5、未擦除=0；分阶段ASR另计",
+        "source": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§IV-A–D；Table I；切割质量Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "任意方向擦白板",
+        "purpose": "擦除方向变化下的接触泛化",
+        "metric": "任务质量Score；分阶段动作成功率ASR",
+        "setting": "Flexiv Rizon＋Dahuan AG-95真机；擦拭/削皮每方法20次",
+        "conditions": "擦板方向改变；相同擦除质量分与阶段ASR；不要与固定方向混为一项",
+        "source": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§IV-A–D；Table I；切割质量Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "削黄瓜",
+        "purpose": "曲面持续接触与表面加工",
+        "metric": "任务质量Score；分阶段动作成功率ASR",
+        "setting": "Flexiv Rizon＋Dahuan AG-95真机；擦拭/削皮每方法20次",
+        "conditions": "剥皮长度占黄瓜总长的比例，再以示教平均比例0.778归一化；抓工具及削皮动作分别计ASR",
+        "source": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§IV-A–D；Table I；切割质量Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "切辣椒",
+        "purpose": "瞬时冲击与用力调整能否改善切段一致性",
+        "metric": "切段数量；归一化切段长度均值/标准差",
+        "setting": "同一真机平台；仅FoAR与RISE各10次",
+        "conditions": "以切割结果的数量和长度分布比较；不是将擦拭的0/0.5/1评分套到切割；成功长度阈值未抽取",
+        "source": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§IV-A–D；Table I；切割质量Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C03": [
+      {
+        "task": "塑料植物插土",
+        "purpose": "较大抓持力能否维持插入",
+        "metric": "任务成功率",
+        "setting": "Franka FR3＋Actuated UMI夹爪真机；每方法每任务20次；每任务30示教",
+        "conditions": "插入湿土、释放后保持直立，无倾倒且不靠盆沿",
+        "source": "https://arxiv.org/html/2510.13324v1",
+        "locator": "§III-C–E；§IV-A/B；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "完整摘葡萄入碗",
+        "purpose": "低抓持力能否兼顾不滑落与无损",
+        "metric": "任务成功率",
+        "setting": "Franka FR3＋Actuated UMI夹爪真机；每方法每任务20次；每任务30示教",
+        "conditions": "从牙签上轻柔取下葡萄并放入碗中，目视完整无损",
+        "source": "https://arxiv.org/html/2510.13324v1",
+        "locator": "§III-C–E；§IV-A/B；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "内六角工具拧紧螺丝",
+        "purpose": "时变剪切/法向力分布能否感知拧紧",
+        "metric": "任务成功率；与示教的Wasserstein-1力分布距离",
+        "setting": "Franka FR3＋Actuated UMI夹爪真机；每方法每任务20次；每任务30示教",
+        "conditions": "内六角钥匙相对螺丝两种朝向；明显拧紧后松开；超末端扭矩阈值中止，阈值数值本轮未抽取",
+        "source": "https://arxiv.org/html/2510.13324v1",
+        "locator": "§III-C–E；§IV-A/B；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C04": [
+      {
+        "task": "插头插入",
+        "purpose": "依靠接触搜索实现精准定位",
+        "metric": "成功率（3随机seed汇总；各seed10次）；未见变体成功率",
+        "setting": "xArm 7＋双指夹爪/AnySkin真机；主实验3seed×10 held-out配置=30次/任务",
+        "conditions": "已握插头，20×7 cm范围变化插排位置，10个未见位置；完成目标插孔插入",
+        "source": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A–F；Table I；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "局部接触搜索与端口对准",
+        "metric": "成功率（3随机seed汇总；各seed10次）；未见变体成功率",
+        "setting": "xArm 7＋双指夹爪/AnySkin真机；主实验3seed×10 held-out配置=30次/任务",
+        "conditions": "已握USB，20×15 cm范围变化USB集线器位置，10个未见位置；插入指定端口",
+        "source": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A–F；Table I；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "信用卡刷卡",
+        "purpose": "带位置/角度变化的受约束运动",
+        "metric": "成功率（3随机seed汇总；各seed10次）；未见变体成功率",
+        "setting": "xArm 7＋双指夹爪/AnySkin真机；主实验3seed×10 held-out配置=30次/任务",
+        "conditions": "读卡器40×15 cm范围、±30°方向变化；卡片从读卡器槽完整刷过；另测不同颜色/纹理/厚度卡",
+        "source": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A–F；Table I；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "书架取书",
+        "purpose": "利用接触形成取书与翻转策略",
+        "metric": "成功率（3随机seed汇总；各seed10次）；未见变体成功率",
+        "setting": "xArm 7＋双指夹爪/AnySkin真机；主实验3seed×10 held-out配置=30次/任务",
+        "conditions": "8本书顺序随机、10个未见排列；目标书先倾斜再抓出；另测5本/11本书配置",
+        "source": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A–F；Table I；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C05": [
+      {
+        "task": "插头插入",
+        "purpose": "验证策略能否零样本迁移到替换皮肤",
+        "metric": "原皮肤/新皮肤成功率",
+        "setting": "xArm 7＋双指AnySkin真机；3seed×每seed10 rollout；每任务96条示教",
+        "conditions": "从预握插头开始，目标插孔；比较同一皮肤与物理替换后的新皮肤",
+        "source": "https://arxiv.org/html/2409.08276v3",
+        "locator": "§V-B/D；Tables II–IV；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "验证策略能否零样本迁移到替换皮肤",
+        "metric": "原皮肤/新皮肤成功率",
+        "setting": "xArm 7＋双指AnySkin真机；3seed×每seed10 rollout；每任务96条示教",
+        "conditions": "从预握USB开始，插入目标端口；保持任务协议，对原皮与换皮对照",
+        "source": "https://arxiv.org/html/2409.08276v3",
+        "locator": "§V-B/D；Tables II–IV；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "信用卡刷卡",
+        "purpose": "验证策略能否零样本迁移到替换皮肤",
+        "metric": "原皮肤/新皮肤成功率",
+        "setting": "xArm 7＋双指AnySkin真机；3seed×每seed10 rollout；每任务96条示教",
+        "conditions": "卡片通过刷卡槽；比较原皮/换皮的策略迁移",
+        "source": "https://arxiv.org/html/2409.08276v3",
+        "locator": "§V-B/D；Tables II–IV；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "滑移检测",
+        "purpose": "检验不同皮肤的动态触觉可辨性",
+        "metric": "滑移分类准确率",
+        "setting": "真实传感器滑移/非滑移数据分类；此为离线感知，不是机器人任务30次；划分样本量未抽取",
+        "conditions": "比较不同传感器/实例；滑移标签与分类正确率计分，具体标签标定阈值待核实",
+        "source": "https://arxiv.org/html/2409.08276v3",
+        "locator": "§V-B；Tables II–III",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "皮肤物理替换",
+        "purpose": "测维护成本和替换便利性",
+        "metric": "皮肤替换时间",
+        "setting": "真实手动换皮实验；替换操作人数及重复数未抽取",
+        "conditions": "测旧皮移除/新皮安装；不将替换时间当闭环成功指标",
+        "source": "https://arxiv.org/html/2409.08276v3",
+        "locator": "硬件设计及替换实验",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C06": [
+      {
+        "task": "三轴接触力估计",
+        "purpose": "触觉皮肤表征能否恢复接触力",
+        "metric": "三轴力RMSE；标注量变化的样本效率",
+        "setting": "带F/T传感器的3D打印探头压入Xela皮肤；离线监督回归；测试集规模未抽取",
+        "conditions": "F/T为参考真值；减少有标注训练数据比较；并非插头任务20次",
+        "source": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§4.1；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "摇杆状态估计",
+        "purpose": "短时触觉能否推断物体关节状态",
+        "metric": "roll/pitch/yaw状态RMSE",
+        "setting": "Allegro触觉手操纵摇杆；离线时序估计；独立测试序列数量未抽取",
+        "conditions": "比较预训练/从头训练及标注预算；摇杆各轴误差分别评估",
+        "source": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§4.1；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "物体位姿估计",
+        "purpose": "触觉历史能否累计滑移并恢复位姿",
+        "metric": "平移/旋转RMSE；位姿准确率",
+        "setting": "物体贴ArUco标记，在Allegro手下移动；相机真值变换至手坐标；测试序列数未抽取",
+        "conditions": "对未见测试序列估计相对位姿；准确率的误差门槛未抽取",
+        "source": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§4.1；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "插头插入",
+        "purpose": "预训练表征能否改善真实接触闭环",
+        "metric": "插入成功率",
+        "setting": "Franka 7DoF＋Allegro；100插入示教；20次/策略",
+        "conditions": "起始手腕位姿随机；成功需插入目标插孔；插入深度门槛未抽取",
+        "source": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§4.2；Fig.7",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C07": [
+      {
+        "task": "插头插入",
+        "purpose": "多模态Digit 360表征是否提高闭环精密操作",
+        "metric": "插入成功率",
+        "setting": "机械臂＋Allegro/Digit 360真机；每策略20次",
+        "conditions": "随机手腕起点；比较触觉各模态和视觉基线；插入数值容差未抽取",
+        "source": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "杯状物手内旋转",
+        "purpose": "触觉适配是否减少滑移及掉落",
+        "metric": "垂向漂移；掉落时间Time-to-fall",
+        "setting": "Allegro真机；每策略10次，最长60 s；质量/摩擦变化实验每条件5次",
+        "conditions": "Hora公开策略作为基础；加入仅本体、成功数据筛选、触觉适配对照；物体下滑或掉落衡量稳定性",
+        "source": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4；Figs.6–7",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "物体—动作识别",
+        "purpose": "恢复交互物体及动作类别",
+        "metric": "分类准确率",
+        "setting": "Digit 360离线下游数据；任务专用decoder；各任务测试样本量未抽取",
+        "conditions": "静态/动态接触类型与物体标签联合区分",
+        "source": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "材料—数量估计",
+        "purpose": "通过摇晃判断瓶内材料与装填量",
+        "metric": "材料/数量分类准确率",
+        "setting": "Digit 360离线下游数据；任务专用decoder；各任务测试样本量未抽取",
+        "conditions": "夹爪摇晃8 oz瓶，固体与液体材料和粗粒度装填量分类",
+        "source": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "法向接触力估计",
+        "purpose": "多模态信号是否改善微小力感知",
+        "metric": "法向力预测误差（mN）",
+        "setting": "Digit 360离线下游数据；任务专用decoder；各任务测试样本量未抽取",
+        "conditions": "以测力参考训练/测试；不将预测误差视为机器人力跟踪误差",
+        "source": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4；Fig.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C08": [
+      {
+        "task": "手内绕z轴旋转",
+        "purpose": "触觉是否提升持续旋转稳定性和跨物体迁移",
+        "metric": "仿真累计旋转奖励CRR；真实累计旋转角CRA/掉落时间TTF（按该轴原表报告）",
+        "setting": "Allegro 16DoF＋IsaacGym/真机；学习曲线3seed；各轴真机重复数未抽取",
+        "conditions": "随机物体形状、质量、摩擦和初态；触觉去除/噪声消融；各轴真机指标覆盖并不一致，须按原图核对",
+        "source": "https://arxiv.org/html/2303.10880v4",
+        "locator": "§V；Figs.6–8；Rotation Around Other Axes",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "手内绕x轴旋转",
+        "purpose": "触觉是否提升持续旋转稳定性和跨物体迁移",
+        "metric": "仿真累计旋转奖励CRR；真实累计旋转角CRA/掉落时间TTF（按该轴原表报告）",
+        "setting": "Allegro 16DoF＋IsaacGym/真机；学习曲线3seed；各轴真机重复数未抽取",
+        "conditions": "随机物体形状、质量、摩擦和初态；触觉去除/噪声消融；各轴真机指标覆盖并不一致，须按原图核对",
+        "source": "https://arxiv.org/html/2303.10880v4",
+        "locator": "§V；Figs.6–8；Rotation Around Other Axes",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "手内绕y轴旋转",
+        "purpose": "触觉是否提升持续旋转稳定性和跨物体迁移",
+        "metric": "仿真累计旋转奖励CRR；真实累计旋转角CRA/掉落时间TTF（按该轴原表报告）",
+        "setting": "Allegro 16DoF＋IsaacGym/真机；学习曲线3seed；各轴真机重复数未抽取",
+        "conditions": "随机物体形状、质量、摩擦和初态；触觉去除/噪声消融；各轴真机指标覆盖并不一致，须按原图核对",
+        "source": "https://arxiv.org/html/2303.10880v4",
+        "locator": "§V；Figs.6–8；Rotation Around Other Axes",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "未见日常物体旋转",
+        "purpose": "测试几何训练到真实陌生物体的迁移",
+        "metric": "真实累计旋转角CRA；掉落时间TTF",
+        "setting": "Allegro真机；未见日常物体；每物体重复数未抽取",
+        "conditions": "训练物体之外改变形状、质量、表面；完整物体清单及逐物体时间预算待抽取",
+        "source": "https://arxiv.org/html/2303.10880v4",
+        "locator": "§V；real-world generalization",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "形状重建诊断",
+        "purpose": "检验二值触觉历史是否包含形状信息",
+        "metric": "形状重建MSE",
+        "setting": "125个柱状物体、55,000条仿真旋转rollout；每条200步/20 s",
+        "conditions": "按物体划分训练/测试；比较原触觉与置零触觉；不属于真机控制成功率",
+        "source": "https://arxiv.org/html/2303.10880v4",
+        "locator": "§V-H；Fig.9",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C09": [
+      {
+        "task": "手内绕x轴旋转",
+        "purpose": "测视觉/触觉对目标轴旋转与抑制杂散转动的贡献",
+        "metric": "归一化掉落时间TTF（20 s上限）；旋转奖励RotR；非期望旋转RotP；真机旋转弧度",
+        "setting": "Allegro＋RealSense D435；IsaacGym与真机；各轴独立测试次数未抽取",
+        "conditions": "15个held-out挑战物体及真实日常物体；比较视觉/触觉/形状信息；真实与仿真数值分开",
+        "source": "https://arxiv.org/html/2309.09979v1",
+        "locator": "§4–5；Table 1；Fig.6；§5.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "手内绕y轴旋转",
+        "purpose": "测视觉/触觉对目标轴旋转与抑制杂散转动的贡献",
+        "metric": "归一化掉落时间TTF（20 s上限）；旋转奖励RotR；非期望旋转RotP；真机旋转弧度",
+        "setting": "Allegro＋RealSense D435；IsaacGym与真机；各轴独立测试次数未抽取",
+        "conditions": "15个held-out挑战物体及真实日常物体；比较视觉/触觉/形状信息；真实与仿真数值分开",
+        "source": "https://arxiv.org/html/2309.09979v1",
+        "locator": "§4–5；Table 1；Fig.6；§5.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "手内绕z轴旋转",
+        "purpose": "测视觉/触觉对目标轴旋转与抑制杂散转动的贡献",
+        "metric": "归一化掉落时间TTF（20 s上限）；旋转奖励RotR；非期望旋转RotP；真机旋转弧度",
+        "setting": "Allegro＋RealSense D435；IsaacGym与真机；各轴独立测试次数未抽取",
+        "conditions": "15个held-out挑战物体及真实日常物体；比较视觉/触觉/形状信息；真实与仿真数值分开",
+        "source": "https://arxiv.org/html/2309.09979v1",
+        "locator": "§4–5；Table 1；Fig.6；§5.4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C10": [
+      {
+        "task": "Peg placement（销放置）",
+        "purpose": "触觉仿真学到的接触定位能否迁移真机",
+        "metric": "闭环成功率；学习样本效率",
+        "setting": "IsaacGym训练＋Franka/GelSight真机；主真机81个姿态组合trial",
+        "conditions": "初始位置/朝向组合；完成目标放置；具体位置容差未抽取",
+        "source": "https://arxiv.org/html/2408.06506v2",
+        "locator": "§VI；Fig.12；Appendix C Table IX",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Peg insertion（销插入）",
+        "purpose": "验证触觉辅助插入及仿真到真实迁移",
+        "metric": "闭环成功率；蒸馏/模态/增强对照",
+        "setting": "IsaacGym训练＋Franka/GelSight真机；主真机81组合trial",
+        "conditions": "初始位姿组合变化，完成插入；与placement分开计数；深度门槛未抽取",
+        "source": "https://arxiv.org/html/2408.06506v2",
+        "locator": "§VI；Fig.12；Appendix C Table IX",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "尺寸资产泛化",
+        "purpose": "检查不同零件尺寸的策略鲁棒性",
+        "metric": "不同资产配置的成功率",
+        "setting": "TacSL仿真与配套资产；512 trial属于该资产实验，不转抄为所有真机任务次数",
+        "conditions": "改变peg/socket几何尺寸；具体512个组合分配未抽取",
+        "source": "https://arxiv.org/html/2408.06506v2",
+        "locator": "Appendix C；Table IX",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "图像与接触力场验证",
+        "purpose": "检验仿真触觉外观和边缘接触物理保真",
+        "metric": "触觉图像/接触力场对比；运行性能",
+        "setting": "TacSL传感器仿真及真实参考；该诊断测试样本数量未抽取",
+        "conditions": "比较接触轮廓、表面边缘处法向/剪切力响应；非统一闭环任务SR",
+        "source": "https://arxiv.org/html/2408.06506v2",
+        "locator": "仿真验证章节",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C11": [
+      {
+        "task": "Peg insertion（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对精密配合与位姿变化的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：将销插入对应孔；精密配合与位姿变化；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "USB insertion（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对连接器几何与姿态变化的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：USB完全插入对应端口；连接器几何与姿态变化；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Power plug insertion（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对受遮挡/受约束插入的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：电源插头进入目标插孔；受遮挡/受约束插入；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Gear assembly（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对同时对准轴孔与齿轮啮合的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：中齿轮装上中心轴并与侧齿轮啮合；同时对准轴孔与齿轮啮合；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Nut–bolt assembly（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对抓持力需阻止滑移，协调旋转的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：螺母插合并旋至目标螺纹状态；抓持力需阻止滑移，协调旋转；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Bulb installation（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对螺纹界面视觉遮挡的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：灯泡插入灯座并旋紧；螺纹界面视觉遮挡；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Peg reorientation（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对初始方销姿态随机、外相机看不到孔内，借孔沿接触调姿的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：方销手内调直后插入；初始方销姿态随机、外相机看不到孔内，借孔沿接触调姿；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Object search（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对视觉完全遮挡、物体初态随机的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：在封闭容器内找到并抓起立方体；视觉完全遮挡、物体初态随机；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Ball sorting（低光）（仿真）",
+        "purpose": "比较视觉/触觉及不同触觉表示对乒乓球/高尔夫球外观相似，低光条件的作用",
+        "metric": "任务成功率均值±标准差；训练学习曲线",
+        "setting": "IsaacGym＋TacSL/Franka；3seed×50初始化×最后10epoch≈1500评估/设置",
+        "conditions": "成功目标：识别并提起目标高尔夫球；乒乓球/高尔夫球外观相似，低光条件；数值几何容差待逐项抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Gear assembly（真机）",
+        "purpose": "核对仿真模态比较结论能否在真实接触中重现",
+        "metric": "真机任务成功率",
+        "setting": "Franka＋GelSight；每设置15次",
+        "conditions": "完成齿轮装到轴并正确啮合；正常/暗光分开评价；精确数值容差本轮未抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §IV；Fig.10；real-world experiments",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Bulb installation（真机）",
+        "purpose": "核对仿真模态比较结论能否在真实接触中重现",
+        "metric": "真机任务成功率",
+        "setting": "Franka＋GelSight；每设置15次",
+        "conditions": "完成灯泡装入并旋紧；正常/暗光分开评价；精确数值容差本轮未抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §IV；Fig.10；real-world experiments",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Ball sorting（正常光）（真机）",
+        "purpose": "核对仿真模态比较结论能否在真实接触中重现",
+        "metric": "真机任务成功率",
+        "setting": "Franka＋GelSight；每设置15次",
+        "conditions": "完成识别两种球并分别放入指定碗；正常/暗光分开评价；精确数值容差本轮未抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §IV；Fig.10；real-world experiments",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Ball sorting（暗光）（真机）",
+        "purpose": "核对仿真模态比较结论能否在真实接触中重现",
+        "metric": "真机任务成功率",
+        "setting": "Franka＋GelSight；每设置15次",
+        "conditions": "完成在暗光下识别两种球并放入指定碗；正常/暗光分开评价；精确数值容差本轮未抽取",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "v2 §IV；Fig.10；real-world experiments",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "真仿触觉分布一致性",
+        "purpose": "评价生成触觉与真传感器的视觉分布差异",
+        "metric": "FID、KID（越低越接近）",
+        "setting": "球/灯泡/齿轮接触样本；TacRGB/TacFF分别计算；样本数量未抽取",
+        "conditions": "使用ResNet特征比较真/仿分布；不能将低FID直接等价于策略成功",
+        "source": "https://arxiv.org/html/2505.18472v2",
+        "locator": "Table I；§III-A2",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C12": [
+      {
+        "task": "物体推送",
+        "purpose": "检验跨传感器sim2real的触觉反馈控制",
+        "metric": "实际轨迹至CAD/ArUco真值的平均欧氏距离；仿真RL回报",
+        "setting": "PyBullet训练；Dobot MG400＋TacTip/DIGIT/DigiTac真机；每配置物理重复数未抽取",
+        "conditions": "将物体沿目标轨迹推动；每episode250步、行程约200–280 mm；变化几何/轨迹及软硬材料，不将误差指标改成二元SR",
+        "source": "https://arxiv.org/html/2207.10763v2",
+        "locator": "§III-F；§IV；Tables III–VII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "边缘跟随",
+        "purpose": "检验跨传感器sim2real的触觉反馈控制",
+        "metric": "实际轨迹至CAD/ArUco真值的平均欧氏距离；仿真RL回报",
+        "setting": "PyBullet训练；Dobot MG400＋TacTip/DIGIT/DigiTac真机；每配置物理重复数未抽取",
+        "conditions": "保持与边缘接触并跟随不同轮廓；变化几何/轨迹及软硬材料，不将误差指标改成二元SR",
+        "source": "https://arxiv.org/html/2207.10763v2",
+        "locator": "§III-F；§IV；Tables III–VII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "曲面跟随",
+        "purpose": "检验跨传感器sim2real的触觉反馈控制",
+        "metric": "实际轨迹至CAD/ArUco真值的平均欧氏距离；仿真RL回报",
+        "setting": "PyBullet训练；Dobot MG400＋TacTip/DIGIT/DigiTac真机；每配置物理重复数未抽取",
+        "conditions": "保持接触并跟随不同曲面几何；变化几何/轨迹及软硬材料，不将误差指标改成二元SR",
+        "source": "https://arxiv.org/html/2207.10763v2",
+        "locator": "§III-F；§IV；Tables III–VII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "触觉图像真仿转换",
+        "purpose": "检验图像映射质量是否支持跨传感器部署",
+        "metric": "图像翻译SSIM",
+        "setting": "训练/验证5000/2000图像；传感器分别训练",
+        "conditions": "按传感器比较仿真至真实图像匹配；不是机器人rollout次数",
+        "source": "https://arxiv.org/html/2207.10763v2",
+        "locator": "图像转换实验；Tables III–VII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C13": [
+      {
+        "task": "双指玻璃球目标位置操纵",
+        "purpose": "验证高分辨触觉的动力学建模与MPC闭环控制",
+        "metric": "目标关键点欧氏距离中位数及68百分位；掉落比例",
+        "setting": "真机手指配DIGIT；每方法实验50次；学习数据4800条、950验证",
+        "conditions": "拾起后随机目标关键点，距当前位置至少16 pixel；比较MPC与手调P控制器；掉落单独表现",
+        "source": "https://arxiv.org/abs/2005.14679",
+        "locator": "§V-B；Fig.8",
+        "verification": "本轮PDF核对§V-B：每实验50次与16 pixel目标距离已确认"
+      }
+    ],
+    "C14": [
+      {
+        "task": "抓取稳定性预测",
+        "purpose": "检验仿真触觉是否呈现真实的视觉/触觉学习规律",
+        "metric": "稳定抓取二分类准确率",
+        "setting": "PyBullet＋TACTO；100万抓取采样，离线分类",
+        "conditions": "判别抬起后能否稳定抓住；比较视觉/触觉及数据规模，分类非VLA闭环SR",
+        "source": "https://arxiv.org/html/2012.08456v2",
+        "locator": "§IV-A；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "双指滚动玻璃球",
+        "purpose": "检验模拟器支持低样本控制器优化",
+        "metric": "目标位置误差随优化的学习曲线（中位数与68百分位）",
+        "setting": "双DIGIT夹爪仿真；30次优化实验",
+        "conditions": "Bayesian optimization对照random search；不同目标位置与避免掉球；具体目标误差门槛未抽取",
+        "source": "https://arxiv.org/html/2012.08456v2",
+        "locator": "§IV-B；Fig.11",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "圆柱接触位姿估计",
+        "purpose": "检验触觉仿真训练的位姿回归可迁移性",
+        "metric": "位置误差mm；角度误差deg",
+        "setting": "仿真训练＋真机接触数据测试；sim2real位姿实验5次重复",
+        "conditions": "改变圆柱接触位姿；区分真实数据微调/域随机化等设置；样本规模与切分待逐表抽取",
+        "source": "https://arxiv.org/html/2012.08456v2",
+        "locator": "§V；Table II",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C15": [
+      {
+        "task": "双臂抬盒",
+        "purpose": "双臂力反馈能否提升未见盒子泛化",
+        "metric": "已见/未见物体任务成功率",
+        "setting": "Franka Panda单/双臂＋OpenManipulator-X夹爪；每物体5–10次，具体每对象分母见附录",
+        "conditions": "两臂抬盒并在空中平衡至少2 s；训练/测试物体外观和形状不同",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-C；Table I；Appendix XII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "非抓持式支点翻转",
+        "purpose": "接触模式切换与几何泛化",
+        "metric": "已见/未见物体任务成功率",
+        "setting": "Franka Panda单/双臂＋OpenManipulator-X夹爪；每物体5–10次，具体每对象分母见附录",
+        "conditions": "物体抵住夹具角旋转90°且能稳定直立；训练/测试物体外观和形状不同",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-C；Table I；Appendix XII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "果蔬抓放",
+        "purpose": "低抓持力能否避免损伤与掉落",
+        "metric": "已见/未见物体任务成功率",
+        "setting": "Franka Panda单/双臂＋OpenManipulator-X夹爪；每物体5–10次，具体每对象分母见附录",
+        "conditions": "柔软果蔬抓起后放入碗；完整无损的量化阈值本轮未抽取；训练/测试物体外观和形状不同",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-C；Table I；Appendix XII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "擀面团",
+        "purpose": "视觉歧义下持续接触与周期性动作",
+        "metric": "已见/未见物体任务成功率",
+        "setting": "Franka Panda单/双臂＋OpenManipulator-X夹爪；每物体5–10次，具体每对象分母见附录",
+        "conditions": "连续擀至少8 s，形成圆柱状；训练/测试物体外观和形状不同",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-C；Table I；Appendix XII",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "抬盒后打落再抓",
+        "purpose": "验证失去接触后策略恢复",
+        "metric": "第二次尝试恢复成功率",
+        "setting": "双臂真机；每对象5次",
+        "conditions": "仅在首次成功抬起后人为打落，再评第二次抬起；与从头总成功率分开",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-C；Table II",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "力反馈遥操作可用性",
+        "purpose": "比较数据采集接口的任务完成效率",
+        "metric": "遥操作完成率；用时；主观难度",
+        "setting": "有力反馈leader与无驱动leader对照；受试者及各任务重复数未抽取",
+        "conditions": "抬盒/翻转等接触任务；是操作者实验，不套自主策略每对象5–10次",
+        "source": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§V-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C16": [
+      {
+        "task": "开橱柜抽屉",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并棱柱关节拉开；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "开抽屉",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并另一抽屉资产拉开；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "开左门",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并左向铰链门打开；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "开右门",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并右向铰链门打开；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "转水龙头",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并水龙头旋转至目标；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "开洗衣机",
+        "purpose": "验证力模仿对移动接触任务及力振荡的作用",
+        "metric": "完成≥80%进度的成功率；各轴平均绝对力/力矩与方差",
+        "setting": "差速底盘＋Kinova Gen2＋Robotiq 2F-85/FT300-S；每方法每任务10次、30示教",
+        "conditions": "从随机末端初始位姿抓住目标并洗衣机门开启；成功按≥80%进度；力统计仅纳入成功抓取的trial",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-A/B；Table I；Fig.5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "离线动作及wrench预测",
+        "purpose": "比较视觉编码器及专家动作拟合",
+        "metric": "动作MSE；wrench MSE",
+        "setting": "六任务专家数据集离线训练/测试；训练/测试切分规模未抽取",
+        "conditions": "不执行策略，仅比较预测与保留示教；此成绩不能替代真实任务成功率",
+        "source": "https://arxiv.org/html/2308.03624v1",
+        "locator": "§IV-B；Table II",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C17": [
+      {
+        "task": "长方体插入（训练几何）",
+        "purpose": "检验单一技能训练后的精密插入迁移及速度权衡",
+        "metric": "插入成功率；时间中位数/IQR；完成率÷平均时间",
+        "setting": "Franka Panda真机；每模型—物体50随机位姿×2次=100次；1500条长方体专家示教",
+        "conditions": "35×25×60 mm，间隙0.1 mm；同几何新初态；以原文完成插入判定；具体终止深度未抽取",
+        "source": "https://arxiv.org/html/2409.11047v1",
+        "locator": "§IV-A/C；Tables II–III；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "钥匙插入（零样本）",
+        "purpose": "检验单一技能训练后的精密插入迁移及速度权衡",
+        "metric": "插入成功率；时间中位数/IQR；完成率÷平均时间",
+        "setting": "Franka Panda真机；每模型—物体50随机位姿×2次=100次；1500条长方体专家示教",
+        "conditions": "37 mm长钥匙；本轮未抽取具体配合间隙；以原文完成插入判定；具体终止深度未抽取",
+        "source": "https://arxiv.org/html/2409.11047v1",
+        "locator": "§IV-A/C；Tables II–III；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "小圆柱插入（零样本）",
+        "purpose": "检验单一技能训练后的精密插入迁移及速度权衡",
+        "metric": "插入成功率；时间中位数/IQR；完成率÷平均时间",
+        "setting": "Franka Panda真机；每模型—物体50随机位姿×2次=100次；1500条长方体专家示教",
+        "conditions": "直径20 mm、长50 mm；间隙0.02 mm；以原文完成插入判定；具体终止深度未抽取",
+        "source": "https://arxiv.org/html/2409.11047v1",
+        "locator": "§IV-A/C；Tables II–III；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "大圆柱插入（零样本）",
+        "purpose": "检验单一技能训练后的精密插入迁移及速度权衡",
+        "metric": "插入成功率；时间中位数/IQR；完成率÷平均时间",
+        "setting": "Franka Panda真机；每模型—物体50随机位姿×2次=100次；1500条长方体专家示教",
+        "conditions": "直径30 mm、长50 mm；间隙0.025 mm；以原文完成插入判定；具体终止深度未抽取",
+        "source": "https://arxiv.org/html/2409.11047v1",
+        "locator": "§IV-A/C；Tables II–III；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "八角柱插入（零样本）",
+        "purpose": "检验单一技能训练后的精密插入迁移及速度权衡",
+        "metric": "插入成功率；时间中位数/IQR；完成率÷平均时间",
+        "setting": "Franka Panda真机；每模型—物体50随机位姿×2次=100次；1500条长方体专家示教",
+        "conditions": "新八角柱几何；间隙数值本轮未抽取；以原文完成插入判定；具体终止深度未抽取",
+        "source": "https://arxiv.org/html/2409.11047v1",
+        "locator": "§IV-A/C；Tables II–III；Fig.6",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C18": [
+      {
+        "task": "Door（仿真）",
+        "purpose": "比较自适应力—阻抗动作空间的样本效率及能耗",
+        "metric": "RL平均回报；Joule/action；总能耗",
+        "setting": "robosuite；每1万训练步测试10 episode，多seed（seed数未抽取）",
+        "conditions": "打开robosuite门，接触阻力交互；环境奖励/终止规则；本轮未提取逐任务二元成功阈值",
+        "source": "https://arxiv.org/html/2110.09904v2",
+        "locator": "§V-A；Fig.2；Table I",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Lift（仿真）",
+        "purpose": "比较自适应力—阻抗动作空间的样本效率及能耗",
+        "metric": "RL平均回报；Joule/action；总能耗",
+        "setting": "robosuite；每1万训练步测试10 episode，多seed（seed数未抽取）",
+        "conditions": "抓取并抬起物体；环境奖励/终止规则；本轮未提取逐任务二元成功阈值",
+        "source": "https://arxiv.org/html/2110.09904v2",
+        "locator": "§V-A；Fig.2；Table I",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Wipe（仿真）",
+        "purpose": "比较自适应力—阻抗动作空间的样本效率及能耗",
+        "metric": "RL平均回报；Joule/action；总能耗",
+        "setting": "robosuite；每1万训练步测试10 episode，多seed（seed数未抽取）",
+        "conditions": "接近并擦除目标污点；环境奖励/终止规则；本轮未提取逐任务二元成功阈值",
+        "source": "https://arxiv.org/html/2110.09904v2",
+        "locator": "§V-A；Fig.2；Table I",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "10 N圆周擦拭（真机）",
+        "purpose": "验证快层自适应阻抗在真实接触中的力与位姿表现",
+        "metric": "位置/姿态跟踪误差；能耗；力/刚度曲线",
+        "setting": "机械臂真机＋专家高层计划；重复次数未抽取",
+        "conditions": "接近污点、建立接触、施加10 N、沿表面画圆；不是端到端真机RL自主任务",
+        "source": "https://arxiv.org/html/2110.09904v2",
+        "locator": "§V-B；Fig.3",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C19": [
+      {
+        "task": "Peg-in-Hole（仿真）",
+        "purpose": "测试变阻抗策略和奖励的几何迁移",
+        "metric": "成功率；相对专家性能分差",
+        "setting": "MuJoCo；训练场景3 run均值；部分迁移从5 run选最好3（不是所有实验统一3次）",
+        "conditions": "改变孔倾角与mesh尺寸；BC直接迁移、AIRL可重优化奖励；插入深度容差本轮未抽取",
+        "source": "https://arxiv.org/html/2102.06838v1",
+        "locator": "§IV-A；Tables I–III",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Cup-on-Plate（仿真）",
+        "purpose": "测试接触放置的初始位置迁移",
+        "metric": "成功率；平均轨迹与最终位置偏差；相对专家性能",
+        "setting": "MuJoCo；报告多run结果，逐配置episode分母未抽取",
+        "conditions": "初始杯位置改变；比较增益动作/直接力动作、AIRL/BC/常增益",
+        "source": "https://arxiv.org/html/2102.06838v1",
+        "locator": "§IV-B；Tables IV–V",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Cup-on-Plate（真机）",
+        "purpose": "验证变阻抗技能真实执行与初态鲁棒性",
+        "metric": "轨迹/末端位置偏差；成功表现",
+        "setting": "FANUC LR Mate 200iD/7L；示教采集含6D F/T；真机重复次数未抽取",
+        "conditions": "部署策略反馈为位置误差与速度；外力未用于闭环解耦；目标是把杯放至盘面，不将示教有F/T误写成策略持续读力",
+        "source": "https://arxiv.org/html/2102.06838v1",
+        "locator": "§IV-B；real experiment；Conclusion",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "C20": [
+      {
+        "task": "接触位置与法向力估计",
+        "purpose": "验证磁性软皮肤的定位与测力分辨率",
+        "metric": "定位准确率；位置MSE（mm²）；力MSE（N²）",
+        "setting": "真实压入标定装置＋磁性皮肤；随机切分与时间顺序切分分别评价；基础样本量未逐项抽取",
+        "conditions": "与受控压入位置和参考力比较；非机器人策略成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§4–5；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "三轴力估计",
+        "purpose": "检验剪切力可恢复性",
+        "metric": "Fxy、Fz及位置MSE",
+        "setting": "探头沿皮肤网格每2 mm采样并施加不同方向力；测试样本量未抽取",
+        "conditions": "同时预测(x,y,Fx,Fy,Fz)；与仅法向力估计分开",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§4；shear-force experiment",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "长期磨损与零点更新",
+        "purpose": "检验反复压入后传感器漂移",
+        "metric": "定位准确率；位置/力MSE随接触次数变化",
+        "setting": "单皮肤50,000压入；前5000训练，之后每5000处用1000压入测试",
+        "conditions": "比较不同无载磁场更新频率；评时序漂移而非随机同分布测试",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§5；Figs.4–5",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "跨皮肤/电路板迁移与自监督适配",
+        "purpose": "检验换皮肤和板卡之后是否仍能测力定位",
+        "metric": "定位准确率；位置MSE；力MSE",
+        "setting": "18块皮肤×每块10,000压入，6板各配3皮肤；按板6折验证；另以390无标注压入适配",
+        "conditions": "留出新板及其3块皮肤；对照单实例、多实例、triplet及适配模型",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§6；Table 2",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "微小水重检测",
+        "purpose": "展示触觉硬件的实际集成场景",
+        "metric": "概念验证的信号/视频；本节未给统一定量策略成功率",
+        "setting": "真实传感器演示；正文明确为proof-of-concept，非标准化闭环benchmark",
+        "conditions": "少量水加入小杯；<20 mL/<0.2 N变化可感知；不把离线定位精度或390适配样本套为演示成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Videos",
+        "verification": "正文§7明确示例为概念验证；未构造其没有的统一任务分母"
+      },
+      {
+        "task": "柔软果实抓取",
+        "purpose": "展示触觉硬件的实际集成场景",
+        "metric": "概念验证的信号/视频；本节未给统一定量策略成功率",
+        "setting": "真实传感器演示；正文明确为proof-of-concept，非标准化闭环benchmark",
+        "conditions": "Sawyer夹爪抓葡萄/蓝莓等，比较内建最低约30 N抓持与ReSkin辅助；不把离线定位精度或390适配样本套为演示成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Videos",
+        "verification": "正文§7明确示例为概念验证；未构造其没有的统一任务分母"
+      },
+      {
+        "task": "犬足接触测量",
+        "purpose": "展示触觉硬件的实际集成场景",
+        "metric": "概念验证的信号/视频；本节未给统一定量策略成功率",
+        "setting": "真实传感器演示；正文明确为proof-of-concept，非标准化闭环benchmark",
+        "conditions": "皮肤嵌入犬鞋，观察静止/走/跑时的接触力；不把离线定位精度或390适配样本套为演示成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Videos",
+        "verification": "正文§7明确示例为概念验证；未构造其没有的统一任务分母"
+      },
+      {
+        "task": "触觉手套自然交互",
+        "purpose": "展示触觉硬件的实际集成场景",
+        "metric": "概念验证的信号/视频；本节未给统一定量策略成功率",
+        "setting": "真实传感器演示；正文明确为proof-of-concept，非标准化闭环benchmark",
+        "conditions": "手套集成皮肤，观察人手与物体接触信号；不把离线定位精度或390适配样本套为演示成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Videos",
+        "verification": "正文§7明确示例为概念验证；未构造其没有的统一任务分母"
+      },
+      {
+        "task": "大面积多皮肤接触定位",
+        "purpose": "展示触觉硬件的实际集成场景",
+        "metric": "概念验证的信号/视频；本节未给统一定量策略成功率",
+        "setting": "真实传感器演示；正文明确为proof-of-concept，非标准化闭环benchmark",
+        "conditions": "多皮肤扩展覆盖面积，演示接触定位；不把离线定位精度或390适配样本套为演示成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Videos",
+        "verification": "正文§7明确示例为概念验证；未构造其没有的统一任务分母"
+      },
+      {
+        "task": "刚性板到柔性板迁移",
+        "purpose": "检验不同电路板结构的适配",
+        "metric": "定位准确率；位置MSE；力MSE",
+        "setting": "刚性板数据训练，柔性板触觉数据自监督适配；具体测试压入数未抽取",
+        "conditions": "柔性板导致皮肤—电路间距降低约80%；对照原模型与适配后模型，不是同分布换皮",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§6.2；flexible sensor board",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "新皮肤触点定位演示",
+        "purpose": "展示未见实例的实时接触定位",
+        "metric": "实时预测位置可视化；本演示未列统一任务成功率",
+        "setting": "新传感器的真实手动poke；概念验证演示",
+        "conditions": "改变触点位置，显示定位输出；不是闭环动作成功率",
+        "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "locator": "§7；Supplementary Video S4",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "E08": [
+      {
+        "task": "移动开门（无闭门器）",
+        "purpose": "测接触估计与身体补偿是否改善长期移动操作",
+        "metric": "各阶段成功率；最终完成率",
+        "setting": "DeepRobotics M20S轮足＋CM1 6DoF臂＋1DoF夹爪真机；每任务25次",
+        "conditions": "接近→抓把→压把→推门→通过门；不能把中间操作完成等价全流程完成",
+        "source": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§5；Table 2；Setup",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "移动开门（带闭门器）",
+        "purpose": "测接触估计与身体补偿是否改善长期移动操作",
+        "metric": "各阶段成功率；最终完成率",
+        "setting": "DeepRobotics M20S轮足＋CM1 6DoF臂＋1DoF夹爪真机；每任务25次",
+        "conditions": "同样全流程，门把附近需约50 N推力；不能把中间操作完成等价全流程完成",
+        "source": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§5；Table 2；Setup",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "测接触估计与身体补偿是否改善长期移动操作",
+        "metric": "各阶段成功率；最终完成率",
+        "setting": "DeepRobotics M20S轮足＋CM1 6DoF臂＋1DoF夹爪真机；每任务25次",
+        "conditions": "接近→抓擦具→清洁→放回→离开；污迹ID:OOD=1:2；不能把中间操作完成等价全流程完成",
+        "source": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§5；Table 2；Setup",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "外力估计与接触识别",
+        "purpose": "验证输入到全身补偿的接触信号质量",
+        "metric": "N-MAE；关节扭矩残差误差；Touch/Door-phase AUC",
+        "setting": "200 Hz估计；零载静/动态、0.36/0.72 kg已知载荷；接触AUC每项25人工审核episode",
+        "conditions": "力估计以已知载荷作参考、接触以人工事件标签评分；25 episode不是所有感知回归统一样本数",
+        "source": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§5 Q1；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "E09": [
+      {
+        "task": "搬箱",
+        "purpose": "语言力意图与双手抬举协调",
+        "metric": "Task→Task+Intent→Task+Intent+Tracking三级联合成功；力跟踪MAE",
+        "setting": "Digit人形；每VLA配置仿真每任务30 episode（总90）；真机每任务3力级×5=15（总45）；RL-only另每任务30次",
+        "conditions": "搬起并保持；力评价取负载保持最后2 s；gentle/firm/strong力区间分别测试；先检查任务完成，再力命令属于语言区间、实际均值与命令差满足阈值；数值门槛见下文，硬件统计窗口与仿真命令窗口分开；仿真任务门槛：盒底离桌≥5 cm；双手分别通过力门槛；语言力区间gentle [0,9] N、firm (5,16] N、strong (12,22] N；命令/实测窗口均值差≤5 N。超过0.5 N持续0.1 s启动命令窗口，≤0.5 N持续0.2 s结束；窗口内失接触和失败尝试仍计入；无窗口判力门槛失败。",
+        "source": "https://opt2vla.github.io/",
+        "locator": "官方项目 Closed-loop evaluation／Hardware trials",
+        "verification": "本轮官方项目逐门槛核对；90次/配置为仿真，45次为VLA真机总量，RL-only单列"
+      },
+      {
+        "task": "架上推箱",
+        "purpose": "架上推力级别与全身支撑协调",
+        "metric": "Task→Task+Intent→Task+Intent+Tracking三级联合成功；力跟踪MAE",
+        "setting": "Digit人形；每VLA配置仿真每任务30 episode（总90）；真机每任务3力级×5=15（总45）；RL-only另每任务30次",
+        "conditions": "把箱沿架推动；硬件测力取主要接触阶段，1个gentle trial无有效接触，采用4/5；gentle/firm/strong力区间分别测试；先检查任务完成，再力命令属于语言区间、实际均值与命令差满足阈值；数值门槛见下文，硬件统计窗口与仿真命令窗口分开；仿真任务门槛：箱子抵达架右墙；右手通过力门槛；语言力区间gentle [0,9] N、firm (5,16] N、strong (12,22] N；命令/实测窗口均值差≤5 N。超过0.5 N持续0.1 s启动命令窗口，≤0.5 N持续0.2 s结束；窗口内失接触和失败尝试仍计入；无窗口判力门槛失败。",
+        "source": "https://opt2vla.github.io/",
+        "locator": "官方项目 Closed-loop evaluation／Hardware trials",
+        "verification": "本轮官方项目逐门槛核对；90次/配置为仿真，45次为VLA真机总量，RL-only单列"
+      },
+      {
+        "task": "表面擦拭",
+        "purpose": "语言压力指令与轨迹跟随",
+        "metric": "Task→Task+Intent→Task+Intent+Tracking三级联合成功；力跟踪MAE",
+        "setting": "Digit人形；每VLA配置仿真每任务30 episode（总90）；真机每任务3力级×5=15（总45）；RL-only另每任务30次",
+        "conditions": "沿表面擦拭；硬件测力取17 s前估计接触/命令重叠窗口；gentle/firm/strong力区间分别测试；先检查任务完成，再力命令属于语言区间、实际均值与命令差满足阈值；数值门槛见下文，硬件统计窗口与仿真命令窗口分开；仿真任务门槛：至少一次≥5 cm、与指令方向夹角≤30°的擦拭；右手通过力门槛；语言力区间gentle [0,9] N、firm (5,16] N、strong (12,22] N；命令/实测窗口均值差≤5 N。超过0.5 N持续0.1 s启动命令窗口，≤0.5 N持续0.2 s结束；窗口内失接触和失败尝试仍计入；无窗口判力门槛失败。",
+        "source": "https://opt2vla.github.io/",
+        "locator": "官方项目 Closed-loop evaluation／Hardware trials",
+        "verification": "本轮官方项目逐门槛核对；90次/配置为仿真，45次为VLA真机总量，RL-only单列"
+      }
+    ],
+    "E10": [
+      {
+        "task": "腹主动脉矢状长轴切面",
+        "purpose": "验证力—超声融合能否稳定获取临床标准切面",
+        "metric": "目标切面获取成功率；扫描步数；力信号曲线",
+        "setting": "真实机械臂＋超声探头；每任务45次，瘦/正常/肥胖BMI组各15次",
+        "conditions": "Task 1：获得对应标准切面判成功；跨BMI与起始位置评价；力曲线仅间接反映交互质量，不作已验证舒适性的结论",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "剑突下横切面",
+        "purpose": "验证力—超声融合能否稳定获取临床标准切面",
+        "metric": "目标切面获取成功率；扫描步数；力信号曲线",
+        "setting": "真实机械臂＋超声探头；每任务45次，瘦/正常/肥胖BMI组各15次",
+        "conditions": "Task 2：获得对应标准切面判成功；跨BMI与起始位置评价；力曲线仅间接反映交互质量，不作已验证舒适性的结论",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "右肋下斜切经右肝穹隆切面",
+        "purpose": "验证力—超声融合能否稳定获取临床标准切面",
+        "metric": "目标切面获取成功率；扫描步数；力信号曲线",
+        "setting": "真实机械臂＋超声探头；每任务45次，瘦/正常/肥胖BMI组各15次",
+        "conditions": "Task 3：获得对应标准切面判成功；跨BMI与起始位置评价；力曲线仅间接反映交互质量，不作已验证舒适性的结论",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "左肾长轴切面",
+        "purpose": "验证力—超声融合能否稳定获取临床标准切面",
+        "metric": "目标切面获取成功率；扫描步数；力信号曲线",
+        "setting": "真实机械臂＋超声探头；每任务45次，瘦/正常/肥胖BMI组各15次",
+        "conditions": "Task 4：获得对应标准切面判成功；跨BMI与起始位置评价；力曲线仅间接反映交互质量，不作已验证舒适性的结论",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "左肾经肾门横切面",
+        "purpose": "验证力—超声融合能否稳定获取临床标准切面",
+        "metric": "目标切面获取成功率；扫描步数；力信号曲线",
+        "setting": "真实机械臂＋超声探头；每任务45次，瘦/正常/肥胖BMI组各15次",
+        "conditions": "Task 5：获得对应标准切面判成功；跨BMI与起始位置评价；力曲线仅间接反映交互质量，不作已验证舒适性的结论",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "E11": [
+      {
+        "task": "方孔插入",
+        "purpose": "验证触觉—语言策略的接触纠偏和几何/间隙迁移",
+        "metric": "闭环插入成功率；成功episode平均尝试步数",
+        "setting": "触觉仿真；2.0/1.6/1.0 mm三种间隙，各设置50次",
+        "conditions": "预先握住销，近孔随机末端初态；最多15次尝试，完整插入成功终止；不含自主视觉抓取",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-C；Tables III–IV",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "三角孔插入",
+        "purpose": "验证触觉—语言策略的接触纠偏和几何/间隙迁移",
+        "metric": "闭环插入成功率；成功episode平均尝试步数",
+        "setting": "触觉仿真；2.0 mm间隙，50次；几何在多孔训练中已见",
+        "conditions": "预先握住销，近孔随机末端初态；最多15次尝试，完整插入成功终止；不含自主视觉抓取",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-C；Tables III–IV",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "圆孔插入",
+        "purpose": "验证触觉—语言策略的接触纠偏和几何/间隙迁移",
+        "metric": "闭环插入成功率；成功episode平均尝试步数",
+        "setting": "触觉仿真；2.0 mm间隙，50次；未见几何",
+        "conditions": "预先握住销，近孔随机末端初态；最多15次尝试，完整插入成功终止；不含自主视觉抓取",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-C；Tables III–IV",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "六角孔插入",
+        "purpose": "验证触觉—语言策略的接触纠偏和几何/间隙迁移",
+        "metric": "闭环插入成功率；成功episode平均尝试步数",
+        "setting": "触觉仿真；2.0 mm间隙，50次；未见几何",
+        "conditions": "预先握住销，近孔随机末端初态；最多15次尝试，完整插入成功终止；不含自主视觉抓取",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-C；Tables III–IV",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "单方销离线动作预测",
+        "purpose": "检验触觉历史能否给出正确修正方向与步长",
+        "metric": "GCR（x/y/rz方向均正确比例）；逐轴L1",
+        "setting": "8000方销样本：6000训练、2000测试；每样本双指×4时刻=8图像",
+        "conditions": "固定数据上预测动作，与标签比较；不等价闭环插入成功率",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-A/B；Table I",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "多孔形离线动作泛化",
+        "purpose": "检验未见形状的动作映射迁移",
+        "metric": "GCR；逐轴L1",
+        "setting": "16k方/三角训练；8k测试（4k已见、4k圆/六角）；不是每形状8k",
+        "conditions": "分别报ID已见形状与OOD圆/六角形状；间隙训练为2.0 mm",
+        "source": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§V-B；Table II",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "E12": [
+      {
+        "task": "擦拭",
+        "purpose": "擦除覆盖与接触恢复",
+        "metric": "擦除长度比例/任务成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；额外2个未见高度，每物体每高度5次。扰动选1代表物体10次。",
+        "conditions": "擦除目标污迹；所有任务还要求触觉传感器无损。高度泛化独立计分。交互中突然上/下移物体打断接触，测试重建接触。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "削皮",
+        "purpose": "曲面跟随与连续接触恢复",
+        "metric": "成功剥皮长度比例/任务成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；额外2个未见高度，每物体每高度5次。扰动选1代表物体10次。",
+        "conditions": "去除目标表皮；所有任务还要求触觉传感器无损。高度泛化独立计分。交互中突然上/下移物体打断接触，测试重建接触。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "切割",
+        "purpose": "工具变化与切割接触调整",
+        "metric": "切割长度完成比例/任务成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；未见刀具每物体10次。扰动选1代表物体10次。",
+        "conditions": "完成目标切割；所有任务还要求触觉传感器无损。工具泛化换刀。交互中突然上/下移物体打断接触，测试重建接触。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "装配",
+        "purpose": "多方向配合和接触重建",
+        "metric": "完整插入成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；额外2个未见高度，每物体每高度5次。扰动选1代表物体10次。",
+        "conditions": "物体完全插入配合件；所有任务还要求触觉传感器无损。高度泛化独立计分。交互中突然上/下移物体打断接触，测试重建接触。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "抓取",
+        "purpose": "稳定抓持且避免损伤",
+        "metric": "无损抓取成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；",
+        "conditions": "完整抓取且对象无损；所有任务还要求触觉传感器无损。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "手内调姿",
+        "purpose": "接触状态下的角度调整",
+        "metric": "调姿成功率",
+        "setting": "触觉机械臂真机；每类2–4物体，每物体10次；额外2个未见高度，每物体每高度5次。",
+        "conditions": "姿态改变超过60°；所有任务还要求触觉传感器无损。高度泛化独立计分。",
+        "source": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A–B；Table II；Fig.10",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ],
+    "B01": [
+      {
+        "task": "Weight Sort（仿真）",
+        "purpose": "比较六维腕力接入设计对重量判断的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "轻包黑箱、重包蓝箱；外观相同、质量不同，正确分箱并释放静置；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "CoM Sort（仿真）",
+        "purpose": "比较六维腕力接入设计对重心判断的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "外观和总质量相同、重心中/偏移；居中放传送带、偏心放篮中并释放静置；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Faucet Turn（仿真）",
+        "purpose": "比较六维腕力接入设计对阻力突变处停止的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "跨越位置随机的阻力峰，在峰后目标角区间停下；松夹并上撤，水保持打开、把手稳定；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Faucet Direction（仿真）",
+        "purpose": "比较六维腕力接入设计对按阻力选择旋转方向的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "低阻方向与峰位变化；沿低阻方向跨峰，无角度上界；夹爪≥65%开、TCP高于抓取高度≥9 cm、角速度≤0.01 rad/s；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Stove Turn（仿真）",
+        "purpose": "比较六维腕力接入设计对跨点火阻力转动并停止的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "跨可变点火阻力峰，达到规定终角并点火；释放/上撤条件按附录A；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Stove Press（仿真）",
+        "purpose": "比较六维腕力接入设计对按压—旋转协调的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "弹簧机构需先轴向压下约7 mm才允许旋转，沿低阻方向跨点火峰；按锁存事件计成功，非终角容差判定；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Drawer Pull（仿真）",
+        "purpose": "比较六维腕力接入设计对按接触阻力控制拉开程度的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "阻力起点/宽度/断裂负载变化；达到指定阻力对应开度并松手稳定，拉越机构极限失败；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Nut Thread（仿真）",
+        "purpose": "比较六维腕力接入设计对线程接合与几何约束装配的作用",
+        "metric": "完整episode成功率；任务状态/失败类别诊断",
+        "setting": "IsaacLab/Franka平行夹爪；每任务—方法200 episode（seed300–499），每任务200示教；100 s/1500控制步；物理60 Hz/控制15 Hz",
+        "conditions": "螺栓位置变化；径向误差≤2.5 mm，基底到目标高度误差/轴偏角按附录A；释放且夹爪水平撤离≥70 mm或高于螺母≥55 mm；同种子与公共执行控制器，目标中间状态不等于完整成功",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§III-B；§V-A；Table I；Appendix A–C",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Weight Sort（真机）",
+        "purpose": "检查仿真中重量分类趋势能否得到真机支持",
+        "metric": "任务成功率",
+        "setting": "Franka Research 3＋KWR75B 6D F/T＋Robotiq；8系统每任务同20初始条件；200示教/任务",
+        "conditions": "外观相似满罐/空罐分到对应目标；真实任务具体几何/力阈值在已核对附录C-B未逐项列出，不使用仿真阈值代替",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§V-E；Table II；Appendix C-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Plate Retrieve（真机）",
+        "purpose": "检查仿真中阻力下取物趋势能否得到真机支持",
+        "metric": "任务成功率",
+        "setting": "Franka Research 3＋KWR75B 6D F/T＋Robotiq；8系统每任务同20初始条件；200示教/任务",
+        "conditions": "从泡沫中取出盘子；真实任务具体几何/力阈值在已核对附录C-B未逐项列出，不使用仿真阈值代替",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§V-E；Table II；Appendix C-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Stamp Press（真机）",
+        "purpose": "检查仿真中压力作用结果趋势能否得到真机支持",
+        "metric": "任务成功率",
+        "setting": "Franka Research 3＋KWR75B 6D F/T＋Robotiq；8系统每任务同20初始条件；200示教/任务",
+        "conditions": "在标记区域完成印章按压；真实任务具体几何/力阈值在已核对附录C-B未逐项列出，不使用仿真阈值代替",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§V-E；Table II；Appendix C-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Plug Insert（真机）",
+        "purpose": "检查仿真中阻力引导就位趋势能否得到真机支持",
+        "metric": "任务成功率",
+        "setting": "Franka Research 3＋KWR75B 6D F/T＋Robotiq；8系统每任务同20初始条件；200示教/任务",
+        "conditions": "插头抵达配合就位状态；真实任务具体几何/力阈值在已核对附录C-B未逐项列出，不使用仿真阈值代替",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§V-E；Table II；Appendix C-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      },
+      {
+        "task": "Block Insert（真机）",
+        "purpose": "检查仿真中几何约束装配趋势能否得到真机支持",
+        "metric": "任务成功率",
+        "setting": "Franka Research 3＋KWR75B 6D F/T＋Robotiq；8系统每任务同20初始条件；200示教/任务",
+        "conditions": "积木完全插入对应槽；真实任务具体几何/力阈值在已核对附录C-B未逐项列出，不使用仿真阈值代替",
+        "source": "https://arxiv.org/html/2610.19604v1",
+        "locator": "§V-E；Table II；Appendix C-B",
+        "verification": "原文任务设置与指标已核对；未抽取的数值阈值在对应字段单独标注"
+      }
+    ]
+  }
+}

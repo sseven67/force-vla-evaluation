@@ -1,0 +1,2193 @@
+{
+  "works": {
+    "E01": [
+      {
+        "task": "桌面抓取",
+        "purpose": "辨别外观相似而触感不同的对象",
+        "metric": "成功率；部分结果另含中间阶段成功",
+        "setting": "WidowX250真机；每具体scenario 5次；Octo/PaliGemma VLA结果分开",
+        "conditions": "抓取指定目标；已见24物体/未见32物体；提起高度/保持时间等精细阈值未核实",
+        "source": "https://arxiv.org/html/2501.04693v1",
+        "locator": "§IV-A–G；Figures4–8",
+        "verification": "本轮原文确认三任务及scenario分母；跨模态组合是条件而非第四任务"
+      },
+      {
+        "task": "购物袋内抓取",
+        "purpose": "视觉遮挡下触觉选物",
+        "metric": "成功率；部分结果另含中间阶段成功",
+        "setting": "WidowX250真机；每具体scenario 5次；Octo/PaliGemma VLA结果分开",
+        "conditions": "从袋中取指定物体；已见/未见对象及组合指令；提起高度/保持时间等精细阈值未核实",
+        "source": "https://arxiv.org/html/2501.04693v1",
+        "locator": "§IV-A–G；Figures4–8",
+        "verification": "本轮原文确认三任务及scenario分母；跨模态组合是条件而非第四任务"
+      },
+      {
+        "task": "声音按钮按压",
+        "purpose": "跨模态语义决策",
+        "metric": "成功率；部分结果另含中间阶段成功",
+        "setting": "WidowX250真机；每具体scenario 5次；Octo/PaliGemma VLA结果分开",
+        "conditions": "按压声音对应的按钮；6已见/2未见按钮和干扰物；提起高度/保持时间等精细阈值未核实",
+        "source": "https://arxiv.org/html/2501.04693v1",
+        "locator": "§IV-A–G；Figures4–8",
+        "verification": "本轮原文确认三任务及scenario分母；跨模态组合是条件而非第四任务"
+      }
+    ],
+    "E02": [
+      {
+        "task": "离线插入动作预测",
+        "purpose": "接触纠偏动作预测能力",
+        "metric": "GCR（x/y/rz同时正确）；分轴L1",
+        "setting": "ID/OOD离线集；测试样本分母未核实",
+        "conditions": "平移/旋转单位分开；不能当闭环成功率",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.1；Tables1、4",
+        "verification": "依据已核实原文记录；未核实量在对应字段逐项注明。"
+      },
+      {
+        "task": "仿真：Square方形插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "闭环仿真；评测次数未核实",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "真机：Square方形插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "UR3＋Robotiq2F85＋双GelStereo2.0；每设置20次",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实；方形另比较1.6/1.0 mm",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "仿真：Triangle三角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "闭环仿真；评测次数未核实",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "真机：Triangle三角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "UR3＋Robotiq2F85＋双GelStereo2.0；每设置20次",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "仿真：Hexagon六角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "闭环仿真；评测次数未核实",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "真机：Hexagon六角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "UR3＋Robotiq2F85＋双GelStereo2.0；每设置20次",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "仿真：Pentagon五角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "闭环仿真；评测次数未核实",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "真机：Pentagon五角插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "UR3＋Robotiq2F85＋双GelStereo2.0；每设置20次",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "仿真：Round圆形插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "闭环仿真；评测次数未核实",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      },
+      {
+        "task": "真机：Round圆形插入",
+        "purpose": "接触纠偏和孔形泛化",
+        "metric": "插入成功率；尝试步数",
+        "setting": "UR3＋Robotiq2F85＋双GelStereo2.0；每设置20次",
+        "conditions": "0.6 mm间隙；最多15次尝试；五角/圆形OOD；插入深度阈值未核实",
+        "source": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§4.2–4.4；Tables2、3、5–7",
+        "verification": "本轮原文确认五孔形、真机20次/设置；仿真分母待核实"
+      }
+    ],
+    "E03": [
+      {
+        "task": "UniVTAC仿真：Lift Bottle",
+        "purpose": "近墙抓取与姿态控制",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "提瓶且瓶底距墙≤5 cm；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Pull-out Key",
+        "purpose": "接触阻力下拔出",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "钥匙初始旋转随机；转动克服阻力后抽出；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Lift Can",
+        "purpose": "尺寸变化与防滑",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "罐直径4/5/6 cm；稳定提起无滑脱；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Put Bottle",
+        "purpose": "受限空间放置",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "抓瓶并放入架子空腔；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Hole",
+        "purpose": "接触判断孔姿态",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "倾斜孔60°/120°；插入试管；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Tube",
+        "purpose": "小间隙插接",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；采用UniVTAC环境",
+        "conditions": "2.0 cm管插入2.05 cm开口；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3.2–3.3；Table1；Appendix E.2",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "真机：Draw Balloon",
+        "purpose": "柔性物体持续接触",
+        "metric": "任务成功率",
+        "setting": "Sharpa North；250–400示教范围，准确分配未核实；20次/任务",
+        "conditions": "在气球上画笑脸；质量/破裂数值阈值未核实",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3；Table2；Appendix E.1–E.3",
+        "verification": "本轮原文核查任务与阶段；精细成功阈值待核实"
+      },
+      {
+        "task": "真机：Fix Hand",
+        "purpose": "小件装配及接触切换",
+        "metric": "任务成功率；Tear/Finish阶段成功分别报告",
+        "setting": "Sharpa North；逐任务示教数未核实；20次/任务",
+        "conditions": "Tear撕贴纸与Finish安装手指是同任务两个阶段；两列分开报告",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3；Table2；Appendix E.1–E.3",
+        "verification": "本轮原文核查任务与阶段；精细成功阈值待核实"
+      },
+      {
+        "task": "真机：Twist Cap",
+        "purpose": "双手旋拧力协调",
+        "metric": "任务成功率",
+        "setting": "Sharpa North；逐任务示教数未核实；20次/任务",
+        "conditions": "完成瓶盖旋拧；开合角度阈值未核实",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3；Table2；Appendix E.1–E.3",
+        "verification": "本轮原文核查任务与阶段；精细成功阈值待核实"
+      },
+      {
+        "task": "真机：Flip Book",
+        "purpose": "按压与薄片接触",
+        "metric": "任务成功率",
+        "setting": "Sharpa＋Dexmate；100示教；20次/任务",
+        "conditions": "完成翻页；页数/质量阈值未核实",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3；Table2；Appendix E.1–E.3",
+        "verification": "本轮原文核查任务与阶段；精细成功阈值待核实"
+      },
+      {
+        "task": "真机：Wipe Dish",
+        "purpose": "持续接触擦拭",
+        "metric": "任务成功率",
+        "setting": "Sharpa＋Dexmate；100示教；20次/任务",
+        "conditions": "完成擦盘；污渍残留阈值未核实",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§3；Table2；Appendix E.1–E.3",
+        "verification": "本轮原文核查任务与阶段；精细成功阈值待核实"
+      },
+      {
+        "task": "未见传感器真机：Insert Hanoi",
+        "purpose": "未见光学传感器插接适配",
+        "metric": "任务成功率",
+        "setting": "Flexiv＋Xense；20次/任务；有下游微调",
+        "conditions": "对应插接/擦拭完成；具体初态范围、深度/残留阈值未核实；不是零样本",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§4；Table3；Appendix E.4–E.5",
+        "verification": "依据已核实原文记录；未核实量在对应字段逐项注明。"
+      },
+      {
+        "task": "未见传感器真机：Insert USB",
+        "purpose": "未见传感器精密接口适配",
+        "metric": "任务成功率",
+        "setting": "Flexiv＋Xense；20次/任务；有下游微调",
+        "conditions": "对应插接/擦拭完成；具体初态范围、深度/残留阈值未核实；不是零样本",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§4；Table3；Appendix E.4–E.5",
+        "verification": "依据已核实原文记录；未核实量在对应字段逐项注明。"
+      },
+      {
+        "task": "未见传感器真机：Wipe Board",
+        "purpose": "未见阵列传感器擦拭适配",
+        "metric": "任务成功率",
+        "setting": "TactileUMI＋Contactile；20次/任务；有下游微调",
+        "conditions": "对应插接/擦拭完成；具体初态范围、深度/残留阈值未核实；不是零样本",
+        "source": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§4；Table3；Appendix E.4–E.5",
+        "verification": "依据已核实原文记录；未核实量在对应字段逐项注明。"
+      }
+    ],
+    "X01": [
+      {
+        "task": "UniVTAC仿真：Lift Bottle",
+        "purpose": "近墙抓取与姿态控制",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行50步",
+        "conditions": "提瓶且瓶底距墙≤5 cm；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Pull-out Key",
+        "purpose": "接触阻力下拔出",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行50步",
+        "conditions": "钥匙初始旋转随机；转动克服阻力后抽出；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Lift Can",
+        "purpose": "尺寸变化与防滑",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行50步",
+        "conditions": "罐直径4/5/6 cm；稳定提起无滑脱；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Put Bottle",
+        "purpose": "受限空间放置",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行50步",
+        "conditions": "抓瓶并放入架子空腔；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Hole",
+        "purpose": "接触判断孔姿态",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行25步",
+        "conditions": "倾斜孔60°/120°；插入试管；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Tube",
+        "purpose": "小间隙插接",
+        "metric": "闭环成功率",
+        "setting": "50条官方示教、100次/任务；IsaacSim4.5.0＋TacEx0.1.0；预测50步、执行25步",
+        "conditions": "2.0 cm管插入2.05 cm开口；沿用环境完成判定；严重滑移/凝胶穿透不算有效完成",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix C.1；Table6",
+        "verification": "本轮核查采用协议；任务几何来自所采用UniVTAC定义，代码阈值未运行"
+      },
+      {
+        "task": "真机：Play Mahjong",
+        "purpose": "纹理辨识与决策",
+        "metric": "任务成功率",
+        "setting": "PiPER＋Pika夹爪＋双GelSightMini；50示教、20次/任务；每次重置机械臂",
+        "conditions": "背面麻将分类并放入正确盒子；物体条件在示教范围随机；该任务成功几何/时间阈值未核实",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "§4.2；Appendix C.2",
+        "verification": "本轮原文确认各任务分母与硬件，细致完成阈值待核实"
+      },
+      {
+        "task": "真机：Wipe Board",
+        "purpose": "持续接触",
+        "metric": "任务成功率",
+        "setting": "PiPER＋Pika夹爪＋双GelSightMini；50示教、20次/任务；每次重置机械臂",
+        "conditions": "清除白板痕迹；物体条件在示教范围随机；该任务成功几何/时间阈值未核实",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "§4.2；Appendix C.2",
+        "verification": "本轮原文确认各任务分母与硬件，细致完成阈值待核实"
+      },
+      {
+        "task": "真机：Pick Up Chips",
+        "purpose": "易碎物体力调节",
+        "metric": "任务成功率",
+        "setting": "PiPER＋Pika夹爪＋双GelSightMini；50示教、20次/任务；每次重置机械臂",
+        "conditions": "取起薯片且不损坏；物体条件在示教范围随机；该任务成功几何/时间阈值未核实",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "§4.2；Appendix C.2",
+        "verification": "本轮原文确认各任务分母与硬件，细致完成阈值待核实"
+      },
+      {
+        "task": "真机：Insert USB",
+        "purpose": "精密接触纠偏",
+        "metric": "任务成功率",
+        "setting": "PiPER＋Pika夹爪＋双GelSightMini；50示教、20次/任务；每次重置机械臂",
+        "conditions": "USB插入端口；物体条件在示教范围随机；该任务成功几何/时间阈值未核实",
+        "source": "https://arxiv.org/html/2610.02784v1",
+        "locator": "§4.2；Appendix C.2",
+        "verification": "本轮原文确认各任务分母与硬件，细致完成阈值待核实"
+      }
+    ],
+    "E04": [
+      {
+        "task": "NeoReal真机：Cup Stacking",
+        "purpose": "稳定堆叠",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "杯子堆叠；层数/稳态时间未核实；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Fruit Collection",
+        "purpose": "多目标抓取",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "收集水果；数量/位置范围未核实；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Board Wiping",
+        "purpose": "持续接触",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "擦白板；污渍阈值未核实；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Bottle Standing",
+        "purpose": "接触姿态恢复",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "立起瓶子；保持时间未核实；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Towel Folding",
+        "purpose": "柔性长流程",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "取毛巾、提起、抖平、折方形、放一侧；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Socket Plugging",
+        "purpose": "精密插接及恢复",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "插入插座；另展示日光变化及失败重试；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Board Insertion",
+        "purpose": "薄板插入",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "板件插入；间隙/深度未核实；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Cardboard Box Folding",
+        "purpose": "长流程折叠",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "完成纸箱折叠；L2阶段进度；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "NeoReal真机：Bag Packing",
+        "purpose": "容器及物体协作",
+        "metric": "二元成功率＋0–100阶段进度分",
+        "setting": "逐任务试次预算；该任务分母与对应机器人型号未核实",
+        "conditions": "拉近包、打开、放物、整理、移到一侧；阶段权重/完整阈值待配套报告逐项核实；采用VTLA-v1九任务版，非Foundation官网十任务版",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+        "verification": "本轮从原PDF Fig7确认九个名称；次数和完整rubric待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Lift Bottle",
+        "purpose": "近墙抓取与姿态控制",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "提瓶且瓶底距墙≤5 cm；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Pull-out Key",
+        "purpose": "接触阻力下拔出",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "钥匙初始旋转随机；转动克服阻力后抽出；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Lift Can",
+        "purpose": "尺寸变化与防滑",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "罐直径4/5/6 cm；稳定提起无滑脱；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Put Bottle",
+        "purpose": "受限空间放置",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "抓瓶并放入架子空腔；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Hole",
+        "purpose": "接触判断孔姿态",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "倾斜孔60°/120°；插入试管；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Tube",
+        "purpose": "小间隙插接",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "2.0 cm管插入2.05 cm开口；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Insert HDMI",
+        "purpose": "连接器对齐",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "HDMI插接完成；阈值未核实；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "UniVTAC仿真：Grasp Classify",
+        "purpose": "触觉形状分类",
+        "metric": "闭环成功率",
+        "setting": "该论文每任务示教/评测分母待逐项核实，不能套用FTP-1的50/100",
+        "conditions": "抓取并分类；类别/阈值未核实；采用本文统一模拟器配置",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.3；Table1",
+        "verification": "八任务名称/指标已核实，本篇各任务分母待核实"
+      },
+      {
+        "task": "NeoSim仿真：Pour Ball",
+        "purpose": "倾倒接触",
+        "metric": "闭环成功率",
+        "setting": "单臂；100示教/策略；评测episode分母未核实",
+        "conditions": "球倒入目标；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Unplug and Plug Charger",
+        "purpose": "拔插切换",
+        "metric": "闭环成功率",
+        "setting": "单臂；100示教/策略；评测episode分母未核实",
+        "conditions": "拔出并重新插入充电器；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Plug USB",
+        "purpose": "精密插接",
+        "metric": "闭环成功率",
+        "setting": "单臂；100示教/策略；评测episode分母未核实",
+        "conditions": "插入USB；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Grasp Chip",
+        "purpose": "脆弱物体抓力",
+        "metric": "闭环成功率",
+        "setting": "单臂；100示教/策略；评测episode分母未核实",
+        "conditions": "抓薯片且不破碎；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Insert Screw",
+        "purpose": "双臂装配",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "螺钉插入；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Place Gears",
+        "purpose": "小件装配",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "齿轮放置；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Unstack Bowl",
+        "purpose": "嵌套分离",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "分离碗；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Cup Handover",
+        "purpose": "双臂交接",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "杯子完成交接；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Stack Cups",
+        "purpose": "稳定堆叠",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "杯子堆叠；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Stack Plates",
+        "purpose": "稳定堆叠",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "盘子堆叠；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Stack Bowls",
+        "purpose": "稳定堆叠",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "碗堆叠；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "NeoSim仿真：Unstack Cup",
+        "purpose": "接触分离",
+        "metric": "闭环成功率",
+        "setting": "双臂；100示教/策略；评测episode分母未核实",
+        "conditions": "分离杯子；固定任务提示、模拟器完成条件；几何/时间阈值及随机化范围未逐项核实",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.1、5.3；Table2",
+        "verification": "12项及4单臂/8双臂已核实；100是示教数，不是评测次数"
+      },
+      {
+        "task": "ALTER真机复评：Towel Folding",
+        "purpose": "固定部署数据离线策略改进后的执行收益",
+        "metric": "闭环成功率；每小时成功次数",
+        "setting": "五变体对比；固定示教/自主/HIL部署语料；真实复评次数未核实",
+        "conditions": "与基础SFT复评分开；L1阶段；训练episode数不能当复评次数",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.4；Appendix F；Figures9、12–13",
+        "verification": "原文确认：离线训练，最终仍真实rollout"
+      },
+      {
+        "task": "ALTER真机复评：Bag Packing",
+        "purpose": "固定部署数据离线策略改进后的执行收益",
+        "metric": "闭环成功率；每小时成功次数",
+        "setting": "五变体对比；固定示教/自主/HIL部署语料；真实复评次数未核实",
+        "conditions": "与基础SFT复评分开；L1阶段；训练episode数不能当复评次数",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.4；Appendix F；Figures9、12–13",
+        "verification": "原文确认：离线训练，最终仍真实rollout"
+      },
+      {
+        "task": "ALTER真机复评：Cardboard Box Folding",
+        "purpose": "固定部署数据离线策略改进后的执行收益",
+        "metric": "闭环成功率；每小时成功次数",
+        "setting": "五变体对比；固定示教/自主/HIL部署语料；真实复评次数未核实",
+        "conditions": "与基础SFT复评分开；L2阶段；训练episode数不能当复评次数",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§5.4；Appendix F；Figures9、12–13",
+        "verification": "原文确认：离线训练，最终仍真实rollout"
+      }
+    ],
+    "E05": [
+      {
+        "task": "Flip Page",
+        "purpose": "薄片接触",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "触页0.3、挑起0.3、恰翻一页并抚平0.4",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 1",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Transfer Egg",
+        "purpose": "轻柔抓放",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "接触0.2、无破裂提起0.3、移动0.2、完整释放0.3",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 2",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Wipe Plate",
+        "purpose": "稳定与擦拭",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "取布0.2、定盘0.1、接触0.2、去墨0.4、放回0.1",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 3",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Apply Toothpaste",
+        "purpose": "挤压力调节",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "取刷0.2、取膏0.1、膏落刷毛0.4、还刷0.2、还膏0.1",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 4",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Split Cup",
+        "purpose": "嵌套分离",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "定杯堆0.2、抓顶杯0.3、分一杯0.3、完整持有0.2",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 5",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Sort Mahjong",
+        "purpose": "纹理决策",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "取麻将0.1、开正确格0.5、放入0.2、关格0.2",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 6",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Open Lock",
+        "purpose": "钥匙对齐",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "取钥匙0.2、取锁0.1、插入0.4、转动开锁0.3",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 7",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Refill Tablet",
+        "purpose": "开盖与小件",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "解锁/开盖/取球/入盒/关盖各0.2",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 8",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Acid-Base Neutralization",
+        "purpose": "滴管力调节",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "附录IX加和rubric；吸液、滴定变色、复位；原文指令与描述终色有差异",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 9",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Extract Card",
+        "purpose": "薄片抽取",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "附录X评分；抽出卡片；具体阶段权重待抽取",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 10",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Deal Poker",
+        "purpose": "多次薄片分离",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "附录XI进度评分；具体层级权重待抽取",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 11",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      },
+      {
+        "task": "Screw Bulb",
+        "purpose": "旋拧连续调整",
+        "metric": "rubric分数百分数，含部分完成，非纯二元SR",
+        "setting": "Dexmate Vega1＋双SharpaWave22DoF；每任务16次；随机位置/旋转",
+        "conditions": "附录XII进度评分；细分权重和通电判定待抽取",
+        "source": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Table1；Appendix F Task 12",
+        "verification": "本轮核查12任务及前8项权重；IX–XII部分权重待抽取"
+      }
+    ],
+    "E06": [
+      {
+        "task": "Earbud flipping",
+        "purpose": "手内旋转",
+        "metric": "完整SR；TCR=完成子任务数/总子任务数",
+        "setting": "双臂灵巧手真机；20次、100后训练轨迹/任务",
+        "conditions": "抓取/旋转180°/释放，3子任务；物体未见于预训练，后训练用评测任务物体，非零样本",
+        "source": "https://arxiv.org/html/2609.12549v1",
+        "locator": "§V-A–D；Appendix E",
+        "verification": "本轮原文核查任务、指标、子任务定义"
+      },
+      {
+        "task": "Stacked-book retrieval",
+        "purpose": "窄缝钩取",
+        "metric": "完整SR；TCR=完成子任务数/总子任务数",
+        "setting": "双臂灵巧手真机；20次、100后训练轨迹/任务",
+        "conditions": "拉出/抓住/安全取出/放下，4子任务；物体未见于预训练，后训练用评测任务物体，非零样本",
+        "source": "https://arxiv.org/html/2609.12549v1",
+        "locator": "§V-A–D；Appendix E",
+        "verification": "本轮原文核查任务、指标、子任务定义"
+      },
+      {
+        "task": "Postcard retrieval",
+        "purpose": "薄片拾取",
+        "metric": "完整SR；TCR=完成子任务数/总子任务数",
+        "setting": "双臂灵巧手真机；20次、100后训练轨迹/任务",
+        "conditions": "滑到桌边/抓取/入盒，3子任务；物体未见于预训练，后训练用评测任务物体，非零样本",
+        "source": "https://arxiv.org/html/2609.12549v1",
+        "locator": "§V-A–D；Appendix E",
+        "verification": "本轮原文核查任务、指标、子任务定义"
+      },
+      {
+        "task": "Multi-object grasping",
+        "purpose": "多指分组持物",
+        "metric": "完整SR；TCR=完成子任务数/总子任务数",
+        "setting": "双臂灵巧手真机；20次、100后训练轨迹/任务",
+        "conditions": "每手取2件垃圾逐个丢弃，8子任务；后续子任务能独立计分；物体未见于预训练，后训练用评测任务物体，非零样本",
+        "source": "https://arxiv.org/html/2609.12549v1",
+        "locator": "§V-A–D；Appendix E",
+        "verification": "本轮原文核查任务、指标、子任务定义"
+      }
+    ],
+    "E07": [
+      {
+        "task": "Constraint-locked Disassembly Task 1",
+        "purpose": "接触门控对几何锁定拆解的帮助",
+        "metric": "任务二元成功率",
+        "setting": "FrankaPanda＋单指15×8阵列；50示教、20次/任务",
+        "conditions": "按Fig4该任务指令完成分离；任务1对应按压/扭转/滑动的精确映射尚未图示核实；前相机遮挡另测；不将人扰动条件自动套全部任务",
+        "source": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§IV-A–E；Figures3–6；TablesI–III",
+        "verification": "使用作者原任务编号，不凭宽泛动作词虚构任务名"
+      },
+      {
+        "task": "Constraint-locked Disassembly Task 2",
+        "purpose": "接触门控对几何锁定拆解的帮助",
+        "metric": "任务二元成功率",
+        "setting": "FrankaPanda＋单指15×8阵列；50示教、20次/任务",
+        "conditions": "按Fig4该任务指令完成分离；任务2对应按压/扭转/滑动的精确映射尚未图示核实；前相机遮挡另测；不将人扰动条件自动套全部任务",
+        "source": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§IV-A–E；Figures3–6；TablesI–III",
+        "verification": "使用作者原任务编号，不凭宽泛动作词虚构任务名"
+      },
+      {
+        "task": "Constraint-locked Disassembly Task 3",
+        "purpose": "接触门控对几何锁定拆解的帮助",
+        "metric": "任务二元成功率",
+        "setting": "FrankaPanda＋单指15×8阵列；50示教、20次/任务",
+        "conditions": "按Fig4该任务指令完成分离；任务3对应按压/扭转/滑动的精确映射尚未图示核实；前相机遮挡另测；不将人扰动条件自动套全部任务",
+        "source": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§IV-A–E；Figures3–6；TablesI–III",
+        "verification": "使用作者原任务编号，不凭宽泛动作词虚构任务名"
+      },
+      {
+        "task": "Constraint-locked Disassembly Task 4",
+        "purpose": "接触门控对几何锁定拆解的帮助",
+        "metric": "任务二元成功率",
+        "setting": "FrankaPanda＋单指15×8阵列；50示教、20次/任务",
+        "conditions": "按Fig4该任务指令完成分离；任务4对应按压/扭转/滑动的精确映射尚未图示核实；前相机遮挡另测；不将人扰动条件自动套全部任务",
+        "source": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§IV-A–E；Figures3–6；TablesI–III",
+        "verification": "使用作者原任务编号，不凭宽泛动作词虚构任务名"
+      },
+      {
+        "task": "In-box Picking",
+        "purpose": "遮挡下接触确认再提取",
+        "metric": "任务成功率",
+        "setting": "FrankaPanda真机；50示教、20次",
+        "conditions": "前相机看不见箱内；腕相机暗且遮挡；成功取出并放置目标；精细位置/时间阈值未核实",
+        "source": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§IV-A2、IV-C2",
+        "verification": "依据已核实原文记录；未核实量在对应字段逐项注明。"
+      }
+    ],
+    "T01": [
+      {
+        "task": "杯子含水判断与放置",
+        "purpose": "触觉辅助属性规划",
+        "metric": "规划正确率；放置及整任务成功次数",
+        "setting": "FrankaPanda＋Robotiq2F140＋单GelSightMini；每条件20次",
+        "conditions": "判断是否有水后放到对应位置；该任务精细质量阈值未完全核实",
+        "source": "https://arxiv.org/html/2507.17294v2",
+        "locator": "§4.1–4.5；Tables1–2",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "海绵选择与擦墨",
+        "purpose": "粗糙度决策和擦拭",
+        "metric": "规划正确率；完整/部分擦除成功次数",
+        "setting": "FrankaPanda＋Robotiq2F140＋单GelSightMini；每条件20次",
+        "conditions": "按粗糙度选海绵后擦墨；质量分级见Table2，数值面积阈值未核实；该任务精细质量阈值未完全核实",
+        "source": "https://arxiv.org/html/2507.17294v2",
+        "locator": "§4.1–4.5；Tables1–2",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "芒果选择与削皮",
+        "purpose": "硬度决策和接触执行",
+        "metric": "规划正确率；完整/部分削皮及整任务成功次数",
+        "setting": "FrankaPanda＋Robotiq2F140＋单GelSightMini；每条件20次",
+        "conditions": "按硬度选芒果后削皮；完整/部分不强转单一二元结果；该任务精细质量阈值未完全核实",
+        "source": "https://arxiv.org/html/2507.17294v2",
+        "locator": "§4.1–4.5；Tables1–2",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T02": [
+      {
+        "task": "夹爪抓放4物体",
+        "purpose": "夹爪触觉融合收益",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5＋双指触觉夹爪；32rollouts",
+        "conditions": "网格初态；4物体精确分母分配未核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "灵巧手抓放及未见物体",
+        "purpose": "跨本体与对象泛化",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5＋11传感器灵巧手；16rollouts",
+        "conditions": "已见/未见对象，逐对象分母未核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "方块插入",
+        "purpose": "接触纠偏",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5真机；10次",
+        "conditions": "最多1500步，深度阈值未核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "三角块插入",
+        "purpose": "非对称几何对齐",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5真机；10次",
+        "conditions": "最多1500步，深度阈值未核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "圆块插入",
+        "purpose": "接触对齐",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5真机；10次",
+        "conditions": "最多1500步，深度阈值未核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "软物体泛化",
+        "purpose": "柔性对象迁移",
+        "metric": "任务成功率；完成步数；平滑性子实验另测加速度变异/夹爪动作变化",
+        "setting": "UR5真机；该子实验次数未核实",
+        "conditions": "未见软物体；损伤/稳定判据待核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3 §4.1；Tables3–7；Fig4",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "离线状态预测",
+        "purpose": "表示预测未来状态能力",
+        "metric": "状态MSE",
+        "setting": "离线验证集；样本分母未核实",
+        "conditions": "非闭环；归一化和通道聚合细则待核实",
+        "source": "https://arxiv.org/html/2508.08706v3",
+        "locator": "v3消融实验",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T03": [
+      {
+        "task": "拉开包拉链",
+        "purpose": "拉动阻力接触",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "抓拉链并打开包；开口量未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "盖章",
+        "purpose": "瞬时接触调整",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "完成盖章；印迹阈值未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "擦花瓶",
+        "purpose": "曲面持续接触",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "擦拭花瓶；污渍阈值未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "拧盖",
+        "purpose": "旋转摩擦",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "完成瓶盖旋拧；角度阈值未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "胡萝卜抓取放置",
+        "purpose": "稳定抓放",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "完成抓取放置；位置容差未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "开抽屉",
+        "purpose": "受阻平移",
+        "metric": "分阶段与整任务成功率",
+        "setting": "AgiBotGenie1双臂夹爪＋Xense；15次/任务；30–50示教/任务",
+        "conditions": "拉开抽屉；开度阈值未核实",
+        "source": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4.1–4.4；Tables1–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T04": [
+      {
+        "task": "仿真：重量分类",
+        "purpose": "物理属性决策",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；按重量类别分类；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：硬度分类",
+        "purpose": "形变属性决策",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；按硬度类别分类；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：粗糙度分类",
+        "purpose": "纹理决策",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；按粗糙度类别分类；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：粗糙度引导再抓取",
+        "purpose": "感知驱动选物",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；按触感选择目标再抓取；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：粗糙度引导再抓取",
+        "purpose": "感知驱动选物",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；按触感选择目标再抓取；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：空罐选择",
+        "purpose": "隐藏属性推断",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；选中目标空罐；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：空罐选择",
+        "purpose": "隐藏属性推断",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；选中目标空罐；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：薯片无损抓取",
+        "purpose": "脆弱物体抓力",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；抓薯片且不破损；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：薯片无损抓取",
+        "purpose": "脆弱物体抓力",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；抓薯片且不破损；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：齿轮装配",
+        "purpose": "精密接触",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；齿轮装配完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：齿轮装配",
+        "purpose": "精密接触",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；齿轮装配完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：拉抽屉",
+        "purpose": "受阻运动",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；拉开到目标状态；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：拉抽屉",
+        "purpose": "受阻运动",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；拉开到目标状态；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：USB插入",
+        "purpose": "精密接口",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；USB插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：USB插入",
+        "purpose": "精密接口",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；USB插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：块插入v1",
+        "purpose": "孔配合",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；v1块插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：块插入v1",
+        "purpose": "孔配合",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；20次",
+        "conditions": "平衡预设条件；v1块插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "仿真：块插入v2",
+        "purpose": "变化孔配合",
+        "metric": "二元任务成功率",
+        "setting": "仿真逐任务训练；该项测试次数待AppendixB核实",
+        "conditions": "平衡预设条件；v2块插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      },
+      {
+        "task": "真机：块插入v2",
+        "purpose": "变化孔配合",
+        "metric": "二元任务成功率",
+        "setting": "配对真机任务；30次",
+        "conditions": "平衡预设条件；v2块插入完成；具体类别边界、几何容差/超时尚待逐任务核实",
+        "source": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3.1–3.3；Tables2–3；AppendixB",
+        "verification": "11仿真/8配对真机任务与真机分母已核实；仿真分母及精细阈值待核实"
+      }
+    ],
+    "T05": [
+      {
+        "task": "电源插头插入",
+        "purpose": "插接纠偏",
+        "metric": "每任务成功率",
+        "setting": "UR5＋InspireEG2-4C2＋双VitaiGF255；100示教；每方法每任务20次",
+        "conditions": "电源插头正确插入；官网主结果确认20次；初态范围、深度/超时阈值未核实",
+        "source": "https://dt-tacvla.github.io/",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "接口几何纠偏",
+        "metric": "每任务成功率",
+        "setting": "UR5＋InspireEG2-4C2＋双VitaiGF255；100示教；每方法每任务20次",
+        "conditions": "USB正确插入；官网主结果确认20次；初态范围、深度/超时阈值未核实",
+        "source": "https://dt-tacvla.github.io/",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "试管放置",
+        "purpose": "细长物体放置",
+        "metric": "每任务成功率",
+        "setting": "UR5＋InspireEG2-4C2＋双VitaiGF255；100示教；每方法每任务20次",
+        "conditions": "试管正确置入目标；官网主结果确认20次；初态范围、深度/超时阈值未核实",
+        "source": "https://dt-tacvla.github.io/",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T06": [
+      {
+        "task": "Peg-in-Hole",
+        "purpose": "接触预测纠偏",
+        "metric": "真机成功率；3runs均值±标准差",
+        "setting": "DobotXtrainer＋平行夹爪＋双GelSight；100真机示教/任务；§4.2写100次/任务、Table1写3runs，分母对应未核实",
+        "conditions": "插销完成插入；几何/稳态时间阈值未核实；IsaacSim/TacEx是训练数据来源，不等同仿真闭环评测",
+        "source": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§4.1–4.3；Table1；Fig5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "精密接口纠偏",
+        "metric": "真机成功率；3runs均值±标准差",
+        "setting": "DobotXtrainer＋平行夹爪＋双GelSight；100真机示教/任务；§4.2写100次/任务、Table1写3runs，分母对应未核实",
+        "conditions": "USB插入完成；几何/稳态时间阈值未核实；IsaacSim/TacEx是训练数据来源，不等同仿真闭环评测",
+        "source": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§4.1–4.3；Table1；Fig5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "齿轮装配",
+        "purpose": "装配触觉预测",
+        "metric": "真机成功率；3runs均值±标准差",
+        "setting": "DobotXtrainer＋平行夹爪＋双GelSight；100真机示教/任务；§4.2写100次/任务、Table1写3runs，分母对应未核实",
+        "conditions": "齿轮装配完成；几何/稳态时间阈值未核实；IsaacSim/TacEx是训练数据来源，不等同仿真闭环评测",
+        "source": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§4.1–4.3；Table1；Fig5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "工具稳定支撑",
+        "purpose": "持续接触稳定",
+        "metric": "真机成功率；3runs均值±标准差",
+        "setting": "DobotXtrainer＋平行夹爪＋双GelSight；100真机示教/任务；§4.2写100次/任务、Table1写3runs，分母对应未核实",
+        "conditions": "工具稳定支撑目标；几何/稳态时间阈值未核实；IsaacSim/TacEx是训练数据来源，不等同仿真闭环评测",
+        "source": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§4.1–4.3；Table1；Fig5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T07": [
+      {
+        "task": "UniVTAC仿真：Lift Bottle",
+        "purpose": "近墙抓取",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "提瓶，瓶底距墙≤5 cm；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Lift Can",
+        "purpose": "防滑抓取",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "不同直径罐稳定提起；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Put Bottle in Shelf",
+        "purpose": "受限空间放置",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "瓶子放入架子；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Grasp Classify",
+        "purpose": "触觉分类",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "抓取并正确分类；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Hole",
+        "purpose": "接触几何对齐",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "试管插入倾斜孔；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Insert Tube",
+        "purpose": "细管插接",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "细管插入目标开口；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Insert HDMI",
+        "purpose": "连接器对齐",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "完成HDMI插接；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "UniVTAC仿真：Pull Out Key",
+        "purpose": "受阻旋转拔出",
+        "metric": "任务成功率",
+        "setting": "IsaacLab＋TacEx/UIPC；原始suite该任务试次数未核实，不套FTP-1的100次",
+        "conditions": "转动并抽出钥匙；沿用官方环境完成判据，具体数值代码尚未运行核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 UniVTAC Benchmark；Simulation Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "Marvin＋ViTai真机迁移验证",
+        "purpose": "仿真表示向真实触觉迁移",
+        "metric": "真机迁移成功率",
+        "setting": "Marvin＋ViTai；具体子任务名及逐项次数未核实",
+        "conditions": "与八仿真分开；不宣称八项均真机复现；子任务成功阈值待核实",
+        "source": "https://univtac.github.io/",
+        "locator": "官网 Real-World Experiments",
+        "verification": "真实迁移已确认，子任务详细协议仍待提取"
+      }
+    ],
+    "T08": [
+      {
+        "task": "三轴力估计",
+        "purpose": "法向/切向力表征",
+        "metric": "RMSE(mN)及95%CI",
+        "setting": "DIGIT/GelSightMini独立离线probe；DIGIT测试25k样本",
+        "conditions": "尖/球探针训练、平探针测试；多种标注预算",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      },
+      {
+        "task": "滑移检测",
+        "purpose": "接触动力学",
+        "metric": "F1",
+        "setting": "离线滑移标签；该项测试样本分母未核实",
+        "conditions": "滑移/非滑移二分类；阈值/类别分布待核实",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      },
+      {
+        "task": "SE(2)姿态变化估计",
+        "purpose": "局部几何表征",
+        "metric": "各轴位姿分箱分类指标",
+        "setting": "Allegro＋DIGIT采集，ArUco真值；离线probe",
+        "conditions": "Δx/Δy/Δθ各11类，不是全6D位姿",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      },
+      {
+        "task": "抓取稳定预测",
+        "purpose": "抓取状态表征",
+        "metric": "分类准确率",
+        "setting": "Feel离线probe；分母未核实",
+        "conditions": "稳定标签，不是闭环SR",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      },
+      {
+        "task": "纺织物识别",
+        "purpose": "材质纹理表征",
+        "metric": "分类准确率",
+        "setting": "Cloth离线probe；26k测试图像",
+        "conditions": "随机准确率0.05；多标注预算",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      },
+      {
+        "task": "Bead Maze",
+        "purpose": "触觉路径规划",
+        "metric": "珠子通过距离(cm)",
+        "setting": "Franka＋带DIGIT手；30示教；评测rollout分母未核实",
+        "conditions": "初始已夹珠；多迷宫，无视觉手眼协调",
+        "source": "https://arxiv.org/html/2410.24090v1",
+        "locator": "§5–7；Appendix D.3–D.9",
+        "verification": "本轮核查附录力/姿态/maze；其余复用已核实TacBench条目"
+      }
+    ],
+    "T09": [
+      {
+        "task": "材质分类",
+        "purpose": "语义可分性",
+        "metric": "linear-probe accuracy",
+        "setting": "离线split；该项测试样本分母未核实",
+        "conditions": "TAG域内及ObjectFolder域外分开",
+        "source": "https://arxiv.org/html/2401.18084v1",
+        "locator": "§4.1–4.2；Tables2–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "抓取稳定性预测",
+        "purpose": "抓取表征迁移",
+        "metric": "linear-probe accuracy",
+        "setting": "离线split；该项测试样本分母未核实",
+        "conditions": "Feeling of Success标签，非闭环",
+        "source": "https://arxiv.org/html/2401.18084v1",
+        "locator": "§4.1–4.2；Tables2–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "零样本触觉理解",
+        "purpose": "开放语义迁移",
+        "metric": "zero-shot accuracy",
+        "setting": "离线split；该项测试样本分母未核实",
+        "conditions": "触觉与文本类别对齐",
+        "source": "https://arxiv.org/html/2401.18084v1",
+        "locator": "§4.1–4.2；Tables2–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "触觉问答",
+        "purpose": "触觉语言推理",
+        "metric": "问答表现；评分器/分母未核实",
+        "setting": "离线split；该项测试样本分母未核实",
+        "conditions": "离线问答，不是机器人执行",
+        "source": "https://arxiv.org/html/2401.18084v1",
+        "locator": "§4.1–4.2；Tables2–3",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T10": [
+      {
+        "task": "TAG材质分类",
+        "purpose": "静态语义",
+        "metric": "分类准确率",
+        "setting": "离线probe；样本分母未核实",
+        "conditions": "已见传感器held-out split",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "Experiments；Tables1–2；AppendixA",
+        "verification": "本轮确认Table1各跨数据集任务；动态/倾倒详细协议待抽取"
+      },
+      {
+        "task": "Feel抓取稳定预测",
+        "purpose": "数据迁移",
+        "metric": "分类准确率",
+        "setting": "离线probe；样本分母未核实",
+        "conditions": "已见传感器、未见数据集",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "Experiments；Tables1–2；AppendixA",
+        "verification": "本轮确认Table1各跨数据集任务；动态/倾倒详细协议待抽取"
+      },
+      {
+        "task": "ObjectFolder1.0材质分类",
+        "purpose": "跨传感器",
+        "metric": "分类准确率",
+        "setting": "离线probe；样本分母未核实",
+        "conditions": "未见传感器/数据",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "Experiments；Tables1–2；AppendixA",
+        "verification": "本轮确认Table1各跨数据集任务；动态/倾倒详细协议待抽取"
+      },
+      {
+        "task": "ObjectFolder2.0材质分类",
+        "purpose": "跨传感器",
+        "metric": "分类准确率",
+        "setting": "离线probe；样本分母未核实",
+        "conditions": "未见传感器/数据",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "Experiments；Tables1–2；AppendixA",
+        "verification": "本轮确认Table1各跨数据集任务；动态/倾倒详细协议待抽取"
+      },
+      {
+        "task": "动态触觉感知",
+        "purpose": "动态视频表征",
+        "metric": "细分子任务指标尚未完整核实",
+        "setting": "离线probe；样本分母未核实",
+        "conditions": "TacQuad时序对齐，不是纯单帧",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "Experiments；Tables1–2；AppendixA",
+        "verification": "本轮确认Table1各跨数据集任务；动态/倾倒详细协议待抽取"
+      },
+      {
+        "task": "真机倾倒",
+        "purpose": "动态策略收益",
+        "metric": "倾倒质量误差均值（g）",
+        "setting": "xArm6＋Robotiq2F140＋GelSightMini；10次真机测试；策略5Hz",
+        "conditions": "初始100g珠子，目标倒出60g；倾倒/等待/收回三动作，旋转步长0.25°；比较微调与冻结编码器",
+        "source": "https://arxiv.org/html/2502.12191v1",
+        "locator": "动态感知实验；Table4；Appendix A.8",
+        "verification": "本轮原文补核实质量误差指标、10次测试及目标质量"
+      }
+    ],
+    "T11": [
+      {
+        "task": "硬度描述",
+        "purpose": "物理属性识别",
+        "metric": "属性/推理正确率；该项细分评分规则未核实",
+        "setting": "PhysiCLeAR手持GelSight视频离线测试；测试分母未核实",
+        "conditions": "硬度描述匹配；非机器人闭环",
+        "source": "https://arxiv.org/html/2405.02794v1",
+        "locator": "官网 Overview；Scenario Reasoning；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "粗糙度描述",
+        "purpose": "纹理识别",
+        "metric": "属性/推理正确率；该项细分评分规则未核实",
+        "setting": "PhysiCLeAR手持GelSight视频离线测试；测试分母未核实",
+        "conditions": "粗糙度描述匹配；非机器人闭环",
+        "source": "https://arxiv.org/html/2405.02794v1",
+        "locator": "官网 Overview；Scenario Reasoning；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "凹凸描述",
+        "purpose": "局部几何识别",
+        "metric": "属性/推理正确率；该项细分评分规则未核实",
+        "setting": "PhysiCLeAR手持GelSight视频离线测试；测试分母未核实",
+        "conditions": "凹凸描述匹配；非机器人闭环",
+        "source": "https://arxiv.org/html/2405.02794v1",
+        "locator": "官网 Overview；Scenario Reasoning；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "物理属性推理",
+        "purpose": "组合属性推理",
+        "metric": "属性/推理正确率；该项细分评分规则未核实",
+        "setting": "PhysiCLeAR手持GelSight视频离线测试；测试分母未核实",
+        "conditions": "根据触觉作属性判断；非机器人闭环",
+        "source": "https://arxiv.org/html/2405.02794v1",
+        "locator": "官网 Overview；Scenario Reasoning；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "场景常识问答",
+        "purpose": "触觉与常识融合",
+        "metric": "属性/推理正确率；该项细分评分规则未核实",
+        "setting": "PhysiCLeAR手持GelSight视频离线测试；测试分母未核实",
+        "conditions": "正确回答场景问题；非机器人闭环",
+        "source": "https://arxiv.org/html/2405.02794v1",
+        "locator": "官网 Overview；Scenario Reasoning；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T12": [
+      {
+        "task": "开放词表语义分类",
+        "purpose": "触觉语言开放对齐",
+        "metric": "分类准确率",
+        "setting": "SSVTP/HCT离线split；43,741为总量，非测试分母；该项测试量未核实",
+        "conditions": "按类别/提示匹配；无机器人rollout",
+        "source": "https://arxiv.org/html/2402.13232v1",
+        "locator": "官网 Results；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "触觉文本生成",
+        "purpose": "语言描述",
+        "metric": "触觉理解/文本评分；评分器未核实",
+        "setting": "SSVTP/HCT离线split；43,741为总量，非测试分母；该项测试量未核实",
+        "conditions": "生成物理属性描述；无机器人rollout",
+        "source": "https://arxiv.org/html/2402.13232v1",
+        "locator": "官网 Results；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "触觉视觉对齐",
+        "purpose": "跨模态检索",
+        "metric": "对齐/检索准确率",
+        "setting": "SSVTP/HCT离线split；43,741为总量，非测试分母；该项测试量未核实",
+        "conditions": "触觉-视觉配对；无机器人rollout",
+        "source": "https://arxiv.org/html/2402.13232v1",
+        "locator": "官网 Results；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "触觉语言对齐",
+        "purpose": "语义检索",
+        "metric": "对齐/检索准确率",
+        "setting": "SSVTP/HCT离线split；43,741为总量，非测试分母；该项测试量未核实",
+        "conditions": "触觉-文本配对；无机器人rollout",
+        "source": "https://arxiv.org/html/2402.13232v1",
+        "locator": "官网 Results；论文Experiments",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T13": [
+      {
+        "task": "材质识别",
+        "purpose": "共享语义",
+        "metric": "分类指标",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线材质标签；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "物体识别",
+        "purpose": "对象辨别",
+        "metric": "分类指标",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线对象标签；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "接触面积预测",
+        "purpose": "几何回归",
+        "metric": "回归误差；精确形式未核实",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线面积真值；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "织物属性预测",
+        "purpose": "柔性属性",
+        "metric": "分类/回归指标；逐项未核实",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线织物标签；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "帧间3D位姿变化",
+        "purpose": "动态几何",
+        "metric": "位姿误差；轴定义未核实",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线时序；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "帧间6D位姿变化",
+        "purpose": "高维动态几何",
+        "metric": "位姿误差；平移/旋转单位需分开，细节未核实",
+        "setting": "FoTa多数据集；各测试样本分母未核实",
+        "conditions": "离线时序；3M+预训练量不能当测试数",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；FoTa下游任务表",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "PCB开关插入",
+        "purpose": "精密电子装配",
+        "metric": "插入成功率",
+        "setting": "Franka＋平行夹爪双GelSightWedge真机；该任务次数待核实",
+        "conditions": "间隙0.4 mm；插入深度/超时/初态范围未核实",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；官网 Precision electronics insertion",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "USB模块插入",
+        "purpose": "精密电子装配",
+        "metric": "插入成功率",
+        "setting": "Franka＋平行夹爪双GelSightWedge真机；该任务次数待核实",
+        "conditions": "间隙0.4 mm；插入深度/超时/初态范围未核实",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；官网 Precision electronics insertion",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "VGA接口插入",
+        "purpose": "精密电子装配",
+        "metric": "插入成功率",
+        "setting": "Franka＋平行夹爪双GelSightWedge真机；该任务次数待核实",
+        "conditions": "间隙0.4 mm；插入深度/超时/初态范围未核实",
+        "source": "https://arxiv.org/html/2406.13640v1",
+        "locator": "§5；官网 Precision electronics insertion",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T14": [
+      {
+        "task": "材质识别",
+        "purpose": "自然触觉语义",
+        "metric": "分类准确率",
+        "setting": "Touch-and-Go离线split；13.9K触碰为总规模，各测试分母未核实",
+        "conditions": "离线材质标签；人手采集，不是机器人执行",
+        "source": "https://arxiv.org/html/2211.12498v1",
+        "locator": "官网 Applications；论文Experiments/Table1",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "触觉引导图像风格化",
+        "purpose": "跨模态生成",
+        "metric": "图像生成评测；具体指标未核实",
+        "setting": "Touch-and-Go离线split；13.9K触碰为总规模，各测试分母未核实",
+        "conditions": "触觉条件转换视觉外观；人手采集，不是机器人执行",
+        "source": "https://arxiv.org/html/2211.12498v1",
+        "locator": "官网 Applications；论文Experiments/Table1",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "未来触觉帧预测",
+        "purpose": "动态表征",
+        "metric": "图像预测误差/质量指标；形式未核实",
+        "setting": "Touch-and-Go离线split；13.9K触碰为总规模，各测试分母未核实",
+        "conditions": "历史条件预测未来；人手采集，不是机器人执行",
+        "source": "https://arxiv.org/html/2211.12498v1",
+        "locator": "官网 Applications；论文Experiments/Table1",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T15": [
+      {
+        "task": "USB线缆插入",
+        "purpose": "预训练及反馈对精密接触收益",
+        "metric": "任务成功率；USB另分析每步切向绝对应变/运行中位数",
+        "setting": "FrankaPanda＋GelSight真机；100示教/任务(80训练20验证)；每种实验20次",
+        "conditions": "固定目标初位；动作噪声σ=2.5 mm；最多300步；完成插入",
+        "source": "https://arxiv.org/html/2403.11898v2",
+        "locator": "§IV-A/B；Fig7；§III-C",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "细长方块堆叠",
+        "purpose": "高精度放置迁移",
+        "metric": "任务成功率；USB另分析每步切向绝对应变/运行中位数",
+        "setting": "FrankaPanda＋GelSight真机；100示教/任务(80训练20验证)；每种实验20次",
+        "conditions": "完成细长块堆叠；保持时间/位置容差未核实",
+        "source": "https://arxiv.org/html/2403.11898v2",
+        "locator": "§IV-A/B；Fig7；§III-C",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "立方块堆叠",
+        "purpose": "触觉不敏感对照",
+        "metric": "任务成功率；USB另分析每步切向绝对应变/运行中位数",
+        "setting": "FrankaPanda＋GelSight真机；100示教/任务(80训练20验证)；每种实验20次",
+        "conditions": "完成立方堆叠；保持时间/位置容差未核实",
+        "source": "https://arxiv.org/html/2403.11898v2",
+        "locator": "§IV-A/B；Fig7；§III-C",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T16": [
+      {
+        "task": "电源插头插入",
+        "purpose": "精密接触",
+        "metric": "分条件成功次数/成功率",
+        "setting": "域内每任务10次；空间/场景泛化各3配置×10次，参与子表按Tables1–5，不统一相加",
+        "conditions": "正确插电源；绿幕、位置变化、杂乱及联合扰动；逐任务容差/超时未核实",
+        "source": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4.4–4.7；Tables1–5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "USB插入",
+        "purpose": "连接器纠偏",
+        "metric": "分条件成功次数/成功率",
+        "setting": "域内每任务10次；空间/场景泛化各3配置×10次，参与子表按Tables1–5，不统一相加",
+        "conditions": "正确插USB；绿幕、位置变化、杂乱及联合扰动；逐任务容差/超时未核实",
+        "source": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4.4–4.7；Tables1–5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "刷卡",
+        "purpose": "接触轨迹",
+        "metric": "分条件成功次数/成功率",
+        "setting": "域内每任务10次；空间/场景泛化各3配置×10次，参与子表按Tables1–5，不统一相加",
+        "conditions": "完成刷卡；绿幕、位置变化、杂乱及联合扰动；逐任务容差/超时未核实",
+        "source": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4.4–4.7；Tables1–5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "钥匙插锁",
+        "purpose": "小间隙对齐",
+        "metric": "分条件成功次数/成功率",
+        "setting": "域内每任务10次；空间/场景泛化各3配置×10次，参与子表按Tables1–5，不统一相加",
+        "conditions": "钥匙入锁孔；绿幕、位置变化、杂乱及联合扰动；逐任务容差/超时未核实",
+        "source": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4.4–4.7；Tables1–5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "拿面包",
+        "purpose": "触觉不敏感对照",
+        "metric": "分条件成功次数/成功率",
+        "setting": "域内每任务10次；空间/场景泛化各3配置×10次，参与子表按Tables1–5，不统一相加",
+        "conditions": "完成拿面包；绿幕、位置变化、杂乱及联合扰动；逐任务容差/超时未核实",
+        "source": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4.4–4.7；Tables1–5",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T17": [
+      {
+        "task": "移液至指定颜色杯",
+        "purpose": "语言选目标与接触结合",
+        "metric": "视觉成功率；接触成功率；整体成功率；二项标准误",
+        "setting": "真机20次/任务；2语言条件各10次；冻结策略推理引导",
+        "conditions": "正确颜色且完成移液；分离语义/接触；液量、残留、几何阈值待核实",
+        "source": "https://arxiv.org/html/2606.14981v1",
+        "locator": "官网 Evaluation of ViTaL；Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "擦指定颜色白板痕迹",
+        "purpose": "语义选择与持续接触",
+        "metric": "视觉成功率；接触成功率；整体成功率；二项标准误",
+        "setting": "真机20次/任务；2语言条件各10次；冻结策略推理引导",
+        "conditions": "擦对颜色且接触执行完成；分离语义/接触；液量、残留、几何阈值待核实",
+        "source": "https://arxiv.org/html/2606.14981v1",
+        "locator": "官网 Evaluation of ViTaL；Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      },
+      {
+        "task": "插入指定孔位",
+        "purpose": "语义选孔与纠偏",
+        "metric": "视觉成功率；接触成功率；整体成功率；二项标准误",
+        "setting": "真机20次/任务；2语言条件各10次；冻结策略推理引导",
+        "conditions": "选对孔且完成插入；分离语义/接触；液量、残留、几何阈值待核实",
+        "source": "https://arxiv.org/html/2606.14981v1",
+        "locator": "官网 Evaluation of ViTaL；Results",
+        "verification": "复用原文已核实任务记录；未核实量在对应字段注明，不以论文级总量推定。"
+      }
+    ],
+    "T18": [
+      {
+        "task": "Peg Insertion",
+        "purpose": "精密装配",
+        "metric": "任务成功率",
+        "setting": "双Realman臂＋双SharpaWave17DoF真机；每方法每短程任务10次",
+        "conditions": "完成插销插入；深度未核实",
+        "source": "https://arxiv.org/html/2506.15953v1",
+        "locator": "Experiments；官网 Experiment Results",
+        "verification": "本轮原文确认4短程任务各10次；精细成功阈值待抽取"
+      },
+      {
+        "task": "Cap Twist",
+        "purpose": "旋拧协调",
+        "metric": "任务成功率",
+        "setting": "双Realman臂＋双SharpaWave17DoF真机；每方法每短程任务10次",
+        "conditions": "完成瓶盖旋拧；角度未核实",
+        "source": "https://arxiv.org/html/2506.15953v1",
+        "locator": "Experiments；官网 Experiment Results",
+        "verification": "本轮原文确认4短程任务各10次；精细成功阈值待抽取"
+      },
+      {
+        "task": "Vase Wipe",
+        "purpose": "曲面持续接触",
+        "metric": "任务成功率",
+        "setting": "双Realman臂＋双SharpaWave17DoF真机；每方法每短程任务10次",
+        "conditions": "完成擦花瓶；污渍阈值未核实",
+        "source": "https://arxiv.org/html/2506.15953v1",
+        "locator": "Experiments；官网 Experiment Results",
+        "verification": "本轮原文确认4短程任务各10次；精细成功阈值待抽取"
+      },
+      {
+        "task": "Book Flip",
+        "purpose": "薄片操作",
+        "metric": "任务成功率",
+        "setting": "双Realman臂＋双SharpaWave17DoF真机；每方法每短程任务10次",
+        "conditions": "完成翻页；页数/平整阈值未核实",
+        "source": "https://arxiv.org/html/2506.15953v1",
+        "locator": "Experiments；官网 Experiment Results",
+        "verification": "本轮原文确认4短程任务各10次；精细成功阈值待抽取"
+      },
+      {
+        "task": "11阶段制作汉堡",
+        "purpose": "长流程多指协调与累积错误",
+        "metric": "Human Normalized Score；阶段/整任务成功",
+        "setting": "双臂灵巧手真机；测试次数未核实",
+        "conditions": "11阶段各0–3分并加权；阶段≥1成功，全部11阶段均≥1才整任务成功",
+        "source": "https://arxiv.org/html/2506.15953v1",
+        "locator": "Appendix long-horizon task；Table11",
+        "verification": "本轮原文核查Table11及完整任务判据"
+      }
+    ],
+    "T19": [
+      {
+        "task": "真机：触觉抓取",
+        "purpose": "基础接触持物",
+        "metric": "任务成功率",
+        "setting": "冻结触觉编码器＋DiffusionPolicy；每任务20次；DIGIT/GelSightMini配置按任务区分",
+        "conditions": "抓取完成；高度/时长未核实",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Real-World Manipulation；Fig4；Appendix13；Table7",
+        "verification": "本轮原文确认20次/任务；精细完成阈值待核实"
+      },
+      {
+        "task": "真机：擦白板",
+        "purpose": "动态滑动接触",
+        "metric": "任务成功率",
+        "setting": "冻结触觉编码器＋DiffusionPolicy；每任务20次；DIGIT/GelSightMini配置按任务区分",
+        "conditions": "擦除完成；残留阈值未核实",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Real-World Manipulation；Fig4；Appendix13；Table7",
+        "verification": "本轮原文确认20次/任务；精细完成阈值待核实"
+      },
+      {
+        "task": "真机：USB插入",
+        "purpose": "动态装配",
+        "metric": "任务成功率",
+        "setting": "冻结触觉编码器＋DiffusionPolicy；每任务20次；DIGIT/GelSightMini配置按任务区分",
+        "conditions": "完成插入；深度未核实",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Real-World Manipulation；Fig4；Appendix13；Table7",
+        "verification": "本轮原文确认20次/任务；精细完成阈值待核实"
+      },
+      {
+        "task": "真机：薯片移动",
+        "purpose": "易碎物体抓力",
+        "metric": "任务成功率",
+        "setting": "冻结触觉编码器＋DiffusionPolicy；每任务20次；DIGIT/GelSightMini配置按任务区分",
+        "conditions": "移动且不破损；损伤检测细则未核实",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Real-World Manipulation；Fig4；Appendix13；Table7",
+        "verification": "本轮原文确认20次/任务；精细完成阈值待核实"
+      },
+      {
+        "task": "离线：TAG材质识别",
+        "purpose": "静态语义",
+        "metric": "准确率",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "ObjectBench；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：Cloth识别",
+        "purpose": "织物语义",
+        "metric": "准确率",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "ObjectBench；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：滑移检测",
+        "purpose": "接触动力学",
+        "metric": "F1",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "SparshBench；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：Delta-force预测",
+        "purpose": "力变化表征",
+        "metric": "RMSE",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "SparshBench；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：三轴力预测(SparshBench)",
+        "purpose": "法向/切向力",
+        "metric": "RMSE及分轴误差",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "DIGIT/GelSightMini，3D力；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：三轴力预测(ToucHDBench)",
+        "purpose": "跨动作力感知",
+        "metric": "RMSE及分轴误差",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "DIGIT/GelSightMini，3D力；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      },
+      {
+        "task": "离线：动作/动态属性预测",
+        "purpose": "触觉时序语义",
+        "metric": "逐子任务指标尚未完整核实",
+        "setting": "离线probe；该项测试样本分母未核实",
+        "conditions": "ToucHD动态层级；力标签不等于部署直接输入",
+        "source": "https://arxiv.org/html/2602.09617v1",
+        "locator": "Offline Benchmark Evaluation；Tables1、6、11–13",
+        "verification": "本轮原文核查Table6/11/12；样本分母待核实"
+      }
+    ],
+    "T20": [
+      {
+        "task": "Dense Packing：3D打印受控基座",
+        "purpose": "紧密装箱视听触互补",
+        "metric": "四基座各自成功率及平均",
+        "setting": "FrankaPanda真机；每基座10示教、10次测试；四基座共40次",
+        "conditions": "硬斜坡、软斜坡、后平面、左平面；随机起始位置；越过凸起并将peg插入基座算成功",
+        "source": "https://arxiv.org/html/2212.03858v1",
+        "locator": "§4.2；Table1",
+        "verification": "本轮原文确认分母、四基座及成功定义"
+      },
+      {
+        "task": "Pouring",
+        "purpose": "流动与接触事件",
+        "metric": "倒入质量相对40g目标的误差（均值±标准差，g）",
+        "setting": "FrankaPanda真机；初始60g/100g珠子两设置，共10示教；每设置10次测试",
+        "conditions": "目标倒入40g珠子；接收杯相对训练位置略移；量化误差而非二元成功率",
+        "source": "https://arxiv.org/html/2212.03858v1",
+        "locator": "§4.3；Table3",
+        "verification": "本轮原文确认每设置10次及质量误差指标"
+      },
+      {
+        "task": "Dense Packing：真实物体装箱",
+        "purpose": "不同形状和材料下的视听触融合",
+        "metric": "任务成功率",
+        "setting": "FrankaPanda真机；真实物体组合；该子实验次数未核实",
+        "conditions": "玻璃对象插入密集箱内；硬障碍需避让、软障碍可挤压；精细空间/深度阈值未核实",
+        "source": "https://arxiv.org/html/2212.03858v1",
+        "locator": "§4.2；Figure1；真实物体结果表",
+        "verification": "本轮原文确认真实物体实验与受控打印基座分开；分母待核实"
+      }
+    ],
+    "T21": [
+      {
+        "task": "铲子翻贝果",
+        "purpose": "接触声音事件感知",
+        "metric": "整任务及子阶段成功率",
+        "setting": "UMI采集、UR5部署；正文20次，但分情形统计以40为总分母，保留歧义",
+        "conditions": "翻面完成；另变高度/工具/环境",
+        "source": "https://arxiv.org/html/2406.19464v1",
+        "locator": "§4.1–4.4；Figs5–8；Appendix B.2",
+        "verification": "复用原文已核查协议，翻贝果分母歧义保留"
+      },
+      {
+        "task": "擦白板",
+        "purpose": "听觉持续接触",
+        "metric": "整任务及子阶段成功率",
+        "setting": "UMI采集、UR5部署；20次",
+        "conditions": "擦除图案；噪声/图案/未见场景；残留阈值未核实",
+        "source": "https://arxiv.org/html/2406.19464v1",
+        "locator": "§4.1–4.4；Figs5–8；Appendix B.2",
+        "verification": "复用原文已核查协议，翻贝果分母歧义保留"
+      },
+      {
+        "task": "摇杯判断并倒骰子",
+        "purpose": "主动感知隐藏状态",
+        "metric": "整任务及子阶段成功率",
+        "setting": "UMI采集、UR5部署；12次",
+        "conditions": "摇杯辨骰子并倒入目标，阶段与整任务分开",
+        "source": "https://arxiv.org/html/2406.19464v1",
+        "locator": "§4.1–4.4；Figs5–8；Appendix B.2",
+        "verification": "复用原文已核查协议，翻贝果分母歧义保留"
+      },
+      {
+        "task": "辨魔术贴并绑线",
+        "purpose": "纹理辨识后决策",
+        "metric": "整任务及子阶段成功率",
+        "setting": "UMI采集、UR5部署；10次",
+        "conditions": "辨钩/毛面后绑线，属性与执行阶段分开",
+        "source": "https://arxiv.org/html/2406.19464v1",
+        "locator": "§4.1–4.4；Figs5–8；Appendix B.2",
+        "verification": "复用原文已核查协议，翻贝果分母歧义保留"
+      }
+    ]
+  }
+}
+

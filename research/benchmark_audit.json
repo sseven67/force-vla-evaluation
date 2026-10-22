@@ -1,0 +1,172 @@
+{
+  "checked": "2026-10-20",
+  "criteria": [
+    "有明确的评测对象和任务集合；离线感知任务也可以构成基准。",
+    "说明输入、测试条件与评分方法，使其他方法可以按同一协议比较。",
+    "提供基线或比较入口；作者自建、使用人数少，都不自动否定其基准性质。",
+    "是否公开代码和数据、是否被其他团队采用，另行记录，不与协议是否成立混为一谈。"
+  ],
+  "records": {
+    "univtac": {
+      "resourceType": "benchmark", "typeLabel": "闭环操作基准", "verdict": "协议明确",
+      "introducedBy": {"title": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking", "source": "https://arxiv.org/html/2602.10093v1", "workId": null},
+      "reason": "作者明确提出八任务 Benchmark，并比较多种策略；评测任务层与仿真平台、触觉编码器分开。",
+      "protocol": "八项固定仿真任务，按任务成功条件统计闭环成功率。采用任务子集的工作需分别注明。",
+      "release": "官方项目页提供代码和数据入口；已查看官方仓库，未执行安装。",
+      "resourceUrl": "https://github.com/univtac/UniVTAC",
+      "scope": "主要是夹爪视触觉策略，不是腕部六维力专用基准。原文三项真机迁移实验不等于八项仿真任务全部真机化。",
+      "evidence": [{"url": "https://univtac.github.io/", "locator": "UniVTAC Benchmark；Simulation Experiments；Real-World Experiments"}]
+    },
+    "forcebench": {
+      "resourceType": "benchmark", "typeLabel": "六维力策略基准", "verdict": "协议明确，发布包待确认",
+      "reason": "作者明确面向六轴腕力接入设计，给出统一骨干、数据、测试初态和任务判定。",
+      "protocol": "八项仿真任务，比较无力版本及多种力融合方案；另有五项真机验证。",
+      "release": "论文协议可查；本次未能从项目入口确认完整可运行发布包，不能标为开箱即用。",
+      "resourceUrl": "https://forcebench-platform.github.io/",
+      "scope": "最贴近夹爪＋末端六维力主线。核心 Benchmark 是仿真协议，真机研究用于验证主要趋势。",
+      "evidence": [{"url": "https://arxiv.org/html/2610.19604v1", "locator": "§III、V；Appendix A、C"}]
+    },
+    "tabero": {
+      "resourceType": "benchmark", "typeLabel": "轻柔操作基准", "verdict": "协议明确",
+      "reason": "原文明确区分 Tabero Benchmark 与 Tabero-VTLA 模型，定义成功率及抓握、施力过程指标。",
+      "protocol": "在 LIBERO 衍生环境中比较轻柔与用力指令；同时评价任务完成、平均用力和较大用力。",
+      "release": "官方仓库可查，包含环境、训练与评测说明；未运行机器人或仿真实验。",
+      "resourceUrl": "https://github.com/NathanWu7/Tabero",
+      "scope": "原始力输入是左右指尖各三维力，不能把拼接后的六个数等同腕部六维力／力矩。",
+      "evidence": [{"url": "https://arxiv.org/html/2605.27886v1", "locator": "Abstract；§3.6；§4；Appendix C"}]
+    },
+    "neoreal": {
+      "source": "https://research.neoteai.com/n0-foundation/",
+      "resourceType": "suite", "typeLabel": "命名评测套件", "verdict": "部分协议可查",
+      "introducedBy": {"title": "N₀-Foundation: Towards the Age of Tactile Intelligence", "source": "https://research.neoteai.com/n0-foundation/", "workId": null},
+      "reason": "官方配套报告提出统一真机套件；N₀-VTLA 是采用者，不是应默认标注的最初提出论文。",
+      "protocol": "Foundation 项目页介绍十项真机任务、初态和重置规则；N₀-VTLA 论文实际评测其中九项，并报告成功率和阶段分。",
+      "release": "官方页有报告、数据和代码入口；本次报告链接未能读取，完整逐任务协议尚未确认。",
+      "resourceUrl": "https://research.neoteai.com/n0-foundation/",
+      "scope": "作者称其为 Benchmark，但本网站暂列协议部分可查的套件；不据此宣称其不能成为基准，也不宣称所有规则已完整核实。",
+      "evidence": [{"url": "https://research.neoteai.com/n0-foundation/", "locator": "Overview；Evaluation"}, {"url": "https://arxiv.org/html/2607.23782v1", "locator": "§5.1–5.2；Appendix E；Foundation 引文"}],
+      "detail": "Foundation 配套资源提出的真机评测套件；原始范围十项，N₀-VTLA 评测九项。完整逐任务规则尚未确认。"
+    },
+    "neosim": {
+      "source": "https://research.neoteai.com/n0-foundation/",
+      "resourceType": "suite", "typeLabel": "命名评测套件", "verdict": "部分协议可查",
+      "introducedBy": {"title": "N₀-Foundation: Towards the Age of Tactile Intelligence", "source": "https://research.neoteai.com/n0-foundation/", "workId": null},
+      "reason": "配套报告提出十二项命名仿真任务，N₀-VTLA 在相同任务配置下进行比较；完整原始协议尚未读全。",
+      "protocol": "四项单臂、八项双臂任务；N₀-VTLA 报告每策略用一百条示范训练，按仿真器完成条件评分。",
+      "release": "Foundation 官方页有资源入口；完整环境发布与逐任务判定实现尚未确认。",
+      "resourceUrl": "https://research.neoteai.com/n0-foundation/",
+      "scope": "十二项 NeoSim 与八项 UniVTAC 分开统计。它们同属仿真，不代表是同一基准或同一任务集合。",
+      "evidence": [{"url": "https://research.neoteai.com/n0-foundation/", "locator": "Evaluation"}, {"url": "https://arxiv.org/html/2607.23782v1", "locator": "§5.1、5.3；Table 2；Foundation 引文"}]
+    },
+    "suite-t04": {
+      "name": "OpenViTac", "resourceType": "benchmark", "typeLabel": "仿真与真机操作基准", "verdict": "协议明确",
+      "reason": "OpenViTac 是作者提出的基准，OpenVTLA 是配套策略；名称和角色应分开。",
+      "protocol": "十一项任务，覆盖物理性质判断、易碎物操作、持续接触和精密操作；说明任务和评分规则。",
+      "release": "官方仓库可查；论文、代码入口与完整模型／数据是否齐全是不同事项。",
+      "resourceUrl": "https://github.com/FVL-Repo/OpenViTac",
+      "scope": "侧重视触觉策略与仿真、真机对应关系，不是专门测试腕部六维力。",
+      "evidence": [{"url": "https://arxiv.org/html/2610.10384v1", "locator": "§3.1；Appendix B"}]
+    },
+    "suite-t08": {
+      "name": "TacBench", "domain": "离线 + 真机", "resourceType": "benchmark", "typeLabel": "触觉感知与下游任务基准", "verdict": "协议明确",
+      "reason": "Sparsh 论文提出模型族，同时单独提出六任务 TacBench，统一比较传感器和表征方法。",
+      "protocol": "六类下游任务包含力估计、滑移、姿态、抓取稳定性、纺织物识别和操作规划；以各任务规定指标比较。",
+      "release": "官方 Sparsh 仓库提供代码及模型、数据说明。",
+      "resourceUrl": "https://github.com/facebookresearch/sparsh",
+      "scope": "前五类主要为离线感知评测；Bead Maze 是真机操作规划。力估计准确不等于机器人闭环力控准确。",
+      "evidence": [{"url": "https://arxiv.org/abs/2410.24090", "locator": "Abstract；TacBench 六任务"}, {"url": "https://sparsh-ssl.github.io/", "locator": "TacBench"}]
+    },
+    "suite-c11": {
+      "resourceType": "benchmark", "typeLabel": "视触觉操作基准", "verdict": "协议明确",
+      "reason": "作者以可复用的任务、示范数据和模块化策略比较为目标，而不只是提供一个触觉仿真器。",
+      "protocol": "仿真任务覆盖插入、旋拧和视觉受限探索；比较输入模态、触觉表示和策略，并提供真机验证。",
+      "release": "官方仓库可查，包含任务、策略和数据入口。",
+      "resourceUrl": "https://github.com/purdue-mars/manifeel",
+      "scope": "使用触觉图像或局部力场；局部力场不是腕部六维力。仿真任务与真机验证分别看。",
+      "evidence": [{"url": "https://arxiv.org/html/2505.18472v2", "locator": "§1、3–4；任务与实验附录"}]
+    },
+    "suite-c12": {
+      "resourceType": "benchmark", "typeLabel": "可复用触觉控制任务基准", "verdict": "协议明确",
+      "reason": "除仿真器外还提供三类明确的控制任务、奖励／评价方法和跨传感器比较。",
+      "protocol": "推物、沿边缘移动、沿曲面移动；分别评估仿真训练和真实机器人执行。",
+      "release": "论文直接给出开源任务环境和代码。",
+      "resourceUrl": "https://github.com/ac-93/tactile_gym",
+      "scope": "主要是带触觉指端／工具的运动控制，不是夹爪抓取或语言条件 VLA 的专用基准。",
+      "evidence": [{"url": "https://arxiv.org/html/2207.10763v2", "locator": "§I；§III-F；§IV"}]
+    },
+    "suite-c10": {
+      "resourceType": "platform", "typeLabel": "触觉仿真与学习平台", "verdict": "不列为独立基准",
+      "reason": "TacSL 的主要贡献是仿真和学习库；配套插入实验可参考，但不将整个平台统称为统一 Benchmark。",
+      "protocol": "配套销钉放置与插入任务，可用于构建或复用评测。",
+      "release": "官方代码入口可查。",
+      "resourceUrl": "https://github.com/isaac-sim/IsaacGymEnvs/tree/tacsl",
+      "scope": "后续 ManiFeel 在 TacSL 基础上建立基准，两者角色不同。",
+      "evidence": [{"url": "https://arxiv.org/html/2408.06506v2", "locator": "Abstract；仿真与策略实验"}]
+    },
+    "suite-c14": {
+      "resourceType": "platform", "typeLabel": "触觉仿真平台", "verdict": "不列为独立基准",
+      "reason": "TACTO 提供触觉渲染与仿真工具，论文案例用于验证工具，不等于一套统一的 VLA 评分协议。",
+      "protocol": "抓取稳定性、球体滚动和接触姿态案例，分别用于检验仿真与学习。",
+      "release": "官方仿真器代码公开。",
+      "resourceUrl": "https://github.com/facebookresearch/tacto",
+      "scope": "适合作为评测环境的组成部分。",
+      "evidence": [{"url": "https://arxiv.org/html/2012.08456v2", "locator": "Abstract；Experiments"}]
+    },
+    "libero": {
+      "source": "https://arxiv.org/abs/2306.03310", "resourceType": "upstream", "typeLabel": "上游通用操作基准", "verdict": "通用基准，非力觉专用",
+      "introducedBy": {"title": "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning", "source": "https://arxiv.org/abs/2306.03310", "workId": null},
+      "reason": "LIBERO 本身是独立基准；在本网站中主要标记 Tabero 的上游任务和轨迹来源。",
+      "protocol": "语言条件操作任务及统一评测脚本；原版不以触觉或六维力为输入重点。",
+      "release": "官方代码、任务与数据入口公开。",
+      "resourceUrl": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "scope": "把环境迁到 Isaac Lab、增加触觉或改变夹爪后，不能直接混用原版分数。",
+      "evidence": [{"url": "https://github.com/Lifelong-Robot-Learning/LIBERO", "locator": "Evaluation；Citation"}]
+    }
+  },
+  "additions": [
+    {
+      "id": "taco", "name": "TacO", "domain": "真机", "focus": "比较不同触觉传感器对操作策略的帮助", "detail": "在三个真机任务中比较六款、四类触觉传感器，并比较有触觉和无触觉策略。", "source": "https://arxiv.org/html/2605.21976v1", "tasks": ["未知重量物体抓放", "保持桌面接触的物体转向", "插头插入"],
+      "resourceType": "benchmark", "typeLabel": "传感器与操作策略基准", "verdict": "协议明确",
+      "introducedBy": {"title": "TacO: Benchmarking Tactile Sensors for Object Manipulation", "source": "https://arxiv.org/html/2605.21976v1", "workId": null},
+      "reason": "有统一任务、任务成功条件、ACT 策略和有／无触觉对照，不只是传感器参数测量。",
+      "protocol": "按三个任务分别统计成功；插入区分完全完成和部分完成。跨硬件比较需同时考虑夹爪和材料差异。",
+      "release": "官方仓库包含策略、传感器和重复性测量代码；完整示范数据下载尚未确认。",
+      "resourceUrl": "https://github.com/TacObench/TacO",
+      "scope": "与夹爪相关，但不是腕部六维力基准，也不是语言条件 VLA 专用基准。",
+      "evidence": [{"url": "https://arxiv.org/html/2605.21976v1", "locator": "§4–6"}, {"url": "https://github.com/TacObench/TacO", "locator": "README"}]
+    },
+    {
+      "id": "bench2dex", "name": "Bench2Dex", "domain": "仿真", "focus": "双臂灵巧手协作、阶段完成与场景变化", "detail": "在十二种手部本体上提供二十六项双臂任务，包含可执行的任务完成判定和阶段评分。", "source": "https://arxiv.org/html/2609.15726v1", "tasks": ["双臂工具使用", "关节物体操作", "多阶段协作", "物体与场景变化测试"],
+      "resourceType": "benchmark", "typeLabel": "双臂灵巧手操作基准", "verdict": "协议明确",
+      "introducedBy": {"title": "Bench2Dex: Benchmarking Visuo-Tactile Bimanual Dexterous Manipulation Across Dexterous Hands", "source": "https://arxiv.org/html/2609.15726v1", "workId": null},
+      "reason": "提供任务集合、可执行成功判定、阶段分、固定测试预算和场景变化协议。",
+      "protocol": "成功状态需稳定维持；分别统计整任务成功、阶段完成和成功样本用时。掉落与过快运动作为诊断。",
+      "release": "官方仓库可查，含训练、推理和遥操作说明。",
+      "resourceUrl": "https://github.com/Bench2Dex/Bench2Dex",
+      "scope": "可参考双臂任务设计，但本体是灵巧手；主表策略主要读 RGB 和关节状态，不能据此称已验证双侧六维力融合。触觉图编码接触深度，不是实测六维力。",
+      "evidence": [{"url": "https://arxiv.org/html/2609.15726v1", "locator": "§3.3–3.6；Appendix E–G"}, {"url": "https://github.com/Bench2Dex/Bench2Dex", "locator": "README"}]
+    },
+    {
+      "id": "tactidex", "name": "TactiDex", "domain": "仿真 + 真机数据／开环验证", "focus": "人到灵巧手迁移中的接触与用力一致性", "detail": "全手触觉数据集与配套接触评测，主要量化迁移后的几何、接触、用力和稳定性。", "source": "https://arxiv.org/html/2607.09190v1", "tasks": ["单手物体交互", "双手研磨", "双手日常物体操作", "接触和用力迁移评测"],
+      "resourceType": "benchmark", "typeLabel": "接触迁移基准＋数据集", "verdict": "协议明确，发布包待确认",
+      "introducedBy": {"title": "TactiDex: A Real-World Tactile-Guided Benchmark for Human-Like Dexterous Manipulation", "source": "https://arxiv.org/html/2607.09190v1", "workId": null},
+      "reason": "定义评测序列划分和接触、力、运动跟踪等指标，属于人到机器人迁移基准。",
+      "protocol": "选取七十三条代表性交互序列评测迁移策略；真机部署另行演示。",
+      "release": "论文与项目页可查；项目页未提供已确认的完整代码／数据下载入口。",
+      "resourceUrl": "https://tactidex.github.io/",
+      "scope": "真机部分明确为开环执行，没有将触觉实时反馈给策略；不能当作真机闭环力控或双侧腕力输入的证据。",
+      "evidence": [{"url": "https://arxiv.org/html/2607.09190v1", "locator": "§5.1；Appendix C.3"}, {"url": "https://tactidex.github.io/", "locator": "项目主页"}]
+    },
+    {
+      "id": "tacverse", "name": "TacVerse", "domain": "离线", "focus": "跨传感器触觉感知与力估计", "detail": "七种视触觉传感器的配对数据，评测分类和力估计在传感器更换后的变化。", "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70169", "tasks": ["九类形状识别", "三十类栅格识别", "力估计", "直接跨传感器测试与少量数据适配"],
+      "resourceType": "benchmark", "typeLabel": "离线感知基准＋数据集", "verdict": "协议明确",
+      "introducedBy": {"title": "TacVerse: A Multisensor Dataset and Benchmark for Cross-Sensor Vision-Based Tactile Perception", "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70169", "workId": null},
+      "reason": "有共享任务和标签、明确跨传感器测试设置，以及分类和回归的比较协议。",
+      "protocol": "分传感器内训练、直接更换传感器、少量目标数据适配三种设置；按任务计算分类或力估计指标。",
+      "release": "原文提供官方 GitHub 训练／配置及 Hugging Face 数据集链接。",
+      "resourceUrl": "https://github.com/LannWei/Tactile_Database",
+      "scope": "是感知 Benchmark，不评测机器人自主动作或闭环用力。",
+      "evidence": [{"url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adrr.70169", "locator": "§3–4；Data Availability Statement"}]
+    }
+  ]
+}

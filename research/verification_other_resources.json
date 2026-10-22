@@ -1,0 +1,2449 @@
+{
+  "works": {
+    "B01": {
+      "checkedSource": "https://arxiv.org/html/2610.19604v1",
+      "checkedSections": [
+        "§V；Appendix A、C"
+      ],
+      "summary": "核对8仿真×每项200次、5真机×每项20次与完整任务判据；移除把真机动作标准误列为待查几何数值的占位。",
+      "taskUpdates": {
+        "B01-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e07": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e08": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          }
+        },
+        "B01-e09": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          },
+          "conditions": "外观相似的满罐、空罐按重量分到各自目标位置。真机与仿真任务分别统计，不将仿真内部数值门槛套给真机。"
+        },
+        "B01-e10": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          },
+          "conditions": "从泡沫中取出盘子。真机与仿真任务分别统计，不将仿真内部数值门槛套给真机。"
+        },
+        "B01-e11": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          },
+          "conditions": "把印章按在标记区域。真机与仿真任务分别统计，不将仿真内部数值门槛套给真机。"
+        },
+        "B01-e12": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          },
+          "conditions": "根据接触阻力调整，把插头插到配合位置。真机与仿真任务分别统计，不将仿真内部数值门槛套给真机。"
+        },
+        "B01-e13": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2610.19604v1",
+            "locator": "§V；Appendix A、C"
+          },
+          "conditions": "把积木完整插入相匹配的槽中。真机与仿真任务分别统计，不将仿真内部数值门槛套给真机。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "核对8仿真×每项200次、5真机×每项20次与完整任务判据；移除把真机动作标准误列为待查几何数值的占位。\n\n已查阅：§V；Appendix A、C。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2610.19604v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T07": {
+      "checkedSource": "https://arxiv.org/html/2602.10093",
+      "checkedSections": [
+        "§IV-A/B；Tables I、IV"
+      ],
+      "summary": "原论文直接确认仿真每任务100次（不是从FTP-1借用）；真机为插管、USB和扶瓶三项，每项20次，成功由人观察判断。",
+      "taskUpdates": {
+        "T07-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "抓住靠墙瓶子并提起；墙边可用空间受限。"
+        },
+        "T07-e02": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "抓取不同直径的罐子并稳定提起。"
+        },
+        "T07-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "将瓶子放入架子内的目标位置。"
+        },
+        "T07-e04": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "抓取并按照物体属性放到对应类别。"
+        },
+        "T07-e05": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "将试管插入倾斜的小孔。"
+        },
+        "T07-e06": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "将细管插入对应开口。"
+        },
+        "T07-e07": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "将HDMI插头插入对应接口。"
+        },
+        "T07-e08": {
+          "review": {
+            "status": "verified",
+            "note": "原论文§IV-A明确100次测试；任务的动作目标已确认。未运行环境，不将实现中的细小数值参数作为本轮调研必填项。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "setting": "IsaacLab＋TacEx/UIPC仿真；每任务50条自动生成示教；每个方法每任务100次执行。",
+          "conditions": "转动钥匙并从锁中抽出。"
+        },
+        "T07-e09": {
+          "review": {
+            "status": "verified",
+            "note": "§IV-B与Table IV明确三项真机任务和20次分母；此前“具体子任务未知”已纠正。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          },
+          "task": "真机迁移：插管",
+          "metric": "人工判断的任务成功率。",
+          "setting": "Tianji Marvin机械臂＋ViTai触觉；每项150条示教；每方法每项20次，相同初始条件。",
+          "conditions": "将管件插入对应开口；人工观察是否完成插接。",
+          "purpose": "检查仿真学到的触觉表示能否帮助真实插管。"
+        }
+      },
+      "remaining": [],
+      "additionalTasks": [
+        {
+          "task": "真机迁移：USB插入",
+          "metric": "人工判断的任务成功率。",
+          "setting": "Tianji Marvin机械臂＋ViTai触觉；每项150条示教；每方法每项20次，相同初始条件。",
+          "conditions": "将USB完整插入接口；人工观察任务是否完成。",
+          "purpose": "检查真实小接口插入是否受益于触觉。",
+          "source": "https://arxiv.org/html/2602.10093",
+          "locator": "§IV-B；Table IV",
+          "review": {
+            "status": "verified",
+            "note": "§IV-B与Table IV明确三项真机任务和20次分母；此前“具体子任务未知”已纠正。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          }
+        },
+        {
+          "task": "真机迁移：扶瓶直立",
+          "metric": "人工判断的任务成功率。",
+          "setting": "Tianji Marvin机械臂＋ViTai触觉；每项150条示教；每方法每项20次，相同初始条件。",
+          "conditions": "将瓶子调整至直立；人工观察是否完成。",
+          "purpose": "检查接触变化下的物体姿态调整。",
+          "source": "https://arxiv.org/html/2602.10093",
+          "locator": "§IV-B；Table IV",
+          "review": {
+            "status": "verified",
+            "note": "§IV-B与Table IV明确三项真机任务和20次分母；此前“具体子任务未知”已纠正。",
+            "source": "https://arxiv.org/html/2602.10093",
+            "locator": "§IV-A/B；Tables I、IV"
+          }
+        }
+      ],
+      "metaUpdates": {
+        "notes": "原论文直接确认仿真每任务100次（不是从FTP-1借用）；真机为插管、USB和扶瓶三项，每项20次，成功由人观察判断。\n\n已查阅：§IV-A/B；Tables I、IV。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2602.10093",
+        "trials": "仿真每任务100次；真机三项各20次。",
+        "metrics": "仿真8任务成功率；真机插管/USB/扶瓶成功率。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T08": {
+      "checkedSource": "https://arxiv.org/html/2410.24090",
+      "checkedSections": [
+        "§5–7；Appendix D.1–D.9"
+      ],
+      "summary": "补齐滑移测试规模、类别不平衡、抓取测试规模及珠迷宫10个新起点；明确离线分类与真机执行的区别。",
+      "taskUpdates": {
+        "T08-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          }
+        },
+        "T08-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          },
+          "setting": "DIGIT/GelSight滑动数据共125,000样本，其中25,000留作测试；冻结编码器、训练小型分类器。",
+          "conditions": "滑移样本占13%；由接触力与摩擦关系生成滑移/未滑移标签；用F1避免多数类掩盖错误。"
+        },
+        "T08-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          },
+          "metric": "每个方向的分档分类准确率及95%置信区间。",
+          "setting": "DIGIT＋ArUco位置参考；630组测试样本；评估平面内两个方向移动和一个方向转动。",
+          "conditions": "把移动、转动范围分别分为11档，再比较预测档位和真实档位。"
+        },
+        "T08-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          },
+          "setting": "Feeling of Success数据；约8,000次抓取训练、1,300次抓取测试；只输入接触前和抓取时的触觉图像。",
+          "conditions": "按数据中的抓取成功/失败标签计分；成功约64%、失败约36%；这是离线预测，不是重新执行1,300次机器人实验。"
+        },
+        "T08-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          }
+        },
+        "T08-e06": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2410.24090",
+            "locator": "§5–7；Appendix D.1–D.9"
+          },
+          "setting": "Franka＋带DIGIT的手；每方法在10个随机新起点执行；训练示教不计入测试次数。",
+          "conditions": "开始时已夹住珠子；记录直到卡住或珠子掉落前走过的距离，单位cm；不要求把连续距离变成成功率。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐滑移测试规模、类别不平衡、抓取测试规模及珠迷宫10个新起点；明确离线分类与真机执行的区别。\n\n已查阅：§5–7；Appendix D.1–D.9。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2410.24090",
+        "trials": "滑移25,000测试样本；抓取约1,300；位置变化630；织物26,000图像；珠迷宫10个新起点。",
+        "metrics": "三轴力误差；滑移F1；分类准确率；珠迷宫通过距离。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T09": {
+      "checkedSource": "https://arxiv.org/html/2401.18084",
+      "checkedSections": [
+        "§4.1、4.2、4.5；Appendix A.1、A.3"
+      ],
+      "summary": "补齐按物体划分训练/测试、抓取8:1:1划分和Touch-LLM的GPT-4人工参考评分方法。",
+      "taskUpdates": {
+        "T09-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2401.18084",
+            "locator": "§4.1、4.2、4.5；Appendix A.1、A.3"
+          },
+          "metric": "冻结触觉编码器后训练线性分类器的分类准确率。",
+          "setting": "TAG、ObjectFolder2.0、YCB-Slide为训练涉及的数据；ObjectFolder1.0、ObjectFolder Real、SSVTP用于新数据/新传感器测试；各数据沿用论文附录说明的划分。",
+          "conditions": "预测材料类别；ObjectFolder按7类材料，YCB-Slide将10个对象作为10类；不同数据集分别报告。"
+        },
+        "T09-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2401.18084",
+            "locator": "§4.1、4.2、4.5；Appendix A.1、A.3"
+          },
+          "metric": "抓取成功/失败二分类准确率。",
+          "setting": "Feeling of Success约9,300对视觉触觉样本，按物体以8:1:1分训练/验证/测试；另有ObjectFolder抓取测试。",
+          "conditions": "依据现成抓取标签判断稳定性；是离线预测，不是闭环抓取成功率。"
+        },
+        "T09-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2401.18084",
+            "locator": "§4.1、4.2、4.5；Appendix A.1、A.3"
+          },
+          "metric": "零样本分类准确率。",
+          "setting": "冻结模型，按材料或抓取标签构造文字描述，不训练下游分类器；多数据集独立报告。",
+          "conditions": "比较触觉特征与类别文字的相似程度，取最相符类别；与有标注线性分类实验分开。"
+        },
+        "T09-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2401.18084",
+            "locator": "§4.1、4.2、4.5；Appendix A.1、A.3"
+          },
+          "metric": "GPT-4根据人工参考回答给1–5分，分数越高表示描述更吻合。",
+          "setting": "Touch-LLM输入触觉图像与描述触感的问题；作者收集400张带人工文字描述的视觉样本用于相关语言/生成评估。",
+          "conditions": "比较模型触感、纹理描述和人工参考；不是机器人执行任务。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐按物体划分训练/测试、抓取8:1:1划分和Touch-LLM的GPT-4人工参考评分方法。\n\n已查阅：§4.1、4.2、4.5；Appendix A.1、A.3。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2401.18084",
+        "trials": "离线数据按各数据集划分；Feel按物体8:1:1；语言/生成应用收集400条人工描述。",
+        "metrics": "分类准确率；零样本准确率；GPT-4对触感描述的1–5分。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T10": {
+      "checkedSource": "https://arxiv.org/html/2502.12191",
+      "checkedSections": [
+        "§5.3–5.6；Appendix A.3、A.8"
+      ],
+      "summary": "确认四项离线分类遵循已有数据划分；将误写的“动态触觉感知”泛卡纠正为TacQuad跨传感器特征的定性可视化。",
+      "taskUpdates": {
+        "T10-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          },
+          "setting": "TAG离线分类；沿用UniTouch等前作的数据划分；冻结编码器并训练线性分类器。",
+          "conditions": "TAG预测材料，并另外测试软硬、粗糙程度；这是已见传感器测试。"
+        },
+        "T10-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          },
+          "setting": "Feel离线分类；沿用UniTouch等前作的数据划分；冻结编码器并训练线性分类器。",
+          "conditions": "根据抓取成功/失败标签评价；Feel未用于预训练，检查对新数据的适应。"
+        },
+        "T10-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          },
+          "setting": "ObjectFolder1.0离线分类；沿用UniTouch等前作的数据划分；冻结编码器并训练线性分类器。",
+          "conditions": "TACTO生成触觉，按材料标签计分；该传感器与数据不用于本模型预训练。"
+        },
+        "T10-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          },
+          "setting": "ObjectFolder2.0离线分类；沿用UniTouch等前作的数据划分；冻结编码器并训练线性分类器。",
+          "conditions": "Taxim生成触觉，按材料标签计分；该传感器与数据不用于完整AnyTouch模型预训练。"
+        },
+        "T10-e05": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          },
+          "task": "跨传感器接触特征对齐（定性分析）",
+          "metric": "特征散点图，观察同一次接触的不同传感器数据是否聚在一起；未作为独立成功率任务。",
+          "setting": "未使用的TacQuad细粒度子集；30次接触，每种传感器各取一张对齐帧。",
+          "conditions": "比较CLIP及逐步加入各训练模块的AnyTouch；颜色代表接触实例，连线表示同一接触的不同传感器。"
+        },
+        "T10-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2502.12191",
+            "locator": "§5.3–5.6；Appendix A.3、A.8"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认四项离线分类遵循已有数据划分；将误写的“动态触觉感知”泛卡纠正为TacQuad跨传感器特征的定性可视化。\n\n已查阅：§5.3–5.6；Appendix A.3、A.8。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2502.12191",
+        "trials": "分类沿用已有划分；TacQuad特征图30次接触；倾倒10次真机。",
+        "metrics": "材料/抓取分类准确率；倾倒质量误差（g）；跨传感器特征可视化。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T11": {
+      "checkedSource": "https://arxiv.org/html/2405.02794",
+      "checkedSections": [
+        "§III-B/C；§VI-A/B/D；Tables III–VI"
+      ],
+      "summary": "核对PhysiCLeAR的属性分类、三类物理推理与场景选择；属性描述不是机器人执行成功率，物理理解测试合计500道题。",
+      "taskUpdates": {
+        "T11-e01": {
+          "review": {
+            "status": "pending",
+            "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。",
+            "source": "https://arxiv.org/html/2405.02794",
+            "locator": "§III-B/C；§VI-A/B/D；Tables III–VI"
+          },
+          "metric": "硬度三分类准确率；另报告三种属性全部答对的比例。",
+          "setting": "PhysiCLeAR按物体划分：60个训练、7个验证、7个测试；每个触觉视频均匀选5个显著帧；测试帧/视频总数尚未逐项核实。",
+          "conditions": "与人工属性标签比较；每项3档；这是未见物体的离线描述/分类。"
+        },
+        "T11-e02": {
+          "review": {
+            "status": "pending",
+            "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。",
+            "source": "https://arxiv.org/html/2405.02794",
+            "locator": "§III-B/C；§VI-A/B/D；Tables III–VI"
+          },
+          "metric": "粗糙程度三分类准确率；另报告三种属性全部答对的比例。",
+          "setting": "PhysiCLeAR按物体划分：60个训练、7个验证、7个测试；每个触觉视频均匀选5个显著帧；测试帧/视频总数尚未逐项核实。",
+          "conditions": "与人工属性标签比较；每项3档；这是未见物体的离线描述/分类。"
+        },
+        "T11-e03": {
+          "review": {
+            "status": "pending",
+            "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。",
+            "source": "https://arxiv.org/html/2405.02794",
+            "locator": "§III-B/C；§VI-A/B/D；Tables III–VI"
+          },
+          "metric": "凹凸程度三分类准确率；另报告三种属性全部答对的比例。",
+          "setting": "PhysiCLeAR按物体划分：60个训练、7个验证、7个测试；每个触觉视频均匀选5个显著帧；测试帧/视频总数尚未逐项核实。",
+          "conditions": "与人工属性标签比较；每项3档；这是未见物体的离线描述/分类。"
+        },
+        "T11-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2405.02794",
+            "locator": "§III-B/C；§VI-A/B/D；Tables III–VI"
+          },
+          "metric": "属性比较、选出最明显属性、物体与属性匹配三项各自准确率。",
+          "setting": "PhysiCLeAR未见物体，三项合计500道问答；比较7B/13B、是否先生成物理属性描述。",
+          "conditions": "属性比较判断两个对象谁更软/粗等；极值选择从多个对象选最明显者；匹配任务配对物体与属性。"
+        },
+        "T11-e05": {
+          "review": {
+            "status": "pending",
+            "note": "§III-C/VI-B确认三种场景与准确率；本轮未确认精确问题数。",
+            "source": "https://arxiv.org/html/2405.02794",
+            "locator": "§III-B/C；§VI-A/B/D；Tables III–VI"
+          },
+          "metric": "场景问题选择准确率；正确对象二选一，随机水平50%。",
+          "setting": "PhysiCLeAR测试场景，训练中不含场景推理任务；具体问题总数尚未核实。",
+          "conditions": "根据触觉选择适合擦不粘锅、湿时容易抓住或破冰的对象；不提供真实属性描述，由模型自己预测。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "T11-e01",
+          "reason": "尚未核实",
+          "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。"
+        },
+        {
+          "field": "T11-e02",
+          "reason": "尚未核实",
+          "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。"
+        },
+        {
+          "field": "T11-e03",
+          "reason": "尚未核实",
+          "note": "§III-B和VI-D/TableIX确认按物体划分和指标；没有把7个测试物体当作只有7个测试视频；视频总数尚未核实。"
+        },
+        {
+          "field": "T11-e05",
+          "reason": "尚未核实",
+          "note": "§III-C/VI-B确认三种场景与准确率；本轮未确认精确问题数。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "核对PhysiCLeAR的属性分类、三类物理推理与场景选择；属性描述不是机器人执行成功率，物理理解测试合计500道题。\n\n已查阅：§III-B/C；§VI-A/B/D；Tables III–VI。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2405.02794",
+        "trials": "PhysiCLeAR训练60/验证7/测试7物体；物理理解三任务合计500道问答。",
+        "metrics": "属性三分类与全部属性答对率；物理理解/场景选择准确率。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T12": {
+      "checkedSource": "https://arxiv.org/html/2402.13232",
+      "checkedSections": [
+        "§5.1；Figure 5；Appendix C.5"
+      ],
+      "summary": "确认TVL评测集402组三模态样本、top-1/top-5分类及GPT-4的1–10分文本评分。",
+      "taskUpdates": {
+        "T12-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2402.13232",
+            "locator": "§5.1；Figure 5；Appendix C.5"
+          },
+          "metric": "Top-1/Top-5准确率（正确答案排第1名或前5名的比例）。",
+          "setting": "402组人工标注的触觉、视觉、文字测试样本；逐一作为候选匹配。",
+          "conditions": "触觉—视觉直接比较正确配对；触觉—语言允许含义相近的描述，文字特征相似度门槛为0.636。"
+        },
+        "T12-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2402.13232",
+            "locator": "§5.1；Figure 5；Appendix C.5"
+          },
+          "metric": "GPT-4按人工描述给1–10分；越高表示触感描述更准确。",
+          "setting": "TVL人工标注测试集402组；模型输入视觉及对应触觉，生成至多5个形容词。",
+          "conditions": "评分依据人工触感词语参考，不依据机器人是否完成动作。"
+        },
+        "T12-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2402.13232",
+            "locator": "§5.1；Figure 5；Appendix C.5"
+          },
+          "metric": "Top-1/Top-5准确率（正确答案排第1名或前5名的比例）。",
+          "setting": "402组人工标注的触觉、视觉、文字测试样本；逐一作为候选匹配。",
+          "conditions": "触觉—视觉直接比较正确配对；触觉—语言允许含义相近的描述，文字特征相似度门槛为0.636。"
+        },
+        "T12-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2402.13232",
+            "locator": "§5.1；Figure 5；Appendix C.5"
+          },
+          "metric": "Top-1/Top-5准确率（正确答案排第1名或前5名的比例）。",
+          "setting": "402组人工标注的触觉、视觉、文字测试样本；逐一作为候选匹配。",
+          "conditions": "触觉—视觉直接比较正确配对；触觉—语言允许含义相近的描述，文字特征相似度门槛为0.636。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认TVL评测集402组三模态样本、top-1/top-5分类及GPT-4的1–10分文本评分。\n\n已查阅：§5.1；Figure 5；Appendix C.5。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2402.13232",
+        "trials": "402组人工标注的触觉、视觉、文字测试样本。",
+        "metrics": "Top-1/Top-5匹配准确率；GPT-4对触感描述的1–10分。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T13": {
+      "checkedSource": "https://arxiv.org/html/2406.13640",
+      "checkedSections": [
+        "§4；§5.1–5.3；Figure 4"
+      ],
+      "summary": "纠正接触面积误写为图像细节程度；补三项真机电子元件插入各15次、最多30步、约2Hz和初始位置变化。",
+      "taskUpdates": {
+        "T13-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "材料分类准确率；训练使用分类损失。",
+          "setting": "FoTa中带材料标签的数据；与从头训练、仅自监督预训练、两阶段预训练对照。",
+          "conditions": "按已有材料标签计分；材料分类是表征训练/评估项目，不等同机器人操作。"
+        },
+        "T13-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "Top-1分类准确率。",
+          "setting": "两个传感器各约3,300个训练样本，6类物体；完整/一半训练数据；同一独立验证集比较24种设置。",
+          "conditions": "比较4种网络大小、3种训练方案、2种数据量；另留出gantry采集数据检验新任务/传感器。"
+        },
+        "T13-e03": {
+          "review": {
+            "status": "pending",
+            "note": "§4明确预测Laplacian variance，纠正旧任务名称；该子项独立测试数量仍尚未核实。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "task": "触觉图像细节丰富程度预测",
+          "metric": "均方误差；预测图像边缘/细节变化程度（Laplacian variance）。",
+          "setting": "FoTa的Touch-and-Go图像；计算图像细节程度作回归标签；具体独立测试数量尚未核实。",
+          "conditions": "这项不是接触面积预测；作者用图像细节指标监督表征学习。"
+        },
+        "T13-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "织物类型、光滑程度、绒毛程度的分类准确率。",
+          "setting": "FoTa纳入的织物数据；按已有标签设置分类任务。",
+          "conditions": "分别预测织物类别和两种表面属性，不把这些属性合成单个连续力误差。"
+        },
+        "T13-e05": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "三维姿态变化估计的均方误差。",
+          "setting": "自建gantry数据留作评估/微调；预训练未包含这部分；比较不同微调数据量。",
+          "conditions": "由重叠触觉图像推断物体相对位置变化；不是机器人是否完成装配。"
+        },
+        "T13-e06": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "三维位置与三维转动的回归误差；训练使用均方误差。",
+          "setting": "FoTa中带相对姿态标签的数据，输入两张有接触区域重叠的触觉图像。",
+          "conditions": "预测两帧间位置和转动变化；不是外部六维力估计。"
+        },
+        "T13-e07": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "15次执行的插入成功率；成功执行的平均步数。",
+          "setting": "Franka Panda＋双GelSight Wedge夹爪；每项15次；约2Hz，最多30步；基板位置固定。",
+          "conditions": "分别把3针开关、12针USB模块、17针VGA模块插入PCB对应孔；孔与针间隙0.4mm；起始夹持位置和手臂位置加入标准差1mm的随机偏移；30步内完整插入成功。"
+        },
+        "T13-e08": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "15次执行的插入成功率；成功执行的平均步数。",
+          "setting": "Franka Panda＋双GelSight Wedge夹爪；每项15次；约2Hz，最多30步；基板位置固定。",
+          "conditions": "分别把3针开关、12针USB模块、17针VGA模块插入PCB对应孔；孔与针间隙0.4mm；起始夹持位置和手臂位置加入标准差1mm的随机偏移；30步内完整插入成功。"
+        },
+        "T13-e09": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2406.13640",
+            "locator": "§4；§5.1–5.3；Figure 4"
+          },
+          "metric": "15次执行的插入成功率；成功执行的平均步数。",
+          "setting": "Franka Panda＋双GelSight Wedge夹爪；每项15次；约2Hz，最多30步；基板位置固定。",
+          "conditions": "分别把3针开关、12针USB模块、17针VGA模块插入PCB对应孔；孔与针间隙0.4mm；起始夹持位置和手臂位置加入标准差1mm的随机偏移；30步内完整插入成功。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "T13-e03",
+          "reason": "尚未核实",
+          "note": "§4明确预测Laplacian variance，纠正旧任务名称；该子项独立测试数量仍尚未核实。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "纠正接触面积误写为图像细节程度；补三项真机电子元件插入各15次、最多30步、约2Hz和初始位置变化。\n\n已查阅：§4；§5.1–5.3；Figure 4。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2406.13640",
+        "trials": "三项真机插入各15次，最多30步、约2Hz；离线按任务单独评价。",
+        "metrics": "分类准确率；回归误差；插入成功率与成功执行平均步数。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T14": {
+      "checkedSource": "https://arxiv.org/html/2211.12498",
+      "checkedSections": [
+        "§4–5；Tables 1–4；Appendix H"
+      ],
+      "summary": "补齐图像风格化与未来触觉预测的实际指标，保留人手采集离线评测定位。",
+      "taskUpdates": {
+        "T14-e01": {
+          "review": {
+            "status": "verified",
+            "note": "§5.1明确923次触碰作测试，补齐离线测试规模与按视频划分。",
+            "source": "https://arxiv.org/html/2211.12498",
+            "locator": "§4–5；Tables 1–4；Appendix H"
+          },
+          "setting": "按接触视频划分，5,172次触碰用于无标签学习、3,921训练分类器、923测试；不把同一触碰相邻帧分到训练和测试两边。",
+          "metric": "材料类别、软/硬、光滑/粗糙的分类准确率。",
+          "conditions": "冻结表征后训练线性分类器，用人工/材料对应标签评价；测试接触与预训练、分类训练分开。"
+        },
+        "T14-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2211.12498",
+            "locator": "§4–5；Tables 1–4；Appendix H"
+          },
+          "metric": "视觉—触觉特征相似程度；转换后图像与目标触觉的材料类别一致率。",
+          "setting": "测试集视觉图像配随机测试触觉，生成风格化图像；与已有转换方法比较。",
+          "conditions": "既检查生成外观是否吻合触感，也保留原图内容；不以机械臂任务成功率计分。"
+        },
+        "T14-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接核对原文对应任务：已补充或确认下列指标、主要设置与完成条件。",
+            "source": "https://arxiv.org/html/2211.12498",
+            "locator": "§4–5；Tables 1–4；Appendix H"
+          },
+          "metric": "平均绝对像素误差、SSIM（图像结构相似程度）、LPIPS（视觉特征差异）。",
+          "setting": "输入3张历史帧预测下一张；历史帧分别相隔3帧和5帧；比较只有触觉及视觉＋触觉。",
+          "conditions": "预测与真实下一张触觉图像比较；误差和LPIPS越低越好，SSIM越高越好。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐图像风格化与未来触觉预测的实际指标，保留人手采集离线评测定位。\n\n已查阅：§4–5；Tables 1–4；Appendix H。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2211.12498",
+        "trials": "材料等分类测试923次触碰；未来预测用3帧历史；均为离线评测。",
+        "metrics": "材料/软硬/粗糙分类准确率；视觉触觉相似程度；图像MAE、SSIM、LPIPS。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T15": {
+      "checkedSource": "https://arxiv.org/html/2403.11898v2",
+      "checkedSections": [
+        "§IV；Figure 7"
+      ],
+      "summary": "确认20次/设置与三项任务目标；删除并非作者必要判据的额外保持时间追问。",
+      "taskUpdates": {
+        "T15-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2403.11898v2",
+            "locator": "§IV；Figure 7"
+          }
+        },
+        "T15-e02": {
+          "review": {
+            "status": "verified",
+            "note": "§IV与Figure7以完成叠放计成功；不额外要求作者未作为主指标的保持时长数字。",
+            "source": "https://arxiv.org/html/2403.11898v2",
+            "locator": "§IV；Figure 7"
+          },
+          "metric": "任务成功率。",
+          "conditions": "把细长方块叠放到目标块上并完成任务；比较ACT/扩散策略、视觉/视觉＋触觉、是否预训练。"
+        },
+        "T15-e03": {
+          "review": {
+            "status": "verified",
+            "note": "§IV与Figure7以完成叠放计成功；不额外要求作者未作为主指标的保持时长数字。",
+            "source": "https://arxiv.org/html/2403.11898v2",
+            "locator": "§IV；Figure 7"
+          },
+          "metric": "任务成功率。",
+          "conditions": "把立方块叠放到目标块上并完成任务；比较ACT/扩散策略、视觉/视觉＋触觉、是否预训练。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认20次/设置与三项任务目标；删除并非作者必要判据的额外保持时间追问。\n\n已查阅：§IV；Figure 7。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2403.11898v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T16": {
+      "checkedSource": "https://arxiv.org/html/2506.13762v1",
+      "checkedSections": [
+        "§4.2–4.6；Tables 1–5"
+      ],
+      "summary": "确认域内10次、位置/背景变化各3配置×10次；按作者动作目标保留成功条件，不额外追问未作为主指标的数值。",
+      "taskUpdates": {
+        "T16-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.13762v1",
+            "locator": "§4.2–4.6；Tables 1–5"
+          },
+          "conditions": "把电源插头插入插座；域内目标位置固定、绿幕背景，机器人起点随机；前四项另测新位置、杂乱背景和两者同时变化。"
+        },
+        "T16-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.13762v1",
+            "locator": "§4.2–4.6；Tables 1–5"
+          },
+          "conditions": "把USB插入目标端口；域内目标位置固定、绿幕背景，机器人起点随机；前四项另测新位置、杂乱背景和两者同时变化。"
+        },
+        "T16-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.13762v1",
+            "locator": "§4.2–4.6；Tables 1–5"
+          },
+          "conditions": "让卡片完整通过刷卡槽；域内目标位置固定、绿幕背景，机器人起点随机；前四项另测新位置、杂乱背景和两者同时变化。"
+        },
+        "T16-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.13762v1",
+            "locator": "§4.2–4.6；Tables 1–5"
+          },
+          "conditions": "把钥匙插入锁孔；域内目标位置固定、绿幕背景，机器人起点随机；前四项另测新位置、杂乱背景和两者同时变化。"
+        },
+        "T16-e05": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.13762v1",
+            "locator": "§4.2–4.6；Tables 1–5"
+          },
+          "conditions": "抓起面包；域内目标位置固定、绿幕背景，机器人起点随机；前四项另测新位置、杂乱背景和两者同时变化。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认域内10次、位置/背景变化各3配置×10次；按作者动作目标保留成功条件，不额外追问未作为主指标的数值。\n\n已查阅：§4.2–4.6；Tables 1–5。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2506.13762v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T17": {
+      "checkedSource": "https://arxiv.org/html/2606.14981",
+      "checkedSections": [
+        "§5.1；Appendix A.1–A.3"
+      ],
+      "summary": "补齐三项分开判断选对目标与完成接触动作的标准，移液不洒出、擦净、孔位选择均有原文定义。",
+      "taskUpdates": {
+        "T17-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2606.14981",
+            "locator": "§5.1；Appendix A.1–A.3"
+          },
+          "conditions": "视觉部分：先去指令指定的黄杯/蓝杯，再把滴管放回红杯；接触部分：液体转移到杯内且不洒出；两项都满足才整体成功；红杯位置和滴管液量随机。"
+        },
+        "T17-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2606.14981",
+            "locator": "§5.1；Appendix A.1–A.3"
+          },
+          "conditions": "视觉部分：移动到指令指定的黑色/橙色区域；接触部分：把黑色或橙色标记完全擦净；两项都满足才整体成功；每次重新画标记并随机改变位置。"
+        },
+        "T17-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2606.14981",
+            "locator": "§5.1；Appendix A.1–A.3"
+          },
+          "conditions": "视觉部分：选择指令指定的左上/右上方向；接触部分：圆柱插入一个孔；两项都满足才整体成功；圆柱起点在15×15cm内随机，孔与销间隙约1mm。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐三项分开判断选对目标与完成接触动作的标准，移液不洒出、擦净、孔位选择均有原文定义。\n\n已查阅：§5.1；Appendix A.1–A.3。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2606.14981"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T18": {
+      "checkedSource": "https://arxiv.org/html/2506.15953",
+      "checkedSections": [
+        "§V；Appendix VII-E/F；Tables III–XI"
+      ],
+      "summary": "补全阶段分与任务成功条件；汉堡某阶段低于1分即整任务失败，纠正错误只是为了继续测后续阶段，不能当作整任务自主成功。",
+      "taskUpdates": {
+        "T18-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.15953",
+            "locator": "§V；Appendix VII-E/F；Tables III–XI"
+          },
+          "metric": "任务成功率＋阶段0–3分人工评分＋加权归一总分（HNS）。",
+          "conditions": "抓销阶段须3分（稳定抓住），插入阶段至少2分；两阶段权重1:2；按插入完整程度人工评分。"
+        },
+        "T18-e02": {
+          "review": {
+            "status": "verified",
+            "note": "附录VII-E.2给出旋转0–50°、50–100°及完全旋开的评分，再评分是否稳放；无需另猜角度误差范围。",
+            "source": "https://arxiv.org/html/2506.15953",
+            "locator": "§V；Appendix VII-E/F；Tables III–XI"
+          },
+          "metric": "任务成功率＋阶段0–3分人工评分＋加权归一总分（HNS）。",
+          "conditions": "旋下瓶盖并稳定放到桌上；起始距旋开状态约100°；旋转与放置分别0–3分，权重2:2。"
+        },
+        "T18-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.15953",
+            "locator": "§V；Appendix VII-E/F；Tables III–XI"
+          },
+          "metric": "任务成功率＋阶段0–3分人工评分＋加权归一总分（HNS）。",
+          "conditions": "稳定三指抓海绵且完全擦净花瓶蓝色印记，两阶段均3分才成功；擦掉不足一半为1分，擦掉50–90%为2分；权重1:2，人工调整握瓶扣1分。"
+        },
+        "T18-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2506.15953",
+            "locator": "§V；Appendix VII-E/F；Tables III–XI"
+          },
+          "metric": "任务成功率＋阶段0–3分人工评分＋加权归一总分（HNS）。",
+          "conditions": "右手完整翻起一页须3分；左手压住页面至少2分；翻多页、页面弹回均按细分标准扣分；两阶段权重2:2。"
+        },
+        "T18-e05": {
+          "review": {
+            "status": "pending",
+            "note": "§V和附录VII-F/TableXI补齐评分；这不是缺少成功判据，剩余仅完整测试重复数尚未核实。",
+            "source": "https://arxiv.org/html/2506.15953",
+            "locator": "§V；Appendix VII-E/F；Tables III–XI"
+          },
+          "metric": "11阶段0–3分人工评分、加权归一总分及整任务成功情况；失败后纠错只为继续阶段测试。",
+          "setting": "双臂灵巧手真机；物体在7个指定区域内随机放置，最大位置变化3cm；测试重复数本轮尚未核实。",
+          "conditions": "每阶段至少1分才算阶段完成；某阶段低于1分则整任务失败；阶段权重依次2、2、1、1、2、2、1、1、1、1、2。实验纠正失败动作后继续测试后续阶段，不把纠错后的阶段成绩当作整任务自主成功；原文没有另列两套有／无干预的完整成功率统计表。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "T18-e05",
+          "reason": "尚未核实",
+          "note": "§V和附录VII-F/TableXI补齐评分；这不是缺少成功判据，剩余仅完整测试重复数尚未核实。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "阶段按0–3分评分并加权。汉堡任务只要某阶段低于1分，整任务即失败；原文说明会纠正错误以继续测试后续阶段，不能把这部分成绩算作整任务自主成功，也不能声称作者另列两套有／无干预的完整成功率表。\n\n依据：§5.2–5.3；Table2；附录B.2、Table11。完整测试重复数仍尚未核实。\n\n来源：https://arxiv.org/html/2506.15953v1",
+        "trials": "短程每方法每任务10次；长程独立测试次数尚未核实。",
+        "metrics": "0–3分人工阶段评分、HNS、任务成功情况；汉堡失败后的纠错只用于继续测试后续阶段。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T19": {
+      "checkedSource": "https://arxiv.org/html/2602.09617v1",
+      "checkedSections": [
+        "§5.1–5.3；Appendices 10、12、13"
+      ],
+      "summary": "补齐四项真机任务的实际目标及每项50示教/20测试；离线沿用官方划分；纠正泛化“动态属性预测”为位姿变化分类。",
+      "taskUpdates": {
+        "T19-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "冻结触觉编码器＋扩散策略；每任务50条示教、每方法每任务20次；除薯片外分别用DIGIT/GelSight Mini。",
+          "conditions": "根据两种小球的材料和表面触感，放入各自对应盒中；开始时夹爪未抓住球。"
+        },
+        "T19-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "冻结触觉编码器＋扩散策略；每任务50条示教、每方法每任务20次；除薯片外分别用DIGIT/GelSight Mini。",
+          "conditions": "只允许一次擦拭，把白板字母完全擦净；未擦净不能再补擦。"
+        },
+        "T19-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "冻结触觉编码器＋扩散策略；每任务50条示教、每方法每任务20次；除薯片外分别用DIGIT/GelSight Mini。",
+          "conditions": "先从一个端口拔出USB，再插入另一端口；碰撞引起连接器歪斜也须继续调整完成。"
+        },
+        "T19-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "冻结触觉编码器＋扩散策略；每任务50条示教、每方法每任务20次；除薯片外分别用DIGIT/GelSight Mini。",
+          "conditions": "把瓶口的一片薯片轻拿到另一瓶口且保持完整；开始时未夹住，只用GelSight Mini测试。"
+        },
+        "T19-e05": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "ObjectBench中的TAG/Cloth离线任务，按各数据的既有划分；编码器配下游分类器，比较静态/动态触觉表示。",
+          "conditions": "对照已有材料/织物类别标签；不是机器人动作执行；增加或移除预训练模块作对照。"
+        },
+        "T19-e06": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "ObjectBench中的TAG/Cloth离线任务，按各数据的既有划分；编码器配下游分类器，比较静态/动态触觉表示。",
+          "conditions": "对照已有材料/织物类别标签；不是机器人动作执行；增加或移除预训练模块作对照。"
+        },
+        "T19-e07": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "SparshBench离线数据，沿用官方训练/测试划分；冻结编码器训练小型预测器；DIGIT与GelSight Mini分别报告。",
+          "conditions": "力预测以未见的平头探针作测试；滑移按已有标签，力变化预测跨输入帧三轴变化；所有力误差单位mN。"
+        },
+        "T19-e08": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "SparshBench离线数据，沿用官方训练/测试划分；冻结编码器训练小型预测器；DIGIT与GelSight Mini分别报告。",
+          "conditions": "力预测以未见的平头探针作测试；滑移按已有标签，力变化预测跨输入帧三轴变化；所有力误差单位mN。",
+          "metric": "三轴力变化预测的均方根误差，单位mN。"
+        },
+        "T19-e09": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "SparshBench离线数据，沿用官方训练/测试划分；冻结编码器训练小型预测器；DIGIT与GelSight Mini分别报告。",
+          "conditions": "力预测以未见的平头探针作测试；滑移按已有标签，力变化预测跨输入帧三轴变化；所有力误差单位mN。"
+        },
+        "T19-e10": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "setting": "ToucHD Bench：10种未参与预训练的探针，7种训练、3种测试；DIGIT/GelSight Mini分别评价。",
+          "conditions": "测试探针为直角梯形、小方块阵列、大三角孔；分别比较Fx、Fy、Fz及综合均方根误差，单位mN。"
+        },
+        "T19-e11": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2602.09617v1",
+            "locator": "§5.1–5.3；Appendices 10、12、13"
+          },
+          "task": "离线：物体相对位置与转动变化分类",
+          "metric": "位置与转动变化的分类准确率。",
+          "setting": "Table1的SparshBench Pose项目，DIGIT数据，沿用官方划分；不是另一个未定义的动作任务。",
+          "conditions": "预测触觉连续帧间物体相对位置和转动的类别；与力、滑移、材料识别分别报告。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐四项真机任务的实际目标及每项50示教/20测试；离线沿用官方划分；纠正泛化“动态属性预测”为位姿变化分类。\n\n已查阅：§5.1–5.3；Appendices 10、12、13。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2602.09617v1",
+        "trials": "每真机任务50示教、每方法20次；离线按各公开资源原有划分。",
+        "metrics": "真机成功率；离线分类准确率、滑移F1、三轴力及力变化RMSE（mN）。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T20": {
+      "checkedSource": "https://arxiv.org/html/2212.03858",
+      "checkedSections": [
+        "§3.3；§4；Tables 1–3"
+      ],
+      "summary": "重新确认装箱和定量倾倒的主要指标，真实物体装箱是玻璃杯与软硬障碍交互；其单独次数仍待核查。",
+      "taskUpdates": {
+        "T20-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2212.03858",
+            "locator": "§3.3；§4；Tables 1–3"
+          }
+        },
+        "T20-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2212.03858",
+            "locator": "§3.3；§4；Tables 1–3"
+          }
+        },
+        "T20-e03": {
+          "review": {
+            "status": "pending",
+            "note": "§3.3与§4/Table2明确目标和材料；该真实物体组合子实验的独立测试次数尚未核实，不能套四种打印基座的40次。",
+            "source": "https://arxiv.org/html/2212.03858",
+            "locator": "§3.3；§4；Tables 1–3"
+          },
+          "conditions": "让玻璃杯避开金属板、塑料盘等硬障碍，允许压缩毛巾和毛绒玩具，最后插入拥挤箱中的空位；任务按完成插放判断。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "T20-e03",
+          "reason": "尚未核实",
+          "note": "§3.3与§4/Table2明确目标和材料；该真实物体组合子实验的独立测试次数尚未核实，不能套四种打印基座的40次。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "重新确认装箱和定量倾倒的主要指标，真实物体装箱是玻璃杯与软硬障碍交互；其单独次数仍待核查。\n\n已查阅：§3.3；§4；Tables 1–3。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2212.03858",
+        "trials": "四种打印基座各10次；倾倒60g/100g初装量各10次；真实物体装箱次数尚未核实。",
+        "metrics": "装箱成功率；相对40g目标的倾倒质量误差（g）。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "T21": {
+      "checkedSource": "https://arxiv.org/html/2406.19464v1",
+      "checkedSections": [
+        "§4.1–4.4；Appendix B.2.1–B.2.4"
+      ],
+      "summary": "补齐各子阶段标准与白板20种条件；翻贝果以附录逐情形20次为清楚来源，不把尚未核对的40当统一分母。",
+      "taskUpdates": {
+        "T21-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2406.19464v1",
+            "locator": "§4.1–4.4；Appendix B.2.1–B.2.4"
+          },
+          "setting": "UMI采集、UR5部署；附录B.2.4逐行列出20个测试情形。",
+          "conditions": "铲子伸到贝果底下并完成翻面；另测环境噪声、未见高度；戳侧面、翻面前失去接触、铲子在手中移位均失败。"
+        },
+        "T21-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2406.19464v1",
+            "locator": "§4.1–4.4；Appendix B.2.1–B.2.4"
+          },
+          "conditions": "完整擦掉图案才成功；不接触板面、过度下压弯曲夹爪、提前停止或擦错位置均失败；20种测试含板高度/朝向/位置、噪声、未见板擦。"
+        },
+        "T21-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2406.19464v1",
+            "locator": "§4.1–4.4；Appendix B.2.1–B.2.4"
+          },
+          "conditions": "三个阶段分别判断：稳定抓住白杯；把白杯所有物体倒入粉杯；倒完后把白杯放回桌面。整体任务要求完整完成。"
+        },
+        "T21-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次查阅原文对应任务，已补充或确认主要指标、测试设置和动作完成标准。",
+            "source": "https://arxiv.org/html/2406.19464v1",
+            "locator": "§4.1–4.4；Appendix B.2.1–B.2.4"
+          },
+          "conditions": "四阶段分别判断：滑动时保持接触；辨出正确的钩面/毛面胶带；抓住胶带；把正确胶带放在线上。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐各子阶段标准与白板20种条件；翻贝果以附录逐情形20次为清楚来源，不把尚未核对的40当统一分母。\n\n已查阅：§4.1–4.4；Appendix B.2.1–B.2.4。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2406.19464v1",
+        "trials": "附录逐情形列翻贝果20次、擦板20次；倒骰12次、魔术贴10次。",
+        "metrics": "整任务及各动作阶段成功率。",
+        "warning": "非VLA；主要接触信号是音频而非六维力值；以附录逐情形的测试记录了解评测设计。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C01": {
+      "checkedSource": "https://arxiv.org/html/2410.07554v2",
+      "checkedSections": [
+        "§IV-A/B；Table I"
+      ],
+      "summary": "核对两级削皮成功定义和20/10次对照；采集效率属于案例演示，原文未说明多人或重复实验规模。",
+      "taskUpdates": {
+        "C01-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.07554v2",
+            "locator": "§IV-A/B；Table I"
+          }
+        },
+        "C01-e02": {
+          "review": {
+            "status": "not_reported",
+            "note": "已查§IV-A与Figure4：是case study，报告约5分钟与13分钟及3次中断，未说明参与人数、重复次数，不能当成统计充分的用户研究。",
+            "source": "https://arxiv.org/html/2410.07554v2",
+            "locator": "§IV-A/B；Table I"
+          },
+          "setting": "完整削皮的案例比较：人直接操作、ForceCapture、力反馈遥操作；原文§IV-A未说明参与人数和重复次数。",
+          "conditions": "依次拿削皮器、削皮、放工具、调整菜的朝向，直到整根完成；比较完成用时和中断次数。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C01-e02",
+          "reason": "原文未说明",
+          "note": "已查§IV-A与Figure4：是case study，报告约5分钟与13分钟及3次中断，未说明参与人数、重复次数，不能当成统计充分的用户研究。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "核对两级削皮成功定义和20/10次对照；采集效率属于案例演示，原文未说明多人或重复实验规模。\n\n已查阅：§IV-A/B；Table I。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2410.07554v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C03": {
+      "checkedSource": "https://arxiv.org/html/2510.13324v1",
+      "checkedSections": [
+        "§IV-A/B；Figure 5"
+      ],
+      "summary": "确认三任务20次、30示教及完整无损/明显拧紧标准；不把安全停止阈值当作成功定义。",
+      "taskUpdates": {
+        "C03-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2510.13324v1",
+            "locator": "§IV-A/B；Figure 5"
+          }
+        },
+        "C03-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2510.13324v1",
+            "locator": "§IV-A/B；Figure 5"
+          }
+        },
+        "C03-e03": {
+          "review": {
+            "status": "verified",
+            "note": "§IV-A明确以noticeably tight判成功，未要求数值拧紧力作为主评测门槛；安全保护参数不列为本次调研缺项。",
+            "source": "https://arxiv.org/html/2510.13324v1",
+            "locator": "§IV-A/B；Figure 5"
+          },
+          "metric": "成功率；抓持力曲线与示教力分布的差别（Wasserstein-1距离，单位N）。",
+          "conditions": "已插入螺丝的内六角扳手须旋到明显拧紧后松夹；两种扳手初始朝向；末端扭矩过大时安全停止。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认三任务20次、30示教及完整无损/明显拧紧标准；不把安全停止阈值当作成功定义。\n\n已查阅：§IV-A/B；Figure 5。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2510.13324v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C04": {
+      "checkedSource": "https://arxiv.org/html/2410.17246v2",
+      "checkedSections": [
+        "§IV-B/C/F；Tables I、II"
+      ],
+      "summary": "复核3种训练随机初始化×每种10次与任务变化条件；四任务的现有动作目标正确。",
+      "taskUpdates": {
+        "C04-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2410.17246v2",
+            "locator": "§IV-B/C/F；Tables I、II"
+          },
+          "setting": "xArm7＋双指夹爪/AnySkin真机；3种训练随机初始化，每种10次，共30次/任务；任务变体另测10次。"
+        },
+        "C04-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2410.17246v2",
+            "locator": "§IV-B/C/F；Tables I、II"
+          },
+          "setting": "xArm7＋双指夹爪/AnySkin真机；3种训练随机初始化，每种10次，共30次/任务；任务变体另测10次。"
+        },
+        "C04-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2410.17246v2",
+            "locator": "§IV-B/C/F；Tables I、II"
+          },
+          "setting": "xArm7＋双指夹爪/AnySkin真机；3种训练随机初始化，每种10次，共30次/任务；任务变体另测10次。"
+        },
+        "C04-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2410.17246v2",
+            "locator": "§IV-B/C/F；Tables I、II"
+          },
+          "setting": "xArm7＋双指夹爪/AnySkin真机；3种训练随机初始化，每种10次，共30次/任务；任务变体另测10次。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "复核3种训练随机初始化×每种10次与任务变化条件；四任务的现有动作目标正确。\n\n已查阅：§IV-B/C/F；Tables I、II。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2410.17246v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C05": {
+      "checkedSource": "https://arxiv.org/html/2409.08276v3",
+      "checkedSections": [
+        "§V-B/C/D；Tables II、III"
+      ],
+      "summary": "补齐滑移的40对象、60条未见对象测试及人工视频标签；换皮用户研究10人。",
+      "taskUpdates": {
+        "C05-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2409.08276v3",
+            "locator": "§V-B/C/D；Tables II、III"
+          }
+        },
+        "C05-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2409.08276v3",
+            "locator": "§V-B/C/D；Tables II、III"
+          }
+        },
+        "C05-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2409.08276v3",
+            "locator": "§V-B/C/D；Tables II、III"
+          }
+        },
+        "C05-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2409.08276v3",
+            "locator": "§V-B/C/D；Tables II、III"
+          },
+          "setting": "Kinova Jaco＋OnRobot RG-2/AnySkin；40个对象，30训练/10测试；每个6条接触序列，测试共60条。",
+          "conditions": "改变抓持力度、宽度与接触位置；每条慢慢提起1秒，人工观看视频标成滑移/未滑移；用触觉时序预测标签。"
+        },
+        "C05-e05": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2409.08276v3",
+            "locator": "§V-B/C/D；Tables II、III"
+          },
+          "setting": "10名非专业使用者手动换皮；对照DIGIT、螺丝固定ReSkin、粘贴ReSkin与AnySkin。",
+          "metric": "替换用时；替换后是否还能使用。",
+          "conditions": "移除旧皮、安装新皮，检查是否可重复使用；这是硬件操作体验评测，不是机器人成功率。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补齐滑移的40对象、60条未见对象测试及人工视频标签；换皮用户研究10人。\n\n已查阅：§V-B/C/D；Tables II、III。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2409.08276v3"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C06": {
+      "checkedSource": "https://arxiv.org/html/2505.11420v1",
+      "checkedSections": [
+        "§4.2；Table 1；Figure 7"
+      ],
+      "summary": "补三轴力的50k数据、摇杆817条、位姿判对范围2cm/5°与插头起始变化范围；保留部分离线测试划分尚未核实。",
+      "taskUpdates": {
+        "C06-e01": {
+          "review": {
+            "status": "pending",
+            "note": "§4.2/附录B Table3确认50k是数据规模；未逐项确认其独立测试数量，不能直接把总数当测试数。",
+            "source": "https://arxiv.org/html/2505.11420v1",
+            "locator": "§4.2；Table 1；Figure 7"
+          },
+          "setting": "带F/T探针压入Xela皮肤，50,000数据点；法向加载0.25–5N；测试划分数量尚未核实。",
+          "conditions": "随机选择磁传感单元上方及它们之间的接触位置；以探头F/T为参考，对比减少标注数据后的误差。"
+        },
+        "C06-e02": {
+          "review": {
+            "status": "pending",
+            "note": "附录B Table3确认817条总轨迹，独立测试子集数量尚未核实。",
+            "source": "https://arxiv.org/html/2505.11420v1",
+            "locator": "§4.2；Table 1；Figure 7"
+          },
+          "setting": "Allegro触觉手操纵摇杆；817条有标签轨迹；用短时触觉历史预测摇杆状态；测试划分尚未核实。",
+          "metric": "摇杆三个转动方向的均方根误差。"
+        },
+        "C06-e03": {
+          "review": {
+            "status": "verified",
+            "note": "§4.2与AppendixB.3/Fig13确认108条是训练量；本任务主判据已完整，不追求运行级数据复核。",
+            "source": "https://arxiv.org/html/2505.11420v1",
+            "locator": "§4.2；Table 1；Figure 7"
+          },
+          "setting": "手动在Allegro手下滑动/转动物体并用ArUco记录位置；1秒时序窗口；完整训练数据108条。",
+          "conditions": "位置估计距离真实值不超过2cm、转动估计与真实值相差不超过5°视为判对；另报告连续误差。"
+        },
+        "C06-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2505.11420v1",
+            "locator": "§4.2；Table 1；Figure 7"
+          },
+          "conditions": "预先用三指夹住插头，插入固定插座；初始手臂位置在5×5×2cm范围随机，约高于插座10cm；比较同一组初始状态的策略成功率。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C06-e01",
+          "reason": "尚未核实",
+          "note": "§4.2/附录B Table3确认50k是数据规模；未逐项确认其独立测试数量，不能直接把总数当测试数。"
+        },
+        {
+          "field": "C06-e02",
+          "reason": "尚未核实",
+          "note": "附录B Table3确认817条总轨迹，独立测试子集数量尚未核实。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "补三轴力的50k数据、摇杆817条、位姿判对范围2cm/5°与插头起始变化范围；保留部分离线测试划分尚未核实。\n\n已查阅：§4.2；Table 1；Figure 7。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2505.11420v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C07": {
+      "checkedSource": "https://arxiv.org/html/2506.14754v1",
+      "checkedSections": [
+        "§4.1/4.2；Figures 5–7"
+      ],
+      "summary": "补离线分类104序列按69/35划分、材料×装填量每组合15训练/5测试，以及插头起始5×5×2cm；旋转以稳定性计分。",
+      "taskUpdates": {
+        "C07-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2506.14754v1",
+            "locator": "§4.1/4.2；Figures 5–7"
+          },
+          "conditions": "预先夹住插头，插到插排第一个孔；插排固定，手臂初始位置在5×5×2cm内随机；视觉与触觉模态逐项消融。"
+        },
+        "C07-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2506.14754v1",
+            "locator": "§4.1/4.2；Figures 5–7"
+          }
+        },
+        "C07-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2506.14754v1",
+            "locator": "§4.1/4.2；Figures 5–7"
+          },
+          "setting": "手持采集器104条序列，69条训练、35条测试；标签样本均衡。",
+          "conditions": "联合识别3种物体、3种动作（敲击/直线滑动/绕圈滑动）、4种接触表面。"
+        },
+        "C07-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2506.14754v1",
+            "locator": "§4.1/4.2；Figures 5–7"
+          },
+          "setting": "Franka夹爪摇晃8oz瓶；6种材料×3种装填量；每组合20条序列，15训练、5测试。",
+          "conditions": "材料为扁豆、米、玉米、药片、水、油；装填量为满、半满、四分之一满；比较18类联合判断。"
+        },
+        "C07-e05": {
+          "review": {
+            "status": "pending",
+            "note": "附录A.2已确认采集范围与参考测力；单独测试样本量仍尚未核实。",
+            "source": "https://arxiv.org/html/2506.14754v1",
+            "locator": "§4.1/4.2；Figures 5–7"
+          },
+          "setting": "Meca机械臂带Digit360，球面探针下置F/T参考；法向加载最高3.5N；独立测试样本数量尚未核实。",
+          "conditions": "预测接触法向力，与参考测力值计算误差；不等同机械臂跟踪目标力的误差。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C07-e05",
+          "reason": "尚未核实",
+          "note": "附录A.2已确认采集范围与参考测力；单独测试样本量仍尚未核实。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "补离线分类104序列按69/35划分、材料×装填量每组合15训练/5测试，以及插头起始5×5×2cm；旋转以稳定性计分。\n\n已查阅：§4.1/4.2；Figures 5–7。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2506.14754v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C08": {
+      "checkedSource": "https://arxiv.org/html/2303.10880v4",
+      "checkedSections": [
+        "§V-A/D/E；Appendix B"
+      ],
+      "summary": "确认真机每对象3种随机初始化及10个对象；按轴区分仿真旋转奖励、真机旋转圈数与掉落时间。",
+      "taskUpdates": {
+        "C08-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2303.10880v4",
+            "locator": "§V-A/D/E；Appendix B"
+          },
+          "metric": "仿真：累计旋转奖励；真机：累计转动圈数与掉落前持续时间。",
+          "setting": "Allegro16自由度＋IsaacGym/真机；真机每对象测试3种随机初始化；论文共测试10种真机对象。",
+          "conditions": "开始时物体已在手中，绕指定方向持续转动；改变形状、质量、摩擦；比较去掉触觉、降低敏感度及连续/二值触觉。"
+        },
+        "C08-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2303.10880v4",
+            "locator": "§V-A/D/E；Appendix B"
+          },
+          "metric": "仿真：累计旋转奖励；真机：累计转动圈数与掉落前持续时间。",
+          "setting": "Allegro16自由度＋IsaacGym/真机；真机每对象测试3种随机初始化；论文共测试10种真机对象。",
+          "conditions": "开始时物体已在手中，绕指定方向持续转动；改变形状、质量、摩擦；比较去掉触觉、降低敏感度及连续/二值触觉。"
+        },
+        "C08-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2303.10880v4",
+            "locator": "§V-A/D/E；Appendix B"
+          },
+          "metric": "仿真：累计旋转奖励；真机：累计转动圈数与掉落前持续时间。",
+          "setting": "Allegro16自由度＋IsaacGym/真机；真机每对象测试3种随机初始化；论文共测试10种真机对象。",
+          "conditions": "开始时物体已在手中，绕指定方向持续转动；改变形状、质量、摩擦；比较去掉触觉、降低敏感度及连续/二值触觉。"
+        },
+        "C08-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2303.10880v4",
+            "locator": "§V-A/D/E；Appendix B"
+          },
+          "setting": "Allegro真机；包含橡皮鸭、乐高盒、苹果等10种对象；每对象3种随机初始化。",
+          "conditions": "训练没见过的形状或物理属性也要测试持续转动；看转了多少圈、多久掉落，原文没有给一个统一的成功分数线。"
+        },
+        "C08-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2303.10880v4",
+            "locator": "§V-A/D/E；Appendix B"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认真机每对象3种随机初始化及10个对象；按轴区分仿真旋转奖励、真机旋转圈数与掉落时间。\n\n已查阅：§V-A/D/E；Appendix B。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2303.10880v4",
+        "trials": "真机10种物体，每对象3种随机初始化；仿真另报告训练学习曲线。",
+        "metrics": "仿真旋转奖励；真机累计转动圈数与掉落前持续时间。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C09": {
+      "checkedSource": "https://arxiv.org/html/2309.09979v1",
+      "checkedSections": [
+        "§5.1–5.5；Appendix B"
+      ],
+      "summary": "确认真机定量比较主要为x方向，y/z另有演示；不再误写三个轴均有同样真机统计。",
+      "taskUpdates": {
+        "C09-e01": {
+          "review": {
+            "status": "not_reported",
+            "note": "已核对§4、§5.4和附录A/B；x方向真机图未列单对象重复次数。",
+            "source": "https://arxiv.org/html/2309.09979v1",
+            "locator": "§5.1–5.5；Appendix B"
+          },
+          "setting": "IsaacGym训练；每回合400控制步/20秒；Allegro＋D435真机。真机定量图比较6个对象；原文§5.4/Figure10未说明每对象重复次数。",
+          "conditions": "开始时已稳定抓住物体，围绕x方向旋转；仿真物体下落到手掌参考高度13.5cm以下重置；转动越多、保持越久、偏向其他方向越少越好。"
+        },
+        "C09-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已区分仿真量化与真机视频，删除原来对不存在的逐轴真机分母追问。",
+            "source": "https://arxiv.org/html/2309.09979v1",
+            "locator": "§5.1–5.5；Appendix B"
+          },
+          "setting": "IsaacGym训练；每回合400控制步/20秒；Allegro＋D435真机。本方向主要给仿真定量结果；真实机器人多方向表现以配套视频展示。",
+          "conditions": "开始时已稳定抓住物体，围绕y方向旋转；仿真物体下落到手掌参考高度13.5cm以下重置；转动越多、保持越久、偏向其他方向越少越好。"
+        },
+        "C09-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已区分仿真量化与真机视频，删除原来对不存在的逐轴真机分母追问。",
+            "source": "https://arxiv.org/html/2309.09979v1",
+            "locator": "§5.1–5.5；Appendix B"
+          },
+          "setting": "IsaacGym训练；每回合400控制步/20秒；Allegro＋D435真机。本方向主要给仿真定量结果；真实机器人多方向表现以配套视频展示。",
+          "conditions": "开始时已稳定抓住物体，围绕z方向旋转；仿真物体下落到手掌参考高度13.5cm以下重置；转动越多、保持越久、偏向其他方向越少越好。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C09-e01",
+          "reason": "原文未说明",
+          "note": "已核对§4、§5.4和附录A/B；x方向真机图未列单对象重复次数。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "确认真机定量比较主要为x方向，y/z另有演示；不再误写三个轴均有同样真机统计。\n\n已查阅：§5.1–5.5；Appendix B。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2309.09979v1",
+        "trials": "仿真每回合20秒；真机主要定量测x方向6种对象，原文未列单对象重复次数。",
+        "metrics": "掉落前时间、沿目标方向转动奖励、偏离目标方向程度；真机累计转动量。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C10": {
+      "checkedSource": "https://arxiv.org/html/2408.06506v2",
+      "checkedSections": [
+        "§VI；Figures 12–13"
+      ],
+      "summary": "补真机摆放/插入分别81次、手内起始角度不同；资产泛化m8/m12/m16每设置512次，主仿真3种子×1024初始状态。",
+      "taskUpdates": {
+        "C10-e01": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2408.06506v2",
+            "locator": "§VI；Figures 12–13"
+          },
+          "setting": "主仿真3种训练随机初始化，每种1024个起点；Franka/GelSight真机81次，3个目标位置。",
+          "conditions": "把圆柱直立放在平板上，松开后仍稳定；改变手臂起点、销在夹爪中位置以及-30°/0°/+30°手内转角。"
+        },
+        "C10-e02": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2408.06506v2",
+            "locator": "§VI；Figures 12–13"
+          },
+          "setting": "主仿真3种训练随机初始化，每种1024个起点；Franka/GelSight真机81次，3个插座位置。",
+          "conditions": "把圆柱插到对应圆孔；改变手臂起点、销在夹爪中位置以及-15°/0°/+15°手内转角；真机不追加微调。"
+        },
+        "C10-e03": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2408.06506v2",
+            "locator": "§VI；Figures 12–13"
+          },
+          "setting": "TacSL仿真；m8/m12/m16三种销；每设置512次；分别训练单尺寸策略和三尺寸共同训练策略。",
+          "conditions": "单尺寸策略只测对应尺寸，多尺寸策略分别测三种尺寸；摆放和插入分别统计成功率。"
+        },
+        "C10-e04": {
+          "review": {
+            "status": "verified",
+            "note": "本次直接查阅对应任务，已确认或补充指标、设置与动作完成要求。",
+            "source": "https://arxiv.org/html/2408.06506v2",
+            "locator": "§VI；Figures 12–13"
+          },
+          "metric": "真实/仿真触觉图与剪切力方向的定性对比；另有每秒生成帧数等计算速度指标。",
+          "setting": "已知圆柱分别接触孔的四条边；真机触觉流场与仿真逐方向比较。",
+          "conditions": "检查接触位置、剪切方向和强度变化是否对应；是传感器模拟效果诊断，不是任务成功率。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补真机摆放/插入分别81次、手内起始角度不同；资产泛化m8/m12/m16每设置512次，主仿真3种子×1024初始状态。\n\n已查阅：§VI；Figures 12–13。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2408.06506v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C11": {
+      "checkedSource": "https://arxiv.org/html/2505.18472v2",
+      "checkedSections": [
+        "§III-A；§IV；Appendices A、D"
+      ],
+      "summary": "补九项仿真和四项真机各自初始变化，删除一律追问数值误差阈值的旧占位；保留统一仿真1500次、真机15次。",
+      "taskUpdates": {
+        "C11-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "把销插入孔中；孔座x/y位置各±5cm，销在手中的方向最多偏离标准方向10°；保持夹爪闭合。"
+        },
+        "C11-e02": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "USB插入对应接口；接口位置x/y各±5cm，USB在手中的方向最多偏离10°；保持夹爪闭合。"
+        },
+        "C11-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "电源插头插入对应孔；插座位置x/y各±5cm，插头在手中的方向最多偏离10°；保持夹爪闭合。"
+        },
+        "C11-e04": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "中齿轮装到中心轴且与两侧齿轮正确咬合；底座x/y各±5cm，齿轮初始方向最多偏离10°。"
+        },
+        "C11-e05": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "螺母对准螺栓并旋入；螺栓x/y位置各±5cm，开始时螺母手内朝向固定；旋转时调节抓持避免打滑。"
+        },
+        "C11-e06": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "灯泡插入灯座并旋入；灯座x/y位置各±5cm，初始手内朝向固定；接口被物体遮挡。"
+        },
+        "C11-e07": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "方销初始最多歪30°；借孔边接触在手内摆正，再插入固定孔座；孔位在封闭盒内。"
+        },
+        "C11-e08": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "在看不见内部的容器里找到并抓起方块电池；物体从x方向两个预设位置随机选一个。"
+        },
+        "C11-e09": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "暗光中从高尔夫球、乒乓球中取出高尔夫球；球架x/y各±5cm，两球位置互换。"
+        },
+        "C11-e10": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "先抓起齿轮，再放到中心轴上并与两侧齿轮咬合；底座每次略微转动。"
+        },
+        "C11-e11": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "灯泡开始已放在灯座上，抓住后旋紧；初始旋入深度随机，因而所需转动圈数不固定。"
+        },
+        "C11-e12": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "正常光线下辨别高尔夫球与乒乓球，分别放入橙碗、蓝碗；每次交换两球位置。"
+        },
+        "C11-e13": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "conditions": "暗光下辨别高尔夫球与乒乓球，分别放入橙碗、蓝碗；每次交换两球位置。"
+        },
+        "C11-e14": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2505.18472v2",
+            "locator": "§III-A；§IV；Appendices A、D"
+          },
+          "setting": "球、灯泡、齿轮接触数据；真实和仿真两类数据的特征分布对照。",
+          "conditions": "FID/KID越低说明两类触觉特征分布更接近；这项用来理解仿真差距，不是机器人成功判据。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补九项仿真和四项真机各自初始变化，删除一律追问数值误差阈值的旧占位；保留统一仿真1500次、真机15次。\n\n已查阅：§III-A；§IV；Appendices A、D。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2505.18472v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C12": {
+      "checkedSource": "https://arxiv.org/html/2207.10763v2",
+      "checkedSections": [
+        "§III-B；§IV；Tables II–IV"
+      ],
+      "summary": "确认按CAD/视觉跟踪轨迹比较、三类传感器和多种轮廓；正文未列逐硬件配置的重复测试次数。",
+      "taskUpdates": {
+        "C12-e01": {
+          "review": {
+            "status": "not_reported",
+            "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。",
+            "source": "https://arxiv.org/html/2207.10763v2",
+            "locator": "§III-B；§IV；Tables II–IV"
+          },
+          "setting": "PyBullet训练后直接迁移Dobot MG400真机；TacTip、DIGIT、DigiTac逐项比较；正文§IV-C未说明每种配置独立重复次数。"
+        },
+        "C12-e02": {
+          "review": {
+            "status": "not_reported",
+            "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。",
+            "source": "https://arxiv.org/html/2207.10763v2",
+            "locator": "§III-B；§IV；Tables II–IV"
+          },
+          "setting": "PyBullet训练后直接迁移Dobot MG400真机；TacTip、DIGIT、DigiTac逐项比较；正文§IV-C未说明每种配置独立重复次数。"
+        },
+        "C12-e03": {
+          "review": {
+            "status": "not_reported",
+            "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。",
+            "source": "https://arxiv.org/html/2207.10763v2",
+            "locator": "§III-B；§IV；Tables II–IV"
+          },
+          "setting": "PyBullet训练后直接迁移Dobot MG400真机；TacTip、DIGIT、DigiTac逐项比较；正文§IV-C未说明每种配置独立重复次数。"
+        },
+        "C12-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2207.10763v2",
+            "locator": "§III-B；§IV；Tables II–IV"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "C12-e01",
+          "reason": "原文未说明",
+          "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。"
+        },
+        {
+          "field": "C12-e02",
+          "reason": "原文未说明",
+          "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。"
+        },
+        {
+          "field": "C12-e03",
+          "reason": "原文未说明",
+          "note": "已查§III-F和§IV-C：有任务形状、实际轨迹、距离误差表，没有逐配置独立重复次数；不把250控制步当250次试验。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "确认按CAD/视觉跟踪轨迹比较、三类传感器和多种轮廓；正文未列逐硬件配置的重复测试次数。\n\n已查阅：§III-B；§IV；Tables II–IV。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2207.10763v2",
+        "trials": "图像训练/验证5,000/2,000；推送每次250步；正文未列各硬件配置重复次数。",
+        "metrics": "实际轨迹与参考路线平均距离；图像结构相似程度；仿真累计奖励。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C13": {
+      "checkedSource": "https://arxiv.org/html/2005.14679",
+      "checkedSections": [
+        "§V-C；Figure 6"
+      ],
+      "summary": "确认双指玻璃球每种方法50次、随机目标至少偏离16像素；以目标位置误差与掉落比例评价，不强设成功距离线。",
+      "taskUpdates": {
+        "C13-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2005.14679",
+            "locator": "§V-C；Figure 6"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "确认双指玻璃球每种方法50次、随机目标至少偏离16像素；以目标位置误差与掉落比例评价，不强设成功距离线。\n\n已查阅：§V-C；Figure 6。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2005.14679",
+        "trials": "每种方法50次双指玻璃球操纵测试。",
+        "metrics": "目标关键点距离误差中位数及68%范围；掉落比例。",
+        "warning": "传感器与双指操纵方法工作，不是VLA；已核对原文控制任务及50次测试，不能当通用VLA榜单。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C14": {
+      "checkedSource": "https://arxiv.org/html/2012.08456v2",
+      "checkedSections": [
+        "§IV；Figures 10–12"
+      ],
+      "summary": "补玻璃球8个目标、累计位置误差，以及圆柱位姿10k仿真/200真实数据和5次重复。",
+      "taskUpdates": {
+        "C14-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2012.08456v2",
+            "locator": "§IV；Figures 10–12"
+          },
+          "conditions": "预测物体抬起后能否稳住；比较只用视觉、只用触觉及两者一起用，以及训练数据多少；这是预测是否稳固，不是机器人自主抓取成功率。"
+        },
+        "C14-e02": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2012.08456v2",
+            "locator": "§IV；Figures 10–12"
+          },
+          "metric": "各时间步目标位置差距之和，8个目标取平均；30次优化实验的中位数与68%范围。",
+          "setting": "双DIGIT夹爪仿真；比较贝叶斯优化与随机搜索；50轮优化，每轮8目标×50步。",
+          "conditions": "把玻璃球滚到8个目标位置，尽量不掉落；离目标越近越好，原文没有规定离多近就算成功。"
+        },
+        "C14-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2012.08456v2",
+            "locator": "§IV；Figures 10–12"
+          },
+          "setting": "10,000张带位置标签的仿真触觉图、200张人工标注真实触觉图；各方案重复5次；真实训练量16/32/64/128分别比较。",
+          "conditions": "估计圆柱/笔与传感器的接触位置和方向；分别比较全仿真、全真实、仿真直接迁移及少量真实混合；报告位置mm、转动角度误差。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "补玻璃球8个目标、累计位置误差，以及圆柱位姿10k仿真/200真实数据和5次重复。\n\n已查阅：§IV；Figures 10–12。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2012.08456v2"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C15": {
+      "checkedSource": "https://arxiv.org/html/2502.17432v2",
+      "checkedSections": [
+        "§V-A/B/C；Appendix XII Tables VII–X"
+      ],
+      "summary": "从附录补逐对象次数：抬盒/翻转每对象10次，果蔬/擀面每对象5次；用户遥操作研究未列参与人数/重复数。",
+      "taskUpdates": {
+        "C15-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          },
+          "setting": "Franka Panda＋OpenManipulator-X；每对象10次；已见/未见物体分别报告，详见附录TablesVII/VIII。"
+        },
+        "C15-e02": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          },
+          "setting": "Franka Panda＋OpenManipulator-X；每对象10次；已见/未见物体分别报告，详见附录TablesVII/VIII。"
+        },
+        "C15-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          },
+          "setting": "Franka Panda＋OpenManipulator-X；每对象5次，1个训练对象与3个测试对象，见TableIX。",
+          "conditions": "抓住柔软水果或蔬菜，再完整放入碗中；根据动作完成情况判成功；按外观/几何不同的新物体测试。"
+        },
+        "C15-e04": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          },
+          "setting": "Franka Panda＋OpenManipulator-X；每对象5次，1个训练对象与3个测试对象，见TableX。"
+        },
+        "C15-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          }
+        },
+        "C15-e06": {
+          "review": {
+            "status": "not_reported",
+            "note": "已阅读§V-B及对应图文，报告完成率/用时/易用性变化，但未说明参与人数和重复次数；不拿自主策略的对象测试次数代替。",
+            "source": "https://arxiv.org/html/2502.17432v2",
+            "locator": "§V-A/B/C；Appendix XII Tables VII–X"
+          },
+          "setting": "有主动驱动力反馈的主从遥操作，与无驱动力反馈方案对照；§V-B与Figure6未说明受试者人数和各任务重复次数。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C15-e06",
+          "reason": "原文未说明",
+          "note": "已阅读§V-B及对应图文，报告完成率/用时/易用性变化，但未说明参与人数和重复次数；不拿自主策略的对象测试次数代替。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "从附录补逐对象次数：抬盒/翻转每对象10次，果蔬/擀面每对象5次；用户遥操作研究未列参与人数/重复数。\n\n已查阅：§V-A/B/C；Appendix XII Tables VII–X。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2502.17432v2",
+        "trials": "抬盒/翻转每对象10次；果蔬/擀面每对象5次；遥操作用户研究人数原文未说明。",
+        "metrics": "已见/新物体成功率；受扰恢复成功率；遥操作完成率、耗时、易用程度。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C17": {
+      "checkedSource": "https://arxiv.org/html/2409.11047v1",
+      "checkedSections": [
+        "§IV-A/C；Table III"
+      ],
+      "summary": "核对每模型每物体50起点×2=100次；补八角柱0.05mm间隙，保留任务成功率和耗时效率。",
+      "taskUpdates": {
+        "C17-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2409.11047v1",
+            "locator": "§IV-A/C；Table III"
+          },
+          "conditions": "训练几何为35×25×60mm长方体，配合间隙0.1mm；新初始位置和方向下完成插入。"
+        },
+        "C17-e02": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2409.11047v1",
+            "locator": "§IV-A/C；Table III"
+          },
+          "conditions": "零样本测试37mm长钥匙，训练中不包含该几何；完整插入为任务目标。"
+        },
+        "C17-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2409.11047v1",
+            "locator": "§IV-A/C；Table III"
+          },
+          "conditions": "零样本测试直径20mm、长50mm圆柱，配合间隙0.02mm；完整插入为任务目标。"
+        },
+        "C17-e04": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2409.11047v1",
+            "locator": "§IV-A/C；Table III"
+          },
+          "conditions": "零样本测试直径30mm、长50mm圆柱，配合间隙0.025mm；完整插入为任务目标。"
+        },
+        "C17-e05": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2409.11047v1",
+            "locator": "§IV-A/C；Table III"
+          },
+          "conditions": "零样本测试长50mm、边长11mm的八角柱，配合间隙0.05mm；完整插入为任务目标。"
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "核对每模型每物体50起点×2=100次；补八角柱0.05mm间隙，保留任务成功率和耗时效率。\n\n已查阅：§IV-A/C；Table III。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2409.11047v1"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C18": {
+      "checkedSource": "https://arxiv.org/html/2110.09904v2",
+      "checkedSections": [
+        "§V-A/B；Table I"
+      ],
+      "summary": "补开门60N惩罚、擦拭15N接触要求与真机8圈；已区分原文未列训练种子数量、真机重复次数。",
+      "taskUpdates": {
+        "C18-e01": {
+          "review": {
+            "status": "not_reported",
+            "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。",
+            "source": "https://arxiv.org/html/2110.09904v2",
+            "locator": "§V-A/B；Table I"
+          },
+          "setting": "robosuite仿真；每训练10,000步测试10次；多组随机训练，但§V-B未说明具体组数。",
+          "conditions": "先压下弹簧把手再拉门；接触力超过60N惩罚；每次改变门的位置和方向。"
+        },
+        "C18-e02": {
+          "review": {
+            "status": "not_reported",
+            "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。",
+            "source": "https://arxiv.org/html/2110.09904v2",
+            "locator": "§V-A/B；Table I"
+          },
+          "setting": "robosuite仿真；每训练10,000步测试10次；多组随机训练，但§V-B未说明具体组数。",
+          "conditions": "抓住物体并抬离桌面；每次改变物体位置和机器人关节起点。"
+        },
+        "C18-e03": {
+          "review": {
+            "status": "not_reported",
+            "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。",
+            "source": "https://arxiv.org/html/2110.09904v2",
+            "locator": "§V-A/B；Table I"
+          },
+          "setting": "robosuite仿真；每训练10,000步测试10次；多组随机训练，但§V-B未说明具体组数。",
+          "conditions": "用工具擦除桌面标记，施力需超过15N且低于过大接触力限制；每次随机改变污点位置。"
+        },
+        "C18-e04": {
+          "review": {
+            "status": "not_reported",
+            "note": "§V-A仅写multiple trials，无具体次数；8圈是一次执行内的动作长度，不是8次实验。",
+            "source": "https://arxiv.org/html/2110.09904v2",
+            "locator": "§V-A/B；Table I"
+          },
+          "setting": "真机＋专家高层动作规划；接触后施加10N，沿表面连续画8圈；§V-A未说明独立重复次数。",
+          "metric": "整段位置与方向跟踪误差之和；总能耗；力与刚度变化曲线。",
+          "conditions": "先靠近污点、建立接触，再保持10N画圆；比较不同柔顺控制方案是否擦净、能耗和轨迹偏差；不是训练完整真机强化学习策略。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C18-e01",
+          "reason": "原文未说明",
+          "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。"
+        },
+        {
+          "field": "C18-e02",
+          "reason": "原文未说明",
+          "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。"
+        },
+        {
+          "field": "C18-e03",
+          "reason": "原文未说明",
+          "note": "§V-B明确10次评估并写multiple seeds，未给种子数量；这里明确为原文未说明，非尚未阅读。"
+        },
+        {
+          "field": "C18-e04",
+          "reason": "原文未说明",
+          "note": "§V-A仅写multiple trials，无具体次数；8圈是一次执行内的动作长度，不是8次实验。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "补开门60N惩罚、擦拭15N接触要求与真机8圈；已区分原文未列训练种子数量、真机重复次数。\n\n已查阅：§V-A/B；Table I。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2110.09904v2",
+        "trials": "仿真每1万步评估10次；训练随机组数及真机重复次数原文未说明。",
+        "metrics": "仿真累计奖励；每动作/整段能耗；真机位置和转动跟踪差距。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C19": {
+      "checkedSource": "https://arxiv.org/html/2102.06838v1",
+      "checkedSections": [
+        "§IV-A/B；Tables I–V"
+      ],
+      "summary": "补真实杯放盘仅3条轨迹评价与30条专家示教；明确仿真连续表现分数及极小孔径差，避免只列成功率。",
+      "taskUpdates": {
+        "C19-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2102.06838v1",
+            "locator": "§IV-A/B；Tables I–V"
+          },
+          "metric": "插入成功率；相对专家的表现分数差，分数依据是否对准及距目标深度多远。",
+          "conditions": "销直径25.37mm、孔直径25.40mm；测试倾斜孔和改变几何大小；未对准时扣固定分，对准后按距目标位置差距计分。"
+        },
+        "C19-e02": {
+          "review": {
+            "status": "pending",
+            "note": "§IV-A明确不是统一二元成功率；该项每种训练配置的独立测试轨迹数量尚未核实。",
+            "source": "https://arxiv.org/html/2102.06838v1",
+            "locator": "§IV-A/B；Tables I–V"
+          },
+          "metric": "相对专家的表现分数：结合途中位置差距与靠近盘子时的运动速度。",
+          "setting": "MuJoCo中的FANUC模型；50条专家轨迹；训练场景与新杯起点分别测试；独立测试轨迹数量尚未核实。",
+          "conditions": "把杯快速、平稳放到盘上；途中更看重到目标的差距，接近盘子时更看重速度足够慢，避免碰撞。"
+        },
+        "C19-e03": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://arxiv.org/html/2102.06838v1",
+            "locator": "§IV-A/B；Tables I–V"
+          },
+          "metric": "与专家轨迹的平均位置差距、最终与目标位置差距（mm）。",
+          "setting": "FANUC LR Mate200iD/7L真机；30条人手引导专家示教；学习策略采集3条轨迹评估。",
+          "conditions": "把杯平稳放到盘上，训练起点和改变后的起点分别比较；策略部署使用位置差距和速度，示教阶段记录六维力。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C19-e02",
+          "reason": "尚未核实",
+          "note": "§IV-A明确不是统一二元成功率；该项每种训练配置的独立测试轨迹数量尚未核实。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "补真实杯放盘仅3条轨迹评价与30条专家示教；明确仿真连续表现分数及极小孔径差，避免只列成功率。\n\n已查阅：§IV-A/B；Tables I–V。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2102.06838v1",
+        "trials": "真机30专家示教，3条执行轨迹评价；仿真多次训练并在新场景测试。",
+        "metrics": "仿真成功率/表现分数；真机平均及最终位置差距（mm）。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "C20": {
+      "checkedSource": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+      "checkedSections": [
+        "§4–7；Tables 1–2"
+      ],
+      "summary": "补单皮肤45k/5k划分和1mm定位判对范围；补软板迁移与概念演示的定位，不强追演示成功率。",
+      "taskUpdates": {
+        "C20-e01": {
+          "review": {
+            "status": "verified",
+            "note": "原文对应任务已查阅：主要指标、实验设置与完成要求已确认。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          },
+          "setting": "Dobot Magician压头＋ATI Nano17参考；50,000样本随机分45,000训练、5,000测试；另以时间先后切分检查漂移。",
+          "conditions": "预测接触位置与法向力；x、y两方向与真实接触点相差均不超过1mm算定位正确；同时报告连续误差。"
+        },
+        "C20-e02": {
+          "review": {
+            "status": "pending",
+            "note": "§5确认动态拖动采集和指标，独立测试样本规模尚未核实；不套法向压入实验5,000测试量。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          },
+          "setting": "探针压入后沿皮肤x/y方向滑动，每隔2mm换一条路径；F/T参考真值；单独测试样本数尚未核实。",
+          "conditions": "同时预测接触位置（x、y）及三个方向的力（Fx、Fy、Fz）；分别比较沿表面、垂直表面的力和位置预测误差。"
+        },
+        "C20-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e07": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e08": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e09": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          }
+        },
+        "C20-e10": {
+          "review": {
+            "status": "not_reported",
+            "note": "已查§6 Generalizing models to a different sensor board type：有准确率和误差，但未列本迁移子项独立测试点数量。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          },
+          "setting": "使用刚性板上数据学习模型，再适配到薄柔性板；§6末尾未说明该迁移实验的独立测试点数。",
+          "conditions": "皮肤到电路板距离减少约80%；报告新板的接触定位准确率和位置/力误差。"
+        },
+        "C20-e11": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+            "locator": "§4–7；Tables 1–2"
+          },
+          "conditions": "改变接触位置，实时显示预测位置；这是定位演示，不是机器人自主操作成功率。"
+        }
+      },
+      "remaining": [
+        {
+          "field": "C20-e02",
+          "reason": "尚未核实",
+          "note": "§5确认动态拖动采集和指标，独立测试样本规模尚未核实；不套法向压入实验5,000测试量。"
+        },
+        {
+          "field": "C20-e10",
+          "reason": "原文未说明",
+          "note": "已查§6 Generalizing models to a different sensor board type：有准确率和误差，但未列本迁移子项独立测试点数量。"
+        }
+      ],
+      "metaUpdates": {
+        "notes": "补单皮肤45k/5k划分和1mm定位判对范围；补软板迁移与概念演示的定位，不强追演示成功率。\n\n已查阅：§4–7；Tables 1–2。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+        "trials": "单皮肤45,000训练/5,000测试；长期50,000压入；跨皮肤18块×10,000；概念演示不设统一策略成功率。",
+        "metrics": "接触点定位正确率、位置和力均方误差；随时间、换皮肤、换电路板后的变化。"
+      },
+      "checkedAt": "2026-10-16"
+    },
+    "R02": {
+      "checkedSource": "https://arxiv.org/html/2410.24091v1",
+      "checkedSections": [
+        "§5.1–5.3；Table 1；Appendix B"
+      ],
+      "summary": "重新核对四种真机多步骤任务、每任务20次、各步骤及整任务成功率；现有动作完成标准已符合原文，不额外追问不必要数字。",
+      "taskUpdates": {
+        "R02-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24091v1",
+            "locator": "§5.1–5.3；Table 1；Appendix B"
+          }
+        },
+        "R02-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24091v1",
+            "locator": "§5.1–5.3；Table 1；Appendix B"
+          }
+        },
+        "R02-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24091v1",
+            "locator": "§5.1–5.3；Table 1；Appendix B"
+          }
+        },
+        "R02-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已查阅对应任务及评测说明，现有任务目标、指标和主要设置与原文一致。",
+            "source": "https://arxiv.org/html/2410.24091v1",
+            "locator": "§5.1–5.3；Table 1；Appendix B"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "notes": "重新核对四种真机多步骤任务、每任务20次、各步骤及整任务成功率；现有动作完成标准已符合原文，不额外追问不必要数字。\n\n已查阅：§5.1–5.3；Table 1；Appendix B。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2410.24091v1"
+      },
+      "checkedAt": "2026-10-16"
+    }
+  }
+}

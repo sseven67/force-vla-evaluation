@@ -1,0 +1,3381 @@
+{
+  "works": {
+    "W04": {
+      "checkedSource": "https://arxiv.org/html/2606.12105v1",
+      "checkedSections": [
+        "§4.1–4.2",
+        "Table2",
+        "Appendix A–F"
+      ],
+      "summary": "确认7任务各15次；耗时包括失败或部分完成的活动时长，不只是成功任务耗时。",
+      "taskUpdates": {
+        "W04-e01": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "完成围巾折叠。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e02": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "完成白板擦拭；中途停住属于未完成。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e03": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "完成按钮按压；仅触到、未按够属于部分完成。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e04": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "完成洗手液顶部按压；反复按压或过度按压溢液属于失败表现。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e05": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "插头完全插入；抵达但方向不对未插入不算完成。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e06": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）；运动平顺程度、执行延迟",
+          "conditions": "将珠子扫入簸箕；另测运动平顺程度和指令执行延迟。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        },
+        "W04-e07": {
+          "metric": "任务成功率；平均活动时长（含失败／部分完成）",
+          "conditions": "完成Lego排列并正确对齐；只到目标位置不足以成功。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.12105v1",
+            "locator": "§4.1–4.2；Table2；Appendix A–F"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "W09": {
+      "checkedSource": "https://arxiv.org/html/2507.09160v1",
+      "checkedSections": [
+        "§3 Tasks and Data Collections",
+        "§3.2–3.4",
+        "Tables1–4",
+        "Fig6"
+      ],
+      "summary": "抓取成功率每物体10次、力统计5次明确；插拔和擦拭正式测试次数在所查全文中没有说明。",
+      "taskUpdates": {
+        "W09-e01": {
+          "setting": "USB轻／重各100条示教。正式测试次数原文未说明。",
+          "conditions": "完成USB拔出并插入正确端口；比较轻／重用力指令及未见过的近义指令。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。",
+            "source": "https://arxiv.org/html/2507.09160v1",
+            "locator": "§3 Tasks and Data Collections；§3.2–3.4；Tables1–4；Fig6"
+          }
+        },
+        "W09-e02": {
+          "setting": "充电器100条运动示教。正式测试次数原文未说明。",
+          "conditions": "充电器运动已训练，把USB学到的轻／重用力要求迁移过来；不是整个充电器任务从未训练。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。",
+            "source": "https://arxiv.org/html/2507.09160v1",
+            "locator": "§3 Tasks and Data Collections；§3.2–3.4；Tables1–4；Fig6"
+          }
+        },
+        "W09-e04": {
+          "setting": "白板成功／失败各100条示教。正式测试次数原文未说明。",
+          "conditions": "白板训练、黑板测试；初始用力不足时根据触觉提高施力，擦掉粉笔痕迹。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。",
+            "source": "https://arxiv.org/html/2507.09160v1",
+            "locator": "§3 Tasks and Data Collections；§3.2–3.4；Tables1–4；Fig6"
+          }
+        },
+        "W09-e03": {
+          "metric": "每物体10次无变形抓取成功率；另5次的平均夹持力及波动",
+          "conditions": "一次牢固提起且无肉眼可见形变；区分训练见过／未见和重、轻、易碎物体。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2507.09160v1",
+            "locator": "§3 Tasks and Data Collections；§3.2–3.4；Tables1–4；Fig6"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "W09-e01",
+          "reason": "原文未说明",
+          "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。"
+        },
+        {
+          "field": "W09-e02",
+          "reason": "原文未说明",
+          "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。"
+        },
+        {
+          "field": "W09-e04",
+          "reason": "原文未说明",
+          "note": "已查数据收集、对应实验及Tables1、2、4；训练示教数明确，但该项正式测试次数未说明。"
+        }
+      ]
+    },
+    "W10": {
+      "checkedSource": "https://arxiv.org/html/2601.20321v1",
+      "checkedSections": [
+        "§IV实验",
+        "TableI",
+        "Appendix A–B"
+      ],
+      "summary": "主实验每模型每任务15次，按动作和物体无损判断；薯片属于附录补充，不借用主表分母。",
+      "taskUpdates": {
+        "W10-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e07": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e08": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        },
+        "W10-e09": {
+          "setting": "附录补充薯片任务；独立测试次数原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主实验和Appendix B；薯片有独立成功条件，但没有独立测试次数。",
+            "source": "https://arxiv.org/html/2601.20321v1",
+            "locator": "§IV实验；TableI；Appendix A–B"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "W10-e09",
+          "reason": "原文未说明",
+          "note": "已查主实验和Appendix B；薯片有独立成功条件，但没有独立测试次数。"
+        }
+      ]
+    },
+    "W11": {
+      "checkedSource": "https://arxiv.org/html/2605.27886v1",
+      "checkedSections": [
+        "§3指标",
+        "§4.1–4.5",
+        "Appendix A–E、Table11"
+      ],
+      "summary": "确认9个LIBERO Object衍生任务；策略成功率和示教重放保留率不同；主策略每任务测试次数未说明。",
+      "taskUpdates": {
+        "W11-e01": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e02": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e03": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e04": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e05": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e06": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e07": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e08": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        },
+        "W11-e09": {
+          "metric": "任务成功率；平均夹持力、最高5%夹持力的平均值；语言泛化另看机械臂作用力",
+          "setting": "Isaac Lab仿真9任务；语言对应100%和25%／10%力；主策略测试次数原文未说明。",
+          "conditions": "把指定物体抓起放到篮筐；比较较轻用力时是否掉落和实际施力；未见副词另测语言泛化。附录D重放保留率不是策略成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。",
+            "source": "https://arxiv.org/html/2605.27886v1",
+            "locator": "§3指标；§4.1–4.5；Appendix A–E、Table11"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "W11-e01",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e02",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e03",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e04",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e05",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e06",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e07",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e08",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        },
+        {
+          "field": "W11-e09",
+          "reason": "原文未说明",
+          "note": "已查正文实验、附录A–E；任务、力档和指标明确，但主策略每任务测试次数未说明。"
+        }
+      ]
+    },
+    "W12": {
+      "checkedSource": "https://arxiv.org/html/2606.09337v1",
+      "checkedSections": [
+        "§4",
+        "Table1",
+        "Appendix A.1、Table3"
+      ],
+      "summary": "确认3子任务和完整流程各30次自主测试；完整流程不得接管、重置或安全停止。",
+      "taskUpdates": {
+        "W12-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.09337v1",
+            "locator": "§4；Table1；Appendix A.1、Table3"
+          }
+        },
+        "W12-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.09337v1",
+            "locator": "§4；Table1；Appendix A.1、Table3"
+          }
+        },
+        "W12-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.09337v1",
+            "locator": "§4；Table1；Appendix A.1、Table3"
+          }
+        },
+        "W12-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.09337v1",
+            "locator": "§4；Table1；Appendix A.1、Table3"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "W13": {
+      "checkedSource": "https://arxiv.org/html/2509.07962v1",
+      "checkedSections": [
+        "§6",
+        "Table5",
+        "Appendix A.1、A.6"
+      ],
+      "summary": "确认10任务各20次、400示教；补普通动作目标，不再把论文未使用的精细数字门槛当缺失。",
+      "taskUpdates": {
+        "W13-e01": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "成功按下按钮。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e02": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "充电器成功插入充电口。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e03": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "USB成功插入端口。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e04": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "从插座拔出插头。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e05": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "转门把并打开门。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e06": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "抓起瓶子放到目标位置。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e07": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "完成指定倒液动作。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e08": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "完成方块堆叠。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e09": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "把物体推到目标位置。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        },
+        "W13-e10": {
+          "setting": "每任务400条示教、20次真机；对比无关节力矩、加入力矩观测、预测未来力矩、两者结合。",
+          "conditions": "抓把手并打开抽屉。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2509.07962v1",
+            "locator": "§6；Table5；Appendix A.1、A.6"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "W15": {
+      "checkedSource": "https://arxiv.org/html/2604.23272v1",
+      "checkedSections": [
+        "§4",
+        "Table1",
+        "Appendix A.1–A.2"
+      ],
+      "summary": "确认每任务24次及尺寸、初态、高度、外观变化。",
+      "taskUpdates": {
+        "W15-e01": {
+          "conditions": "只取顶部红杯放到蓝杯旁；大／小杯各12次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2604.23272v1",
+            "locator": "§4；Table1；Appendix A.1–A.2"
+          }
+        },
+        "W15-e02": {
+          "conditions": "不同位置的鸡蛋抓起放进金色碗。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2604.23272v1",
+            "locator": "§4；Table1；Appendix A.1–A.2"
+          }
+        },
+        "W15-e03": {
+          "conditions": "完成擦除；三种高度、红／灰板擦、尺寸及蓝／黑墨迹组合各一次，共24次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2604.23272v1",
+            "locator": "§4；Table1；Appendix A.1–A.2"
+          }
+        },
+        "W15-e04": {
+          "conditions": "指定颜色充电器插入插座；黄／白／黑各8次，插座位置变化。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2604.23272v1",
+            "locator": "§4；Table1；Appendix A.1–A.2"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "W16": {
+      "checkedSource": "https://arxiv.org/html/2609.23614v1",
+      "checkedSections": [
+        "§4",
+        "Tables1–3",
+        "Figs2、4"
+      ],
+      "summary": "确认20次×3次运行，白板按字母擦除比例；任务失败时限存在但秒数原文未说明。",
+      "taskUpdates": {
+        "W16-e01": {
+          "conditions": "按擦除字母占比评分，不是整任务二元成功率。 超过任务时限或触发FR3安全停止记失败；具体秒数原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。",
+            "source": "https://arxiv.org/html/2609.23614v1",
+            "locator": "§4；Tables1–3；Figs2、4"
+          }
+        },
+        "W16-e02": {
+          "conditions": "将黑盒翻转到目标状态；失去接触、未翻过去不算完成。 超过任务时限或触发FR3安全停止记失败；具体秒数原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。",
+            "source": "https://arxiv.org/html/2609.23614v1",
+            "locator": "§4；Tables1–3；Figs2、4"
+          }
+        },
+        "W16-e03": {
+          "conditions": "完成杯分配装置的按压。 超过任务时限或触发FR3安全停止记失败；具体秒数原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。",
+            "source": "https://arxiv.org/html/2609.23614v1",
+            "locator": "§4；Tables1–3；Figs2、4"
+          }
+        },
+        "W16-e04": {
+          "conditions": "从随机初态抓取并放置。 超过任务时限或触发FR3安全停止记失败；具体秒数原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。",
+            "source": "https://arxiv.org/html/2609.23614v1",
+            "locator": "§4；Tables1–3；Figs2、4"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "W16-e01",
+          "reason": "原文未说明",
+          "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。"
+        },
+        {
+          "field": "W16-e02",
+          "reason": "原文未说明",
+          "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。"
+        },
+        {
+          "field": "W16-e03",
+          "reason": "原文未说明",
+          "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。"
+        },
+        {
+          "field": "W16-e04",
+          "reason": "原文未说明",
+          "note": "实验设置给任务时限规则，但全文未列具体秒数；完成目标与20次×3运行明确。"
+        }
+      ]
+    },
+    "W17": {
+      "checkedSource": "https://arxiv.org/html/2605.11048v1",
+      "checkedSections": [
+        "§4.1–4.6",
+        "Appendix A.1、A.3、E"
+      ],
+      "summary": "确认六主任务各20次；短接触比较最大力，持续接触比较平均力；削黄瓜只是定性补充。",
+      "taskUpdates": {
+        "W17-e01": {
+          "metric": "成功率；最大接触力与专家示教相比的平均绝对差（N）",
+          "conditions": "纸堆厚度变化，需清楚盖出印迹。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e02": {
+          "metric": "成功率；最大接触力与专家示教相比的平均绝对差（N）",
+          "conditions": "随机初态、插座偏转，完整插入。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e03": {
+          "metric": "成功率；最大接触力与专家示教相比的平均绝对差（N）",
+          "conditions": "压下并释放泵瓶，适应不同瓶体；新瓶另10次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e04": {
+          "metric": "成功率；最大接触力与专家示教相比的平均绝对差（N）",
+          "conditions": "USB完整插入。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e05": {
+          "metric": "成功率；接触期平均力（只取大于5 N时段）与专家示教相比的平均绝对差（N）",
+          "conditions": "去除白板标记；新板擦另10次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e06": {
+          "metric": "成功率；接触期平均力（只取大于5 N时段）与专家示教相比的平均绝对差（N）",
+          "conditions": "沿曲面擦去花瓶标记；新板擦另10次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        },
+        "W17-e07": {
+          "metric": "视频与力曲线的定性展示",
+          "setting": "真机补充演示，不属于六主任务表。",
+          "conditions": "展示削黄瓜时的持续施力调整；独立测试次数、成功率原文未说明。",
+          "review": {
+            "status": "not_reported",
+            "note": "§4.6明确为定性分析，没有独立量化测试次数和成功率。",
+            "source": "https://arxiv.org/html/2605.11048v1",
+            "locator": "§4.1–4.6；Appendix A.1、A.3、E"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "W17-e07",
+          "reason": "原文未说明",
+          "note": "§4.6明确为定性分析，没有独立量化测试次数和成功率。"
+        }
+      ]
+    },
+    "E01": {
+      "checkedSource": "https://arxiv.org/html/2501.04693v1",
+      "checkedSections": [
+        "§4",
+        "Appendix A场景"
+      ],
+      "summary": "确认每具体场景5次，训练见过／未见物体、干扰和语言变化；移除不相关的高度／保持时间占位。",
+      "taskUpdates": {
+        "E01-e01": {
+          "conditions": "按指令抓指定物体；24个已见、32个未见对象。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2501.04693v1",
+            "locator": "§4；Appendix A场景"
+          }
+        },
+        "E01-e02": {
+          "conditions": "从购物袋中取指定物体；比较已见／未见对象和组合指令。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2501.04693v1",
+            "locator": "§4；Appendix A场景"
+          }
+        },
+        "E01-e03": {
+          "conditions": "辨别声音并按对应按钮；6种已见、2种未见及干扰物。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2501.04693v1",
+            "locator": "§4；Appendix A场景"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E02": {
+      "checkedSource": "https://arxiv.org/html/2505.09577v1",
+      "checkedSections": [
+        "§3",
+        "§4.1–4.4",
+        "Tables1–7",
+        "Appendix A–C"
+      ],
+      "summary": "补离线ID6000/OOD4000；仿真每设置50次、真机20次；真机初态前后左右±2.5 mm、旋转±5°。",
+      "taskUpdates": {
+        "E02-e01": {
+          "metric": "三个调整方向同时正确的比例；各方向平均绝对误差",
+          "setting": "固定离线测试：已见分布6000条、未见分布4000条。",
+          "conditions": "预测调整动作与标签比较，不等于机器人插入成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e02": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "仿真，每设置50次。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。方形另测2.0／1.6／1.0 mm。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e03": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "UR3＋Robotiq 2F-85＋双GelStereo2.0；每设置20次，开始位置前后／左右±2.5 mm、旋转±5°。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。方形另测1.6／1.0 mm。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e04": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "仿真，每设置50次。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e05": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "UR3＋Robotiq 2F-85＋双GelStereo2.0；每设置20次，开始位置前后／左右±2.5 mm、旋转±5°。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e06": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "仿真，每设置50次。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e07": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "UR3＋Robotiq 2F-85＋双GelStereo2.0；每设置20次，开始位置前后／左右±2.5 mm、旋转±5°。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e08": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "仿真，每设置50次。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e09": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "UR3＋Robotiq 2F-85＋双GelStereo2.0；每设置20次，开始位置前后／左右±2.5 mm、旋转±5°。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e10": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "仿真，每设置50次。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        },
+        "E02-e11": {
+          "metric": "插入成功率；平均尝试次数",
+          "setting": "UR3＋Robotiq 2F-85＋双GelStereo2.0；每设置20次，开始位置前后／左右±2.5 mm、旋转±5°。",
+          "conditions": "对应形状插入，最多15次尝试；主要0.6 mm间隙，五角和圆形为未见形状。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2505.09577v1",
+            "locator": "§3；§4.1–4.4；Tables1–7；Appendix A–C"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E03": {
+      "checkedSource": "https://arxiv.org/html/2606.13102v1",
+      "checkedSections": [
+        "§4.2–4.3",
+        "Appendix E.1–E.5"
+      ],
+      "summary": "确认UniVTAC6任务各100次、真机各20次；区分原有传感器和新传感器。",
+      "taskUpdates": {
+        "E03-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e07": {
+          "setting": "Sharpa North真机20次／任务；三任务示教规模250–400条。",
+          "conditions": "在气球上画笑脸。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e08": {
+          "setting": "Sharpa North真机20次／任务；三任务示教规模250–400条。",
+          "conditions": "先撕贴纸（Tear），再装回模型手指（Finish）；同任务两阶段分别报告。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e09": {
+          "setting": "Sharpa North真机20次／任务；三任务示教规模250–400条。",
+          "conditions": "双手完成瓶盖旋拧。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e10": {
+          "setting": "Sharpa＋Dexmate；100示教；20次/任务",
+          "conditions": "完成翻页。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e11": {
+          "setting": "Sharpa＋Dexmate；100示教；20次/任务",
+          "conditions": "完成盘子擦拭。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e12": {
+          "setting": "Flexiv＋Xense；20次/任务；有下游微调",
+          "conditions": "把小河内塔环插入立柱。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e13": {
+          "setting": "Flexiv＋Xense；20次/任务；有下游微调",
+          "conditions": "USB插入接口。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        },
+        "E03-e14": {
+          "setting": "TactileUMI＋Contactile；20次/任务；有下游微调",
+          "conditions": "保持接触擦白板。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.13102v1",
+            "locator": "§4.2–4.3；Appendix E.1–E.5"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E04": {
+      "checkedSource": "https://arxiv.org/html/2607.23782v1",
+      "checkedSections": [
+        "§5.1–5.4",
+        "Tables1–2",
+        "Appendix D–F"
+      ],
+      "summary": "核对全部32项；正文说明评分框架但逐任务次数及大部分阶段分值指向配套数据报告，该报告尚未逐项查完。",
+      "taskUpdates": {
+        "E04-e01": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "杯子堆叠 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e02": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "收集水果 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e03": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "擦白板 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e04": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "立起瓶子 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e05": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "取一条毛巾、提起、抖平、折成方形、放旁边。 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e06": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "插入插座 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e07": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "板件插入 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e08": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "完成纸箱折叠 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e09": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "拉近包、打开、放入物品、整理、将包放旁边。 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e10": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "提瓶且瓶底距墙≤5 cm 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e11": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "钥匙初始旋转随机 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e12": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "罐直径4/5/6 cm 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e13": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "抓瓶并放入架子空腔 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e14": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "倾斜孔60°/120° 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e15": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "2.0 cm管插入2.05 cm开口 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e16": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "HDMI插接完成 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e17": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "抓取并分类 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e18": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "球倒入目标 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e19": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "拔出并重新插入充电器 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e20": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "插入USB 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e21": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "抓薯片且不破碎 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e22": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "螺钉插入 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e23": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "齿轮放置 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e24": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "分离碗 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e25": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "杯子完成交接 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e26": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "杯子堆叠 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e27": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "盘子堆叠 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e28": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "碗堆叠 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e29": {
+          "metric": "闭环任务成功率",
+          "setting": "UniVTAC／NeoSim；每任务100条训练示教，测试次数尚未查完配套报告。",
+          "conditions": "分离杯子 按环境完成规则判断。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e30": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "与基础SFT复评分开 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e31": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "与基础SFT复评分开 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        },
+        "E04-e32": {
+          "metric": "完整成功率；0–100分阶段进度分",
+          "setting": "真实机器人；每任务有独立测试预算，具体次数尚未查完配套报告。",
+          "conditions": "与基础SFT复评分开 按完成阶段给部分分，完整完成记成功。",
+          "review": {
+            "status": "pending",
+            "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。",
+            "source": "https://arxiv.org/html/2607.23782v1",
+            "locator": "§5.1–5.4；Tables1–2；Appendix D–F"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "E04-e01",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e02",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e03",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e04",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e05",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e06",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e07",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e08",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e09",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e10",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e11",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e12",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e13",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e14",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e15",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e16",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e17",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e18",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e19",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e20",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e21",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e22",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e23",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e24",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e25",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e26",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e27",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e28",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e29",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e30",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e31",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        },
+        {
+          "field": "E04-e32",
+          "reason": "尚未核实",
+          "note": "已读§5和Appendix E–F，任务与总评分法明确；具体测试次数／阶段权重指向配套报告，尚未逐项查完，不写成原文未报告。"
+        }
+      ]
+    },
+    "E05": {
+      "checkedSource": "https://arxiv.org/html/2606.17055v1",
+      "checkedSections": [
+        "§4",
+        "Table1",
+        "Appendix D、F（Task I–XII）"
+      ],
+      "summary": "补出12任务逐阶段分值，原文明列；各16次，位置方向随机。",
+      "taskUpdates": {
+        "E05-e01": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "触到页0.3、挑起页0.3、恰好翻一页并抚平0.4。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e02": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "轻触蛋不碰落0.2、完整提起0.3、移目标上方0.2、完整放入0.3。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e03": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "抓布0.2、稳盘0.1、接触盘0.2、擦至无可见墨0.4、放回布并松盘0.1。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e04": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "拿牙刷0.2、拿牙膏0.1、挤到刷毛0.4、牙刷回杯0.2、牙膏回桌0.1。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e05": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "稳杯堆0.2、抓顶杯0.3、仅分开一个杯0.3、完整持单杯0.2。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e06": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "拿麻将0.1、开对分类格0.5、放对格0.2、合盖0.2。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e07": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "抓钥匙0.2、抓锁0.1、正确插入0.4、转动开锁0.3。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e08": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "按按钮、翻盖、抓球、放球、合盖各0.2。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e09": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "取滴管0.1、吸液0.15、拿杯0.1、滴液0.15、摇匀0.15、蓝液变无色0.15、放回滴管0.1、放回杯0.1。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e10": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "持卡套0.2、推出卡0.3、底卡推回0.3、只抽顶卡0.2。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e11": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "持牌堆0.1、交手0.2、推出单张0.3、抓单张0.3、插卡槽0.1。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        },
+        "E05-e12": {
+          "metric": "阶段完成分（合计1分）；先按16次平均，再按任务平均，不只是完整成功比例",
+          "setting": "Dexmate Vega-1双臂＋双Sharpa Wave；每任务16次，物体位置和方向随机。",
+          "conditions": "拿灯泡0.1、交手0.2、稳底座0.1、对齐旋入0.4、就位亮灯0.2。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2606.17055v1",
+            "locator": "§4；Table1；Appendix D、F（Task I–XII）"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "warning": "Table1称成功率，但附录F按各步骤分值计部分完成；不是只统计完成所有步骤的二元成功率。12任务的阶段权重原文明列，已补到任务卡。"
+      }
+    },
+    "E06": {
+      "checkedSource": "https://arxiv.org/html/2609.12549v1",
+      "checkedSections": [
+        "实验评测协议",
+        "TablesI、III",
+        "任务阶段说明"
+      ],
+      "summary": "确认每任务20次相同随机初态；区分整任务成功和阶段完成率。",
+      "taskUpdates": {
+        "E06-e01": {
+          "metric": "整任务成功率；已完成阶段占全部阶段的比例",
+          "setting": "灵巧手真机，每任务100条专门示教、20次测试；所有方法相同随机初始场景。",
+          "conditions": "耳机抓住／翻转／释放3阶段。 完成全部阶段才是整任务成功；测试布局从训练布局中留出。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.12549v1",
+            "locator": "实验评测协议；TablesI、III；任务阶段说明"
+          }
+        },
+        "E06-e02": {
+          "metric": "整任务成功率；已完成阶段占全部阶段的比例",
+          "setting": "灵巧手真机，每任务100条专门示教、20次测试；所有方法相同随机初始场景。",
+          "conditions": "堆叠书拉／抓／取出／放置4阶段。 完成全部阶段才是整任务成功；测试布局从训练布局中留出。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.12549v1",
+            "locator": "实验评测协议；TablesI、III；任务阶段说明"
+          }
+        },
+        "E06-e03": {
+          "metric": "整任务成功率；已完成阶段占全部阶段的比例",
+          "setting": "灵巧手真机，每任务100条专门示教、20次测试；所有方法相同随机初始场景。",
+          "conditions": "明信片滑／抓／放置3阶段。 完成全部阶段才是整任务成功；测试布局从训练布局中留出。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.12549v1",
+            "locator": "实验评测协议；TablesI、III；任务阶段说明"
+          }
+        },
+        "E06-e04": {
+          "metric": "整任务成功率；已完成阶段占全部阶段的比例",
+          "setting": "灵巧手真机，每任务100条专门示教、20次测试；所有方法相同随机初始场景。",
+          "conditions": "四物体各抓取和放置，共8阶段。 完成全部阶段才是整任务成功；测试布局从训练布局中留出。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.12549v1",
+            "locator": "实验评测协议；TablesI、III；任务阶段说明"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E07": {
+      "checkedSource": "https://arxiv.org/html/2603.12665v1",
+      "checkedSections": [
+        "§IV-A–E",
+        "TablesI–III",
+        "Figs3–7"
+      ],
+      "summary": "确认5任务各20次、50示教；拆卸按指定动作分离，箱内任务抓取后提起放置。",
+      "taskUpdates": {
+        "E07-e01": {
+          "setting": "Franka Panda夹爪＋单指15×8压力阵列；每任务50条示教、20次测试。",
+          "conditions": "从轴上拆下物体，放进碗里。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.12665v1",
+            "locator": "§IV-A–E；TableI任务指令、TablesII–III"
+          }
+        },
+        "E07-e02": {
+          "setting": "Franka Panda夹爪＋单指15×8压力阵列；每任务50条示教、20次测试。",
+          "conditions": "按住卡扣后把物体拉出，放进碗里。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.12665v1",
+            "locator": "§IV-A–E；TableI任务指令、TablesII–III"
+          }
+        },
+        "E07-e03": {
+          "setting": "Franka Panda夹爪＋单指15×8压力阵列；每任务50条示教、20次测试。",
+          "conditions": "先把物体旋转90°，再从轴上拉出，放进碗里。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.12665v1",
+            "locator": "§IV-A–E；TableI任务指令、TablesII–III"
+          }
+        },
+        "E07-e04": {
+          "setting": "Franka Panda夹爪＋单指15×8压力阵列；每任务50条示教、20次测试。",
+          "conditions": "先向内滑动物体再取出，放进碗里。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.12665v1",
+            "locator": "§IV-A–E；TableI任务指令、TablesII–III"
+          }
+        },
+        "E07-e05": {
+          "setting": "Franka Panda夹爪＋单指15×8压力阵列；每任务50条示教、20次测试。",
+          "conditions": "在箱内探索直到触到物体，抓住并放进碗里；前相机看不到箱内、腕相机光线差和受遮挡。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.12665v1",
+            "locator": "§IV-A–E；TableI任务指令、TablesII–III"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E08": {
+      "checkedSource": "https://arxiv.org/html/2609.03889v2",
+      "checkedSections": [
+        "§5.1–5.3",
+        "Table2",
+        "Figs5–6"
+      ],
+      "summary": "确认25次，开门有无闭门器，白板含未见污迹；每项分五阶段。",
+      "taskUpdates": {
+        "E08-e01": {
+          "metric": "接近、抓把手、操作、推门、穿门五阶段成功率",
+          "setting": "M20S＋CM1＋夹爪，25次／任务；无闭门器。",
+          "conditions": "依次接近、抓把手、解锁／转把手、推开、穿过，最终成功按穿门阶段。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.03889v2",
+            "locator": "§5.1–5.3；Table2；Figs5–6"
+          }
+        },
+        "E08-e02": {
+          "metric": "接近、抓把手、操作、推门、穿门五阶段成功率",
+          "setting": "M20S＋CM1＋夹爪，25次／任务；带闭门器，在把手处约50 N阻力。",
+          "conditions": "依次接近、抓把手、解锁／转把手、推开、穿过，最终成功按穿门阶段。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.03889v2",
+            "locator": "§5.1–5.3；Table2；Figs5–6"
+          }
+        },
+        "E08-e03": {
+          "metric": "接近、抓板擦、擦、放回、离开五阶段成功率",
+          "setting": "同一移动机器人25次；已见／未见污迹1:2。",
+          "conditions": "完成擦拭，放回板擦并离开，不能只统计到达白板。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.03889v2",
+            "locator": "§5.1–5.3；Table2；Figs5–6"
+          }
+        },
+        "E08-e04": {
+          "metric": "力估计平均绝对差；空运动多余力矩；接触识别能力",
+          "setting": "每项指标25段人工复查记录，区分静止和运动。",
+          "conditions": "与实测力对照，检查未接触是否错误报力以及碰触／开门是否正确识别。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2609.03889v2",
+            "locator": "§5.1–5.3；Table2；Figs5–6"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E09": {
+      "checkedSource": "https://opt2vla.github.io/",
+      "checkedSections": [
+        "官网Simulation Joint Success",
+        "Force intent bands",
+        "Hardware"
+      ],
+      "summary": "确认仿真每任务30次、真机3任务×3档力×5次共45次；成功要求完成任务、指令合意、实际力跟上。",
+      "taskUpdates": {
+        "E09-e01": {
+          "metric": "任务完成率、力指令符合要求比例、三项同时满足比例；指令与实际力平均绝对差",
+          "setting": "Digit全身机器人；仿真每任务30次；真机每任务轻／中／重各5次，共45次。",
+          "conditions": "完成搬箱，并让指令符合轻／中／重档、实际力跟上指令；档位轻0–9 N、中大于5至16 N、重大于12至22 N。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://opt2vla.github.io/",
+            "locator": "官网Simulation Joint Success；Force intent bands；Hardware"
+          }
+        },
+        "E09-e02": {
+          "metric": "任务完成率、力指令符合要求比例、三项同时满足比例；指令与实际力平均绝对差",
+          "setting": "Digit全身机器人；仿真每任务30次；真机每任务轻／中／重各5次，共45次。",
+          "conditions": "完成架上推箱，并让指令符合轻／中／重档、实际力跟上指令；档位轻0–9 N、中大于5至16 N、重大于12至22 N。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://opt2vla.github.io/",
+            "locator": "官网Simulation Joint Success；Force intent bands；Hardware"
+          }
+        },
+        "E09-e03": {
+          "metric": "任务完成率、力指令符合要求比例、三项同时满足比例；指令与实际力平均绝对差",
+          "setting": "Digit全身机器人；仿真每任务30次；真机每任务轻／中／重各5次，共45次。",
+          "conditions": "完成表面擦拭，并让指令符合轻／中／重档、实际力跟上指令；档位轻0–9 N、中大于5至16 N、重大于12至22 N。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://opt2vla.github.io/",
+            "locator": "官网Simulation Joint Success；Force intent bands；Hardware"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E10": {
+      "checkedSource": "https://arxiv.org/html/2608.15009v1",
+      "checkedSections": [
+        "§5.1–5.4",
+        "Tables1–2",
+        "Figs4–7"
+      ],
+      "summary": "确认每任务45次、3类体型各15次；成功看获得目标标准超声切面。",
+      "taskUpdates": {
+        "E10-e01": {
+          "metric": "标准切面获取成功率；扫描步数；探头接触力变化",
+          "setting": "真机每任务45次，偏瘦／正常／肥胖各15次，15 Hz采集和执行。",
+          "conditions": "获取该任务目标标准超声切面；另看不同躺卧位置。力曲线评价稳定性，不把示例7.5 N当作所有任务统一成功标准。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2608.15009v1",
+            "locator": "§5.1–5.4；Tables1–2；Figs4–7"
+          }
+        },
+        "E10-e02": {
+          "metric": "标准切面获取成功率；扫描步数；探头接触力变化",
+          "setting": "真机每任务45次，偏瘦／正常／肥胖各15次，15 Hz采集和执行。",
+          "conditions": "获取该任务目标标准超声切面；另看不同躺卧位置。力曲线评价稳定性，不把示例7.5 N当作所有任务统一成功标准。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2608.15009v1",
+            "locator": "§5.1–5.4；Tables1–2；Figs4–7"
+          }
+        },
+        "E10-e03": {
+          "metric": "标准切面获取成功率；扫描步数；探头接触力变化",
+          "setting": "真机每任务45次，偏瘦／正常／肥胖各15次，15 Hz采集和执行。",
+          "conditions": "获取该任务目标标准超声切面；另看不同躺卧位置。力曲线评价稳定性，不把示例7.5 N当作所有任务统一成功标准。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2608.15009v1",
+            "locator": "§5.1–5.4；Tables1–2；Figs4–7"
+          }
+        },
+        "E10-e04": {
+          "metric": "标准切面获取成功率；扫描步数；探头接触力变化",
+          "setting": "真机每任务45次，偏瘦／正常／肥胖各15次，15 Hz采集和执行。",
+          "conditions": "获取该任务目标标准超声切面；另看不同躺卧位置。力曲线评价稳定性，不把示例7.5 N当作所有任务统一成功标准。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2608.15009v1",
+            "locator": "§5.1–5.4；Tables1–2；Figs4–7"
+          }
+        },
+        "E10-e05": {
+          "metric": "标准切面获取成功率；扫描步数；探头接触力变化",
+          "setting": "真机每任务45次，偏瘦／正常／肥胖各15次，15 Hz采集和执行。",
+          "conditions": "获取该任务目标标准超声切面；另看不同躺卧位置。力曲线评价稳定性，不把示例7.5 N当作所有任务统一成功标准。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2608.15009v1",
+            "locator": "§5.1–5.4；Tables1–2；Figs4–7"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E11": {
+      "checkedSource": "https://arxiv.org/html/2503.08548v1",
+      "checkedSections": [
+        "§III任务流程",
+        "§IV实验",
+        "TablesI–IV"
+      ],
+      "summary": "确认50次、最多15次尝试；碰撞后抬起调整，无碰撞到达预设下降位置成功。",
+      "taskUpdates": {
+        "E11-e01": {
+          "metric": "插入成功率；成功过程平均尝试次数",
+          "conditions": "开始已持销、近孔位置随机；下降到预设位置没有销孔碰撞记成功，碰撞后抬起调整，最多15次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        },
+        "E11-e02": {
+          "metric": "插入成功率；成功过程平均尝试次数",
+          "conditions": "开始已持销、近孔位置随机；下降到预设位置没有销孔碰撞记成功，碰撞后抬起调整，最多15次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        },
+        "E11-e03": {
+          "metric": "插入成功率；成功过程平均尝试次数",
+          "conditions": "开始已持销、近孔位置随机；下降到预设位置没有销孔碰撞记成功，碰撞后抬起调整，最多15次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        },
+        "E11-e04": {
+          "metric": "插入成功率；成功过程平均尝试次数",
+          "conditions": "开始已持销、近孔位置随机；下降到预设位置没有销孔碰撞记成功，碰撞后抬起调整，最多15次。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        },
+        "E11-e05": {
+          "metric": "三方向同时正确比例；前后／左右误差（mm）及旋转误差（度）",
+          "conditions": "保存的测试样本上预测调整动作，不等同闭环插入成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        },
+        "E11-e06": {
+          "metric": "三方向同时正确比例；前后／左右误差（mm）及旋转误差（度）",
+          "conditions": "保存的测试样本上预测调整动作，不等同闭环插入成功率。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2503.08548v1",
+            "locator": "§III任务流程；§IV实验；TablesI–IV"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "E12": {
+      "checkedSource": "https://arxiv.org/html/2603.19201v1",
+      "checkedSections": [
+        "Object diversity",
+        "Generalization",
+        "Perturbation",
+        "Evaluation metric"
+      ],
+      "summary": "确认物体每种10次、高度泛化每高度5次、扰动10次；擦削切用完成长度比例，调姿超60°。",
+      "taskUpdates": {
+        "E12-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        },
+        "E12-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        },
+        "E12-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        },
+        "E12-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        },
+        "E12-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        },
+        "E12-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.19201v1",
+            "locator": "Object diversity；Generalization；Perturbation；Evaluation metric"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "X01": {
+      "checkedSource": "https://arxiv.org/html/2610.02784v1",
+      "checkedSections": [
+        "§4",
+        "Appendix Tables7–8"
+      ],
+      "summary": "Table8明确四真机任务初态和成功条件；麻将不是放分类盒，而是鸟牌放桌中、一饼放前方。",
+      "taskUpdates": {
+        "X01-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e07": {
+          "conditions": "鸟牌放桌中央或一饼放机器人前，并稳定释放；夹爪内牌位置变化，开始2秒触觉观察。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e08": {
+          "conditions": "擦干净标记且板擦抓稳；改变板位置角度、文字大小、板擦夹持位置。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e09": {
+          "conditions": "薯片提离支撑物且不掉落、不明显破碎；改变薯片和支撑瓶盖位置。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        },
+        "X01-e10": {
+          "conditions": "USB完全就位，松开后仍留在接口；改变夹爪内位置，插入方向保持一致。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.02784v1",
+            "locator": "§4；Appendix Tables7–8"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "P02": {
+      "checkedSource": "https://arxiv.org/html/2610.19155v1",
+      "checkedSections": [
+        "§V-A",
+        "TablesI–III",
+        "Appendix C任务1–10"
+      ],
+      "summary": "确认各10次：7二元任务、2清晰音符数、1拨盘接合次数和已接合样本体积误差。",
+      "taskUpdates": {
+        "P02-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e04": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e05": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e06": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e07": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e08": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e09": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        },
+        "P02-e10": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2610.19155v1",
+            "locator": "§V-A；TablesI–III；Appendix C任务1–10"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "P03": {
+      "checkedSource": "https://arxiv.org/html/2603.15257v1",
+      "checkedSections": [
+        "评测任务成功条件",
+        "实验及消融表"
+      ],
+      "summary": "确认20次，塑罐末尾恢复、华夫饼不碎、蛋完整入槽；学生执行不读取触觉。",
+      "taskUpdates": {
+        "P03-e01": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.15257v1",
+            "locator": "评测任务成功条件；实验及消融表"
+          }
+        },
+        "P03-e02": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.15257v1",
+            "locator": "评测任务成功条件；实验及消融表"
+          }
+        },
+        "P03-e03": {
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2603.15257v1",
+            "locator": "评测任务成功条件；实验及消融表"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "P05": {
+      "checkedSource": "https://arxiv.org/html/2606.04825v1",
+      "checkedSections": [
+        "§5.1、Table2",
+        "Appendix A.3–A.4"
+      ],
+      "summary": "复核4任务完成状态；正文把评测次数写10 demonstrations，不直接当作10次自主测试。",
+      "taskUpdates": {
+        "P05-e01": {
+          "setting": "DP／π0三种输入对照；§5.1称10 demonstrations，具体自主测试次数尚未确认。",
+          "conditions": "横瓶抓起扶正，瓶底落桌稳定直立并释放。",
+          "review": {
+            "status": "pending",
+            "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。",
+            "source": "https://arxiv.org/html/2606.04825v1",
+            "locator": "§5.1、Table2；Appendix A.3–A.4"
+          }
+        },
+        "P05-e02": {
+          "setting": "DP／π0三种输入对照；§5.1称10 demonstrations，具体自主测试次数尚未确认。",
+          "conditions": "抓海绵，沿墨迹擦白板并保持接触。",
+          "review": {
+            "status": "pending",
+            "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。",
+            "source": "https://arxiv.org/html/2606.04825v1",
+            "locator": "§5.1、Table2；Appendix A.3–A.4"
+          }
+        },
+        "P05-e03": {
+          "setting": "DP／π0三种输入对照；§5.1称10 demonstrations，具体自主测试次数尚未确认。",
+          "conditions": "按指令选目标碗，倒入清洁液且避免洒漏。",
+          "review": {
+            "status": "pending",
+            "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。",
+            "source": "https://arxiv.org/html/2606.04825v1",
+            "locator": "§5.1、Table2；Appendix A.3–A.4"
+          }
+        },
+        "P05-e04": {
+          "setting": "DP／π0三种输入对照；§5.1称10 demonstrations，具体自主测试次数尚未确认。",
+          "conditions": "D形销抓起、对齐、完全插入，失配需重调。",
+          "review": {
+            "status": "pending",
+            "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。",
+            "source": "https://arxiv.org/html/2606.04825v1",
+            "locator": "§5.1、Table2；Appendix A.3–A.4"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "P05-e01",
+          "reason": "尚未核实",
+          "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。"
+        },
+        {
+          "field": "P05-e02",
+          "reason": "尚未核实",
+          "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。"
+        },
+        {
+          "field": "P05-e03",
+          "reason": "尚未核实",
+          "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。"
+        },
+        {
+          "field": "P05-e04",
+          "reason": "尚未核实",
+          "note": "已查§5.1、Table2、Appendix A.3–A.4；任务清楚，但10次的原文叫法不清，尚不能认定自主试验分母。"
+        }
+      ]
+    },
+    "T01": {
+      "checkedSource": "https://arxiv.org/html/2507.17294v2",
+      "checkedSections": [
+        "§4任务定义",
+        "Tables1–2",
+        "Fig3",
+        "Appendix"
+      ],
+      "summary": "每条件20次；擦墨对象是盘子，区分抓起、部分擦除、完整擦除。",
+      "taskUpdates": {
+        "T01-e01": {
+          "conditions": "抓带盖杯，判断有无水后放对应位置且不洒水；分判断、抓起、放置、整流程。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2507.17294v2",
+            "locator": "§4任务定义；Tables1–2；Fig3；Appendix"
+          }
+        },
+        "T01-e02": {
+          "conditions": "凭触觉选更光滑海绵，擦盘子墨迹；分抓取、部分擦除、完整擦除，不附加面积百分比。",
+          "task": "海绵选择与擦盘子墨迹",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2507.17294v2",
+            "locator": "§4任务定义；Tables1–2；Fig3；Appendix"
+          }
+        },
+        "T01-e03": {
+          "conditions": "凭软硬选指定芒果并削皮；分抓取、部分、完整削皮。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2507.17294v2",
+            "locator": "§4任务定义；Tables1–2；Fig3；Appendix"
+          }
+        }
+      },
+      "remaining": [],
+      "metaUpdates": {
+        "warning": "Wipe任务擦的是盘子上的墨迹，不能写成擦白板。分规划判断、抓取、部分／完整擦除，不能把阶段结果混成一项。"
+      }
+    },
+    "T02": {
+      "checkedSource": "https://arxiv.org/html/2508.08706v3",
+      "checkedSections": [
+        "操作与插入实验",
+        "泛化与离线分析"
+      ],
+      "summary": "补形状间隙和1500步上限；分配次数不从总数推算，软物体和离线样本数未单列。",
+      "taskUpdates": {
+        "T02-e01": {
+          "setting": "UR5触觉夹爪，4对象各40示教；文中报告32次，未列各物体分配。",
+          "conditions": "抓起并运到目标；网格初态，最多1500步。",
+          "review": {
+            "status": "not_reported",
+            "note": "正文给夹爪32次，但未列每物体分配。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e02": {
+          "setting": "UR5＋11传感器灵巧手，报告16次；逐物体分配未说明。",
+          "conditions": "抓放；区分已见咖啡瓶／奶盒和未见塑料瓶／方瓶；最多1500步。",
+          "review": {
+            "status": "not_reported",
+            "note": "正文给灵巧手16次，未列逐对象分配。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e03": {
+          "setting": "UR5夹爪真机，每形状10次。",
+          "conditions": "方向变化，抓块移到孔上方并尝试插入；间隙0.9 mm，最多1500步。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e04": {
+          "setting": "UR5夹爪真机，每形状10次。",
+          "conditions": "方向变化，抓块移到孔上方并尝试插入；间隙1.8 mm，最多1500步。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e05": {
+          "setting": "UR5夹爪真机，每形状10次。",
+          "conditions": "方向变化，抓块移到孔上方并尝试插入；间隙1.2 mm，最多1500步。圆块训练未见。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e06": {
+          "setting": "真机未见软物体；该项独立次数原文未说明。",
+          "conditions": "抓放训练未见的海绵和毛巾。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查泛化实验，名称明确但独立次数未说明。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        },
+        "T02-e07": {
+          "metric": "预测状态均方误差（差值平方求平均）",
+          "setting": "离线验证数据；测试样本数原文未说明。",
+          "conditions": "预测状态对照标签，不是机器人成功率。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查离线分析，未说明本项样本数。",
+            "source": "https://arxiv.org/html/2508.08706v3",
+            "locator": "操作与插入实验；泛化与离线分析"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "T02-e01",
+          "reason": "原文未说明",
+          "note": "正文给夹爪32次，但未列每物体分配。"
+        },
+        {
+          "field": "T02-e02",
+          "reason": "原文未说明",
+          "note": "正文给灵巧手16次，未列逐对象分配。"
+        },
+        {
+          "field": "T02-e06",
+          "reason": "原文未说明",
+          "note": "已查泛化实验，名称明确但独立次数未说明。"
+        },
+        {
+          "field": "T02-e07",
+          "reason": "原文未说明",
+          "note": "已查离线分析，未说明本项样本数。"
+        }
+      ]
+    },
+    "T03": {
+      "checkedSource": "https://arxiv.org/html/2605.07308v1",
+      "checkedSections": [
+        "Task Definition",
+        "阶段结果表",
+        "任务示意"
+      ],
+      "summary": "确认每任务15次、30–50示教；补明确动作目标，不再追原文没用的精细数字。",
+      "taskUpdates": {
+        "T03-e01": {
+          "conditions": "沿弯曲拉链轨迹打开包，卡住未打开算失败。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        },
+        "T03-e02": {
+          "conditions": "在指定区盖印，完成后停下避免撞桌。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        },
+        "T03-e03": {
+          "conditions": "沿花瓶曲面擦目标区域，避免撞瓶颈。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        },
+        "T03-e04": {
+          "conditions": "转盖打开容器，打滑未打开不算成功。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        },
+        "T03-e05": {
+          "conditions": "抓胡萝卜放到盘里。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        },
+        "T03-e06": {
+          "conditions": "抓把手并拉开抽屉。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2605.07308v1",
+            "locator": "Task Definition；阶段结果表；任务示意"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "T04": {
+      "checkedSource": "https://arxiv.org/html/2610.10384v1",
+      "checkedSections": [
+        "§3–4",
+        "Appendix B.1–B.4、TableS3",
+        "Appendix C"
+      ],
+      "summary": "核对真仿任务对应与模型相对表现比较；Table3明确七项真机任务每方法20次、块插入v2每方法30次。仿真主表逐任务重复数仍未说明。",
+      "taskUpdates": {
+        "T04-e01": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "轻重分类后放对应盘。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e02": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "软硬分类后放对应盘。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e03": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "粗糙光滑分类后放对应盘。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e04": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "必要时再抓，选粗糙块放目标盘。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e05": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。",
+          "conditions": "粗糙光滑分类后放对应盘。",
+          "task": "真机：粗糙度分类",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e06": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "选空罐放篮子。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e07": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。",
+          "conditions": "选空罐放篮子。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e08": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "薯片完整抓、运、放且不损伤。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e09": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。",
+          "conditions": "薯片完整抓、运、放且不损伤。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e10": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "齿轮装底座且能带动配对齿轮一起转。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e11": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。混合训练／照明对照另按每模型—任务—条件20次评测。",
+          "conditions": "齿轮装底座且能带动配对齿轮一起转。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e12": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "稳握把手把抽屉拉到要求位置。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e13": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。",
+          "conditions": "稳握把手把抽屉拉到要求位置。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e14": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "USB对齐并插入接口。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e15": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。混合训练／照明对照另按每模型—任务—条件20次评测。",
+          "conditions": "USB对齐并插入接口。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e16": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "指定块插入匹配孔，改变布局。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e17": {
+          "setting": "真机配对任务；主评测每方法20次，Table3明确写成功次数／测试次数。",
+          "conditions": "指定块插入匹配孔，改变布局。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／20报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        },
+        "T04-e18": {
+          "setting": "Isaac Lab／TacEx仿真；均衡预设条件，主表逐任务测试次数原文未明确说明。",
+          "conditions": "按语言选对物体并插入对应孔，改变布局。",
+          "review": {
+            "status": "not_reported",
+            "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§3–4；Appendix B.1–B.4、TableS3；Appendix C"
+          }
+        },
+        "T04-e19": {
+          "setting": "真机配对任务；主评测每方法30次，Table3明确写成功次数／测试次数。",
+          "conditions": "按语言选对物体并插入对应孔，改变布局。",
+          "review": {
+            "status": "verified",
+            "note": "本轮直接核对Table3：该项按成功次数／30报告，不能继续标为测试次数未报告；任务完成条件保留附录定义。",
+            "source": "https://arxiv.org/html/2610.10384v1",
+            "locator": "§4.1–4.2；Table3；附录B"
+          }
+        }
+      },
+      "remaining": [
+        {
+          "field": "T04-e01",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e02",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e03",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e04",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e06",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e08",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e10",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e12",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e14",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e16",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        },
+        {
+          "field": "T04-e18",
+          "reason": "原文未说明",
+          "note": "已查主文、Appendix B–C与主表；完成条件明确，主表测试次数未明确说明；TableS2为示教数量。"
+        }
+      ],
+      "metaUpdates": {
+        "warning": "11个仿真任务、8个真机任务；真机有粗糙度分类，没有粗糙度引导再抓取。Table3明确七项真机任务各20次、块插入v2为30次；仿真次数不从百分比反推。模型排名一致性仅来自7模型和8共有任务的汇总比较。"
+      }
+    },
+    "T05": {
+      "checkedSource": "https://dt-tacvla.github.io/",
+      "checkedSections": [
+        "官网Tasks",
+        "Experimental protocol",
+        "Results",
+        "失败视频标签"
+      ],
+      "summary": "确认各20次／100示教；USB未完全插入明确算失败。",
+      "taskUpdates": {
+        "T05-e01": {
+          "conditions": "电源插头对齐并插入接口。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://dt-tacvla.github.io/",
+            "locator": "官网Tasks；Experimental protocol；Results；失败视频标签"
+          }
+        },
+        "T05-e02": {
+          "conditions": "USB完全插入；未插入／未完全插入算失败。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://dt-tacvla.github.io/",
+            "locator": "官网Tasks；Experimental protocol；Results；失败视频标签"
+          }
+        },
+        "T05-e03": {
+          "conditions": "试管正确放进目标位置。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://dt-tacvla.github.io/",
+            "locator": "官网Tasks；Experimental protocol；Results；失败视频标签"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "T06": {
+      "checkedSource": "https://arxiv.org/html/2512.23864v1",
+      "checkedSections": [
+        "§4.1.2、4.2",
+        "Table1"
+      ],
+      "summary": "确认每任务100次、3次运行均值波动；工具支撑是立方体顶点撑竖杆，补具体动作。",
+      "taskUpdates": {
+        "T06-e01": {
+          "metric": "真机任务成功率；3次运行均值和标准差",
+          "setting": "Dobot Xtrainer＋夹爪＋双GelSight；每任务100条真机示教，正文报告100次真机测试；仿真提供训练数据。",
+          "conditions": "孔口部分遮挡下插销插孔。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2512.23864v1",
+            "locator": "§4.1.2、4.2；Table1"
+          }
+        },
+        "T06-e02": {
+          "metric": "真机任务成功率；3次运行均值和标准差",
+          "setting": "Dobot Xtrainer＋夹爪＋双GelSight；每任务100条真机示教，正文报告100次真机测试；仿真提供训练数据。",
+          "conditions": "USB-A完整插入接口。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2512.23864v1",
+            "locator": "§4.1.2、4.2；Table1"
+          }
+        },
+        "T06-e03": {
+          "metric": "真机任务成功率；3次运行均值和标准差",
+          "setting": "Dobot Xtrainer＋夹爪＋双GelSight；每任务100条真机示教，正文报告100次真机测试；仿真提供训练数据。",
+          "conditions": "齿轮孔对准轴并装上。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2512.23864v1",
+            "locator": "§4.1.2、4.2；Table1"
+          }
+        },
+        "T06-e04": {
+          "metric": "真机任务成功率；3次运行均值和标准差",
+          "setting": "Dobot Xtrainer＋夹爪＋双GelSight；每任务100条真机示教，正文报告100次真机测试；仿真提供训练数据。",
+          "conditions": "夹住立方体，用顶点支撑细竖杆，在小扰动下保持直立。",
+          "review": {
+            "status": "verified",
+            "note": "已按所列原文位置复核；采用作者描述的任务完成动作，不额外追查作者没有使用的数值门槛。",
+            "source": "https://arxiv.org/html/2512.23864v1",
+            "locator": "§4.1.2、4.2；Table1"
+          }
+        }
+      },
+      "remaining": []
+    },
+    "N01": {
+      "checked": "2026-10-22",
+      "checkedSource": "https://arxiv.org/html/2607.18231",
+      "checkedSections": [
+        "§4；Table1–2；Fig.4",
+        "Appendix B、D–E"
+      ],
+      "summary": "三项任务的平均成功率为83.3%，视觉记忆对照为53.7%；提升主要来自按次数按钮和擦拭。",
+      "taskUpdates": {
+        "N01-e01": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2607.18231",
+            "locator": "§4.1–4.2；Appendix B.1–B.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N01-e02": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2607.18231",
+            "locator": "§4.1–4.2；Appendix B.1–B.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N01-e03": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2607.18231",
+            "locator": "§4.1–4.2；Appendix B.1–B.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        }
+      }
+    },
+    "N02": {
+      "checked": "2026-10-22",
+      "checkedSource": "https://arxiv.org/html/2603.14604",
+      "checkedSections": [
+        "§4.1–4.3；Tables1–3",
+        "Fig.3–5；§5.1"
+      ],
+      "summary": "四项常规测试的平均成功率为86.67%，无触觉对照为58.10%；最大接触力和用时也整体降低。",
+      "taskUpdates": {
+        "N02-e01": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e02": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e03": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e04": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e05": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e06": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e07": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e08": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e09": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.1–4.2；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N02-e10": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2603.14604",
+            "locator": "§4.3；Table3",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        }
+      }
+    },
+    "N03": {
+      "checked": "2026-10-22",
+      "checkedSource": "https://arxiv.org/html/2606.31723",
+      "checkedSections": [
+        "§4.1–4.3；Tables1–2",
+        "Appendix A、C"
+      ],
+      "summary": "八项任务在正常与干扰条件下整体优于论文对照；USB的逐项设计对照中，完整模型成功率为62%，仅加入触觉输入为30%。",
+      "taskUpdates": {
+        "N03-e01": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e02": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e03": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e04": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e05": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e06": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e07": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N03-e08": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2606.31723",
+            "locator": "§4.1–4.2；Table1；Appendix A.2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        }
+      }
+    },
+    "N04": {
+      "checked": "2026-10-22",
+      "checkedSource": "https://arxiv.org/html/2607.07287",
+      "checkedSections": [
+        "§4.1–4.6；Tables1–3",
+        "Fig.3–4；§5"
+      ],
+      "summary": "六项任务的平均成功率为65.0%，人为干扰下为53.7%；论文最强对照FTP-1分别为49.3%和35.2%。",
+      "taskUpdates": {
+        "N04-e01": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e02": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e03": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e04": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e05": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e06": {
+          "review": {
+            "status": "not_reported",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.1–4.3；Fig.4；Table1",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N04-e07": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2607.07287",
+            "locator": "§4.5；Table2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        }
+      }
+    },
+    "N05": {
+      "checked": "2026-10-22",
+      "checkedSource": "https://arxiv.org/html/2608.01824",
+      "checkedSections": [
+        "§4.1–4.4；Tables1–3",
+        "Appendix B.3–B.4、D.2–D.3"
+      ],
+      "summary": "七任务平均完成得分83.6%，最强平均对照65.2%；四种困难条件平均得分73.1%。这些百分数大多是分步得分，不是整项成功次数比例。",
+      "taskUpdates": {
+        "N05-e01": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e02": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e03": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e04": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e05": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e06": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e07": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e08": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "Appendix D.2；Table5",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        },
+        "N05-e09": {
+          "review": {
+            "status": "verified",
+            "source": "https://arxiv.org/html/2608.01824",
+            "locator": "§4.2；Appendix D.3；Table6",
+            "note": "按任务说明、评分及实验表整理；未将未报告的判分细节补写成事实。"
+          }
+        }
+      }
+    }
+  }
+}

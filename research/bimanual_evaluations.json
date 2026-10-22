@@ -1,0 +1,838 @@
+{
+  "definition": "双臂评测需确认两条机器人臂配合完成同一任务，并排除仅使用双臂平台、两臂各自独立操作的情况。不要求查明每条臂的详细分工，不要求同时运动、共同使用学习策略或读取双侧力。持物辅助、交接及同一流程的接力均可纳入；人手辅助和示教主从臂不算两条执行机器人臂。",
+  "works": {
+    "W03": {
+      "type": "platform-only",
+      "taskIds": [],
+      "description": "使用 Monte 双臂平台，但四项评测的操作过程均展示单臂执行，不作为双臂协作任务纳入。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1；Fig.4任务过程；Fig.5平台"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": false,
+        "platformOrIndependentExcluded": true,
+        "basis": "使用 Monte 双臂平台，但四项评测的操作过程均展示单臂执行，不作为双臂协作任务纳入。"
+      }
+    },
+    "W06": {
+      "type": "cooperative",
+      "taskIds": [
+        "W06-e02",
+        "W06-e05"
+      ],
+      "description": "一臂固定黄瓜，另一臂持工具削皮或切割。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2609.18497v1",
+          "locator": "Fig.1：Peeling和Cutting任务实拍；§V-A；Table II"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "一臂固定黄瓜，另一臂持工具削皮或切割。"
+      }
+    },
+    "W07": {
+      "type": "cooperative",
+      "taskIds": [
+        "W07-e06",
+        "W07-e07",
+        "W07-e08",
+        "W07-e09"
+      ],
+      "description": "以上四项单列双臂评测；同文另有五项单臂实验。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV-A；Fig.5后四项；Table I双臂列"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "以上四项单列双臂评测；同文另有五项单臂实验。"
+      }
+    },
+    "E03": {
+      "type": "cooperative",
+      "taskIds": [
+        "E03-e07",
+        "E03-e08",
+        "E03-e09",
+        "E03-e10",
+        "E03-e11"
+      ],
+      "description": "画气球、修手模型、拧瓶盖、翻书和擦盘均展示两手分工；不把同文的单臂仿真和插入实验算作双臂任务。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "画气球、修手模型、拧瓶盖、翻书和擦盘均展示两手分工；不把同文的单臂仿真和插入实验算作双臂任务。"
+      }
+    },
+    "E04": {
+      "type": "cooperative",
+      "taskIds": [
+        "E04-e03",
+        "E04-e05",
+        "E04-e08",
+        "E04-e09",
+        "E04-e22",
+        "E04-e23",
+        "E04-e24",
+        "E04-e25",
+        "E04-e26",
+        "E04-e27",
+        "E04-e28",
+        "E04-e29"
+      ],
+      "description": "真机擦白板、叠毛巾、折纸箱、装包，以及NeoSim八项协调操作任务符合双臂评测条件。纳入依据是两臂配合完成同一任务，不要求逐项查清左右臂的详细分工。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.2–5.4；Table 2；Appendix E Fig.11；原文评测采用NeoReal与NeoSim任务"
+        },
+        {
+          "url": "https://arxiv.org/html/2608.29601v1",
+          "locator": "§6.3；Appendix F.3与Fig.11：八项任务明确检验双臂协调；Appendix E.1–E.2、Table 5、Fig.9：真机任务"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "真机擦白板、叠毛巾、折纸箱、装包，以及NeoSim八项协调操作任务符合双臂评测条件。纳入依据是两臂配合完成同一任务，不要求逐项查清左右臂的详细分工。"
+      }
+    },
+    "E05": {
+      "type": "cooperative",
+      "taskIds": [
+        "E05-e03",
+        "E05-e04",
+        "E05-e05",
+        "E05-e06",
+        "E05-e07",
+        "E05-e08",
+        "E05-e09",
+        "E05-e10",
+        "E05-e11",
+        "E05-e12"
+      ],
+      "description": "协作含一手稳定、一手操作，以及左右手先后完成同一流程；翻页和搬鸡蛋由右手完成，不因平台有两臂就纳入。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task III–XII；Task I–II为右手任务"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "协作含一手稳定、一手操作，以及左右手先后完成同一流程；翻页和搬鸡蛋由右手完成，不因平台有两臂就纳入。"
+      }
+    },
+    "E06": {
+      "type": "independent",
+      "taskIds": [],
+      "description": "有双臂平台；多物体抓取中每只手各抓取并丢弃自己的物体，未据此认定两臂共同完成同一操作。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2609.12549v1",
+          "locator": "Fig.5；Appendix E Sub-task Description"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": false,
+        "platformOrIndependentExcluded": true,
+        "basis": "有双臂平台；多物体抓取中每只手各抓取并丢弃自己的物体，未据此认定两臂共同完成同一操作。"
+      }
+    },
+    "E09": {
+      "type": "cooperative",
+      "taskIds": [
+        "E09-e01"
+      ],
+      "description": "Digit 用两只手共同接触并抬起箱子；不是单臂推箱或擦拭。",
+      "sources": [
+        {
+          "url": "https://opt2vla.github.io/",
+          "locator": "Box pickup；evaluation gate：Both hands pass independently for pickup；physical robot demonstrations"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "Digit 用两只手共同接触并抬起箱子；不是单臂推箱或擦拭。"
+      }
+    },
+    "P02": {
+      "type": "cooperative",
+      "taskIds": [
+        "P02-e01",
+        "P02-e02",
+        "P02-e03",
+        "P02-e04",
+        "P02-e05",
+        "P02-e07",
+        "P02-e10"
+      ],
+      "description": "包含持管移液、旋盖、翻盖、系鞋带、洗牌、持物拧螺丝和调移液器刻度；多物体抓取、弹竖琴、敲木琴为右手任务。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2610.19155v1",
+          "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "包含持管移液、旋盖、翻盖、系鞋带、洗牌、持物拧螺丝和调移液器刻度；多物体抓取、弹竖琴、敲木琴为右手任务。"
+      }
+    },
+    "P03": {
+      "type": "cooperative",
+      "taskIds": [
+        "P03-e03"
+      ],
+      "description": "开蛋盒后取蛋并放入蛋托，论文将这一项作为双臂任务；另外两项抓放是单臂任务。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§III-C：two single-arm tasks and one bimanual task；§IV-B Egg pick-and-place；Fig.6"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "开蛋盒后取蛋并放入蛋托，论文将这一项作为双臂任务；另外两项抓放是单臂任务。"
+      }
+    },
+    "P04": {
+      "type": "cooperative",
+      "taskIds": [
+        "P04-e02"
+      ],
+      "description": "右臂把移液器吸头放入液体，左臂按下并松开按钮完成吸液。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A：bimanual pipette aspiration；Fig.4；Tables I–II"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "右臂把移液器吸头放入液体，左臂按下并松开按钮完成吸液。"
+      }
+    },
+    "T03": {
+      "type": "cooperative",
+      "taskIds": [
+        "T03-e01",
+        "T03-e03",
+        "T03-e04"
+      ],
+      "description": "两臂分别稳包与拉拉链、持花瓶与擦拭、持容器与旋盖；盖章不因使用双臂平台而纳入。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1；Fig.4任务分镜（viz-v6）；Table 1"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "两臂分别稳包与拉拉链、持花瓶与擦拭、持容器与旋盖；盖章不因使用双臂平台而纳入。"
+      }
+    },
+    "T06": {
+      "type": "platform-only",
+      "taskIds": [],
+      "description": "Dobot Xtrainer 平台名称不作为协作依据；四项评测未展示两臂共同完成同一操作。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Fig.5；Table 1"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": false,
+        "platformOrIndependentExcluded": true,
+        "basis": "Dobot Xtrainer 平台名称不作为协作依据；四项评测未展示两臂共同完成同一操作。"
+      }
+    },
+    "T18": {
+      "type": "cooperative",
+      "taskIds": [
+        "T18-e03",
+        "T18-e04"
+      ],
+      "description": "一手持花瓶、一手持海绵擦拭；翻书时一手翻页，另一手压住页面。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Appendix B.1.3 Vase Wipe；B.1.4 Book Flip；Tables 7–10"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "一手持花瓶、一手持海绵擦拭；翻书时一手翻页，另一手压住页面。"
+      }
+    },
+    "C01": {
+      "type": "cooperative",
+      "taskIds": [
+        "C01-e01"
+      ],
+      "description": "左臂按预设规则固定西葫芦，右臂用学习策略削皮；不是两臂都学习控制。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2410.07554v2",
+          "locator": "§IV-B Setup：left robot rule-based stabilization / right arm HybridIL；Table I"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "左臂按预设规则固定西葫芦，右臂用学习策略削皮；不是两臂都学习控制。"
+      }
+    },
+    "C15": {
+      "type": "cooperative",
+      "taskIds": [
+        "C15-e01",
+        "C15-e05"
+      ],
+      "description": "两臂共同抬起并平衡箱子，还测试箱子被打落后能否重新抬起。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-B–C Box lifting；Table I recovery；Appendix XII"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "两臂共同抬起并平衡箱子，还测试箱子被打落后能否重新抬起。"
+      }
+    },
+    "R01": {
+      "type": "cooperative",
+      "taskIds": [
+        "R01-e03"
+      ],
+      "description": "两臂从两侧共同夹持并抬起纸杯，同时避免压扁杯子。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2503.02881v1",
+          "locator": "§V-A.3 Bimanual Lifting；Table IV；Appendix E"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "两臂从两侧共同夹持并抬起纸杯，同时避免压扁杯子。"
+      }
+    },
+    "R02": {
+      "type": "cooperative",
+      "taskIds": [
+        "R02-e01",
+        "R02-e02",
+        "R02-e03",
+        "R02-e04"
+      ],
+      "description": "蒸蛋是右臂取放蛋、左臂随后盖盖的流程配合；其余包含两手开袋、交接扳手，以及一臂倾锅另一臂持勺。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2410.24091v1",
+          "locator": "Appendix B.2.1–B.2.4；Fig.14"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "蒸蛋是右臂取放蛋、左臂随后盖盖的流程配合；其余包含两手开袋、交接扳手，以及一臂倾锅另一臂持勺。"
+      }
+    },
+    "N01": {
+      "type": "cooperative",
+      "taskIds": [
+        "N01-e01"
+      ],
+      "description": "揭杯找物块由右臂揭杯、左臂取物，随后右臂放回杯子；按钮和擦碗只用右臂，不算双臂协作任务。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2607.18231",
+          "locator": "Appendix B.1–B.2"
+        }
+      ],
+      "checked": "2026-10-22",
+      "criterionReview": {
+        "cooperativeTaskConfirmed": true,
+        "platformOrIndependentExcluded": true,
+        "basis": "任务1明确两臂分工，任务2和3为右臂操作。"
+      }
+    }
+  },
+  "checked": "2026-10-22",
+  "taskSetups": {
+    "W01-e05": {
+      "type": "single-arm-fixture",
+      "description": "单条机器人臂持削皮器；黄瓜由台面固定夹具夹住，不需要第二条机器人臂。",
+      "source": "https://arxiv.org/html/2505.22159v1",
+      "locator": "Fig.4(d)：task_setup原始实验图",
+      "checked": "2026-10-22"
+    },
+    "C02-e03": {
+      "type": "single-arm-fixture",
+      "description": "单条机器人臂持削皮器；黄瓜放在带固定支撑的板上，任务过程没有第二条机器人臂参与。",
+      "source": "https://arxiv.org/html/2411.15753v2",
+      "locator": "Fig.3 Peeling任务分镜",
+      "checked": "2026-10-22"
+    },
+    "R01-e01": {
+      "type": "single-arm-human-support",
+      "description": "机器人单臂持削皮器；黄瓜由人手持在空中，人还按测试条件移动黄瓜。这不是双机器人臂自主协作，也不是机器人自主完成持瓜全过程。",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "locator": "§V-A.3 Peeling、§V-A.4",
+      "checked": "2026-10-22"
+    },
+    "R01-e02": {
+      "type": "single-arm-human-support",
+      "description": "机器人单臂持板擦；花瓶由人手持在空中，并按条件施加移动干扰，不计为双机器人臂协作。",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "locator": "§V-A.3 Wiping、§V-A.4",
+      "checked": "2026-10-22"
+    },
+    "R01-e03": {
+      "type": "cooperative",
+      "description": "两条机器人臂从两侧用工具夹住纸杯并共同提起；与前两个人手持物的任务不同。",
+      "source": "https://arxiv.org/html/2503.02881v1",
+      "locator": "§V-A.3 Bimanual Lifting",
+      "checked": "2026-10-22"
+    },
+    "C01-e01": {
+      "type": "cooperative-rule-support",
+      "description": "左机器人臂按预设规则稳定西葫芦，右机器人臂装固定削皮器并由HybridIL控制削皮；两臂都参与，但不是两臂均由学习策略控制。",
+      "source": "https://arxiv.org/html/2410.07554v2",
+      "locator": "§IV-B Setup",
+      "checked": "2026-10-22"
+    },
+    "W06-e02": {
+      "type": "cooperative",
+      "description": "一条机器人臂固定黄瓜，另一条机器人臂持削皮器削皮；仅据任务分工认定协作，不据此推断模型读取左右两侧力。",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "Fig.1 Peeling实拍",
+      "checked": "2026-10-22"
+    },
+    "W06-e05": {
+      "type": "cooperative",
+      "description": "一条机器人臂稳定黄瓜，另一条机器人臂持刀切割。",
+      "source": "https://arxiv.org/html/2609.18497v1",
+      "locator": "Fig.1 Cutting实拍",
+      "checked": "2026-10-22"
+    },
+    "W18-e02": {
+      "type": "single-arm-human-support",
+      "description": "机器人单臂持削皮器；原始任务图中由人手配合细杆支撑／定位黄瓜，不是第二条机器人臂固定。",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "locator": "Fig.3 Peel Cucumber原始任务图",
+      "checked": "2026-10-22"
+    },
+    "W18-e04": {
+      "type": "single-arm-human-support",
+      "description": "机器人单臂擦花瓶；原始任务图中花瓶由人手扶持，不计为双机器人臂协作。",
+      "source": "https://arxiv.org/html/2606.08555v1",
+      "locator": "Fig.3 Wipe Vase原始任务图",
+      "checked": "2026-10-22"
+    },
+    "W17-e07": {
+      "type": "single-arm-fixture",
+      "description": "被削物体由V形槽支撑稳定，机器人持削皮器；这是定性补充演示，不因削皮动作就认定为双臂协作。",
+      "source": "https://arxiv.org/html/2605.11048v1",
+      "locator": "§4.6；Fig.8",
+      "checked": "2026-10-22"
+    },
+    "T01-e03": {
+      "type": "single-arm-support",
+      "description": "单臂机器人持削皮器；原始任务图中芒果位于支撑座上，未见第二条机器人臂参与。支撑座的具体结构和固定方式原文未详细说明。",
+      "source": "https://arxiv.org/html/2507.17294v2",
+      "locator": "§4.1；Fig.2 Peel任务分镜（3_exp_demo）",
+      "checked": "2026-10-22"
+    },
+    "E03-e07": {
+      "type": "cooperative",
+      "description": "一手持气球，另一手持笔在气球上画图。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程",
+      "checked": "2026-10-22"
+    },
+    "E03-e08": {
+      "type": "cooperative",
+      "description": "一手稳定手模型，另一手撕贴纸、装回小手指；两个阶段在同一任务内。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程",
+      "checked": "2026-10-22"
+    },
+    "E03-e09": {
+      "type": "cooperative",
+      "description": "一手持瓶，另一手旋拧瓶盖。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程",
+      "checked": "2026-10-22"
+    },
+    "E03-e10": {
+      "type": "cooperative",
+      "description": "一手稳定书本，另一手翻页。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程",
+      "checked": "2026-10-22"
+    },
+    "E03-e11": {
+      "type": "cooperative",
+      "description": "一手稳定盘子，另一手持布擦拭。",
+      "source": "https://arxiv.org/html/2606.13102v1",
+      "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程",
+      "checked": "2026-10-22"
+    },
+    "E05-e03": {
+      "type": "cooperative",
+      "description": "左手稳盘，右手持布擦拭。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e04": {
+      "type": "cooperative",
+      "description": "一手持牙刷，另一手持牙膏并挤到刷毛上。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e05": {
+      "type": "cooperative",
+      "description": "左手稳住杯堆，右手旋转并分离顶杯。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e06": {
+      "type": "cooperative-sequential",
+      "description": "右手识别并放麻将，左手打开对应格盖；是同一任务的分阶段配合。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e07": {
+      "type": "cooperative",
+      "description": "一手持锁，另一手持钥匙插入并旋转。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e08": {
+      "type": "cooperative-sequential",
+      "description": "左手开格盖，右手放球、合盖；是同一流程的先后配合。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e09": {
+      "type": "cooperative",
+      "description": "右手持滴管，左手持烧杯并摇匀。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e10": {
+      "type": "cooperative",
+      "description": "左手持卡套，右手推出、分离并抽出单张卡。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e11": {
+      "type": "cooperative",
+      "description": "双手交接牌堆并配合分出单张牌。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "E05-e12": {
+      "type": "cooperative",
+      "description": "包含灯泡交接，以及一手稳定灯座、另一手旋入。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F：Task III–XII；Task I–II为右手任务",
+      "checked": "2026-10-22"
+    },
+    "P02-e01": {
+      "type": "cooperative",
+      "description": "左手持大试管，右手持移液器吸液并完成后续操作。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e02": {
+      "type": "cooperative",
+      "description": "左手持管抵抗转动，右手拧盖。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e03": {
+      "type": "cooperative",
+      "description": "先交接试管，再由一手持管、另一手翻开管盖。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e04": {
+      "type": "cooperative",
+      "description": "两手分别持鞋带，交叉、绕环并拉紧。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e05": {
+      "type": "cooperative",
+      "description": "两手各持半副牌，弯曲、交错并合拢为一副。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e07": {
+      "type": "cooperative",
+      "description": "左手持被操作的手模型并抵抗转动，右手持螺丝刀拧螺丝。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "P02-e10": {
+      "type": "cooperative",
+      "description": "左手稳住移液器，右手转动调量旋钮。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "任务说明／Figs.11–20；重点为Task 1–5、7、10",
+      "checked": "2026-10-22"
+    },
+    "T03-e01": {
+      "type": "cooperative",
+      "description": "一臂稳定包，另一臂抓拉链并拉开。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1；Fig.4任务分镜（viz-v6）；Table 1",
+      "checked": "2026-10-22"
+    },
+    "T03-e03": {
+      "type": "cooperative",
+      "description": "左臂持花瓶，右臂持海绵擦拭。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1；Fig.4任务分镜（viz-v6）；Table 1",
+      "checked": "2026-10-22"
+    },
+    "T03-e04": {
+      "type": "cooperative",
+      "description": "一臂持容器，另一臂旋拧盖子。",
+      "source": "https://arxiv.org/html/2605.07308v1",
+      "locator": "§4.1；Fig.4任务分镜（viz-v6）；Table 1",
+      "checked": "2026-10-22"
+    },
+    "E04-e08": {
+      "type": "cooperative",
+      "description": "两条机器人臂配合折叠同一个纸箱，原文Fig.11真机分镜可见。",
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.3 Table 2；Appendix E Fig.11：纸箱折叠与Cup Handover",
+      "checked": "2026-10-22"
+    },
+    "E04-e25": {
+      "type": "cooperative",
+      "description": "两臂交接同一个杯子，再完成放置。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "R02-e01": {
+      "type": "cooperative-sequential",
+      "description": "右臂开蛋盒、取放蛋，左臂随后取蒸蛋器盖并盖上；属于流程接力，并非两臂同时夹同一物体。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "Appendix B.2.1–B.2.4；Fig.14",
+      "checked": "2026-10-22"
+    },
+    "R02-e02": {
+      "type": "cooperative",
+      "description": "包含两手共同打开塑料袋的阶段。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "Appendix B.2.1–B.2.4；Fig.14",
+      "checked": "2026-10-22"
+    },
+    "R02-e03": {
+      "type": "cooperative",
+      "description": "两手交接六角扳手，调整后插入。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "Appendix B.2.1–B.2.4；Fig.14",
+      "checked": "2026-10-22"
+    },
+    "R02-e04": {
+      "type": "cooperative",
+      "description": "一臂抓锅柄倾锅，另一臂持勺取出煎蛋。",
+      "source": "https://arxiv.org/html/2410.24091v1",
+      "locator": "Appendix B.2.1–B.2.4；Fig.14",
+      "checked": "2026-10-22"
+    },
+    "T18-e03": {
+      "type": "cooperative",
+      "description": "左手持花瓶，右手持海绵擦拭。",
+      "source": "https://arxiv.org/html/2506.15953v1",
+      "locator": "Appendix B.1.3 Vase Wipe；B.1.4 Book Flip；Tables 7–10",
+      "checked": "2026-10-22"
+    },
+    "T18-e04": {
+      "type": "cooperative-sequential",
+      "description": "右手翻起单页，左手随后压下页面。",
+      "source": "https://arxiv.org/html/2506.15953v1",
+      "locator": "Appendix B.1.3 Vase Wipe；B.1.4 Book Flip；Tables 7–10",
+      "checked": "2026-10-22"
+    },
+    "E05-e01": {
+      "type": "single-arm-on-bimanual-platform",
+      "description": "原文任务说明由右手完成；平台有双臂不等于本项需要双臂协作。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F Task I–II",
+      "checked": "2026-10-22"
+    },
+    "E05-e02": {
+      "type": "single-arm-on-bimanual-platform",
+      "description": "原文任务说明由右手完成；平台有双臂不等于本项需要双臂协作。",
+      "source": "https://arxiv.org/html/2606.17055v1",
+      "locator": "Appendix F Task I–II",
+      "checked": "2026-10-22"
+    },
+    "P02-e06": {
+      "type": "single-arm-on-bimanual-platform",
+      "description": "原文任务说明由右手完成；平台有双臂不等于本项需要双臂协作。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "Task 6任务说明",
+      "checked": "2026-10-22"
+    },
+    "P02-e08": {
+      "type": "single-arm-on-bimanual-platform",
+      "description": "原文任务说明由右手完成；平台有双臂不等于本项需要双臂协作。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "Task 8任务说明",
+      "checked": "2026-10-22"
+    },
+    "P02-e09": {
+      "type": "single-arm-on-bimanual-platform",
+      "description": "原文任务说明由右手完成；平台有双臂不等于本项需要双臂协作。",
+      "source": "https://arxiv.org/html/2610.19155v1",
+      "locator": "Task 9任务说明",
+      "checked": "2026-10-22"
+    },
+    "E04-e22": {
+      "type": "cooperative",
+      "description": "两臂配合完成螺钉与套筒的插接／旋入。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e23": {
+      "type": "cooperative",
+      "description": "原文将齿轮放置列入需双臂协调的任务套件；依同一装配任务纳入，不额外推定未说明的左右臂分工。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e24": {
+      "type": "cooperative",
+      "description": "两臂配合分离套叠的碗，一侧稳定其余碗。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e26": {
+      "type": "cooperative",
+      "description": "两臂将分开的杯子对齐、套叠为同一杯堆。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e27": {
+      "type": "cooperative",
+      "description": "两臂配合将分开的盘子对齐并叠在一起。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e28": {
+      "type": "cooperative",
+      "description": "两臂配合将分开的碗对中并套叠。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e29": {
+      "type": "cooperative",
+      "description": "两臂配合分离套叠杯，一侧稳定底杯。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "§6.3；Appendix F.3 Dual-Arm Tasks；Fig.11；N₀-VTLA Table 2确认实际评测",
+      "checked": "2026-10-22"
+    },
+    "E04-e03": {
+      "type": "cooperative",
+      "description": "两臂配合稳住白板与擦拭；配套任务规则包含抓住白板使其稳定。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "Appendix E.1–E.2；Table 5；Fig.9（NeoReal）；N₀-VTLA §5.2/§5.4确认采用",
+      "checked": "2026-10-22"
+    },
+    "E04-e05": {
+      "type": "cooperative",
+      "description": "两臂共同抓持、展平和对齐同一条毛巾，再配合折叠。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "Appendix E.1–E.2；Table 5；Fig.9（NeoReal）；N₀-VTLA §5.2/§5.4确认采用",
+      "checked": "2026-10-22"
+    },
+    "E04-e09": {
+      "type": "cooperative",
+      "description": "两臂围绕同一个包配合完成装物与收拢／拉链操作，配套任务图显示两臂参与同一装包过程。",
+      "source": "https://arxiv.org/html/2608.29601v1",
+      "locator": "Appendix E.1–E.2；Table 5；Fig.9（NeoReal）；N₀-VTLA §5.2/§5.4确认采用",
+      "checked": "2026-10-22"
+    },
+    "N01-e01": {
+      "description": "右臂依次揭杯，左臂取物，右臂放回最后揭开的杯子。",
+      "source": "https://arxiv.org/html/2607.18231",
+      "locator": "Appendix B.1–B.2"
+    }
+  },
+  "auditNote": "按用户两条标准复核现有18项平台／双臂记录。任务说明、过程图或原文明确的协调任务定义可作为纳入证据；详细左右臂分工、学习控制方式和双侧力输入不是门槛。STAR独立抓取、FAVLA和DreamTacVLA仅平台相关条目继续排除。",
+  "criteria": [
+    "两条机器人臂配合完成同一任务。",
+    "排除仅使用双臂平台和两臂各自独立操作；详细左右臂分工不作为纳入前提。"
+  ]
+}

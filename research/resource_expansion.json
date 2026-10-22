@@ -1,0 +1,714 @@
+{
+  "checked": "2026-10-22",
+  "studies": [
+    {
+      "id": "visible-touch",
+      "name": "Visible Touch",
+      "title": "Visible Touch: Rendering Contact for Visuomotor Policies",
+      "source": "https://arxiv.org/html/2609.14156v1",
+      "repository": "https://github.com/qaz1678249/visibletouch",
+      "resourceId": "visible-touch-eval",
+      "usage": "使用 LIBERO 任务并提取仿真接触力；把力画进图像，比较普通输入、数值拼接和图像叠加。"
+    },
+    {
+      "id": "me-dex",
+      "name": "ME-Dex 1.0",
+      "title": "ME-Dex 1.0: Bringing Heterogeneous Tactile Sensing into World Action Modeling",
+      "source": "https://arxiv.org/html/2609.21449v1",
+      "repository": "https://github.com/MachEmbodied/ME-Dex-1.0",
+      "resourceId": "me-dex-eval",
+      "usage": "RoboTwin、DexJoCo 添加仿真触觉数据；ManiFeel 复用原触觉任务。部分 RoboTwin 测试将当前触觉置零，与正常读取触觉的组分别记录。"
+    },
+    {
+      "id": "tactildm",
+      "name": "TactiLDM for VLA",
+      "title": "TactiLDM for VLA: Learning Unified Visual-Text-Tactile Representations to Empower Vision-Language-Action Policies",
+      "source": "https://lzy001yuki.github.io/TactiLDM/",
+      "repository": "https://github.com/lzy001Yuki/TactiLDM",
+      "resourceId": "tactildm-eval",
+      "usage": "项目说明在 ManiSkill-ViTac 2025 中将触觉接入 π₀，报告成功率与平均终止步数；具体赛道、任务和次数未核实。"
+    }
+  ],
+  "resources": [
+    {
+      "id": "visible-touch-eval",
+      "name": "Visible Touch：LIBERO 接触信息扩展",
+      "resourceType": "paper_protocol",
+      "typeLabel": "论文评测方案",
+      "kind": "论文评测方案",
+      "domain": "仿真",
+      "focus": "在 LIBERO 原有任务中加入接触信息，比较把力画进图像与直接输入力数值的效果。",
+      "detail": "保留 LIBERO 的操作任务，从 MuJoCo 提取夹爪手指的接触力，再将方向与大小叠加到相机图像上。原始任务与新增观测分开记录。",
+      "source": "https://arxiv.org/html/2609.14156v1",
+      "introducedBy": {
+        "title": "Visible Touch: Rendering Contact for Visuomotor Policies",
+        "source": "https://arxiv.org/html/2609.14156v1",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "在 LIBERO 原有任务中加入接触信息，比较把力画进图像与直接输入力数值的效果。",
+        "introduction": [
+          "保留 LIBERO 的操作任务，从 MuJoCo 提取夹爪手指的接触力，再将方向与大小叠加到相机图像上。原始任务与新增观测分开记录。",
+          "机器人接收当前图像和状态、输出动作、在仿真中执行，再读取更新后的接触信息继续行动。LIBERO 仿真策略为 BC-Transformer 与 miniVLA；π₀.₅ 用于真机验证。"
+        ],
+        "inputs": "图像、机器人状态与任务条件；有力版本增加图像上的接触箭头或拼接接触力数值。",
+        "evaluation": [
+          "评测目的：比较是否提供接触信息，以及怎样呈现接触信息；不将成功率提升直接解释为目标力跟踪更准确。",
+          "主要指标：闭环任务成功率。BC-Transformer 使用 3 次独立训练，每个最终模型每项任务测试 20 次；比较外部相机单视角与加腕部相机双视角。",
+          "对照：普通 RGB＋状态；额外拼接 12 维接触力／力矩；图像叠加力箭头。12 维为两夹指的接触信息，不能当作左右机械臂腕力。",
+          "miniVLA 有独立的预训练与微调设置；主表微调结果的有／无叠加组独立训练次数不同，不统一写成 3 次训练。"
+        ],
+        "force": "仿真接触力是输入，不以最大接触力或目标力误差作为主要操作成绩。",
+        "relevance": "适合参考夹爪接触信息输入与对照设计；不是双臂左右腕部六维力评测。",
+        "taskGroups": [
+          {
+            "title": "LIBERO 操作与任务泛化",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "空间关系（Spatial）",
+                "goal": "根据指令区分空间位置并操作指定物体。",
+                "scoring": "按 LIBERO 对应任务成功条件判定；报告该组成功率。"
+              },
+              {
+                "name": "物体变化（Object）",
+                "goal": "在不同物体上完成对应操作。",
+                "scoring": "按原任务成功条件统计；比较不同输入方式。"
+              },
+              {
+                "name": "目标变化（Goal）",
+                "goal": "按指令实现不同操作目标。",
+                "scoring": "保留原任务完成要求，报告成功率。"
+              },
+              {
+                "name": "长流程（Long／LIBERO-10）",
+                "goal": "连续完成包含多次抓取或操作步骤的任务。",
+                "scoring": "整个任务达到原成功条件才记成功；不能把中间步骤完成当作整任务成功。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2609.14156v1",
+            "locator": "§4.1；Figure 3；附录 C–D"
+          }
+        ],
+        "source": "https://arxiv.org/html/2609.14156v1",
+        "using": []
+      },
+      "reason": "整理该论文在 LIBERO 上比较不同接触信息输入方式的评测；作者未据此提出新的独立同名基准。",
+      "protocol": "保留 LIBERO 任务成功规则；比较普通输入、数值接触信息与图像接触叠加，并区分相机配置、模型和训练次数。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/qaz1678249/visibletouch",
+      "scope": "保留原任务，增加观测；不能将不同输入和训练条件下的成绩无条件混用。",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2609.14156v1",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "复用基准的论文实验，不另算独立基准",
+      "newlyCollected": true,
+      "metricKey": "visible-touch",
+      "relatedResources": [
+        "libero"
+      ]
+    },
+    {
+      "id": "me-dex-eval",
+      "name": "ME-Dex 1.0：三平台触觉扩展评测",
+      "resourceType": "paper_protocol",
+      "typeLabel": "论文评测方案",
+      "kind": "论文评测方案",
+      "domain": "仿真",
+      "focus": "给 RoboTwin、DexJoCo 补充触觉数据，并复用 ManiFeel 的触觉任务，比较触觉输入与未来触觉预测。",
+      "detail": "通过仿真轨迹重放，同步记录视觉、触觉力与动作。模型联合学习未来画面、未来触觉和动作，再由生成的动作控制仿真机器人。",
+      "source": "https://arxiv.org/html/2609.21449v1",
+      "introducedBy": {
+        "title": "ME-Dex 1.0: Bringing Heterogeneous Tactile Sensing into World Action Modeling",
+        "source": "https://arxiv.org/html/2609.21449v1",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "给 RoboTwin、DexJoCo 补充触觉数据，并复用 ManiFeel 的触觉任务，比较触觉输入与未来触觉预测。",
+        "introduction": [
+          "通过仿真轨迹重放，同步记录视觉、触觉力与动作。模型联合学习未来画面、未来触觉和动作，再由生成的动作控制仿真机器人。",
+          "保留三个基准各自的任务成功条件；补充感知信息不等于重新提出了三个独立基准。"
+        ],
+        "inputs": "图像、机器人状态、任务条件及当前触觉；部分测试将当前触觉置零，必须按实验分组查看。",
+        "evaluation": [
+          "评测目的：检验加入当前触觉、预测未来触觉和跨模块交互是否改善自主操作。",
+          "主要指标：按原基准成功条件统计闭环任务成功率。RoboTwin 50 项联合训练；DexJoCo 使用 1,100 条示范覆盖 11 项任务；ManiFeel 每项 50 条示范。",
+          "对照：π₀.₅、Fast-WAM、Motus、对应加触觉版本，以及模型去触觉、去未来触觉预测和当前触觉置零版本。",
+          "每组训练使用一个随机种子。ManiFeel 每项测试 50 次（Table 4）；RoboTwin、DexJoCo 的每项最终测试次数未统一说明，不用训练示范数代替。",
+          "另做离线触觉表示测试：按轨迹 8∶2 划分训练／测试，报告接触识别 F1 与归一化力值误差；这不是机器人执行成功率。"
+        ],
+        "force": "主操作成绩是成功率；离线力重建误差是表示质量指标。测试时触觉置零的结果与正常读取触觉的结果分开。",
+        "relevance": "覆盖夹爪和灵巧手；触觉主要是指面接触力场，不等于双臂腕部六维力。",
+        "taskGroups": [
+          {
+            "title": "RoboTwin：50 项任务中的原文展示示例",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "物体扫描",
+                "goal": "抓持并操作物体以完成扫描相关任务；原文展示连续操作过程。",
+                "scoring": "使用 RoboTwin 对应任务的官方成功条件；该展示是 50 项评测的一部分。"
+              },
+              {
+                "name": "抽屉放置",
+                "goal": "配合抽屉交互与物体放置完成目标。",
+                "scoring": "按原任务整体成功条件统计；普通与随机变化场景分别报告。"
+              },
+              {
+                "name": "面包放置",
+                "goal": "用夹爪完成面包放置；原文同时展示触觉观测变化。",
+                "scoring": "按原任务完成条件判断成功，触觉可视化不是额外的成功分数。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2609.21449v1",
+            "locator": "§4.1–4.3；Figure 5–6；Table 1–2"
+          },
+          {
+            "title": "单臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "钉钉子",
+                "goal": "用锤子完成钉入。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "点击鼠标",
+                "goal": "移动并点击鼠标。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "提桶",
+                "goal": "抓住并提起桶。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "夹钳",
+                "goal": "抓取并挤压夹钳。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "折眼镜",
+                "goal": "操作眼镜铰链。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "浇花",
+                "goal": "用容器完成浇水。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2609.21449v1",
+            "locator": "§4.1；Table 3"
+          },
+          {
+            "title": "双臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "解锁平板",
+                "goal": "抓持平板并操作按钮。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "汉诺塔",
+                "goal": "配合完成环的转移。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "装配",
+                "goal": "配合完成部件插入装配。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "微波炉操作",
+                "goal": "操作微波炉并放入目标物体。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              },
+              {
+                "name": "拍照",
+                "goal": "配合抓持相机并按键。",
+                "scoring": "采用原任务成功条件；物体随机变化配置下逐项报告成功率。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2609.21449v1",
+            "locator": "§4.1；Table 3"
+          },
+          {
+            "title": "ManiFeel：四项插入与装配任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "销孔插入",
+                "goal": "对准销与孔。",
+                "scoring": "销进入对应孔。 每项 50 条示范、50 次测试。"
+              },
+              {
+                "name": "USB插入",
+                "goal": "调整连接器位置和朝向。",
+                "scoring": "插入对应接口。 每项 50 条示范、50 次测试。"
+              },
+              {
+                "name": "电源插头插入",
+                "goal": "在物体遮挡下对准插孔。",
+                "scoring": "插头插入对应孔。 每项 50 条示范、50 次测试。"
+              },
+              {
+                "name": "齿轮装配",
+                "goal": "同时对准轴孔和两侧齿轮。",
+                "scoring": "装到中心轴并正确咬合。 每项 50 条示范、50 次测试。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2609.21449v1",
+            "locator": "§4.1；Table 4"
+          }
+        ],
+        "source": "https://arxiv.org/html/2609.21449v1",
+        "using": [],
+        "taskNote": "RoboTwin 原文评测全部 50 项，下表仅列论文图中明确展示的示例；完整任务以官方列表为准。DexJoCo 与 ManiFeel 列出实际采用的全部任务。"
+      },
+      "reason": "整理触觉扩展、跨场景测试与消融实验，分别关联三个原基准。",
+      "protocol": "分别使用 RoboTwin、DexJoCo、ManiFeel 的原任务成功条件；区分场景变化、正常触觉输入和触觉置零组，另报离线触觉表示指标。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/MachEmbodied/ME-Dex-1.0",
+      "scope": "动作执行成功率、离线触觉重建误差、测试时触觉置零三类结果分开。",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2609.21449v1",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "复用基准的论文实验，不另算独立基准",
+      "newlyCollected": true,
+      "metricKey": "me-dex",
+      "relatedResources": [
+        "robotwin",
+        "dexjoco",
+        "suite-c11"
+      ]
+    },
+    {
+      "id": "tactildm-eval",
+      "name": "TactiLDM：ManiSkill-ViTac 适配评测",
+      "resourceType": "paper_protocol",
+      "typeLabel": "论文评测方案",
+      "kind": "论文评测方案",
+      "domain": "仿真",
+      "focus": "在 ManiSkill-ViTac 2025 触觉环境中，把触觉接入 π₀，并观察任务成功与提前终止情况。",
+      "detail": "项目说明采用 ManiSkill-ViTac 2025 作为仿真测试环境，将触觉信息接入 π₀。尚无充分证据表明它重新设计或修改了平台物理环境。",
+      "source": "https://lzy001yuki.github.io/TactiLDM/",
+      "introducedBy": {
+        "title": "TactiLDM for VLA: Learning Unified Visual-Text-Tactile Representations to Empower Vision-Language-Action Policies",
+        "source": "https://lzy001yuki.github.io/TactiLDM/",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "在 ManiSkill-ViTac 2025 触觉环境中，把触觉接入 π₀，并观察任务成功与提前终止情况。",
+        "introduction": [
+          "项目说明采用 ManiSkill-ViTac 2025 作为仿真测试环境，将触觉信息接入 π₀。尚无充分证据表明它重新设计或修改了平台物理环境。",
+          "具体使用哪个赛道、全部任务清单和每项测试次数未在已查项目说明中提供；不把整个比赛的任务都归为该论文已完成的实验。"
+        ],
+        "inputs": "视觉、机器人相关观测与触觉；作者说明将触觉接入 π₀ 输入，完整适配接口未核实。",
+        "evaluation": [
+          "评测目的：检验触觉表示能否帮助策略完成任务并减少触觉传感器过度变形造成的提前终止。",
+          "指标一：任务成功率，按对应任务完成条件统计。",
+          "指标二：平均终止步数 ATS；动作导致触觉传感器变形过大时，环境触发 tactile_movement_too_large 并提前终止。",
+          "ATS 不是力跟踪误差，执行更久也不一定成功；必须结合成功率看。具体赛道任务、测试次数、阈值和全部控制适配尚未核实。"
+        ],
+        "force": "触觉参与动作生成；传感器过度变形用于提前终止。未确认报告目标力误差。",
+        "relevance": "可参考触觉信息接入和接触异常终止指标；不是已核实的腕部六维力评测。",
+        "taskGroups": [
+          {
+            "title": "作者明确说明的仿真测试",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "ManiSkill-ViTac 2025 中的触觉操作测试",
+                "goal": "π₀ 接收触觉等观测后输出动作，在环境中自主执行。",
+                "scoring": "统计成功率与平均终止步数；具体任务名称、次数和阈值未核实，不补写为全部赛道任务。"
+              }
+            ],
+            "source": "https://lzy001yuki.github.io/TactiLDM/",
+            "locator": "VTLA Performance On Maniskill-Vitac 2025"
+          }
+        ],
+        "source": "https://lzy001yuki.github.io/TactiLDM/",
+        "using": []
+      },
+      "reason": "有作者项目说明，但全部测试协议尚未公开确认；不升级为独立基准。",
+      "protocol": "在 ManiSkill-ViTac 2025 环境中比较成功率与平均终止步数；具体赛道任务和测试次数尚未核实。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/lzy001Yuki/TactiLDM",
+      "scope": "明确已查信息与未核实细节，不把比赛完整任务表当作该论文实际评测表。",
+      "evidence": [
+        {
+          "url": "https://lzy001yuki.github.io/TactiLDM/",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "复用基准的论文实验，不另算独立基准",
+      "newlyCollected": true,
+      "metricKey": "tactildm",
+      "relatedResources": [
+        "maniskill-vitac-2025"
+      ]
+    },
+    {
+      "id": "maniskill-vitac-2025",
+      "name": "ManiSkill-ViTac 2025",
+      "resourceType": "benchmark",
+      "typeLabel": "触觉操作基准",
+      "kind": "触觉操作基准",
+      "domain": "仿真＋真机",
+      "focus": "统一触觉、视觉触觉融合与传感器结构设计的比赛评测；先仿真，再真机。",
+      "detail": "由 ManiSkill-ViTac 2025 工作提出，基于 SAPIEN＋IPC 模拟 GelSight 软胶变形，并提供对应真实平台。它与普通 ManiSkill3 任务集分别记录。",
+      "source": "https://arxiv.org/html/2411.12503v1",
+      "introducedBy": {
+        "title": "ManiSkill-ViTac 2025: Challenge on Manipulation Skill Learning With Vision and Tactile Sensing",
+        "source": "https://arxiv.org/html/2411.12503v1",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "统一触觉、视觉触觉融合与传感器结构设计的比赛评测；先仿真，再真机。",
+        "introduction": [
+          "由 ManiSkill-ViTac 2025 工作提出，基于 SAPIEN＋IPC 模拟 GelSight 软胶变形，并提供对应真实平台。它与普通 ManiSkill3 任务集分别记录。",
+          "比赛有三个独立赛道。TactiLDM 说明使用了其中的仿真环境，但未确认采用全部赛道。"
+        ],
+        "inputs": "赛道 1 主要为触觉；赛道 2 为触觉＋深度与语义分割；赛道 3 比较传感器软胶结构与标记布局。",
+        "evaluation": [
+          "操作赛道先按仿真成功率排名，晋级模型由组织方在真实平台上测试。",
+          "赛道 1：插入与开锁成功率各乘 50 后相加；赛道 2：成功率乘 100；赛道 3：成功率乘 50 加结构主观评分乘 50。",
+          "改变插销、孔或钥匙形状测试新物体；完整测试次数和参数以官方评测脚本、阶段规则为准。"
+        ],
+        "force": "触觉反馈引导接触修正；真实平台具备六维 F/T 传感器，不代表每个参赛策略都读取六维力。",
+        "relevance": "适合参考精密插入、新形状测试与统一组织方评测；不是双臂夹爪基准。",
+        "taskGroups": [
+          {
+            "title": "赛道任务",
+            "domain": "仿真＋真机",
+            "items": [
+              {
+                "name": "插销入孔",
+                "goal": "通过接触判断形状和位置，将插销插入目标孔。",
+                "scoring": "任务成功率；与开锁任务合成赛道 1 成绩。"
+              },
+              {
+                "name": "开锁",
+                "goal": "调整钥匙位置和转动以完成开锁。",
+                "scoring": "按开锁完成条件记成功，测试未见钥匙形状。"
+              },
+              {
+                "name": "视觉触觉融合插入",
+                "goal": "根据深度画面和触觉判断插销对应孔，再完成插入。",
+                "scoring": "成功率乘 100；真机与仿真阶段分开。"
+              },
+              {
+                "name": "传感器结构设计",
+                "goal": "改变 GelSight Mini 软胶形状和表面标记布局。",
+                "scoring": "操作成功率与结构主观评分各占一半。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2411.12503v1",
+            "locator": "§III–V；官方赛道规则"
+          }
+        ],
+        "source": "https://arxiv.org/html/2411.12503v1",
+        "using": []
+      },
+      "reason": "作者提供独立赛道、操作任务、观测接口、评分规则与统一真机评测入口。",
+      "protocol": "操作赛道先按仿真成功率排名，晋级模型由组织方在真实平台上测试。；赛道 1：插入与开锁成功率各乘 50 后相加；赛道 2：成功率乘 100；赛道 3：成功率乘 50 加结构主观评分乘 50。；改变插销、孔或钥匙形状测试新物体；完整测试次数和参数以官方评测脚本、阶段规则为准。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/cyliizyz/ManiSkill-ViTac2025",
+      "scope": "2025 年版本基于 SAPIEN＋IPC；不等同于普通 ManiSkill3，也不与 2026 年真机比赛混写。",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2411.12503v1",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "作者提出统一任务与评分",
+      "newlyCollected": true,
+      "metricKey": "maniskill-vitac-2025"
+    },
+    {
+      "id": "robotwin",
+      "name": "RoboTwin 2.0（通用基准）",
+      "resourceType": "upstream",
+      "typeLabel": "相关通用基准",
+      "kind": "相关通用基准",
+      "domain": "仿真",
+      "focus": "双臂操作通用基准；ME-Dex 为其中任务增加触觉数据。",
+      "detail": "RoboTwin 2.0 提供 50 项操作任务、示范生成和场景随机变化机制。这里保留通用基准身份，并单独关联 ME-Dex 的触觉扩展。",
+      "source": "https://arxiv.org/html/2506.18088v2",
+      "introducedBy": {
+        "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+        "source": "https://arxiv.org/html/2506.18088v2",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "双臂操作通用基准；ME-Dex 为其中任务增加触觉数据。",
+        "introduction": [
+          "RoboTwin 2.0 提供 50 项操作任务、示范生成和场景随机变化机制。这里保留通用基准身份，并单独关联 ME-Dex 的触觉扩展。"
+        ],
+        "inputs": "图像、机器人状态与语言任务条件；ME-Dex 版本另加仿真触觉。",
+        "evaluation": [
+          "按各任务成功条件统计成功率；普通与随机变化场景分开。",
+          "ME-Dex 使用全部 50 项任务；普通＋随机场景混合训练与仅普通场景训练分开报告。",
+          "ME-Dex 每项测试次数未统一说明，不从通用榜单反推。"
+        ],
+        "force": "原版不以力反馈控制为核心；ME-Dex 的力观测和触觉置零组单独看。",
+        "relevance": "可参考双臂任务组织和场景变化测试；不据平台为双臂就认定每个任务都需两臂配合。",
+        "taskGroups": [
+          {
+            "title": "任务范围与设置",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "50 项操作任务",
+                "goal": "覆盖抓放、工具使用、物体整理与多步操作等。",
+                "scoring": "各任务由官方程序判断成功；逐项与总体成功率分别看。"
+              },
+              {
+                "name": "普通场景→随机变化场景",
+                "goal": "改变背景、光照、物体或其他场景条件。",
+                "scoring": "同一训练设置在不同测试条件下分别报告成功率。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2506.18088v2",
+            "locator": "任务集合与场景随机化；ME-Dex §4.1–4.2"
+          }
+        ],
+        "source": "https://arxiv.org/html/2506.18088v2",
+        "using": []
+      },
+      "reason": "独立通用操作基准，作为 ME-Dex 触觉扩展的上游任务来源。",
+      "protocol": "按各任务成功条件统计成功率；普通与随机变化场景分开。；ME-Dex 使用全部 50 项任务；普通＋随机场景混合训练与仅普通场景训练分开报告。；ME-Dex 每项测试次数未统一说明，不从通用榜单反推。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/RoboTwin-Platform/RoboTwin",
+      "scope": "通用任务成功率不等于力跟踪精度。",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2506.18088v2",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "通用任务的触觉扩展来源",
+      "newlyCollected": true,
+      "metricKey": "robotwin"
+    },
+    {
+      "id": "dexjoco",
+      "name": "DexJoCo（通用灵巧操作基准）",
+      "resourceType": "upstream",
+      "typeLabel": "相关通用基准",
+      "kind": "相关通用基准",
+      "domain": "仿真",
+      "focus": "MuJoCo 灵巧手操作基准；ME-Dex 在原任务中加入触觉力数据。",
+      "detail": "DexJoCo 提供六项单臂、五项双臂灵巧手任务、示范与模型评测。原基准与 ME-Dex 的触觉增强版本分开记录。",
+      "source": "https://arxiv.org/html/2605.16257v1",
+      "introducedBy": {
+        "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
+        "source": "https://arxiv.org/html/2605.16257v1",
+        "workId": null
+      },
+      "tasks": [],
+      "reading": {
+        "summary": "MuJoCo 灵巧手操作基准；ME-Dex 在原任务中加入触觉力数据。",
+        "introduction": [
+          "DexJoCo 提供六项单臂、五项双臂灵巧手任务、示范与模型评测。原基准与 ME-Dex 的触觉增强版本分开记录。"
+        ],
+        "inputs": "原版以视觉、机器人状态与任务指令为主；ME-Dex 添加仿真触觉。",
+        "evaluation": [
+          "按每个任务的原成功条件计算成功率；比较单任务、多任务与物体／动力学变化。",
+          "ME-Dex 采用 11 项任务的 1,100 条示范，多任务训练后在物体随机变化配置下测试。"
+        ],
+        "force": "ME-Dex 补充触觉力数据；原版任务接触丰富，但不能据此说原版策略都读取力。",
+        "relevance": "与灵巧手、双臂任务设计相关；不直接作为夹爪腕部六维力基准。",
+        "taskGroups": [
+          {
+            "title": "单臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "钉钉子",
+                "goal": "用锤子完成钉入。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "点击鼠标",
+                "goal": "移动并点击鼠标。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "提桶",
+                "goal": "抓住并提起桶。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "夹钳",
+                "goal": "抓取并挤压夹钳。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "折眼镜",
+                "goal": "操作眼镜铰链。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "浇花",
+                "goal": "用容器完成浇水。",
+                "scoring": "按原任务完成条件判断成功。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2605.16257v1",
+            "locator": "§3.3；附录 B"
+          },
+          {
+            "title": "双臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "解锁平板",
+                "goal": "抓持平板并操作按钮。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "汉诺塔",
+                "goal": "配合完成环的转移。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "装配",
+                "goal": "配合完成部件插入装配。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "微波炉操作",
+                "goal": "操作微波炉并放入目标物体。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "拍照",
+                "goal": "配合抓持相机并按键。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2605.16257v1",
+            "locator": "§3.3；附录 B；ME-Dex Table 3"
+          }
+        ],
+        "source": "https://arxiv.org/html/2605.16257v1",
+        "using": []
+      },
+      "reason": "独立灵巧操作基准，作为 ME-Dex 添加触觉的任务与轨迹来源。",
+      "protocol": "按每个任务的原成功条件计算成功率；比较单任务、多任务与物体／动力学变化。；ME-Dex 采用 11 项任务的 1,100 条示范，多任务训练后在物体随机变化配置下测试。",
+      "release": "官方论文、项目或代码入口见下方；具体资源范围按各工作发布情况说明。",
+      "resourceUrl": "https://github.com/brave-eai/dexjoco",
+      "scope": "原版输入与触觉扩展输入分开。",
+      "evidence": [
+        {
+          "url": "https://arxiv.org/html/2605.16257v1",
+          "locator": "方法、实验设置与评测说明"
+        }
+      ],
+      "auditChecked": "2026-10-22",
+      "verdict": "通用任务的触觉扩展来源",
+      "newlyCollected": true,
+      "metricKey": "dexjoco"
+    }
+  ],
+  "adoptions": {
+    "libero": [
+      "visible-touch"
+    ],
+    "suite-c11": [
+      "me-dex"
+    ],
+    "robotwin": [
+      "me-dex"
+    ],
+    "dexjoco": [
+      "me-dex"
+    ],
+    "maniskill-vitac-2025": [
+      "tactildm"
+    ],
+    "visible-touch-eval": [
+      "visible-touch"
+    ],
+    "me-dex-eval": [
+      "me-dex"
+    ],
+    "tactildm-eval": [
+      "tactildm"
+    ]
+  },
+  "readingOverrides": {
+    "libero": {
+      "summary": "通用语言条件操作基准；Tabero 与 Visible Touch 分别在其基础上增加触觉或接触信息。",
+      "introduction": [
+        "LIBERO 提供空间、物体、目标与长流程任务组织、示范和任务成功判定。",
+        "Visible Touch 保留 LIBERO 任务并增加接触信息；Tabero 将场景和轨迹迁到 Isaac Lab，二者不是同一种改造。"
+      ],
+      "inputs": "默认图像、机器人状态与任务条件；触觉／力输入由对应后续工作扩展。",
+      "evaluation": [
+        "按各任务的完成条件统计成功率；不同任务组分开报告。",
+        "Visible Touch 在 BC-Transformer 主实验中采用 3 次独立训练、每项任务 20 次测试；miniVLA 另有配置。",
+        "Tabero 迁移后的控制、夹爪和接触观测变化，需要按衍生评测解读。"
+      ],
+      "force": "通用任务评分不专门衡量力；后续工作可增加力观测或过程指标。",
+      "relevance": "可参考任务组织与共用测试协议；腕部六维力和夹持力指标需要另行设计。",
+      "taskGroups": [
+        {
+          "title": "LIBERO 操作与任务泛化",
+          "domain": "仿真",
+          "items": [
+            {
+              "name": "空间关系（Spatial）",
+              "goal": "根据指令区分空间位置并操作指定物体。",
+              "scoring": "按 LIBERO 对应任务成功条件判定；报告该组成功率。"
+            },
+            {
+              "name": "物体变化（Object）",
+              "goal": "在不同物体上完成对应操作。",
+              "scoring": "按原任务成功条件统计；比较不同输入方式。"
+            },
+            {
+              "name": "目标变化（Goal）",
+              "goal": "按指令实现不同操作目标。",
+              "scoring": "保留原任务完成要求，报告成功率。"
+            },
+            {
+              "name": "长流程（Long／LIBERO-10）",
+              "goal": "连续完成包含多次抓取或操作步骤的任务。",
+              "scoring": "整个任务达到原成功条件才记成功；不能把中间步骤完成当作整任务成功。"
+            }
+          ],
+          "source": "https://arxiv.org/html/2609.14156v1",
+          "locator": "§4.1；Figure 3；附录 C–D"
+        }
+      ],
+      "source": "https://arxiv.org/abs/2306.03310",
+      "using": []
+    }
+  },
+  "resourceNotes": {
+    "libero": {
+      "detail": "LIBERO 提供空间、物体、目标与长流程任务组织、示范和任务成功判定。",
+      "reason": "独立通用基准；本目录关联 Tabero 的迁移来源与 Visible Touch 的接触信息扩展。"
+    }
+  }
+}

@@ -1,0 +1,4520 @@
+{
+  "description": "评测方式按任务实际评估过程标注；真实传感器采集的数据仍可用于离线预测，仿真训练也不等于该项在仿真中闭环评测。",
+  "works": {
+    "W01": {
+      "tasks": {
+        "W01-e01": {
+          "name": "按瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1"
+        },
+        "W01-e02": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1"
+        },
+        "W01-e03": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1"
+        },
+        "W01-e04": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1"
+        },
+        "W01-e05": {
+          "name": "削黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1"
+        }
+      }
+    },
+    "W02": {
+      "tasks": {
+        "W02-e01": {
+          "name": "按瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6"
+        },
+        "W02-e02": {
+          "name": "清洁花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6"
+        },
+        "W02-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6"
+        },
+        "W02-e04": {
+          "name": "取盘",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6"
+        },
+        "W02-e05": {
+          "name": "齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6"
+        }
+      }
+    },
+    "W03": {
+      "tasks": {
+        "W03-e01": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4"
+        },
+        "W03-e02": {
+          "name": "齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4"
+        },
+        "W03-e03": {
+          "name": "翻盒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4"
+        },
+        "W03-e04": {
+          "name": "擦板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4"
+        }
+      }
+    },
+    "W04": {
+      "tasks": {
+        "W04-e01": {
+          "name": "叠围巾",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e02": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e03": {
+          "name": "按按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e04": {
+          "name": "按洗手液",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e05": {
+          "name": "插座插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e06": {
+          "name": "扫珠入簸箕",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        },
+        "W04-e07": {
+          "name": "Lego排列",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F"
+        }
+      }
+    },
+    "W05": {
+      "tasks": {
+        "W05-e01": {
+          "name": "急停按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8"
+        },
+        "W05-e02": {
+          "name": "充电插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8"
+        },
+        "W05-e03": {
+          "name": "旋转窗",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8"
+        },
+        "W05-e04": {
+          "name": "恒力擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8"
+        }
+      }
+    },
+    "W06": {
+      "tasks": {
+        "W06-e01": {
+          "name": "重量分拣",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e02": {
+          "name": "削黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e03": {
+          "name": "按泵头",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e04": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e05": {
+          "name": "切黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e06": {
+          "name": "空／满罐反事实力交换（离线）",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        },
+        "W06-e07": {
+          "name": "削皮接触窗口预测（离线）",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III"
+        }
+      }
+    },
+    "W07": {
+      "tasks": {
+        "W07-e01": {
+          "name": "单臂翻物",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e02": {
+          "name": "单臂USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e03": {
+          "name": "单臂开柜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e04": {
+          "name": "单臂按键",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e05": {
+          "name": "单臂擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e06": {
+          "name": "双臂拔插头",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e07": {
+          "name": "双臂插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e08": {
+          "name": "双臂开抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        },
+        "W07-e09": {
+          "name": "双臂擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7"
+        }
+      }
+    },
+    "W08": {
+      "tasks": {
+        "W08-e01": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II"
+        },
+        "W08-e02": {
+          "name": "环套柱",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II"
+        },
+        "W08-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II"
+        }
+      }
+    },
+    "W09": {
+      "tasks": {
+        "W09-e01": {
+          "name": "USB插拔",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6"
+        },
+        "W09-e02": {
+          "name": "充电器插拔",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6"
+        },
+        "W09-e03": {
+          "name": "物理常识抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6"
+        },
+        "W09-e04": {
+          "name": "白板／黑板擦拭",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6"
+        }
+      }
+    },
+    "W10": {
+      "tasks": {
+        "W10-e01": {
+          "name": "管插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e02": {
+          "name": "镊子提重",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e03": {
+          "name": "充电宝拔出",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e04": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e05": {
+          "name": "果冻切片",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e06": {
+          "name": "重部件提起",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e07": {
+          "name": "夹具食物抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e08": {
+          "name": "巧克力抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        },
+        "W10-e09": {
+          "name": "薯片抓取（附录补充任务）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)"
+        }
+      }
+    },
+    "W11": {
+      "tasks": {
+        "W11-e01": {
+          "name": "字母汤罐放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e02": {
+          "name": "奶油奶酪放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e03": {
+          "name": "沙拉酱放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e04": {
+          "name": "烧烤酱放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e05": {
+          "name": "番茄酱放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e06": {
+          "name": "黄油放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e07": {
+          "name": "牛奶放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e08": {
+          "name": "巧克力布丁放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        },
+        "W11-e09": {
+          "name": "橙汁放入篮筐",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D"
+        }
+      }
+    },
+    "W12": {
+      "tasks": {
+        "W12-e01": {
+          "name": "杯子入架",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2"
+        },
+        "W12-e02": {
+          "name": "搭扣锁定",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2"
+        },
+        "W12-e03": {
+          "name": "鸡蛋搬运放置",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2"
+        },
+        "W12-e04": {
+          "name": "搭扣盒全流程",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2"
+        }
+      }
+    },
+    "W13": {
+      "tasks": {
+        "W13-e01": {
+          "name": "按键",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e02": {
+          "name": "充电器插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e03": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e04": {
+          "name": "插座拔出",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e05": {
+          "name": "门把转动",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e06": {
+          "name": "抓放瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e07": {
+          "name": "倒液",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e08": {
+          "name": "堆方块",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e09": {
+          "name": "推到目标",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        },
+        "W13-e10": {
+          "name": "开抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort"
+        }
+      }
+    },
+    "W14": {
+      "tasks": {
+        "W14-e01": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV"
+        },
+        "W14-e02": {
+          "name": "急停按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV"
+        },
+        "W14-e03": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV"
+        }
+      }
+    },
+    "W15": {
+      "tasks": {
+        "W15-e01": {
+          "name": "拆杯",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2"
+        },
+        "W15-e02": {
+          "name": "鸡蛋抓放",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2"
+        },
+        "W15-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2"
+        },
+        "W15-e04": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2"
+        }
+      }
+    },
+    "W16": {
+      "tasks": {
+        "W16-e01": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B"
+        },
+        "W16-e02": {
+          "name": "Pivot",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B"
+        },
+        "W16-e03": {
+          "name": "Cup Dispense",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B"
+        },
+        "W16-e04": {
+          "name": "Pick & Place",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B"
+        }
+      }
+    },
+    "W17": {
+      "tasks": {
+        "W17-e01": {
+          "name": "盖章",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e02": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e03": {
+          "name": "按泵瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e04": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e05": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e06": {
+          "name": "擦花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        },
+        "W17-e07": {
+          "name": "削黄瓜（定性补充）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E"
+        }
+      }
+    },
+    "W18": {
+      "tasks": {
+        "W18-e01": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4"
+        },
+        "W18-e02": {
+          "name": "削黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4"
+        },
+        "W18-e03": {
+          "name": "翻盒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4"
+        },
+        "W18-e04": {
+          "name": "擦花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4"
+        }
+      }
+    },
+    "E01": {
+      "tasks": {
+        "E01-e01": {
+          "name": "桌面抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8"
+        },
+        "E01-e02": {
+          "name": "购物袋内抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8"
+        },
+        "E01-e03": {
+          "name": "声音按钮按压",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8"
+        }
+      }
+    },
+    "E02": {
+      "tasks": {
+        "E02-e01": {
+          "name": "离线插入动作预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.1；Tables1、4"
+        },
+        "E02-e02": {
+          "name": "仿真：Square方形插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e03": {
+          "name": "真机：Square方形插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e04": {
+          "name": "仿真：Triangle三角插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e05": {
+          "name": "真机：Triangle三角插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e06": {
+          "name": "仿真：Hexagon六角插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e07": {
+          "name": "真机：Hexagon六角插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e08": {
+          "name": "仿真：Pentagon五角插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e09": {
+          "name": "真机：Pentagon五角插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e10": {
+          "name": "仿真：Round圆形插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        },
+        "E02-e11": {
+          "name": "真机：Round圆形插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7"
+        }
+      }
+    },
+    "E03": {
+      "tasks": {
+        "E03-e01": {
+          "name": "UniVTAC仿真：Lift Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e02": {
+          "name": "UniVTAC仿真：Pull-out Key",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e03": {
+          "name": "UniVTAC仿真：Lift Can",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e04": {
+          "name": "UniVTAC仿真：Put Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e05": {
+          "name": "UniVTAC仿真：Insert Hole",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e06": {
+          "name": "UniVTAC仿真：Insert Tube",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2"
+        },
+        "E03-e07": {
+          "name": "真机：Draw Balloon",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3"
+        },
+        "E03-e08": {
+          "name": "真机：Fix Hand",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3"
+        },
+        "E03-e09": {
+          "name": "真机：Twist Cap",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3"
+        },
+        "E03-e10": {
+          "name": "真机：Flip Book",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3"
+        },
+        "E03-e11": {
+          "name": "真机：Wipe Dish",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3"
+        },
+        "E03-e12": {
+          "name": "未见传感器真机：Insert Hanoi",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5"
+        },
+        "E03-e13": {
+          "name": "未见传感器真机：Insert USB",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5"
+        },
+        "E03-e14": {
+          "name": "未见传感器真机：Wipe Board",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5"
+        }
+      }
+    },
+    "E04": {
+      "tasks": {
+        "E04-e01": {
+          "name": "NeoReal真机：Cup Stacking",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e02": {
+          "name": "NeoReal真机：Fruit Collection",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e03": {
+          "name": "NeoReal真机：Board Wiping",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e04": {
+          "name": "NeoReal真机：Bottle Standing",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e05": {
+          "name": "NeoReal真机：Towel Folding",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e06": {
+          "name": "NeoReal真机：Socket Plugging",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e07": {
+          "name": "NeoReal真机：Board Insertion",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e08": {
+          "name": "NeoReal真机：Cardboard Box Folding",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e09": {
+          "name": "NeoReal真机：Bag Packing",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E"
+        },
+        "E04-e10": {
+          "name": "UniVTAC仿真：Lift Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e11": {
+          "name": "UniVTAC仿真：Pull-out Key",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e12": {
+          "name": "UniVTAC仿真：Lift Can",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e13": {
+          "name": "UniVTAC仿真：Put Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e14": {
+          "name": "UniVTAC仿真：Insert Hole",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e15": {
+          "name": "UniVTAC仿真：Insert Tube",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e16": {
+          "name": "UniVTAC仿真：Insert HDMI",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e17": {
+          "name": "UniVTAC仿真：Grasp Classify",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1"
+        },
+        "E04-e18": {
+          "name": "NeoSim仿真：Pour Ball",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e19": {
+          "name": "NeoSim仿真：Unplug and Plug Charger",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e20": {
+          "name": "NeoSim仿真：Plug USB",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e21": {
+          "name": "NeoSim仿真：Grasp Chip",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e22": {
+          "name": "NeoSim仿真：Insert Screw",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e23": {
+          "name": "NeoSim仿真：Place Gears",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e24": {
+          "name": "NeoSim仿真：Unstack Bowl",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e25": {
+          "name": "NeoSim仿真：Cup Handover",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e26": {
+          "name": "NeoSim仿真：Stack Cups",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e27": {
+          "name": "NeoSim仿真：Stack Plates",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e28": {
+          "name": "NeoSim仿真：Stack Bowls",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e29": {
+          "name": "NeoSim仿真：Unstack Cup",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2"
+        },
+        "E04-e30": {
+          "name": "ALTER真机复评：Towel Folding",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.4；Appendix F；Figures9、12–13"
+        },
+        "E04-e31": {
+          "name": "ALTER真机复评：Bag Packing",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.4；Appendix F；Figures9、12–13"
+        },
+        "E04-e32": {
+          "name": "ALTER真机复评：Cardboard Box Folding",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.4；Appendix F；Figures9、12–13"
+        }
+      }
+    },
+    "E05": {
+      "tasks": {
+        "E05-e01": {
+          "name": "Flip Page",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 1"
+        },
+        "E05-e02": {
+          "name": "Transfer Egg",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 2"
+        },
+        "E05-e03": {
+          "name": "Wipe Plate",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 3"
+        },
+        "E05-e04": {
+          "name": "Apply Toothpaste",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 4"
+        },
+        "E05-e05": {
+          "name": "Split Cup",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 5"
+        },
+        "E05-e06": {
+          "name": "Sort Mahjong",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 6"
+        },
+        "E05-e07": {
+          "name": "Open Lock",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 7"
+        },
+        "E05-e08": {
+          "name": "Refill Tablet",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 8"
+        },
+        "E05-e09": {
+          "name": "Acid-Base Neutralization",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 9"
+        },
+        "E05-e10": {
+          "name": "Extract Card",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 10"
+        },
+        "E05-e11": {
+          "name": "Deal Poker",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 11"
+        },
+        "E05-e12": {
+          "name": "Screw Bulb",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 12"
+        }
+      }
+    },
+    "E06": {
+      "tasks": {
+        "E06-e01": {
+          "name": "Earbud flipping",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A–D；Appendix E"
+        },
+        "E06-e02": {
+          "name": "Stacked-book retrieval",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A–D；Appendix E"
+        },
+        "E06-e03": {
+          "name": "Postcard retrieval",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A–D；Appendix E"
+        },
+        "E06-e04": {
+          "name": "Multi-object grasping",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A–D；Appendix E"
+        }
+      }
+    },
+    "E07": {
+      "tasks": {
+        "E07-e01": {
+          "name": "Constraint-locked Disassembly Task 1",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A–E；Figures3–6；TablesI–III"
+        },
+        "E07-e02": {
+          "name": "Constraint-locked Disassembly Task 2",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A–E；Figures3–6；TablesI–III"
+        },
+        "E07-e03": {
+          "name": "Constraint-locked Disassembly Task 3",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A–E；Figures3–6；TablesI–III"
+        },
+        "E07-e04": {
+          "name": "Constraint-locked Disassembly Task 4",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A–E；Figures3–6；TablesI–III"
+        },
+        "E07-e05": {
+          "name": "In-box Picking",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A2、IV-C2"
+        }
+      }
+    },
+    "E08": {
+      "tasks": {
+        "E08-e01": {
+          "name": "移动开门（无闭门器）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup"
+        },
+        "E08-e02": {
+          "name": "移动开门（带闭门器）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup"
+        },
+        "E08-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup"
+        },
+        "E08-e04": {
+          "name": "外力估计与接触识别",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5 Q1；Table 1"
+        }
+      }
+    },
+    "E09": {
+      "tasks": {
+        "E09-e01": {
+          "name": "搬箱",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目 Closed-loop evaluation／Hardware trials"
+        },
+        "E09-e02": {
+          "name": "架上推箱",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目 Closed-loop evaluation／Hardware trials"
+        },
+        "E09-e03": {
+          "name": "表面擦拭",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目 Closed-loop evaluation／Hardware trials"
+        }
+      }
+    },
+    "E10": {
+      "tasks": {
+        "E10-e01": {
+          "name": "腹主动脉矢状长轴切面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1"
+        },
+        "E10-e02": {
+          "name": "剑突下横切面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1"
+        },
+        "E10-e03": {
+          "name": "右肋下斜切经右肝穹隆切面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1"
+        },
+        "E10-e04": {
+          "name": "左肾长轴切面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1"
+        },
+        "E10-e05": {
+          "name": "左肾经肾门横切面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1"
+        }
+      }
+    },
+    "E11": {
+      "tasks": {
+        "E11-e01": {
+          "name": "方孔插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV"
+        },
+        "E11-e02": {
+          "name": "三角孔插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV"
+        },
+        "E11-e03": {
+          "name": "圆孔插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV"
+        },
+        "E11-e04": {
+          "name": "六角孔插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV"
+        },
+        "E11-e05": {
+          "name": "单方销离线动作预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-A/B；Table I"
+        },
+        "E11-e06": {
+          "name": "多孔形离线动作泛化",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-B；Table II"
+        }
+      }
+    },
+    "E12": {
+      "tasks": {
+        "E12-e01": {
+          "name": "擦拭",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        },
+        "E12-e02": {
+          "name": "削皮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        },
+        "E12-e03": {
+          "name": "切割",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        },
+        "E12-e04": {
+          "name": "装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        },
+        "E12-e05": {
+          "name": "抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        },
+        "E12-e06": {
+          "name": "手内调姿",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "§V-A–B；Table II；Fig.10"
+        }
+      }
+    },
+    "B01": {
+      "tasks": {
+        "B01-e01": {
+          "name": "Weight Sort（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e02": {
+          "name": "CoM Sort（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e03": {
+          "name": "Faucet Turn（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e04": {
+          "name": "Faucet Direction（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e05": {
+          "name": "Stove Turn（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e06": {
+          "name": "Stove Press（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e07": {
+          "name": "Drawer Pull（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e08": {
+          "name": "Nut Thread（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§III-B；§V-A；Table I；Appendix A–C"
+        },
+        "B01-e09": {
+          "name": "Weight Sort（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§V-E；Table II；Appendix C-B"
+        },
+        "B01-e10": {
+          "name": "Plate Retrieve（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§V-E；Table II；Appendix C-B"
+        },
+        "B01-e11": {
+          "name": "Stamp Press（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§V-E；Table II；Appendix C-B"
+        },
+        "B01-e12": {
+          "name": "Plug Insert（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§V-E；Table II；Appendix C-B"
+        },
+        "B01-e13": {
+          "name": "Block Insert（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19604v1",
+          "locator": "§V-E；Table II；Appendix C-B"
+        }
+      }
+    },
+    "X01": {
+      "tasks": {
+        "X01-e01": {
+          "name": "UniVTAC仿真：Lift Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e02": {
+          "name": "UniVTAC仿真：Pull-out Key",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e03": {
+          "name": "UniVTAC仿真：Lift Can",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e04": {
+          "name": "UniVTAC仿真：Put Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e05": {
+          "name": "UniVTAC仿真：Insert Hole",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e06": {
+          "name": "UniVTAC仿真：Insert Tube",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6"
+        },
+        "X01-e07": {
+          "name": "真机：Play Mahjong",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2"
+        },
+        "X01-e08": {
+          "name": "真机：Wipe Board",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2"
+        },
+        "X01-e09": {
+          "name": "真机：Pick Up Chips",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2"
+        },
+        "X01-e10": {
+          "name": "真机：Insert USB",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2"
+        }
+      }
+    },
+    "P01": {
+      "tasks": {
+        "P01-e01": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1"
+        },
+        "P01-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1"
+        },
+        "P01-e03": {
+          "name": "按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1"
+        },
+        "P01-e04": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1"
+        },
+        "P01-e05": {
+          "name": "钥匙插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1"
+        }
+      }
+    },
+    "P02": {
+      "tasks": {
+        "P02-e01": {
+          "name": "实验室移液",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e02": {
+          "name": "试管旋盖",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e03": {
+          "name": "微量离心管翻盖",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e04": {
+          "name": "系鞋带",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e05": {
+          "name": "洗牌",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e06": {
+          "name": "多物体抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e07": {
+          "name": "使用螺丝刀",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e08": {
+          "name": "弹竖琴",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e09": {
+          "name": "敲木琴",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        },
+        "P02-e10": {
+          "name": "移液器调量",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10"
+        }
+      }
+    },
+    "P03": {
+      "tasks": {
+        "P03-e01": {
+          "name": "果酱塑料罐抓放",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I"
+        },
+        "P03-e02": {
+          "name": "华夫饼抓放",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I"
+        },
+        "P03-e03": {
+          "name": "鸡蛋双臂搬放",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I"
+        }
+      }
+    },
+    "P04": {
+      "tasks": {
+        "P04-e01": {
+          "name": "移液器吸头安装",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6"
+        },
+        "P04-e02": {
+          "name": "双臂吸液",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6"
+        },
+        "P04-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6"
+        }
+      }
+    },
+    "P05": {
+      "tasks": {
+        "P05-e01": {
+          "name": "瓶子扶正",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.04825v1",
+          "locator": "§5.1；Table2；Appendix A.3–A.4"
+        },
+        "P05-e02": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.04825v1",
+          "locator": "§5.1；Table2；Appendix A.3–A.4"
+        },
+        "P05-e03": {
+          "name": "倒液",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.04825v1",
+          "locator": "§5.1；Table2；Appendix A.3–A.4"
+        },
+        "P05-e04": {
+          "name": "D形插销插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.04825v1",
+          "locator": "§5.1；Table2；Appendix A.3–A.4"
+        }
+      }
+    },
+    "T01": {
+      "tasks": {
+        "T01-e01": {
+          "name": "杯子含水判断与放置",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1–4.5；Tables1–2"
+        },
+        "T01-e02": {
+          "name": "海绵选择与擦盘子墨迹",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1–4.5；Tables1–2"
+        },
+        "T01-e03": {
+          "name": "芒果选择与削皮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1–4.5；Tables1–2"
+        }
+      }
+    },
+    "T02": {
+      "tasks": {
+        "T02-e01": {
+          "name": "夹爪抓放4物体",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e02": {
+          "name": "灵巧手抓放及未见物体",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e03": {
+          "name": "方块插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e04": {
+          "name": "三角块插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e05": {
+          "name": "圆块插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e06": {
+          "name": "软物体泛化",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4"
+        },
+        "T02-e07": {
+          "name": "离线状态预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3消融实验"
+        }
+      }
+    },
+    "T03": {
+      "tasks": {
+        "T03-e01": {
+          "name": "拉开包拉链",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        },
+        "T03-e02": {
+          "name": "盖章",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        },
+        "T03-e03": {
+          "name": "擦花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        },
+        "T03-e04": {
+          "name": "拧盖",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        },
+        "T03-e05": {
+          "name": "胡萝卜抓取放置",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        },
+        "T03-e06": {
+          "name": "开抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3"
+        }
+      }
+    },
+    "T04": {
+      "tasks": {
+        "T04-e01": {
+          "name": "仿真：重量分类",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e02": {
+          "name": "仿真：硬度分类",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e03": {
+          "name": "仿真：粗糙度分类",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e04": {
+          "name": "仿真：粗糙度引导再抓取",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e05": {
+          "name": "真机：粗糙度分类",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e06": {
+          "name": "仿真：空罐选择",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e07": {
+          "name": "真机：空罐选择",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e08": {
+          "name": "仿真：薯片无损抓取",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e09": {
+          "name": "真机：薯片无损抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e10": {
+          "name": "仿真：齿轮装配",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e11": {
+          "name": "真机：齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e12": {
+          "name": "仿真：拉抽屉",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e13": {
+          "name": "真机：拉抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e14": {
+          "name": "仿真：USB插入",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e15": {
+          "name": "真机：USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e16": {
+          "name": "仿真：块插入v1",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e17": {
+          "name": "真机：块插入v1",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e18": {
+          "name": "仿真：块插入v2",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        },
+        "T04-e19": {
+          "name": "真机：块插入v2",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB"
+        }
+      }
+    },
+    "T05": {
+      "tasks": {
+        "T05-e01": {
+          "name": "电源插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results"
+        },
+        "T05-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results"
+        },
+        "T05-e03": {
+          "name": "试管放置",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results"
+        }
+      }
+    },
+    "T06": {
+      "tasks": {
+        "T06-e01": {
+          "name": "Peg-in-Hole",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5"
+        },
+        "T06-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5"
+        },
+        "T06-e03": {
+          "name": "齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5"
+        },
+        "T06-e04": {
+          "name": "工具稳定支撑",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5"
+        }
+      }
+    },
+    "T07": {
+      "tasks": {
+        "T07-e01": {
+          "name": "UniVTAC仿真：Lift Bottle",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e02": {
+          "name": "UniVTAC仿真：Lift Can",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e03": {
+          "name": "UniVTAC仿真：Put Bottle in Shelf",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e04": {
+          "name": "UniVTAC仿真：Grasp Classify",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e05": {
+          "name": "UniVTAC仿真：Insert Hole",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e06": {
+          "name": "UniVTAC仿真：Insert Tube",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e07": {
+          "name": "UniVTAC仿真：Insert HDMI",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e08": {
+          "name": "UniVTAC仿真：Pull Out Key",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 UniVTAC Benchmark；Simulation Experiments"
+        },
+        "T07-e09": {
+          "name": "真机迁移：插管",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://univtac.github.io/",
+          "locator": "官网 Real-World Experiments"
+        },
+        "T07-e10": {
+          "name": "真机迁移：USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.10093",
+          "locator": "§IV-B；Table IV"
+        },
+        "T07-e11": {
+          "name": "真机迁移：扶瓶直立",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.10093",
+          "locator": "§IV-B；Table IV"
+        }
+      }
+    },
+    "T08": {
+      "tasks": {
+        "T08-e01": {
+          "name": "三轴力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        },
+        "T08-e02": {
+          "name": "滑移检测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        },
+        "T08-e03": {
+          "name": "SE(2)姿态变化估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        },
+        "T08-e04": {
+          "name": "抓取稳定预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        },
+        "T08-e05": {
+          "name": "纺织物识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        },
+        "T08-e06": {
+          "name": "Bead Maze",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.24090v1",
+          "locator": "§5–7；Appendix D.3–D.9"
+        }
+      }
+    },
+    "T09": {
+      "tasks": {
+        "T09-e01": {
+          "name": "材质分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2401.18084v1",
+          "locator": "§4.1–4.2；Tables2–3"
+        },
+        "T09-e02": {
+          "name": "抓取稳定性预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2401.18084v1",
+          "locator": "§4.1–4.2；Tables2–3"
+        },
+        "T09-e03": {
+          "name": "零样本触觉理解",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2401.18084v1",
+          "locator": "§4.1–4.2；Tables2–3"
+        },
+        "T09-e04": {
+          "name": "触觉问答",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2401.18084v1",
+          "locator": "§4.1–4.2；Tables2–3"
+        }
+      }
+    },
+    "T10": {
+      "tasks": {
+        "T10-e01": {
+          "name": "TAG材质分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "Experiments；Tables1–2；AppendixA"
+        },
+        "T10-e02": {
+          "name": "Feel抓取稳定预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "Experiments；Tables1–2；AppendixA"
+        },
+        "T10-e03": {
+          "name": "ObjectFolder1.0材质分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "Experiments；Tables1–2；AppendixA"
+        },
+        "T10-e04": {
+          "name": "ObjectFolder2.0材质分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "Experiments；Tables1–2；AppendixA"
+        },
+        "T10-e05": {
+          "name": "跨传感器接触特征对齐（定性分析）",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "Experiments；Tables1–2；AppendixA"
+        },
+        "T10-e06": {
+          "name": "真机倾倒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.12191v1",
+          "locator": "动态感知实验；Table4；Appendix A.8"
+        }
+      }
+    },
+    "T11": {
+      "tasks": {
+        "T11-e01": {
+          "name": "硬度描述",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2405.02794v1",
+          "locator": "官网 Overview；Scenario Reasoning；论文Experiments"
+        },
+        "T11-e02": {
+          "name": "粗糙度描述",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2405.02794v1",
+          "locator": "官网 Overview；Scenario Reasoning；论文Experiments"
+        },
+        "T11-e03": {
+          "name": "凹凸描述",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2405.02794v1",
+          "locator": "官网 Overview；Scenario Reasoning；论文Experiments"
+        },
+        "T11-e04": {
+          "name": "物理属性推理",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2405.02794v1",
+          "locator": "官网 Overview；Scenario Reasoning；论文Experiments"
+        },
+        "T11-e05": {
+          "name": "场景常识问答",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2405.02794v1",
+          "locator": "官网 Overview；Scenario Reasoning；论文Experiments"
+        }
+      }
+    },
+    "T12": {
+      "tasks": {
+        "T12-e01": {
+          "name": "开放词表语义分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2402.13232v1",
+          "locator": "官网 Results；论文Experiments"
+        },
+        "T12-e02": {
+          "name": "触觉文本生成",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2402.13232v1",
+          "locator": "官网 Results；论文Experiments"
+        },
+        "T12-e03": {
+          "name": "触觉视觉对齐",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2402.13232v1",
+          "locator": "官网 Results；论文Experiments"
+        },
+        "T12-e04": {
+          "name": "触觉语言对齐",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2402.13232v1",
+          "locator": "官网 Results；论文Experiments"
+        }
+      }
+    },
+    "T13": {
+      "tasks": {
+        "T13-e01": {
+          "name": "材质识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e02": {
+          "name": "物体识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e03": {
+          "name": "触觉图像细节丰富程度预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e04": {
+          "name": "织物属性预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e05": {
+          "name": "帧间3D位姿变化",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e06": {
+          "name": "帧间6D位姿变化",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；FoTa下游任务表"
+        },
+        "T13-e07": {
+          "name": "PCB开关插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；官网 Precision electronics insertion"
+        },
+        "T13-e08": {
+          "name": "USB模块插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；官网 Precision electronics insertion"
+        },
+        "T13-e09": {
+          "name": "VGA接口插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.13640v1",
+          "locator": "§5；官网 Precision electronics insertion"
+        }
+      }
+    },
+    "T14": {
+      "tasks": {
+        "T14-e01": {
+          "name": "材质识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2211.12498v1",
+          "locator": "官网 Applications；论文Experiments/Table1"
+        },
+        "T14-e02": {
+          "name": "触觉引导图像风格化",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2211.12498v1",
+          "locator": "官网 Applications；论文Experiments/Table1"
+        },
+        "T14-e03": {
+          "name": "未来触觉帧预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2211.12498v1",
+          "locator": "官网 Applications；论文Experiments/Table1"
+        }
+      }
+    },
+    "T15": {
+      "tasks": {
+        "T15-e01": {
+          "name": "USB线缆插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2403.11898v2",
+          "locator": "§IV-A/B；Fig7；§III-C"
+        },
+        "T15-e02": {
+          "name": "细长方块堆叠",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2403.11898v2",
+          "locator": "§IV-A/B；Fig7；§III-C"
+        },
+        "T15-e03": {
+          "name": "立方块堆叠",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2403.11898v2",
+          "locator": "§IV-A/B；Fig7；§III-C"
+        }
+      }
+    },
+    "T16": {
+      "tasks": {
+        "T16-e01": {
+          "name": "电源插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        },
+        "T16-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        },
+        "T16-e03": {
+          "name": "刷卡",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        },
+        "T16-e04": {
+          "name": "钥匙插锁",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        },
+        "T16-e05": {
+          "name": "拿面包",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5"
+        }
+      }
+    },
+    "T17": {
+      "tasks": {
+        "T17-e01": {
+          "name": "移液至指定颜色杯",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results"
+        },
+        "T17-e02": {
+          "name": "擦指定颜色白板痕迹",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results"
+        },
+        "T17-e03": {
+          "name": "插入指定孔位",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results"
+        }
+      }
+    },
+    "T18": {
+      "tasks": {
+        "T18-e01": {
+          "name": "Peg Insertion",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results"
+        },
+        "T18-e02": {
+          "name": "Cap Twist",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results"
+        },
+        "T18-e03": {
+          "name": "Vase Wipe",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results"
+        },
+        "T18-e04": {
+          "name": "Book Flip",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results"
+        },
+        "T18-e05": {
+          "name": "11阶段制作汉堡",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Appendix long-horizon task；Table11"
+        }
+      }
+    },
+    "T19": {
+      "tasks": {
+        "T19-e01": {
+          "name": "真机：触觉抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Real-World Manipulation；Fig4；Appendix13；Table7"
+        },
+        "T19-e02": {
+          "name": "真机：擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Real-World Manipulation；Fig4；Appendix13；Table7"
+        },
+        "T19-e03": {
+          "name": "真机：USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Real-World Manipulation；Fig4；Appendix13；Table7"
+        },
+        "T19-e04": {
+          "name": "真机：薯片移动",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Real-World Manipulation；Fig4；Appendix13；Table7"
+        },
+        "T19-e05": {
+          "name": "离线：TAG材质识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e06": {
+          "name": "离线：Cloth识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e07": {
+          "name": "离线：滑移检测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e08": {
+          "name": "离线：Delta-force预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e09": {
+          "name": "离线：三轴力预测(SparshBench)",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e10": {
+          "name": "离线：三轴力预测(ToucHDBench)",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        },
+        "T19-e11": {
+          "name": "离线：物体相对位置与转动变化分类",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2602.09617v1",
+          "locator": "Offline Benchmark Evaluation；Tables1、6、11–13"
+        }
+      }
+    },
+    "T20": {
+      "tasks": {
+        "T20-e01": {
+          "name": "Dense Packing：3D打印受控基座",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2212.03858v1",
+          "locator": "§4.2；Table1"
+        },
+        "T20-e02": {
+          "name": "Pouring",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2212.03858v1",
+          "locator": "§4.3；Table3"
+        },
+        "T20-e03": {
+          "name": "Dense Packing：真实物体装箱",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2212.03858v1",
+          "locator": "§4.2；Figure1；真实物体结果表"
+        }
+      }
+    },
+    "T21": {
+      "tasks": {
+        "T21-e01": {
+          "name": "铲子翻贝果",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.19464v1",
+          "locator": "§4.1–4.4；Figs5–8；Appendix B.2"
+        },
+        "T21-e02": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.19464v1",
+          "locator": "§4.1–4.4；Figs5–8；Appendix B.2"
+        },
+        "T21-e03": {
+          "name": "摇杯判断并倒骰子",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.19464v1",
+          "locator": "§4.1–4.4；Figs5–8；Appendix B.2"
+        },
+        "T21-e04": {
+          "name": "辨魔术贴并绑线",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2406.19464v1",
+          "locator": "§4.1–4.4；Figs5–8；Appendix B.2"
+        }
+      }
+    },
+    "C01": {
+      "tasks": {
+        "C01-e01": {
+          "name": "西葫芦单次削皮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.07554v2",
+          "locator": "§III-C；§IV-A/B；Table I；Figs.5–6"
+        },
+        "C01-e02": {
+          "name": "完整削皮流程的数据采集效率",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.07554v2",
+          "locator": "§III-C；§IV-A/B；Table I；Figs.5–6"
+        }
+      }
+    },
+    "C02": {
+      "tasks": {
+        "C02-e01": {
+          "name": "定向擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5"
+        },
+        "C02-e02": {
+          "name": "任意方向擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5"
+        },
+        "C02-e03": {
+          "name": "削黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5"
+        },
+        "C02-e04": {
+          "name": "切辣椒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5"
+        }
+      }
+    },
+    "C03": {
+      "tasks": {
+        "C03-e01": {
+          "name": "塑料植物插土",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5"
+        },
+        "C03-e02": {
+          "name": "完整摘葡萄入碗",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5"
+        },
+        "C03-e03": {
+          "name": "内六角工具拧紧螺丝",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5"
+        }
+      }
+    },
+    "C04": {
+      "tasks": {
+        "C04-e01": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4"
+        },
+        "C04-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4"
+        },
+        "C04-e03": {
+          "name": "信用卡刷卡",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4"
+        },
+        "C04-e04": {
+          "name": "书架取书",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4"
+        }
+      }
+    },
+    "C05": {
+      "tasks": {
+        "C05-e01": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.08276v3",
+          "locator": "§V-B/D；Tables II–IV；Fig.6"
+        },
+        "C05-e02": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.08276v3",
+          "locator": "§V-B/D；Tables II–IV；Fig.6"
+        },
+        "C05-e03": {
+          "name": "信用卡刷卡",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.08276v3",
+          "locator": "§V-B/D；Tables II–IV；Fig.6"
+        },
+        "C05-e04": {
+          "name": "滑移检测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2409.08276v3",
+          "locator": "§V-B；Tables II–III"
+        },
+        "C05-e05": {
+          "name": "皮肤物理替换",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.08276v3",
+          "locator": "硬件设计及替换实验"
+        }
+      }
+    },
+    "C06": {
+      "tasks": {
+        "C06-e01": {
+          "name": "三轴接触力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.1；Table 1"
+        },
+        "C06-e02": {
+          "name": "摇杆状态估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.1；Table 1"
+        },
+        "C06-e03": {
+          "name": "物体位姿估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.1；Table 1"
+        },
+        "C06-e04": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.2；Fig.7"
+        }
+      }
+    },
+    "C07": {
+      "tasks": {
+        "C07-e01": {
+          "name": "插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Fig.5"
+        },
+        "C07-e02": {
+          "name": "杯状物手内旋转",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Figs.6–7"
+        },
+        "C07-e03": {
+          "name": "物体—动作识别",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Fig.4"
+        },
+        "C07-e04": {
+          "name": "材料—数量估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Fig.4"
+        },
+        "C07-e05": {
+          "name": "法向接触力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Fig.4"
+        }
+      }
+    },
+    "C08": {
+      "tasks": {
+        "C08-e01": {
+          "name": "手内绕z轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V；Figs.6–8；Rotation Around Other Axes"
+        },
+        "C08-e02": {
+          "name": "手内绕x轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V；Figs.6–8；Rotation Around Other Axes"
+        },
+        "C08-e03": {
+          "name": "手内绕y轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V；Figs.6–8；Rotation Around Other Axes"
+        },
+        "C08-e04": {
+          "name": "未见日常物体旋转",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V；real-world generalization"
+        },
+        "C08-e05": {
+          "name": "形状重建诊断",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2303.10880v4",
+          "locator": "§V-H；Fig.9"
+        }
+      }
+    },
+    "C09": {
+      "tasks": {
+        "C09-e01": {
+          "name": "手内绕x轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2309.09979v1",
+          "locator": "§4–5；Table 1；Fig.6；§5.4"
+        },
+        "C09-e02": {
+          "name": "手内绕y轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2309.09979v1",
+          "locator": "§4–5；Table 1；Fig.6；§5.4"
+        },
+        "C09-e03": {
+          "name": "手内绕z轴旋转",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2309.09979v1",
+          "locator": "§4–5；Table 1；Fig.6；§5.4"
+        }
+      }
+    },
+    "C10": {
+      "tasks": {
+        "C10-e01": {
+          "name": "Peg placement（销放置）",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2408.06506v2",
+          "locator": "§VI；Fig.12；Appendix C Table IX"
+        },
+        "C10-e02": {
+          "name": "Peg insertion（销插入）",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2408.06506v2",
+          "locator": "§VI；Fig.12；Appendix C Table IX"
+        },
+        "C10-e03": {
+          "name": "尺寸资产泛化",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2408.06506v2",
+          "locator": "Appendix C；Table IX"
+        },
+        "C10-e04": {
+          "name": "图像与接触力场验证",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2408.06506v2",
+          "locator": "仿真验证章节"
+        }
+      }
+    },
+    "C11": {
+      "tasks": {
+        "C11-e01": {
+          "name": "Peg insertion（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e02": {
+          "name": "USB insertion（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e03": {
+          "name": "Power plug insertion（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e04": {
+          "name": "Gear assembly（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e05": {
+          "name": "Nut–bolt assembly（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e06": {
+          "name": "Bulb installation（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e07": {
+          "name": "Peg reorientation（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e08": {
+          "name": "Object search（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e09": {
+          "name": "Ball sorting（低光）（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §III-A/IV；Tables II–V；Appendix A/B"
+        },
+        "C11-e10": {
+          "name": "Gear assembly（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §IV；Fig.10；real-world experiments"
+        },
+        "C11-e11": {
+          "name": "Bulb installation（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §IV；Fig.10；real-world experiments"
+        },
+        "C11-e12": {
+          "name": "Ball sorting（正常光）（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §IV；Fig.10；real-world experiments"
+        },
+        "C11-e13": {
+          "name": "Ball sorting（暗光）（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "v2 §IV；Fig.10；real-world experiments"
+        },
+        "C11-e14": {
+          "name": "真仿触觉分布一致性",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2505.18472v2",
+          "locator": "Table I；§III-A2"
+        }
+      }
+    },
+    "C12": {
+      "tasks": {
+        "C12-e01": {
+          "name": "物体推送",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2207.10763v2",
+          "locator": "§III-F；§IV；Tables III–VII"
+        },
+        "C12-e02": {
+          "name": "边缘跟随",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2207.10763v2",
+          "locator": "§III-F；§IV；Tables III–VII"
+        },
+        "C12-e03": {
+          "name": "曲面跟随",
+          "modes": [
+            "仿真",
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2207.10763v2",
+          "locator": "§III-F；§IV；Tables III–VII"
+        },
+        "C12-e04": {
+          "name": "触觉图像真仿转换",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2207.10763v2",
+          "locator": "图像转换实验；Tables III–VII"
+        }
+      }
+    },
+    "C13": {
+      "tasks": {
+        "C13-e01": {
+          "name": "双指玻璃球目标位置操纵",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/abs/2005.14679",
+          "locator": "§V-B；Fig.8"
+        }
+      }
+    },
+    "C14": {
+      "tasks": {
+        "C14-e01": {
+          "name": "抓取稳定性预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2012.08456v2",
+          "locator": "§IV-A；Fig.10"
+        },
+        "C14-e02": {
+          "name": "双指滚动玻璃球",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2012.08456v2",
+          "locator": "§IV-B；Fig.11"
+        },
+        "C14-e03": {
+          "name": "圆柱接触位姿估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2012.08456v2",
+          "locator": "§V；Table II"
+        }
+      }
+    },
+    "C15": {
+      "tasks": {
+        "C15-e01": {
+          "name": "双臂抬盒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII"
+        },
+        "C15-e02": {
+          "name": "非抓持式支点翻转",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII"
+        },
+        "C15-e03": {
+          "name": "果蔬抓放",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII"
+        },
+        "C15-e04": {
+          "name": "擀面团",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII"
+        },
+        "C15-e05": {
+          "name": "抬盒后打落再抓",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table II"
+        },
+        "C15-e06": {
+          "name": "力反馈遥操作可用性",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-B"
+        }
+      }
+    },
+    "C16": {
+      "tasks": {
+        "C16-e01": {
+          "name": "开橱柜抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e02": {
+          "name": "开抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e03": {
+          "name": "开左门",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e04": {
+          "name": "开右门",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e05": {
+          "name": "转水龙头",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e06": {
+          "name": "开洗衣机",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-A/B；Table I；Fig.5"
+        },
+        "C16-e07": {
+          "name": "离线动作及wrench预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2308.03624v1",
+          "locator": "§IV-B；Table II"
+        }
+      }
+    },
+    "C17": {
+      "tasks": {
+        "C17-e01": {
+          "name": "长方体插入（训练几何）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        },
+        "C17-e02": {
+          "name": "钥匙插入（零样本）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        },
+        "C17-e03": {
+          "name": "小圆柱插入（零样本）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        },
+        "C17-e04": {
+          "name": "大圆柱插入（零样本）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        },
+        "C17-e05": {
+          "name": "八角柱插入（零样本）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2409.11047v1",
+          "locator": "§IV-A/C；Tables II–III；Fig.6"
+        }
+      }
+    },
+    "C18": {
+      "tasks": {
+        "C18-e01": {
+          "name": "Door（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2110.09904v2",
+          "locator": "§V-A；Fig.2；Table I"
+        },
+        "C18-e02": {
+          "name": "Lift（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2110.09904v2",
+          "locator": "§V-A；Fig.2；Table I"
+        },
+        "C18-e03": {
+          "name": "Wipe（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2110.09904v2",
+          "locator": "§V-A；Fig.2；Table I"
+        },
+        "C18-e04": {
+          "name": "10 N圆周擦拭（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2110.09904v2",
+          "locator": "§V-B；Fig.3"
+        }
+      }
+    },
+    "C19": {
+      "tasks": {
+        "C19-e01": {
+          "name": "Peg-in-Hole（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2102.06838v1",
+          "locator": "§IV-A；Tables I–III"
+        },
+        "C19-e02": {
+          "name": "Cup-on-Plate（仿真）",
+          "modes": [
+            "仿真"
+          ],
+          "source": "https://arxiv.org/html/2102.06838v1",
+          "locator": "§IV-B；Tables IV–V"
+        },
+        "C19-e03": {
+          "name": "Cup-on-Plate（真机）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2102.06838v1",
+          "locator": "§IV-B；real experiment；Conclusion"
+        }
+      }
+    },
+    "C20": {
+      "tasks": {
+        "C20-e01": {
+          "name": "接触位置与法向力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§4–5；Table 1"
+        },
+        "C20-e02": {
+          "name": "三轴力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§4；shear-force experiment"
+        },
+        "C20-e03": {
+          "name": "长期磨损与零点更新",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§5；Figs.4–5"
+        },
+        "C20-e04": {
+          "name": "跨皮肤/电路板迁移与自监督适配",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§6；Table 2"
+        },
+        "C20-e05": {
+          "name": "微小水重检测",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Videos"
+        },
+        "C20-e06": {
+          "name": "柔软果实抓取",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Videos"
+        },
+        "C20-e07": {
+          "name": "犬足接触测量",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Videos"
+        },
+        "C20-e08": {
+          "name": "触觉手套自然交互",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Videos"
+        },
+        "C20-e09": {
+          "name": "大面积多皮肤接触定位",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Videos"
+        },
+        "C20-e10": {
+          "name": "刚性板到柔性板迁移",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§6.2；flexible sensor board"
+        },
+        "C20-e11": {
+          "name": "新皮肤触点定位演示",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://proceedings.mlr.press/v164/bhirangi22a/bhirangi22a.pdf",
+          "locator": "§7；Supplementary Video S4"
+        }
+      }
+    },
+    "R01": {
+      "tasks": {
+        "R01-e01": {
+          "name": "削黄瓜",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E"
+        },
+        "R01-e02": {
+          "name": "擦花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E"
+        },
+        "R01-e03": {
+          "name": "双臂夹持提纸杯",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E"
+        }
+      }
+    },
+    "R02": {
+      "tasks": {
+        "R02-e01": {
+          "name": "蒸蛋流程",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2–5.3；Table1；Appendix B.2"
+        },
+        "R02-e02": {
+          "name": "水果准备",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2–5.3；Table1；Appendix B.2"
+        },
+        "R02-e03": {
+          "name": "六角扳手手内调整与插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2–5.3；Table1；Appendix B.2"
+        },
+        "R02-e04": {
+          "name": "三明治制作",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2–5.3；Table1；Appendix B.2"
+        }
+      }
+    },
+    "N01": {
+      "tasks": {
+        "N01-e01": {
+          "name": "揭杯寻找隐藏物块",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2"
+        },
+        "N01-e02": {
+          "name": "按指定次数蓝色按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2"
+        },
+        "N01-e03": {
+          "name": "按指定次数擦碗",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2"
+        }
+      }
+    },
+    "N02": {
+      "tasks": {
+        "N02-e01": {
+          "name": "圆销插入（3 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e02": {
+          "name": "圆销插入（2 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e03": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e04": {
+          "name": "拉开抽屉",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e05": {
+          "name": "方销插入（3 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e06": {
+          "name": "五边形销插入（3 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e07": {
+          "name": "方销插入（2 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e08": {
+          "name": "五边形销插入（2 mm孔隙）",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e09": {
+          "name": "HDMI插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1"
+        },
+        "N02-e10": {
+          "name": "触觉编码器离线识别与力估计",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.3；Table3"
+        }
+      }
+    },
+    "N03": {
+      "tasks": {
+        "N03-e01": {
+          "name": "调整铅笔并放入杯中",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e02": {
+          "name": "调整管子并放入管架",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e03": {
+          "name": "擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e04": {
+          "name": "擦花瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e05": {
+          "name": "USB插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e06": {
+          "name": "两脚电源插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e07": {
+          "name": "大齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        },
+        "N03-e08": {
+          "name": "小齿轮装配",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2"
+        }
+      }
+    },
+    "N04": {
+      "tasks": {
+        "N04-e01": {
+          "name": "给花浇水",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e02": {
+          "name": "清理桌面",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e03": {
+          "name": "杯子插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e04": {
+          "name": "电源插头插入",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e05": {
+          "name": "擦锅",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e06": {
+          "name": "抽取纸巾",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1"
+        },
+        "N04-e07": {
+          "name": "未来接触的离线预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.5；Table2"
+        }
+      }
+    },
+    "N05": {
+      "tasks": {
+        "N05-e01": {
+          "name": "移液器按压",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e02": {
+          "name": "抓取水瓶",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e03": {
+          "name": "抓取玉米棒",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e04": {
+          "name": "海绵擦白板",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e05": {
+          "name": "按按钮",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e06": {
+          "name": "开抽屉取烧杯",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e07": {
+          "name": "移液到烧杯",
+          "modes": [
+            "真机"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2"
+        },
+        "N05-e08": {
+          "name": "触觉编码器离线检查",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "Appendix D.2；Table5"
+        },
+        "N05-e09": {
+          "name": "未来触觉与剩余动作离线预测",
+          "modes": [
+            "离线"
+          ],
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.2；Appendix D.3；Table6"
+        }
+      }
+    }
+  }
+}
