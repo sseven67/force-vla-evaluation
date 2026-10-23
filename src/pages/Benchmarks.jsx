@@ -19,9 +19,8 @@ function Benchmarks({ item, ...p }) {
   const { D, bmById, getBenchmarkUsers } = useCatalogue();
   const [query, setQuery] = useState("");
   const [environment, setEnvironment] = useState(ENVIRONMENTS[item] || "");
-  const [adoptedOnly, setAdoptedOnly] = useState(false);
-  const [resourceType, setResourceType] = useState("benchmark");
-  const [sort, setSort] = useState("usage");
+  const [resourceType, setResourceType] = useState("");
+  const [sort, setSort] = useState("scholar");
   useEffect(() => setEnvironment(ENVIRONMENTS[item] || ""), [item]);
   const b = bmById.get(item);
   if (b) return <BenchmarkDetail b={b} {...p} />;
@@ -31,7 +30,6 @@ function Benchmarks({ item, ...p }) {
   const visible = benchmarks.filter((b) =>
     (!resourceType || b.resourceType === resourceType) &&
     (!environment || b.domain.includes(environment)) &&
-    (!adoptedOnly || usageCount(b) > 0) &&
     (!query || [b.name, b.focus, b.detail, b.introducedBy.title, b.typeLabel, ...(b.tasks || []),
       ...(b.reading?.taskGroups.flatMap(g => g.items.flatMap(t => [t.name, t.goal, t.scoring])) || []),
       ...adopters(b.id).map(({ w }) => w.name), ...(b.externalUsers || []).map(u => u.name)].join(" ").toLowerCase().includes(query.toLowerCase()))
@@ -42,31 +40,22 @@ function Benchmarks({ item, ...p }) {
   });
   return (
     <>
-      <PageIntro eyebrow="BENCHMARKS / 基准与资源" title="Benchmark 与评测资源" aside={<>资源整理与查询<br /><strong>{D.resourceUpdated}</strong></>}>
+      <PageIntro eyebrow="BENCHMARKS / 基准与资源" title="Benchmark 与评测资源" aside={<>更新于<br /><strong>{D.resourceUpdated}</strong></>}>
         仅收录评测基准和仿真平台。查看测哪些任务、怎样评分，以及哪些论文采用或扩展了它。
       </PageIntro>
-      <details className="benchmark-criteria">
-        <summary>为什么有的论文实验可以称为基准？</summary>
-        <ol>{D.benchmarkAudit.criteria.map(c => <li key={c}>{c}</li>)}</ol>
-        <p>有明确的测试和评分规则，不代表使用量很高，也不代表代码、数据等资源全部公开。</p>
-      </details>
-      <div className="toolbar">
-        <input className="standalone-search" aria-label="搜索Benchmark"
+      <section className="toolbar resource-filter-bar" aria-label="资源搜索与筛选">
+        <label className="resource-search-control">搜索资源
+        <input aria-label="搜索Benchmark"
           placeholder="搜索基准、任务或使用它的论文…" value={query}
-          onChange={(e) => setQuery(e.target.value)} />
-        <div className="filters">
+          onChange={(e) => setQuery(e.target.value)} /></label>
+        <div className="resource-filter-fields">
           <Filter label="资源类型" value={resourceType} onChange={setResourceType} options={RESOURCE_TYPES} />
           <Filter label="评测方式" value={environment} onChange={setEnvironment}
             options={["真机", "仿真", "离线"].map((x) => [x, x])} />
-          <label className="check-filter">
-            <input type="checkbox" checked={adoptedOnly} onChange={(e) => setAdoptedOnly(e.target.checked)} />
-            有其他论文用它评测
-          </label>
-          <button className="reset" onClick={() => { setQuery(""); setEnvironment(""); setAdoptedOnly(false); setResourceType("benchmark"); setSort("usage"); }}>重置</button>
+          <button className="reset" onClick={() => { setQuery(""); setEnvironment(""); setResourceType(""); setSort("scholar"); }}>重置</button>
         </div>
-      </div>
-      <p className="mini-note">引用对应提出资源的论文，Stars 对应官方仓库，公开时间优先采用论文首次公开日期。采用记录包含本目录论文与单独补充的使用工作，不代表全部使用量。</p>
-      <div className="results-head resource-results-head"><div><strong>找到 {visible.length} 项{RESOURCE_TYPES.find(([id]) => id === resourceType)?.[1] || "资源"}</strong><p className="resource-count-note">使用工作数：按已收录的采用工作去重，不含提出者；包含注明改动的衍生评测。</p></div>
+      </section>
+      <div className="results-head resource-results-head"><div><strong>找到 {visible.length} 项{RESOURCE_TYPES.find(([id]) => id === resourceType)?.[1] || "资源"}</strong><p className="resource-count-note">已收录的采用工作数，含衍生评测，不含提出者。</p></div>
         <label className="resource-sort">排序<select aria-label="评测资源排序" value={sort} onChange={e => setSort(e.target.value)}>
           <option value="usage">使用工作数 ↓</option><option value="stars">GitHub Stars ↓</option><option value="scholar">Google Scholar 引用 ↓</option><option value="date">首次公开时间 ↓</option>
         </select></label>
@@ -112,7 +101,7 @@ function BenchmarkDetail({ b, ...p }) {
       <button className="back-link" onClick={() => p.goto("benchmarks")}>
         ← 返回 Benchmark 与资源
       </button>
-      <PageIntro title={b.name} aside={<>资源整理与查询<br /><strong>{D.resourceUpdated}</strong></>}>{b.focus}</PageIntro>
+      <PageIntro title={b.name} aside={<>更新于<br /><strong>{D.resourceUpdated}</strong></>}>{b.focus}</PageIntro>
       <div className="pill-row">
         <Tag>{b.typeLabel}</Tag>
         <Tag>{b.domain}</Tag>
@@ -138,7 +127,6 @@ function BenchmarkDetail({ b, ...p }) {
         <h2>{isBench(b) ? "为何列为评测基准？" : "分类依据与评测边界"}</h2>
         <dl>{[["判断依据", b.reason], ["怎样测试和评分", b.protocol], ["公开情况", b.release], ["适用范围", b.scope]].map(([label, value]) => <React.Fragment key={label}><dt>{label}</dt><dd>{value}</dd></React.Fragment>)}</dl>
         <div className="source-links">{b.evidence.map((e, i) => <External key={i} href={e.url}>{e.locator}</External>)}</div>
-        <p className="mini-note">分类核查：{b.auditChecked}；仅核对文献与资源入口，未运行复现。</p>
       </section>
       {referenceOwner && <EvaluationHighlights w={referenceOwner} />}
       {!b.reading && b.tasks?.length > 0 && (
@@ -188,13 +176,13 @@ function BenchmarkDetail({ b, ...p }) {
           <div className="proof-card">
             <h3>UniVTAC提供了什么？</h3>
             <p>
-              UniVTAC既能模拟触觉、生成数据和训练触觉模型，也提供八项自主操作测试。这里分别注明其他论文用了其中哪些任务。
+              提供触觉仿真、数据生成、模型训练及8项自主操作测试。
             </p>
           </div>
           <div className="proof-card">
             <h3>FTP-1 的真实实验另建</h3>
             <p>
-              FTP-1使用其中六项做仿真测试，真机任务另行设计，用于检查换机器人和传感器后的表现。N₀-VTLA用了八项，任务数量不同，两篇的平均成绩不能直接比较。
+              FTP-1采用6项，真机任务另设；N₀-VTLA采用8项，两篇均分不宜直接比较。
             </p>
             <External href="https://arxiv.org/html/2606.13102v1#A5.SS2">
               FTP-1 附录E.2
@@ -245,9 +233,6 @@ function BenchmarkDetail({ b, ...p }) {
             <External href={w.openness.url}>查看资源</External>
           </div>
         ))}
-        <p className="mini-note">
-          提供论文或代码链接；是否包含训练数据、模型和完整测试程序，需以官方发布内容为准。
-        </p>
       </section>
       </section>
       <section id="benchmark-section-4" className="personal-section benchmark-reader-section" tabIndex={-1} aria-label="研究记录">

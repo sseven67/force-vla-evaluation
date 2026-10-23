@@ -1,13 +1,13 @@
 import React from "react";
 import { useCatalogue } from "../data/catalogue.js";
+import { ScreeningTag } from "./papers.jsx";
 
 export default function CoverageMatrix({ rows, taskTypes, hasTask, ...p }) {
   const { colour } = useCatalogue();
   return (
     <div className="coverage">
       <p className="mini-note">
-        ●
-        表示论文测试过这类任务，不代表测试规则相同，也不代表已经成功。点击圆点查看各论文怎样测试。
+        点击 ● 查看具体评测。
       </p>
       <div className="table-wrap">
         <table className="matrix-table">
@@ -29,6 +29,7 @@ export default function CoverageMatrix({ rows, taskTypes, hasTask, ...p }) {
                 <th>
                   <button onClick={() => p.showPaper(w.id)}>{w.name}</button>
                   <small>{w.kind}</small>
+                  <ScreeningTag w={w} />
                 </th>
                 {taskTypes.map((t) => (
                   <td key={t.id}>

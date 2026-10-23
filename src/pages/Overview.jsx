@@ -21,9 +21,6 @@ function Overview({ ...p }) {
         <span>{D.taskTypes.length} 个任务主题</span>
         <span>从六个方面了解评测</span>
       </div>
-      <p className="mini-note">
-        按机器人类型和力觉形式分类；同一论文可以属于多类。Benchmark单独整理。
-      </p>
       <div className="diagram-panel">
         {D.groups.map((g) => (
           <div className="map-lane" style={{ "--color": g.color }} key={g.id}>
@@ -44,11 +41,6 @@ function Overview({ ...p }) {
             </div>
           </div>
         ))}
-      </div>
-      <div className="explain-note">
-        <strong>同名方法要区分。</strong>
-        FACT（接触诊断）和FACT（人机灵巧迁移）不同；OmniVTLA和OmniVTA不同；VITaL
-        Pretraining、ViTaL Local与ViTaL Steering也分别记录。
       </div>
       <div className="feature-grid">
         {D.features.map((f) => (

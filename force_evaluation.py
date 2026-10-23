@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent / 'research'
-LABELS = {'reported': '有', 'not_reported': '原文未说明', 'pending': '是否报告尚不明确'}
+LABELS = {'reported': '有', 'not_reported': '无', 'pending': '尚未核实'}
 
 
 def append_setting(e, text):

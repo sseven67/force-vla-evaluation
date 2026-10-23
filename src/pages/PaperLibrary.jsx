@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { useCatalogue, isResearchFocus, isBench, num } from "../data/catalogue.js";
+import { useCatalogue, isBench, num } from "../data/catalogue.js";
 import {
   PageIntro,
   Filter,
@@ -7,13 +7,15 @@ import {
   Domains,
   Icon,
 } from "../components/ui.jsx";
-import { selectPapers } from "../data/selectors.js";
+import { selectPapers, YEAR_OPTIONS } from "../data/selectors.js";
+import PaperScopeNavigation from "../components/PaperScopeNavigation.jsx";
 import { EvaluationReferenceTag } from "../components/EvaluationHighlights.jsx";
 import {
   SelectionPolicy,
   PaperCard,
   CompareButton,
   BimanualTaskNote,
+  ScreeningTag,
 } from "../components/papers.jsx";
 
 function PaperLibrary({
@@ -96,53 +98,7 @@ function PaperLibrary({
         聚焦力觉与触觉机器人研究，查找论文、阅读评测，横向比较任务、指标与实验设置。
       </PageIntro>
       <section className="library-panel" aria-label="论文搜索与筛选">
-        <div className="library-overline">
-          <div className="scope-pills" role="group" aria-label="论文范围">
-            <button
-              className={f.scope === "priority" ? "active" : ""}
-              aria-pressed={f.scope === "priority"}
-              onClick={() => fp("scope", "priority")}
-            >
-              优先考察{" "}
-              <b>
-                {
-                  PAPERS.filter(
-                    (w) =>
-                      w.screening.grade === "A" &&
-                      (f.period !== "recent" || w.screening.inWindow),
-                  ).length
-                }
-              </b>
-            </button>
-            <button
-              className={f.scope === "focus" ? "active" : ""}
-              aria-pressed={f.scope === "focus"}
-              onClick={() => fp("scope", "focus")}
-            >
-              ① 研究重点优先{" "}
-              <b>
-                {
-                  PAPERS.filter(
-                    (w) =>
-                      isResearchFocus(w) &&
-                      w.screening.grade === "A" &&
-                      (f.period !== "recent" || w.screening.inWindow),
-                  ).length
-                }
-              </b>
-            </button>
-            <button
-              className={f.scope === "all" ? "active" : ""}
-              aria-pressed={f.scope === "all"}
-              onClick={() => {
-                fp({ scope: "all", period: "all" });
-              }}
-            >
-              全部论文 <b>{PAPERS.length}</b>
-            </button>
-          </div>
-          <span className="scope-tally">按阅读优先级浏览</span>
-        </div>
+        <PaperScopeNavigation value={f.scope} onChange={value => fp("scope", value)} period={f.period} />
         <div className="toolbar">
           <div className="search-field">
             <Icon type="search" />
@@ -185,10 +141,8 @@ function PaperLibrary({
               label="时间范围"
               value={f.period}
               onChange={(v) => fp("period", v || "all")}
-              options={[
-                ["recent", "近两年（含正式发表）"],
-                ["all", "全部年份 / 前序"],
-              ]}
+              allValue="all"
+              options={YEAR_OPTIONS}
             />
             <Filter
               label="本体与力觉分类"
@@ -265,16 +219,7 @@ function PaperLibrary({
             </div>
           </div>
         </div>
-        <SelectionPolicy>
-          <p>
-            环境按各任务的评测方式筛选：包含离线实验即可匹配“离线”，同一论文可同时包含真机、仿真与离线评测。一篇论文可归入多类，各类数量不相加。
-          </p>
-          <p>
-            默认按 GitHub Stars 排序，也可切换 Google Scholar 引用、OpenAlex 收录引用或
-            Forks。未取得的数值以“—”表示，0 只表示平台返回
-            0；关注度不代表论文质量。
-          </p>
-        </SelectionPolicy>
+        <SelectionPolicy />
       </section>
       {activeFilters.length > 0 && (
         <div className="active-filters" aria-label="当前筛选条件">
@@ -326,12 +271,12 @@ function PaperLibrary({
       )}
       {f.reference && (
         <p className="reference-filter-note">
-          只标出少量有具体理由的评测设计，详情中列出任务、做法和参考价值。此项与其他筛选条件叠加。
+          已筛选值得参考的评测设计。
         </p>
       )}
       {f.bimanualCooperation && (
         <p className="reference-filter-note">
-          纳入标准：两条机器人臂配合完成同一任务；排除仅使用双臂平台或两臂各自独立操作。不要求查清左右臂的详细分工，也不要求两臂同时运动、都由学习策略控制或读取双侧六维力。人手辅助及示教主从臂不计入双臂执行。
+          两臂配合完成同一任务，不含独立操作或人手辅助。
         </p>
       )}
       <div className="results-head">
@@ -340,13 +285,9 @@ function PaperLibrary({
             论文目录 <span>{ws.length}</span>
           </h2>
           <p role="status" aria-live="polite">
-            找到 {ws.length} 篇{f.period === "recent" ? "近两年" : "全部年份"}
+            找到 {ws.length} 篇{f.period === "all" ? "全部年份" : f.period + "年"}
             论文 ·{" "}
-            {f.scope === "all"
-              ? "全部优先级"
-              : f.scope === "focus"
-                ? "研究重点优先"
-                : "优先考察"}
+            {f.scope === "high" ? "较高关注" : "全部论文"}
           </p>
         </div>
         <div className="results-actions">
@@ -395,7 +336,7 @@ function PaperLibrary({
         ) : (
           <>
             <p className="compact-table-note" id="compact-table-note">
-              任务先展示前 2 项，点击论文名查看完整评测。
+              点击论文名查看全部任务。
               <span>表格可左右滚动</span>
             </p>
             <div
@@ -417,7 +358,7 @@ function PaperLibrary({
                   <tr>
                     <th scope="col">论文</th>
                     <th scope="col">评测任务</th>
-                    <th scope="col">力 / 触觉输入</th>
+                    <th scope="col">力／触觉信号</th>
                     <th scope="col">关注度</th>
                     <th scope="col">比较</th>
                   </tr>
@@ -436,7 +377,7 @@ function PaperLibrary({
                           <span>
                             {w.year} · {w.kind}
                           </span>
-                          <EvaluationReferenceTag w={w} />
+                          <ScreeningTag w={w} /><EvaluationReferenceTag w={w} />
                         </div>
                       </td>
                       <td>

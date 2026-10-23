@@ -40,7 +40,7 @@ export default function Sidebar({
           <Icon />
         </span>
         <span>
-          Force-VLA<small>Evaluation Atlas</small>
+          Force-VLA<small>Evaluation Platform</small>
         </span>
       </a>
       <p className="nav-caption">研究工作台</p>

@@ -20,7 +20,7 @@ export function Figure({ figure, compact = false }) {
       )}
       <figcaption>
         <External href={figure.source}>{figure.caption}</External>
-        <span>论文原图，版权归原作者</span>
+        <span>原图版权归作者</span>
       </figcaption>
     </figure>
   );
@@ -53,7 +53,14 @@ export function TaskSketch({ type }) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {type === "assembly" ? (
+          {type === "sequence" ? (
+            <>
+              <rect x="85" y="80" width="75" height="55" rx="8" />
+              <rect x="202" y="80" width="75" height="55" rx="8" />
+              <rect x="320" y="80" width="75" height="55" rx="8" />
+              <path d="M166 107h28m-9-9 9 9-9 9M283 107h29m-9-9 9 9-9 9M110 107l10 10 20-23M226 107l10 10 20-23M344 107l10 10 20-23" />
+            </>
+          ) : type === "assembly" ? (
             <>
               <circle cx="210" cy="115" r="38" />
               <circle cx="210" cy="115" r="12" />
@@ -96,7 +103,7 @@ export function TaskSketch({ type }) {
           )}
         </g>
         <text x="28" y="188" fill="#8295aa" fontSize="11">
-          任务类型示意 · 非论文实验图
+          任务示意图
         </text>
       </svg>
     </div>

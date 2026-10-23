@@ -1,29 +1,32 @@
-import { inCategory, isResearchFocus, isVLA } from "./catalogue.js";
+import { inCategory, isVLA } from "./catalogue.js";
 
 export const DEFAULT_WORK_FILTERS = Object.freeze({
-  period: "recent",
+  scope: "all",
+  period: "all",
   category: "",
   kind: "",
   domain: "",
   reference: false,
   forceEvaluation: false,
   bookmarks: false,
+  bimanualCooperation: false,
 });
 
 export const DEFAULT_PAPER_FILTERS = Object.freeze({
   ...DEFAULT_WORK_FILTERS,
-  scope: "priority",
   task: "",
-  bimanualCooperation: false,
 });
+
+export const YEAR_OPTIONS = ["2024", "2025", "2026"].map(year => [year, year]);
+export const matchesPublicationYear = (work, period) =>
+  !period || period === "all" || String(work.screening.publicYear) === period;
 
 // Work-level criteria are shared; environment and force criteria remain
 // protocol-level in the task library and work-level in the paper library.
 export function matchesWorkFilters(work, filters, saved) {
   return (
-    (!filters.period ||
-      filters.period !== "recent" ||
-      work.screening.inWindow) &&
+    matchesPublicationYear(work, filters.period) &&
+    (filters.scope !== "high" || work.screening.highAttention) &&
     (!filters.category || inCategory(work, filters.category)) &&
     (!filters.kind || (filters.kind === "VLA" ? isVLA(work) : !isVLA(work))) &&
     (!filters.reference || work.evaluationHighlights.length > 0) &&
@@ -36,9 +39,6 @@ export function selectPapers(catalogue, { query, filters, sort, saved }) {
   return catalogue.PAPERS.filter(
     (work) =>
       matchesWorkFilters(work, filters, saved) &&
-      (filters.scope === "all" ||
-        (work.screening.grade === "A" &&
-          (filters.scope !== "focus" || isResearchFocus(work)))) &&
       (!filters.domain || work.domains.includes(filters.domain)) &&
       (!filters.task || catalogue.hasTask(work.id, filters.task)) &&
       (!filters.bimanualCooperation || work.bimanualEvaluation?.type === "cooperative") &&
@@ -60,13 +60,13 @@ export function selectPapers(catalogue, { query, filters, sort, saved }) {
 export function filterTaskInstances(
   catalogue,
   records,
-  { query, filters, onlyPriority, saved },
+  { query, filters, saved },
 ) {
   const search = query.trim().toLowerCase();
   return records.flatMap((record) => {
     const work = catalogue.byId.get(record.work);
     if (
-      (onlyPriority && work.screening.grade !== "A") ||
+      work.resourceOnly ||
       !matchesWorkFilters(work, filters, saved)
     )
       return [];
@@ -83,6 +83,9 @@ export function filterTaskInstances(
         .includes(search);
     const protocols = record.protocols.filter(
       (protocol) =>
+        (!filters.bimanualCooperation ||
+          (work.bimanualEvaluation?.type === "cooperative" &&
+            work.bimanualEvaluation.taskIds.includes(protocol.id))) &&
         (!filters.domain ||
           protocol.evaluationModes.includes(filters.domain)) &&
         (!filters.forceEvaluation ||
@@ -104,6 +107,24 @@ export function filterTaskInstances(
   });
 }
 
+export function getTaskTopicName(topic) {
+  return topic?.name || "";
+}
+
+export function getTaskKindOptions(topic, records) {
+  const protocols = records.flatMap(record => record.protocols);
+  const kinds = topic?.taskKinds || [...new Set(protocols.map(e => e.task))].map(name => ({ id: name, name }));
+  return kinds.map(kind => ({ ...kind, count: protocols.filter(e => (e.taskKind || e.task) === kind.id).length }));
+}
+
+export function filterTaskKindInstances(records, kind) {
+  if (!kind) return records;
+  return records.flatMap(record => {
+    const protocols = record.protocols.filter(e => (e.taskKind || e.task) === kind);
+    return protocols.length ? [{ ...record, protocols }] : [];
+  });
+}
+
 export function createTaskView(
   catalogue,
   records,
@@ -116,28 +137,38 @@ export function createTaskView(
     byTask.get(record.task).push(record);
   }
   const visibleTypes = D.taskTypes.filter((type) => byTask.has(type.id));
-  const types = visibleTypes.filter(
-    (type) => !category || type.group === category,
-  );
+  const withVisibleName = (type, group = category) => {
+    const relevant = (byTask.get(type.id) || []).map(record => ({
+      ...record, protocols: record.protocols.filter(e => !group || e.taskGroups.includes(group)),
+    }));
+    return { ...type, name: getTaskTopicName(type, relevant) };
+  };
   const groups = D.taskGroups.flatMap((group) => {
-    const topics = visibleTypes.filter((type) => type.group === group.id);
+    const topics = visibleTypes.filter((type) => byTask.get(type.id).some(r => r.protocols.some(e => e.taskGroups.includes(group.id)))).map(type => withVisibleName(type, group.id));
     if (!topics.length) return [];
     const workIds = new Set(
       topics.flatMap((type) =>
-        byTask.get(type.id).map((record) => record.work),
+        byTask.get(type.id).filter(r => r.protocols.some(e => e.taskGroups.includes(group.id))).map((record) => record.work),
       ),
     );
     return [{ group, topics, workCount: workIds.size }];
   });
+  // Evaluation mode never changes capability membership.
+  const types = visibleTypes.filter((type) =>
+    !category || byTask.get(type.id).some(record =>
+      record.protocols.some(protocol => protocol.taskGroups.includes(category)),
+    ),
+  ).map(type => withVisibleName(type));
   const matrixTypes = D.taskTypes.filter(
     (type) =>
       (!task || selectedProtocol || type.id === task.id) &&
-      (!category || type.group === category),
-  );
+      (!category || type.groups.includes(category)),
+  ).map(type => withVisibleName(type));
   const matrixIds = new Set(matrixTypes.map((type) => type.id));
   const matrixMembership = new Map();
   for (const record of records) {
     if (!matrixIds.has(record.task)) continue;
+    if (category && !record.protocols.some(e => e.taskGroups.includes(category))) continue;
     if (!matrixMembership.has(record.work))
       matrixMembership.set(record.work, new Set());
     matrixMembership.get(record.work).add(record.task);
@@ -146,7 +177,10 @@ export function createTaskView(
     types,
     groups,
     matrixTypes,
-    getVisibleInstances: (id) => byTask.get(id) || [],
+    getVisibleInstances: (id, group = category) => (byTask.get(id) || []).flatMap(record => {
+      const protocols = record.protocols.filter(e => !group || e.taskGroups.includes(group));
+      return protocols.length ? [{ ...record, protocols }] : [];
+    }),
     matrixRows: PAPERS.filter((work) => matrixMembership.has(work.id)),
     hasMatrixTask: (work, topic) =>
       matrixMembership.get(work)?.has(topic) || false,

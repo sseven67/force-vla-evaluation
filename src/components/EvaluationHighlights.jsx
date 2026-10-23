@@ -23,9 +23,8 @@ export default function EvaluationHighlights({ w, section }) {
             <dd style={{ whiteSpace: "pre-line" }}>{h.design}</dd>
             <dt>参考价值</dt>
             <dd>{h.why}</dd>
-            <dt>适用边界</dt>
-            <dd>{h.boundary}</dd>
           </dl>
+          <details><summary>适用范围</summary><p>{h.boundary}</p></details>
           <External href={h.source}>{h.locator} ↗</External>
         </article>
       ))}

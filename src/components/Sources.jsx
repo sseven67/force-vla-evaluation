@@ -16,13 +16,11 @@ function Sources({ saved }) {
         {counts.stars}项取得官方仓库Stars/Forks。每个可用数值都提供记录链接。
       </p>
       <div className="evidence-warning">
-        GitHub
-        Stars反映关注程度，不等于真实使用量；Google Scholar和OpenAlex分别统计引用，收录范围及更新时间不同，计数可能不同。
+        引用按平台分别统计；Stars 仅反映关注度。
       </div>
       <p>
-        没有查到的数值显示“—”，平台明确返回0才显示0。缺失数值排在后面；引用、Stars和Forks分别排序，不合成一个总分。
+        “—”表示缺失，缺失项排在最后。
       </p>
-      <p>{D.attentionMethodology.googleScholar}</p>
       <h3>原始调研文档</h3>
       {D.documents.map((d) => (
         <a className="document-link" href={d.url} download key={d.url}>
@@ -47,7 +45,7 @@ function Sources({ saved }) {
         导出当前浏览器的收藏与笔记 JSON ↓
       </a>
       <p className="mini-note">
-        目录依据公开论文及作者资源整理，并保留原文链接。论文图片注明来源，版权归原作者。
+        资料来自公开论文与作者资源，图片版权归原作者。
       </p>
     </div>
   );

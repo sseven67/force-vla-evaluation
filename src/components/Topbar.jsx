@@ -12,7 +12,7 @@ export default function Topbar({
   return (
     <header className="topbar">
       <div className="breadcrumb">
-        <span className="breadcrumb-home">Force-VLA Atlas</span> <span>/</span>
+        <span className="breadcrumb-home">Force-VLA Evaluation Platform</span> <span>/</span>
         <strong>{names[view]}</strong>
       </div>
       <label className="global-search">

@@ -4,7 +4,7 @@ import { DEFAULT_PAPER_FILTERS } from "../data/selectors.js";
 export function usePaperLibrary() {
   const [q, setQ] = useState("");
   const [filters, setFilters] = useState(DEFAULT_PAPER_FILTERS);
-  const [sort, setSort] = useState("stars");
+  const [sort, setSort] = useState("googleScholar");
   const [layout, setLayout] = useState("cards");
   // Accept one field or a patch so related changes form a single update.
   const fp = useCallback((key, value) => {
@@ -16,6 +16,7 @@ export function usePaperLibrary() {
   const reset = useCallback((overrides = {}) => {
     setQ("");
     setFilters({ ...DEFAULT_PAPER_FILTERS, ...overrides });
+    setSort("googleScholar");
   }, []);
   return { q, setQ, filters, fp, reset, sort, setSort, layout, setLayout };
 }

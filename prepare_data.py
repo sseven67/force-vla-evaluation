@@ -204,4 +204,4 @@ from enrich_data import enrich
 data=enrich(dict(updated='2026-10-15',groups=[],works=works,benchmarks=benchmarks,extraRelations=EXTRA,features=FEATURES,documents=documents))
 (DIST/'data.js').write_text('window.RESEARCH_DATA = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 (DIST/'catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
-print(json.dumps(dict(works=len(works),benchmarks=len(benchmarks),sources=len(documents),missingNotes=[w['id'] for w in works if not w['notes']]),ensure_ascii=False))
+print(json.dumps(dict(works=len(data['works']),benchmarks=len(data['benchmarks']),sources=len(documents),missingNotes=[w['id'] for w in data['works'] if not w['notes']]),ensure_ascii=False))

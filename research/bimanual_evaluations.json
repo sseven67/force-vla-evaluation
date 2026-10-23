@@ -834,5 +834,167 @@
   "criteria": [
     "两条机器人臂配合完成同一任务。",
     "排除仅使用双臂平台和两臂各自独立操作；详细左右臂分工不作为纳入前提。"
-  ]
+  ],
+  "taskCapabilities": {
+    "W06-e05": {
+      "groups": [
+        "surface"
+      ],
+      "reason": "切黄瓜需要接触工具克服材料阻力，按切割能力归入持续接触。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2609.18497v1",
+          "locator": "Fig.1：Peeling和Cutting任务实拍；§V-A；Table II"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "E03-e07": {
+      "groups": [
+        "surface"
+      ],
+      "reason": "在柔软气球表面持续接触作画；另一臂持物不改变主要评测能力。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "E03-e08": {
+      "groups": [
+        "precision"
+      ],
+      "reason": "装回模型手指需要小零件接触对准；分阶段测试本身不自动等于长程。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "E03-e09": {
+      "groups": [
+        "surface"
+      ],
+      "reason": "持瓶与拧盖配合，考察旋拧过程中的持续接触。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "E03-e10": {
+      "groups": [
+        "grasp"
+      ],
+      "reason": "持书与翻页配合，考察薄片分离、夹持和移动。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.13102v1",
+          "locator": "Appendix E.2–E.3；Fig.12、Fig.13原始任务过程"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "E05-e09": {
+      "groups": [
+        "precision"
+      ],
+      "reason": "通过挤压滴管控制液体滴加，考察精细按压与停止。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task III–XII；Task I–II为右手任务"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "T18-e04": {
+      "groups": [
+        "grasp"
+      ],
+      "reason": "一手翻页、一手压页，考察薄片抓取与分离。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Appendix B.1.3 Vase Wipe；B.1.4 Book Flip；Tables 7–10"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "C15-e01": {
+      "groups": [
+        "grasp"
+      ],
+      "reason": "双臂共同稳定抬盒；双臂配置不自动构成长程任务。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-B–C Box lifting；Table I recovery；Appendix XII"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "C15-e05": {
+      "groups": [
+        "grasp"
+      ],
+      "reason": "共同抬盒后受干扰再次抓起，考察恢复夹持；不将外部人为干扰自动计作长程流程。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-B–C Box lifting；Table I recovery；Appendix XII"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "R02-e01": {
+      "groups": [
+        "grasp",
+        "long"
+      ],
+      "reason": "取放鸡蛋时保护物体，多个不同操作组成完整蒸蛋准备流程。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2410.24091v1",
+          "locator": "Appendix B.2.1–B.2.4；Fig.14"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "R02-e02": {
+      "groups": [
+        "grasp",
+        "long"
+      ],
+      "reason": "协同开袋与无损抓放水果，包含连续不同操作的完整流程。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2410.24091v1",
+          "locator": "Appendix B.2.1–B.2.4；Fig.14"
+        }
+      ],
+      "checked": "2026-10-22"
+    },
+    "R02-e03": {
+      "groups": [
+        "precision",
+        "grasp",
+        "long"
+      ],
+      "reason": "包含交接、手内调整和插入；分别考察夹持、接触对准和连续流程。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/html/2410.24091v1",
+          "locator": "Appendix B.2.1–B.2.4；Fig.14"
+        }
+      ],
+      "checked": "2026-10-22"
+    }
+  }
 }

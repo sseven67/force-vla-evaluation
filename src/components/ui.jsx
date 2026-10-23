@@ -99,7 +99,7 @@ export function PageIntro({ title, children, aside, eyebrow }) {
       <div className="intro-note">
         {aside || (
           <>
-            资料和关注度更新日期
+            更新于
             <br />
             <strong>{D.updated}</strong>
           </>
@@ -170,7 +170,7 @@ export function SaveControls({ id, saved, onSave, notes = false }) {
   );
 }
 
-export function Filter({ label, value, onChange, options }) {
+export function Filter({ label, value, onChange, options, allValue = "" }) {
   return (
     <label className="filter-control">
       {label}
@@ -179,7 +179,7 @@ export function Filter({ label, value, onChange, options }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
-        <option value="">全部</option>
+          <option value={allValue}>全部</option>
         {options.map(([v, t]) => (
           <option key={v} value={v}>
             {t}

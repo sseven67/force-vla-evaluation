@@ -2,21 +2,25 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useCatalogue } from "../data/catalogue.js";
 import {
   PageIntro,
-  Tag,
-  Domains,
   External,
   Filter,
   Icon,
 } from "../components/ui.jsx";
-import { CompareButton, ScreeningTag, CategoryTags } from "../components/papers.jsx";
 import { CategoryVisual, TaskSketch } from "../components/Figures.jsx";
 import {
   DEFAULT_WORK_FILTERS,
   filterTaskInstances,
   createTaskView,
+  getTaskTopicName,
+  getTaskKindOptions,
+  filterTaskKindInstances,
+  YEAR_OPTIONS,
 } from "../data/selectors.js";
+import PaperScopeNavigation from "../components/PaperScopeNavigation.jsx";
 import CoverageMatrix from "../components/CoverageMatrix.jsx";
-import TaskProtocol from "../components/TaskProtocol.jsx";
+import TaskComparisonTable from "../components/TaskComparisonTable.jsx";
+import TaskComparisonCards from "../components/TaskComparisonCards.jsx";
+import TaskKindNavigation from "../components/TaskKindNavigation.jsx";
 
 function TaskLibrary({ item, ...p }) {
   const catalogue = useCatalogue();
@@ -25,13 +29,14 @@ function TaskLibrary({ item, ...p }) {
   const [category, setCategory] = useState("");
   const [query, setQuery] = useState("");
   const [matrix, setMatrix] = useState(false);
+  const [sort, setSort] = useState("googleScholar");
+  const [taskLayout, setTaskLayout] = useState("cards");
+  const [kindSelection, setKindSelection] = useState({ topic: item, kind: "" });
+  const selectedKind = kindSelection.topic === item ? kindSelection.kind : "";
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [onlyPriority, setOnlyPriority] = useState(
-    !item?.startsWith("protocol-"),
-  );
   const [f, setFilters] = useState(() => ({
     ...DEFAULT_WORK_FILTERS,
-    period: item?.startsWith("protocol-") ? "all" : "recent",
+    period: "all",
   }));
   const setFilter = (key, value) =>
     setFilters((previous) => ({ ...previous, [key]: value }));
@@ -39,7 +44,7 @@ function TaskLibrary({ item, ...p }) {
     setFilters(DEFAULT_WORK_FILTERS);
     setQuery("");
     setCategory("");
-    setOnlyPriority(true);
+    setSort("googleScholar");
     p.goto("tasks");
   };
   const selectedProtocol = item?.startsWith("protocol-")
@@ -49,16 +54,22 @@ function TaskLibrary({ item, ...p }) {
     ? { id: item, name: selectedProtocol.task }
     : taskById.get(item);
   useEffect(() => {
-    if (item?.startsWith("protocol-")) {
-      setOnlyPriority(false);
-      setFilters((previous) => ({ ...previous, period: "all", kind: "" }));
+    if (category && task && !selectedProtocol && !task.groups?.includes(category)) {
+      setCategory("");
+    }
+  }, [item, category, task, selectedProtocol]);
+  useEffect(() => {
+    setKindSelection({ topic: item, kind: "" });
+    if (item) {
+      setTaskLayout("cards");
+
       setMatrix(false);
     }
   }, [item]);
   const savedForFilters = f.bookmarks ? p.saved : null;
   const selection = useMemo(
-    () => ({ query, filters: f, onlyPriority, saved: savedForFilters }),
-    [query, f, onlyPriority, savedForFilters],
+    () => ({ query, filters: f, saved: savedForFilters }),
+    [query, f, savedForFilters],
   );
   const visibleInstances = useMemo(
     () => filterTaskInstances(catalogue, D.taskInstances, selection),
@@ -80,7 +91,7 @@ function TaskLibrary({ item, ...p }) {
       }),
     [catalogue, visibleInstances, category, task?.id, selectedProtocol],
   );
-  const instances = useMemo(
+  const topicInstances = useMemo(
     () =>
       selectedProtocol
         ? filterTaskInstances(
@@ -100,6 +111,15 @@ function TaskLibrary({ item, ...p }) {
       getVisibleInstances,
     ],
   );
+  const kindOptions = getTaskKindOptions(task, topicInstances);
+  const hasKinds = kindOptions.length > 1;
+  const instances = filterTaskKindInstances(topicInstances, selectedKind);
+  const sortedInstances = [...instances].sort((a, b) => {
+    const wa = byId.get(a.work), wb = byId.get(b.work);
+    return sort === "name" ? wa.name.localeCompare(wb.name) :
+      sort === "year" ? wb.year - wa.year :
+      (wb.attention[sort] ?? -1) - (wa.attention[sort] ?? -1) || wb.year - wa.year;
+  });
   return (
     <>
       <PageIntro
@@ -108,6 +128,8 @@ function TaskLibrary({ item, ...p }) {
       >
         选择任务，查看哪些论文做过，以及各自怎样测试和评分。同名任务的成功标准和测试条件可能不同。
       </PageIntro>
+      <section className="library-panel" aria-label="任务搜索与筛选">
+      <PaperScopeNavigation value={f.scope} onChange={value => setFilter("scope", value)} period={f.period} />
       <div className="toolbar">
         <div className="search-field">
           <Icon type="search" />
@@ -141,10 +163,8 @@ function TaskLibrary({ item, ...p }) {
             label="时间范围"
             value={f.period}
             onChange={(v) => setFilter("period", v || "all")}
-            options={[
-              ["recent", "近两年（含正式发表）"],
-              ["all", "全部年份 / 前序"],
-            ]}
+            allValue="all"
+            options={YEAR_OPTIONS}
           />
           <Filter
             label="本体与力觉分类"
@@ -168,20 +188,12 @@ function TaskLibrary({ item, ...p }) {
             options={["真机", "仿真", "离线"].map((x) => [x, x])}
           />
           <Filter
-            label="任务主题"
+            label="小分类"
             value={!selectedProtocol && task ? task.id : ""}
             onChange={(v) => p.goto("tasks", v || undefined)}
-            options={D.taskTypes.map((t) => [t.id, t.name])}
+            options={types.map((t) => [t.id, t.name])}
           />
           <div className="filter-toggles">
-            <label className="check-filter">
-              <input
-                type="checkbox"
-                checked={onlyPriority}
-                onChange={(e) => setOnlyPriority(e.target.checked)}
-              />
-              优先考察
-            </label>
             <label className="check-filter">
               <input
                 type="checkbox"
@@ -206,16 +218,22 @@ function TaskLibrary({ item, ...p }) {
               />
               收藏
             </label>
+            <label className="check-filter">
+              <input
+                type="checkbox"
+                checked={f.bimanualCooperation}
+                onChange={(e) => setFilter("bimanualCooperation", e.target.checked)}
+              />
+              双臂协作任务
+            </label>
             <button className="reset" onClick={reset}>
               重置
             </button>
           </div>
         </div>
       </div>
-      <p className="mini-note">
-        环境和力相关评测按具体任务筛选；时间范围、值得参考和收藏按所属论文筛选。所有条件同时生效。
-      </p>
-      <div className="tasks-controls">
+      </section>
+      {!task && <div className="tasks-controls">
         <button
           className={!matrix ? "active" : ""}
           aria-pressed={!matrix}
@@ -230,11 +248,11 @@ function TaskLibrary({ item, ...p }) {
         >
           论文 × 任务覆盖矩阵
         </button>
-      </div>
-      {matrix ? (
+      </div>}
+      {matrix && !task ? (
         <CoverageMatrix
           {...p}
-          rows={matrixRows}
+          rows={[...matrixRows].sort((a, b) => (b.attention.googleScholar ?? -1) - (a.attention.googleScholar ?? -1))}
           taskTypes={matrixTypes}
           hasTask={hasMatrixTask}
         />
@@ -245,20 +263,40 @@ function TaskLibrary({ item, ...p }) {
           </button>
           <div className="task-detail-heading">
             <div>
-              <h2>{task.name}</h2>
+              <h2>{getTaskTopicName(task, instances)}</h2>
               <p>
                 {instances.length} 项论文记录 · 逐篇保留指标、测试次数与原文位置
               </p>
             </div>
-            <Tag>同任务主题 ≠ 同 Benchmark</Tag>
+            <div className="task-view-controls"><label className="task-table-sort">排序
+              <select aria-label="任务论文排序" value={sort} onChange={e => setSort(e.target.value)}>
+                <option value="stars">GitHub Stars ↓</option>
+                <option value="googleScholar">Google Scholar 引用 ↓</option>
+                <option value="citations">OpenAlex 引用 ↓</option>
+                <option value="year">年份 ↓</option>
+                <option value="name">名称</option>
+              </select>
+            </label>
+              <div className="tasks-controls task-layout-toggle" role="group" aria-label="任务展示方式">
+                <button className={taskLayout === "cards" ? "active" : ""} aria-pressed={taskLayout === "cards"} onClick={() => setTaskLayout("cards")}><Icon type="grid" />卡片</button>
+                <button className={taskLayout === "compact" ? "active" : ""} aria-pressed={taskLayout === "compact"} onClick={() => setTaskLayout("compact")}><Icon type="list" />紧凑对照</button>
+              </div>
+            </div>
           </div>
-          <div className="metric-disclaimer">
-            指标列出评分项目，具体方法说明怎样判断、测量和计分。
-          </div>
+          {hasKinds && task.description && <p className="task-topic-description">{task.description}</p>}
+          <div className={"task-detail-layout" + (hasKinds ? " has-kinds" : "")}>
+            {hasKinds && <TaskKindNavigation options={kindOptions} value={selectedKind}
+              total={topicInstances.reduce((n, record) => n + record.protocols.length, 0)}
+              onChange={kind => setKindSelection({ topic: item, kind })} />}
+            <section className="task-detail-results" aria-label="筛选后的任务评测">
+              {hasKinds && <p className="task-kind-result-count" role="status" aria-live="polite" aria-atomic="true">
+                {selectedKind ? kindOptions.find(kind => kind.id === selectedKind)?.name : "全部任务"}
+                <span>{instances.length} 项论文记录 · {instances.reduce((n, record) => n + record.protocols.length, 0)} 条评测</span>
+              </p>}
           <>
             {selectedProtocol && instances.length === 1 && (
               <p className="mini-note">
-                当前目录尚未收录可对照的其他论文；以下保留此任务原始评测信息。
+                当前仅1篇匹配论文。
               </p>
             )}
           </>
@@ -268,48 +306,10 @@ function TaskLibrary({ item, ...p }) {
               <p>请调整本体与力觉分类或上方筛选条件。</p>
             </div>
           )}
-          <div className="task-protocols">
-            {instances.map((i) => {
-              const w = byId.get(i.work);
-              return (
-                <article className="protocol-card" key={i.id}>
-                  <header>
-                    <div>
-                      <button
-                        className="work-name"
-                        onClick={() => p.showPaper(w.id)}
-                      >
-                        {w.name}
-                      </button>
-                      <CategoryTags w={w} />
-                      <div className="pill-row">
-                        <Tag>{w.kind}</Tag>
-                        <ScreeningTag w={w} />
-                        <Domains w={w} />
-                      </div>
-                    </div>
-                    <CompareButton w={w} {...p} />
-                  </header>
-                  <div className="experiment-cards linked-protocols">
-                    {i.protocols.map((e) => (
-                      <TaskProtocol key={e.id} e={e} />
-                    ))}
-                  </div>
-                  <div className="task-baseline comparison-method-overview">
-                    <strong>对比实验关注什么</strong>
-                    {w.comparisonMethods.map((c) => (
-                      <p key={c.id}>{c.question}</p>
-                    ))}
-                  </div>
-                  <button
-                    className="subtle-link"
-                    onClick={() => p.showPaper(w.id)}
-                  >
-                    完整论文评测详情 ↗
-                  </button>
-                </article>
-              );
-            })}
+          {instances.length > 0 && (taskLayout === "cards"
+            ? <TaskComparisonCards instances={sortedInstances} {...p} />
+            : <TaskComparisonTable instances={sortedInstances} {...p} />)}
+            </section>
           </div>
         </>
       ) : (
@@ -350,16 +350,16 @@ function TaskLibrary({ item, ...p }) {
                     </button>
                     <p>{g.description}</p>
                     <small>
-                      {ts.length} 个任务主题 · {workCount} 项相关工作
+                      {ts.length} 个小分类 · {workCount} 项相关工作
                     </small>
                     <div className="task-chips">
                       {ts.map((t) => (
                         <button
                           key={t.id}
-                          onClick={() => p.goto("tasks", t.id)}
+                          onClick={() => { setCategory(g.id); p.goto("tasks", t.id); }}
                         >
                           {t.name}{" "}
-                          <span>{getVisibleInstances(t.id).length}</span>
+                          <span>{getVisibleInstances(t.id, g.id).length}</span>
                         </button>
                       ))}
                     </div>
@@ -372,7 +372,7 @@ function TaskLibrary({ item, ...p }) {
             <h2>
               {category
                 ? D.taskGroups.find((g) => g.id === category)?.name
-                : "全部任务主题"}
+                : "全部小分类"}
             </h2>
             {category && (
               <button onClick={() => setCategory("")}>清除分类</button>

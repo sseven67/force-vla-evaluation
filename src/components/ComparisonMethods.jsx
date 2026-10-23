@@ -22,7 +22,7 @@ export default function ComparisonMethods({ w }) {
         </div>
       </details>}
       <details className="comparison-method-note">
-        <summary>阅读注意与原文</summary>
+        <summary>补充说明与原文</summary>
         <p>{card.note}</p>
         <External href={card.source}>{card.locator} 原文 ↗</External>
       </details>

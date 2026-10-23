@@ -161,7 +161,7 @@ def apply_plain_language(data):
     for work in data['works']:
         fields(work, ('summary', 'purpose', 'signal', 'actionOutput', 'role', 'warning', 'baseline', 'trials', 'classificationNote'))
         fields(work['researchObjective'], ('text',))
-        fields(work['physicalProfile'], ('embodimentBrief', 'forceBrief', 'forceDetail'))
+        fields(work.get('physicalProfile', {}), ('robotConfiguration', 'embodimentBrief', 'forceBrief', 'forceDetail'))
         fields(work['openness'], ('note',))
         for card in work['comparisonMethods']:
             fields(card, ('question', 'objects', 'tasks', 'controlled', 'evaluation', 'lesson', 'note'))

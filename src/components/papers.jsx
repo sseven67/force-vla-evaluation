@@ -1,5 +1,5 @@
 import React from "react";
-import { useCatalogue, isResearchFocus } from "../data/catalogue.js";
+import { useCatalogue } from "../data/catalogue.js";
 import { Tag, Domains, Attention, Icon } from "./ui.jsx";
 import { EvaluationReferenceTag } from "./EvaluationHighlights.jsx";
 
@@ -21,6 +21,7 @@ export function CategoryTags({ w }) {
 }
 
 export function ScreeningTag({ w }) {
+  if (!w.screening.highAttention) return null;
   return (
     <span className={"screening-tag grade-" + w.screening.grade}>
       {w.screening.label}
@@ -38,46 +39,24 @@ export function ScreeningInfo({ w }) {
   return <p className="publication-line">{w.screening.timeBasis}</p>;
 }
 
-export function SelectionPolicy({ children }) {
-  const { D } = useCatalogue();
-  const p = D.selectionPolicy;
+export function SelectionPolicy() {
   return (
     <details className="selection-policy">
       <summary>
-        <strong>筛选与排序说明</strong>
-        <span>{p.window.label}</span>
+        <strong>筛选规则</strong>
       </summary>
       <div>
-        {children}
-        <p>
-          <b>优先考察：</b>
-          {p.rules.A}
-        </p>
-        <p>
-          <b>补充参考：</b>
-          {p.rules.B}
-        </p>
-        <p>
-          <b>待观察：</b>
-          {p.rules.C}
-        </p>
-        <p>
-          年份筛选与优先条件分开：当前可选择近两年或全部年份。较早工作只要符合上面的条件，也标为优先考察。
-        </p>
         <ul>
-          {p.limitations.map((x) => (
-            <li key={x}>{x}</li>
-          ))}
+          <li>较高关注：原文和评测可查；六维力＋夹爪采用较低热度门槛，其他VLA要求更高，非VLA仅保留高关注代表。</li>
+          <li>默认显示全部论文，按 Google Scholar 引用降序；Stars 作为补充，“—”表示缺失。关注度不代表实验可靠性。</li>
         </ul>
-        <p>
-          ①不受Stars或引用多少限制；同时属于①和其他类别的工作按①纳入。其他三个方向的两个热度条件满足任意一个即可。
-        </p>
       </div>
     </details>
   );
 }
 
 export function CompareButton({ w, selected, compare }) {
+  if (w.resourceOnly) return null;
   const yes = selected.includes(w.id);
   return (
     <button
@@ -97,7 +76,6 @@ export function BimanualTaskNote({ w }) {
   return (
     <div className="bimanual-task-note">
       <p><strong>双臂协作示例：</strong>{tasks.map((e) => e.task).join("、")}</p>
-      <p>{evaluation.description}</p>
     </div>
   );
 }
@@ -112,20 +90,16 @@ export function PaperCard({ w, showBimanualTasks = false, ...p }) {
   return (
     <article className="work-card" style={{ "--color": colour(w) }}>
       <div className="card-meta"><span>{w.year} <span aria-hidden="true">/</span> {w.kind}</span><button className={"card-bookmark " + (bookmarked ? "selected" : "")} aria-label={(bookmarked ? "取消收藏" : "收藏") + w.name} aria-pressed={bookmarked} onClick={() => p.save(w.id, { bookmark: !bookmarked })}><Icon type="bookmark" /></button></div>
-      <div className="card-title">
+      <div className="card-title paper-title-with-attention">
         <h3>
         <button className="work-name" onClick={() => p.showPaper(w.id)}>
           {w.name}
         </button>
         </h3>
+        <ScreeningTag w={w} />
       </div>
       <p className="card-summary">{w.summary}</p>
       <div className="card-title-badges">
-          {isResearchFocus(w) ? (
-            <Tag type="priority">研究重点</Tag>
-          ) : (
-            <ScreeningTag w={w} />
-          )}
           <ForceEvaluationTag w={w} />
           <EvaluationReferenceTag w={w} />
         </div>

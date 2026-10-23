@@ -1,0 +1,1281 @@
+{
+  "checked": "2026-10-23",
+  "scope": "8项新增或力评测状态含糊的工作；保留任务成功、阶段得分和案例曲线的区别。",
+  "protocols": {
+    "E04-e01": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e02": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e03": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e04": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e05": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e06": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e07": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e08": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e09": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "完整任务成功率（完成／失败）；阶段进度得分（0–100分）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e10": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e11": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e12": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e13": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e14": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e15": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e16": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e17": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e18": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e19": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e20": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e21": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e22": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e23": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e24": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e25": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e26": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e27": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e28": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E04-e29": {
+      "source": "https://arxiv.org/html/2607.23782v1",
+      "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+      "checked": "2026-10-23",
+      "metric": "仿真任务成功率（按环境完成条件判定）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.4；Tables 1–2；Appendix E",
+        "note": "核对评测协议、结果表和评分附录：报告任务成功率与阶段进度得分，没有该任务自主执行的独立力统计或力比较曲线。触觉表征与训练损失不作为执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.23782v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E10-e01": {
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+      "checked": "2026-10-23",
+      "metric": "标准切面获取成功率；扫描步数",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+        "note": "核对全部实验结果：各任务报告切面成功率和扫描步数；Fig.6的执行力比较仅对应任务2，本任务没有单独公开的力曲线或力统计。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E10-e02": {
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+      "checked": "2026-10-23",
+      "metric": "指定超声图像获取成功率；扫描步数；探头接触力变化（仅第2项任务示例）",
+      "force": {
+        "status": "reported",
+        "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+        "note": "原文明示Fig.6对比Task2两种方法的实测扫描力，讨论约7.5 N和力波动。只有案例曲线，没有五种切面各自的力误差表，不能把7.5 N作为统一达标要求。",
+        "metrics": [
+          "探头接触力随时间的变化（仅第2项任务的示例）"
+        ],
+        "kind": "case",
+        "evaluatesAutonomousExecution": true,
+        "explanation": {
+          "method": "对比本方法与π₀.₅扫描时的力变化图，观察用力大小和波动。",
+          "comparison": "仅第2项任务的示例，用于解释扫描表现，不能按统一力成绩排名，也不计入图像获取成功率。"
+        },
+        "summary": "通过实际力变化分析扫描时的接触是否稳定。",
+        "label": "有（案例曲线）",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.15009v1"
+      }
+    },
+    "E10-e03": {
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+      "checked": "2026-10-23",
+      "metric": "标准切面获取成功率；扫描步数",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+        "note": "核对全部实验结果：各任务报告切面成功率和扫描步数；Fig.6的执行力比较仅对应任务2，本任务没有单独公开的力曲线或力统计。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E10-e04": {
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+      "checked": "2026-10-23",
+      "metric": "标准切面获取成功率；扫描步数",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+        "note": "核对全部实验结果：各任务报告切面成功率和扫描步数；Fig.6的执行力比较仅对应任务2，本任务没有单独公开的力曲线或力统计。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "E10-e05": {
+      "source": "https://arxiv.org/html/2608.15009v1",
+      "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+      "checked": "2026-10-23",
+      "metric": "标准切面获取成功率；扫描步数",
+      "force": {
+        "status": "not_reported",
+        "locator": "§5.1–5.2；Fig.4；Tables 1–2；Fig.6（仅任务2的力曲线）",
+        "note": "核对全部实验结果：各任务报告切面成功率和扫描步数；Fig.6的执行力比较仅对应任务2，本任务没有单独公开的力曲线或力统计。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.15009v1",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "T05-e01": {
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "note": "核对作者官方项目页全部实验协议、成功率表和演示说明：当前公开结果只有三项任务的成功率，没有公开执行力统计或力比较曲线。结论限于该官方公开页面。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://dt-tacvla.github.io/",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "T05-e02": {
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "note": "核对作者官方项目页全部实验协议、成功率表和演示说明：当前公开结果只有三项任务的成功率，没有公开执行力统计或力比较曲线。结论限于该官方公开页面。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://dt-tacvla.github.io/",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "T05-e03": {
+      "source": "https://dt-tacvla.github.io/",
+      "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+        "note": "核对作者官方项目页全部实验协议、成功率表和演示说明：当前公开结果只有三项任务的成功率，没有公开执行力统计或力比较曲线。结论限于该官方公开页面。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://dt-tacvla.github.io/",
+        "evaluatesAutonomousExecution": false,
+        "summary": "",
+        "explanation": {}
+      }
+    },
+    "N01-e01": {
+      "source": "https://arxiv.org/html/2607.18231",
+      "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+      "checked": "2026-10-23",
+      "metric": "成功率（完整完成／失败）；执行时力变化曲线（案例展示）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+        "note": "Fig.4给出各任务自主执行中选定方向的力变化；没有统一的力指标排序。",
+        "metrics": [
+          "自主执行中的接触力变化示例"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "用接触力变化说明机器人如何记住接触事件。",
+        "explanation": {
+          "method": "把执行画面与某个方向的力曲线对齐，观察碰到物体、按钮按下或擦拭时的变化。",
+          "comparison": "用于解释任务行为；各方法正式按成功率比较，没有用力大小或力误差排高低。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.18231"
+      }
+    },
+    "N01-e02": {
+      "source": "https://arxiv.org/html/2607.18231",
+      "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+      "checked": "2026-10-23",
+      "metric": "成功率（次数准确并停止／失败）；执行时力变化曲线（案例展示）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+        "note": "Fig.4给出各任务自主执行中选定方向的力变化；没有统一的力指标排序。",
+        "metrics": [
+          "自主执行中的接触力变化示例"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "用接触力变化说明机器人如何记住接触事件。",
+        "explanation": {
+          "method": "把执行画面与某个方向的力曲线对齐，观察碰到物体、按钮按下或擦拭时的变化。",
+          "comparison": "用于解释任务行为；各方法正式按成功率比较，没有用力大小或力误差排高低。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.18231"
+      }
+    },
+    "N01-e03": {
+      "source": "https://arxiv.org/html/2607.18231",
+      "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+      "checked": "2026-10-23",
+      "metric": "成功率（轮数准确并停止／失败）；执行时力变化曲线（案例展示）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.2；Table 1；Fig.4；Appendix B.2",
+        "note": "Fig.4给出各任务自主执行中选定方向的力变化；没有统一的力指标排序。",
+        "metrics": [
+          "自主执行中的接触力变化示例"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "用接触力变化说明机器人如何记住接触事件。",
+        "explanation": {
+          "method": "把执行画面与某个方向的力曲线对齐，观察碰到物体、按钮按下或擦拭时的变化。",
+          "comparison": "用于解释任务行为；各方法正式按成功率比较，没有用力大小或力误差排高低。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.18231"
+      }
+    },
+    "N02-e01": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e02": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e03": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e04": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接打开率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e05": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e06": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e07": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e08": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N02-e09": {
+      "source": "https://arxiv.org/html/2603.14604",
+      "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+      "checked": "2026-10-23",
+      "metric": "成功率（完成／失败）；首次直接插入率（无需调整或重试）；平均最大接触力（N）；平均完成时间（s）",
+      "force": {
+        "status": "reported",
+        "locator": "§4.1 Evaluation Metrics；§4.2；Tables 1–2；Figs.5–6",
+        "note": "§4.1定义平均最大接触力；Figs.5–6给出力比较，Fig.5图注明确为成功恢复插入的样本。该子集的曲线不视为全部尝试的统一力均值。",
+        "metrics": [
+          "每次最大接触力的平均值（N）"
+        ],
+        "kind": "execution",
+        "evaluatesAutonomousExecution": true,
+        "summary": "独立比较各方法是否用力过大。",
+        "explanation": {
+          "method": "每次执行取最大接触力，再按论文对应样本范围求均值；Fig.5的力分析只统计成功恢复插入的样本。",
+          "comparison": "同任务内可以按这项力指标比较方法；成功率和时间另列，没有力与成功率合成的总分。"
+        },
+        "label": "有",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2603.14604"
+      }
+    },
+    "N03-e01": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e02": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e03": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e04": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e05": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e06": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e07": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N03-e08": {
+      "source": "https://arxiv.org/html/2606.31723",
+      "locator": "§4.1–4.2；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；外部干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.2；Table 1",
+        "note": "核对§4全部实验与结果表：操作任务报告正常和干扰设置下的成功率。触觉预测与控制反馈是方法组成，没有作为自主执行力大小、力误差或力统计报告。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2606.31723"
+      }
+    },
+    "N04-e01": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N04-e02": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N04-e03": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N04-e04": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N04-e05": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N04-e06": {
+      "source": "https://arxiv.org/html/2607.07287",
+      "locator": "§4.1–4.3；Table 1",
+      "checked": "2026-10-23",
+      "metric": "正常设置成功率（完成／失败）；人工干扰下成功率（完成／失败）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1–4.3；Table 1",
+        "note": "核对Table 1和§4：操作任务报告正常及人工干扰下成功率；Table 2的接触准确率和IoU属于离线触觉预测，不能充当这些操作的执行力指标。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2607.07287"
+      }
+    },
+    "N05-e01": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e02": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e03": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e04": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e05": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "成功率（指示灯亮／未亮）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e06": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    },
+    "N05-e07": {
+      "source": "https://arxiv.org/html/2608.01824",
+      "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+      "checked": "2026-10-23",
+      "metric": "平均任务完成得分（0–100%，允许部分完成）",
+      "force": {
+        "status": "not_reported",
+        "locator": "§4.1；Tables 1–2；Appendix B.3–B.4",
+        "note": "核对§4及附录B、D：操作结果为阶段完成得分。Table 5的力重建误差是编码器离线预训练诊断，没有作为自主执行时的用力评价。",
+        "metrics": [],
+        "label": "无",
+        "checked": "2026-10-23",
+        "source": "https://arxiv.org/html/2608.01824"
+      }
+    }
+  }
+}

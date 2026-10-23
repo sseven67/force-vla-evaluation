@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useCatalogue, isVLA } from "../data/catalogue.js";
+import { useCatalogue, isVLA, robotDescription } from "../data/catalogue.js";
 import {
   Tag,
   Domains,
@@ -7,7 +7,7 @@ import {
   Attention,
   SaveControls,
 } from "./ui.jsx";
-import { CompareButton, CategoryTags, ScreeningInfo } from "./papers.jsx";
+import { CompareButton, CategoryTags, ScreeningInfo, ScreeningTag } from "./papers.jsx";
 import { Figure } from "./Figures.jsx";
 import TaskProtocol from "./TaskProtocol.jsx";
 import ComparisonMethods from "./ComparisonMethods.jsx";
@@ -54,7 +54,7 @@ function PaperDetail({ w, ...p }) {
             <Tag type={isVLA(w) ? "vla" : "boundary"}>{w.kind}</Tag>
             <Domains w={w} />
             <Tag>{w.year}</Tag>
-            <EvaluationReferenceTag w={w} />
+            <ScreeningTag w={w} /><EvaluationReferenceTag w={w} />
           </div>
           <h2>{w.name}</h2>
           <p className="full-title">{w.fullTitle}</p>
@@ -89,19 +89,18 @@ function PaperDetail({ w, ...p }) {
         </div>
         <dl className="reader-configuration">
           <div>
-            <dt>机器人与执行器</dt>
+            <dt>机器人</dt>
             <dd>
-              <strong className="physical-type">{physical.embodimentBrief}</strong>
-              {physical.robotModel && <span className="physical-model">机器人：{physical.robotModel}</span>}
-              {physical.effectorModel && <span className="physical-model">执行器：{physical.effectorModel}</span>}
+              <strong className="physical-type">{robotDescription(physical)}</strong>
             </dd>
           </div>
           <div>
-            <dt>力 / 触觉输入</dt>
-            <dd>
-              <strong className="physical-type">{physical.forceBrief}</strong>
-              <span className="physical-model">信号来源：{w.sensorOrigin}</span>
-            </dd>
+            <dt>操作末端</dt>
+            <dd className="physical-effector">{physical.effectorModel || '类型／型号未确认'}</dd>
+          </div>
+          <div className="reader-contact-signal">
+            <dt>力／触觉信号</dt>
+            <dd>{physical.forceBrief}</dd>
           </div>
           <div className="reader-action">
             <dt>动作输出</dt>
@@ -112,13 +111,17 @@ function PaperDetail({ w, ...p }) {
           <span>研究分类</span><CategoryTags w={w} />
         </div>
         <details className="reader-config-notes">
-          <summary>版本、信号与分类依据</summary>
-          <p>{physical.forceDetail}</p>
+          <summary>配置与原文依据</summary>
+          {physical.forceDetail && <p>{physical.forceDetail}</p>}
           {w.classificationNote && w.classificationNote !== physical.forceDetail && <p>{w.classificationNote}</p>}
           <div className="physical-source">
-            <External href={physical.source.url}>本体与信号原文</External>
+            <External href={physical.source.url}>机器人与信号原文</External>
             <span>{physical.source.locator}</span>
           </div>
+          {w.actionSource && <div className="physical-source">
+            <External href={w.actionSource.url}>动作输出原文</External>
+            <span>{w.actionSource.locator}</span>
+          </div>}
         </details>
       </section>
       <section id="paper-section-1" data-section="1" tabIndex={-1}>
@@ -127,7 +130,7 @@ function PaperDetail({ w, ...p }) {
           <span className="task-count">{w.experiments.length} 项任务</span>
         </div>
         <details className="reader-task-directory" open={w.experiments.length <= 6}>
-          <summary>任务目录<span>点击名称跳转</span></summary>
+          <summary>任务目录<span>点击跳转</span></summary>
           <ol className="task-name-list" aria-label="全部评测任务名称">
             {w.experiments.map((e) => (
               <li key={e.id}><button onClick={() => scrollToContent("protocol-" + e.id)}>{e.task}</button></li>

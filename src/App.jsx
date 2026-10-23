@@ -40,7 +40,7 @@ export default function App() {
     if (storageError) setToast(storageError);
   }, [storageError]);
   useEffect(() => {
-    document.title = `${names[route.view]} · Force-VLA Evaluation Atlas`;
+    document.title = `${names[route.view]} · Force-VLA Evaluation Platform`;
   }, [route.view]);
   useEffect(() => {
     if (!toast) return;

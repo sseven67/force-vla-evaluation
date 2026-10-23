@@ -38,7 +38,7 @@ function Guide() {
         <div className="loop-controls">
           <div>
             <h2>机器人怎样根据反馈调整动作？</h2>
-            <p className="mini-note">流程示意，非真实模型或实验数据</p>
+            <p className="mini-note">交互流程示意</p>
           </div>
           <button
             className="primary-button"

@@ -1,0 +1,3706 @@
+{
+  "version": 1,
+  "checked": "2026-10-23",
+  "scope": "仅包含论文库工作；每项具体任务唯一归属。环境和双臂配置不决定大类。",
+  "sourceRecordCount": 355,
+  "taskContentCount": 357,
+  "groups": [
+    {
+      "id": "precision",
+      "name": "接触对准"
+    },
+    {
+      "id": "surface",
+      "name": "持续接触"
+    },
+    {
+      "id": "grasp",
+      "name": "稳定夹持与保护"
+    },
+    {
+      "id": "reason",
+      "name": "力觉感知、判断与决策"
+    },
+    {
+      "id": "long",
+      "name": "长程多步骤操作"
+    }
+  ],
+  "topics": [
+    {
+      "id": "usb",
+      "name": "USB插入",
+      "group": "precision",
+      "taskNames": [
+        "USB插入",
+        "USB插拔"
+      ],
+      "description": "比较 USB 接口的对准插入及插拔操作，关注能否顺利到位。",
+      "entries": [
+        {
+          "protocol": "W01-e03",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "W03-e01",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "W07-e02",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "W09-e01",
+          "task": "USB插拔",
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "W13-e03",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "W17-e04",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "E03-e13",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "E04-e20",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "X01-e10",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "P01-e02",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "T04-e14",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "T04-e15",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "T05-e02",
+          "task": "USB插入",
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "T06-e02",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "T16-e02",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "C04-e02",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "N02-e03",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "N03-e05",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留常用USB任务的独立入口，插入和拔出属于同一接口操作；环境和传感器变化不另建类。"
+        },
+        {
+          "protocol": "E12-e04",
+          "task": "USB插入",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "实际评测红色、银色 USB；充电适配器只在训练对象栏。"
+        }
+      ]
+    },
+    {
+      "id": "plug",
+      "name": "插头插拔",
+      "group": "precision",
+      "taskNames": [
+        "插头插入",
+        "插座插入",
+        "充电插头插入",
+        "拔插头",
+        "充电器插拔",
+        "充电宝拔出",
+        "充电器插入",
+        "插座拔出",
+        "插头插入插座",
+        "HDMI插入",
+        "拔插充电器",
+        "电源插头插入",
+        "两脚电源插头插入"
+      ],
+      "description": "包含电源、充电和 HDMI 接口的插入、拔出与插拔操作，按接口或动作选择任务。",
+      "entries": [
+        {
+          "protocol": "W01-e02",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W04-e05",
+          "task": "插座插入",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W05-e02",
+          "task": "充电插头插入",
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W07-e06",
+          "task": "拔插头",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W07-e07",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W08-e01",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W09-e02",
+          "task": "充电器插拔",
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W10-e03",
+          "task": "充电宝拔出",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W13-e02",
+          "task": "充电器插入",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W13-e04",
+          "task": "插座拔出",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W14-e03",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W15-e04",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "W17-e02",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "E04-e06",
+          "task": "插头插入插座",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "E04-e16",
+          "task": "HDMI插入",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "E04-e19",
+          "task": "拔插充电器",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "P01-e01",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "T05-e01",
+          "task": "电源插头插入",
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "T16-e01",
+          "task": "电源插头插入",
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "C04-e01",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "C06-e04",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.2；Fig.7",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "C07-e01",
+          "task": "插头插入",
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Fig.5",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "N02-e09",
+          "task": "HDMI插入",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "N03-e06",
+          "task": "两脚电源插头插入",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        },
+        {
+          "protocol": "N04-e04",
+          "task": "电源插头插入",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1",
+          "reason": "保留插头插拔的独立入口，充电插头及其他电气接口按相同配合操作合并，USB另列。"
+        }
+      ]
+    },
+    {
+      "id": "peg",
+      "name": "销孔插入",
+      "group": "precision",
+      "taskNames": [
+        "方块插孔",
+        "三角块插孔",
+        "六角销插孔",
+        "五角销插孔",
+        "圆销插孔",
+        "选物插孔",
+        "销孔插入"
+      ],
+      "description": "将不同形状的销或物块插入配合孔；部分任务还要求先选择指定物块。孔隙和测试条件保留在各论文记录中。",
+      "entries": [
+        {
+          "protocol": "E02-e02",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e03",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e04",
+          "task": "三角块插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e05",
+          "task": "三角块插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e06",
+          "task": "六角销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e07",
+          "task": "六角销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e08",
+          "task": "五角销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e09",
+          "task": "五角销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e10",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E02-e11",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.2–4.4；Tables2、3、5–7",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E11-e01",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E11-e02",
+          "task": "三角块插孔",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E11-e03",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "E11-e04",
+          "task": "六角销插孔",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-C；Tables III–IV",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T02-e03",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T02-e04",
+          "task": "三角块插孔",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T02-e05",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "v3 §4.1；Tables3–7；Fig4",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T04-e16",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "v1 为指定方块插入配合孔，版本号作条件，不代替任务内容。"
+        },
+        {
+          "protocol": "T04-e17",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "v1 为指定方块插入配合孔，版本号作条件，不代替任务内容。"
+        },
+        {
+          "protocol": "T04-e18",
+          "task": "选物插孔",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3；Figs.S12–S13、S20–S21",
+          "reason": "图 S12–S13、S20–S21 的指令包含方块、半圆柱、六棱柱。名称简写为选物插孔，选择要求和对象明细保留在说明中。"
+        },
+        {
+          "protocol": "T04-e19",
+          "task": "选物插孔",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3；Figs.S12–S13、S20–S21",
+          "reason": "图 S12–S13、S20–S21 的指令包含方块、半圆柱、六棱柱。名称简写为选物插孔，选择要求和对象明细保留在说明中。"
+        },
+        {
+          "protocol": "T06-e01",
+          "task": "销孔插入",
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T17-e03",
+          "task": "销孔插入",
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "T18-e01",
+          "task": "销孔插入",
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e01",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e02",
+          "task": "圆销插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e05",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e06",
+          "task": "五角销插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e07",
+          "task": "方块插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        },
+        {
+          "protocol": "N02-e08",
+          "task": "五角销插孔",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "圆形、方形、多边形和不同间隙的任务共同考察销块对孔插入；保留常用任务名，不按孔形拆类。"
+        }
+      ]
+    },
+    {
+      "id": "tube",
+      "name": "插管",
+      "group": "precision",
+      "taskNames": [
+        "试管插孔",
+        "斜孔插管",
+        "插管"
+      ],
+      "description": "将试管或管件插入孔中，包含斜孔等接触约束。",
+      "entries": [
+        {
+          "protocol": "W10-e01",
+          "task": "试管插孔",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "Fig.4a；Appendix B",
+          "reason": "任务图和说明给出试管及孔架，补齐管件种类。"
+        },
+        {
+          "protocol": "E03-e05",
+          "task": "斜孔插管",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        },
+        {
+          "protocol": "E03-e06",
+          "task": "插管",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        },
+        {
+          "protocol": "E04-e14",
+          "task": "斜孔插管",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        },
+        {
+          "protocol": "E04-e15",
+          "task": "插管",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        },
+        {
+          "protocol": "X01-e05",
+          "task": "斜孔插管",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        },
+        {
+          "protocol": "X01-e06",
+          "task": "插管",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "斜孔、小间隙和普通插管共享管件接触对准的目标，作为同一常用任务保留。"
+        }
+      ]
+    },
+    {
+      "id": "part-insertion",
+      "name": "零件插装",
+      "group": "precision",
+      "taskNames": [
+        "套环入柱",
+        "移液器吸头安装"
+      ],
+      "description": "通过位置对准完成套环入柱、移液器吸头安装等零件插装。",
+      "entries": [
+        {
+          "protocol": "W08-e02",
+          "task": "套环入柱",
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II",
+          "reason": "非销孔或插管专项的配合插装，按沿配合方向接合的共同目标合并；板、吸头、套环等对象和完成条件保留。"
+        },
+        {
+          "protocol": "E03-e12",
+          "task": "套环入柱",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5",
+          "reason": "非销孔或插管专项的配合插装，按沿配合方向接合的共同目标合并；板、吸头、套环等对象和完成条件保留。"
+        },
+        {
+          "protocol": "P04-e01",
+          "task": "移液器吸头安装",
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6",
+          "reason": "非销孔或插管专项的配合插装，按沿配合方向接合的共同目标合并；板、吸头、套环等对象和完成条件保留。"
+        }
+      ]
+    },
+    {
+      "id": "expansion-card",
+      "name": "插扩展卡",
+      "group": "precision",
+      "taskNames": [
+        "插扩展卡"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e07",
+          "task": "插扩展卡",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§6 Findings：Board Insertion",
+          "reason": "原文指插扩展卡；不应笼统写成任意薄板。"
+        }
+      ]
+    },
+    {
+      "id": "aligned-placement",
+      "name": "对准放置",
+      "group": "precision",
+      "taskNames": [
+        "杯子入架",
+        "乐高积木排列",
+        "瓶子入架",
+        "铅笔入杯",
+        "管子入架"
+      ],
+      "description": "将杯子、瓶子、铅笔、管件等放入对应支架或容器，也包括积木排列。",
+      "entries": [
+        {
+          "protocol": "N04-e03",
+          "task": "杯子入架",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "Fig.4、Fig.6",
+          "reason": "图6明确橙色杯放入杯架指定位置，不是笼统零件装配。"
+        },
+        {
+          "protocol": "W04-e07",
+          "task": "乐高积木排列",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "W12-e01",
+          "task": "杯子入架",
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "E03-e04",
+          "task": "瓶子入架",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "E04-e13",
+          "task": "瓶子入架",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "X01-e04",
+          "task": "瓶子入架",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "N03-e01",
+          "task": "铅笔入杯",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        },
+        {
+          "protocol": "N03-e02",
+          "task": "管子入架",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "共同将物体的朝向或位置与槽位、支架或规定布局对准；普通搬运与抓放不并入此类。"
+        }
+      ]
+    },
+    {
+      "id": "gear",
+      "name": "齿轮装配",
+      "group": "precision",
+      "taskNames": [
+        "齿轮装配"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W02-e05",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "W03-e02",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "E04-e23",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "T04-e10",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "T04-e11",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "T06-e03",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1–4.3；Table1；Fig5",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "N03-e07",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        },
+        {
+          "protocol": "N03-e08",
+          "task": "齿轮装配",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留常用齿轮装配入口，大齿轮、小齿轮以及环境差异保留在任务详情。"
+        }
+      ]
+    },
+    {
+      "id": "key",
+      "name": "钥匙插拔",
+      "group": "precision",
+      "taskNames": [
+        "旋转并拔出钥匙",
+        "钥匙插入",
+        "钥匙插锁"
+      ],
+      "description": "包含钥匙插入和旋转后拔出，关注钥匙与锁孔的配合。",
+      "entries": [
+        {
+          "protocol": "E03-e02",
+          "task": "旋转并拔出钥匙",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "共同围绕钥匙和锁孔的配合，包含插入及旋转后拔出，不把这对相关动作拆开。"
+        },
+        {
+          "protocol": "E04-e11",
+          "task": "旋转并拔出钥匙",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "共同围绕钥匙和锁孔的配合，包含插入及旋转后拔出，不把这对相关动作拆开。"
+        },
+        {
+          "protocol": "X01-e02",
+          "task": "旋转并拔出钥匙",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "共同围绕钥匙和锁孔的配合，包含插入及旋转后拔出，不把这对相关动作拆开。"
+        },
+        {
+          "protocol": "P01-e05",
+          "task": "钥匙插入",
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1",
+          "reason": "共同围绕钥匙和锁孔的配合，包含插入及旋转后拔出，不把这对相关动作拆开。"
+        },
+        {
+          "protocol": "T16-e04",
+          "task": "钥匙插锁",
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5",
+          "reason": "共同围绕钥匙和锁孔的配合，包含插入及旋转后拔出，不把这对相关动作拆开。"
+        }
+      ]
+    },
+    {
+      "id": "unlock",
+      "name": "开锁",
+      "group": "precision",
+      "taskNames": [
+        "开锁"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e07",
+          "task": "开锁",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task VII",
+          "reason": "对象是钥匙和挂锁；保留插入、旋转开锁要求。"
+        }
+      ]
+    },
+    {
+      "id": "latch",
+      "name": "搭扣锁定",
+      "group": "precision",
+      "taskNames": [
+        "搭扣锁定"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W12-e02",
+          "task": "搭扣锁定",
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2",
+          "reason": "只有搭扣锁定一种任务，保留原任务名。"
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "name": "按按钮",
+      "group": "precision",
+      "taskNames": [
+        "按按钮",
+        "按急停按钮",
+        "按声音按钮"
+      ],
+      "description": "包含普通按钮、急停按钮及声音按钮的按压，次数和触发条件见各论文设置。",
+      "entries": [
+        {
+          "protocol": "W04-e03",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "W05-e01",
+          "task": "按急停按钮",
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "W07-e04",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "W13-e01",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "W14-e02",
+          "task": "按急停按钮",
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "E01-e03",
+          "task": "按声音按钮",
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "P01-e03",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "N01-e02",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        },
+        {
+          "protocol": "N05-e05",
+          "task": "按按钮",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "保留常用按钮按压入口；普通、急停、声音按钮及指定次数按压的差异留在具体任务中。"
+        }
+      ]
+    },
+    {
+      "id": "pump",
+      "name": "按泵头",
+      "group": "precision",
+      "taskNames": [
+        "按泵头"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W01-e01",
+          "task": "按泵头",
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+          "reason": "瓶头、洗手液泵和其他泵瓶共同通过按压泵头完成出液或规定深度，使用简短原任务名。"
+        },
+        {
+          "protocol": "W02-e01",
+          "task": "按泵头",
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6",
+          "reason": "瓶头、洗手液泵和其他泵瓶共同通过按压泵头完成出液或规定深度，使用简短原任务名。"
+        },
+        {
+          "protocol": "W04-e04",
+          "task": "按泵头",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "瓶头、洗手液泵和其他泵瓶共同通过按压泵头完成出液或规定深度，使用简短原任务名。"
+        },
+        {
+          "protocol": "W06-e03",
+          "task": "按泵头",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III",
+          "reason": "瓶头、洗手液泵和其他泵瓶共同通过按压泵头完成出液或规定深度，使用简短原任务名。"
+        },
+        {
+          "protocol": "W17-e03",
+          "task": "按泵头",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "瓶头、洗手液泵和其他泵瓶共同通过按压泵头完成出液或规定深度，使用简短原任务名。"
+        }
+      ]
+    },
+    {
+      "id": "stamp",
+      "name": "盖章",
+      "group": "precision",
+      "taskNames": [
+        "盖章"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W17-e01",
+          "task": "盖章",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "盖章是独立的接触按压任务，保留原名，不并入按钮或泵头操作。"
+        },
+        {
+          "protocol": "T03-e02",
+          "task": "盖章",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3",
+          "reason": "盖章是独立的接触按压任务，保留原名，不并入按钮或泵头操作。"
+        }
+      ]
+    },
+    {
+      "id": "utensil-press",
+      "name": "器具按压",
+      "group": "precision",
+      "taskNames": [
+        "按压取杯器",
+        "移液器按压"
+      ],
+      "description": "通过按压操作取杯器或移液器，关注按压到位和器具响应。",
+      "entries": [
+        {
+          "protocol": "W16-e03",
+          "task": "按压取杯器",
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+          "reason": "取杯器和移液器都考察器具执行机构的按压深度与用力，按共同控制目标合并。"
+        },
+        {
+          "protocol": "N05-e01",
+          "task": "移液器按压",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "取杯器和移液器都考察器具执行机构的按压深度与用力，按共同控制目标合并。"
+        }
+      ]
+    },
+    {
+      "id": "disassembly",
+      "name": "零件拆卸",
+      "group": "precision",
+      "taskNames": [
+        "拔出零件",
+        "按扣拆卸",
+        "旋转拆卸",
+        "滑动拆卸"
+      ],
+      "description": "按连接结构选择直接拔出、按扣、旋转或滑动解锁，再取下零件。",
+      "entries": [
+        {
+          "protocol": "E07-e01",
+          "task": "拔出零件",
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "Fig.3–4；§IV-A",
+          "reason": "tight shaft：微调后从轴上拔出并放入碗中；不猜零件材料或商品名称。"
+        },
+        {
+          "protocol": "E07-e02",
+          "task": "按扣拆卸",
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "Fig.3–4；§IV-A",
+          "reason": "press clip：先按卡扣再拔出，最后放入碗中。"
+        },
+        {
+          "protocol": "E07-e03",
+          "task": "旋转拆卸",
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "Fig.3–4；§IV-A",
+          "reason": "shaft rotation：旋转解锁后拔出，不是自由手中转物。"
+        },
+        {
+          "protocol": "E07-e04",
+          "task": "滑动拆卸",
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "Fig.3–4；§IV-A",
+          "reason": "slide pull：向内滑动解除约束，再上提取出。"
+        }
+      ]
+    },
+    {
+      "id": "pipetting",
+      "name": "移液",
+      "group": "precision",
+      "taskNames": [
+        "吸液",
+        "移液"
+      ],
+      "description": "通过吸液和移液完成液体转移；完整的实验室多步骤流程另列为实验室移液。",
+      "entries": [
+        {
+          "protocol": "P04-e02",
+          "task": "吸液",
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6",
+          "reason": "保留移液任务名，单项吸液、调量或指定目标转移按同一器具任务合并；完整多阶段流程归长程。"
+        },
+        {
+          "protocol": "T17-e01",
+          "task": "移液",
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results",
+          "reason": "保留移液任务名，单项吸液、调量或指定目标转移按同一器具任务合并；完整多阶段流程归长程。"
+        },
+        {
+          "protocol": "N05-e07",
+          "task": "移液",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3",
+          "reason": "量筒吸水后移入透明烧杯；与其他基础移液采用同一标准，不因抓、吸、放三个阶段就认定长程。"
+        }
+      ]
+    },
+    {
+      "id": "topic-40a0114368",
+      "name": "弹竖琴",
+      "group": "precision",
+      "taskNames": [
+        "弹竖琴"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e08",
+          "task": "弹竖琴",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "任务8：Play Harp",
+          "reason": "保留具体乐器，拆出乐器演奏汇总小类。"
+        }
+      ]
+    },
+    {
+      "id": "topic-5fb104df97",
+      "name": "敲木琴",
+      "group": "precision",
+      "taskNames": [
+        "敲木琴"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e09",
+          "task": "敲木琴",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "任务9：Play Xylophone",
+          "reason": "与弹竖琴分开，保留敲击及有效音符评价。"
+        }
+      ]
+    },
+    {
+      "id": "plant",
+      "name": "塑料植物插土",
+      "group": "precision",
+      "taskNames": [
+        "塑料植物插土"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C03-e01",
+          "task": "塑料植物插土",
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5",
+          "reason": "只有塑料植物插土一种任务，保留原名和释放后保持直立的要求。"
+        }
+      ]
+    },
+    {
+      "id": "pose",
+      "name": "物体位姿估计",
+      "group": "precision",
+      "taskNames": [
+        "物体位姿估计"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C06-e03",
+          "task": "物体位姿估计",
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.2(3)；Fig.6；Appendix B.3",
+          "reason": "图6展示带标记圆筒，预测平面位置、转角。按用户确认的任务内容与能力口径保留在接触对准，不因离线迁移。"
+        }
+      ]
+    },
+    {
+      "id": "adjustment",
+      "name": "插入动作预测",
+      "group": "precision",
+      "taskNames": [
+        "插入动作预测"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E02-e01",
+          "task": "插入动作预测",
+          "source": "https://arxiv.org/html/2505.09577v1",
+          "locator": "§4.1；Tables1、4",
+          "reason": "三项离线测试共同预测插入调整动作，孔形变化和已见／未见条件作为同类的评测条件。"
+        },
+        {
+          "protocol": "E11-e05",
+          "task": "插入动作预测",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-A/B；Table I",
+          "reason": "三项离线测试共同预测插入调整动作，孔形变化和已见／未见条件作为同类的评测条件。"
+        },
+        {
+          "protocol": "E11-e06",
+          "task": "插入动作预测",
+          "source": "https://arxiv.org/html/2503.08548v1",
+          "locator": "§V-B；Table II",
+          "reason": "三项离线测试共同预测插入调整动作，孔形变化和已见／未见条件作为同类的评测条件。"
+        }
+      ]
+    },
+    {
+      "id": "screw",
+      "name": "拧螺丝",
+      "group": "surface",
+      "taskNames": [
+        "拧螺钉",
+        "拧螺丝"
+      ],
+      "description": "旋入螺钉或使用工具拧紧螺丝，关注旋拧时的持续接触与配合。",
+      "entries": [
+        {
+          "protocol": "E04-e22",
+          "task": "拧螺钉",
+          "source": "https://arxiv.org/html/2608.29601v2",
+          "locator": "Appendix F.3：Insert Screw",
+          "reason": "一臂稳定套筒，另一臂插入并旋入螺钉；不能只保留插入动作。"
+        },
+        {
+          "protocol": "P02-e07",
+          "task": "拧螺丝",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "螺丝刀和内六角工具都以拧紧为目标，保留工具、初始朝向及力指标，不与开盖合并。"
+        },
+        {
+          "protocol": "C03-e03",
+          "task": "拧螺丝",
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5",
+          "reason": "螺丝刀和内六角工具都以拧紧为目标，保留工具、初始朝向及力指标，不与开盖合并。"
+        }
+      ]
+    },
+    {
+      "id": "bulb",
+      "name": "拧灯泡",
+      "group": "surface",
+      "taskNames": [
+        "拧灯泡"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e12",
+          "task": "拧灯泡",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task XII",
+          "reason": "旋拧直至灯泡进入灯座，与旋入螺钉采用一致标准。"
+        }
+      ]
+    },
+    {
+      "id": "pipette-volume",
+      "name": "移液器调量",
+      "group": "surface",
+      "taskNames": [
+        "移液器调量"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e10",
+          "task": "移液器调量",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "Appendix任务10：Pipette Volume",
+          "reason": "旋转调量旋钮从420μL调至400μL，不是转移液体。"
+        }
+      ]
+    },
+    {
+      "id": "whiteboard",
+      "name": "擦白板",
+      "group": "surface",
+      "taskNames": [
+        "擦白板"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W01-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W02-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W03-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W04-e02",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W05-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W06-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W07-e05",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W07-e09",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W08-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.22840v1",
+          "locator": "§V-A–C；Tables I–II",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W09-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.1–3.4；Tables1–4；Fig.6",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W10-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W14-e01",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2602.02142v2",
+          "locator": "v2 §IV",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W15-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W16-e01",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "§5.1；Table1（三次run×20episodes）；Appendix B",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W17-e05",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "W18-e01",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "E03-e14",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§4；Table3；Appendix E.4–E.5",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "E04-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "E08-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "X01-e08",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "P01-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2608.01402v1",
+          "locator": "§6；Appendix A–B；Table A.1",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "P04-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2610.14854v1",
+          "locator": "§IV-A–D；Tables I–III；Fig.6",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "T17-e02",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2606.14981v1",
+          "locator": "官网 Evaluation of ViTaL；Results",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "C02-e01",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "C02-e02",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "N03-e03",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        },
+        {
+          "protocol": "N05-e04",
+          "task": "擦白板",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "保留本库反复出现的擦白板任务，指定颜色、次数、方向和恒力条件不单独建类。"
+        }
+      ]
+    },
+    {
+      "id": "vase",
+      "name": "擦花瓶",
+      "group": "surface",
+      "taskNames": [
+        "擦花瓶"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W02-e02",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "W17-e06",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "W18-e04",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "T03-e03",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "T18-e03",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "R01-e02",
+          "task": "擦花瓶",
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "N03-e04",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2606.31723",
+          "locator": "§4.1–4.2；Table1；Appendix A.2",
+          "reason": "保留常用的曲面花瓶擦拭入口，清洁花瓶等同义任务统一归入。"
+        },
+        {
+          "protocol": "E12-e01",
+          "task": "擦花瓶",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "Table II 的实际操作评测对象是花瓶；盘子、白板列在训练对象栏，不能当作已做的操作评测对象。"
+        }
+      ]
+    },
+    {
+      "id": "dish",
+      "name": "餐具擦拭",
+      "group": "surface",
+      "taskNames": [
+        "擦盘子",
+        "擦碗",
+        "擦锅"
+      ],
+      "description": "擦拭盘子、碗和锅等餐具表面，具体擦除目标与评分方式见各记录。",
+      "entries": [
+        {
+          "protocol": "E03-e11",
+          "task": "擦盘子",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3",
+          "reason": "盘、碗、锅的擦拭均面向餐具表面接触清洁，保留对象形状和残留物评分差异。"
+        },
+        {
+          "protocol": "E05-e03",
+          "task": "擦盘子",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 3",
+          "reason": "盘、碗、锅的擦拭均面向餐具表面接触清洁，保留对象形状和残留物评分差异。"
+        },
+        {
+          "protocol": "N01-e03",
+          "task": "擦碗",
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2",
+          "reason": "盘、碗、锅的擦拭均面向餐具表面接触清洁，保留对象形状和残留物评分差异。"
+        },
+        {
+          "protocol": "N04-e05",
+          "task": "擦锅",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1",
+          "reason": "盘、碗、锅的擦拭均面向餐具表面接触清洁，保留对象形状和残留物评分差异。"
+        }
+      ]
+    },
+    {
+      "id": "wipe-table",
+      "name": "擦桌面",
+      "group": "surface",
+      "taskNames": [
+        "擦桌面"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E09-e03",
+          "task": "擦桌面",
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目任务指令、Evaluation",
+          "reason": "官方项目指令明确是桌面；轻、中、重用力属于评测条件。"
+        }
+      ]
+    },
+    {
+      "id": "cucumber",
+      "name": "削黄瓜",
+      "group": "surface",
+      "taskNames": [
+        "削黄瓜"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W01-e05",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2505.22159v1",
+          "locator": "§4.3；§5.1–5.3；Fig.5、Table1",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "W06-e02",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "W17-e07",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2605.11048v1",
+          "locator": "§4.1–4.6；Tables1–2；Appendix A.1–A.3、E",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "W18-e02",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "C02-e03",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "R01-e01",
+          "task": "削黄瓜",
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+          "reason": "保留本库常用的削黄瓜任务，单次削皮、定性补充和评分差异保留在详情。"
+        },
+        {
+          "protocol": "E12-e02",
+          "task": "削黄瓜",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "按实际评测对象展开；原文汇总结果不复制成逐物体成绩。",
+          "objects": "黄瓜",
+          "sharedSource": true
+        }
+      ]
+    },
+    {
+      "id": "peel-root",
+      "name": "根茎削皮",
+      "group": "surface",
+      "taskNames": [
+        "根茎削皮"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E12-e02",
+          "task": "根茎削皮",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "按实际评测对象展开；原文汇总结果不复制成逐物体成绩。",
+          "objects": "山药、萝卜",
+          "sharedSource": true
+        }
+      ]
+    },
+    {
+      "id": "topic-83ce7ffd19",
+      "name": "削西葫芦",
+      "group": "surface",
+      "taskNames": [
+        "削西葫芦"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C01-e01",
+          "task": "削西葫芦",
+          "source": "https://arxiv.org/html/2410.07554v2",
+          "locator": "任务定义、原记录出处",
+          "reason": "保留已明确的原任务对象，精简语序。"
+        }
+      ]
+    },
+    {
+      "id": "food-slicing",
+      "name": "食物切片",
+      "group": "surface",
+      "taskNames": [
+        "切黄瓜",
+        "切蔬果",
+        "切辣椒"
+      ],
+      "description": "对黄瓜、辣椒等蔬果进行切片；气球上切果冻单独列出。",
+      "entries": [
+        {
+          "protocol": "W06-e05",
+          "task": "切黄瓜",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A–D；Tables I–III",
+          "reason": "检查能否应对材料的阻力，把物体切断。"
+        },
+        {
+          "protocol": "E12-e03",
+          "task": "切蔬果",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "列出四种实际评测对象；胡萝卜只在训练栏，不补成操作评测任务。"
+        },
+        {
+          "protocol": "C02-e04",
+          "task": "切辣椒",
+          "source": "https://arxiv.org/html/2411.15753v2",
+          "locator": "§IV-A–D；Table I；切割质量Fig.5",
+          "reason": "检查根据碰撞和接触调整用力后，切出的各段是否更接近要求。"
+        }
+      ]
+    },
+    {
+      "id": "jelly-balloon",
+      "name": "气球上切果冻",
+      "group": "surface",
+      "taskNames": [
+        "气球上切果冻"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W10-e05",
+          "task": "气球上切果冻",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "Fig.4e；Appendix B",
+          "reason": "切开果冻且不能刺破下方气球；保护对象是气球，不是把果冻无损抓起。"
+        }
+      ]
+    },
+    {
+      "id": "flipping",
+      "name": "推翻物体",
+      "group": "surface",
+      "taskNames": [
+        "翻盒子",
+        "推翻物体"
+      ],
+      "description": "利用支点或外部接触使物体翻转，包含翻盒子和其他非抓持式翻转。",
+      "entries": [
+        {
+          "protocol": "W03-e03",
+          "task": "翻盒子",
+          "source": "https://arxiv.org/html/2602.23648v1",
+          "locator": "§4.1–4.3；Table1；Appendix A.4",
+          "reason": "检查接触情况变化时，能否及时调整推力。"
+        },
+        {
+          "protocol": "W07-e01",
+          "task": "推翻物体",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "检查接触情况变化时，能否及时修正动作。"
+        },
+        {
+          "protocol": "W16-e02",
+          "task": "翻盒子",
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "Fig.2b；§5.2",
+          "reason": "对象是黑盒；与抓在手里旋转物体区分。"
+        },
+        {
+          "protocol": "W18-e03",
+          "task": "翻盒子",
+          "source": "https://arxiv.org/html/2606.08555v1",
+          "locator": "§4；Tables1–3；Appendix A.1、A.4",
+          "reason": "检查能否按要求转动，并根据接触力调整。"
+        },
+        {
+          "protocol": "C15-e02",
+          "task": "推翻物体",
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII",
+          "reason": "检查接触方式、物体形状改变后，能否仍完成操作。"
+        }
+      ]
+    },
+    {
+      "id": "pushing",
+      "name": "推移",
+      "group": "surface",
+      "taskNames": [
+        "推动物体",
+        "架上推箱"
+      ],
+      "description": "保持与物体接触，将物体或箱子推到指定位置。",
+      "entries": [
+        {
+          "protocol": "W13-e09",
+          "task": "推动物体",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "Table5；Fig.7c",
+          "reason": "根据 Push-to-Position 的推动物体到目标位置这一内容，归入持续接触下的推移。"
+        },
+        {
+          "protocol": "E09-e02",
+          "task": "架上推箱",
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目 Closed-loop evaluation／Hardware trials",
+          "reason": "共同把一个物体沿表面推向目标位置，架上推箱和推到目标合并，散珠清扫另列。"
+        }
+      ]
+    },
+    {
+      "id": "sweeping",
+      "name": "扫珠入簸箕",
+      "group": "surface",
+      "taskNames": [
+        "扫珠入簸箕"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W04-e06",
+          "task": "扫珠入簸箕",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "只有扫珠入簸箕一种任务，保留原名；散珠收集不与整块物体推移混合。"
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "name": "开门",
+      "group": "surface",
+      "taskNames": [
+        "开柜门",
+        "转动门把",
+        "移动开门"
+      ],
+      "description": "包含柜门开启、门把转动和移动机器人开门，具体机构约束见各记录。",
+      "entries": [
+        {
+          "protocol": "W07-e03",
+          "task": "开柜门",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "单臂开柜、移动开门和转门把后开门共享开门目标，保留各机构与移动条件。"
+        },
+        {
+          "protocol": "W13-e05",
+          "task": "转动门把",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "单臂开柜、移动开门和转门把后开门共享开门目标，保留各机构与移动条件。"
+        },
+        {
+          "protocol": "E08-e01",
+          "task": "移动开门",
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup",
+          "reason": "单臂开柜、移动开门和转门把后开门共享开门目标，保留各机构与移动条件。"
+        },
+        {
+          "protocol": "E08-e02",
+          "task": "移动开门",
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5；Table 2；Setup",
+          "reason": "单臂开柜、移动开门和转门把后开门共享开门目标，保留各机构与移动条件。"
+        }
+      ]
+    },
+    {
+      "id": "window",
+      "name": "旋转窗",
+      "group": "surface",
+      "taskNames": [
+        "旋转窗"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W05-e03",
+          "task": "旋转窗",
+          "source": "https://arxiv.org/html/2609.05832v1",
+          "locator": "§4.1–4.2；Table I；Figs.6–8",
+          "reason": "只有旋转窗一种任务，保留原任务名及两阶段打开要求。"
+        }
+      ]
+    },
+    {
+      "id": "flip-lid",
+      "name": "离心管翻盖",
+      "group": "surface",
+      "taskNames": [
+        "离心管翻盖"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e03",
+          "task": "离心管翻盖",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "由微量离心管翻盖精简，保留原任务含义；翻盖机构不并入螺纹旋盖。"
+        }
+      ]
+    },
+    {
+      "id": "drawer",
+      "name": "拉抽屉",
+      "group": "surface",
+      "taskNames": [
+        "拉抽屉"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W07-e08",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2609.18242v1",
+          "locator": "§IV；Tables I–II、IV–V；Fig.7",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        },
+        {
+          "protocol": "W13-e10",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        },
+        {
+          "protocol": "T03-e06",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        },
+        {
+          "protocol": "T04-e12",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        },
+        {
+          "protocol": "T04-e13",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        },
+        {
+          "protocol": "N02-e04",
+          "task": "拉抽屉",
+          "source": "https://arxiv.org/html/2603.14604",
+          "locator": "§4.1–4.2；Table1",
+          "reason": "保留常用抽屉任务，单／双臂、仿真和真机保留为条件。"
+        }
+      ]
+    },
+    {
+      "id": "topic-cf33beb1aa",
+      "name": "拧盖",
+      "group": "surface",
+      "taskNames": [
+        "拧瓶盖",
+        "拧试管盖",
+        "拧盖"
+      ],
+      "description": "旋拧瓶盖或试管盖，关注旋转过程中的接触和用力。",
+      "entries": [
+        {
+          "protocol": "E03-e09",
+          "task": "拧瓶盖",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3",
+          "reason": "检查两只手旋拧时，能否配合好动作和用力。"
+        },
+        {
+          "protocol": "P02-e02",
+          "task": "拧试管盖",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "检查能否夹稳管身，并配合手指用力完成旋拧。"
+        },
+        {
+          "protocol": "T03-e04",
+          "task": "拧盖",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1 Task Definition",
+          "reason": "原文只称 container 和 lid，先用可证实名称，不擅自具体化为某种瓶盖。"
+        },
+        {
+          "protocol": "T18-e02",
+          "task": "拧瓶盖",
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results",
+          "reason": "检查能否配合手指或双手动作，完成旋拧。"
+        }
+      ]
+    },
+    {
+      "id": "ultrasound",
+      "name": "超声扫描",
+      "group": "surface",
+      "taskNames": [
+        "腹主动脉矢状长轴切面",
+        "剑突下横切面",
+        "右肋下斜切经右肝穹隆切面",
+        "左肾长轴切面",
+        "左肾经肾门横切面"
+      ],
+      "description": "沿不同部位移动超声探头，获取指定切面；各切面作为具体任务列出。",
+      "entries": [
+        {
+          "protocol": "E10-e01",
+          "task": "腹主动脉矢状长轴切面",
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+          "reason": "五种目标切面共享超声接触成像流程，切面是同类目标差异，不按解剖切面拆出五个小类。"
+        },
+        {
+          "protocol": "E10-e02",
+          "task": "剑突下横切面",
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+          "reason": "五种目标切面共享超声接触成像流程，切面是同类目标差异，不按解剖切面拆出五个小类。"
+        },
+        {
+          "protocol": "E10-e03",
+          "task": "右肋下斜切经右肝穹隆切面",
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+          "reason": "五种目标切面共享超声接触成像流程，切面是同类目标差异，不按解剖切面拆出五个小类。"
+        },
+        {
+          "protocol": "E10-e04",
+          "task": "左肾长轴切面",
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+          "reason": "五种目标切面共享超声接触成像流程，切面是同类目标差异，不按解剖切面拆出五个小类。"
+        },
+        {
+          "protocol": "E10-e05",
+          "task": "左肾经肾门横切面",
+          "source": "https://arxiv.org/html/2608.15009v1",
+          "locator": "§4 Dataset；§5.1 Evaluation Metrics；Fig.4；Table 1",
+          "reason": "五种目标切面共享超声接触成像流程，切面是同类目标差异，不按解剖切面拆出五个小类。"
+        }
+      ]
+    },
+    {
+      "id": "balloon",
+      "name": "气球上画图",
+      "group": "surface",
+      "taskNames": [
+        "气球上画图"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E03-e07",
+          "task": "气球上画图",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3",
+          "reason": "由在气球上画图精简，只有这一种任务；绘图目标与超声成像不同，单独保留。"
+        }
+      ]
+    },
+    {
+      "id": "tool-support",
+      "name": "支撑细杆",
+      "group": "surface",
+      "taskNames": [
+        "支撑细杆"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T06-e04",
+          "task": "支撑细杆",
+          "source": "https://arxiv.org/html/2512.23864v1",
+          "locator": "§4.1.2；Fig.5",
+          "reason": "夹住立方体，用其顶点支撑桌上细圆杆，在小扰动下保持直立。"
+        }
+      ]
+    },
+    {
+      "id": "card-swipe",
+      "name": "刷卡",
+      "group": "surface",
+      "taskNames": [
+        "刷卡"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T16-e03",
+          "task": "刷卡",
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.4–4.7；Tables1–5",
+          "reason": "刷卡与信用卡刷卡属于同一种操作，统一使用简短原名。"
+        },
+        {
+          "protocol": "C04-e03",
+          "task": "刷卡",
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4",
+          "reason": "刷卡与信用卡刷卡属于同一种操作，统一使用简短原名。"
+        }
+      ]
+    },
+    {
+      "id": "dough",
+      "name": "擀面团",
+      "group": "surface",
+      "taskNames": [
+        "擀面团"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C15-e04",
+          "task": "擀面团",
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII",
+          "reason": "只有擀面团一种任务，保留原名。"
+        }
+      ]
+    },
+    {
+      "id": "topic-efb59feb13",
+      "name": "拉开拉链",
+      "group": "surface",
+      "taskNames": [
+        "拉开拉链"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T03-e01",
+          "task": "拉开拉链",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1 Task Definition",
+          "reason": "原文强调沿弯曲拉链路径持续调整以免卡住；不是物品抓放。"
+        }
+      ]
+    },
+    {
+      "id": "peel-prediction",
+      "name": "削黄瓜受力预测",
+      "group": "surface",
+      "taskNames": [
+        "削黄瓜受力预测"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W06-e07",
+          "task": "削黄瓜受力预测",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-C；TableIII",
+          "reason": "预测削皮接触时的三轴力和三轴力矩；接触概率阈值用于选评估区间，不是预测窗口本身。按削皮内容归类。"
+        }
+      ]
+    },
+    {
+      "id": "pick-place",
+      "name": "物品取放",
+      "group": "grasp",
+      "taskNames": [
+        "取盘",
+        "搬运汽车部件",
+        "夹取食物",
+        "抓放瓶",
+        "抓放方块",
+        "桌面抓取",
+        "购物袋内抓取",
+        "提起瓶子",
+        "提起罐子",
+        "扶正瓶子",
+        "拾取明信片",
+        "抓取垃圾",
+        "箱内抓取",
+        "搬箱",
+        "多物体抓取",
+        "抓放容器",
+        "抓取胡萝卜",
+        "放置试管",
+        "取书",
+        "抬盒子",
+        "抓取水瓶",
+        "抓取玉米棒",
+        "抓取日用品"
+      ],
+      "description": "抓起、搬运、交接或放置物品，主要关注抓稳和到达目标位置。专门评价防碎、防夹坏或过度形变的任务列入轻柔抓放。",
+      "entries": [
+        {
+          "protocol": "W02-e04",
+          "task": "取盘",
+          "source": "https://arxiv.org/html/2603.15169v1",
+          "locator": "§4–5；Table1；Figs.5–6",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "W10-e06",
+          "task": "搬运汽车部件",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "Fig.4f；Appendix B",
+          "reason": "图示和图注列扣件、门把手；补齐重部件种类。"
+        },
+        {
+          "protocol": "W10-e07",
+          "task": "夹取食物",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "Fig.4g；Appendix B",
+          "reason": "对象概括为食物；按夹取、搬运和放置时保持抓稳的任务内容归入物品取放。具体操作保留在说明中。"
+        },
+        {
+          "protocol": "W13-e06",
+          "task": "抓放瓶",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "W16-e04",
+          "task": "抓放方块",
+          "source": "https://arxiv.org/html/2609.23614v1",
+          "locator": "Fig.2d；§5.2",
+          "reason": "图2d展示抓起黄色方块再放到另一处，不只写抓取与放置。"
+        },
+        {
+          "protocol": "E01-e01",
+          "task": "桌面抓取",
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E01-e02",
+          "task": "购物袋内抓取",
+          "source": "https://arxiv.org/html/2501.04693v1",
+          "locator": "§IV-A–G；Figures4–8",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E03-e01",
+          "task": "提起瓶子",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E03-e03",
+          "task": "提起罐子",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3.2–3.3；Table1；Appendix E.2",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E04-e04",
+          "task": "扶正瓶子",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§6 Findings：Bottle Standing",
+          "reason": "主文明确空的、可变形塑料瓶；目标是扶正并保持站立，不是举瓶。"
+        },
+        {
+          "protocol": "E04-e10",
+          "task": "提起瓶子",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E04-e12",
+          "task": "提起罐子",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.3；Table1",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E06-e03",
+          "task": "拾取明信片",
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A；Appendix E",
+          "reason": "原文先把明信片推到桌边，再拾起入盒。"
+        },
+        {
+          "protocol": "E06-e04",
+          "task": "抓取垃圾",
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A；Appendix E",
+          "reason": "对象为多件垃圾，分指组收集后投入垃圾桶，不只写多物体抓取。"
+        },
+        {
+          "protocol": "E07-e05",
+          "task": "箱内抓取",
+          "source": "https://arxiv.org/html/2603.12665v1",
+          "locator": "§IV-A2、IV-C2",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "E09-e01",
+          "task": "搬箱",
+          "source": "https://opt2vla.github.io/",
+          "locator": "官方项目 Closed-loop evaluation／Hardware trials",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "X01-e01",
+          "task": "提起瓶子",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "X01-e03",
+          "task": "提起罐子",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "Appendix C.1；Table6",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "P02-e06",
+          "task": "多物体抓取",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "T02-e01",
+          "task": "抓放容器",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "§4.1；Table3",
+          "reason": "对象为短罐、方咖啡瓶、口香糖铁盒、奶盒；明细列出对象，不只写4物体。"
+        },
+        {
+          "protocol": "T02-e02",
+          "task": "抓放容器",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "§4.1；Table4",
+          "reason": "包括咖啡瓶、奶盒及未见塑料高瓶、方咖啡瓶，沿用原表逐对象结果。"
+        },
+        {
+          "protocol": "T03-e05",
+          "task": "抓取胡萝卜",
+          "source": "https://arxiv.org/html/2605.07308v1",
+          "locator": "§4.1–4.4；Tables1–3",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "T05-e03",
+          "task": "放置试管",
+          "source": "https://dt-tacvla.github.io/",
+          "locator": "官网 Contact-Rich Manipulation Tasks；Main Results",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "C04-e04",
+          "task": "取书",
+          "source": "https://arxiv.org/html/2410.17246v2",
+          "locator": "§IV-A–F；Table I；Fig.4",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "C15-e01",
+          "task": "抬盒子",
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；Table I；Appendix XII",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "N05-e02",
+          "task": "抓取水瓶",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "N05-e03",
+          "task": "抓取玉米棒",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "主要目标是抓起、搬运、交接或放到指定位置，并保持不掉落；原任务没有把对象防损、限制过度形变或按轻柔指令控制用力列为专门目标或评价内容。物体柔软本身不自动归入轻柔抓放；普通防滑和使用触觉也不等于轻柔保护评测。"
+        },
+        {
+          "protocol": "W09-e03",
+          "task": "抓取日用品",
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.3；Table3",
+          "reason": "Table3 前两组为铁块、电池、钉、钢球、木块、充电器、塑料件、玩具，第三组为火龙果、甜瓜、蓝莓、纸盒；不能12对象整条都当轻柔易碎品。",
+          "objects": "铁块、电池、钉、钢球、木块、充电器、塑料件、玩具",
+          "sharedSource": true
+        },
+        {
+          "protocol": "E06-e02",
+          "task": "取书",
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A；Appendix E",
+          "reason": "手指勾出并夹取目标书，不属于杯碗套叠或拆套。"
+        },
+        {
+          "protocol": "C15-e05",
+          "task": "抬盒子",
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-C；TableI",
+          "reason": "这是抬盒任务的扰动恢复条件；保留评测记录和次数，但不另立重复小类。"
+        }
+      ]
+    },
+    {
+      "id": "gentle",
+      "name": "轻柔抓放",
+      "group": "grasp",
+      "taskNames": [
+        "抓取水果",
+        "传递杯子",
+        "抓取面包",
+        "抓取易损物品",
+        "抓取薯片",
+        "抓放鸡蛋",
+        "抓放果酱罐",
+        "抓放华夫饼",
+        "摘葡萄",
+        "提起纸杯",
+        "抓取巧克力",
+        "字母汤罐入篮",
+        "奶油奶酪入篮",
+        "沙拉酱入篮",
+        "烧烤酱入篮",
+        "番茄酱入篮",
+        "黄油入篮",
+        "牛奶入篮",
+        "巧克力布丁入篮",
+        "橙汁入篮",
+        "抓取软物体"
+      ],
+      "description": "抓放水果、鸡蛋、薯片等物品，并满足原评测中的防损或轻柔用力要求。是否归入本类以保护目标和完成条件为准。",
+      "entries": [
+        {
+          "protocol": "E04-e02",
+          "task": "抓取水果",
+          "source": "https://arxiv.org/html/2608.29601v2",
+          "locator": "Appendix E.1–E.2：Fruit Collection",
+          "reason": "任务说明明确安全夹持力窗口、无掉落、无可见损伤；原文称 fruit-like objects，不据此认定真实水果或具体材质。"
+        },
+        {
+          "protocol": "E04-e25",
+          "task": "传递杯子",
+          "source": "https://arxiv.org/html/2608.29601v2",
+          "locator": "Appendix F.3：Cup Handover",
+          "reason": "原文要求交接时既不掉落也不压坏；保护要求需保留，双臂只是执行方式。"
+        },
+        {
+          "protocol": "T16-e05",
+          "task": "抓取面包",
+          "source": "https://arxiv.org/html/2506.13762v1",
+          "locator": "§4.2；Table1；Appendix A.2",
+          "reason": "以正文 Pick bread 对应的面包抓取任务为准，按软质食品抓放归入轻柔抓放。"
+        },
+        {
+          "protocol": "W09-e03",
+          "task": "抓取易损物品",
+          "source": "https://arxiv.org/html/2507.09160v1",
+          "locator": "§3.3；Table3",
+          "reason": "Table3 前两组为铁块、电池、钉、钢球、木块、充电器、塑料件、玩具，第三组为火龙果、甜瓜、蓝莓、纸盒；不能12对象整条都当轻柔易碎品。",
+          "objects": "火龙果、甜瓜、蓝莓、纸盒",
+          "sharedSource": true
+        },
+        {
+          "protocol": "W10-e09",
+          "task": "抓取薯片",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W12-e03",
+          "task": "抓放鸡蛋",
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W15-e02",
+          "task": "抓放鸡蛋",
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "E04-e21",
+          "task": "抓取薯片",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "E05-e02",
+          "task": "抓放鸡蛋",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 2",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "E12-e05",
+          "task": "抓取水果",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "列出四种实际评测水果；樱桃仅列于训练栏。"
+        },
+        {
+          "protocol": "P03-e01",
+          "task": "抓放果酱罐",
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "P03-e02",
+          "task": "抓放华夫饼",
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "P03-e03",
+          "task": "抓放鸡蛋",
+          "source": "https://arxiv.org/html/2603.15257v1",
+          "locator": "§IV-A–D；Fig.6；Table I",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "T04-e08",
+          "task": "抓取薯片",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "T04-e09",
+          "task": "抓取薯片",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "C03-e02",
+          "task": "摘葡萄",
+          "source": "https://arxiv.org/html/2510.13324v1",
+          "locator": "§III-C–E；§IV-A/B；Fig.5",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "R01-e03",
+          "task": "提起纸杯",
+          "source": "https://reactive-diffusion-policy.github.io/",
+          "locator": "官网Tasks1–3／Tables II–IV；论文§IV–V、Appendix E",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W10-e08",
+          "task": "抓取巧克力",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "§V-A；Table I（8项）；Appendix B(a)–(i)",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e01",
+          "task": "字母汤罐入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e02",
+          "task": "奶油奶酪入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e03",
+          "task": "沙拉酱入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e04",
+          "task": "烧烤酱入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e05",
+          "task": "番茄酱入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e06",
+          "task": "黄油入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e07",
+          "task": "牛奶入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e08",
+          "task": "巧克力布丁入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "W11-e09",
+          "task": "橙汁入篮",
+          "source": "https://arxiv.org/html/2605.27886v1",
+          "locator": "§3.6、§4.2–4.4；Appendix C Table11；Appendix D",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "X01-e09",
+          "task": "抓取薯片",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2",
+          "reason": "除完成抓放外，原任务明确要求不碎裂、不夹坏、不出现不可接受的形变，或专门评价轻柔用力和防止过度夹挤。既可依据无损完成条件，也可依据过程中的形变、夹爪开合或轻柔力控制评价；不要求一定有实测力指标。轻柔指操作与评测目标，不是物体材质名称。"
+        },
+        {
+          "protocol": "T02-e06",
+          "task": "抓取软物体",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "§4.3；Table8；Fig.8",
+          "reason": "替代软物体泛化；泛化是条件。夹爪宽度不是实测夹持力。"
+        },
+        {
+          "protocol": "C15-e03",
+          "task": "抓取水果",
+          "source": "https://arxiv.org/html/2502.17432v2",
+          "locator": "§V-A；TableIX",
+          "reason": "对象概括为水果；原文明确柔软易损水果的抓放，归入轻柔抓放，不在名称中逐个列品种。"
+        }
+      ]
+    },
+    {
+      "id": "in-hand",
+      "name": "手中转动物体",
+      "group": "grasp",
+      "taskNames": [
+        "翻转耳机",
+        "手中转动物体",
+        "手中转动杯子"
+      ],
+      "description": "在握持过程中转动耳机、杯状物等，使物体相对手指达到目标朝向。",
+      "entries": [
+        {
+          "protocol": "E06-e01",
+          "task": "翻转耳机",
+          "source": "https://arxiv.org/html/2609.12549v1",
+          "locator": "§V-A–D；Appendix E",
+          "reason": "物体已被夹爪或手指接触、握持，再在手中旋转或翻转到目标朝向，例如翻转耳机、杯状物旋转。重点是物体相对手指的朝向调整及转动中的持稳，不只是机械臂带着物体搬到另一处；防滑是执行要求，不据此重复归入物品取放或轻柔抓放。"
+        },
+        {
+          "protocol": "E12-e06",
+          "task": "手中转动物体",
+          "source": "https://arxiv.org/html/2603.19201v1",
+          "locator": "Table II；§V-B",
+          "reason": "操作评测对象为长方体、圆柱体；超过 60° 描述朝向变化，不应写“位置改变超过 60°”。"
+        },
+        {
+          "protocol": "C07-e02",
+          "task": "手中转动杯子",
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4；Figs.6–7",
+          "reason": "物体已被夹爪或手指接触、握持，再在手中旋转或翻转到目标朝向，例如翻转耳机、杯状物旋转。重点是物体相对手指的朝向调整及转动中的持稳，不只是机械臂带着物体搬到另一处；防滑是执行要求，不据此重复归入物品取放或轻柔抓放。"
+        }
+      ]
+    },
+    {
+      "id": "cloth",
+      "name": "布料折叠",
+      "group": "grasp",
+      "taskNames": [
+        "叠围巾",
+        "折毛巾"
+      ],
+      "description": "折叠围巾或毛巾等布料，关注抓持、调整与折叠结果。",
+      "entries": [
+        {
+          "protocol": "W04-e01",
+          "task": "叠围巾",
+          "source": "https://arxiv.org/html/2606.12105v1",
+          "locator": "§4、Table1；Appendix B（7-D external joint-torque estimates）；D–F",
+          "reason": "毛巾和围巾同属柔软布料的折叠整理；纸箱折叠和系带因结构与完成目标不同另列。"
+        },
+        {
+          "protocol": "E04-e05",
+          "task": "折毛巾",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+          "reason": "毛巾和围巾同属柔软布料的折叠整理；纸箱折叠和系带因结构与完成目标不同另列。"
+        }
+      ]
+    },
+    {
+      "id": "carton",
+      "name": "折纸箱",
+      "group": "grasp",
+      "taskNames": [
+        "折纸箱"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e08",
+          "task": "折纸箱",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1–5.2；Fig7（PDF p11）；Appendix E",
+          "reason": "只有折纸箱一种任务，保留原名。"
+        }
+      ]
+    },
+    {
+      "id": "shoelace",
+      "name": "系鞋带",
+      "group": "grasp",
+      "taskNames": [
+        "系鞋带"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e04",
+          "task": "系鞋带",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "只有系鞋带一种任务，保留原名。"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "name": "翻书页",
+      "group": "grasp",
+      "taskNames": [
+        "翻书页"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E03-e10",
+          "task": "翻书页",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3",
+          "reason": "翻页和翻书页为同一任务，以原任务名保留独立入口；抽出薄片另列。"
+        },
+        {
+          "protocol": "E05-e01",
+          "task": "翻书页",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 1",
+          "reason": "翻页和翻书页为同一任务，以原任务名保留独立入口；抽出薄片另列。"
+        },
+        {
+          "protocol": "T18-e04",
+          "task": "翻书页",
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Experiments；官网 Experiment Results",
+          "reason": "翻页和翻书页为同一任务，以原任务名保留独立入口；抽出薄片另列。"
+        }
+      ]
+    },
+    {
+      "id": "topic-17714a3f71",
+      "name": "抽取卡片",
+      "group": "grasp",
+      "taskNames": [
+        "抽取卡片"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e10",
+          "task": "抽取卡片",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task X",
+          "reason": "卡套内有两张卡，目标只抽出一张，不泛称任意薄片。"
+        }
+      ]
+    },
+    {
+      "id": "topic-8ad48fb88f",
+      "name": "抽取纸巾",
+      "group": "grasp",
+      "taskNames": [
+        "抽取纸巾"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "N04-e06",
+          "task": "抽取纸巾",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "§4.1–4.3；Fig.4；Table1",
+          "reason": "检查柔软物体抓取和拉取是否稳定。"
+        }
+      ]
+    },
+    {
+      "id": "topic-59cfbbdac7",
+      "name": "发扑克牌",
+      "group": "grasp",
+      "taskNames": [
+        "发扑克牌"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e11",
+          "task": "发扑克牌",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task XI",
+          "reason": "分出牌堆顶上一张并放入牌架，与洗牌分开。"
+        }
+      ]
+    },
+    {
+      "id": "topic-6f8c54bead",
+      "name": "洗牌",
+      "group": "grasp",
+      "taskNames": [
+        "洗牌"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e05",
+          "task": "洗牌",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "§V-A；Table I；Appendix E Tasks1–10",
+          "reason": "检查能否根据物体弹性调整用力，避免打滑。"
+        }
+      ]
+    },
+    {
+      "id": "topic-8e8e121b5a",
+      "name": "分离套杯",
+      "group": "grasp",
+      "taskNames": [
+        "分离套杯"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W15-e01",
+          "task": "分离套杯",
+          "source": "https://arxiv.org/html/2604.23272v1",
+          "locator": "v1 §4；Appendix A.1–A.2",
+          "reason": "检查能否只拿起最上面的杯子，而不带起整叠杯子。"
+        },
+        {
+          "protocol": "E04-e29",
+          "task": "分离套杯",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查能否把相互接触的物体分开。"
+        },
+        {
+          "protocol": "E05-e05",
+          "task": "分离套杯",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 5",
+          "reason": "检查能否把套在一起的杯子或碗分开。"
+        }
+      ]
+    },
+    {
+      "id": "topic-802f8efcf3",
+      "name": "餐具堆叠",
+      "group": "grasp",
+      "taskNames": [
+        "叠杯子",
+        "叠盘子",
+        "叠碗"
+      ],
+      "description": "将杯子、盘子或碗堆叠到目标位置，拆开套叠餐具另列小类。",
+      "entries": [
+        {
+          "protocol": "E04-e01",
+          "task": "叠杯子",
+          "source": "https://arxiv.org/html/2608.29601v2",
+          "locator": "Appendix E.1–E.2：Cup Stacking",
+          "reason": "主目标为套叠，另要求限制接触力、无可见形变；保护要求写入记录，不复制到第二个小类。"
+        },
+        {
+          "protocol": "E04-e26",
+          "task": "叠杯子",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查能否把物体叠好，并保持稳定。"
+        },
+        {
+          "protocol": "E04-e27",
+          "task": "叠盘子",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查能否把物体叠好，并保持稳定。"
+        },
+        {
+          "protocol": "E04-e28",
+          "task": "叠碗",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查能否把物体叠好，并保持稳定。"
+        }
+      ]
+    },
+    {
+      "id": "topic-6cc2d605eb",
+      "name": "分离套碗",
+      "group": "grasp",
+      "taskNames": [
+        "分离套碗"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e24",
+          "task": "分离套碗",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查能否把套在一起的杯子或碗分开。"
+        }
+      ]
+    },
+    {
+      "id": "blocks",
+      "name": "堆方块",
+      "group": "grasp",
+      "taskNames": [
+        "堆方块"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W13-e08",
+          "task": "堆方块",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "只有堆方块一种任务，保留原名。"
+        }
+      ]
+    },
+    {
+      "id": "topic-b147f252de",
+      "name": "倒液体",
+      "group": "grasp",
+      "taskNames": [
+        "倒液体"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W13-e07",
+          "task": "倒液体",
+          "source": "https://arxiv.org/html/2509.07962v1",
+          "locator": "§6；Table5；代码observation.effort",
+          "reason": "检查加入新方法后，是否仍能正确移动和转动工具。"
+        }
+      ]
+    },
+    {
+      "id": "topic-2aeb4bd026",
+      "name": "倒球",
+      "group": "grasp",
+      "taskNames": [
+        "倒球"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e18",
+          "task": "倒球",
+          "source": "https://arxiv.org/html/2607.23782v1",
+          "locator": "§5.1、5.3；Table2",
+          "reason": "检查倾倒时能否抓稳容器并控制接触。"
+        }
+      ]
+    },
+    {
+      "id": "toothpaste",
+      "name": "挤牙膏",
+      "group": "grasp",
+      "taskNames": [
+        "挤牙膏"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e04",
+          "task": "挤牙膏",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task IV",
+          "reason": "补齐对象和挤出目标，完整步骤另含取放牙刷等操作。"
+        }
+      ]
+    },
+    {
+      "id": "topic-0d242f3732",
+      "name": "镊子夹取砝码",
+      "group": "grasp",
+      "taskNames": [
+        "镊子夹取砝码"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W10-e02",
+          "task": "镊子夹取砝码",
+          "source": "https://arxiv.org/html/2601.20321v1",
+          "locator": "Fig.4b；Appendix B",
+          "reason": "图4b给出镊子和砝码，不用提重代替对象。"
+        }
+      ]
+    },
+    {
+      "id": "grasp-prediction",
+      "name": "抓放动作预测",
+      "group": "grasp",
+      "taskNames": [
+        "抓放动作预测"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T02-e07",
+          "task": "抓放动作预测",
+          "source": "https://arxiv.org/html/2508.08706v3",
+          "locator": "§4.1 Evaluation Metrics；§4.2；Fig.5",
+          "reason": "对比末端位置、朝向、夹爪开合或手指关节轨迹与示教记录；不是对象属性识别，按抓放内容归类。"
+        }
+      ]
+    },
+    {
+      "id": "topic-921dd82739",
+      "name": "纹理分拣",
+      "group": "reason",
+      "taskNames": [
+        "纹理分拣"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e17",
+          "task": "纹理分拣",
+          "source": "https://arxiv.org/html/2602.10093v1",
+          "locator": "Appendix A：Grasp Classify",
+          "reason": "所用 UniVTAC 任务附录明确按外观相似圆柱的表面纹理分类；原清单“判断形状”应纠正。"
+        }
+      ]
+    },
+    {
+      "id": "topic-bfe80923cd",
+      "name": "麻将分拣",
+      "group": "reason",
+      "taskNames": [
+        "麻将分拣"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e06",
+          "task": "麻将分拣",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task VI",
+          "reason": "识别牌面后放入对应盒格；不应和洗牌、发牌合在理牌中。"
+        }
+      ]
+    },
+    {
+      "id": "topic-79467d19bf",
+      "name": "重量分拣",
+      "group": "reason",
+      "taskNames": [
+        "重量分拣",
+        "选择空罐"
+      ],
+      "description": "根据重量区分或分拣物品，也包括通过接触选择空罐。",
+      "entries": [
+        {
+          "protocol": "W06-e01",
+          "task": "重量分拣",
+          "source": "https://arxiv.org/html/2609.18497v1",
+          "locator": "§V-A：Blind Box Sorting",
+          "reason": "原文明示外观相同的罐装粥，按重量放入对应收纳区。"
+        },
+        {
+          "protocol": "T04-e01",
+          "task": "重量分拣",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "补齐对象与按重量放到对应目标区域的任务内容。"
+        },
+        {
+          "protocol": "T04-e06",
+          "task": "选择空罐",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "检查能否通过接触判断画面中看不出的物体属性。"
+        },
+        {
+          "protocol": "T04-e07",
+          "task": "选择空罐",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "§3.1–3.3；Tables2–3；AppendixB",
+          "reason": "检查能否通过接触判断画面中看不出的物体属性。"
+        }
+      ]
+    },
+    {
+      "id": "target-choice",
+      "name": "操作麻将牌",
+      "group": "reason",
+      "taskNames": [
+        "操作麻将牌"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "X01-e07",
+          "task": "操作麻将牌",
+          "source": "https://arxiv.org/html/2610.02784v1",
+          "locator": "§4.2；Appendix C.2",
+          "reason": "共同通过触觉区分表面纹理或身份，再选择并摆放目标，保留粗糙度再抓取与麻将选牌差异。"
+        }
+      ]
+    },
+    {
+      "id": "topic-e37766c864",
+      "name": "粗糙度分拣",
+      "group": "reason",
+      "taskNames": [
+        "选择粗糙物块",
+        "粗糙度分拣"
+      ],
+      "description": "根据表面粗糙度区分物块，或选择满足粗糙度要求的物块。",
+      "entries": [
+        {
+          "protocol": "T04-e04",
+          "task": "选择粗糙物块",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "根据粗糙度保留当前物块或重抓另一块，最终选择粗糙块。"
+        },
+        {
+          "protocol": "T04-e03",
+          "task": "粗糙度分拣",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "真机、仿真分别保留记录，方式不决定归类。"
+        },
+        {
+          "protocol": "T04-e05",
+          "task": "粗糙度分拣",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "真机、仿真分别保留记录，方式不决定归类。"
+        }
+      ]
+    },
+    {
+      "id": "topic-627702ca8e",
+      "name": "硬度分拣",
+      "group": "reason",
+      "taskNames": [
+        "硬度分拣"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T04-e02",
+          "task": "硬度分拣",
+          "source": "https://arxiv.org/html/2610.10384v1",
+          "locator": "Appendix B.4；Table S3",
+          "reason": "与粗糙度分拣分开，不用物性识别隐藏判断内容。"
+        }
+      ]
+    },
+    {
+      "id": "topic-3fc36a3a79",
+      "name": "物体动作识别",
+      "group": "reason",
+      "taskNames": [
+        "物体动作识别"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C07-e03",
+          "task": "物体动作识别",
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4.1；Appendix A.2、B",
+          "reason": "高尔夫球、乐高、木块的接触动作与表面共同组成36类标签，不能拆成三个各有成绩的独立测试。"
+        }
+      ]
+    },
+    {
+      "id": "force",
+      "name": "接触力估计",
+      "group": "reason",
+      "taskNames": [
+        "外力估计",
+        "三轴接触力估计",
+        "法向接触力估计"
+      ],
+      "description": "估计外力、三轴接触力或法向接触力，以各论文的估计误差和测试条件为准。",
+      "entries": [
+        {
+          "protocol": "E08-e04",
+          "task": "外力估计",
+          "source": "https://arxiv.org/html/2609.03889v2",
+          "locator": "§5 Q1；Table1",
+          "reason": "明确估计对象；同一评测中的力估计和接触指标不伪造为两项独立任务。"
+        },
+        {
+          "protocol": "C06-e01",
+          "task": "三轴接触力估计",
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.2(1)；Fig.6；Appendix B.1",
+          "reason": "用半球和平探头按压手掌触觉皮肤，估计法向力及切向力，明确受测对象。"
+        },
+        {
+          "protocol": "C07-e05",
+          "task": "法向接触力估计",
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4.1 Normal Force Estimation",
+          "reason": "半球探头垂直按压传感器，估计法向力，不误写成机器人抓放。"
+        }
+      ]
+    },
+    {
+      "id": "topic-110512480e",
+      "name": "摇杆转角估计",
+      "group": "reason",
+      "taskNames": [
+        "摇杆转角估计"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C06-e02",
+          "task": "摇杆转角估计",
+          "source": "https://arxiv.org/html/2505.11420v1",
+          "locator": "§4.2(2)；Appendix B.2",
+          "reason": "所估计的是摇杆 roll、pitch、yaw，不是笼统状态。"
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "name": "揭杯找物",
+      "group": "reason",
+      "taskNames": [
+        "揭杯找物"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "N01-e01",
+          "task": "揭杯找物",
+          "source": "https://arxiv.org/html/2607.18231",
+          "locator": "§4.1–4.2；Appendix B.1–B.2",
+          "reason": "由揭杯寻找隐藏物块精简，保留寻找隐藏目标的任务含义。"
+        }
+      ]
+    },
+    {
+      "id": "topic-cb8b5a130d",
+      "name": "瓶中物料识别",
+      "group": "reason",
+      "taskNames": [
+        "瓶中物料识别"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "C07-e04",
+          "task": "瓶中物料识别",
+          "source": "https://arxiv.org/html/2506.14754v1",
+          "locator": "§4.1；Appendix A.2、B",
+          "reason": "摇瓶辨别玉米粒、扁豆、药片、米、水、油，以及满、半满、四分之一满；不是计数颗粒。"
+        }
+      ]
+    },
+    {
+      "id": "topic-49583fc58f",
+      "name": "含水杯分拣",
+      "group": "reason",
+      "taskNames": [
+        "含水杯分拣"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T01-e01",
+          "task": "含水杯分拣",
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1：Cup；Tables1–2",
+          "reason": "判断带盖杯有无水后，放到对应位置且不洒水；与按物性分拣采用同一标准。"
+        }
+      ]
+    },
+    {
+      "id": "topic-81c7bca7ff",
+      "name": "实验室移液",
+      "group": "long",
+      "taskNames": [
+        "实验室移液"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "P02-e01",
+          "task": "实验室移液",
+          "source": "https://arxiv.org/html/2610.19155v1",
+          "locator": "Appendix任务1：Lab Pipetting",
+          "reason": "完整任务含装吸头、持管吸液、放液、退吸头、归位，区别于只评基础吸放液。"
+        }
+      ]
+    },
+    {
+      "id": "topic-0d4f726f2d",
+      "name": "装袋",
+      "group": "long",
+      "taskNames": [
+        "装袋"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E04-e09",
+          "task": "装袋",
+          "source": "https://arxiv.org/html/2608.29601v2",
+          "locator": "Appendix E.2：Bag Packing",
+          "reason": "根据装袋的多步骤操作内容归入长程多步骤操作，名称保留为装袋；各步骤写在说明中。"
+        }
+      ]
+    },
+    {
+      "id": "topic-2324926f70",
+      "name": "开盒装球",
+      "group": "long",
+      "taskNames": [
+        "开盒装球"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e08",
+          "task": "开盒装球",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "Appendix F：Task VIII",
+          "reason": "英文标题虽为 Refill Tablet，具体指令使用小球；包含解锁、开盖、装球、合盖。"
+        }
+      ]
+    },
+    {
+      "id": "topic-148172f7a5",
+      "name": "搭扣盒操作",
+      "group": "long",
+      "taskNames": [
+        "搭扣盒操作"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "W12-e04",
+          "task": "搭扣盒操作",
+          "source": "https://arxiv.org/html/2606.09337v1",
+          "locator": "§4；Appendix A.1–A.2",
+          "reason": "检查多个步骤连续执行时，能否从头到尾完成。"
+        }
+      ]
+    },
+    {
+      "id": "topic-2d98294c35",
+      "name": "修复模型手",
+      "group": "long",
+      "taskNames": [
+        "修复模型手"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E03-e08",
+          "task": "修复模型手",
+          "source": "https://arxiv.org/html/2606.13102v1",
+          "locator": "§3；Table2；Appendix E.1–E.3",
+          "reason": "检查装配小零件时，能否适应不同步骤的接触变化。"
+        }
+      ]
+    },
+    {
+      "id": "topic-0727450e7c",
+      "name": "六角扳手插孔",
+      "group": "long",
+      "taskNames": [
+        "六角扳手插孔"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "R02-e03",
+          "task": "六角扳手插孔",
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2；Appendix B.2.3",
+          "reason": "保留原文分段评测的交接、手中调整、插孔完整任务；不以双臂本身决定长程归属。"
+        }
+      ]
+    },
+    {
+      "id": "topic-2153ea7868",
+      "name": "制作汉堡",
+      "group": "long",
+      "taskNames": [
+        "制作汉堡"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T18-e05",
+          "task": "制作汉堡",
+          "source": "https://arxiv.org/html/2506.15953v1",
+          "locator": "Appendix long-horizon task；Table11",
+          "reason": "检查多指连续操作时，能否避免小错误逐步积累成失败。"
+        }
+      ]
+    },
+    {
+      "id": "topic-77903fc346",
+      "name": "蒸蛋准备",
+      "group": "long",
+      "taskNames": [
+        "蒸蛋准备"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "R02-e01",
+          "task": "蒸蛋准备",
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2；Appendix B.2.1",
+          "reason": "开盒、无损取放蛋和盖盖，不暗示评测包含加热烹饪。"
+        }
+      ]
+    },
+    {
+      "id": "topic-cb1630699c",
+      "name": "开袋取葡萄",
+      "group": "long",
+      "taskNames": [
+        "开袋取葡萄"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "R02-e02",
+          "task": "开袋取葡萄",
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2；Appendix B.2.2",
+          "reason": "补齐水果种类和动作，包含取盘、开袋、无损取葡萄。"
+        }
+      ]
+    },
+    {
+      "id": "topic-9c9e3a7b8e",
+      "name": "制作三明治",
+      "group": "long",
+      "taskNames": [
+        "制作三明治"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "R02-e04",
+          "task": "制作三明治",
+          "source": "https://arxiv.org/html/2410.24091v1",
+          "locator": "§5.2；Appendix B.2.4",
+          "reason": "实际任务是持勺、倾锅、取煎蛋上面包，不泛称全部三明治制作。"
+        }
+      ]
+    },
+    {
+      "id": "topic-a8bf0c77a6",
+      "name": "酸碱滴定",
+      "group": "long",
+      "taskNames": [
+        "酸碱滴定"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "E05-e09",
+          "task": "酸碱滴定",
+          "source": "https://arxiv.org/html/2606.17055v1",
+          "locator": "§5.1；Table1；Appendix F Task 9",
+          "reason": "检查能否调整挤压滴管的力度。"
+        }
+      ]
+    },
+    {
+      "id": "watering",
+      "name": "给花浇水",
+      "group": "long",
+      "taskNames": [
+        "给花浇水"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "N04-e01",
+          "task": "给花浇水",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "Fig.4、Fig.6",
+          "reason": "图6明确先拿喷壶、加压，再按扳机喷水，不是倒水。"
+        }
+      ]
+    },
+    {
+      "id": "cleaning",
+      "name": "清理桌面",
+      "group": "long",
+      "taskNames": [
+        "清理桌面"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "N04-e02",
+          "task": "清理桌面",
+          "source": "https://arxiv.org/html/2607.07287",
+          "locator": "Fig.4；§4.1",
+          "reason": "根据清理桌面物品的多步骤操作内容归入长程多步骤操作；饮料瓶等对象细节保留在说明中。"
+        }
+      ]
+    },
+    {
+      "id": "drawer-retrieval",
+      "name": "开抽屉取烧杯",
+      "group": "long",
+      "taskNames": [
+        "开抽屉取烧杯"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "N05-e06",
+          "task": "开抽屉取烧杯",
+          "source": "https://arxiv.org/html/2608.01824",
+          "locator": "§4.1；Appendix B.3–B.4；Tables1–2",
+          "reason": "只有这一种完整流程，保留原名，不重复分入拉抽屉和物品取放。"
+        }
+      ]
+    },
+    {
+      "id": "topic-ce266e0b64",
+      "name": "选海绵擦盘子",
+      "group": "long",
+      "taskNames": [
+        "选海绵擦盘子"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T01-e02",
+          "task": "选海绵擦盘子",
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1：Wipe；Tables1–2",
+          "reason": "凭触觉选更光滑的海绵，再擦掉盘子墨迹，不再放进感知决策流程总称。"
+        }
+      ]
+    },
+    {
+      "id": "topic-3fea1cd256",
+      "name": "选芒果削皮",
+      "group": "long",
+      "taskNames": [
+        "选芒果削皮"
+      ],
+      "description": "",
+      "entries": [
+        {
+          "protocol": "T01-e03",
+          "task": "选芒果削皮",
+          "source": "https://arxiv.org/html/2507.17294v2",
+          "locator": "§4.1：Peel；Tables1–2",
+          "reason": "辨别两只芒果软硬、按要求选择，再削皮；保留选择和加工两个目标。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,16 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-import { createCatalogue, benchmarkAdoptionCount } from './src/data/catalogue.js';
+import { createCatalogue, benchmarkAdoptionCount, robotDescription } from './src/data/catalogue.js';
 import { parseHash } from './src/hooks/useHashRoute.js';
+import { createTaskView, getTaskTopicName, filterTaskInstances, selectPapers, DEFAULT_PAPER_FILTERS, DEFAULT_WORK_FILTERS, matchesPublicationYear, getTaskKindOptions, filterTaskKindInstances } from './src/data/selectors.js';
 const d=JSON.parse(fs.readFileSync('public/catalogue.json','utf8'));
+const removedIds=new Set(['T15','T20','T21','C08','C09','C16','C17','C18','C19']);
 // New papers keep source-specific scoring, force semantics and priority rules.
 const recentIds=['N01','N02','N03','N04','N05'];
 for(const id of recentIds)assert.ok(d.works.some(w=>w.id===id),id+': recent candidate registered');
 const fm=d.works.find(w=>w.id==='N01');
 assert.deepEqual(fm.bimanualEvaluation.taskIds,['N01-e01']);
-assert.equal(fm.screening.grade,'A','Wrist force mainline does not require popularity thresholds');
+assert.equal(fm.screening.highAttention,true,'FM-VLA meets the mainline Scholar threshold');
 for(const id of recentIds.slice(1))assert.equal(d.works.find(w=>w.id===id).screening.grade,'B','Original popularity rules remain unchanged');
 const retouch=d.works.find(w=>w.id==='N05');
 assert.ok(retouch.experiments.find(e=>e.id==='N05-e02').method.includes('15 cm'));
@@ -20,6 +22,7 @@ assert.equal(d.works.find(w=>w.id==='N02').experiments.length,9,'Keep nine real 
 const allExperiments=w=>[...w.experiments,...w.comparisonMethods.flatMap(c=>c.checks||[])];
 const sectionMoves=JSON.parse(fs.readFileSync('research/evaluation_sections.json','utf8').replace(/^\uFEFF/,''));
 for(const [id, rule] of Object.entries(sectionMoves)){
+ if(removedIds.has(id.split('-')[0]))continue;
  const work=d.works.find(w=>allExperiments(w).some(e=>e.id===id));
  assert.ok(work,id+': moved record retained');
  assert.ok(!work.experiments.some(e=>e.id===id),id+': comparison must not appear in the task list');
@@ -38,16 +41,110 @@ for(const w of d.works){
   assert.ok(e.evaluationModeSource.source&&e.evaluationModeSource.locator,e.id+': mode source');
  }
 }
-for(const id of ['W06','E02','E11','C16'])assert.ok(d.works.find(w=>w.id===id).domains.includes('离线'),id+': offline prediction must be discoverable');
+for(const id of ['W06','E02','E11'])assert.ok(d.works.find(w=>w.id===id).domains.includes('离线'),id+': offline prediction must be discoverable');
 assert.deepEqual(allExperiments(d.works.find(w=>w.id==='W06')).find(e=>e.id==='W06-e06').evaluationModes,['离线']);
 assert.deepEqual(d.works.find(w=>w.id==='W06').experiments.find(e=>e.id==='W06-e01').evaluationModes,['真机']);
 const catalogue=createCatalogue(d);
+// Official-source hardware review: distinguish policy input, collection and control.
+const physicalReview=JSON.parse(fs.readFileSync('research/physical_profiles.json','utf8'));
+assert.equal(Object.keys(physicalReview.works).length,58);
+for(const w of catalogue.PAPERS){
+ const p=w.physicalProfile;
+ assert.ok(p.robotConfiguration&&p.effectorModel&&p.forceBrief&&p.source.url&&p.source.locator,w.id+': sourced configuration');
+ assert.ok(!/未确认|未查清|待核实/.test([p.robotConfiguration,p.robotModel,p.effectorModel,p.forceBrief,p.forceDetail].join(' ')),w.id+': omit unknown particulars');
+ assert.equal(p.verification.checked,'2026-10-23');
+ assert.ok(w.actionOutput&&w.actionSource?.url&&w.actionSource?.locator,w.id+': source-linked action description');
+}
+assert.equal(robotDescription(catalogue.byId.get('W01').physicalProfile),'单臂（Flexiv Rizon）');
+assert.equal(robotDescription(catalogue.byId.get('R01').physicalProfile),'单臂／双臂（Flexiv Rizon 4；不同任务）');
+assert.ok(catalogue.byId.get('W04').actionOutput.includes('七个机械臂关节的目标角度'));
+assert.ok(catalogue.byId.get('W17').actionOutput.includes('执行时只发送运动指令'));
+assert.ok(catalogue.byId.get('W16').actionOutput.includes('目标偏移量'));
+assert.ok(catalogue.byId.get('N05').actionOutput.includes('目标关节角度'));
+assert.deepEqual(catalogue.byId.get('W17').categories,['gripper-wrench']);
+assert.deepEqual(catalogue.byId.get('E12').categories,['gripper-touch']);
+assert.deepEqual(catalogue.byId.get('W10').categories,['gripper-touch']);
+assert.deepEqual(catalogue.byId.get('W16').categories,['gripper-wrench']);
+assert.ok(catalogue.byId.get('W16').physicalProfile.forceBrief.includes('执行策略不额外输入实测力'));
+assert.ok(catalogue.byId.get('P03').physicalProfile.forceBrief.includes('各100个'));
+assert.ok(catalogue.byId.get('T18').physicalProfile.forceBrief.includes('六维力'));
+assert.ok(!catalogue.byId.get('T18').physicalProfile.forceBrief.includes('触觉图像'));
+assert.equal(catalogue.byId.get('P02').physicalProfile.robotModel,'YAM station');
+assert.equal(catalogue.byId.get('W18').physicalProfile.effectorModel,'平行两指夹爪');
+assert.equal(DEFAULT_PAPER_FILTERS.scope,'all');
+assert.equal(DEFAULT_WORK_FILTERS.scope,'all');
+const attentionPapers=selectPapers(catalogue,{query:'',filters:{...DEFAULT_PAPER_FILTERS,scope:'high'},sort:'googleScholar',saved:null});
+assert.equal(attentionPapers.length,19);
+assert.equal(attentionPapers.filter(w=>w.screening.attentionTier==='gripperWrench').length,9);
+const allPapers=selectPapers(catalogue,{query:'',filters:DEFAULT_PAPER_FILTERS,sort:'googleScholar',saved:null});
+assert.equal(allPapers.length,catalogue.PAPERS.length);
+assert.ok(allPapers.every((w,i)=>i===0||(allPapers[i-1].attention.googleScholar??-1)>=(w.attention.googleScholar??-1)));
+const highTasks=filterTaskInstances(catalogue,d.taskInstances,{query:'',filters:{...DEFAULT_WORK_FILTERS,scope:'high'},saved:null});
+assert.ok(highTasks.length>0&&highTasks.every(r=>catalogue.byId.get(r.work).screening.highAttention));
+assert.deepEqual(d.taskGroups.map(g=>g.name),['接触对准','持续接触','稳定夹持与保护','力觉感知、判断与决策','长程多步骤操作']);
+const allProtocols=d.works.flatMap(w=>w.experiments);
+const paperProtocols=catalogue.PAPERS.flatMap(w=>w.experiments);
+assert.equal(d.taskTypes.length,97);
+assert.equal(new Set(d.taskInstances.flatMap(r=>r.protocols.map(e=>e.id))).size,355);
+assert.equal(d.taskInstances.flatMap(r=>r.protocols).length,357,'Compound records retain source IDs without inventing independent tests');
+const plan=JSON.parse(fs.readFileSync('research/task_classification_plan.json','utf8'));
+for(const topic of d.taskTypes){
+ const planned=plan.topics.find(t=>t.id===topic.id);
+ assert.ok(planned,topic.id+': reviewed topic');
+ assert.deepEqual(topic.groups,[planned.group]);
+ assert.equal(topic.name,planned.taskNames.length===1?planned.taskNames[0]:planned.name);
+ if(topic.taskNames.length===1)assert.equal(topic.name,topic.taskNames[0],'Singleton topic uses its task name');
+ else assert.ok(topic.description,'Multi-kind topic introduction');
+ const records=d.taskInstances.filter(r=>r.task===topic.id);
+ const options=getTaskKindOptions(topic,records);
+ assert.equal(options.reduce((n,k)=>n+k.count,0),records.flatMap(r=>r.protocols).length);
+ for(const option of options){
+  const selected=filterTaskKindInstances(records,option.id);
+  assert.equal(selected.flatMap(r=>r.protocols).length,option.count);
+  assert.ok(selected.every(r=>r.protocols.every(e=>e.taskKind===option.id)),topic.id+': filter protocols, not whole papers');
+ }
+ assert.equal(getTaskTopicName(topic,records.slice(0,1)),topic.name,'Filters cannot rename the topic');
+}
+const jelly=d.taskTypes.find(t=>t.name==='气球上切果冻');
+assert.ok(jelly);
+assert.ok(d.taskInstances.find(r=>r.task===jelly.id).protocols.every(e=>e.task==='气球上切果冻'));
+const whiteboard=d.taskTypes.find(t=>t.id==='whiteboard');
+assert.deepEqual(whiteboard.taskNames,['擦白板'],'Arm configuration, directions and conditions do not create task kinds');
+for(const e of paperProtocols)assert.equal(e.taskGroups.length,1,e.id+': unique content-based major category even offline');
+assert.deepEqual(paperProtocols.find(e=>e.id==='C06-e03').taskGroups,['precision']);
+assert.deepEqual(paperProtocols.find(e=>e.id==='W06-e07').taskGroups,['surface']);
+assert.deepEqual(paperProtocols.find(e=>e.id==='T02-e07').taskGroups,['grasp']);
+assert.deepEqual(paperProtocols.find(e=>e.id==='R02-e03').taskGroups,['long']);
+assert.ok(d.taskInstances.every(r=>!catalogue.byId.get(r.work).resourceOnly));
+for(const group of d.taskGroups){
+ const view=createTaskView(catalogue,d.taskInstances,{category:group.id});
+ assert.ok(view.types.length,group.id+': discoverable capability');
+ for(const type of view.types)for(const r of view.getVisibleInstances(type.id))assert.ok(r.protocols.every(e=>e.taskGroups.includes(group.id)),r.id+': no unrelated protocol leaks across categories');
+}
+{
+ const view=createTaskView(catalogue,d.taskInstances,{});
+ const cardIds=new Set(view.groups.flatMap(g=>g.topics.map(t=>t.id)));
+ assert.deepEqual(new Set(view.types.map(t=>t.id)),new Set(d.taskInstances.map(r=>r.task)),'Flat list includes every indexed topic, including ungrouped offline evaluations');
+ assert.ok([...cardIds].every(id=>view.types.some(t=>t.id===id)),'Capability cards are included in the full task list');
+ assert.ok(view.groups.every(({topics})=>topics.every(t=>t.groups.length)),'Offline-only topics do not enter robot-operation capability cards');
+}
+for(const period of ['2024','2025','2026','all']){
+ const records=filterTaskInstances(catalogue,d.taskInstances,{query:'',filters:{...DEFAULT_WORK_FILTERS,period,domain:'离线'},saved:null});
+ const expected=catalogue.PAPERS.filter(w=>matchesPublicationYear(w,period)).flatMap(w=>w.experiments.filter(e=>e.evaluationModes.includes('离线')));
+ assert.deepEqual(new Set(records.flatMap(r=>r.protocols.map(e=>e.id))),new Set(expected.map(e=>e.id)),'Offline coverage matches paper-library evaluations for '+period);
+ const view=createTaskView(catalogue,records,{});
+ assert.deepEqual(new Set(view.types.map(t=>t.id)),new Set(records.map(r=>r.task)),'Offline topics stay discoverable for '+period);
+ for(const record of records){
+  assert.ok(view.getVisibleInstances(record.task).some(r=>r.id===record.id),'Offline record opens from its topic');
+  if(catalogue.PAPERS.some(w=>w.id===record.work))assert.ok(view.hasMatrixTask(record.work,record.task),'Offline method paper retains matrix coverage');
+ }
+}
 for(const w of d.works){
  assert.deepEqual(catalogue.getWorkInstances(w.id),d.taskInstances.filter(i=>i.work===w.id));
  for(const task of d.taskTypes)assert.equal(catalogue.hasTask(w.id,task.id),d.taskInstances.some(i=>i.work===w.id&&i.task===task.id));
  for(const protocol of w.experiments){
   const topics=d.taskInstances.filter(i=>i.protocols.some(e=>e.id===protocol.id)).map(i=>i.task);
-  const expected=d.works.flatMap(other=>{
+  const expected=w.resourceOnly?[]:catalogue.PAPERS.flatMap(other=>{
    const protocols=other.experiments.filter(e=>(e.originalTask||e.task)===(protocol.originalTask||protocol.task)||d.taskInstances.some(i=>i.work===other.id&&topics.includes(i.task)&&i.protocols.some(p=>p.id===e.id)));
    return protocols.length?[{id:other.id+'-protocol-'+protocol.id,work:other.id,protocols}]:[];
   });
@@ -63,7 +160,11 @@ assert.deepEqual(parseHash('#paper/W01'),{view:'works',paper:'W01'});
 assert.deepEqual(parseHash('#tasks/protocol-W01-1'),{view:'tasks',item:'protocol-W01-1'});
 assert.deepEqual(parseHash('#paper/%E0%A4%A'),{view:'works'});
 assert.equal(parseHash('#toString').view,'works');
-assert.ok(d.works.length>=75);
+assert.equal(d.works.filter(w=>!w.resourceOnly).length,58);
+for(const id of removedIds){assert.ok(!d.works.some(w=>w.id===id));assert.ok(!d.taskInstances.some(i=>i.work===id));assert.ok(!d.resourceWorkMetadata[id]);}
+for(const topic of d.taskTypes)assert.ok(d.taskInstances.some(i=>i.task===topic.id),topic.id+': no orphan topic');
+assert.equal(DEFAULT_WORK_FILTERS.period,'all');
+for(const year of ['2024','2025','2026'])for(const w of d.works)assert.equal(matchesPublicationYear(w,year),String(w.screening.publicYear)===year);
 const ids=new Set(d.works.map(w=>w.id));assert.equal(ids.size,d.works.length);
 const categories=new Set(d.groups.map(g=>g.id));
 assert.equal(categories.size,4,'Exactly four paper categories');
@@ -76,14 +177,13 @@ for(const w of d.works){
 assert.deepEqual(d.works.find(w=>w.id==='E05').categories,['dexterous'],'Finger 6D force is not wrist 6D');
 assert.deepEqual(d.works.find(w=>w.id==='W11').categories,['gripper-touch'],'Two 3D fingertip forces are not wrist 6D');
 assert.deepEqual(d.works.find(w=>w.id==='R01').categories,['gripper-wrench','gripper-touch']);
-assert.deepEqual(d.works.find(w=>w.id==='C16').categories,['gripper-wrench','other']);
 assert.ok(d.works.find(w=>w.id==='W14').classificationNote.includes('部署时不读取'));
 assert.ok(d.works.find(w=>w.id==='T07').resourceOnly);
 const benches=new Set(d.benchmarks.map(b=>b.id)), tasks=new Set(d.taskTypes.map(t=>t.id));
 assert.ok(d.works.find(w=>w.id==='W03').experiments[1].method.includes('啮合'),'FAVLA gear completion must include engagement');
 assert.ok(d.works.find(w=>w.id==='W05').experiments[3].setting.includes('75 N'),'Force stop threshold belongs to settings');
 assert.ok(d.works.find(w=>w.id==='T01').experiments[1].task.includes('盘子'),'Correct wiping object');
-assert.ok(d.works.find(w=>w.id==='T04').experiments[4].task.includes('粗糙度分类'),'Correct real task identity');
+assert.ok(d.works.find(w=>w.id==='T04').experiments[4].task.includes('粗糙度分拣'),'Correct real task identity');
 for(const w of d.works){
  for(const k of ['tasks','purpose','metrics','trials','baseline','openness','source','kind','sensorOrigin','actionOutput','actionMode'])assert.ok(w[k],w.id+': '+k);
  assert.ok(w.notes.length>20,w.id+': notes');
@@ -114,24 +214,24 @@ assert.equal(uni.find(w=>w.id==='E03').relations.find(r=>r.benchmark==='univtac'
 assert.equal(uni.find(w=>w.id==='E04').relations.find(r=>r.benchmark==='univtac').label,'采用8个任务');
 assert.ok(!d.works.find(w=>w.id==='W01').relations.some(r=>r.benchmark==='forcebench'));
 assert.ok(d.extraRelations.some(r=>r.fromWork==='W01'&&r.toBenchmark==='forcebench'&&r.type==='later'));
-assert.equal(d.works.find(w=>w.id==='C08').attention.stars,null);
 for(const doc of d.documents)assert.ok(fs.existsSync('public/'+doc.url));
 assert.ok(fs.readFileSync('src/main.jsx','utf8').includes('createRoot'));
 assert.ok(d.works.every(w=>w.screening&&['A','B','C','H'].includes(w.screening.grade)));
 assert.equal(d.works.find(w=>w.id==='W01').screening.grade,'A');
 assert.equal(d.works.find(w=>w.id==='W02').screening.grade,'A');
-assert.equal(d.works.find(w=>w.id==='P04').screening.grade,'A');
-assert.equal(d.works.find(w=>w.id==='C01').screening.inWindow,true,'ForceMimic qualifies by ICRA2025 publication');
+assert.equal(d.works.find(w=>w.id==='P04').screening.highAttention,false);
+assert.equal(d.works.find(w=>w.id==='C01').screening.publicYear,2024,'Year filter follows first publication');
 assert.equal(d.works.find(w=>w.id==='C13').screening.grade,'H','Older DIGIT hardware must not dominate current priorities');
 assert.equal(d.works.find(w=>w.id==='R01').screening.grade,'A');
+const highIds=new Set(['W01','W02','W03','W14','W17','W18','C02','R01','N01','W09','W11','W13','E01','E02','E03','E04','E05','T01','T02']);
+assert.equal(d.works.filter(w=>w.screening.highAttention).length,19,'ForceFlow now follows the gripper/wrist-wrench threshold');
 for(const w of d.works){
- if(w.resourceOnly){assert.notEqual(w.screening.grade,'A');continue;}
- if(w.categories.includes('gripper-wrench'))assert.equal(w.screening.grade,'A',w.id+': no attention threshold for mainline');
- else if(w.screening.grade==='A')assert.ok((w.attention.stars!==null&&w.attention.stars>=30)||(w.attention.citations!==null&&w.attention.citations>=5),w.id+': other direction threshold');
- if(w.screening.grade==='A')assert.ok(w.screening.originalAvailable&&w.screening.relatedEvaluation);
+ assert.equal(w.screening.highAttention,highIds.has(w.id),w.id+': reviewed attention membership');
+ assert.equal(w.screening.label,w.screening.highAttention?'较高关注':'');
+ if(w.screening.highAttention)assert.ok(w.screening.originalAvailable&&w.screening.relatedEvaluation);
 }
-assert.equal(d.works.find(w=>w.id==='C16').screening.grade,'A','Historical mainline still qualifies; year filter is separate');
-assert.equal(d.selectionPolicy.window.start,'2024-10-16');
+assert.deepEqual(d.selectionPolicy.years,[2024,2025,2026]);
+assert.equal('window' in d.selectionPolicy,false);
 // Distinct scoring methods must stay distinct after presentation changes.
 const experiment=id=>d.works.flatMap(allExperiments).find(e=>e.id===id);
 assert.equal(experiment('W01-e04').metric.split('；').length,2);
@@ -148,18 +248,15 @@ assert.equal(experiment('W03-e01').forceEvaluation.status,'not_reported');
 assert.equal(experiment('W03-e02').forceEvaluation.status,'reported');
 assert.equal(experiment('W06-e06').forceEvaluation.status,'not_reported','Force injection is an input ablation, not a force error metric');
 assert.equal(experiment('W06-e07').forceEvaluation.kind,'offline');
-assert.equal(experiment('E04-e01').forceEvaluation.status,'pending');
-assert.equal(experiment('E10-e01').forceEvaluation.status,'pending','Do not spread the Task2 force curve across all views');
+assert.equal(experiment('E04-e01').forceEvaluation.status,'not_reported');
+assert.equal(experiment('E10-e01').forceEvaluation.status,'not_reported','Do not spread the Task2 force curve across all views');
 assert.equal(experiment('E10-e02').forceEvaluation.kind,'case');
 assert.equal(experiment('T08-e02').forceEvaluation.status,'not_reported','Slip F1 is not force estimation error');
-assert.equal(experiment('T15-e01').forceEvaluation.status,'not_reported','Strain is not measured force');
-assert.equal(experiment('C18-e01').forceEvaluation.status,'not_reported','Training statistics do not evaluate autonomous deployment');
 assert.equal(experiment('C20-e05').forceEvaluation.kind,'case','Keep reported force sensitivity distinct from unscored application demonstrations');
 assert.equal(experiment('R01-e01').forceEvaluation.kind,'collection','Keep demonstration quality separate from policy evaluation');
 assert.ok(experiment('W07-e01').forceEvaluation.metrics.join(' ').includes('多个任务合在一起算'));
 assert.ok(experiment('W11-e01').forceEvaluation.metrics.join(' ').includes('机械臂'));
-assert.ok(experiment('C16-e01').forceEvaluation.explanation.comparison.includes('六个任务的平均结果'));
-for(const id of ['W05-e04','C16-e01','C16-e02','C16-e03','C16-e04','C16-e05','C16-e06']){
+for(const id of ['W05-e04']){
  assert.ok(!/75 N|40 N或最近/.test(experiment(id).method),id+': force stopping rules must move out of methods');
  assert.ok(!experiment(id).metric.includes('停机'),id+': a stop condition is not an outcome metric');
 }
@@ -174,7 +271,7 @@ assert.ok(d.works.find(w=>w.id==='R01').researchObjective.text.includes('较慢�
 assert.ok(!d.works.find(w=>w.id==='R01').researchObjective.text.includes('接触前'));
 console.log(`PASS: ${d.works.length} records, ${d.taskInstances.length} task links, distinct sourced paper objectives, task-level purposes/scoring labels/settings/methods, typed methods, attributable counters, directional provenance and documents.`);
 // Force evaluation is restricted to autonomous execution outcomes.
-for (const id of ['W06-e07','E08-e04','T08-e01','T19-e08','T19-e09','T19-e10','C06-e01','C07-e05','C16-e07','C18-e01','C18-e03','C20-e01','C20-e02','C20-e03','C20-e04','C20-e05','C20-e10','R01-e01']) {
+for (const id of ['W06-e07','E08-e04','T08-e01','T19-e08','T19-e09','T19-e10','C06-e01','C07-e05','C20-e01','C20-e02','C20-e03','C20-e04','C20-e05','C20-e10','R01-e01']) {
   assert.equal(experiment(id).forceEvaluation.status,'not_reported',id);
   assert.ok(experiment(id).forceEvaluation.scopeNote,id);
 }
@@ -189,16 +286,15 @@ for (const w of d.works) for (const e of w.experiments) {
 }
 const summaryLines=fs.readFileSync('research/work_metric_summaries.tsv','utf8').split(/\r?\n/).filter(s=>s&&!s.startsWith('#'));
 const metricSummaries=new Map(summaryLines.map(s=>s.split('\t')));
-assert.equal(metricSummaries.size,d.works.length,'All works need a plain metric overview');
+assert.ok(d.works.every(w=>metricSummaries.has(w.id)),'All retained works need a plain metric overview');
 for(const w of d.works)assert.equal(w.metrics,metricSummaries.get(w.id),w.id+': metric overview');
 assert.ok(experiment('T08-e02').method.includes('漏掉')&&experiment('T08-e02').method.includes('误报'),'F1 must explain both missed cases and false alarms');
-assert.ok(experiment('C17-e01').method.includes('中间值')&&experiment('C17-e01').method.includes('中间50%'),'Explain median and spread in plain words');
 assert.ok(!/20 N|7\.5 N|6 N/.test(JSON.stringify(experiment('C01-e01').forceEvaluation.explanation)),'Do not repeat optional numerical results in the force explanation');
 assert.ok(!experiment('W09-e01').setting.includes('未说明'),'Omit minor missing trial-count notices from reader setup');
 assert.ok(experiment('E04-e01').method.includes('各步骤的具体分值尚不明确'),'Retain uncertainty about the actual scoring rule');
 assert.ok(experiment('W07-e01').method.includes('具体成功判定细则尚不明确'),'Retain uncertainty about task success criteria');
-assert.equal(experiment('E10-e01').forceEvaluation.label,'是否报告尚不明确','Unknown is not an assertion that the paper did not report force');
-assert.equal(experiment('W03-e01').forceEvaluation.label,'原文未说明');
+assert.equal(experiment('E10-e01').forceEvaluation.label,'无','Only task 2 has a sourced force curve');
+assert.equal(experiment('W03-e01').forceEvaluation.label,'无');
 let comparisonCount=0;
 for(const w of d.works){
  assert.ok(w.comparisonMethods.length>0,w.id+': comparison method cards required');
@@ -262,3 +358,58 @@ assert.equal(benchmarkAdoptionCount(liberoResource, catalogue.getBenchmarkUsers(
 assert.equal(benchmarkAdoptionCount(d.benchmarks.find(b => b.id === 'univtac'), catalogue.getBenchmarkUsers('univtac')), 3);
 assert.equal(benchmarkAdoptionCount({...liberoResource, externalUsers:[...liberoResource.externalUsers,...liberoResource.externalUsers]}, catalogue.getBenchmarkUsers('libero')), 2, 'Duplicate study records count once');
 for (const w of d.works) for (const r of w.relations.filter(r => r.type === 'adopts')) assert.ok(r.usageDetails?.length >= 3, w.id + ': readable, structured resource usage');
+
+// Arm coordination filters individual evaluations, independently of capability.
+{
+ const cooperativeIds=new Set(catalogue.PAPERS.filter(w=>w.bimanualEvaluation?.type==='cooperative').flatMap(w=>w.bimanualEvaluation.taskIds));
+ const indexedIds=new Set(d.taskInstances.flatMap(r=>r.protocols.map(e=>e.id)));
+ for(const id of cooperativeIds){
+  const protocol=d.works.flatMap(w=>w.experiments).find(e=>e.id===id);
+  assert.ok(protocol.taskGroups.length,id+': cooperative task has capability membership');
+  assert.ok(indexedIds.has(id),id+': cooperative task is navigable');
+ }
+ const records=filterTaskInstances(catalogue,d.taskInstances,{query:'',filters:{...DEFAULT_WORK_FILTERS,period:'all',bimanualCooperation:true},saved:null});
+ assert.deepEqual(new Set(records.flatMap(r=>r.protocols.map(e=>e.id))),cooperativeIds,'Bimanual filter retains all reviewed cooperative tasks and excludes same-paper single-arm tasks');
+ const view=createTaskView(catalogue,records,{});
+ assert.ok(view.groups.length===5,'Bimanual tasks use the existing five capability categories');
+ assert.ok(!allProtocols.find(e=>e.id==='C15-e01').taskGroups.includes('long'),'Shared lifting is not automatically a long workflow');
+ assert.deepEqual(allProtocols.find(e=>e.id==='R02-e03').taskGroups,['long'],'Full insertion workflow has one primary capability');
+}
+
+// Task coverage matches the paper library, including unfamiliar task names.
+{
+ const evaluations=catalogue.PAPERS.flatMap(w=>w.experiments);
+ const indexed=new Set(d.taskInstances.flatMap(record=>record.protocols.map(e=>e.id)));
+ assert.deepEqual(indexed,new Set(evaluations.map(e=>e.id)),'Every paper evaluation is indexed and no resource-only evaluation is included');
+ assert.ok(d.taskInstances.every(record=>!catalogue.byId.get(record.work).resourceOnly),'Task records stay within the paper library');
+ assert.deepEqual(new Set(catalogue.protocolsById.keys()),indexed,'Direct protocol links stay within task scope');
+ for(const work of catalogue.RESOURCE_WORKS){
+  assert.deepEqual(catalogue.getWorkInstances(work.id),[],work.id+': resource is not a task-library work');
+  for(const e of work.experiments)assert.deepEqual(catalogue.getRelatedProtocols(e.id),[],e.id+': resource protocol cannot open task comparisons');
+ }
+ for(const e of evaluations){
+  const review=e.taskClassification;
+  assert.ok(review?.reason&&review.source&&review.locator,e.id+': sourced classification review');
+  assert.equal(e.taskGroups.length,1,e.id+': classify by content, independently of evaluation mode');
+ }
+ const records=filterTaskInstances(catalogue,d.taskInstances,{query:'',filters:{...DEFAULT_WORK_FILTERS,period:'all'},saved:null});
+ const view=createTaskView(catalogue,records,{});
+ assert.deepEqual(new Set(view.types.map(t=>t.id)),new Set(d.taskTypes.map(t=>t.id)),'Every indexed task can be opened without filters');
+ console.log('PASS: every paper-library evaluation indexed; resource-only tasks excluded; paper perception remains discoverable.');
+}
+
+// Official-source metric revisions preserve score type, units and case scope.
+const metricReview=JSON.parse(fs.readFileSync('research/task_metric_review.json','utf8'));
+assert.equal(Object.keys(metricReview.protocols).length,70);
+for(const [id,r] of Object.entries(metricReview.protocols)){
+ const e=experiment(id);assert.equal(e.metric,r.metric);assert.equal(e.forceEvaluation.checked,'2026-10-23');
+ assert.ok(e.forceEvaluation.source&&e.forceEvaluation.locator&&e.forceEvaluation.note);
+ assert.notEqual(e.forceEvaluation.status,'pending');
+ for(const record of d.taskInstances)for(const view of record.protocols.filter(v=>v.id===id))assert.equal(view.metric,r.metric);
+}
+assert.ok(experiment('N05-e01').metric.includes('0–100%'));
+assert.ok(!experiment('N05-e01').metric.includes('成功率'));
+assert.ok(experiment('N02-e04').metric.includes('打开率'));
+assert.ok(experiment('N02-e01').metric.includes('（N）'));
+assert.ok(experiment('N01-e01').metric.includes('案例展示'));
+for(const e of paperProtocols)assert.ok(['有','有（案例曲线）','无'].includes(e.forceEvaluation.label),e.id);

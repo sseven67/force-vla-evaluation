@@ -8,12 +8,11 @@ ROOT=Path(__file__).resolve().parent
 DATE='2026-10-22'
 
 TASK_GROUPS=[
- dict(id='precision',name='短时接触与精密操作',description='连接器、插孔和按钮：接触对齐、就位和终点判断。',color='#24768c',icon='insertion'),
- dict(id='surface',name='持续接触与工具加工',description='擦拭、削切和打磨：持续接触、作用力与加工质量。',color='#3868a6',icon='wipe'),
- dict(id='assembly',name='多阶段装配与机构操作',description='齿轮、螺纹、门与锁：约束变化和连续接触决策。',color='#8d6c3b',icon='assembly'),
- dict(id='grasp',name='轻柔夹持与灵巧操作',description='易碎物、滑移、多指操作：夹持力、稳定性和无损完成。',color='#7562a9',icon='grasp'),
- dict(id='reason',name='物理属性与力反馈决策',description='重量、硬度和阻力：分开看离线感知与闭环决策。',color='#377b60',icon='weigh'),
- dict(id='special',name='专业操作与交互资源',description='超声、全身接触、采集和表示评测：保留方法边界。',color='#63738a',icon='medical'),
+ dict(id='precision',name='接触对准',description='插接、装配与按压到位：检查接触后的位置调整、到位判断与停止。',color='#24768c',icon='insertion'),
+ dict(id='surface',name='持续接触',description='擦拭、削切、接触扫描与机构运动：检查持续接触和用力调节。',color='#3868a6',icon='wipe'),
+ dict(id='grasp',name='稳定夹持与保护',description='抓放、搬运与手内操作：检查是否抓稳、滑落、夹坏或损伤。',color='#7562a9',icon='grasp'),
+ dict(id='reason',name='力反馈判断与决策',description='利用接触信息判断重量、材质或阻力，再选择对象、方向或下一步动作。',color='#377b60',icon='weigh'),
+ dict(id='long',name='长程多步骤操作',description='连续完成多个操作阶段：检查技能衔接、整流程完成与错误累积。',color='#8d6c3b',icon='sequence'),
 ]
 # Matching only indexes explicitly named tasks; it does not invent task protocols.
 TASKS=[
@@ -26,18 +25,18 @@ TASKS=[
  ('whiteboard','擦白板','surface',r'擦白板|擦板|擦拭白板|whiteboard|board eraser'),
  ('curved','曲面与表面擦拭','surface',r'花瓶|曲面|擦盘|擦碗|擦锅|表面|圆周擦拭|Surface|surface wiping|Wipe'),
  ('peel','削皮与切割','surface',r'削皮|削黄瓜|切割|切片|芒果|chopping|peeling'),
- ('assembly','齿轮与螺纹装配','assembly',r'齿轮|螺母|螺纹|螺丝|screw|thread|Nut Thread'),
- ('articulated','开门、抽屉与锁扣','assembly',r'抽屉|开门|旋转窗|锁|搭扣|拧盖|翻盖|开盖|Faucet|Drawer|Stove Turn'),
+ ('assembly','齿轮与螺纹装配','precision',r'齿轮|螺母|螺纹|螺丝|screw|thread|Nut Thread'),
+ ('articulated','开门、抽屉与锁扣','surface',r'抽屉|开门|旋转窗|锁|搭扣|拧盖|翻盖|开盖|Faucet|Drawer|Stove Turn'),
  ('fragile','易碎 / 无损抓放','grasp',r'鸡蛋|华夫|果酱|无变形|易碎|轻柔|无损|gentle|fragile'),
  ('grasp','稳定抓取与滑移','grasp',r'抓取|抓放|夹持|揭杯|隐藏物块|Lift |抓稳|拆杯|杯子|抗滑|箱内|装箱|dense packing|slip|grasp|pick.and.place'),
  ('dex','多指与手内操作','grasp',r'翻页|洗牌|鞋带|多物体|灵巧|手内|转动|旋转|重定向|reorient|in.hand'),
- ('deform','柔性与双臂协作','grasp',r'围巾|拉链|明信片|叠书|耳机|挤膏|折|soft'),
+ ('deform','柔性物体操作','grasp',r'围巾|拉链|明信片|叠书|耳机|挤膏|折|soft'),
  ('property','物理属性感知与推理','reason',r'重量|重心|硬度|材质|粗糙|属性|语义|分类|问答|分拣|阻力|reason|Weight|CoM|Grasp Classify'),
- ('pipette','移液与专业接触','special',r'移液|吸液|试管|pipett|syringe'),
- ('pour','倾倒与液体操作','special',r'倒液|倾倒|倒水|pour|Pour'),
- ('medical','超声与医学成像','special',r'超声|切面|肝|肾'),
- ('body','全身接触与搬推','special',r'搬箱|推箱|全身|移动|whole.body'),
- ('representation','触觉表示与跨传感器','special',r'跨传感器|表示|零样本触觉|线性探测|分类|深度|检索|传感器迁移|力定位|力估计|力预测|滑移检测|姿态估计|位姿估计|稳定性预测|帧.*预测|摇杆状态|force estimation'),
+ ('pipette','移液与专业接触',None,r'移液|吸液|试管|pipett|syringe'),
+ ('pour','倾倒与液体操作',None,r'倒液|倾倒|倒水|pour|Pour'),
+ ('medical','超声与医学成像','surface',r'超声|切面|肝|肾'),
+ ('body','全身接触与搬推',None,r'搬箱|推箱|全身|移动|whole.body'),
+ ('representation','触觉表示与跨传感器',None,r'跨传感器|表示|零样本触觉|线性探测|分类|深度|检索|传感器迁移|力定位|力估计|力预测|滑移检测|姿态估计|位姿估计|稳定性预测|帧.*预测|摇杆状态|force estimation'),
 ]
 # Keep original English task names searchable in the same cross-paper topics.
 TASK_ALIASES={
@@ -215,7 +214,10 @@ def enrich(data):
     forms=json.loads((ROOT/'research'/'embodiment_force_forms.json').read_text(encoding='utf-8'))
     profiles={r[0]:dict(zip(forms['columns'][1:],r[1:])) for r in forms['records']}
     for w in works:
-        profile=profiles.get(w['id'],dict(embodimentBrief='本体类型待核实',robotModel=w['platform'],effectorModel='末端执行器型号未核实',forceBrief='原始信号形式待核实',forceDetail=w['signal']))
+        # Paper profiles are supplied by the official-source review below.
+        if w['id'] not in profiles:
+            continue
+        profile=profiles[w['id']]
         w['physicalProfile']={**profile, 'source':forms['sourceOverrides'].get(w['id'],dict(url=w['source'],locator='；'.join(w['locators'])))}
         from review_data import readable
         for key in ('embodimentBrief','forceBrief','forceDetail'):w['physicalProfile'][key]=readable(w['physicalProfile'][key])
@@ -232,4 +234,7 @@ def enrich(data):
     from task_names import apply_chinese_task_names
     from scholar_attention import apply_scholar_attention
     from resource_registry import apply_resource_registry
-    return apply_resource_registry(apply_scholar_attention(apply_chinese_task_names(apply_task_coordination(apply_benchmark_details(apply_evaluation_sections(apply_plain_language(apply_result_summaries(apply_benchmark_audit(apply_comparison_methods(apply_evaluation_highlights(apply_selection(apply_taxonomy(data)))))))))))))
+    from task_taxonomy import apply_task_taxonomy
+    from catalogue_scope import apply_catalogue_scope
+    from physical_profiles import apply_physical_profiles
+    return apply_task_taxonomy(apply_catalogue_scope(apply_resource_registry(apply_scholar_attention(apply_chinese_task_names(apply_task_coordination(apply_benchmark_details(apply_evaluation_sections(apply_plain_language(apply_result_summaries(apply_benchmark_audit(apply_comparison_methods(apply_evaluation_highlights(apply_selection(apply_physical_profiles(apply_taxonomy(data))))))))))))))))

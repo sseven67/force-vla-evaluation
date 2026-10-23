@@ -3,11 +3,18 @@ import { createContext, useContext } from "react";
 export const CatalogueContext = createContext(null);
 export const isVLA = (w) => /VLA|VTLA/.test(w.kind) && !w.kind.includes("非");
 export const inCategory = (w, id) => w.categories.includes(id);
-export const isResearchFocus = (w) => w.researchFocus !== false && inCategory(w, "gripper-wrench");
 // Protocol classification is evidence-backed data, not a hard-coded name allowlist.
 export const isBench = (b) => b.resourceType === "benchmark";
 export const num = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
 export const unique = (a) => [...new Set(a)];
+export function robotDescription(profile) {
+  const type = profile.robotConfiguration || profile.embodimentBrief;
+  if (!profile.robotModel) return type;
+  const qualifier = type.match(/（([^（）]+)）$/);
+  return qualifier
+    ? `${type.slice(0, qualifier.index)}（${profile.robotModel}；${qualifier[1]}）`
+    : `${type}（${profile.robotModel}）`;
+}
 // Count independent recorded adopters; proposing a resource is not adopting it.
 export function benchmarkAdoptionCount(benchmark, users) {
   const identity = (paper) => {
@@ -42,10 +49,14 @@ export function createCatalogue(D) {
     if (!Array.isArray(D?.[key])) throw new Error(`研究目录缺少有效的 ${key}`);
   }
 
+  const PAPERS = D.works.filter((w) => !w.resourceOnly);
   const byId = new Map(D.works.map((w) => [w.id, w]));
   const bmById = new Map(D.benchmarks.map((b) => [b.id, b]));
   const groupById = new Map(D.groups.map((g) => [g.id, g]));
   const taskById = new Map(D.taskTypes.map((t) => [t.id, t]));
+  for (const [oldId, topicId] of Object.entries(D.taskTopicAliases || {})) {
+    if (!taskById.has(oldId)) taskById.set(oldId, taskById.get(topicId));
+  }
   const instancesByWork = new Map();
   const instancesByTask = new Map();
   const instancesByProtocol = new Map();
@@ -55,7 +66,8 @@ export function createCatalogue(D) {
   const searchByWork = new Map();
 
   for (const w of D.works) {
-    for (const e of w.experiments) protocolsById.set(e.id, e);
+    if (!w.resourceOnly)
+      for (const e of w.experiments) protocolsById.set(e.id, e);
     for (const r of w.relations)
       append(usersByBenchmark, r.benchmark, { w, r });
     searchByWork.set(
@@ -67,6 +79,7 @@ export function createCatalogue(D) {
         w.metrics,
         w.platform,
         w.signal,
+        ...Object.values(w.physicalProfile || {}).filter(v => typeof v === 'string'),
         w.baseline,
         ...w.domains,
         ...w.experiments.flatMap((e) => [e.task, e.originalTask, e.metric, e.setting, ...(e.evaluationModes || [])]),
@@ -98,7 +111,7 @@ export function createCatalogue(D) {
     const topics = new Set(
       (instancesByProtocol.get(id) || EMPTY).map((i) => i.task),
     );
-    const matches = D.works.flatMap((w) => {
+    const matches = PAPERS.flatMap((w) => {
       const linked = new Set(
         getWorkInstances(w.id)
           .filter((i) => topics.has(i.task))
@@ -123,7 +136,7 @@ export function createCatalogue(D) {
     taskById,
     protocolsById,
     searchByWork,
-    PAPERS: D.works.filter((w) => !w.resourceOnly),
+    PAPERS,
     RESOURCE_WORKS: D.works.filter((w) => w.resourceOnly),
     colour: (w) => groupById.get(w.categories[0])?.color || "#63738a",
     getWorkInstances,

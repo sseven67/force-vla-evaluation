@@ -70,7 +70,7 @@ const BASE_URL=process.env.ATLAS_BASE_URL||'http://127.0.0.1:8765';
  await page.getByRole('button',{name:'进入横向比较'}).click();await page.locator('.compare-aligned').waitFor();assert.equal(await page.locator('.compare-aligned-head .work-name').count(),2);
  await page.getByRole('button',{name:'实验设计',exact:true}).click();assert.ok(await page.locator('[data-comparison-row="trials"]').count());
  await page.getByRole('button',{name:'任务与评分',exact:true}).click();assert.ok(await page.locator('[data-comparison-row="calculation"]').count());await page.screenshot({path:'qa/react-compare-desktop.png'});
- await page.goto(BASE_URL+'/#tasks');await page.locator('.task-category').first().waitFor();assert.equal(await page.locator('.task-category').count(),6);
+ await page.goto(BASE_URL+'/#tasks');await page.locator('.task-category').first().waitFor();assert.equal(await page.locator('.task-category').count(),5);
  await page.screenshot({path:'qa/react-tasks-desktop.png',fullPage:true});
  await page.goto(BASE_URL+'/#tasks/whiteboard');await page.locator('.protocol-card').first().waitFor();
  await page.getByLabel('时间范围').selectOption('all');

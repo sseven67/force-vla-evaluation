@@ -1,0 +1,1399 @@
+{
+  "updated": "2026-10-23",
+  "scope": "论文库全部58篇；按执行配置描述，采集、训练与底层控制另注明",
+  "works": {
+    "W01": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Flexiv Rizon",
+      "effectorModel": "自适应夹爪（Dahuan）",
+      "forceBrief": "末端六维力：三个方向的力和三个方向的力矩，由机器人内部估计。",
+      "forceDetail": "力矩指使物体转动或扭转的作用。",
+      "sensorOrigin": "机器人内部估计",
+      "source": {
+        "url": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§3 Preliminary；§4.3 Datasets"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端位置、朝向和夹爪开度，决定机械臂移到哪里、如何抓放。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2505.22159v1",
+        "locator": "§3 Preliminary；§4.3 Datasets"
+      }
+    },
+    "W02": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Flexiv Rizon 4s",
+      "effectorModel": "自适应夹爪（DH Robotics AG-95）",
+      "forceBrief": "末端六维力，反映接触时的推拉和扭转作用（末端六维力传感器）。",
+      "forceDetail": "",
+      "sensorOrigin": "末端六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§4 Hardware and sensor setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端位置、朝向和目标用力，由底层控制器协调运动与接触力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2603.15169v1",
+        "locator": "§3 Method；Appendix Force–Position Control"
+      }
+    },
+    "W03": {
+      "robotConfiguration": "双臂平台",
+      "robotModel": "Monte／X-ARM",
+      "effectorModel": "夹爪",
+      "forceBrief": "末端六维力及其近期变化，反映接触时的受力和扭转。",
+      "forceDetail": "两臂均安装传感器；论文所列输入为六维力历史，不能仅据此认定模型同时输入双腕十二维力。",
+      "sensorOrigin": "腕部六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§4.1 Experimental Setups；§3 Problem Formulation"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "末端位置、朝向和夹爪动作；接触变化时加快动作更新。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2602.23648v1",
+        "locator": "§3 Force-Adaptive Inference；Appendix Table 4"
+      }
+    },
+    "W04": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka Emika Panda",
+      "effectorModel": "两指夹爪（Robotiq 2F-85）",
+      "forceBrief": "七个关节的外部力矩估计，反映机械臂各关节受到的外部作用。",
+      "forceDetail": "采集记录另含末端六维力和夹爪电流，但本文模型只使用七维关节力矩。",
+      "sensorOrigin": "机器人内部关节力矩估计",
+      "source": {
+        "url": "https://arxiv.org/html/2606.12105v1",
+        "locator": "Appendix A Robot Platform and Sensor Suite；Appendix B"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "七个机械臂关节的目标角度和夹爪开合，按连续动作段执行。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.12105v1",
+        "locator": "Appendix B Training and Implementation Details"
+      }
+    },
+    "W05": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR5e",
+      "effectorModel": "UMI 风格夹爪",
+      "forceBrief": "末端六维力及其近期变化，反映接触时的推拉和扭转作用。",
+      "forceDetail": "",
+      "sensorOrigin": "末端六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§III Problem Formulation；§IV Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端位置、朝向、夹爪开度和目标六维力，兼顾运动与接触用力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.05832v1",
+        "locator": "§III Problem Formulation；§III Compliance Controller"
+      }
+    },
+    "W06": {
+      "robotConfiguration": "双臂人形机器人",
+      "robotModel": "AgiBot G1",
+      "effectorModel": "夹爪",
+      "forceBrief": "腕部六维力，反映接触时的受力和扭转，并用于跟踪目标用力。",
+      "forceDetail": "两腕均有传感器；不能仅由硬件配置推定每个任务均输入双腕十二维力。",
+      "sensorOrigin": "腕部六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§V-A Experimental Setup；§III"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "一段运动和对应的目标用力，另预测接触概率，决定何时快速调整受力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.18497v1",
+        "locator": "§III-B Contact-Gated Fast–Slow Control"
+      }
+    },
+    "W07": {
+      "robotConfiguration": "单臂／双臂",
+      "robotModel": "Franka Panda／X Square Robot",
+      "effectorModel": "夹爪",
+      "forceBrief": "末端六维力及其近期变化，由机器人根据关节力矩估计。",
+      "forceDetail": "单臂与双臂为不同评测配置，不是把采集主臂和执行从臂计为双臂。",
+      "sensorOrigin": "机器人内部估计",
+      "source": {
+        "url": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§IV Hardware, tasks, and data collection"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "原有运动计划的位置和朝向修正量，补偿接触变化与动作延迟。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.18242v1",
+        "locator": "§III-C Paired Correction Targets；§III-D Correction Policy"
+      }
+    },
+    "W08": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka FR3",
+      "effectorModel": "两指夹爪（Robotiq 2F-85）",
+      "forceBrief": "腕部六维力，反映插入、擦拭等接触过程中的受力和扭转（OnRobot HEX-E）。",
+      "forceDetail": "",
+      "sensorOrigin": "腕部六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2609.22840v1",
+        "locator": "§V-A Tasks and Platform"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端移动和转动的修正量，叠加到原策略动作上；夹爪沿用原策略目标。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.22840v1",
+        "locator": "§III–IV Residual Policy／Action Representation"
+      }
+    },
+    "W09": {
+      "robotConfiguration": "夹爪操作平台",
+      "robotModel": "",
+      "effectorModel": "自制双指触觉夹爪（UMI 风格）",
+      "forceBrief": "双指接触力，反映夹持物体的用力及沿接触面的滑动作用。",
+      "forceDetail": "图4展示自制双指触觉夹爪；手持 UMI 用于示教采集，不将采集装置当成执行机械臂型号。",
+      "sensorOrigin": "双指触觉传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§2.1；§2.4；Fig.4"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人"
+        ]
+      },
+      "actionOutput": "目标位置和目标接触力，分别控制移到哪里、用多大力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2507.09160v1",
+        "locator": "§2.1 Tactile-Aware Action Expert；Hybrid Controller"
+      }
+    },
+    "W10": {
+      "robotConfiguration": "单臂",
+      "robotModel": "",
+      "effectorModel": "触觉夹爪；可夹持镊子、板擦等工具",
+      "forceBrief": "触觉图像及其连续变化，反映接触与形变；力数据用于预训练对齐。",
+      "forceDetail": "图9显示单臂夹爪执行，另一套为遥操作主臂。部署时由触觉图像提取接触信息，不把预训练的力标签写成在线力输入。",
+      "sensorOrigin": "视触觉传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§IV–V；Appendix A；Fig.9"
+      },
+      "categoryNote": "工具由夹爪操持，不因工具任务额外归入④。",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人"
+        ]
+      },
+      "actionOutput": "一段机械臂和夹爪动作，结合触觉调整抓持与工具操作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2601.20321v1",
+        "locator": "§IV TaF-VLA Policy Integration"
+      }
+    },
+    "W11": {
+      "robotConfiguration": "仿真单臂",
+      "robotModel": "Franka（Isaac Lab）",
+      "effectorModel": "两指触觉夹爪",
+      "forceBrief": "默认采用触觉标记点位移，反映按压和滑动；两指接触力用于力反馈控制。",
+      "forceDetail": "另比较触觉图像等输入。两指各三维力合计六个数，不是腕部三维力加三维力矩。",
+      "sensorOrigin": "仿真触觉与接触力",
+      "source": {
+        "url": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.2 Cross-Modal Data Acquisition；§3.4 Tabero-VTLA"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端位置、朝向和两指目标用力，分别调节夹持物体和对外施力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2605.27886v1",
+        "locator": "§3.4 Tabero-VTLA；§3.5 Hybrid Controller"
+      }
+    },
+    "W12": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Piper",
+      "effectorModel": "两指夹爪（Pika）",
+      "forceBrief": "两个手指各自的六维力，反映按压和扭转，由指面触觉阵列换算（Tacta）。",
+      "forceDetail": "两指各六维，合计十二维；不是腕部六维力。",
+      "sensorOrigin": "指面触觉阵列换算",
+      "source": {
+        "url": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§3.1；Appendix A.2.1–A.2.2"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "参考动作与未来受力预测，再由在线修正模块生成实际动作；预测受力不是目标用力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.09337v1",
+        "locator": "§3.1 Joint Action-and-Wrench Prediction；§3.2"
+      }
+    },
+    "W13": {
+      "robotConfiguration": "双臂",
+      "robotModel": "Cobot Magic ALOHA",
+      "effectorModel": "夹爪",
+      "forceBrief": "机械臂各关节的力矩，由电机电流换算，反映关节用力。",
+      "forceDetail": "关节力矩不能直接当作末端六维力。",
+      "sensorOrigin": "电机电流换算关节力矩",
+      "source": {
+        "url": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§5 Hardware Platform；§3"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "双臂与夹爪动作，并辅助预测后续关节力矩；力矩预测不作为关节用力命令。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2509.07962v1",
+        "locator": "§4 Joint Action–Torque Prediction；Appendix A.3–A.5"
+      }
+    },
+    "W14": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR5e",
+      "effectorModel": "夹爪",
+      "forceBrief": "训练时使用末端力／力矩；执行时从视觉和状态推断力相关信息，不输入实测力。",
+      "forceDetail": "执行时的预测特征不是传感器测得的力。",
+      "sensorOrigin": "力监督仅用于训练",
+      "source": {
+        "url": "https://arxiv.org/html/2602.02142v2",
+        "locator": "§III Force Distillation Module；§IV Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "机械臂和夹爪的连续动作；力相关预测用于辅助动作生成，不是目标力命令。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2602.02142v2",
+        "locator": "§III Force Distillation Module；Action Expert"
+      }
+    },
+    "W15": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka FR3",
+      "effectorModel": "两指夹爪（Robotiq 2F-85）",
+      "forceBrief": "双指触觉读数（AnySkin）和七个关节的力矩，反映指面接触与机械臂用力。",
+      "forceDetail": "原文将每指十五维 AnySkin 读数称为三维力单元；未见明确换算标定说明，因此不将这些读数写成实测六维力。",
+      "sensorOrigin": "AnySkin 与关节力矩",
+      "source": {
+        "url": "https://arxiv.org/html/2604.23272v1",
+        "locator": "§4.1 Hardware setup；Appendix A.2"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂和夹爪的动作序列；训练时另预测后续触觉和关节力矩。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2604.23272v1",
+        "locator": "§3 Method；Future Physical Signal Prediction"
+      }
+    },
+    "W16": {
+      "robotConfiguration": "单臂执行",
+      "robotModel": "Franka FR3",
+      "effectorModel": "夹爪",
+      "forceBrief": "示教记录末端六维力，用于学习柔顺参数；执行策略不额外输入实测力。",
+      "forceDetail": "采集时一台 FR3 为主臂、一台为从臂，不属于两臂协作执行。力数据分别处理平移方向的力与旋转方向的力矩；",
+      "sensorOrigin": "训练期末端六维力",
+      "source": {
+        "url": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§3 Model；§5；Appendix Data collection"
+      },
+      "categoryNote": "①中的训练期末端六维力路线；执行策略不输入实测力。",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "末端移动与转动速度、夹爪开合，以及接触时的软硬程度和目标偏移量。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.23614v1",
+        "locator": "§4.2 CompVLA，Eq.7；Compliant Motion Generation"
+      }
+    },
+    "W17": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UFACTORY xArm6",
+      "effectorModel": "夹爪",
+      "forceBrief": "末端六维力及其近期变化，反映接触时的受力和扭转（xArm 六维力传感器）。",
+      "forceDetail": "夹爪操持任务物体或工具，不能仅因工具使用归入④。",
+      "sensorOrigin": "末端六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2605.11048v1",
+        "locator": "Appendix A.2；F；G.3"
+      },
+      "categoryNote": "夹爪＋末端六维力，改归①。",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "连续运动动作，训练时另预测下一步受力；执行时只发送运动指令。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2605.11048v1",
+        "locator": "§3 Contact-Driven Flow Matching；Appendix F"
+      }
+    },
+    "W18": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka FR3",
+      "effectorModel": "平行两指夹爪",
+      "forceBrief": "腕部六维力及其近期变化，反映接触受力，并与预测受力比较以纠正动作（ATI Axia80-M8）。",
+      "forceDetail": "图6显示执行机械臂使用两指夹爪；另一台为遥操作主臂，不计为双臂协作。",
+      "sensorOrigin": "腕部六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§IV Hardware Platform；Appendix A.1；Fig.6"
+      },
+      "categoryNote": "图6确认两指夹爪，腕部配 ATI 六维力传感器，归①。",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "运动动作和未来六维力预测；根据预测与实测受力的差异修正运动。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.08555v1",
+        "locator": "§III Force-Envisioned Action Model；Residual Corrector"
+      }
+    },
+    "E01": {
+      "robotConfiguration": "单臂",
+      "robotModel": "WidowX 250",
+      "effectorModel": "两指夹爪",
+      "forceBrief": "双指触觉图像，反映接触面的形变（DIGIT）；另结合声音等辅助信息。",
+      "forceDetail": "平台还包含麦克风和 IMU；各模态按实验配置使用，不等于所有配置同时使用。",
+      "sensorOrigin": "DIGIT 触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2501.04693v1",
+        "locator": "§IV Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "末端每一步的移动调整量，并控制夹爪完成抓放。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2501.04693v1",
+        "locator": "§IV Experimental Setup；Policy Fine-Tuning"
+      }
+    },
+    "E02": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR3",
+      "effectorModel": "两指夹爪（Robotiq 2F-85）",
+      "forceBrief": "双指接触图像，反映插入过程中的碰撞和接触形变（GelStereo 2.0）。",
+      "forceDetail": "",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2505.09577v1",
+        "locator": "Real-World Insertion Robot Setup；Appendix Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "插销在两个水平方向的移动量和绕竖直轴的转动量，用于对孔。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2505.09577v1",
+        "locator": "§3 Action Generation；Evaluation Metrics；Appendix Setup"
+      }
+    },
+    "E03": {
+      "robotConfiguration": "多种单臂／双臂配置",
+      "robotModel": "Franka、Flexiv、Sharpa North、Dexmate",
+      "effectorModel": "两指夹爪／灵巧手（Robotiq、Sharpa Wave、自制夹爪）",
+      "forceBrief": "按配置分别使用触觉图像或接触力阵列，覆盖夹爪与灵巧手。",
+      "forceDetail": "真机测试包含 Sharpa DTC、Xense、Contactile；仿真使用 GelSight Mini。预训练另含腕部力和关节力矩，不将全部预训练模态视为每个执行配置的输入。",
+      "sensorOrigin": "多配置视触觉图像／接触力阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§2.2；Appendix E.1 Table 5"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "按平台生成机械臂、夹爪或灵巧手动作，统一适配不同机器人配置。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.13102v1",
+        "locator": "§2.1；Appendix B.1 Unified Action Space"
+      }
+    },
+    "E04": {
+      "robotConfiguration": "单臂／双臂（不同配置）",
+      "robotModel": "",
+      "effectorModel": "两指触觉夹爪",
+      "forceBrief": "每个夹爪手指一路触觉图像，单臂两路、双臂四路，反映接触与形变。",
+      "forceDetail": "每夹爪手指一路触觉图像；多平台预训练语料与真机评测配置分别理解。",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§3 Tactile Collection Convention；Appendix A／D"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "单臂或双臂的连续操作动作；结合预测的接触变化调整动作生成。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2607.23782v1",
+        "locator": "§4 Policy Architecture；Appendix D Deployment Protocol"
+      }
+    },
+    "E05": {
+      "robotConfiguration": "双臂",
+      "robotModel": "Dexmate Vega-1",
+      "effectorModel": "双五指灵巧手（Sharpa Wave，各22自由度）",
+      "forceBrief": "十个指尖各自的六维力和接触形变图，反映指尖用力与接触变形。",
+      "forceDetail": "每指三维力与三维力矩，十指合计六十个力／力矩分量；另有逐指单通道深度形变图。",
+      "sensorOrigin": "指尖六维力／力矩与形变图",
+      "source": {
+        "url": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1；Appendix C／D"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "双臂末端的位置与朝向调整量，以及两只灵巧手各关节的目标角度。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.17055v1",
+        "locator": "§5.1 Robot Platform and Action Space"
+      }
+    },
+    "E06": {
+      "robotConfiguration": "轮式双臂机器人",
+      "robotModel": "",
+      "effectorModel": "双五指灵巧手",
+      "forceBrief": "双手表面接触压力的分布，以图像表示各位置按压的强弱。",
+      "forceDetail": "原文说明传感器只感知法向作用，不应写成三维力或六维力。每手十个主动关节、十六个总自由度。",
+      "sensorOrigin": "分布式法向接触读数",
+      "source": {
+        "url": "https://arxiv.org/html/2609.12549v1",
+        "locator": "Appendix A Robot System；C.2–C.3"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人",
+          "操作末端"
+        ]
+      },
+      "actionOutput": "左右手末端的位置和朝向，以及双手各手指关节的目标角度。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.12549v1",
+        "locator": "Appendix C Training Recipe／Action Representation"
+      }
+    },
+    "E07": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka Emika Panda",
+      "effectorModel": "平行两指夹爪",
+      "forceBrief": "单指接触压力分布，共120个测点，反映指面不同位置的接触强弱。",
+      "forceDetail": "单指阵列为15×8；不是腕部六维力。",
+      "sensorOrigin": "单指触觉阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§3 Tactile Encoder；§4 Experimental Platform"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "机械臂移动和夹爪开合，结合触觉接触情况调整后续动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2603.12665v1",
+        "locator": "§3 Overall Architecture；§4 Experimental Setup"
+      }
+    },
+    "E08": {
+      "robotConfiguration": "轮足机器人＋单臂",
+      "robotModel": "M20S＋CM1",
+      "effectorModel": "夹爪",
+      "forceBrief": "由关节运动和控制偏差估计接触作用，帮助机械臂与身体协同调整。",
+      "forceDetail": "没有额外安装末端六维力传感器；估计信息用于全身接触补偿。",
+      "sensorOrigin": "机器人内部接触估计",
+      "source": {
+        "url": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§4.1 Sensorless Interaction Estimation；§5.2"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "机械臂与夹爪动作，以及底盘移动和转向的补偿量，由全身控制器协调执行。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2609.03889v2",
+        "locator": "§4 Hierarchical Execution；Body Compensation"
+      }
+    },
+    "E09": {
+      "robotConfiguration": "双臂人形机器人",
+      "robotModel": "Digit",
+      "effectorModel": "手部接触末端",
+      "forceBrief": "各关节的力矩及其近期变化，反映全身接触时的用力。",
+      "forceDetail": "左右手目标接触力属于动作／控制指令，不能与模型的关节力矩输入混写。",
+      "sensorOrigin": "关节力矩",
+      "source": {
+        "url": "https://opt2vla.github.io/",
+        "locator": "项目页 VLA architecture；Evaluation；Hardware"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "左右手等末端的运动目标和接触力目标，再转成全身关节动作。",
+      "actionSource": {
+        "url": "https://opt2vla.github.io/",
+        "locator": "项目页 Motion–Force Interface；Whole-Body Controller"
+      }
+    },
+    "E10": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR7e",
+      "effectorModel": "超声探头",
+      "forceBrief": "探头接触处的六维力，反映按压与扭转（Robotiq FT300-S）；同时结合超声图像。",
+      "forceDetail": "HD60 是 HISENSE 超声系统型号，不作为探头型号填写。",
+      "sensorOrigin": "末端六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§4 Dataset；Fig.3"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "超声探头的连续运动指令，结合接触力和超声图像调整扫描位置。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2608.15009v1",
+        "locator": "§3.4 Action Sequence Generation"
+      }
+    },
+    "E11": {
+      "robotConfiguration": "单臂；另有仿真配置",
+      "robotModel": "",
+      "effectorModel": "两指触觉夹爪",
+      "forceBrief": "模拟指面接触图像，反映插销与孔接触时的形变（GelStereo 2.0）。",
+      "forceDetail": "图1展示两指夹爪抓持插销；Isaac Gym／Flex 模拟指面接触形变。",
+      "sensorOrigin": "仿真视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§III Tactile-Action Instruction Dataset；Fig.1"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人",
+          "操作末端"
+        ]
+      },
+      "actionOutput": "插销在两个水平方向的移动量和绕竖直轴的转动量，用于插入对准。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2503.08548v1",
+        "locator": "§III Tactile-Action Dataset，action labels；§IV"
+      }
+    },
+    "E12": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UFACTORY xArm7",
+      "effectorModel": "平行两指夹爪",
+      "forceBrief": "双指接触形变及其变化，帮助预测后续接触状态（Xense）。",
+      "forceDetail": "真机操作使用 Xense；GelSight Mini、Tac3D 另用于感知模块验证，不混作真机策略的全部输入。",
+      "sensorOrigin": "视触觉形变",
+      "source": {
+        "url": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§V-A.2 Hardware Setup；§IV"
+      },
+      "categoryNote": "普通两指夹爪＋触觉，归②，移出④。",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "一段机械臂和夹爪动作，再根据实时与预测接触变化快速修正。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2603.19201v1",
+        "locator": "§IV Adaptive Fusion Policy／Reflexive Controller；§V-A"
+      }
+    },
+    "X01": {
+      "robotConfiguration": "单臂；另有仿真配置",
+      "robotModel": "Piper",
+      "effectorModel": "平行夹爪（Pika）",
+      "forceBrief": "双指触觉图像及其近期变化，反映接触面的形变（GelSight Mini）。",
+      "forceDetail": "真机使用两枚 GelSight Mini；仿真评测使用独立的 UniVTAC 配置。",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Fig.3；Appendix Hardware／Fig.9"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂各关节的转动调整量和夹爪开度，执行前换成关节目标位置。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2610.02784v1",
+        "locator": "Appendix Real-World Execution Protocol／Table 7"
+      }
+    },
+    "P01": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka FR3",
+      "effectorModel": "夹爪（Robotiq）",
+      "forceBrief": "腕部六维力及其近期变化，用于识别接触阶段（Bota SensONE）。",
+      "forceDetail": "",
+      "sensorOrigin": "腕部六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2608.01402v1",
+        "locator": "§4 Experiments；Appendix B／Fig.A.2"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "末端移动和转动的调整量，由底层控制器执行并在接触时适当让步。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2608.01402v1",
+        "locator": "Appendix Robot Control Architecture"
+      }
+    },
+    "P02": {
+      "robotConfiguration": "双臂",
+      "robotModel": "YAM station",
+      "effectorModel": "双五指灵巧手（Sharpa Wave，各22关节）",
+      "forceBrief": "十个指尖各自的六维力，反映各指的受力和扭转。",
+      "forceDetail": "机器人评测使用 YAM 双臂台。Wuji 触觉手套用于人类示教采集，不能写成机器人操作末端。",
+      "sensorOrigin": "逐指六维力／力矩",
+      "source": {
+        "url": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§5 Real-world Robot Experiments"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "双臂末端的位置和朝向、手指关节角度，并预测后续接触受力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2610.19155v1",
+        "locator": "§3 Force–Action–Track Modeling；Appendix C Action Space"
+      }
+    },
+    "P03": {
+      "robotConfiguration": "双臂",
+      "robotModel": "两台 LeRobot SO-101",
+      "effectorModel": "夹爪；右臂为双指触觉夹爪",
+      "forceBrief": "右侧夹爪两指各100个接触力测点；学生策略执行时不输入触觉。",
+      "forceDetail": "原有双指16×16压力阵列描述不符：原文为每指10×10、共200个测点。教师配置与蒸馏后的学生配置分开理解。",
+      "sensorOrigin": "训练期指面接触力阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2603.15257v1",
+        "locator": "§IV-A Experimental Setup；Fig.4；§III Tactile Distillation"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂和夹爪的连续动作；蒸馏后的学生策略仅凭视觉与状态生成动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2603.15257v1",
+        "locator": "§III Tactile Distillation；§IV-A Experimental Setup"
+      }
+    },
+    "P04": {
+      "robotConfiguration": "双臂",
+      "robotModel": "Elephant Robotics Mercury B2",
+      "effectorModel": "夹爪",
+      "forceBrief": "左右腕各六维力，反映两侧接触时的受力和扭转。",
+      "forceDetail": "双腕三维力与三维力矩按左右侧分别表示。",
+      "sensorOrigin": "双腕六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2610.14854v1",
+        "locator": "§4.1 Robot platform；§3 Force representation"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "双臂和夹爪的连续操作动作，接近物体与接触物体时分别使用对应模块。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2610.14854v1",
+        "locator": "§3 Stage-Localized Force Specialization；§4"
+      }
+    },
+    "T01": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka Emika Panda",
+      "effectorModel": "两指夹爪（Robotiq 2F-140）",
+      "forceBrief": "触觉图像和标记点位移，反映按压、滑动等接触变化（GelSight Mini）。",
+      "forceDetail": "高层使用触觉信息辅助任务判断，低层根据标记点变化快速纠正动作。",
+      "sensorOrigin": "视触觉图像与标记点位移",
+      "source": {
+        "url": "https://arxiv.org/html/2507.17294v2",
+        "locator": "§3；§4.1 Hardware Setup；Appendix Controller Training"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "先生成机械臂与夹爪的运动计划，再根据触觉标记点变化修正动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2507.17294v2",
+        "locator": "§3 Interpolant Controller；Appendix Controller Training"
+      }
+    },
+    "T02": {
+      "robotConfiguration": "单臂及灵巧手配置",
+      "robotModel": "UR5",
+      "effectorModel": "两指夹爪／灵巧手",
+      "forceBrief": "指面各位置的接触力分布，转换成三通道图像供模型使用（Paxini Gen2）。",
+      "forceDetail": "传感器内部用磁感应测量并换算为力；模型输入不是原始磁场，也不是光学触觉照片。",
+      "sensorOrigin": "力分布阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2508.08706v3",
+        "locator": "§3 Semantic-Aligned Tactile Encoder；§4.1"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "夹爪配置控制末端位置、朝向和开合；灵巧手配置改为控制手指关节。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2508.08706v3",
+        "locator": "§3.2 Action Representations"
+      }
+    },
+    "T03": {
+      "robotConfiguration": "双臂机器人",
+      "robotModel": "AgiBot Genie1",
+      "effectorModel": "双指触觉夹爪",
+      "forceBrief": "触觉接触图像和标记点变化，反映指面按压与滑动（Xense）。",
+      "forceDetail": "图像、形变及派生信息按具体编码配置使用，不直接等同于腕部六维力。",
+      "sensorOrigin": "视触觉图像与派生接触信息",
+      "source": {
+        "url": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§4；Appendix Hardware"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "一段机械臂和夹爪动作，并在两次视觉更新之间根据新触觉快速调整。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2605.07308v1",
+        "locator": "§3 Asynchronous Fast–Slow Inference"
+      }
+    },
+    "T04": {
+      "robotConfiguration": "单臂（真机／仿真）",
+      "robotModel": "",
+      "effectorModel": "两指触觉夹爪",
+      "forceBrief": "触觉图像及连续变化，反映接触面的形变（GelSight／Xense／Neote，按配置使用）。",
+      "forceDetail": "图2的真机与仿真使用两指夹爪；不同触觉传感配置分别评测。",
+      "sensorOrigin": "仿真／真机视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3；Fig.2 Real–Sim Alignment；Appendix B"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人",
+          "操作末端"
+        ]
+      },
+      "actionOutput": "机械臂和夹爪的连续操作动作，触觉信息辅助原有动作生成。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2610.10384v1",
+        "locator": "§3 OpenVTLA Policy Architecture"
+      }
+    },
+    "T05": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR5",
+      "effectorModel": "两指夹爪（Inspire EG2-4C2）",
+      "forceBrief": "双指触觉图像和标记点变化，反映按压、滑动与接触状态（Vitai GF255）。",
+      "forceDetail": "",
+      "sensorOrigin": "双指视触觉图像与标记点",
+      "source": {
+        "url": "https://dt-tacvla.github.io/",
+        "locator": "项目页 Hardware platform；Tactile sensing"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "连续操作动作，快速动作模块根据最新触觉标记点变化及时调整。",
+      "actionSource": {
+        "url": "https://dt-tacvla.github.io/",
+        "locator": "项目页 Fast Reflex Pathway；Fast–Slow Coupling"
+      }
+    },
+    "T06": {
+      "robotConfiguration": "双臂平台；另有仿真配置",
+      "robotModel": "Dobot Xtrainer",
+      "effectorModel": "平行两指夹爪",
+      "forceBrief": "当前触觉图像及预测的后续触觉变化，用于调整接触动作（GelSight）。",
+      "forceDetail": "真机使用 Dobot Xtrainer 平台；仿真采用 IsaacSim／TacEx 触觉模型，不以仿真信号冒充真机测量。",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§4 Experimental Setup；Fig.7"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "末端位置、朝向和夹爪动作；先拟定计划，再根据预测的后续触觉修正。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2512.23864v1",
+        "locator": "§3 Two-Stage Policy；§4 Implementation"
+      }
+    },
+    "T16": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UFACTORY xArm7",
+      "effectorModel": "两指夹爪（xArm Gripper）",
+      "forceBrief": "十五维磁场读数，反映指面接触导致的皮肤形变（AnySkin）。",
+      "forceDetail": "磁场变化未直接标定为接触力，不写成十五维力或六维力。",
+      "sensorOrigin": "原始磁触觉读数",
+      "source": {
+        "url": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§4 Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "先确定目标附近的接近位置，再由局部视觉和触觉策略控制末端移动与夹爪。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2506.13762v1",
+        "locator": "§3 VLM-Guided Reaching；§4；Appendix Policy"
+      }
+    },
+    "T17": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka Emika",
+      "effectorModel": "软指夹爪／两指夹爪（插入任务使用 Robotiq 2F-85）",
+      "forceBrief": "触觉图像及预测的接触变化，帮助选择和修正后续动作（GelSight Mini）。",
+      "forceDetail": "不同任务的夹爪配置不同：擦拭使用自制软指，插入使用 Robotiq 2F-85。",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2606.14981",
+        "locator": "§4；Appendix A.1–A.3"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂移动、转动和夹爪开合；先筛选动作计划，再用触觉作短时修正。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.14981",
+        "locator": "§3 Policy Steering；Appendix A.1–A.3 Action Space"
+      }
+    },
+    "T18": {
+      "robotConfiguration": "双臂",
+      "robotModel": "两台 Realman 机械臂",
+      "effectorModel": "双五指灵巧手（Sharpa Wave，开发版17自由度）",
+      "forceBrief": "十个指尖各自的六维力及其近期变化，反映各指的受力和扭转。",
+      "forceDetail": "策略使用十指力／力矩历史及帧间变化，并非直接输入高分辨率触觉图像。",
+      "sensorOrigin": "指尖力／力矩",
+      "source": {
+        "url": "https://arxiv.org/html/2506.15953",
+        "locator": "§3 Hardware System；Appendix Tactile Encoder"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "双臂和手指的目标关节角度，结合预测的后续触觉生成连续动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2506.15953",
+        "locator": "§IV-C Neural Network Architecture；Action Prediction"
+      }
+    },
+    "C01": {
+      "robotConfiguration": "双臂",
+      "robotModel": "Flexiv Rizon 4",
+      "effectorModel": "一侧夹爪固定蔬菜；另一侧固定削皮器",
+      "forceBrief": "示教记录六维力；执行时预测目标用力，由机器人底层力反馈控制削皮。",
+      "forceDetail": "夹持臂按规则稳定蔬菜，削皮臂执行学习策略。模型目标力输出与底层实测力反馈分开，不把后者误写成模型在线输入。",
+      "sensorOrigin": "示教力与机器人底层力反馈",
+      "source": {
+        "url": "https://arxiv.org/html/2410.07554v2",
+        "locator": "§III-C HybridIL；§IV-B Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "未来末端位置、朝向和目标六维力，由混合控制器协调运动与用力。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2410.07554v2",
+        "locator": "§III-C HybridIL；Hybrid Force-Position Control"
+      }
+    },
+    "C02": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Flexiv Rizon",
+      "effectorModel": "自适应夹爪（Dahuan AG-95）",
+      "forceBrief": "末端六维力及其近期变化，反映接触时的推拉和扭转（OptoForce）。",
+      "forceDetail": "",
+      "sensorOrigin": "末端六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§IV-A Platform"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端移动、转动和夹爪动作，另预测是否即将接触，以调整接触前后的运动。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2411.15753v2",
+        "locator": "§III FoAR Framework；Appendix Future Contact Predictor"
+      }
+    },
+    "C03": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka FR3",
+      "effectorModel": "电动 UMI 夹爪（Actuated UMI）",
+      "forceBrief": "指面按压与滑动力的分布，以及总夹持力，由触觉图像换算（GelSight Mini）。",
+      "forceDetail": "主方法使用 FEATS 换算的力分布图与总法向力；原始触觉图像输入属于另设对照。",
+      "sensorOrigin": "视触觉图像换算力分布",
+      "source": {
+        "url": "https://arxiv.org/html/2510.13324v1",
+        "locator": "§III-C–D；§IV-A"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端位置、朝向、夹爪宽度和目标夹持力，兼顾抓稳与避免夹坏。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2510.13324v1",
+        "locator": "§III-C Action Space；§III-D Dual-Mode Control"
+      }
+    },
+    "C04": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UFACTORY xArm7",
+      "effectorModel": "两指夹爪（xArm 标准夹爪）",
+      "forceBrief": "单指十五维磁场读数，反映接触引起的软皮肤形变（AnySkin）。",
+      "forceDetail": "一指装 AnySkin，另一指装同形状硅胶指套；DIGIT 属于对照配置。",
+      "sensorOrigin": "原始磁触觉读数",
+      "source": {
+        "url": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A Experimental Setup"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端移动和转动的调整量，以及夹爪开合状态。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2410.17246v2",
+        "locator": "§IV-A Experimental Setup／Action Space"
+      }
+    },
+    "C06": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka（7自由度）",
+      "effectorModel": "四指灵巧手（Allegro）",
+      "forceBrief": "手部多个位置的磁触觉读数，反映接触与皮肤形变（Xela uSkin）。",
+      "forceDetail": "力估计属于离线感知任务；机器人插入策略使用视觉与触觉表示，不把离线力标签当成在线末端力。",
+      "sensorOrigin": "分布式磁触觉读数",
+      "source": {
+        "url": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§3 Sensors；§4 Plug Insertion"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "一段末端目标位置和朝向，引导灵巧手将预先抓住的插头插入插座。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2505.11420v1",
+        "locator": "§4 Plug Insertion；Appendix Downstream Policy"
+      }
+    },
+    "C07": {
+      "robotConfiguration": "机械臂操作／手内操作",
+      "robotModel": "",
+      "effectorModel": "四指灵巧手（Allegro）",
+      "forceBrief": "指尖接触图像、声音、加速度和压力，联合反映形变、振动与接触变化（Digit 360）。",
+      "forceDetail": "插入与手内旋转采用不同下游策略；不将多模态信息合并称为腕部六维力。",
+      "sensorOrigin": "多模态指尖触觉",
+      "source": {
+        "url": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§3 Inputs；§4；Appendix Robot Deployment"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人"
+        ]
+      },
+      "actionOutput": "插入任务控制末端位置和朝向；手内旋转任务控制手指关节。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2506.14754v1",
+        "locator": "§4 Manipulation；Appendix Deployment／Fig.14"
+      }
+    },
+    "C15": {
+      "robotConfiguration": "单臂／双臂（不同任务）",
+      "robotModel": "Franka／KUKA",
+      "effectorModel": "两指夹爪",
+      "forceBrief": "关节外部力矩反映机械臂用力；夹爪电流还用于示教时的夹持反馈。",
+      "forceDetail": "遥操作主臂不是额外参与任务的机械臂。夹爪电流作为遥操作反馈，不直接等同于模型实测力输入。",
+      "sensorOrigin": "关节力矩；遥操作夹爪电流",
+      "source": {
+        "url": "https://arxiv.org/html/2502.17432v2",
+        "locator": "§III-A Force Feedback；§V；Appendix X"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "机械臂关节的目标角度；双臂搬箱控制两臂，抓放任务另包含夹爪目标。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2502.17432v2",
+        "locator": "Appendix X Behavior Cloning Policy／Action Space"
+      }
+    },
+    "R01": {
+      "robotConfiguration": "单臂／双臂（不同任务）",
+      "robotModel": "Flexiv Rizon 4",
+      "effectorModel": "夹爪（Flexiv Grav）",
+      "forceBrief": "触觉版本使用指面图像／形变；力版本使用机器人估计的末端六维力。",
+      "forceDetail": "触觉配置包含 GelSight Mini、MCTac；力版本使用 Flexiv RDK 的末端估计。不同版本分别归①、②，不代表全部信号同时输入。",
+      "sensorOrigin": "视触觉或机器人内部力估计",
+      "source": {
+        "url": "https://arxiv.org/html/2503.02881v1",
+        "locator": "§V-A.1 Hardware；§V Cross-sensor"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "末端运动和夹爪动作，由慢策略规划，再由快速模块结合触觉或力反馈调整。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2503.02881v1",
+        "locator": "§IV Slow–Fast Policy；§V；Appendix Inference"
+      }
+    },
+    "R02": {
+      "robotConfiguration": "双臂（低成本平台）",
+      "robotModel": "",
+      "effectorModel": "自制软双指夹爪",
+      "forceBrief": "四个手指各有16×16个接触压力测点，反映指面不同位置的接触强弱。",
+      "forceDetail": "四指共1024个测点；不是腕部六维力。",
+      "sensorOrigin": "柔性接触压力阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§3.1–3.2；Appendix A.1"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "左右机械臂和夹爪的连续动作，使两侧配合完成抓持和物体操作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2410.24091v1",
+        "locator": "§4 Visuo-Tactile Policy；Fig.3"
+      }
+    },
+    "N01": {
+      "robotConfiguration": "双臂人形机器人",
+      "robotModel": "AgiBot G1",
+      "effectorModel": "两组两指夹爪",
+      "forceBrief": "右腕六维力及其近期变化，反映操作侧接触时的受力和扭转。",
+      "forceDetail": "两腕均安装传感器，但模型只使用右腕六维力，不属于模型同时输入双腕十二维力。",
+      "sensorOrigin": "右腕六维力传感器",
+      "source": {
+        "url": "https://arxiv.org/html/2607.18231",
+        "locator": "§4；Appendix B／D"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "操作末端"
+        ]
+      },
+      "actionOutput": "双臂和夹爪的运动调整量；力历史用于辅助生成动作，不作为目标力命令。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2607.18231",
+        "locator": "§3 Policy；Appendix Training Details"
+      }
+    },
+    "N02": {
+      "robotConfiguration": "单臂",
+      "robotModel": "Franka Emika Panda",
+      "effectorModel": "平行两指夹爪（Franka Hand）",
+      "forceBrief": "指面触觉图像，反映接触形变和局部接触状态（DIGIT）。",
+      "forceDetail": "评测另记录接触力用于分析，不作为模型的腕部六维力输入。",
+      "sensorOrigin": "视触觉图像",
+      "source": {
+        "url": "https://arxiv.org/html/2603.14604",
+        "locator": "§4.1 Robot Setup；Fig.4"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂末端移动、转动和夹爪动作，触觉信息用于辅助动作选择。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2603.14604",
+        "locator": "§3 TacFiLM；§4 Real-World Control Setup"
+      }
+    },
+    "N03": {
+      "robotConfiguration": "单臂",
+      "robotModel": "RealMan RM75B",
+      "effectorModel": "自制平行两指夹爪",
+      "forceBrief": "双指接触形变图，反映按压深度和两个方向的表面滑动（DM-Tac W）。",
+      "forceDetail": "ALOHA 式主从采集不等于双臂协作；主臂和从臂均为 RM75B。",
+      "sensorOrigin": "三通道视触觉形变",
+      "source": {
+        "url": "https://arxiv.org/html/2606.31723",
+        "locator": "§4.1；Appendix A.1"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂和夹爪的连续动作，并根据实时与预测触觉修正执行中的动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2606.31723",
+        "locator": "§3 Action-Tactile Mixed Controller"
+      }
+    },
+    "N04": {
+      "robotConfiguration": "人形机器人",
+      "robotModel": "",
+      "effectorModel": "灵巧手（Wuji）",
+      "forceBrief": "手部接触压力图及其近期变化，用于预测接触目标和快速纠正动作（JQ-Industries 触觉手套）。",
+      "forceDetail": "Wuji Glove 用于人类示教，JQ-Industries 手套安装在机器人手部，两者不能混为同一传感器。",
+      "sensorOrigin": "手部触觉压力图",
+      "source": {
+        "url": "https://arxiv.org/html/2607.07287",
+        "locator": "§4.1 Hardware Setup；§3"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": [
+          "机器人"
+        ]
+      },
+      "actionOutput": "双臂、手指和头部动作；触觉模块在执行时修正机械臂与手指动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2607.07287",
+        "locator": "§3 Hierarchical Policy；Appendix Action Representation"
+      }
+    },
+    "N05": {
+      "robotConfiguration": "单臂",
+      "robotModel": "UR7e",
+      "effectorModel": "五指灵巧手（XHand）",
+      "forceBrief": "五指接触力分布，每指120个测点，反映不同位置的受力大小和方向。",
+      "forceDetail": "每个测点记录三个方向的力；不是每个指尖整体六维力，也不是腕部六维力。",
+      "sensorOrigin": "三维接触力阵列",
+      "source": {
+        "url": "https://arxiv.org/html/2608.01824",
+        "locator": "§4.1；Appendix A.1"
+      },
+      "categoryNote": "",
+      "verification": {
+        "checked": "2026-10-23",
+        "basis": "官方论文／项目页",
+        "unresolved": []
+      },
+      "actionOutput": "机械臂和五指的目标关节角度，执行途中根据触觉更新剩余动作。",
+      "actionSource": {
+        "url": "https://arxiv.org/html/2608.01824",
+        "locator": "§4.1；Appendix A.1 Action Representation"
+      }
+    }
+  }
+}
