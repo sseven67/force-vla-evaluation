@@ -14,10 +14,13 @@ export function parseHash(hash = window.location.hash) {
     const raw = hash.replace(/^#/, "");
     if (raw.startsWith("work="))
       return { view: "works", paper: decodeURIComponent(raw.slice(5)) };
-    const [view, encodedItem] = raw.split("/");
+    const [path, query] = raw.split("?");
+    const [view, encodedItem] = path.split("/");
     const item = encodedItem ? decodeURIComponent(encodedItem) : undefined;
     if (view === "paper") return { view: "works", paper: item };
-    return { view: Object.hasOwn(names, view) ? view : "works", item };
+    const sectionValue = new URLSearchParams(query).get("section");
+    const section = view === "benchmarks" && item && /^[0-7]$/.test(sectionValue || "") ? Number(sectionValue) : undefined;
+    return { view: Object.hasOwn(names, view) ? view : "works", item, ...(section === undefined ? {} : { section }) };
   } catch {
     return { view: "works" };
   }

@@ -6,6 +6,10 @@ import BenchmarkReading from "../components/BenchmarkReading.jsx";
 import ResourceMetrics from "../components/ResourceMetrics.jsx";
 import BenchmarkNavigation from "../components/BenchmarkNavigation.jsx";
 import ResourceUsage from "../components/ResourceUsage.jsx";
+import ForceBenchDetail from "../components/ForceBenchDetail.jsx";
+import SimulationBenchmarkDetail from "../components/SimulationBenchmarkDetail.jsx";
+import BenchmarkOverview from "../components/BenchmarkOverview.jsx";
+import { mainstreamBenchmarkIds } from "../data/benchmarkOverview.js";
 
 const ENVIRONMENTS = {
   "offline": "离线", "sim": "仿真", "real": "真机",
@@ -14,20 +18,24 @@ const ENVIRONMENTS = {
 const RESOURCE_TYPES = [
   ["benchmark", "评测基准"], ["platform", "仿真平台"],
 ];
-
-function Benchmarks({ item, ...p }) {
+function Benchmarks({ item, section, ...p }) {
   const { D, bmById, getBenchmarkUsers } = useCatalogue();
   const [query, setQuery] = useState("");
   const [environment, setEnvironment] = useState(ENVIRONMENTS[item] || "");
   const [resourceType, setResourceType] = useState("");
+  const [mainstreamOnly, setMainstreamOnly] = useState(false);
   const [sort, setSort] = useState("scholar");
   useEffect(() => setEnvironment(ENVIRONMENTS[item] || ""), [item]);
   const b = bmById.get(item);
+  if (item === "mainstream-overview") return <BenchmarkOverview {...p} />;
+  if (b?.id === "forcebench") return <ForceBenchDetail b={b} section={section} {...p} />;
+  if (b?.reading?.simulationDetail) return <SimulationBenchmarkDetail b={b} section={section} {...p} />;
   if (b) return <BenchmarkDetail b={b} {...p} />;
   const benchmarks = D.benchmarks;
   const adopters = (id) => getBenchmarkUsers(id).filter(({ r }) => r.type === "adopts");
   const usageCount = (b) => benchmarkAdoptionCount(b, getBenchmarkUsers(b.id));
   const visible = benchmarks.filter((b) =>
+    (!mainstreamOnly || mainstreamBenchmarkIds.has(b.id)) &&
     (!resourceType || b.resourceType === resourceType) &&
     (!environment || b.domain.includes(environment)) &&
     (!query || [b.name, b.focus, b.detail, b.introducedBy.title, b.typeLabel, ...(b.tasks || []),
@@ -52,8 +60,11 @@ function Benchmarks({ item, ...p }) {
           <Filter label="资源类型" value={resourceType} onChange={setResourceType} options={RESOURCE_TYPES} />
           <Filter label="评测方式" value={environment} onChange={setEnvironment}
             options={["真机", "仿真", "离线"].map((x) => [x, x])} />
-          <button className="reset" onClick={() => { setQuery(""); setEnvironment(""); setResourceType(""); setSort("scholar"); }}>重置</button>
+          <button className="reset" onClick={() => { setQuery(""); setEnvironment(""); setResourceType(""); setMainstreamOnly(false); setSort("scholar"); }}>重置</button>
         </div>
+        <div className="resource-mainstream-options"><label className="resource-mainstream-control"><input type="checkbox" checked={mainstreamOnly}
+          onChange={e => setMainstreamOnly(e.target.checked)} />主流 benchmark（15 项）</label>
+        <a className="resource-overview-link" href="#benchmarks/mainstream-overview">查看 15 项对比总览 ↗</a></div>
       </section>
       <div className="results-head resource-results-head"><div><strong>找到 {visible.length} 项{RESOURCE_TYPES.find(([id]) => id === resourceType)?.[1] || "资源"}</strong><p className="resource-count-note">已收录的采用工作数，含衍生评测，不含提出者。</p></div>
         <label className="resource-sort">排序<select aria-label="评测资源排序" value={sort} onChange={e => setSort(e.target.value)}>

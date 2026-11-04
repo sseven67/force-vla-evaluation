@@ -1,0 +1,615 @@
+{
+  "checked": "2026-11-04",
+  "fields": [
+    "研究目标",
+    "本体及力觉／触觉表示形式",
+    "复用内容",
+    "改动方式",
+    "评测指标",
+    "其他仿真评测"
+  ],
+  "records": {
+    "libero": [
+      {
+        "workId": "W11",
+        "relationLabel": "采用并改造",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "在完成语言条件抓放的同时，检验策略能否按轻柔／用力指令调节交互力。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "当前改造环境为 Isaac Lab 中的 Franka 单臂＋两指触觉夹爪；记录触觉 RGB、标记点位移场及左右指尖各三维接触力，由仿真生成。六个指尖力数值不是腕部三轴力＋三轴力矩。"
+          },
+          {
+            "label": "复用内容",
+            "text": "复用 LIBERO 场景、操作轨迹和原任务完成条件；策略比较选用 Object 衍生的 9 项物体入篮任务，原始轨迹每任务 50 条。"
+          },
+          {
+            "label": "改动方式",
+            "text": "将 MuJoCo 场景和轨迹迁到 Isaac Lab，补录同步触觉与力信号，并按 100%／25%／10% 三档控制设置增加力度指令。"
+          },
+          {
+            "label": "评测指标",
+            "text": "自主操作成功率；平均夹持力 AG、平均对外作用力 AA，以及最高 5% 力读数均值 MG／MA。跨平台重放保留率单独统计，不当作策略成功率。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "Tabero 是本项改造后的仿真评测环境：Franka 单臂＋触觉夹爪，使用触觉图像／位移场／双指三维力，策略主比较为 9 项入篮任务；不能当作另一组未改造 LIBERO 分数。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2605.27886v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.27886v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      },
+      {
+        "studyId": "visible-touch",
+        "relationLabel": "采用并改造",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "检验把接触信息画进相机图像，能否帮助视觉或 VLA 策略完成接触操作。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "LIBERO 中的 Franka Panda 单臂＋平行夹爪；从 MuJoCo 接触数组提取夹指接触力并投影成图像箭头。数值 Proprio 对照为双指聚合的 12 维接触 wrench，不是单个腕部六维 F/T 传感器。"
+          },
+          {
+            "label": "复用内容",
+            "text": "保留 LIBERO 空间、物体、目标与长流程套件的任务及成功条件；miniVLA 还使用 LIBERO-90 做预训练。"
+          },
+          {
+            "label": "改动方式",
+            "text": "在原 RGB 上叠加接触位置、方向和强度，比较原始图像、数值力拼接及不同箭头绘制；不改变任务目标。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务及套件平均成功率；BC-Transformer 用 3 个训练种子、每任务 20 次测试；miniVLA 结果按其独立训练配置报告。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "无其他仿真基准；BC-Transformer 和 miniVLA 都在 LIBERO 上对照。π₀.₅ 的四项磁触觉真机验证另行统计，不计作仿真评测。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2609.14156v1#S4.SS1",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.14156v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      },
+      {
+        "studyId": "fasa",
+        "relationLabel": "推理模块改造〔本基准无力分支〕",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "通过视觉、力觉和本体反馈动态调整扩散采样步数，降低 VLA 动作生成开销。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "LIBERO 的 Franka Panda 单臂＋平行夹爪，基线为 Evo-1；此处采用明确的 force-free 分支，不读取夹爪力或腕部 F/T。"
+          },
+          {
+            "label": "复用内容",
+            "text": "使用 LIBERO 四套件共 40 项任务，沿用 Evo-1 的训练配置、原任务成功条件和测试设置。"
+          },
+          {
+            "label": "改动方式",
+            "text": "在推理时增加动态去噪步数调度，不重新训练或修改模型权重；LIBERO 上关闭力反馈分支。"
+          },
+          {
+            "label": "评测指标",
+            "text": "总体成功率 93.0%→93.5%；动作生成延迟对应加速 1.23 倍，平均去噪步数 32→19.79。Spatial 从 91% 降到 87%，并非各套件都提升。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": [
+              "RLBench：Franka Panda 单臂＋平行夹爪，3D Diffuser Actor 使用多视角视觉、本体状态及仿真夹爪力反馈，覆盖 18 项语言条件桌面任务。",
+              "ManiSkill3：按 DP／RDT 的机械臂及夹爪配置使用仿真力与本体反馈；RDT 选择 PickCube、PushCube、StackCube 三项，DP 另按原配置评测，论文未统一列机械臂型号。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2609.19475v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      }
+    ],
+    "robotwin": [
+      {
+        "studyId": "me-dex",
+        "relationLabel": "采用并改造",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "统一异构触觉表示，并联合预测触觉、视觉和动作，改善接触操作。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "当前实验沿用 RoboTwin 双臂机械臂＋平行夹爪；从仿真力传感器补录触觉，每个接触表面为 3×H×W 的局部力场〔法向 1＋切向 2〕，经表示模块转为触觉 token；论文未另列机械臂型号。"
+          },
+          {
+            "label": "复用内容",
+            "text": "复用 50 项操作任务、演示轨迹和原成功条件；主训练用 27,500 条 Clean＋Random 轨迹，另用 2,500 条 Clean 轨迹测试 Random 条件。"
+          },
+          {
+            "label": "改动方式",
+            "text": "轨迹重放时同步补录触觉力；增加当前触觉条件及未来触觉预测，并把相同触觉表示接到 π₀.₅ 与 Fast-WAM 上做对照。"
+          },
+          {
+            "label": "评测指标",
+            "text": "各任务成功率及 50 任务平均成功率，Clean／Random 分开。触觉表征另报 contact F1、归一化力 MAE 和 transition F1；这些离线指标不代替操作成功率。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": [
+              "DexJoCo：单臂／双臂 Franka Panda＋Allegro Hand，包含 6 项单臂、5 项双臂任务；重放 1,100 条演示补录仿真接触力场，每个网格含法向及两个切向分量。",
+              "ManiFeel：Franka 单臂＋两指夹爪，复用已有三分量局部触觉力场；销孔、USB、电源插头和齿轮装配 4 项任务，每项 50 条示教并单独训练。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2609.21449v1#S3.SS3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.21449v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.16257v1#S3.SS1",
+            "label": "DexJoCo 原始本体与接口"
+          }
+        ]
+      }
+    ],
+    "forcebench": [
+      {
+        "workId": "W01",
+        "relationLabel": "外部参考方法重评测",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "利用末端六维力反馈改善 VLA 的接触操作与物理变化适应。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": [
+              "本页为 ForceBench 作者的重评测：仿真使用 Franka 单臂＋平行夹爪，读取腕—手关节反作用 wrench〔三轴力＋三轴力矩〕。",
+              "真机重评测使用 Franka Research 3 单臂＋Robotiq＋KWR75B 六维 F/T。ForceVLA 原论文的 Flexiv Rizon 单臂＋Dahuan 配置不套用到这里。"
+            ]
+          },
+          {
+            "label": "复用内容",
+            "text": "使用 ForceBench 8 项仿真任务及相同专家演示、测试种子和成功条件；每任务 200 条演示、每方法 200 次测试。另在 5 项真机任务中每项每方法测试 20 次。"
+          },
+          {
+            "label": "改动方式",
+            "text": "由 ForceBench 作者将 ForceVLA 适配至统一观测、动作和训练协议后重新训练；属于外部参考方法，不是 ForceVLA 原论文采用该后发基准。"
+          },
+          {
+            "label": "评测指标",
+            "text": "8 项仿真任务等权平均成功率 21.94%；5 项真机均值 33.0%。本基准不以独立力跟踪误差作为该方法排名。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "ForceVLA 原论文未使用其他命名仿真基准；其自建接触操作与物理变化实验为真机评测，不并入本页仿真成绩。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.19604v1#S5",
+            "label": "ForceBench · 适配后仿真与真机结果"
+          },
+          {
+            "url": "https://arxiv.org/html/2505.22159v1",
+            "label": "ForceVLA 原论文 · 研究目标与原始硬件"
+          }
+        ]
+      },
+      {
+        "workId": "W17",
+        "relationLabel": "外部参考方法重评测",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "利用接触力及其时序变化，引导定位后的精细动作执行与物体适应。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "当前 ForceBench 仿真重评测使用 Franka 单臂＋平行夹爪与腕部关节反作用 wrench〔力 3＋力矩 3〕；原论文 xArm6 单臂＋六维力传感器的真机硬件不视为当前仿真本体。"
+          },
+          {
+            "label": "复用内容",
+            "text": "使用全部 8 项 ForceBench 仿真任务及原成功条件，每任务 200 条成功演示，统一测试种子 300–499、每任务每方法 200 次。"
+          },
+          {
+            "label": "改动方式",
+            "text": "由 ForceBench 作者适配后重新评测；ForceFlow 预测 64 步、执行前 32 步，而多数参考方法预测并执行 50 步，保留该执行时域差异。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务成功率及 8 任务等权均值 6.88%；未纳入本论文 5 项真机对照，不能为其补写真机基准成绩。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "ForceFlow 原论文未采用其他命名仿真基准；其自建接触任务和新物体实验属于真机或离线分析，不计为本页其他仿真评测。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.19604v1#S5",
+            "label": "ForceBench · 外部方法结果及执行协议"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.11048v1",
+            "label": "ForceFlow 原论文 · 研究目标与硬件"
+          }
+        ]
+      }
+    ],
+    "univtac": [
+      {
+        "workId": "E03",
+        "relationLabel": "直接采用（6 项任务）",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "学习能跨触觉传感器与机器人配置迁移的通用接触操作策略。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "UniVTAC 仿真中的 Franka 单臂＋带 GelSight-Mini 的两指夹爪，使用仿真生成的触觉 RGB 图像；原论文的多种真机与预训练传感器不能全部视为本实验输入。"
+          },
+          {
+            "label": "复用内容",
+            "text": "采用提瓶、拔钥匙、提罐、瓶子入架、斜孔插管、小间隙插管 6 项；每项用 50 条官方演示，保留任务和成功条件，测试 100 次。"
+          },
+          {
+            "label": "改动方式",
+            "text": "基准不改：选用 8 项原任务中的 6 项，沿用官方演示、任务场景和成功条件。改动在策略的触觉处理与逐任务微调。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务成功率、6 任务均值〔66.66%〕，以及排除提瓶／提罐后的 4 任务均值〔59.5%〕；两种均值不混用。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "无其他仿真基准；原论文的其他操作实验为 Sharpa North、Sharpa＆Dexmate、FlexivXense 等真机设置，不与 UniVTAC 分数合并。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2606.13102v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.13102v1#A5.SS2",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      },
+      {
+        "workId": "E04",
+        "relationLabel": "直接采用（8 项任务）",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "把当前触觉及未来触觉信息接入 VLA，提高精细接触和双臂操作能力。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "UniVTAC 的单臂两指触觉夹爪配置；每指一路仿真触觉图像，作为独立图像通道处理，区别于数值腕部六维 F/T。"
+          },
+          {
+            "label": "复用内容",
+            "text": "采用全部 8 项 UniVTAC 原任务与原成功条件，并在对齐后的同任务配置下与外部基线比较。"
+          },
+          {
+            "label": "改动方式",
+            "text": "基准不改：采用全部 8 项原任务，在相同任务配置下比较策略。触觉图像及未来触觉 token 的接入属于模型改动。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务成功率及 8 任务等权均值，报告 83.1%；不与仅评测 6 项任务的 FTP-1／SimpleTouch 均值直接互换。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "NeoSim：基于 UniVTAC 仿真框架的两指触觉夹爪，4 项单臂＋8 项双臂任务；每指一路触觉图像〔单臂 2 路／双臂 4 路〕，每任务 100 条示教，12 任务均值 50.8%。论文未逐项另列机械臂型号。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2607.23782v1#S5.SS3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23782v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      },
+      {
+        "workId": "X01",
+        "relationLabel": "直接采用（6 项任务）",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "检验仅用下游任务数据微调 VLA，能否获得有效触觉操作能力而无需额外触觉策略预训练。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "UniVTAC 仿真中的 Franka 单臂＋两指触觉夹爪，读取 GelSight-Mini 风格的触觉图像和近期形变变化；真机 Piper 单臂＋Pika 夹爪配置另行评测。"
+          },
+          {
+            "label": "复用内容",
+            "text": "复用提瓶、拔钥匙、提罐、瓶子入架、斜孔插管、小间隙插管 6 项及官方任务条件，每项 50 条示教、100 次测试。"
+          },
+          {
+            "label": "改动方式",
+            "text": "基准不改：沿用官方环境、任务随机化、演示和成功条件，选择其中 6 项。改动在策略的触觉处理、未来触觉预测及动作执行时域。"
+          },
+          {
+            "label": "评测指标",
+            "text": "各任务成功率及 6 任务均值；另比较动作片段长度对反馈频率和完成率的影响，不将预测误差作为任务成绩。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "无其他仿真基准；4 项 Piper＋Pika＋双 GelSight-Mini 的真实机器人任务属于真机验证，不并入 UniVTAC 均值。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.02784v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.02784v1",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      }
+    ],
+    "suite-t04": [
+      {
+        "studyId": "openvitac-ftp1-adapted",
+        "relationLabel": "后续适配基线",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "检验通用触觉预训练策略在统一视触觉任务中的操作表现。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "采用 OpenViTac 对应的单臂机器人与触觉夹爪〔官方仿真实现为 Franka Panda 单臂〕，平台支持 Franka Hand／Robotiq，以及 GelSight／Xense／NeoteAI；策略使用光学触觉图像，具体任务配置按基准对应设置，不代表每项都遍历全部传感器。"
+          },
+          {
+            "label": "复用内容",
+            "text": "由 OpenViTac 作者适配到 11 类仿真任务与 8 类对应真机任务；沿用各任务成功条件。训练通常每任务 100 条示教，Block v2 为 300 条。"
+          },
+          {
+            "label": "改动方式",
+            "text": "保留 FTP-1 预训练与触觉接口，通过状态和动作适配器接入任务并分别微调；这是后续适配，不表示 FTP-1 原论文采用后来发布的 OpenViTac。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务成功率；仿真 11 任务等权均值 61.2%，真机 8 任务等权均值 51.9%，两域分开。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "FTP-1 原论文还使用 UniVTAC：Franka 单臂＋GelSight-Mini 触觉夹爪，6 项提瓶／拔钥匙／提罐／瓶子入架／斜孔与小间隙插管任务，每项 50 条示教、100 次测试；不混为 OpenViTac 协议。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.10384v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.13102v1#A5.SS2",
+            "label": "FTP-1 原论文 · UniVTAC 实验"
+          },
+          {
+            "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/robot/robot_cfg.py",
+            "label": "官方实现 · Franka 单臂配置"
+          }
+        ]
+      },
+      {
+        "studyId": "openvtla-companion",
+        "relationLabel": "配套触觉增强策略",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "在统一任务上检验给预训练 VLA 增加触觉后，能否改善物理性质判断、易碎操作和精密接触。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "沿用 OpenViTac 对应的单臂机器人和触觉夹爪〔官方仿真实现为 Franka Panda 单臂〕，支持 Franka Hand／Robotiq 及三类光学触觉配置；输入触觉图像及历史表示，不是数值腕部六维 F/T。"
+          },
+          {
+            "label": "复用内容",
+            "text": "使用全部 11 类仿真任务及 8 类共有真机任务，保留任务和成功条件；每任务取 100 条训练演示，Block v2 为 300 条。"
+          },
+          {
+            "label": "改动方式",
+            "text": "在 π₀.₅ 上加入触觉表示与输入接口，按各任务分别训练，并研究追加仿真演示进行真机联合训练。"
+          },
+          {
+            "label": "评测指标",
+            "text": "逐任务成功率及任务等权均值：仿真 68.7%、真机 54.6%；USB 插入与齿轮装配另报标准光／扰动光成功率。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "无其他仿真基准；仿真数据规模与场景多样性实验仍在 OpenViTac 上，真机实验单独计分。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.10384v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/robot/robot_cfg.py",
+            "label": "官方实现 · Franka 单臂配置"
+          }
+        ]
+      }
+    ],
+    "suite-c11": [
+      {
+        "studyId": "me-dex",
+        "relationLabel": "采用并改造",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "统一异构触觉表示，并联合预测触觉、视觉和动作，改善接触操作。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "Franka 单臂＋两指夹爪；使用 ManiFeel 已有三维触觉力场〔局部法向力和两个切向力分量〕，由仿真接触传感得到，不是腕部六维 wrench。"
+          },
+          {
+            "label": "复用内容",
+            "text": "复用销孔插入、USB 插入、电源插头插入和齿轮装配 4 项任务及原成功条件，每项 50 条示教单独训练。"
+          },
+          {
+            "label": "改动方式",
+            "text": "保留任务与触觉数据，接入共享触觉表示及视频—触觉—动作联合预测策略；与 ManiFeel 原 DP 策略对照。"
+          },
+          {
+            "label": "评测指标",
+            "text": "4 项任务逐项成功率及均值；平均 70.0%，原基线 55.0%。触觉编码器重建结果在独立离线评测中报告，不是力控制误差。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": [
+              "RoboTwin：继承双臂机械臂＋平行夹爪场景，补录仿真接触力场〔法向 1＋切向 2〕；50 项任务，27,500 条 Clean＋Random 轨迹联合训练，另用 2,500 条 Clean 测泛化。论文未另列该实验的机械臂型号。",
+              "DexJoCo：单臂／双臂 Franka Panda＋Allegro Hand，包含 6 项单臂、5 项双臂任务；重放 1,100 条演示补录仿真接触力场，每个网格含法向及两个切向分量。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2609.21449v1#S4.SS2.SSS3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.21449v1#S4.SS1",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.16257v1#S3.SS1",
+            "label": "DexJoCo 原始本体与接口"
+          }
+        ]
+      }
+    ],
+    "tabero": [
+      {
+        "studyId": "tabero-vtla-companion",
+        "relationLabel": "配套力位控制策略",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "在完成抓放的同时学习语言条件的力度调节，并区分任务成功与轻柔程度。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "Isaac Lab 中的 Franka 单臂＋两指触觉夹爪；读取触觉图像、标记点位移场或双指三维力，均由仿真产生；左右各三维力不是腕部力／力矩六维传感器。"
+          },
+          {
+            "label": "复用内容",
+            "text": "使用 Object 衍生的 9 项物体入篮任务、原成功条件及 A／B／C 力度数据；保留同一放置目标，对比轻柔与用力语言。"
+          },
+          {
+            "label": "改动方式",
+            "text": "为 π₀ 系列策略增加触觉输入、目标力输出及固定的力位混合控制器；各输入与监督变体属于同一模型配置。"
+          },
+          {
+            "label": "评测指标",
+            "text": "任务成功率与 AG／AA／MG／MA；另外测试 lightly、forcefully 两个未见副词下的成功率与平均接触力。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": "原 MuJoCo LIBERO 用于跨平台轨迹重放对照：Franka 单臂＋平行夹爪，不原生提供本工作触觉；重放保留率不作为另一组自主 VLA 策略成绩。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2605.27886v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.27886v1#S4",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      }
+    ],
+    "rlbench": [
+      {
+        "studyId": "fasa",
+        "relationLabel": "推理模块改造",
+        "fields": [
+          {
+            "label": "研究目标",
+            "text": "通过视觉、力觉和本体反馈动态调整扩散采样步数，降低 VLA 动作生成开销。"
+          },
+          {
+            "label": "本体及力觉／触觉表示形式",
+            "text": "RLBench 的 Franka Panda 单臂＋平行夹爪，基线为语言条件 3D Diffuser Actor；在多视角视觉、本体状态之外使用仿真夹爪力反馈调度采样，不将其标作腕部六维 F/T。"
+          },
+          {
+            "label": "复用内容",
+            "text": "使用 18 项语言条件桌面任务，沿用 3D Diffuser Actor 的训练设置、场景与官方任务成功条件。"
+          },
+          {
+            "label": "改动方式",
+            "text": "不改模型权重，在推理阶段增加视觉／夹爪力驱动的采样范围调节和本体状态驱动的步数选择。"
+          },
+          {
+            "label": "评测指标",
+            "text": "18 任务平均成功率 75.96%→77.48%；动作生成加速 1.40 倍。该速度不是机器人控制频率或整项任务执行耗时。"
+          },
+          {
+            "label": "其他仿真评测",
+            "text": [
+              "LIBERO：Franka Panda 单臂＋平行夹爪，Evo-1 评测四套件 40 项任务；使用无力输入版本，总体成功率 93.0%→93.5%。",
+              "ManiSkill3：按 DP／RDT 的机械臂及夹爪配置使用仿真力与本体反馈；RDT 评测 PickCube、PushCube、StackCube 三项，DP 另按原设置；论文未统一列机械臂型号。"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2609.19475v1#S3",
+            "label": "使用方式与实验设置 · 原始论文"
+          }
+        ]
+      }
+    ],
+    "calvin": [],
+    "robocasa365": [],
+    "colosseum": [],
+    "robotwin-phys": [],
+    "libero-plus": [],
+    "libero-rig": [],
+    "dexmimicgen": []
+  }
+}

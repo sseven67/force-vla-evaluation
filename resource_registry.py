@@ -99,4 +99,5 @@ def apply_resource_registry(data):
     for benchmark in data['benchmarks']:
         if 'relatedResources' in benchmark:
             benchmark['relatedResources'] = [bid for bid in benchmark['relatedResources'] if bid in retained_ids]
-    return data
+    from simulation_details import apply_simulation_details
+    return apply_simulation_details(data)

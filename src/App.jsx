@@ -130,7 +130,7 @@ export default function App() {
               <TaskLibrary {...props} item={route.item} />
             )}
             {route.view === "benchmarks" && (
-              <Benchmarks {...props} item={route.item} />
+              <Benchmarks {...props} item={route.item} section={route.section} />
             )}
             {route.view === "compare" && (
               <ComparePage {...props} clear={() => setSelected([])} />

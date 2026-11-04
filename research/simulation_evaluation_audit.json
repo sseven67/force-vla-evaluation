@@ -1,0 +1,139 @@
+{
+  "checked": "2026-11-04",
+  "scope": "仅核验第 03、04 章的实际仿真评测；真机测试、仅训练增强及仅提出但未执行的挑战不纳入。",
+  "records": {
+    "libero": {
+      "generalization": "任务间迁移与旧任务保留（仿真）。",
+      "robustness": "无。",
+      "excludedOrQualified": "局部模糊用于注意力图解释，不是传感器扰动下的操作成功率评测。",
+      "sources": [
+        "https://arxiv.org/html/2306.03310v2#S5",
+        "https://arxiv.org/html/2306.03310v2#A5.SS4"
+      ]
+    },
+    "robotwin": {
+      "generalization": "50 任务的 Easy／Hard 仿真对照。",
+      "robustness": "无独立传感器／硬件扰动评测。",
+      "excludedOrQualified": "真机 sim-to-real 实验不计入本次两章。",
+      "sources": [
+        "https://arxiv.org/html/2506.18088v2#S4.SS5",
+        "https://arxiv.org/html/2506.18088v2#A3"
+      ]
+    },
+    "forcebench": {
+      "generalization": "不同环境种子的仿真任务实例；不等于物理 OOD。",
+      "robustness": "无。",
+      "excludedOrQualified": "训练中的力信息 dropout、五任务真机对照不计为仿真鲁棒性测试。",
+      "sources": [
+        "https://arxiv.org/html/2610.19604v1#A1",
+        "https://arxiv.org/html/2610.19604v1#A2"
+      ]
+    },
+    "univtac": {
+      "generalization": "无。",
+      "robustness": "无。",
+      "excludedOrQualified": "仿真编码器迁移到真实机器人，属于真机验证。",
+      "sources": [
+        "https://arxiv.org/html/2602.10093v1#S4",
+        "https://arxiv.org/html/2602.10093v1#S4.SS4"
+      ]
+    },
+    "suite-t04": {
+      "generalization": "无。",
+      "robustness": "无。",
+      "excludedOrQualified": "背景多样化用于生成训练数据；USB／齿轮光照扰动在真机上测试，排除。",
+      "sources": [
+        "https://arxiv.org/html/2610.10384v1#S3.SS1",
+        "https://arxiv.org/html/2610.10384v1#S4.SS4"
+      ]
+    },
+    "suite-c11": {
+      "generalization": "无。",
+      "robustness": "无。",
+      "excludedOrQualified": "附录 D-D 的前视／腕视模型分别训练，不是同一策略测试期移动相机；真机正常／暗光分球排除。",
+      "sources": [
+        "https://arxiv.org/html/2505.18472v2#A4.SS4",
+        "https://arxiv.org/html/2505.18472v2#S4.SS4"
+      ]
+    },
+    "tabero": {
+      "generalization": "仿真中的未见力度副词测试；不属于物理 OOD。",
+      "robustness": "无。",
+      "excludedOrQualified": "三档控制增益用于采集力度数据，不作为训练范围外物理参数评测。",
+      "sources": [
+        "https://arxiv.org/html/2605.27886v1#S4.SS5",
+        "https://arxiv.org/html/2605.27886v1#A5"
+      ]
+    },
+    "rlbench": {
+      "generalization": "无实际报告的专项泛化结果。",
+      "robustness": "无。",
+      "excludedOrQualified": "原论文 §V 只提出 1／5／20-shot 挑战，未报告执行结果，移除原第 3.3 节；协议信息仍可在基本信息和任务说明中阅读。",
+      "sources": [
+        "https://arxiv.org/html/1909.12271v1#S5"
+      ]
+    },
+    "calvin": {
+      "generalization": "仿真 ABC→D 未见环境；ABCD→D 对照。",
+      "robustness": "无。",
+      "excludedOrQualified": "不同传感器组合分别训练，不作为测试期扰动；GR-1 自建真机扰动不并入 CALVIN。",
+      "sources": [
+        "https://arxiv.org/html/2112.03227#S3.SS3",
+        "https://gr1-manipulation.github.io/static/paper.pdf"
+      ]
+    },
+    "robocasa365": {
+      "generalization": "不同厨房场景的仿真评测，含零样本和目标数据微调条件。",
+      "robustness": "仿真相机位姿、初始关节、底盘噪声。",
+      "excludedOrQualified": "预训练规模对照保留实际测试结果，并注明是否微调；不据此声称物理 OOD。",
+      "sources": [
+        "https://robocasa.ai/assets/robocasa365_iclr26.pdf"
+      ]
+    },
+    "colosseum": {
+      "generalization": "仿真外观／场景变化及适用任务的质量／摩擦变化。",
+      "robustness": "三相机位姿仿真扰动。",
+      "excludedOrQualified": "真实机器人对齐实验单独排除；物理偏移只相对于默认参数训练模型成立。",
+      "sources": [
+        "https://arxiv.org/html/2402.08191#S3.SS3",
+        "https://arxiv.org/html/2402.08191#S4.SS4"
+      ]
+    },
+    "robotwin-phys": {
+      "generalization": "仿真 Physical Random，物理 OOD 需结合各模型训练范围判断。",
+      "robustness": "仿真相机、桌面、阻尼联合变化。",
+      "excludedOrQualified": "无单因素硬件成绩；不把提供的物理多样化数据自动计入被测模型训练。",
+      "sources": [
+        "https://arxiv.org/html/2609.26292#S4",
+        "https://arxiv.org/html/2609.26292#A1"
+      ]
+    },
+    "libero-plus": {
+      "generalization": "仿真测试期布局、语言、光照、背景等变化。",
+      "robustness": "仿真相机与图像质量扰动。",
+      "excludedOrQualified": "额外增强训练模型分别统计；训练增强本身不等于测试期扰动证据。",
+      "sources": [
+        "https://arxiv.org/html/2510.13626v3#S2",
+        "https://arxiv.org/html/2510.13626v3#A1.SS7"
+      ]
+    },
+    "libero-rig": {
+      "generalization": "无独立场景／物理 OOD 评测。",
+      "robustness": "11 轴、每轴 5 级的仿真硬件配置扰动。",
+      "excludedOrQualified": "论文明确所有测量均在仿真，故保留；不因使用硬件术语而误删。",
+      "sources": [
+        "https://arxiv.org/html/2610.18843v1#S2",
+        "https://arxiv.org/html/2610.18843v1#S4"
+      ]
+    },
+    "dexmimicgen": {
+      "generalization": "D0／D1／D2 仿真初态分布测试，各分布分别生成训练集。",
+      "robustness": "无。",
+      "excludedOrQualified": "扩大源演示分布后有实际仿真测试，可保留；不能写成 D0 训练后零样本跨分布测试。",
+      "sources": [
+        "https://arxiv.org/html/2410.24185#S5",
+        "https://arxiv.org/html/2410.24185#S6.SS2"
+      ]
+    }
+  }
+}

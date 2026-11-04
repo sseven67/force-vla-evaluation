@@ -2,8 +2,28 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { createCatalogue, benchmarkAdoptionCount, robotDescription } from './src/data/catalogue.js';
 import { parseHash } from './src/hooks/useHashRoute.js';
+import { benchmarkOverview, mainstreamBenchmarkIds, benchmarkSectionHref } from './src/data/benchmarkOverview.js';
 import { createTaskView, getTaskTopicName, filterTaskInstances, selectPapers, DEFAULT_PAPER_FILTERS, DEFAULT_WORK_FILTERS, matchesPublicationYear, getTaskKindOptions, filterTaskKindInstances } from './src/data/selectors.js';
 const d=JSON.parse(fs.readFileSync('public/catalogue.json','utf8'));
+const simulationReview=JSON.parse(fs.readFileSync('research/simulation_evaluation_audit.json','utf8'));
+assert.equal(Object.keys(simulationReview.records).length,15,'Simulation evaluation review covers all fifteen benchmarks');
+for(const b of d.benchmarks){
+ const page=b.reading?.simulationDetail;
+ if(!page)continue;
+ const studies=[page.generalization.scene,page.generalization.physics,...(page.generalization.other||[]),...(page.robustness.studies||[])];
+ for(const study of studies.filter(s=>s.rows))assert.equal(study.domain,'仿真',b.id+': only verified simulation studies in chapters 03/04');
+ assert.ok(simulationReview.records[b.id]?.sources.length,b.id+': scope has original-source evidence');
+}
+assert.equal(benchmarkOverview.length,15);
+assert.equal(mainstreamBenchmarkIds.size,15);
+for(const row of benchmarkOverview){
+ assert.ok(d.benchmarks.some(b=>b.id===row.id),row.id+': overview detail exists');
+ for(const field of ['robot','tasks','demos','metrics','robustness'])assert.ok(row[field]?.length,row.id+': '+field);
+ for(const field of ['scene','physics'])assert.ok(Array.isArray(row.generalization[field]),row.id+': generalization '+field+' can be empty');
+ for(const section of [0,1,2,3,4])assert.deepEqual(parseHash(benchmarkSectionHref(row.id,section)),{view:'benchmarks',item:row.id,section});
+}
+assert.deepEqual(parseHash('#benchmarks/libero?section=99'),{view:'benchmarks',item:'libero'});
+assert.deepEqual(parseHash('#benchmarks/mainstream-overview'),{view:'benchmarks',item:'mainstream-overview'});
 const removedIds=new Set(['T15','T20','T21','C08','C09','C16','C17','C18','C19']);
 // New papers keep source-specific scoring, force semantics and priority rules.
 const recentIds=['N01','N02','N03','N04','N05'];
@@ -324,7 +344,7 @@ console.log(`PASS: ${d.benchmarks.length} classified resources with original sou
 
 // Benchmark reading pages describe concrete tasks, scoring and force semantics.
 const benchmarkReadings=d.benchmarks.filter(b=>b.resourceType==='benchmark');
-assert.equal(benchmarkReadings.length,15);
+assert.equal(benchmarkReadings.length,23);
 for(const b of benchmarkReadings){
  assert.ok(b.reading.introduction.length>=1,b.id+': explain purpose and scope');
  assert.ok(b.reading.inputs&&b.reading.evaluation.length>=2&&b.reading.force&&b.reading.relevance,b.id+': explain how models are tested');
@@ -354,9 +374,9 @@ assert.equal(d.resourceStudies.find(s => s.id === 'tactildm').metadata.scholarSt
 assert.equal(d.resourceStudies.find(s => s.id === 'visible-touch').metadata.scholarStatus, 'count-not-displayed');
 console.log(`PASS: ${benchmarkReadings.length} expanded benchmarks, ${d.benchmarks.length} resources with attributable metrics and external adopters.`);
 const liberoResource = d.benchmarks.find(b => b.id === 'libero');
-assert.equal(benchmarkAdoptionCount(liberoResource, catalogue.getBenchmarkUsers('libero')), 2, 'LIBERO includes the derived Tabero evaluation and Visible Touch');
+assert.equal(benchmarkAdoptionCount(liberoResource, catalogue.getBenchmarkUsers('libero')), 3, 'LIBERO includes Tabero, Visible Touch and the explicitly force-free FASA evaluation');
 assert.equal(benchmarkAdoptionCount(d.benchmarks.find(b => b.id === 'univtac'), catalogue.getBenchmarkUsers('univtac')), 3);
-assert.equal(benchmarkAdoptionCount({...liberoResource, externalUsers:[...liberoResource.externalUsers,...liberoResource.externalUsers]}, catalogue.getBenchmarkUsers('libero')), 2, 'Duplicate study records count once');
+assert.equal(benchmarkAdoptionCount({...liberoResource, externalUsers:[...liberoResource.externalUsers,...liberoResource.externalUsers]}, catalogue.getBenchmarkUsers('libero')), 3, 'Duplicate study records count once');
 for (const w of d.works) for (const r of w.relations.filter(r => r.type === 'adopts')) assert.ok(r.usageDetails?.length >= 3, w.id + ': readable, structured resource usage');
 
 // Arm coordination filters individual evaluations, independently of capability.
