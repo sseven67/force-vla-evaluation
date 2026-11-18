@@ -1,0 +1,4334 @@
+{
+  "checked": "2026-11-15",
+  "scope": "新增三项评测，LIBERO-Plus 同步按七章复核；论文与官方实现分开说明。",
+  "records": {
+    "robodojo": {
+      "name": "RoboDojo",
+      "paperTitle": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+      "repository": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+      "domain": "仿真 + 真机",
+      "focus": "通过双臂仿真和三种真机平台，分能力评价通用操作策略的成功率与阶段完成度。",
+      "force": "标准格式不含腕部六维 F/T；任务成功与接触力精度分别理解。",
+      "metadata": {
+        "stars": 906,
+        "starsStatus": "verified",
+        "starsDate": "2026-11-15",
+        "starsSource": "https://api.github.com/repos/RoboDojo-Benchmark/RoboDojo",
+        "repository": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+        "firstPublicDate": "2026-07-06",
+        "publicYear": 2026,
+        "dateSource": "https://arxiv.org/html/2607.04434v3",
+        "dateStatus": "verified",
+        "dateBasis": "提出论文首次公开时间"
+      },
+      "usageStudies": [
+        {
+          "id": "rd-xr1",
+          "name": "Xiaomi-Robotics-1",
+          "title": "Xiaomi-Robotics-1",
+          "source": "https://arxiv.org/html/2607.15330",
+          "usage": "在模型论文中按 RoboDojo 五种能力报告 Score 与成功率。",
+          "metadata": {
+            "scholar": null,
+            "scholarStatus": "not-checked",
+            "stars": null,
+            "starsStatus": "not-checked"
+          }
+        },
+        {
+          "id": "rd-worldbridge",
+          "name": "WorldBridge",
+          "title": "WorldBridge",
+          "source": "https://arxiv.org/html/2610.40748",
+          "usage": "复用 42 项双臂任务，验证视频—动作模型及历史信息的作用。",
+          "metadata": {
+            "scholar": null,
+            "scholarStatus": "not-checked",
+            "stars": null,
+            "starsStatus": "not-checked"
+          }
+        },
+        {
+          "id": "rd-groot2",
+          "name": "GR00T 2",
+          "title": "GR00T 2",
+          "source": "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf",
+          "usage": "用三组布局评测基础策略，并另列 RL 和 Agent 设置。",
+          "metadata": {
+            "scholar": null,
+            "scholarStatus": "not-checked",
+            "stars": null,
+            "starsStatus": "not-checked"
+          }
+        }
+      ],
+      "page": {
+        "sections": [
+          "基本信息",
+          "任务体系与评价标准",
+          "泛化评测",
+          "传感器与硬件鲁棒性",
+          "专家演示生成",
+          "值得关注的设计",
+          "局限性"
+        ],
+        "introduction": "通过双臂仿真和三种真机平台，分能力评价通用操作策略的成功率与阶段完成度。",
+        "schemaVersion": 2,
+        "facts": [
+          [
+            "仿真平台",
+            "Isaac Sim / Isaac Lab；基于 MagicSim 的场景与管理器基础设施。"
+          ],
+          [
+            "机器人本体",
+            [
+              "仿真：双 ARX X5，每臂 6 自由度＋平行夹爪。",
+              "真机：双臂 ARX X5、Piper、Piper X；每本体对应 6 项任务。"
+            ]
+          ],
+          [
+            "任务数量",
+            "42 项基础仿真任务；12 项泛化任务另有随机版本，共 54 个可执行条目；另有 1 项仅训练的 DLC。真机 18 项。"
+          ],
+          [
+            "任务类别",
+            "泛化 12、记忆 6、精密 8、长程 8、Open 8；真机按三种本体组织。"
+          ],
+          [
+            "专家演示",
+            [
+              "仿真：34 项训练任务×100 条＋DLC 100 条，共 3,500 条；Open 8 项无专属训练示教。",
+              "真机：18 项×100 条，共 1,800 条。"
+            ]
+          ],
+          [
+            "测试次数",
+            [
+              "仿真：每组布局中普通任务 50 次；泛化标准／随机各 25 次。当前官方完整流程运行布局种子 0、1、2，共 6,300 回合。",
+              "原论文多数模型训练 3 个种子；真机每策略、每任务 10 次，共 180 次。"
+            ]
+          ],
+          [
+            "运行频率",
+            "数据记录 25 Hz；当前官方仿真配置 dt＝0.004 s，render_interval＝10。物理步频与数据记录频率分别统计。"
+          ],
+          [
+            "输入",
+            "（头部 RGB〔640×480×3〕，左腕 RGB〔640×480×3〕，右腕 RGB〔640×480×3〕，语言指令，状态〔左右臂各关节位置 6＋夹爪位置 1，可选各末端位置 3＋四元数 4〕）；深度按配置选用。"
+          ],
+          [
+            "输出",
+            "关节模式：（左臂绝对关节目标〔6〕，左夹爪〔1〕，右臂绝对关节目标〔6〕，右夹爪〔1〕），共 14 维；末端模式每臂为（绝对位置〔3〕，四元数〔4〕，夹爪〔1〕），双臂共 16 维。"
+          ],
+          [
+            "主要评价指标",
+            "完整任务成功率 SR 与阶段进度 Score 分开报告；仿真总体为五种能力的等权平均，真机汇总 18 项任务。"
+          ]
+        ],
+        "inputNote": "图像预处理和状态选用随策略适配器变化；标准公开数据格式未列出腕部三轴力＋三轴力矩。",
+        "basicSources": [
+          {
+            "url": "https://arxiv.org/html/2607.04434v3",
+            "label": "原始论文 v3 · 任务、数据和结果"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/quick-evaluation/",
+            "label": "官方实现 · 当前评测次数"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/configurations/",
+            "label": "官方实现 · 本体与配置"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/install-and-download/",
+            "label": "官方实现 · 观测与动作格式"
+          }
+        ],
+        "taskGroups": [
+          {
+            "title": "泛化",
+            "english": "Generalization",
+            "count": "12 项",
+            "tasks": [
+              {
+                "englishName": "Scene and object generalization",
+                "name": "场景与物体泛化",
+                "goal": "在标准和随机场景中完成相同的物体操作目标。",
+                "mechanism": "物体几何、布局及外观变化影响抓持和空间定位。",
+                "scoring": "按各任务的完整目标条件记成功，标准与随机条件分别统计。",
+                "examples": [
+                  "Stack Bowls（叠碗）：将多个碗依次堆叠。",
+                  "Hang Mugs（挂杯子）：抓取杯子并挂上杯架。",
+                  "Fold Clothes（叠衣服）：操作可变形衣物完成折叠。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "记忆",
+            "english": "Memory",
+            "count": "6 项",
+            "tasks": [
+              {
+                "englishName": "History-dependent manipulation",
+                "name": "依赖历史信息的操作",
+                "goal": "利用先前出现的对象、数字或顺序完成后续操作。",
+                "mechanism": "遮挡、物体交换及演示顺序使当前单帧不能包含全部决策信息。",
+                "scoring": "目标对象及执行顺序均满足对应任务规则才算完整成功。",
+                "examples": [
+                  "Cover Blocks（盖方块）：记住被遮住的方块位置。",
+                  "Press By Number（按数字按键）：根据先前显示的数字操作。",
+                  "Imitate Sorting Sequence（模仿分类顺序）：复现另一机械臂演示的放置次序。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "精密操作",
+            "english": "Precision",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Insertion and precise interaction",
+                "name": "插接与精细交互",
+                "goal": "完成小目标对齐、插入、旋转或精确放置。",
+                "mechanism": "孔槽配合、关节约束和物体接触使位置与姿态偏差影响完成。",
+                "scoring": "按任务的深度、方向和完整流程检查判定，部分完成只计进度分。",
+                "examples": [
+                  "Insert Tubes（插管）：将三根管依次插入管架。",
+                  "Plug In Charger（插充电器）：把插头插入插排。",
+                  "Insert Key（插钥匙）：换手调整钥匙，插入锁孔后旋转。"
+                ],
+                "criteria": [
+                  "Insert Tubes：一根正确插入得 20 分，两根得 40 分；三根正确插入并回到初始位姿得 100 分。单根还检查深度、直立及夹爪打开。",
+                  "Plug In Charger：插入规定深度、姿态直立并回到初始位姿得 100 分；不采用插管任务的分阶段分值。",
+                  "Fasten Screws（紧固螺栓）：一组、两组、三组同色配合完成分别得 20、50、100 分；文档中的几何与深度检查不等于验证真实螺纹力学。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/insert-tubes/",
+                    "label": "插管 · 官方评分"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/plug-in-charger/",
+                    "label": "插接 · 官方评分"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/fasten-screws/",
+                    "label": "紧固 · 官方评分"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "长程操作",
+            "english": "Long-Horizon",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Multi-stage manipulation",
+                "name": "多阶段操作",
+                "goal": "连续完成多个物体或多个依赖步骤的操作。",
+                "mechanism": "抓放、交接、容器及机构约束在长流程中累积执行误差。",
+                "scoring": "完整任务的所有必要子步骤均完成才记成功。",
+                "examples": [
+                  "Fill Pen Holder（填笔筒）：把多支笔逐一放入笔筒。",
+                  "Classify Objects（物体分类）：把多种物体送入对应区域。",
+                  "Organize Table（整理桌面）：整理多类用品并完成指定摆放。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "开放任务要求",
+            "english": "Open",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Unseen task specifications",
+                "name": "未见任务要求",
+                "goal": "依据新的语言或图像要求组合训练中已有的操作技能。",
+                "mechanism": "目标身份、语义关系或技能组合变化，而非增加一种统一的接触机制。",
+                "scoring": "同时满足新要求中的目标选择与操作完成条件。",
+                "examples": [
+                  "Stack Blocks By Language（按语言叠方块）：按指令指定关系堆叠。",
+                  "Pick From Conveyor By Image（按图抓取）：匹配图示对象并从传送带抓取。",
+                  "Store Tools In Toolbox（工具入箱）：按要求把工具整理进工具箱。"
+                ],
+                "criteria": [
+                  "此类别不提供任务专属训练示教；不是从未见过任何相关抓取技能。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              }
+            ],
+            "note": ""
+          }
+        ],
+        "taskNote": "以下按五种能力概述全部 42 项基础任务，并举代表任务；分类页链接可查看完整目录与每项评分。",
+        "figure": {
+          "url": "figures/benchmarks/robodojo-tasks.png",
+          "originalUrl": "https://arxiv.org/html/2607.04434v3/tasks.png",
+          "source": "https://arxiv.org/html/2607.04434v3#S3",
+          "caption": "RoboDojo · 论文 Figure 2：42 项仿真与 18 项真机任务"
+        },
+        "evaluation": "完整成功率与阶段 Score 分别计算，仿真按五种能力等权平均。",
+        "comparisons": [
+          {
+            "title": "原论文仿真对照：Score / SR〔%〕",
+            "domain": "仿真",
+            "protocol": "论文表 1，冻结于 2026-07-03；以下选取 7 项策略，均覆盖 42 项基础任务。多数策略训练 3 个种子，每种子每任务 50 次；泛化任务分标准、随机各 25 次。",
+            "columns": [
+              "策略",
+              "泛化",
+              "精密",
+              "长程",
+              "记忆",
+              "Open",
+              "总体"
+            ],
+            "rows": [
+              [
+                "Hy-Embodied-0.5-VLA",
+                "11.77 / 8.39",
+                "13.81 / 8.00",
+                "25.74 / 14.92",
+                "13.37 / 12.11",
+                "0.65 / 0.58",
+                "13.07 / 8.80"
+              ],
+              [
+                "Spatial Forcing",
+                "14.12 / 9.33",
+                "17.33 / 10.58",
+                "23.26 / 14.58",
+                "5.43 / 4.11",
+                "1.78 / 1.58",
+                "12.38 / 8.04"
+              ],
+              [
+                "π₀.₅",
+                "13.37 / 8.17",
+                "12.40 / 5.50",
+                "23.54 / 14.67",
+                "5.78 / 4.56",
+                "1.98 / 1.67",
+                "11.41 / 6.91"
+              ],
+              [
+                "X-VLA",
+                "10.48 / 6.78",
+                "18.32 / 12.00",
+                "16.53 / 9.75",
+                "4.76 / 3.56",
+                "0.55 / 0.50",
+                "10.13 / 6.52"
+              ],
+              [
+                "Xiaomi-Robotics-0",
+                "7.43 / 5.56",
+                "8.42 / 4.58",
+                "13.51 / 6.92",
+                "5.07 / 3.67",
+                "0.22 / 0.17",
+                "6.93 / 4.18"
+              ],
+              [
+                "π₀",
+                "3.94 / 2.56",
+                "3.56 / 0.75",
+                "6.19 / 2.00",
+                "3.47 / 2.11",
+                "0.25 / 0.25",
+                "3.48 / 1.53"
+              ],
+              [
+                "GR00T N1.7",
+                "2.16 / 1.22",
+                "2.54 / 0.67",
+                "8.30 / 3.58",
+                "1.06 / 0.89",
+                "0.18 / 0.17",
+                "2.85 / 1.31"
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S5.SS1",
+                "label": "论文表 1 · 完整 30 策略及训练种子例外"
+              }
+            ],
+            "note": "先求五种能力各自的成绩，再按能力等权平均；不把 42 项任务直接等权平均，也不混入后续榜单。"
+          },
+          {
+            "title": "真机对照：三种本体的任务成功率〔%〕",
+            "domain": "真机",
+            "protocol": "论文表 2，18 项任务，每策略每任务 10 次；每本体训练 1 个种子。以下列出 6 项策略。",
+            "columns": [
+              "策略",
+              "ARX X5〔6〕",
+              "Piper〔6〕",
+              "Piper X〔6〕",
+              "总体 SR",
+              "总体 Score"
+            ],
+            "rows": [
+              [
+                "π₀.₅",
+                13.3,
+                21.7,
+                3.3,
+                12.8,
+                22.9
+              ],
+              [
+                "InternVLA-A1",
+                3.3,
+                18.3,
+                0,
+                7.2,
+                12
+              ],
+              [
+                "GalaxeaVLA G0",
+                0,
+                13.3,
+                0,
+                4.4,
+                9
+              ],
+              [
+                "Xiaomi-Robotics-0",
+                8.3,
+                3.3,
+                0,
+                3.9,
+                7.9
+              ],
+              [
+                "X-VLA",
+                1.7,
+                8.3,
+                0,
+                3.3,
+                7.6
+              ],
+              [
+                "GR00T N1.7",
+                1.7,
+                3.3,
+                0,
+                1.7,
+                5.9
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S5.SS2",
+                "label": "论文表 2 · 真机分任务结果"
+              }
+            ],
+            "note": "总体汇总 18 项真机任务；每条视频由 3 名评分者独立双盲评分并取平均。"
+          }
+        ],
+        "real": {
+          "correspondence": "真机任务与仿真不是逐项配对；该部分测试物理部署能力，不作为同任务的直接 sim-to-real 迁移成绩。",
+          "protocol": "三种本体各 6 项任务；每任务 100 条真机示教，重新进行对应本体的策略训练；每策略每任务 10 次，固定布局重放并独立评分。",
+          "figure": {
+            "url": "figures/benchmarks/robodojo-real.png",
+            "originalUrl": "https://arxiv.org/html/2607.04434v3/real_highlight.png",
+            "source": "https://arxiv.org/html/2607.04434v3#S3.SS2",
+            "caption": "RoboDojo · 论文 Figure 4：真机任务关键帧"
+          },
+          "groups": [
+            {
+              "title": "ARX X5",
+              "english": "ARX X5",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "ARX X5 physical tasks",
+                  "name": "ARX X5 真机操作",
+                  "goal": "完成该本体对应的遮挡、厨房准备、收纳及插管任务。",
+                  "mechanism": "真实接触、对齐及多步骤执行。",
+                  "scoring": "按各任务的最终目标与独立阶段规则评分。",
+                  "examples": [
+                    "Insert Tubes（插管）：把管插进管架。",
+                    "Store In Safe（保险箱收纳）：完成开箱、放物及收纳流程。",
+                    "Pack And Pour Fruit（装果并倒出）：完成容器操作与倾倒。"
+                  ],
+                  "criteria": [
+                    "另外三项为 Cover Blocks、Make Bread、Make Food；真机不沿用仿真的五种能力分组。"
+                  ],
+                  "sources": []
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "Piper",
+              "english": "Piper",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "Piper physical tasks",
+                  "name": "Piper 真机操作",
+                  "goal": "完成多物体收纳、插接、堆叠及扶正。",
+                  "mechanism": "夹持稳定性、容器约束与插接对齐。",
+                  "scoring": "每项以自己的最终目标及阶段规则计分。",
+                  "examples": [
+                    "Insert Charger（插充电器）：插入目标接口。",
+                    "Stack Bowls（叠碗）：依次堆叠多个碗。",
+                    "Stand Up Bottles（立瓶）：把倒放的瓶子扶正。"
+                  ],
+                  "criteria": [
+                    "另外三项为 Fill Pen Holder、Put Objects Into Basket、Stack And Cover Blocks。"
+                  ],
+                  "sources": []
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "Piper X",
+              "english": "Piper X",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "Piper X physical tasks",
+                  "name": "Piper X 真机操作",
+                  "goal": "完成拆解、盖笔帽、分类、挂杯、扫物和背包收纳。",
+                  "mechanism": "物体接触、工具使用和多步骤协调。",
+                  "scoring": "按各任务的全部必要步骤判断完整成功。",
+                  "examples": [
+                    "Disassemble LEGO（拆积木）：拆开组合积木。",
+                    "Cap Pen（盖笔帽）：对准笔身和笔帽完成装配。",
+                    "Hang Mugs（挂杯）：把杯子挂到杯架。"
+                  ],
+                  "criteria": [
+                    "另外三项为 Classify Objects、Sweep Blocks、Pack Objects Into Backpack。"
+                  ],
+                  "sources": []
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#S3.SS2",
+              "label": "论文 §3.2 · 真机协议"
+            },
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#A5",
+              "label": "论文附录 E · 数据、评分与次数"
+            }
+          ]
+        },
+        "generalization": {
+          "scene": {
+            "domain": "仿真",
+            "rows": [
+              [
+                "变化条件",
+                "任务相关物体、背景、杂物、桌面外观与光照。"
+              ],
+              [
+                "训练条件",
+                "泛化类 12 项在标准场景采集示教；另有 100 条随机化 DLC 数据扩展视觉暴露。"
+              ],
+              [
+                "测试条件",
+                "12 项任务分别进行标准与随机测试，每布局种子各 25 次；当前官方完整流程用 3 组布局。"
+              ],
+              [
+                "训练／测试划分",
+                "训练示教与评测布局分开；随机测试改变场景条件。DLC 数据不是这 12 项任务的随机场景专属示教。"
+              ],
+              [
+                "评测结果",
+                "论文 §6.1：π₀.₅ 在泛化类的标准／随机场景 Score 为 20.93／5.82；SR 为 14.89%／1.44%。"
+              ],
+              [
+                "研究目的",
+                "检查同一任务在视觉及场景变化后的性能下降。"
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S6.SS1",
+                "label": "论文 §6.1 · 标准与随机结果"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/domain-randomization/",
+                "label": "官方文档 · 随机化内容"
+              }
+            ],
+            "note": ""
+          },
+          "physics": {
+            "status": "无"
+          }
+        },
+        "robustness": {
+          "studies": []
+        },
+        "expert": {
+          "introduction": "仿真结合技能脚本与 VR 遥操作，真机使用同构主从遥操作。",
+          "steps": [
+            "仿真将 grasp、place、handover、insert 等技能按任务组合，用 cuRobo v2 规划；难以自动生成的任务由 VR 遥操作补充。",
+            "同步记录三路图像、语言、关节、夹爪和末端位姿及下一帧目标动作；Open 类不采任务专属训练示教。",
+            "保留 34 项任务各 100 条与 DLC 100 条；专家使用的物体标注与规划信息不作为统一策略的特权输入。",
+            "真机每任务由 4 名操作者共采 100 条，并检查重置、犹豫和任务完成情况；总计 1,800 条。"
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#S4.SS1",
+              "label": "论文 §4.1 · 仿真数据"
+            },
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#A5.SS1",
+              "label": "论文附录 E.1 · 真机数据"
+            }
+          ]
+        },
+        "designs": [
+          {
+            "title": "按能力汇总",
+            "text": "五种能力等权，避免 12 项泛化任务在总体中获得更高权重。"
+          },
+          {
+            "title": "完整成功与阶段进度并列",
+            "text": "同一回合分别记录任务成功与中间进度，便于区分卡在哪一步。"
+          },
+          {
+            "title": "仿真与真机互补",
+            "text": "18 项真机任务覆盖三种双臂平台，并通过布局重放和三人评分统一条件。"
+          },
+          {
+            "title": "异构并行",
+            "text": "不同任务和场景可在同一评测系统中并行，策略通过 XPolicyLab 接口接入。"
+          }
+        ],
+        "designSources": [
+          {
+            "url": "https://arxiv.org/html/2607.04434v3#S4",
+            "label": "论文 §4 · 实现"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.04434v3#S5",
+            "label": "论文 §5 · 汇总与评分"
+          }
+        ],
+        "limitations": [
+          {
+            "title": "真机样本量",
+            "text": "每策略每任务仅 10 次，一次成败会改变该任务成功率 10 个百分点。"
+          },
+          {
+            "title": "迁移结论",
+            "text": "42 项仿真与 18 项真机并非逐任务配对，无法直接据此量化同任务迁移差距。"
+          },
+          {
+            "title": "接触评价",
+            "text": "阶段分和成功率主要反映目标完成，缺少统一的接触力、力矩或损伤量度。"
+          },
+          {
+            "title": "物理外推",
+            "text": "标准随机化集中在视觉与场景，未系统测试训练范围外的质量和摩擦。"
+          }
+        ],
+        "limitationSources": [
+          {
+            "url": "https://arxiv.org/html/2607.04434v3#S3",
+            "label": "论文 §3 · 任务和协议"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2607.04434v3",
+            "label": "原始论文 v3 · 任务、数据和结果"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+            "label": "官方文档 · 全部仿真任务"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+            "label": "官方文档 · 全部真机任务"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/quick-evaluation/",
+            "label": "官方实现 · 当前评测次数"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/configurations/",
+            "label": "官方实现 · 本体与配置"
+          },
+          {
+            "url": "https://robodojo-benchmark.com/doc/usage/install-and-download/",
+            "label": "官方实现 · 观测与动作格式"
+          }
+        ],
+        "adoptions": [
+          {
+            "name": "Xiaomi-Robotics-1",
+            "url": "https://arxiv.org/html/2607.15330",
+            "text": "在模型论文中按 RoboDojo 五种能力报告 Score 与成功率。"
+          },
+          {
+            "name": "WorldBridge",
+            "url": "https://arxiv.org/html/2610.40748",
+            "text": "复用 42 项双臂任务，验证视频—动作模型及历史信息的作用。"
+          },
+          {
+            "name": "GR00T 2",
+            "url": "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf",
+            "text": "用三组布局评测基础策略，并另列 RL 和 Agent 设置。"
+          }
+        ]
+      }
+    },
+    "robocasa": {
+      "name": "RoboCasa",
+      "paperTitle": "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots",
+      "repository": "https://github.com/robocasa/robocasa",
+      "domain": "仿真 + 真机",
+      "focus": "在多样厨房中评价原子技能、组合活动及新物体泛化，并检验仿真数据对真机操作学习的帮助。",
+      "force": "原始 benchmark 不统一输入腕部 F/T，也不统一评分接触力误差。",
+      "metadata": {
+        "stars": 1876,
+        "starsStatus": "verified",
+        "starsDate": "2026-11-15",
+        "starsSource": "https://api.github.com/repos/robocasa/robocasa",
+        "repository": "https://github.com/robocasa/robocasa",
+        "repositoryScope": "与 RoboCasa365 共用仓库；Stars 不作为独立版本使用量",
+        "firstPublicDate": "2024-06-04",
+        "publicYear": 2024,
+        "dateSource": "https://arxiv.org/html/2406.02523v1",
+        "dateStatus": "verified",
+        "dateBasis": "提出论文首次公开时间"
+      },
+      "usageStudies": [
+        {
+          "id": "rc-xr1",
+          "name": "Xiaomi-Robotics-1",
+          "title": "Xiaomi-Robotics-1",
+          "source": "https://arxiv.org/html/2607.15330",
+          "usage": "用原版 RoboCasa 的 24 项原子任务进行模型对比，300 条／任务合成训练数据、100 回合／任务测试。",
+          "metadata": {
+            "scholar": null,
+            "scholarStatus": "not-checked",
+            "stars": null,
+            "starsStatus": "not-checked"
+          }
+        },
+        {
+          "id": "rc-groot17",
+          "name": "GR00T N1.7",
+          "title": "GR00T N1.7",
+          "source": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/examples/robocasa/README.md",
+          "usage": "官方提供 PandaOmron 的 24 项厨房操作训练与评测入口；与 GR1 Tabletop 及 RoboCasa365 分开。",
+          "metadata": {
+            "scholar": null,
+            "scholarStatus": "not-checked",
+            "stars": null,
+            "starsStatus": "not-checked"
+          }
+        }
+      ],
+      "page": {
+        "sections": [
+          "基本信息",
+          "任务体系与评价标准",
+          "泛化评测",
+          "传感器与硬件鲁棒性",
+          "专家演示生成",
+          "值得关注的设计",
+          "局限性"
+        ],
+        "schemaVersion": 2,
+        "introduction": "在多样厨房中评价原子技能、组合活动及新物体泛化，并检验仿真数据对真机操作学习的帮助。",
+        "facts": [
+          [
+            "仿真平台",
+            "MuJoCo / robosuite；主学习实验使用 MuJoCo 渲染，另支持 Omniverse 高质量渲染。"
+          ],
+          [
+            "机器人本体",
+            [
+              "仿真主实验：Franka Panda 7 自由度单臂＋平行夹爪，搭载 Omron 移动底盘。",
+              "真机：Franka Panda＋DROID 操作系统及夹爪，厨房移动平台；按真实数据另行训练。"
+            ]
+          ],
+          [
+            "任务数量",
+            "原版共 100 项：25 原子＋75 组合；主操作评测 24 项原子任务，另测 5 项组合及 3 项真机任务。"
+          ],
+          [
+            "任务类别",
+            "原子任务覆盖 8 种技能；组合任务覆盖 20 种厨房活动；120 个场景＝10 种布局×12 种风格。"
+          ],
+          [
+            "专家演示",
+            [
+              "原子：25×50＝1,250 条人工示教；主生成集 24×3,000＝72,000 条，另有 AI 物体数据使公开合成集达到 100K。",
+              "组合实验：5 项各 50 条人工示教；真机：3 项各 50 条真实示教。"
+            ]
+          ],
+          [
+            "测试次数",
+            "原论文原子任务每项、每配置 50 次，覆盖五个固定场景；后续 Xiaomi-Robotics-1 的 24 项协议为每任务 100 次。真机结果按 3 个训练种子汇总。"
+          ],
+          [
+            "运行频率",
+            "论文 §V-C：仿真操作控制 20 Hz，真机控制 15 Hz；不将渲染或仿真吞吐量作为策略重规划频率。"
+          ],
+          [
+            "输入",
+            "（腕部 RGB，左右外部 RGB，末端位姿〔位置 3＋四元数 4〕，底盘位姿〔位置 3＋四元数 4〕，语言指令）；官方 v0.2 发布的图像数据为各 128×128×3。"
+          ],
+          [
+            "输出",
+            "PandaOmron 官方控制配置：（末端平移增量〔3〕，旋转增量〔3〕，夹爪〔1〕，底盘平移与转向〔3〕，躯干〔1〕，底盘／手臂模式〔1〕），共 12 维。"
+          ],
+          [
+            "主要评价指标",
+            "每任务完成率与对应任务子集的等权平均；原子、组合和真机结果分别统计。"
+          ]
+        ],
+        "inputNote": "本页区分 2024 原版与后续 24 任务 VLA 协议；365 任务版本在 RoboCasa365 条目中。输入历史窗口及状态字段选用随策略变化。",
+        "basicSources": [
+          {
+            "url": "https://arxiv.org/html/2406.02523v1",
+            "label": "原始论文 v1 · 100 项任务与实验"
+          },
+          {
+            "url": "https://github.com/robocasa/robocasa/blob/v0.2/robocasa/utils/dataset_registry.py",
+            "label": "官方实现 v0.2 · 数据与任务时限"
+          },
+          {
+            "url": "https://github.com/ARISE-Initiative/robosuite/blob/v1.5.0/robosuite/controllers/config/robots/default_pandaomron.json",
+            "label": "官方实现 · PandaOmron 控制分量"
+          },
+          {
+            "url": "https://github.com/ARISE-Initiative/robosuite/blob/v1.5.0/robosuite/controllers/composite/composite_controller.py",
+            "label": "官方实现 · 混合底盘模式"
+          }
+        ],
+        "taskGroups": [
+          {
+            "title": "原子任务",
+            "english": "Atomic tasks",
+            "count": "25 项／8 种技能",
+            "tasks": [
+              {
+                "englishName": "Pick and place",
+                "name": "抓取与放置",
+                "goal": "在台面、柜子、水槽、微波炉和炉灶之间转移物体。",
+                "mechanism": "夹持、物体与容器的接触及空间包含关系。",
+                "scoring": "物体到达该任务指定区域，并满足该任务的接触或夹爪退出条件。",
+                "examples": [
+                  "PickPlaceCounterToCabinet：将台面物体放进已打开的柜子。",
+                  "PickPlaceSinkToCounter：把水槽内物体移到台面。"
+                ],
+                "criteria": [
+                  "官方 v0.2 的柜内放物检查物体在柜内且夹爪远离；其他抓放任务分别检查目标区域或容器接触，不共用一个统一距离阈值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/robocasa/robocasa/blob/v0.2/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+                    "label": "官方实现 v0.2 · 抓放成功条件"
+                  }
+                ]
+              },
+              {
+                "englishName": "Opening and closing doors",
+                "name": "开关柜门",
+                "goal": "打开或关闭单门、双门柜子及微波炉门。",
+                "mechanism": "铰链转动、把手接触与门的角度约束。",
+                "scoring": "目标门达到该任务规定的打开或关闭状态。",
+                "examples": [
+                  "OpenSingleDoor：打开一扇门。",
+                  "CloseDoubleDoor：关闭双门柜子的两扇门。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Opening and closing drawers",
+                "name": "开关抽屉",
+                "goal": "将指定抽屉拉开或推回。",
+                "mechanism": "沿滑轨移动的关节约束与把手接触。",
+                "scoring": "抽屉关节达到目标开合状态。",
+                "examples": [
+                  "OpenDrawer：拉开抽屉。",
+                  "CloseDrawer：推回抽屉。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Twisting knobs",
+                "name": "旋转旋钮",
+                "goal": "转动对应炉头的旋钮以开关炉灶。",
+                "mechanism": "旋转关节及旋钮角度与设备状态之间的映射。",
+                "scoring": "指定炉头达到对应开或关状态。",
+                "examples": [
+                  "TurnOnStove：打开指定炉头。",
+                  "TurnOffStove：关闭指定炉头。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Turning levers",
+                "name": "拨动水龙头",
+                "goal": "操作水龙头手柄或转动出水口。",
+                "mechanism": "手柄与出水口的旋转约束。",
+                "scoring": "水龙头或出水口达到任务指定状态。",
+                "examples": [
+                  "TurnOnSinkFaucet：打开水龙头。",
+                  "TurnSinkSpout：把出水口转至指定方向。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Pressing buttons",
+                "name": "按设备按钮",
+                "goal": "按下咖啡机或微波炉指定按钮。",
+                "mechanism": "末端接触按钮及离散设备状态变化。",
+                "scoring": "目标设备进入对应启动或停止状态。",
+                "examples": [
+                  "CoffeePressButton：启动咖啡机。",
+                  "TurnOffMicrowave：按停止按钮。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Insertion",
+                "name": "杯子入位",
+                "goal": "将杯子放入咖啡机承托位置或从中取出。",
+                "mechanism": "杯子几何与有限承托空间之间的对齐。",
+                "scoring": "杯子进入指定承托区或被移至目标台面。",
+                "examples": [
+                  "CoffeeSetupMug：把杯子放在咖啡机出液口下。",
+                  "CoffeeServeMug：把杯子移出咖啡机并放至台面。"
+                ],
+                "criteria": [],
+                "sources": []
+              },
+              {
+                "englishName": "Navigation",
+                "name": "厨房导航",
+                "goal": "移动到指定厨房设备前。",
+                "mechanism": "底盘运动与厨房空间可达性约束。",
+                "scoring": "到达语言指定的目标设备位置。",
+                "examples": [
+                  "NavigateKitchen：导航至指定设备。"
+                ],
+                "criteria": [
+                  "共 25 项原子任务中的 1 项；原论文的 MimicGen 生成与 24 项操作评测未包含此导航任务。"
+                ],
+                "sources": []
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S8",
+                "label": "论文附录 VIII · 全部任务类别"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "组合任务",
+            "english": "Composite tasks",
+            "count": "75 项／20 种活动",
+            "tasks": [
+              {
+                "englishName": "Composite kitchen activities",
+                "name": "组合厨房活动",
+                "goal": "按活动要求串联取放、设备操作和物体整理。",
+                "mechanism": "长程顺序依赖、机构接触与多物体目标约束。",
+                "scoring": "满足整项活动的联合目标；只完成一个原子动作不记整项成功。",
+                "examples": [
+                  "ArrangeVegetables（整理蔬菜）：把两种蔬菜从水槽移到砧板。",
+                  "MicrowaveThawing（微波炉解冻准备）：放入食品并启动微波炉。",
+                  "PreSoakPan（准备浸泡锅具）：把锅和海绵放进水槽并打开水龙头。",
+                  "PrepareCoffee（准备咖啡）：从柜中取杯，放入咖啡机并按启动按钮。"
+                ],
+                "criteria": [
+                  "75 项组合任务归属 20 种厨房活动；原论文只训练测试其中 5 项代表任务，不能把这 5 项结果扩展到全部 75 项。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "论文附录 VIII · 全部任务类别"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S8",
+                "label": "论文附录 VIII · 全部任务类别"
+              }
+            ],
+            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。",
+            "figure": {
+              "url": "figures/benchmarks/robocasa-composite.png",
+              "originalUrl": "https://arxiv.org/html/2406.02523v1/task_gen_fig_v3_comp.png",
+              "source": "https://arxiv.org/html/2406.02523v1#S3",
+              "caption": "RoboCasa · 原论文 Figure 5：组合任务示例"
+            }
+          }
+        ],
+        "taskNote": "按 25 项原子任务的八种技能和 75 项组合任务说明；物体类别、炉头位置等语言变体不另计为新技能。",
+        "figure": {
+          "url": "figures/benchmarks/robocasa-tasks.png",
+          "originalUrl": "https://arxiv.org/html/2406.02523v1/fig3_4_comp.png",
+          "source": "https://arxiv.org/html/2406.02523v1#S3",
+          "caption": "RoboCasa · 原论文 Figure 3：可交互厨房设备"
+        },
+        "evaluation": "逐任务检查目标谓词，分别汇总原子、组合和真机子集的成功率。",
+        "comparisons": [
+          {
+            "title": "原论文多模型对照：单项抓放成功率〔%〕",
+            "domain": "仿真",
+            "protocol": "附录 IX 的 PickPlaceCounterToSink 单任务对照；两种策略采用相同类型的视觉编码器，历史窗口分别为 10 帧和 2 帧。",
+            "columns": [
+              "策略",
+              "台面→水槽"
+            ],
+            "rows": [
+              [
+                "BC-Transformer",
+                56
+              ],
+              [
+                "Diffusion Policy",
+                12
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S9",
+                "label": "附录 IX · 两种独立策略对照"
+              }
+            ],
+            "note": "该表仅对应一项任务；历史窗口和执行设置有差异，不据此推断整套任务的架构优劣。"
+          },
+          {
+            "title": "后续 VLA／WAM 对照：24 项原子任务平均成功率〔%〕",
+            "domain": "仿真",
+            "protocol": "Xiaomi-Robotics-1 论文 §3.4、表 2：使用官方 300 条／任务合成数据，24 项任务各测试 100 回合，覆盖 5 个评测场景。",
+            "columns": [
+              "模型",
+              "平均成功率"
+            ],
+            "rows": [
+              [
+                "UVA",
+                50
+              ],
+              [
+                "UWM",
+                60.8
+              ],
+              [
+                "π₀.₅",
+                62.1
+              ],
+              [
+                "π₀-FAST",
+                63.6
+              ],
+              [
+                "GR00T N1.6",
+                66.2
+              ],
+              [
+                "Cosmos Policy",
+                67.1
+              ],
+              [
+                "World2Act",
+                72.6
+              ],
+              [
+                "Xiaomi-Robotics-1",
+                74.5
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2607.15330#S3.SS4",
+                "label": "后续多模型对照 · Xiaomi-Robotics-1 表 2"
+              }
+            ],
+            "note": "此表由后续论文汇集模型结果；不表示全部模型由 RoboCasa 原作者重新训练。后续每任务 100 次与原论文每任务 50 次分别记录。"
+          },
+          {
+            "title": "原论文数据规模对照：24 项平均成功率〔%〕",
+            "domain": "仿真",
+            "protocol": "同一 BC-Transformer 的四种训练数据配置；24 项操作任务各测 50 次，五个固定厨房。",
+            "columns": [
+              "数据配置",
+              "每任务演示",
+              "平均成功率"
+            ],
+            "rows": [
+              [
+                "Human-50",
+                "50 条人工",
+                28.8
+              ],
+              [
+                "Generated-100",
+                "100 条合成",
+                26.3
+              ],
+              [
+                "Generated-300",
+                "300 条合成",
+                35
+              ],
+              [
+                "Generated-3000",
+                "3,000 条合成",
+                47.6
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S5.SS1",
+                "label": "论文 §V-A 与 Figure 12"
+              }
+            ],
+            "note": "这四行是数据配置，不是四种独立模型。Human-50 的训练数据还包含导航任务；24 项评测均不包含导航。"
+          },
+          {
+            "title": "真机对照：已见／未见物体类别成功率〔%〕",
+            "domain": "真机",
+            "protocol": "每项任务 50 条真实示教，比较仅真机数据和真机＋仿真数据共同训练；报告 3 个训练种子的均值。",
+            "columns": [
+              "任务",
+              "Real only 已见",
+              "Real＋Sim 已见",
+              "Real only 未见",
+              "Real＋Sim 未见"
+            ],
+            "rows": [
+              [
+                "台面→水槽",
+                12.7,
+                22,
+                3.3,
+                8.9
+              ],
+              [
+                "水槽→台面",
+                20,
+                29.3,
+                1.1,
+                7.8
+              ],
+              [
+                "台面→柜内",
+                8,
+                22,
+                3.3,
+                11.1
+              ],
+              [
+                "三任务平均",
+                13.6,
+                24.4,
+                2.6,
+                9.3
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S5.SS3",
+                "label": "论文 §V-C 与 Figure 9 · 含各项标准差"
+              }
+            ],
+            "note": "每个种子评估 5 个已见和 3 个未见物体类别；已见／未见以真实示教类别为参照。"
+          }
+        ],
+        "real": {
+          "correspondence": "三项真实厨房抓放与原子技能对应；Real＋Sim 使用真实示教共同训练，不是仿真策略直接零样本迁移。",
+          "protocol": "每项真机任务 50 条演示，共 150 条；每任务训练独立策略，3 个训练种子，分别测试真实示教中已见的 5 类与未见的 3 类物体。",
+          "figure": {
+            "url": "figures/benchmarks/robocasa-real.png",
+            "originalUrl": "https://arxiv.org/html/2406.02523v1/images/real_robot_exps/real_robot_setup.png",
+            "source": "https://arxiv.org/html/2406.02523v1#S5.SS3",
+            "caption": "RoboCasa · 原论文 Figure 8：真实厨房中的抓放"
+          },
+          "groups": [
+            {
+              "title": "真实厨房抓放",
+              "english": "Real kitchen pick-and-place",
+              "count": "3 项",
+              "tasks": [
+                {
+                  "englishName": "Counter to sink",
+                  "name": "台面物体放入水槽",
+                  "goal": "将台面上的目标物体抓起并放入水槽。",
+                  "mechanism": "真实抓持、容器放置及释放。",
+                  "scoring": "目标物体完成指定转移并成功留在水槽。",
+                  "examples": [],
+                  "criteria": [],
+                  "sources": []
+                },
+                {
+                  "englishName": "Sink to counter",
+                  "name": "水槽物体放上台面",
+                  "goal": "将水槽中的目标物体取出并放到台面。",
+                  "mechanism": "狭窄空间抓取与台面支撑。",
+                  "scoring": "目标物体完成从水槽到台面的转移。",
+                  "examples": [],
+                  "criteria": [],
+                  "sources": []
+                },
+                {
+                  "englishName": "Counter to cabinet",
+                  "name": "台面物体放进柜子",
+                  "goal": "把台面物体抓起并放入柜内。",
+                  "mechanism": "柜内空间约束和物体放置。",
+                  "scoring": "目标物体完成从台面到柜内的转移。",
+                  "examples": [],
+                  "criteria": [],
+                  "sources": []
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2406.02523v1#S5.SS3",
+                  "label": "论文 §V-C · 真机任务"
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2406.02523v1#S5.SS3",
+              "label": "论文 §V-C · 训练、对象与结果"
+            }
+          ]
+        },
+        "generalization": {
+          "scene": {
+            "domain": "仿真",
+            "rows": [
+              [
+                "变化条件",
+                "厨房布局与风格、纹理及物体实例。"
+              ],
+              [
+                "训练条件",
+                "从 120 个厨房场景采人工或合成数据，训练图像使用 AI 生成纹理。"
+              ],
+              [
+                "测试条件",
+                "24 项原子操作任务各测试 50 次，分布在五个固定布局／风格场景；使用未见物体实例。"
+              ],
+              [
+                "训练／测试划分",
+                "五个测试场景中有两个采用训练未见的风格；测试使用人工策划纹理，区别于训练的 AI 纹理。"
+              ],
+              [
+                "评测结果",
+                "24 项任务平均成功率：Human-50 为 28.8%；Generated-100／300／3000 为 26.3%／35.0%／47.6%。"
+              ],
+              [
+                "研究目的",
+                "检查多样仿真数据能否支持新物体与新风格中的操作。"
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S5.SS1",
+                "label": "论文 §V-A · 泛化设置与结果"
+              }
+            ]
+          },
+          "physics": {
+            "status": "无"
+          }
+        },
+        "robustness": {
+          "studies": []
+        },
+        "expert": {
+          "introduction": "人工遥操作提供源轨迹，MimicGen 扩增原子操作演示；真实厨房数据另行采集。",
+          "steps": [
+            "4 名操作者用 SpaceMouse 在随机布局、风格和纹理的厨房中采集原子任务，每项保留 50 条。",
+            "把源轨迹分成相对物体的子任务段，用物体位姿将轨迹变换到新场景；每项操作任务生成 3,000 条，失败轨迹剔除。",
+            "同步记录相机、本体状态与动作；MimicGen 所需的物体位姿和子任务边界用于生成，不作为统一视觉策略的特权输入。",
+            "另外采集五项组合任务各 50 条、三项真实任务各 50 条；导航不进入上述 24 项生成集。"
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2406.02523v1#S4.SS3",
+              "label": "论文 §IV-C · 演示生成"
+            },
+            {
+              "url": "https://arxiv.org/html/2406.02523v1#S5",
+              "label": "论文 §V · 各实验数据"
+            }
+          ]
+        },
+        "designs": [
+          {
+            "title": "原子与组合两层任务",
+            "text": "25 项基础任务连接 75 项厨房活动，分别评估技能学习和多步骤组合。"
+          },
+          {
+            "title": "显式新风格与新物体测试",
+            "text": "五个固定测试场景含两个未见风格，操作对象采用训练未见实例。"
+          },
+          {
+            "title": "低成本轨迹扩增对照",
+            "text": "同时公布每任务 50 条人工与 100／300／3,000 条合成数据配置。"
+          },
+          {
+            "title": "真实数据共同训练验证",
+            "text": "三项真机抓放同时比较仅真实数据与真实＋仿真数据。"
+          }
+        ],
+        "designSources": [
+          {
+            "url": "https://arxiv.org/html/2406.02523v1",
+            "label": "原始论文 v1 · 100 项任务与实验"
+          }
+        ],
+        "limitations": [
+          {
+            "title": "长程覆盖",
+            "text": "75 项组合任务中，原论文只对 5 项训练并报告策略结果。"
+          },
+          {
+            "title": "生成数据质量",
+            "text": "只按成功筛选仍可能保留抖动和碰撞轨迹，成功率不能充分反映动作质量。"
+          },
+          {
+            "title": "任务状态近似",
+            "text": "按设备或物体状态判断烹饪准备目标，不等于验证真实加热、冲泡或液体过程。"
+          },
+          {
+            "title": "协议分支",
+            "text": "原论文 50 次／任务与后续模型的 100 次／任务应分别记录，不混为同一实验。"
+          }
+        ],
+        "limitationSources": [
+          {
+            "url": "https://arxiv.org/html/2406.02523v1#S6",
+            "label": "论文结论 · 数据质量与任务覆盖"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.15330#S3.SS4",
+            "label": "后续多模型对照 · Xiaomi-Robotics-1 表 2"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2406.02523v1",
+            "label": "原始论文 v1 · 100 项任务与实验"
+          },
+          {
+            "url": "https://github.com/robocasa/robocasa/blob/v0.2/robocasa/utils/dataset_registry.py",
+            "label": "官方实现 v0.2 · 数据与任务时限"
+          },
+          {
+            "url": "https://robocasa.ai/assets/robocasa_rss24.pdf",
+            "label": "RSS 2024 论文 · 原图与任务目录"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.15330#S3.SS4",
+            "label": "后续多模型对照 · Xiaomi-Robotics-1 表 2"
+          }
+        ],
+        "adoptions": [
+          {
+            "name": "Xiaomi-Robotics-1",
+            "url": "https://arxiv.org/html/2607.15330",
+            "text": "用原版 RoboCasa 的 24 项原子任务进行模型对比，300 条／任务合成训练数据、100 回合／任务测试。"
+          },
+          {
+            "name": "GR00T N1.7",
+            "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/examples/robocasa/README.md",
+            "text": "官方提供 PandaOmron 的 24 项厨房操作训练与评测入口；与 GR1 Tabletop 及 RoboCasa365 分开。"
+          }
+        ]
+      }
+    },
+    "simplerenv": {
+      "name": "SimplerEnv",
+      "paperTitle": "Evaluating Real-World Robot Manipulation Policies in Simulation",
+      "repository": "https://github.com/simpler-env/SimplerEnv",
+      "domain": "仿真 + 真机",
+      "focus": "将真实机器人策略放入匹配的仿真环境，评价任务成功率及仿真与真机的策略排名一致性。",
+      "force": "公开主协议以 RGB 和语言评价任务与排名关联，不统一输入六维腕力。",
+      "metadata": {
+        "stars": 1183,
+        "starsStatus": "verified",
+        "starsDate": "2026-11-15",
+        "starsSource": "https://api.github.com/repos/simpler-env/SimplerEnv",
+        "repository": "https://github.com/simpler-env/SimplerEnv",
+        "firstPublicDate": "2024-05-09",
+        "publicYear": 2024,
+        "dateSource": "https://arxiv.org/html/2405.05941v1",
+        "dateStatus": "verified",
+        "dateBasis": "提出论文首次公开时间"
+      },
+      "usageStudies": [
+        {
+          "id": "sim-groot17",
+          "name": "GR00T N1.7",
+          "title": "GR00T N1.7",
+          "source": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/examples/SimplerEnv/README.md",
+          "usage": "官方分别提供 Google Robot（Fractal）与 WidowX（Bridge）的微调权重及评测入口。",
+          "metadata": {
+            "stars": null,
+            "starsStatus": "not-checked",
+            "scholar": null,
+            "scholarStatus": "not-checked"
+          }
+        },
+        {
+          "id": "sim-g05",
+          "name": "Galaxea G0.5",
+          "title": "Galaxea G0.5",
+          "source": "https://arxiv.org/html/2608.11739",
+          "usage": "采用 Bridge-SimplerEnv 评测 WidowX 操作，并与 LIBERO、RoboTwin 结果分别报告。",
+          "metadata": {
+            "stars": null,
+            "starsStatus": "not-checked",
+            "scholar": null,
+            "scholarStatus": "not-checked"
+          }
+        },
+        {
+          "id": "sim-intern15",
+          "name": "InternVLA-A1.5",
+          "title": "InternVLA-A1.5",
+          "source": "https://arxiv.org/html/2607.04988",
+          "usage": "在 WidowX／Bridge 设置中按 Visual Matching 协议评测。",
+          "metadata": {
+            "stars": null,
+            "starsStatus": "not-checked",
+            "scholar": null,
+            "scholarStatus": "not-checked"
+          }
+        }
+      ],
+      "page": {
+        "sections": [
+          "基本信息",
+          "任务体系与评价标准",
+          "泛化评测",
+          "传感器与硬件鲁棒性",
+          "专家演示生成",
+          "值得关注的设计",
+          "局限性"
+        ],
+        "schemaVersion": 2,
+        "introduction": "将真实机器人策略放入匹配的仿真环境，评价任务成功率及仿真与真机的策略排名一致性。",
+        "facts": [
+          [
+            "仿真平台",
+            "公开主实现为 SAPIEN / ManiSkill2_real2sim（PhysX）；论文另用 Isaac Sim 复核部分 Google Robot 任务。"
+          ],
+          [
+            "机器人本体",
+            [
+              "仿真和真机：Google Robot 单臂＋双指夹爪；WidowX-250 6DOF 单臂＋双指夹爪。",
+              "两种本体各有匹配的相机和控制接口，不是双臂协作设置。"
+            ]
+          ],
+          [
+            "任务数量",
+            "按论文附录 B 为 8 类任务：Google 4 类、WidowX 4 类；Google 抽屉类含 3 层×开／关，另外单列开抽屉后放苹果。"
+          ],
+          [
+            "任务类别",
+            "抓起、物体移近、开关机构、多阶段放物；WidowX 包含勺子、胡萝卜、方块和茄子的四类目标操作。"
+          ],
+          [
+            "专家演示",
+            "不提供统一的仿真任务示教配额；使用 RT-1／RT-X、Octo 等已有检查点，其训练数据来自对应真实机器人数据及 OXE／Bridge 等数据源。"
+          ],
+          [
+            "测试次数",
+            [
+              "真机：Google 抓罐 75、移近 60、开关抽屉合计 54、开抽屉＋苹果 27 次；WidowX 每项 24 次。",
+              "仿真 VM：Google 在相应任务次数上扩展 4 种臂颜色；Octo 另平均 3 个随机种子。VA 按视觉变体数扩展，不共用一个固定总次数。"
+            ]
+          ],
+          [
+            "运行频率",
+            "论文控制器：Google 物理仿真 501 Hz、动作输出 3 Hz；WidowX 物理仿真 500 Hz、动作输出 5 Hz。"
+          ],
+          [
+            "输入",
+            "（机器人视角 RGB〔论文渲染示例 640×512×3，模型再按各自尺寸预处理〕，语言指令）；原始 RT-1／Octo 评测接口不统一输入关节状态或腕部 F/T。"
+          ],
+          [
+            "输出",
+            "（末端平移增量〔3〕，末端旋转增量〔3〕，夹爪命令〔1〕），操作控制共 7 维；Google 夹爪为闭合度增量，WidowX 为开合目标；部分策略另输出终止标志。"
+          ],
+          [
+            "主要评价指标",
+            "逐任务成功率；用 MMRV〔越低越好〕及 Pearson r〔越高越好〕评价仿真／真机表现关联，不把相关性当作绝对成功率一致。"
+          ]
+        ],
+        "inputNote": "VM＝Visual Matching（视觉匹配）；VA＝Variant Aggregation（视觉变体汇总）。原实验直接测试真实数据训练的策略，新增模型的仿真微调结果需要另行标明。",
+        "basicSources": [
+          {
+            "url": "https://arxiv.org/html/2405.05941v1",
+            "label": "原始论文 v1 · 任务、协议和结果"
+          },
+          {
+            "url": "https://simpler-env.github.io/",
+            "label": "官方项目 · 仿真与真机对照"
+          },
+          {
+            "url": "https://github.com/simpler-env/SimplerEnv",
+            "label": "官方实现 · 接入与环境"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#A2",
+            "label": "论文附录 B · 各任务测试次数"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#A3.SS1",
+            "label": "论文附录 C-A · 控制器与频率"
+          }
+        ],
+        "taskGroups": [
+          {
+            "title": "Google Robot 任务",
+            "english": "Google Robot",
+            "count": "4 类",
+            "tasks": [
+              {
+                "englishName": "Pick Coke Can",
+                "name": "抓起可乐罐",
+                "goal": "从桌面抓起空可乐罐。",
+                "mechanism": "两指夹持、抬升及与桌面的接触解除。",
+                "scoring": "达到抓起条件；官方实现还可通过回合内的明显抬升事件累计记成功。",
+                "criteria": [
+                  "三种初始姿态分别放置在 25 个网格位置，真机共 75 次；姿态数量是初始条件。",
+                  "官方实现：抬升超过 1 cm 且不再与非机器人物体有效接触，可标记 lifted；明显抬升超过 2 cm 的累计次数达到 5 也可锁存成功，即使最后放下。",
+                  "连续抓取 5 次是另一种可配置判定，不应当作所有抓罐评测统一采用的条件。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/grasp_single_in_scene.py",
+                    "label": "官方实现 · evaluate 与事件统计"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  }
+                ]
+              },
+              {
+                "englishName": "Move Object Near Object",
+                "name": "将物体移近目标",
+                "goal": "在三物体场景中，把语言指定源物体移到指定目标旁。",
+                "mechanism": "物体移动、相对位置关系及干扰物保持。",
+                "scoring": "移动正确物体且接近目标，同时满足其他物体和高度检查。",
+                "criteria": [
+                  "5 组物体三元组×2 种三角布局×6 种源／目标排列，共 60 次真机测试。",
+                  "官方实现：源物体水平位移大于 3 cm，且大于其他物体位移；中心距离小于双方包围盒水平半对角线之和再加 10 cm。",
+                  "还检查源物体最接近目标，并限制其他物体高度下降；不能只用中心距离判成功。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/move_near_in_scene.py",
+                    "label": "官方实现 · 目标与高度检查"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  }
+                ]
+              },
+              {
+                "englishName": "Open / Close Drawer",
+                "name": "打开／关闭指定抽屉",
+                "goal": "根据指令拉开或关闭上、中、下层抽屉。",
+                "mechanism": "沿滑轨运动的机构约束与把手接触。",
+                "scoring": "目标抽屉关节达到对应开或关阈值。",
+                "criteria": [
+                  "9 个机器人起始位置×3 层抽屉×2 个方向，共 54 次真机测试；开、关各 27 次。",
+                  "官方实现：打开 qpos≥0.15 m，关闭 qpos≤0.05 m；两种方向的目标条件分开。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/open_drawer_in_scene.py",
+                    "label": "官方实现 · 开关阈值"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  }
+                ]
+              },
+              {
+                "englishName": "Open Drawer and Place Apple",
+                "name": "开抽屉后放苹果",
+                "goal": "先打开顶层抽屉，再把柜顶苹果放入。",
+                "mechanism": "多阶段指令切换、抽屉滑轨及物体接触。",
+                "scoring": "完成放物阶段并满足抽屉与苹果接触检查。",
+                "criteria": [
+                  "3 个机器人位置×9 个苹果位置，共 27 次真机测试。",
+                  "策略输出终止标志或达到一半时限后，指令从开抽屉切换为放苹果。",
+                  "官方实现：进入第二子任务、抽屉 qpos≥0.05 m，且曾记录苹果与抽屉指定碰撞形状的有效接触；该检查不是完整的最终容器包含关系。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/place_in_closed_drawer_in_scene.py",
+                    "label": "官方实现 · 阶段与接触判定"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A2",
+                "label": "论文附录 B · 各任务测试次数"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "WidowX＋Bridge 任务",
+            "english": "WidowX + Bridge",
+            "count": "4 类",
+            "tasks": [
+              {
+                "englishName": "Put Spoon on Towel",
+                "name": "勺子放毛巾上",
+                "goal": "抓勺并放到指定毛巾上。",
+                "mechanism": "长条工具抓持、转向与平面放置。",
+                "scoring": "勺子进入毛巾目标范围；允许部分位于毛巾上。",
+                "criteria": [
+                  "15 cm 边长正方形的不同顶点放勺和毛巾，勺子两种朝向，共 24 次真机测试。",
+                  "官方实现为 partial-on-target 配置，不能套用其他放置任务的完整支撑要求。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  },
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/put_on_in_scene.py",
+                    "label": "官方实现 · 勺子部分覆盖例外"
+                  }
+                ]
+              },
+              {
+                "englishName": "Put Carrot on Plate",
+                "name": "胡萝卜放盘子上",
+                "goal": "抓起胡萝卜并放到盘中。",
+                "mechanism": "细长物体抓持、盘面支撑及空间对齐。",
+                "scoring": "物体满足目标盘上的几何及接触检查。",
+                "criteria": [
+                  "采用与勺子任务相似的初态枚举，每策略真机 24 次。",
+                  "官方放置实现检查水平范围与高度，并按任务配置排除与非目标、非机器人物体的有效接触。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  },
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/put_on_in_scene.py",
+                    "label": "官方实现 · 放置判定"
+                  }
+                ]
+              },
+              {
+                "englishName": "Stack Green Block on Yellow Block",
+                "name": "绿块叠黄块",
+                "goal": "把绿色方块叠到黄色方块上。",
+                "mechanism": "上下叠放、支撑接触与位置对齐。",
+                "scoring": "绿色块满足黄色块上方的目标位置与接触条件。",
+                "criteria": [
+                  "方块边长 3 cm；初态正方形边长为 10 cm、20 cm 两档，共 24 次真机测试。",
+                  "这两档是初态布局，不是物理参数外推；不另设论文未定义的统一释放或稳定时长。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  },
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/put_on_in_scene.py",
+                    "label": "官方实现 · 叠块判定"
+                  }
+                ]
+              },
+              {
+                "englishName": "Put Eggplant in Basket",
+                "name": "茄子放篮子",
+                "goal": "从水槽右侧抓起茄子，放入左侧黄色篮子。",
+                "mechanism": "水槽内抓取、容器范围及支撑接触。",
+                "scoring": "茄子达到篮子对应的目标放置条件。",
+                "criteria": [
+                  "每策略真机 24 次，茄子初始位置与姿态随机；采样时保证可直接抓取且不贴近水槽边缘。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2405.05941v1#A2",
+                    "label": "论文附录 B · 各任务测试次数"
+                  },
+                  {
+                    "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/put_on_in_scene.py",
+                    "label": "官方实现 · 茄子任务"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A2",
+                "label": "论文附录 B · 各任务测试次数"
+              }
+            ],
+            "note": ""
+          }
+        ],
+        "taskNote": "按原论文的两种本体分别列任务；开／关、物体朝向及初态网格属于任务变体。成功细则中的数值来自当前官方实现，区别于论文的真实人工评分。",
+        "figure": {
+          "url": "figures/benchmarks/simpler-tasks.png",
+          "originalUrl": "https://simpler-env.github.io/static/images/teaser.png",
+          "source": "https://simpler-env.github.io/",
+          "caption": "SimplerEnv · 官方项目：对应真机与仿真及成功率关联"
+        },
+        "evaluation": "报告各任务成功率，并用最大排名反转的平均值 MMRV 与 Pearson r 衡量仿真和真机策略表现的关联。",
+        "comparisons": [
+          {
+            "title": "Google Robot：Visual Matching 仿真成功率〔%〕",
+            "domain": "仿真",
+            "protocol": "原论文表 IV；固定策略直接进入仿真，Google 四种机械臂／夹爪颜色结果平均；Octo 另平均 3 个随机种子。",
+            "columns": [
+              "策略／检查点",
+              "抓罐",
+              "移近",
+              "开抽屉",
+              "关抽屉",
+              "开抽屉＋苹果"
+            ],
+            "rows": [
+              [
+                "RT-1 Converged",
+                85.7,
+                44.2,
+                60.1,
+                86.1,
+                6.5
+              ],
+              [
+                "RT-1 15%",
+                71,
+                35.4,
+                46.3,
+                66.7,
+                13
+              ],
+              [
+                "RT-1-X",
+                56.7,
+                31.7,
+                29.6,
+                89.1,
+                21.3
+              ],
+              [
+                "RT-2-X",
+                78.7,
+                77.9,
+                15.7,
+                34.3,
+                3.7
+              ],
+              [
+                "Octo-Base",
+                17,
+                4.2,
+                0.9,
+                44.4,
+                0
+              ],
+              [
+                "RT-1 Begin",
+                2.7,
+                5,
+                0,
+                27.8,
+                0
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A4",
+                "label": "论文附录 D · 表 IV"
+              }
+            ],
+            "note": "RT-1 Converged、15%、Begin 是同一方法的训练阶段检查点，不是三种独立基础模型；本表不把 Variant Aggregation 混入。"
+          },
+          {
+            "title": "WidowX：Visual Matching 仿真成功率〔%〕",
+            "domain": "仿真",
+            "protocol": "原论文表 V；同一 WidowX＋Bridge 设置，Octo 按 3 个随机种子平均，不做 Google 的四种臂颜色扩展。",
+            "columns": [
+              "策略",
+              "勺子→毛巾",
+              "胡萝卜→盘",
+              "叠方块",
+              "茄子→篮"
+            ],
+            "rows": [
+              [
+                "RT-1-X",
+                0,
+                4.2,
+                0,
+                0
+              ],
+              [
+                "Octo-Base",
+                12.5,
+                8.3,
+                0,
+                43.1
+              ],
+              [
+                "Octo-Small",
+                47.2,
+                9.7,
+                4.2,
+                56.9
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A4",
+                "label": "论文附录 D · 表 V"
+              }
+            ],
+            "note": "表 V 的 Grasp 是中间抓取进度；这里仅列最终 Success。四项分别展示，不与 Google 的不同任务做统一平均。"
+          },
+          {
+            "title": "Google Robot：对应真机成功率〔%〕",
+            "domain": "真机",
+            "protocol": "表 IV 的真机任务：抓罐 75 次、移近 60 次、开关抽屉合计 54 次、开抽屉后放苹果 27 次。",
+            "columns": [
+              "策略／检查点",
+              "抓罐",
+              "移近",
+              "开抽屉",
+              "关抽屉",
+              "开抽屉＋苹果"
+            ],
+            "rows": [
+              [
+                "RT-1 Converged",
+                85.3,
+                63.3,
+                81.5,
+                92.6,
+                18.5
+              ],
+              [
+                "RT-1 15%",
+                92,
+                58.3,
+                70.4,
+                88.9,
+                18.5
+              ],
+              [
+                "RT-1-X",
+                76,
+                45,
+                51.9,
+                74.1,
+                40.7
+              ],
+              [
+                "RT-2-X",
+                90.7,
+                73.3,
+                33.3,
+                63,
+                7.4
+              ],
+              [
+                "Octo-Base",
+                29.3,
+                35,
+                14.8,
+                51.9,
+                0
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A2",
+                "label": "附录 B · 次数"
+              },
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A4",
+                "label": "附录 D · 表 IV"
+              }
+            ],
+            "note": "RT-1 Begin 的抽屉实验因潜在硬件损伤提前结束，故不将其截断结果并入此处完整行。"
+          },
+          {
+            "title": "WidowX：对应真机成功率〔%〕",
+            "domain": "真机",
+            "protocol": "表 V 的最终 Success，每项每策略 24 次；使用原始真实数据训练的策略，不加入仿真微调。",
+            "columns": [
+              "策略",
+              "勺子→毛巾",
+              "胡萝卜→盘",
+              "叠方块",
+              "茄子→篮"
+            ],
+            "rows": [
+              [
+                "RT-1-X",
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                "Octo-Base",
+                33.3,
+                25,
+                0,
+                23.3
+              ],
+              [
+                "Octo-Small",
+                41.7,
+                8.3,
+                12.5,
+                43.3
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A4",
+                "label": "论文附录 D · 表 V"
+              }
+            ],
+            "note": "保留论文原表的舍入数值；如需复现计数口径，应结合原始评测记录，不能由显示百分比反推整数试验数。"
+          }
+        ],
+        "real": {
+          "correspondence": "同一真实数据训练的策略在对应真机和仿真中分别运行，验证 real-to-sim 评测代理；不是仿真训练后迁移到真机。",
+          "protocol": "真实任务初态按附录 B 枚举；Google 与 WidowX 分别记录任务完成及中间进度，真机次数与仿真颜色／种子扩展分开统计。",
+          "figure": {
+            "url": "figures/benchmarks/simpler-real.png",
+            "originalUrl": "https://simpler-env.github.io/static/images/visual_matching.png",
+            "source": "https://simpler-env.github.io/#visual-matching-mitigates-the-real-to-sim-visual-gap",
+            "caption": "SimplerEnv · 官方项目：真实场景与视觉匹配仿真的对照"
+          },
+          "groups": [
+            {
+              "title": "Google Robot 真机",
+              "english": "Google Robot real evaluation",
+              "count": "4 类",
+              "tasks": [
+                {
+                  "englishName": "Tabletop and drawer tasks",
+                  "name": "桌面与抽屉操作",
+                  "goal": "执行抓罐、移近、开关抽屉及开抽屉后放苹果。",
+                  "mechanism": "真实夹持、机构运动和多阶段交互。",
+                  "scoring": "人工按对应任务判断最终完成；不把仿真的关节和接触阈值直接作为真机测量。",
+                  "criteria": [
+                    "每策略：75＋60＋54＋27 次；开关抽屉分别为 27 次。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2405.05941v1#A2",
+                      "label": "论文附录 B · 各任务测试次数"
+                    }
+                  ]
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2405.05941v1#A2",
+                  "label": "论文附录 B · 各任务测试次数"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "WidowX 真机",
+              "english": "WidowX real evaluation",
+              "count": "4 类",
+              "tasks": [
+                {
+                  "englishName": "Bridge object placement",
+                  "name": "Bridge 物体放置",
+                  "goal": "完成勺子放毛巾、胡萝卜放盘、叠方块和茄子入篮。",
+                  "mechanism": "真实物体支撑、抓持及容器放置。",
+                  "scoring": "分别记录中间抓取与最终放置；最终 Success 才作为完整任务成功。",
+                  "criteria": [
+                    "每任务、每策略各 24 次。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2405.05941v1#A2",
+                      "label": "论文附录 B · 各任务测试次数"
+                    }
+                  ]
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2405.05941v1#A2",
+                  "label": "论文附录 B · 各任务测试次数"
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2405.05941v1",
+              "label": "原始论文 v1 · 任务、协议和结果"
+            },
+            {
+              "url": "https://arxiv.org/html/2405.05941v1#A2",
+              "label": "论文附录 B · 各任务测试次数"
+            }
+          ]
+        },
+        "generalization": {
+          "scene": {
+            "domain": "仿真",
+            "rows": [
+              [
+                "变化条件",
+                "背景、光照、干扰物及桌面纹理；相机姿态另在第 04 章。"
+              ],
+              [
+                "训练条件",
+                "固定 RT-1 w/o Aug 与 RT-1＋Aug 两个检查点；后者训练期使用图像增强，测试时两者均不更新。"
+              ],
+              [
+                "测试条件",
+                "Google 的 Pick Coke Can 与 Move Near，基础场景加各轴两个离散视觉变体。"
+              ],
+              [
+                "训练／测试划分",
+                "改变仿真测试视觉；不为每个变体重训。与真实测试条件作行为关联对照。"
+              ],
+              [
+                "评测结果",
+                "无增强 RT-1：抓罐基础 92.0%，两种桌纹为 86.7%／74.7%；移近基础 46.7%，两种桌纹为 55.0%／20.0%。"
+              ],
+              [
+                "研究目的",
+                "检查仿真是否能反映真实策略对视觉分布变化的敏感性。"
+              ]
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#S6.SS3",
+                "label": "论文 §VI-C · 分布变化"
+              },
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A5",
+                "label": "附录 E · 表 VI、VII"
+              }
+            ]
+          },
+          "physics": {
+            "status": "无",
+            "note": "另做仿真参数敏感性：罐质量 10／20／40／80 g 与夹爪摩擦 0.25／0.5／1／2 的 16 种组合，MMRV 均为 0.031；这是固定真实策略的仿真器参数分析，不是已定义训练区间的物理 OOD。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2405.05941v1#A7.SS1",
+                "label": "附录 G-A · 表 X"
+              }
+            ]
+          }
+        },
+        "robustness": {
+          "studies": [
+            {
+              "title": "相机安装姿态",
+              "domain": "仿真",
+              "rows": [
+                [
+                  "传感器／硬件",
+                  "Google Robot 机器人视角相机。"
+                ],
+                [
+                  "扰动类型",
+                  "改变相机朝向，模拟安装视角变化。"
+                ],
+                [
+                  "扰动设置",
+                  "向下、向上两种离散视角，分别与基础视角比较。"
+                ],
+                [
+                  "测试条件",
+                  "固定 RT-1 的增强／无增强检查点，测试抓罐和移近；沿用两项任务的初态和模型种子扩展。"
+                ],
+                [
+                  "测试结果",
+                  "无增强 RT-1：抓罐 92.0%→5.3%／28.0%，移近 46.7%→11.7%／43.3%；增强版抓罐 80.0%→26.7%／10.7%。"
+                ]
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2405.05941v1#A5",
+                  "label": "附录 E · 表 VII"
+                }
+              ]
+            }
+          ]
+        },
+        "expert": {
+          "introduction": "原始 SimplerEnv 是策略评测环境，不以生成新的仿真专家示教为训练前提。",
+          "steps": [
+            "选取原始真实机器人数据训练的 RT-1、RT-1-X、RT-2-X 或 Octo 检查点；不在 SimplerEnv 中重新训练原实验策略。",
+            "利用少量真实轨迹匹配末端控制响应，校准关节控制参数；该步骤不是新增任务动作标签。",
+            "按附录 B 的物体位置、朝向和机器人初态复现测试实例，仿真与真机分别执行。",
+            "记录逐回合任务完成、中间进度与视频，再按视觉匹配或视觉变体汇总计算成功率及相关指标。"
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2405.05941v1#S4",
+              "label": "论文 §IV · 真实控制与视觉匹配"
+            },
+            {
+              "url": "https://arxiv.org/html/2405.05941v1#S6.SS1",
+              "label": "论文 §VI-A · 被测检查点"
+            },
+            {
+              "url": "https://arxiv.org/html/2405.05941v1#A2",
+              "label": "论文附录 B · 各任务测试次数"
+            }
+          ]
+        },
+        "designs": [
+          {
+            "title": "直接检验评测代理",
+            "text": "同一策略在仿真和真机上成对测试，目标是复现策略优劣而非追求完整数字孪生。"
+          },
+          {
+            "title": "排名反转有幅度权重",
+            "text": "MMRV 对每个策略取最大真实成功率差对应的排名反转，再平均；真实差距很小的反转惩罚较小。"
+          },
+          {
+            "title": "两种视觉评测路径",
+            "text": "视觉匹配对齐前景与真实背景，视觉变体汇总则平均多个背景、光照、杂物和纹理设置。"
+          },
+          {
+            "title": "原论文关联结果",
+            "text": "表 I 的 Google 三类任务汇总：VM 的 MMRV＝0.056、r＝0.924；VA 为 0.143、0.778，分别评价相关而非同一绝对得分。"
+          }
+        ],
+        "designSources": [
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#S3.SS2",
+            "label": "论文 §III-B · MMRV"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#S6.SS2",
+            "label": "论文表 I · 关联结果"
+          }
+        ],
+        "limitations": [
+          {
+            "title": "接触范围",
+            "text": "任务集中在刚体抓放和抽屉，未覆盖柔性操作或精密装配中的广泛接触行为。"
+          },
+          {
+            "title": "关联范围",
+            "text": "Google 主要比较 6 个检查点，其中 3 个是 RT-1 的训练阶段；WidowX 主表只有 3 项策略。"
+          },
+          {
+            "title": "成功近似",
+            "text": "部分官方判定使用事件累计或接触代理，开抽屉放苹果的接触检查不保证最终完整包含。"
+          },
+          {
+            "title": "初态采样",
+            "text": "真机各任务为 24–75 次，常见初态来自固定网格，相关性结论限于这些对象与场景设置。"
+          }
+        ],
+        "limitationSources": [
+          {
+            "url": "https://arxiv.org/html/2405.05941v1",
+            "label": "原始论文 v1 · 任务、协议和结果"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#A2",
+            "label": "论文附录 B · 各任务测试次数"
+          },
+          {
+            "url": "https://github.com/simpler-env/ManiSkill2_real2sim/blob/main/mani_skill2_real2sim/envs/custom_scenes/place_in_closed_drawer_in_scene.py",
+            "label": "官方实现 · 接触代理"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2405.05941v1",
+            "label": "原始论文 v1 · 任务、协议和结果"
+          },
+          {
+            "url": "https://simpler-env.github.io/",
+            "label": "官方项目 · 仿真与真机对照"
+          },
+          {
+            "url": "https://github.com/simpler-env/SimplerEnv",
+            "label": "官方实现 · 接入与环境"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#A2",
+            "label": "论文附录 B · 各任务测试次数"
+          },
+          {
+            "url": "https://arxiv.org/html/2405.05941v1#A3.SS1",
+            "label": "论文附录 C-A · 控制器与频率"
+          }
+        ],
+        "adoptions": [
+          {
+            "name": "GR00T N1.7",
+            "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/examples/SimplerEnv/README.md",
+            "text": "官方分别提供 Google Robot（Fractal）与 WidowX（Bridge）的微调权重及评测入口。"
+          },
+          {
+            "name": "Galaxea G0.5",
+            "url": "https://arxiv.org/html/2608.11739",
+            "text": "采用 Bridge-SimplerEnv 评测 WidowX 操作，并与 LIBERO、RoboTwin 结果分别报告。"
+          },
+          {
+            "name": "InternVLA-A1.5",
+            "url": "https://arxiv.org/html/2607.04988",
+            "text": "在 WidowX／Bridge 设置中按 Visual Matching 协议评测。"
+          }
+        ]
+      }
+    },
+    "rmbench": {
+      "name": "RMBench",
+      "paperTitle": "RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design",
+      "repository": "https://github.com/RoboTwin-Platform/RMBench",
+      "domain": "仿真 + 真机",
+      "focus": "双臂记忆依赖操作：隐藏目标回忆、阶段跟踪、重复试探与事件计数。",
+      "force": "标准观测以 RGB、语言和机器人状态为主，未提供统一的左右腕六维力评测协议；可参考记忆任务设计。",
+      "metadata": {
+        "firstPublicDate": "2026-03-01",
+        "publicYear": 2026,
+        "dateStatus": "verified",
+        "dateBasis": "arXiv v1 首次公开日期",
+        "dateSource": "https://arxiv.org/abs/2603.01229",
+        "stars": 233,
+        "starsStatus": "verified",
+        "starsSource": "https://github.com/RoboTwin-Platform/RMBench",
+        "starsDate": "2026-11-17",
+        "repositoryScope": "RMBench 官方仓库 Stars 快照"
+      },
+      "usageStudies": [
+        {
+          "id": "rmbench-evomem-vla",
+          "name": "EvoMem-VLA",
+          "title": "EvoMem-VLA: State-Evolution Memory for Long-Horizon Robot Manipulation",
+          "source": "https://arxiv.org/html/2610.05418",
+          "usage": "沿用 RMBench 的九项任务、官方环境和成功判定，以单个联合训练策略评测每项 100 回合。",
+          "metadata": {
+            "stars": null,
+            "starsStatus": "not-checked",
+            "scholar": null,
+            "scholarStatus": "not-checked"
+          }
+        }
+      ],
+      "page": {
+        "sections": [
+          "基本信息",
+          "任务体系与评价标准",
+          "泛化评测",
+          "传感器与硬件鲁棒性",
+          "专家演示生成",
+          "值得关注的设计",
+          "局限性"
+        ],
+        "schemaVersion": 1,
+        "introduction": "基于 RoboTwin 2.0 的双臂记忆操作基准，用九项任务检查策略能否保留关键历史信息、跟踪阶段并利用试错反馈。",
+        "facts": [
+          [
+            "仿真平台",
+            "主评测基于 RoboTwin 2.0／SAPIEN；协议按论文 v4（2026-10-15）整理。"
+          ],
+          [
+            "机器人本体",
+            [
+              "仿真：Aloha-AgileX 双臂，每臂 6 个关节＋平行夹爪。",
+              "真机：X-One 双臂平台＋夹爪，用于三项对应任务。"
+            ]
+          ],
+          [
+            "任务数量",
+            "9 项仿真任务；另有 3 项真机验证任务。"
+          ],
+          [
+            "任务类别",
+            "M(1)：5 项，保留一个关键历史观测；M(n)：4 项，需要累计多个历史事件或尝试反馈。"
+          ],
+          [
+            "专家演示",
+            [
+              "仿真：每项 50 条，共 450 条；提供逐观测／动作对齐的细粒度语言标注。",
+              "真机：每项 100 条遥操作示教，共 300 条，单独训练和评测。"
+            ]
+          ],
+          [
+            "测试次数",
+            [
+              "仿真：每项任务、每种方法 100 回合，九项合计 900 回合。",
+              "真机：每项任务、每种方法 40 次，三项合计 120 次。"
+            ]
+          ],
+          [
+            "运行频率",
+            "官方实现默认物理步进 250 Hz；论文 Mem-0 的闭环控制为 5–10 Hz，不作为全部策略的统一频率。"
+          ],
+          [
+            "输入",
+            "（头部 RGB〔高 240×宽 320×3〕，左右腕 RGB〔各高 240×宽 320×3〕，语言指令，本体状态〔关节模式：左右各关节位置 6＋夹爪 1；末端模式：左右各位置 3＋四元数 4＋夹爪 1〕，历史观测〔按策略组织〕）。"
+          ],
+          [
+            "输出",
+            "官方实现支持：（左臂绝对关节目标〔6〕，左夹爪〔1〕，右臂绝对关节目标〔6〕，右夹爪〔1〕），共 14 维；或每臂（绝对末端位置〔3〕，四元数姿态〔4〕，夹爪〔1〕），双臂共 16 维。"
+          ],
+          [
+            "主要评价指标",
+            "成功率（SR）：完整完成整项任务的回合比例；M(1)、M(n) 各组按任务取均值，真机单独统计。"
+          ]
+        ],
+        "inputNote": "图像尺寸和两种动作接口据官方实现；论文 Mem-0 配置为 224×224 图像、16 维状态／动作，不将其写成 16 个机械臂关节。当前仓库批评测清单还含 place_block_mat，本页仅统计论文定义的九项任务。",
+        "basicSources": [
+          {
+            "url": "https://arxiv.org/html/2603.01229v4",
+            "label": "原论文 v4 · 评测协议"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/task_config/demo_clean.yml",
+            "label": "官方实现 · 干净场景与采集配置"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/_base_task.py",
+            "label": "官方实现 · 观测和动作"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/robot/_robot_info.json",
+            "label": "官方实现 · 本体自由度"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/task_config/_camera_config.yml",
+            "label": "官方实现 · 相机尺寸"
+          }
+        ],
+        "figure": {
+          "url": "figures/benchmarks/rmbench-overview.png",
+          "originalUrl": "https://arxiv.org/html/2603.01229v4/benchmark.png",
+          "source": "https://arxiv.org/html/2603.01229v4#S3.F1",
+          "caption": "RMBench · 官方 Figure 1：九项记忆操作任务总览"
+        },
+        "taskNote": "按论文的 M(1) 与 M(n) 两类完整列出九项任务；下列数值细则来自固定版本的官方实现，不套用于真机。",
+        "taskGroups": [
+          {
+            "title": "关键历史观测记忆",
+            "english": "M(1) · Single-observation memory",
+            "count": "5 项",
+            "note": "当前画面无法还原初始目标或物体布局，需要保留关键历史观测。",
+            "tasks": [
+              {
+                "englishName": "Observe and Pick Up",
+                "name": "观察后抓取",
+                "goal": "先观察架上的参考物，参考物被遮住后抓起桌上匹配物体。",
+                "focus": "保留消失的目标身份，避免抓取外观相似的干扰物。",
+                "scoring": "观察阶段保持手臂不动；遮挡后抬起与参考物匹配的目标。",
+                "criteria": [
+                  "官方实现：第 20 次成功检查时加入遮挡；此前任一腕端位置相对起点偏移超过 0.03 m 会置失败标志。",
+                  "加入遮挡后，匹配目标的世界坐标高度 z＞0.8 m 记成功；这是高度条件，不是要求抬升 0.8 m。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/observe_and_pickup.py",
+                    "label": "官方实现 · observe_and_pickup.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Rearrange Blocks",
+                "name": "重排方块",
+                "goal": "将中央方块移上垫子，按按钮，再将另一方块移到中央空区。",
+                "focus": "区分按键前后的任务阶段，记住已完成的移动。",
+                "scoring": "按规定阶段完成两次移动及一次按键，并在最终放置后松开右夹爪。",
+                "criteria": [
+                  "官方实现：按键时两块分别与指定垫及中央垫的 x、y 差均小于 0.03 m，且 z＜0.77 m，才进入下一阶段。",
+                  "随后保留第一块位置，将第二块放到中央空区；x、y 差均小于 0.03 m、右夹爪打开且累计按键一次。",
+                  "完成阶段会锁存；不要求额外的连续稳定时长。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/rearrange_blocks.py",
+                    "label": "官方实现 · rearrange_blocks.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Put Back Block",
+                "name": "方块放回原位",
+                "goal": "把四个垫子中某一垫上的方块移到中央，按键后放回原来的垫子。",
+                "focus": "保留物体最初所在位置，避免根据当前画面猜测归位目标。",
+                "scoring": "先完成中央放置与按键，再将方块放回最初的垫子并松开右夹爪。",
+                "criteria": [
+                  "官方实现：中央阶段 x、y 差均小于 0.04 m，且 z＜0.77 m；按键累计一次。",
+                  "归位阶段相对原目标 x、y 差均小于 0.03 m，z＜0.77 m，右夹爪打开；完成阶段锁存。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/put_back_block.py",
+                    "label": "官方实现 · put_back_block.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Swap Blocks",
+                "name": "交换方块",
+                "goal": "借助第三个空垫交换两个方块的位置，最后按按钮确认。",
+                "focus": "利用初始位置和中间暂存状态决定下一次搬运。",
+                "scoring": "两个方块分别到达对方的初始垫，右夹爪打开，并完成一次确认按键。",
+                "criteria": [
+                  "官方实现：两块相对互换目标的 |Δx|＜0.04 m、|Δy|＜0.06 m、z＜0.765 m。",
+                  "还检查夹爪打开、任务内部有效过程标志，以及确认按钮累计一次且当前处于按下状态；只交换最终位置并不自动通过。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/swap_blocks.py",
+                    "label": "官方实现 · swap_blocks.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Swap T",
+                "name": "交换 T 形块",
+                "goal": "交换两块不同颜色 T 形物体的位置和朝向。",
+                "focus": "记住两块物体的原始位姿，并精确恢复到互换后的目标。",
+                "scoring": "两块均达到对方的位置和要求朝向，落回桌面且双夹爪打开。",
+                "criteria": [
+                  "官方实现：每块在 xy 平面的目标距离小于 0.025 m，旋转差小于 15°，z＜0.77 m。",
+                  "左右夹爪均须打开；没有另外要求连续维持若干帧。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/swap_T.py",
+                    "label": "官方实现 · swap_T.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2603.01229v4#S3",
+                "label": "论文 §III · TMC 与任务分组"
+              }
+            ]
+          },
+          {
+            "title": "多事件记忆与试错",
+            "english": "M(n) · Multi-event memory",
+            "count": "4 项",
+            "note": "需要累计尝试反馈、执行顺序或重复事件；n 表示语义记忆需求，不等同于视频帧数。",
+            "tasks": [
+              {
+                "englishName": "Battery Try",
+                "name": "电池试插",
+                "goal": "反复调整两节电池的组合及方向，尝试使双槽电池座成功工作。",
+                "focus": "累计试插反馈，排除失败的方向组合。",
+                "scoring": "两节电池均到达目标槽位、姿态组合正确且指示面板亮起。",
+                "criteria": [
+                  "官方实现：两节电池各自的 xy 槽位距离均小于 0.02 m，离散姿态组合与目标一致，并检查面板状态。",
+                  "槽位检查没有统一插入深度或接触力阈值；不能将通过几何和状态检查等同于验证真实电接触。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/battery_try.py",
+                    "label": "官方实现 · battery_try.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Blocks Ranking Try",
+                "name": "方块排序试探",
+                "goal": "尝试三块不同颜色方块的排列，按键取得反馈，直到排列正确。",
+                "focus": "利用历史尝试和反馈避免重复无效的排列。",
+                "scoring": "三个目标方块按要求从左到右排列，松开右夹爪并按下确认按钮。",
+                "criteria": [
+                  "官方实现：相邻两块满足 |Δx|＜0.13 m、|Δy|＜0.04 m，并检查目标对象的 x 坐标严格递增。",
+                  "同时要求右夹爪打开且确认按钮处于已按状态；物块都在桌上不代表完整成功。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/blocks_ranking_try.py",
+                    "label": "官方实现 · blocks_ranking_try.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Cover Blocks",
+                "name": "盖住并按序揭开方块",
+                "goal": "从左到右盖住三块彩色方块，再按红、绿、蓝顺序揭开并归还盖子。",
+                "focus": "记住遮挡前的颜色位置及已经揭开的对象。",
+                "scoring": "完整通过规定的覆盖、揭盖状态序列；顺序错误记失败。",
+                "criteria": [
+                  "官方实现：覆盖条件为盖子相对方块的 x、y 差均小于 0.03 m，且盖子 z＜0.742 m。",
+                  "状态机要求先依次覆盖，再按目标颜色顺序揭开；跳过或逆转要求的状态会置失败标志。",
+                  "代码以状态序列到达末项判成功，没有另设所有盖子精确回原位的最终几何检查。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/cover_blocks.py",
+                    "label": "官方实现 · cover_blocks.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              },
+              {
+                "englishName": "Press Button",
+                "name": "按数字次数按键",
+                "goal": "读取两张数字牌，分别按左、中按钮指定次数，再按右侧按钮确认。",
+                "focus": "累计已完成的按压事件，避免少按或多按。",
+                "scoring": "左、中两组累计次数分别等于目标数字，并处于确认按钮按下状态。",
+                "criteria": [
+                  "官方实现：两组累计按压数必须分别严格等于 card_id_1、card_id_2，确认按键标志为真。",
+                  "按压计数基于按钮触发与复位，持续按住不作为多次按压；额外按压不能算成功。",
+                  "该检查不额外强制全部左键操作必须先于中键操作；次数和确认状态应与论文任务描述区分。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/press_button.py",
+                    "label": "官方实现 · press_button.py"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2603.01229v4#A1",
+                    "label": "论文附录 A · 任务定义"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2603.01229v4#A1",
+                "label": "论文附录 A · 完整任务目录"
+              }
+            ]
+          }
+        ],
+        "evaluation": "以各任务的完整成功条件判断回合成功，分别汇总五项 M(1)、四项 M(n) 及三项真机任务；不以部分步骤完成替代整项成功。",
+        "comparisons": [],
+        "real": {
+          "correspondence": "真机验证沿用方块归位、重排和覆盖顺序三类记忆任务，使用 X-One 平台上的真实示教重新训练；不是仿真策略零样本迁移。",
+          "protocol": "每项采集 100 条遥操作演示，每种方法测试 40 次。真机按完整流程记录成功率，与仿真分开统计。",
+          "groups": [
+            {
+              "title": "X-One 真机验证",
+              "english": "Physical validation",
+              "count": "3 项",
+              "tasks": [
+                {
+                  "englishName": "Put Back Block",
+                  "name": "方块放回原位",
+                  "goal": "把四个垫子中某一垫上的方块移到中央，按键后放回原来的垫子。",
+                  "focus": "保留物体最初所在位置，避免根据当前画面猜测归位目标。",
+                  "scoring": "完成移至中央、按键、返回原始垫子的完整流程。",
+                  "criteria": [],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+                      "label": "论文 §V-C · 真机协议"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Rearrange Blocks",
+                  "name": "重排方块",
+                  "goal": "将中央方块移上垫子，按按钮，再将另一方块移到中央空区。",
+                  "focus": "区分按键前后的任务阶段，记住已完成的移动。",
+                  "scoring": "完成第一块移动、按键及第二块移动的规定顺序。",
+                  "criteria": [],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+                      "label": "论文 §V-C · 真机协议"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Cover Blocks",
+                  "name": "盖住并按序揭开方块",
+                  "goal": "从左到右盖住三块彩色方块，再按红、绿、蓝顺序揭开并归还盖子。",
+                  "focus": "记住遮挡前的颜色位置及已经揭开的对象。",
+                  "scoring": "完成从左到右覆盖，再按红、绿、蓝顺序揭开的完整流程。",
+                  "criteria": [],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+                      "label": "论文 §V-C · 真机协议"
+                    }
+                  ]
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+                  "label": "论文 §V-C · 三项真机任务"
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+              "label": "论文 §V-C · 数据与测试次数"
+            }
+          ]
+        },
+        "generalization": {
+          "scene": {
+            "status": "无"
+          },
+          "physics": {
+            "status": "无"
+          }
+        },
+        "robustness": {
+          "studies": []
+        },
+        "expert": {
+          "introduction": "仿真复用 RoboTwin 的脚本专家与数据采集流程；真机采用遥操作，二者分别组织训练数据。",
+          "steps": [
+            "在各任务定义的初始物体位置、颜色、目标布局或试探条件下运行脚本专家；官方 demo_clean 配置关闭背景、杂物、光照与桌高随机化。",
+            "同步保存头部／腕部 RGB、关节与末端状态、动作和细粒度语言标注；环境内部目标状态用于专家生成及评分，不作为默认策略直接输入。",
+            "按论文每项保留 50 条仿真演示；官方采集先筛选可成功执行的种子，再回放采集。当前重新发布的 M(1) 权重采用 m1_mix 联合训练，不能与论文设置混写。",
+            "真机三项任务各采集 100 条遥操作轨迹，在真实数据上训练后各测试 40 次。"
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2603.01229v4#S3.SS2",
+              "label": "论文 §III-B · 数据与语言标注"
+            },
+            {
+              "url": "https://arxiv.org/html/2603.01229v4#S5.SS1",
+              "label": "论文 §V-A · 仿真示教数量"
+            },
+            {
+              "url": "https://arxiv.org/html/2603.01229v4#S5.SS3",
+              "label": "论文 §V-C · 真机数据"
+            },
+            {
+              "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/task_config/demo_clean.yml",
+              "label": "官方实现 · 采集设置"
+            },
+            {
+              "url": "https://github.com/RoboTwin-Platform/RMBench/blob/main/README.md",
+              "label": "官方说明 · 重新发布的权重与训练组织"
+            }
+          ]
+        },
+        "designs": [
+          {
+            "title": "按记忆需求分组",
+            "text": "五项 M(1) 与四项 M(n) 区分关键观测保留和多事件累计，避免仅以任务时长代替记忆难度。"
+          },
+          {
+            "title": "顺序与计数进入成功条件",
+            "text": "归位、覆盖和按键任务检查历史阶段、指定顺序或严格次数，最终物体位置相同不一定算成功。"
+          },
+          {
+            "title": "提供逐步语言标注",
+            "text": "细粒度动作与状态转换标注向全部方法开放；比较时需明确模型是否使用子任务与终止标签。"
+          },
+          {
+            "title": "三项对应真机验证",
+            "text": "使用真实数据训练验证归位、重排及覆盖顺序，检查记忆依赖结构能否在实际操作中成立。"
+          }
+        ],
+        "designSources": [
+          {
+            "url": "https://arxiv.org/html/2603.01229v4#S3",
+            "label": "论文 §III · 基准设计"
+          },
+          {
+            "url": "https://arxiv.org/html/2603.01229v4#S5",
+            "label": "论文 §V · 评测协议"
+          }
+        ],
+        "limitations": [
+          {
+            "title": "任务覆盖",
+            "text": "九项任务集中在桌面物体搬运、遮挡、排序和试错；没有统一的六维腕力或柔顺接触评价。"
+          },
+          {
+            "title": "物理过程判定",
+            "text": "部分成功条件依赖几何与离散状态；电池任务的槽位检查不包含统一插入深度或真实电接触验证。"
+          },
+          {
+            "title": "泛化与鲁棒性",
+            "text": "无独立的场景泛化、物理 OOD、传感器或硬件扰动评测。"
+          },
+          {
+            "title": "监督与版本差异",
+            "text": "分层策略会使用额外的子任务／终止标注；仓库新增任务与重新训练权重需和论文九项协议分开记录。"
+          }
+        ],
+        "limitationSources": [
+          {
+            "url": "https://arxiv.org/html/2603.01229v4#S5.SS1",
+            "label": "论文 §V-A · 监督范围"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/envs/battery_try.py",
+            "label": "官方实现 · 电池成功条件"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/eval/all_tasks.yml",
+            "label": "官方实现 · 当前批评测任务清单"
+          }
+        ],
+        "adoptions": [
+          {
+            "name": "EvoMem-VLA",
+            "url": "https://arxiv.org/html/2610.05418",
+            "text": "复用九项官方任务及成功判定，每项测试 100 回合，并使用单个联合训练策略。"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2603.01229v4",
+            "label": "RMBench 原论文 v4"
+          },
+          {
+            "url": "https://rmbench.github.io/",
+            "label": "官方项目页"
+          },
+          {
+            "url": "https://github.com/RoboTwin-Platform/RMBench",
+            "label": "官方代码与数据入口"
+          }
+        ]
+      },
+      "checked": "2026-11-17"
+    },
+    "contactbench": {
+      "name": "ContactBench 1.0",
+      "paperTitle": "ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation",
+      "repository": "https://github.com/Michaelwyx/contactbench-sim",
+      "domain": "仿真 + 真机",
+      "checked": "2026-11-17",
+      "focus": "日常接触技能、可打印机构资产、操作过程质量与行为变化。",
+      "force": "真机记录峰值腕力超过 40 N 的回合比例；触觉策略使用双指 GelSight Mini，不等同于统一腕部六维力输入基准。",
+      "metadata": {
+        "firstPublicDate": "2026-10-17",
+        "publicYear": 2026,
+        "dateStatus": "verified",
+        "dateBasis": "arXiv v1 首次公开日期",
+        "dateSource": "https://arxiv.org/abs/2610.24512",
+        "stars": 21,
+        "starsStatus": "verified",
+        "starsDate": "2026-11-17",
+        "starsSource": "https://github.com/Michaelwyx/contactbench-sim"
+      },
+      "usageStudies": [],
+      "page": {
+        "sections": [
+          "基本信息",
+          "任务体系与评价标准",
+          "泛化评测",
+          "传感器与硬件鲁棒性",
+          "专家演示生成",
+          "值得关注的设计",
+          "局限性"
+        ],
+        "schemaVersion": 1,
+        "includeRealStudies": true,
+        "simulationTitle": "2.1 参考任务体系与仿真实现范围",
+        "introduction": "以八类日常接触技能组织的可打印实体与仿真任务基准；36 项参考任务中，论文在六项真机任务上评测视觉及视觉触觉策略。",
+        "facts": [
+          [
+            "仿真平台",
+            "Newton 物理引擎＋MuJoCo Warp 求解器；不等同于基于 MuJoCo 的 robosuite。"
+          ],
+          [
+            "机器人本体",
+            [
+              "当前官方仿真：Franka FR3 单臂＋Franka Hand，可选模拟 GelSight Mini 或 Fin-Ray 手指。",
+              "论文真机：UR5e＋WSG50 平行夹爪＋RealSense D435i 腕相机；四项任务装双 GelSight Mini，另外两项用 Fin-Ray 手指。"
+            ]
+          ],
+          [
+            "任务数量",
+            "论文：36 项参考任务〔31 项基础＋5 项长程〕；当前仿真：22 项基础任务、73 个可运行脚本配置，另有餐具分离场景；真机策略评测：6 项。"
+          ],
+          [
+            "任务类别",
+            "8 类技能，任务可同时涉及多种技能；以下基础任务按主要技能仅计一次，长程组合另外列出。"
+          ],
+          [
+            "专家演示",
+            [
+              "真机：六项各录制 100 条；门旋钮任务质量筛选后保留 99 条，最终共 599 条。",
+              "仿真：支持脚本与遥操作生成参考轨迹，没有统一发布的逐任务 VLA 训练配额。"
+            ]
+          ],
+          [
+            "测试次数",
+            "真机每项、每种参评方法 30 次，限时 60 s；旋钮解锁角度泛化每条件 30 次，小直径旋钮每方法 10 次。仿真没有统一的学习策略测试回合预算。"
+          ],
+          [
+            "运行频率",
+            "真机数据记录 24 Hz；DP 用 12 Hz，RDP 慢／快策略为 12／24 Hz，π₀.₅ 与 FTP-1 用 24 Hz。当前仿真轨迹记录为 60 Hz。"
+          ],
+          [
+            "输入",
+            [
+              "真机：（腕 RGB〔240×320×3〕，末端相对位姿〔位置 3＋旋转 6D 表示 6〕，夹爪宽度〔1〕，语言〔VLA 方法〕；触觉可为双指各 15 维标记特征〔RDP〕或双指各 224×224×3 图像〔FTP-1〕）。π₀.₅／FTP-1 的位姿通道置单位，仅夹爪状态使用实际读数。",
+              "当前仿真轨迹：（关节位置〔7 臂＋2 指〕，关节速度〔9〕，各物体位姿〔每物体位置 3＋四元数 4，特权状态〕；可选双指压力图〔各 16×16〕）。该记录格式不是已集成的 VLA 视觉观测接口。"
+            ]
+          ],
+          [
+            "输出",
+            [
+              "真机策略：（相对当前末端的位置〔3〕，旋转 6D 表示〔6〕，绝对夹爪宽度〔1〕），共 10 维；旋转 6D 是姿态编码。",
+              "当前仿真动作：（7 个臂关节＋2 个指关节的位置目标），共 9 维；和论文的 10 维末端动作分开。"
+            ]
+          ],
+          [
+            "主要评价指标",
+            [
+              "成功率（SR）：完整完成任务的回合比例。",
+              "阶段进度（Prog）：已完成检查点占比的回合均值。",
+              "过载比例：腕部峰值力超过 40 N 的回合比例；不是六维力跟踪误差。",
+              "完成时间：仅对成功回合统计，并与人类操作时间比较。"
+            ]
+          ]
+        ],
+        "inputNote": "论文与当前官方仿真实现分别标注。仓库提供任务脚本、判定和采集工具，但不包含策略学习／评测管线；腕力用于真机过载评价，不是四种策略的统一输入。",
+        "basicSources": [
+          {
+            "url": "https://arxiv.org/html/2610.24512v2#S5",
+            "label": "论文 §V · 真机实验协议"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.24512v2#A2",
+            "label": "附录 B · 输入动作、频率与数据数量"
+          },
+          {
+            "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/README.md",
+            "label": "官方实现 · 任务和本体范围"
+          },
+          {
+            "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/data.md",
+            "label": "官方实现 · 仿真轨迹格式"
+          }
+        ],
+        "figure": {
+          "url": "figures/benchmarks/contactbench-overview.png",
+          "originalUrl": "https://jingyi-xiang.github.io/contactbench/website_assets/images/teaser.png",
+          "source": "https://jingyi-xiang.github.io/contactbench/",
+          "caption": "ContactBench 1.0 · 官方总览：实体资产、仿真与策略评测"
+        },
+        "taskNote": "以下完整列出 36 项参考任务及原论文成功规范，不能把它们全部当成已完成的仿真策略实验。当前有脚本的论文任务编号：4–6、9、13–20、22–31；第 2 项只有场景。脚本配置中的对象／弹簧变体不增加独立任务数。",
+        "taskGroups": [
+          {
+            "title": "从杂物中抓取",
+            "english": "Grasping from clutter",
+            "count": "5 项",
+            "tasks": [
+              {
+                "englishName": "Grasp target key from keychain",
+                "name": "从钥匙串取目标钥匙",
+                "goal": "从钥匙串中分离并抓住指定钥匙。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "只稳定抓住指定钥匙后停止运动。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Retrieve single utensil from bin",
+                "name": "从盒中取单件餐具",
+                "goal": "从混放餐具中取出一件指定餐具并放到桌面。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "取出一件目标餐具放到桌面，其余餐具留在盒中；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Retrieve single fastener from bin",
+                "name": "从盒中取单件紧固件",
+                "goal": "从混放紧固件中取出一件指定紧固件并放到桌面。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "取出一件目标紧固件放到桌面，其余紧固件留在盒中；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Retrieve top cup from stack",
+                "name": "取叠杯最上层杯子",
+                "goal": "取下杯堆最上层杯子并放到桌面。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "取顶杯放到桌面，其余杯子仍整齐堆叠；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Retrieve single card from deck",
+                "name": "从牌堆取一张卡",
+                "goal": "从卡架中的整齐牌堆取出一张卡并放到桌面。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "取一张卡放到桌面，其余卡仍整齐留在卡架；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "抓取薄小物体",
+            "english": "Grasping thin or small objects",
+            "count": "1 项",
+            "tasks": [
+              {
+                "englishName": "Pick up object from platform",
+                "name": "从平台拾起物体",
+                "goal": "从平面上抓起薄小目标物体。",
+                "focus": "在接触约束中分离目标并形成可用抓持。",
+                "scoring": "稳定抓住薄小目标并将其抬离平台。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "同时抓取多个物体",
+            "english": "Grasping multiple objects",
+            "count": "2 项",
+            "tasks": [
+              {
+                "englishName": "Collect utensils",
+                "name": "收集餐具",
+                "goal": "一次保持多个餐具并将全部餐具收进盒内。",
+                "focus": "同时抓取与保持多个对象。",
+                "scoring": "将所有餐具放入收纳盒，停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Collect fasteners",
+                "name": "收集紧固件",
+                "goal": "一次保持多个紧固件并将其全部收进盒内。",
+                "focus": "同时抓取与保持多个对象。",
+                "scoring": "将所有紧固件放入收纳盒，停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "环境约束下放置",
+            "english": "Placing under environmental constraints",
+            "count": "4 项",
+            "tasks": [
+              {
+                "englishName": "Hang object",
+                "name": "悬挂物体",
+                "goal": "把目标物体挂到指定挂钩。",
+                "focus": "利用环境约束稳定放置目标。",
+                "scoring": "将目标挂到挂钩上，停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Place utensil into bin",
+                "name": "餐具放入盒中",
+                "goal": "将目标餐具插放到受空间约束的盒内。",
+                "focus": "利用环境约束稳定放置目标。",
+                "scoring": "将目标餐具放进盒中，停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Place card into holder",
+                "name": "卡片放入卡架",
+                "goal": "将手中卡片放入已有其他卡片的卡架。",
+                "focus": "利用环境约束稳定放置目标。",
+                "scoring": "卡片放入卡架且原有卡片仍留在架内；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Stack cups",
+                "name": "堆叠杯子",
+                "goal": "将多个杯子叠成紧密、直立的一叠。",
+                "focus": "利用环境约束稳定放置目标。",
+                "scoring": "所有杯子形成紧密、直立的堆叠；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "手内调整",
+            "english": "In-hand repositioning",
+            "count": "2 项",
+            "tasks": [
+              {
+                "englishName": "In-hand repose",
+                "name": "手内调整物体位姿",
+                "goal": "不放下物体，在手内调整其相对末端的位姿。",
+                "focus": "保持抓持的同时改变手内位姿或接触方式。",
+                "scoring": "物体在手内达到并稳定于目标位姿，全程不掉落。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "In-hand grasp transition",
+                "name": "手内转换抓持方式",
+                "goal": "不放下物体，将抓持方式转换为要求的类型。",
+                "focus": "保持抓持的同时改变手内位姿或接触方式。",
+                "scoring": "物体在手内稳定为指定抓持方式，全程不掉落。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "外部接触与工具控制",
+            "english": "Extrinsic contact control",
+            "count": "6 项",
+            "tasks": [
+              {
+                "englishName": "Tighten screw with Allen key",
+                "name": "内六角扳手拧紧螺钉",
+                "goal": "用手中内六角扳手对准螺钉并拧紧。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧紧至轻微旋转试探不能使螺钉转动；终止旋转、移开工具并脱离螺钉。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Loosen screw with Allen key",
+                "name": "内六角扳手拧松螺钉",
+                "goal": "用手中内六角扳手对准螺钉并拧松。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧松至轻微旋转试探可使螺钉自由转动；终止旋转、移开工具并脱离螺钉。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Tighten screw with screwdriver",
+                "name": "螺丝刀拧紧螺钉",
+                "goal": "用螺丝刀啮合螺钉并拧紧。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧紧至轻微旋转试探不能使螺钉转动；终止旋转、移开工具并脱离螺钉。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Loosen screw with screwdriver",
+                "name": "螺丝刀拧松螺钉",
+                "goal": "用螺丝刀啮合螺钉并拧松。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧松至轻微旋转试探可使螺钉自由转动；终止旋转、移开工具并脱离螺钉。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Tighten nut with wrench",
+                "name": "扳手拧紧螺母",
+                "goal": "用扳手啮合并拧紧螺母。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧紧至轻微旋转试探不能使螺母转动；终止旋转、移开工具并脱离螺母。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Loosen nut with wrench",
+                "name": "扳手拧松螺母",
+                "goal": "用扳手啮合并拧松螺母。",
+                "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                "scoring": "拧松至轻微旋转试探可使螺母自由转动；终止旋转、移开工具并脱离螺母。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "关节物体操作",
+            "english": "Articulated object manipulation",
+            "count": "4 项",
+            "tasks": [
+              {
+                "englishName": "Turn key to unlock door",
+                "name": "转钥匙解锁",
+                "goal": "转动已插入的钥匙以解锁门。",
+                "focus": "在约束运动中完成解锁、旋转与机构状态切换。",
+                "scoring": "钥匙转到足以开门的位置；停止旋转、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Turn doorknob to open door",
+                "name": "转门旋钮开门",
+                "goal": "转动门旋钮解锁并打开门。",
+                "focus": "在约束运动中完成解锁、旋转与机构状态切换。",
+                "scoring": "解锁后将门打开至少 5°。",
+                "criteria": [
+                  "原文规定门打开角度至少 5°；不是只转动门把手或缩回门闩即成功。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Turn door handle to open door",
+                "name": "转门把手开门",
+                "goal": "转动门把手解锁并打开门。",
+                "focus": "在约束运动中完成解锁、旋转与机构状态切换。",
+                "scoring": "解锁后将门打开至少 5°。",
+                "criteria": [
+                  "原文规定门打开角度至少 5°；不是只转动门把手或缩回门闩即成功。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Turn dial to target position",
+                "name": "旋钮转到目标档位",
+                "goal": "操作旋钮使其到达指定档位或角度。",
+                "focus": "在约束运动中完成解锁、旋转与机构状态切换。",
+                "scoring": "旋钮到达目标；连续旋钮误差不超过半个刻度间隔，停止旋转、移开并脱离任务物体。",
+                "criteria": [
+                  "连续可调旋钮的允许误差为半个刻度间隔；原文未统一规定所有旋钮的角度误差。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "插入与对齐",
+            "english": "Insertion and alignment",
+            "count": "7 项",
+            "tasks": [
+              {
+                "englishName": "Put bottle cap onto bottle",
+                "name": "拧上瓶盖",
+                "goal": "对准螺纹并旋紧瓶盖。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "瓶盖拧紧且在轻微旋转试探下不动；停止旋转、移开并脱离任务物体。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Thread nut onto screw",
+                "name": "螺母旋上螺杆",
+                "goal": "将手中螺母对准工作区螺杆，使螺纹啮合。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "螺纹正确啮合；停止旋转、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Insert key into lock",
+                "name": "钥匙插入锁孔",
+                "goal": "将钥匙对准锁孔并插入。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "钥匙插入锁中；停止插入、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Plug in charger",
+                "name": "充电器插入插座",
+                "goal": "将手中充电器对准插座并完全插入。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "完全插入，继续向插座轻推不再明显移动；停止插入、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Plug in Ethernet",
+                "name": "插入网线",
+                "goal": "将网线插头插入接口并锁住卡扣。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "网线完全插入且卡扣锁定，轻拉不能拔出；停止插入、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Plug in USB",
+                "name": "插入 USB",
+                "goal": "将 USB 插头对准并完全插入插槽。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "完全插入，继续向插槽轻推不再明显移动；停止插入、移开并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Install light bulb",
+                "name": "安装灯泡",
+                "goal": "将灯泡对准灯座并旋紧。",
+                "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                "scoring": "灯泡拧紧且轻微旋转试探不能使其转动；停止旋转、移开并脱离任务物体。",
+                "criteria": [
+                  "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          },
+          {
+            "title": "长程组合任务",
+            "english": "Longer-horizon tasks",
+            "count": "5 项",
+            "tasks": [
+              {
+                "englishName": "Assemble toy block",
+                "name": "组装玩具积木",
+                "goal": "组合积木并使用螺钉完成紧固。",
+                "focus": "串联多种接触技能完成整个流程。",
+                "scoring": "完成组装并拧紧螺钉，将组件放到桌面；停止运动并脱离组件。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Add keys to keyring",
+                "name": "钥匙装上钥匙环",
+                "goal": "将散落钥匙依次装入钥匙环。",
+                "focus": "串联多种接触技能完成整个流程。",
+                "scoring": "将所有散落钥匙装到钥匙环并放回桌面；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Unlock and open door",
+                "name": "取钥匙解锁并开门",
+                "goal": "取出目标钥匙、调姿、插锁、转动解锁并开门。",
+                "focus": "串联多种接触技能完成整个流程。",
+                "scoring": "完成取钥匙、调姿、插入和解锁，将门打开至少 5°。",
+                "criteria": [
+                  "原文规定门打开角度至少 5°；不是只转动门把手或缩回门闩即成功。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Sort utensils",
+                "name": "分类餐具",
+                "goal": "将一堆混合餐具按类别分入对应盒子。",
+                "focus": "串联多种接触技能完成整个流程。",
+                "scoring": "将全部餐具分入对应盒，每盒仅含同类餐具；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              },
+              {
+                "englishName": "Sort fasteners",
+                "name": "分类紧固件",
+                "goal": "将一堆混合紧固件按类别分入对应盒子。",
+                "focus": "串联多种接触技能完成整个流程。",
+                "scoring": "将全部紧固件分入对应盒，每盒仅含同类紧固件；停止运动并脱离任务物体。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.24512v2#A3",
+                    "label": "论文附录 C · 完整任务规范"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#A3",
+                "label": "论文附录 C · 任务与成功条件"
+              }
+            ]
+          }
+        ],
+        "evaluation": "原论文按每项完整成功条件评价；六项真机任务另记录阶段进度、峰值力超过 40 N 的回合比例及成功回合用时。",
+        "comparisons": [],
+        "real": {
+          "correspondence": "真机策略分别在 UMI 真实演示上训练或微调；没有把仿真策略直接迁移到 UR5e 的实验。",
+          "protocol": "六项任务使用统一的 30 个物体／机器人初态，每种参评方法各测试 30 回合、每回合 60 s。物体位置在 0.15×0.15 m 区域内均匀采样，机器人初态从示教初态拟合的高斯分布采样；有无触觉使用不同手指配置的任务分别标注。",
+          "groups": [
+            {
+              "title": "真机策略评测任务",
+              "english": "Six physical evaluation tasks",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "Thread nut onto screw",
+                  "name": "螺母旋上螺杆",
+                  "goal": "将手中螺母对准工作区螺杆，使螺纹啮合。",
+                  "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                  "scoring": "螺纹正确啮合；停止旋转、移开并脱离任务物体。",
+                  "criteria": [
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Tighten screw with Allen key",
+                  "name": "内六角扳手拧紧螺钉",
+                  "goal": "用手中内六角扳手对准螺钉并拧紧。",
+                  "focus": "保持工具与目标啮合，并根据阻力调整动作。",
+                  "scoring": "拧紧至轻微旋转试探不能使螺钉转动；终止旋转、移开工具并脱离螺钉。",
+                  "criteria": [
+                    "原文以轻微外力试探判断紧／松状态，没有为全部对象统一规定试探力或力矩数值。",
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Plug in charger",
+                  "name": "充电器插入插座",
+                  "goal": "将手中充电器对准插座并完全插入。",
+                  "focus": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+                  "scoring": "完全插入，继续向插座轻推不再明显移动；停止插入、移开并脱离任务物体。",
+                  "criteria": [
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Turn doorknob to open door",
+                  "name": "转门旋钮开门",
+                  "goal": "转动门旋钮解锁并打开门。",
+                  "focus": "在约束运动中完成解锁、旋转与机构状态切换。",
+                  "scoring": "解锁后将门打开至少 5°。",
+                  "criteria": [
+                    "原文规定门打开角度至少 5°；不是只转动门把手或缩回门闩即成功。",
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Retrieve single utensil from bin",
+                  "name": "从盒中取单件餐具",
+                  "goal": "从混放餐具中取出一件指定餐具并放到桌面。",
+                  "focus": "在接触约束中分离目标并形成可用抓持。",
+                  "scoring": "取出一件目标餐具放到桌面，其余餐具留在盒中；停止运动并脱离任务物体。",
+                  "criteria": [
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。",
+                    "此任务使用 Fin-Ray 手指，仅评测两种视觉策略；没有对应触觉策略实验。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                },
+                {
+                  "englishName": "Pick up card from platform",
+                  "name": "从平台拾起卡片",
+                  "goal": "抓起平台上的薄卡并抬离表面。",
+                  "focus": "在接触约束中分离目标并形成可用抓持。",
+                  "scoring": "稳定抓住薄小目标并将其抬离平台。",
+                  "criteria": [
+                    "真机每种参评策略运行 30 次，每回合限时 60 s；完整成功与阶段进度分开统计。",
+                    "此任务使用 Fin-Ray 手指，仅评测两种视觉策略；没有对应触觉策略实验。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2610.24512v2#S5",
+                      "label": "论文 §V · 六项真机任务"
+                    }
+                  ]
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2610.24512v2#S5",
+                  "label": "论文 §V · 六项任务与初态协议"
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2610.24512v2#S5",
+              "label": "原论文 · 真机评测"
+            }
+          ]
+        },
+        "generalization": {
+          "scene": {
+            "title": "3.2 已实施的仿真策略泛化评测",
+            "status": "无",
+            "note": "尚无训练后策略在上述仿真变体上的独立泛化对照；已提供的场景配置、机构变体和力响应验证见上表，不归为策略泛化结果。"
+          },
+          "physics": {
+            "status": "无"
+          },
+          "other": [
+            {
+              "title": "3.3 真机外观与行为泛化",
+              "domain": "真机",
+              "rows": [
+                [
+                  "变化条件",
+                  "门旋钮解锁所需角度；旋钮直径。"
+                ],
+                [
+                  "训练条件",
+                  "要求旋转 60° 解锁、旋钮直径 60 mm 的门；使用原任务真实演示训练。"
+                ],
+                [
+                  "测试条件",
+                  "解锁阈值 72°、80°，每方法每条件 30 次；直径 55 mm，每方法 10 次。"
+                ],
+                [
+                  "训练／测试划分",
+                  "固定训练后策略，替换机械要求或几何，未用新变体重新训练；这两类是离散变体，没有连续区间评测。"
+                ],
+                [
+                  "评测目的",
+                  "检查是否根据任务反馈增加旋转量或调整夹持宽度。"
+                ],
+                [
+                  "评测结论",
+                  "旋转需求变化下部分策略会调整动作；小旋钮测试均未形成有效抓持。不能据此宣称所有任务或物理变量的泛化。"
+                ]
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2610.24512v2#S5.SS4",
+                  "label": "论文 §V-D · 两项真机泛化测试"
+                }
+              ]
+            }
+          ],
+          "support": {
+            "title": "3.1 支持的泛化条件与验证状态",
+            "introduction": "Benchmark 提供的变体、机构模型的物理验证、学习策略的泛化实验分别记录。支持某项变化，不代表已经用训练后的策略完成该项泛化测试。",
+            "columns": [
+              "变化条件",
+              "Benchmark 支持情况",
+              "仿真模型／物理验证",
+              "真机策略泛化实验"
+            ],
+            "rows": [
+              [
+                "所需旋转角度变化",
+                "支持；门锁、瓶盖、灯泡等有离散角度／圈数变体。",
+                "提供机构模型；当前门旋钮支持 40°、48°、60°、72°、80° 解锁阈值。",
+                "已做：训练 60°，测试 72°、80°；每种方法、每个条件 30 次。"
+              ],
+              [
+                "旋转阻力变化",
+                "支持；通过弹簧刚度和预载改变阻力。",
+                "已验证门把手力／力矩响应；论文对照 5、7.5、10 mm 三档弹簧的仿真与实测曲线。",
+                "无独立策略泛化实验。"
+              ],
+              [
+                "插入阻力变化",
+                "支持充电插座和 USB 插槽的弹簧变体。",
+                "提供力响应探针；充电插座 0.4／0.85 mm 两档参数来自实测拟合，其他档位含插值／外推；USB 刚度为估计值。",
+                "无独立策略泛化实验。"
+              ],
+              [
+                "物体几何变化",
+                "支持充电块、USB、门旋钮、灯泡等几何变体。",
+                "提供对应几何／机构模型；不能把几何模型存在等同于每个变体都完成了力响应标定。",
+                "已做：门旋钮直径由训练的 60 mm 改为 55 mm，每种方法 10 次。"
+              ],
+              [
+                "物体数量变化",
+                "支持；但具体仿真任务的实现范围不同。",
+                "餐具场景可设置数量；当前杯堆、牌堆等任务仍有论文数量变体尚未接入仿真。",
+                "无独立策略泛化实验。"
+              ],
+              [
+                "颜色、光照变化",
+                "原论文明确支持通用场景配置。",
+                "可配置外观与渲染；没有统一的训练／测试参数范围或独立策略对照。",
+                "无独立策略泛化实验。"
+              ],
+              [
+                "相机视角变化",
+                "原论文明确支持；仿真场景接口可设置相机位置和目标。",
+                "可配置视角及多视图记录；没有独立的视角扰动策略评测。",
+                "无独立策略泛化实验。"
+              ],
+              [
+                "初始姿态变化",
+                "支持；部分仿真任务用 --seed 采样物体位置和朝向。",
+                "提供可复现的随机初态，采样范围按具体任务定义，并非所有脚本都支持。",
+                "已用于常规示教／评测的初态采样；无独立改变训练／测试采样范围的域外对照。"
+              ],
+              [
+                "摩擦系数系统性变化",
+                "可改底层摩擦参数；尚未作为统一的泛化变体轴。",
+                "无系统性摩擦参数扫描验证。",
+                "无独立策略泛化实验。"
+              ]
+            ],
+            "note": "论文 §III-C 明确支持颜色、光照、相机视角和初始位姿变化；当前代码的预设变体、参数拟合及未实现项以官方文档为准。弹簧的 mm 标签是几何规格，不是力值。仿真力响应验证与策略物理 OOD 评测分开。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#S3.SS3",
+                "label": "论文 §III-C／Table I · 支持的变化条件"
+              },
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#S4.SS1",
+                "label": "论文 §IV-A／Figure 7 · 门把手物理响应验证"
+              },
+              {
+                "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/variations.md",
+                "label": "官方实现 · 变体取值、初态采样及未实现项"
+              },
+              {
+                "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/getting_started.md",
+                "label": "官方实现 · 颜色、相机与物理参数配置"
+              },
+              {
+                "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/custom_scenes.md",
+                "label": "官方实现 · 自定义相机、摩擦与机构参数"
+              },
+              {
+                "url": "https://arxiv.org/html/2610.24512v2#S5.SS4",
+                "label": "论文 §V-D · 实际真机泛化实验"
+              }
+            ]
+          }
+        },
+        "robustness": {
+          "studies": []
+        },
+        "expert": {
+          "introduction": "真机训练数据由改装 UMI 手持夹爪采集；仿真提供独立的脚本和遥操作参考轨迹生成工具。",
+          "steps": [
+            "真机用 D435i 腕相机和 HTC VIVE 追踪采集手持轨迹，标定到机器人基坐标系；操作者依据腕相机画面及自身触觉完成任务。",
+            "任务对象在 0.15×0.15 m 区域内采样并用魔术贴固定；六项各录制 100 条，门旋钮任务因夹爪宽度质量检查剔除 1 条。",
+            "同步记录腕 RGB、动作／状态及可用触觉；Fin-Ray 两项不采触觉，不用于触觉策略训练。",
+            "仿真可由脚本或键盘、手柄、SpaceMouse 遥操作生成轨迹；物体位姿为特权状态，逐帧 RGB 不在 episode.npz 内，另留视频供重渲染或处理。"
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2610.24512v2#S5.SS1",
+              "label": "论文 §V-A · 采集过程"
+            },
+            {
+              "url": "https://arxiv.org/html/2610.24512v2#A2",
+              "label": "附录 B · 599 条训练演示"
+            },
+            {
+              "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/data.md",
+              "label": "官方实现 · 脚本／遥操作数据"
+            }
+          ]
+        },
+        "designs": [
+          {
+            "title": "实体与仿真共用机构设计",
+            "text": "可打印弹簧和机构资产配有仿真模型，以弹簧刚度和预载控制阻力响应。"
+          },
+          {
+            "title": "完整成功之外记录过程质量",
+            "text": "六项真机评测同时记录阶段进度、超过 40 N 的回合比例与成功回合时间，区分完成、过载和效率。"
+          },
+          {
+            "title": "外观不变也能改变行为要求",
+            "text": "外观相同的门可要求 60°、72° 或 80° 才解锁，用于检查策略是否真正依据接触反馈调整动作。"
+          },
+          {
+            "title": "将释放与结束条件写入任务规范",
+            "text": "许多任务要求执行完成后停止并脱离物体；也有拾取任务要求继续稳定抓持，不能统一套用释放规则。"
+          }
+        ],
+        "designSources": [
+          {
+            "url": "https://arxiv.org/html/2610.24512v2#S3",
+            "label": "论文 §III · 技能、资产与任务规范"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.24512v2#S5",
+            "label": "论文 §V · 评价设计"
+          }
+        ],
+        "limitations": [
+          {
+            "title": "仿真评测范围",
+            "text": "36 项参考任务不等于 36 个完整 VLA 仿真环境；当前仓库覆盖 22 项脚本任务，没有集成的策略学习／评测管线。"
+          },
+          {
+            "title": "策略实验覆盖",
+            "text": "论文只在 6 项真机任务上测试学习策略，其中 2 项没有触觉策略；不能推广为全部 36 项的比较结论。"
+          },
+          {
+            "title": "泛化覆盖",
+            "text": "支持多种资产和场景变体，但实际策略泛化只测了门旋钮的两个新解锁阈值与一个新直径，未覆盖其余支持条件。"
+          },
+          {
+            "title": "力觉指标边界",
+            "text": "40 N 阈值统计过载事件，不衡量六维力跟踪精度；任务目标也未规定统一的力／力矩跟踪曲线。"
+          }
+        ],
+        "limitationSources": [
+          {
+            "url": "https://arxiv.org/html/2610.24512v2#S5",
+            "label": "论文 §V · 实际实验范围"
+          },
+          {
+            "url": "https://github.com/Michaelwyx/contactbench-sim/blob/main/README.md",
+            "label": "官方实现 · 发布范围与不包含的管线"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2610.24512v2",
+            "label": "ContactBench 1.0 原论文 v2"
+          },
+          {
+            "url": "https://jingyi-xiang.github.io/contactbench/",
+            "label": "官方项目页"
+          },
+          {
+            "url": "https://jingyi-xiang.github.io/contactbench/tasks.html",
+            "label": "完整参考任务目录"
+          },
+          {
+            "url": "https://github.com/Michaelwyx/contactbench-sim",
+            "label": "官方仿真仓库"
+          }
+        ]
+      }
+    }
+  },
+  "pageOverrides": {
+    "libero-plus": {
+      "sections": [
+        "基本信息",
+        "任务体系与评价标准",
+        "泛化评测",
+        "传感器与硬件鲁棒性",
+        "专家演示生成",
+        "值得关注的设计",
+        "局限性"
+      ],
+      "taskNote": "从 LIBERO 四套件共 40 项基础任务构造 10,030 个测试实例；实例数和扰动类别不等于新增操作技能数。",
+      "taskGroups": [
+        {
+          "title": "七类扰动任务",
+          "english": "Seven perturbation families",
+          "count": "7 类／21 子维度",
+          "note": "目标沿用 LIBERO 的 Spatial、Object、Goal、Long 四套件；以下按变化条件分组说明。",
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2510.13626v3#A1",
+              "label": "论文 v3 附录 A · 全部扰动定义"
+            }
+          ],
+          "tasks": [
+            {
+              "englishName": "Objects Layout",
+              "name": "物体布局",
+              "goal": "改变目标位置或加入混淆物体。",
+              "mechanism": "空间关系和抓取初态变化。",
+              "scoring": "按原任务目标判断，不能只碰到任意同类物体。",
+              "examples": [
+                "移动目标碗；在目标旁加入同类物体。"
+              ],
+              "criteria": [],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Camera Viewpoints",
+              "name": "相机视角",
+              "goal": "改变第三视角相机距离、位置或朝向。",
+              "mechanism": "透视、遮挡和图像尺度变化。",
+              "scoring": "在新视角下完成原任务。",
+              "examples": [
+                "拉远相机、移动观察方位或转动相机。"
+              ],
+              "criteria": [
+                "距离 1.01–2.00 倍；球面位置角 15°–75°；固定位置朝向扰动 2°–10°。"
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Robot Initial States",
+              "name": "机械臂初态",
+              "goal": "改变机械臂起始关节状态。",
+              "mechanism": "到达路径与初始遮挡变化。",
+              "scoring": "从变化的初态完成相同目标。",
+              "examples": [
+                "从不同手臂姿态开始抓取同一目标。"
+              ],
+              "criteria": [
+                "扰动幅度参数为 0.1–0.5；不表示更换机械臂或注入硬件故障。"
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Language Instructions",
+              "name": "语言指令",
+              "goal": "改写任务指令的表达。",
+              "mechanism": "语义等价的语言输入变化。",
+              "scoring": "仍按原目标谓词判断完整成功。",
+              "examples": [
+                "用同义表达、不同句式指定同一物体。"
+              ],
+              "criteria": [],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Light Conditions",
+              "name": "光照",
+              "goal": "改变光强、方向、颜色或阴影。",
+              "mechanism": "成像亮度、颜色和阴影变化。",
+              "scoring": "在新照明下完成相同目标。",
+              "examples": [
+                "调暗场景；改变光源方向和颜色。"
+              ],
+              "criteria": [],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Background Textures",
+              "name": "背景纹理",
+              "goal": "替换桌面或场景材质外观。",
+              "mechanism": "背景和物体的视觉对比度变化。",
+              "scoring": "替换背景后完成原目标。",
+              "examples": [
+                "更换木纹；增加与目标颜色接近的纹理。"
+              ],
+              "criteria": [],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            },
+            {
+              "englishName": "Sensor Noise",
+              "name": "传感器噪声",
+              "goal": "给输入图像加入模糊、雾化等变化。",
+              "mechanism": "图像细节和可辨识性下降。",
+              "scoring": "使用受扰图像完成原目标。",
+              "examples": [
+                "加入高斯、运动、缩放、雾或玻璃模糊。"
+              ],
+              "criteria": [
+                "高斯模糊 σ＝1–10；运动模糊半径 5–35、σ＝2–20，方向在 −45°至45°之间采样。"
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2510.13626v3#A1",
+                  "label": "论文 v3 附录 A · 扰动设置"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "expert": {
+        "introduction": "测试实例与增强训练轨迹分别构造；主评测沿用原始 LIBERO 权重。",
+        "steps": [
+          "从 LIBERO 40 项基础任务生成 14,000 个候选实例，覆盖七类扰动。",
+          "用参考模型筛去普遍可解实例，并平衡子维度，保留 10,030 个测试实例。",
+          "另外采集超过 20,000 条成功增强轨迹，保存图像、本体状态、7 维动作与语言。",
+          "增强训练的纹理、布局和相机配置与测试区分；不可靠的物体姿态变化轨迹不进入训练集。"
+        ],
+        "sources": [
+          {
+            "url": "https://arxiv.org/html/2510.13626v3#A3",
+            "label": "附录 C · 测试集"
+          },
+          {
+            "url": "https://arxiv.org/html/2510.13626v3#A4",
+            "label": "附录 D · 增强训练数据"
+          }
+        ]
+      },
+      "adoptions": [
+        {
+          "name": "InternVLA-A1.5",
+          "url": "https://arxiv.org/html/2607.04988",
+          "text": "将 LIBERO 权重直接用于 LIBERO-Plus，报告七类扰动下的零样本表现。"
+        }
+      ],
+      "facts": [
+        [
+          "仿真平台",
+          "MuJoCo / robosuite / LIBERO"
+        ],
+        [
+          "机器人本体",
+          "Franka Panda 单臂与平行夹爪"
+        ],
+        [
+          "任务数量",
+          "10,030 个任务实例；7 类扰动因素、21 个子维度、5 个难度等级。"
+        ],
+        [
+          "任务类别",
+          "7 因素、21 子维度、5 个经验难度等级；10,030 为任务实例数，不是技能种类数。"
+        ],
+        [
+          "专家演示",
+          "主测试沿用各模型的 LIBERO 训练权重；增强训练集另采，确保纹理、干扰物布局和相机角度等不与测试实例重合。"
+        ],
+        [
+          "测试次数",
+          "官方实现：每个测试实例、每种模型运行 1 次，共 10,030 个实例；组合泛化诊断另做每条件 2,000 次。"
+        ],
+        [
+          "输入",
+          "（外部 RGB，腕部 RGB〔按方法选用〕，语言指令，本体状态〔按方法选用〕）。以官方 openpi 的 π₀ 适配为例：（外部 RGB〔224×224×3〕，腕部 RGB〔224×224×3〕，TCP 位置〔3〕，轴角姿态〔3〕，两指关节位置〔2〕，语言指令），数值状态共 8 维。"
+        ],
+        [
+          "输出",
+          "（TCP 平移增量〔3〕，旋转增量〔3〕，夹爪开合〔1〕），LIBERO 标准语义为 7 维；模型内部编码可不同。"
+        ],
+        [
+          "主要评价指标",
+          "报告各扰动因素、难度级别及组合条件下的成功率，与原始 LIBERO 表现对照；实例数不等于新增技能种类数。"
+        ]
+      ],
+      "inputNote": "观测随模型配置变化：OpenVLA-OFT_w 仅用第三视角；上述 8 维状态示例不代表所有参评模型都使用本体状态。",
+      "basicSources": [
+        {
+          "url": "https://arxiv.org/html/2510.13626v3#A4",
+          "label": "论文 v3 · 增强数据与划分"
+        },
+        {
+          "url": "https://github.com/sylvestf/LIBERO-plus/blob/main/README.md",
+          "label": "官方实现 · 每实例 1 次测试"
+        },
+        {
+          "url": "https://github.com/Physical-Intelligence/openpi/blob/main/examples/libero/main.py",
+          "label": "openpi 官方适配 · 输入状态构成"
+        },
+        {
+          "url": "https://github.com/Physical-Intelligence/openpi/blob/main/src/openpi/policies/libero_policy.py",
+          "label": "openpi 官方适配 · 图像与状态维度"
+        }
+      ]
+    }
+  },
+  "audit": {
+    "robodojo": {
+      "generalization": "变化条件：任务相关物体、背景、杂物、桌面外观与光照。；训练条件：泛化类 12 项在标准场景采集示教；另有 100 条随机化 DLC 数据扩展视觉暴露。；测试条件：12 项任务分别进行标准与随机测试，每布局种子各 25 次；当前官方完整流程用 3 组布局。；训练／测试划分：训练示教与评测布局分开；随机测试改变场景条件。DLC 数据不是这 12 项任务的随机场景专属示教。；评测结果：论文 §6.1：π₀.₅ 在泛化类的标准／随机场景 Score 为 20.93／5.82；SR 为 14.89%／1.44%。；研究目的：检查同一任务在视觉及场景变化后的性能下降。",
+      "robustness": "无。",
+      "excludedOrQualified": "图像预处理和状态选用随策略适配器变化；标准公开数据格式未列出腕部三轴力＋三轴力矩。",
+      "sources": [
+        "https://arxiv.org/html/2607.04434v3",
+        "https://robodojo-benchmark.com/doc/sim-tasks/",
+        "https://robodojo-benchmark.com/doc/real-tasks/",
+        "https://robodojo-benchmark.com/doc/usage/quick-evaluation/",
+        "https://robodojo-benchmark.com/doc/usage/configurations/",
+        "https://robodojo-benchmark.com/doc/usage/install-and-download/"
+      ]
+    },
+    "robocasa": {
+      "generalization": "变化条件：厨房布局与风格、纹理及物体实例。；训练条件：从 120 个厨房场景采人工或合成数据，训练图像使用 AI 生成纹理。；测试条件：24 项原子操作任务各测试 50 次，分布在五个固定布局／风格场景；使用未见物体实例。；训练／测试划分：五个测试场景中有两个采用训练未见的风格；测试使用人工策划纹理，区别于训练的 AI 纹理。；评测结果：24 项任务平均成功率：Human-50 为 28.8%；Generated-100／300／3000 为 26.3%／35.0%／47.6%。；研究目的：检查多样仿真数据能否支持新物体与新风格中的操作。",
+      "robustness": "无。",
+      "excludedOrQualified": "本页区分 2024 原版与后续 24 任务 VLA 协议；365 任务版本在 RoboCasa365 条目中。输入历史窗口及状态字段选用随策略变化。",
+      "sources": [
+        "https://arxiv.org/html/2406.02523v1",
+        "https://github.com/robocasa/robocasa/blob/v0.2/robocasa/utils/dataset_registry.py",
+        "https://robocasa.ai/assets/robocasa_rss24.pdf",
+        "https://arxiv.org/html/2607.15330#S3.SS4"
+      ]
+    },
+    "simplerenv": {
+      "generalization": "变化条件：背景、光照、干扰物及桌面纹理；相机姿态另在第 04 章。；训练条件：固定 RT-1 w/o Aug 与 RT-1＋Aug 两个检查点；后者训练期使用图像增强，测试时两者均不更新。；测试条件：Google 的 Pick Coke Can 与 Move Near，基础场景加各轴两个离散视觉变体。；训练／测试划分：改变仿真测试视觉；不为每个变体重训。与真实测试条件作行为关联对照。；评测结果：无增强 RT-1：抓罐基础 92.0%，两种桌纹为 86.7%／74.7%；移近基础 46.7%，两种桌纹为 55.0%／20.0%。；研究目的：检查仿真是否能反映真实策略对视觉分布变化的敏感性。",
+      "robustness": "有独立仿真相机姿态对照。",
+      "excludedOrQualified": "VM＝Visual Matching（视觉匹配）；VA＝Variant Aggregation（视觉变体汇总）。原实验直接测试真实数据训练的策略，新增模型的仿真微调结果需要另行标明。",
+      "sources": [
+        "https://arxiv.org/html/2405.05941v1",
+        "https://simpler-env.github.io/",
+        "https://github.com/simpler-env/SimplerEnv",
+        "https://arxiv.org/html/2405.05941v1#A2",
+        "https://arxiv.org/html/2405.05941v1#A3.SS1"
+      ]
+    },
+    "rmbench": {
+      "generalization": "无独立场景变化或物理 OOD 评测；任务初态采样不自动视为训练范围外泛化。",
+      "robustness": "无传感器或硬件扰动评测。",
+      "excludedOrQualified": "以论文 v4 九项任务为主；当前 all_tasks.yml 中的 place_block_mat 不计入论文任务数；真机重新训练；官方实现固定为 7d1cdfc。",
+      "sources": [
+        "https://arxiv.org/html/2603.01229v4",
+        "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/task_config/demo_clean.yml",
+        "https://github.com/RoboTwin-Platform/RMBench/blob/7d1cdfc7661c273a7a5c5f6126e2d1a7f0a3f4b7/env_cfg/eval/all_tasks.yml"
+      ]
+    },
+    "contactbench": {
+      "generalization": "支持角度、阻力、几何、数量及通用场景配置；部分机构已作力响应验证，无独立仿真策略泛化评测；真机策略泛化限于门旋钮解锁角度和直径。",
+      "robustness": "无独立传感器或硬件扰动评测。",
+      "excludedOrQualified": "论文 36 项参考任务、仿真 22 项脚本任务与 73 行配置、真机 6 项策略评测分开；没有统一仿真 VLA 训练评测管线。",
+      "sources": [
+        "https://arxiv.org/html/2610.24512v2",
+        "https://github.com/Michaelwyx/contactbench-sim/blob/main/README.md",
+        "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/tasks.md",
+        "https://arxiv.org/html/2610.24512v2#S3.SS3",
+        "https://arxiv.org/html/2610.24512v2#S4.SS1",
+        "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/variations.md",
+        "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/getting_started.md",
+        "https://github.com/Michaelwyx/contactbench-sim/blob/main/docs/custom_scenes.md",
+        "https://arxiv.org/html/2610.24512v2#S5.SS4"
+      ]
+    }
+  }
+}

@@ -5,17 +5,30 @@ import { parseHash } from './src/hooks/useHashRoute.js';
 import { benchmarkOverview, mainstreamBenchmarkIds, benchmarkSectionHref } from './src/data/benchmarkOverview.js';
 import { createTaskView, getTaskTopicName, filterTaskInstances, selectPapers, DEFAULT_PAPER_FILTERS, DEFAULT_WORK_FILTERS, matchesPublicationYear, getTaskKindOptions, filterTaskKindInstances } from './src/data/selectors.js';
 const d=JSON.parse(fs.readFileSync('public/catalogue.json','utf8'));
+const metricCopy=JSON.parse(fs.readFileSync('research/benchmark_metric_copy.json','utf8')).records;
+for(const [id,rule] of Object.entries(metricCopy)){
+ const b=d.benchmarks.find(b=>b.id===id);
+ const page=b.reading.simulationDetail;
+ const basic=page ? page.facts.find(row=>row[0]==='主要评价指标')[1] : b.reading.detailPage.metricSummary;
+ assert.deepEqual(basic,rule.basic,id+': concise basic metric descriptions');
+ const groups=page ? [...page.taskGroups,...(page.real?.groups||[])] : b.reading.taskGroups;
+ for(const group of groups)for(const task of group.tasks||group.items){
+  assert.ok(task.metricSummary&&task.scoring,id+': task metric summary followed by actual completion condition');
+ }
+}
 const simulationReview=JSON.parse(fs.readFileSync('research/simulation_evaluation_audit.json','utf8'));
-assert.equal(Object.keys(simulationReview.records).length,15,'Simulation evaluation review covers all fifteen benchmarks');
+const benchmarkAdditions=JSON.parse(fs.readFileSync('research/benchmark_additions.json','utf8'));
+Object.assign(simulationReview.records,benchmarkAdditions.audit);
+assert.equal(Object.keys(simulationReview.records).length,20,'Simulation evaluation review covers all twenty benchmarks');
 for(const b of d.benchmarks){
  const page=b.reading?.simulationDetail;
  if(!page)continue;
  const studies=[page.generalization.scene,page.generalization.physics,...(page.generalization.other||[]),...(page.robustness.studies||[])];
- for(const study of studies.filter(s=>s.rows))assert.equal(study.domain,'仿真',b.id+': only verified simulation studies in chapters 03/04');
+ for(const study of studies.filter(s=>s.rows))assert.ok((page.includeRealStudies ? ['仿真','真机'] : ['仿真']).includes(study.domain),b.id+': study domain is explicit and supported by this page');
  assert.ok(simulationReview.records[b.id]?.sources.length,b.id+': scope has original-source evidence');
 }
-assert.equal(benchmarkOverview.length,15);
-assert.equal(mainstreamBenchmarkIds.size,15);
+assert.deepEqual(benchmarkOverview.map(row=>row.id),['libero','robocasa','robotwin','libero-plus','rmbench','robodojo','univtac','suite-t04','forcebench','contactbench']);
+assert.equal(mainstreamBenchmarkIds.size,20);
 for(const row of benchmarkOverview){
  assert.ok(d.benchmarks.some(b=>b.id===row.id),row.id+': overview detail exists');
  for(const field of ['robot','tasks','demos','metrics','robustness'])assert.ok(row[field]?.length,row.id+': '+field);
@@ -337,14 +350,51 @@ for(const b of d.benchmarks){
 }
 for(const id of ['neoreal','neosim']) assert.ok(!d.benchmarks.some(b=>b.id===id));
 assert.equal(d.benchmarks.find(b=>b.id==='libero').source,'https://arxiv.org/abs/2306.03310');
-for(const [id,work] of [['suite-t04','T04'],['suite-t08','T08'],['suite-c11','C11'],['suite-c12','C12']])assert.equal(d.works.find(w=>w.id===work).relations.find(r=>r.benchmark===id).type,'proposes');
-for(const id of ['taco','bench2dex','tactidex','tacverse'])assert.equal(d.benchmarks.find(b=>b.id===id).resourceType,'benchmark');
-assert.ok(d.benchmarks.find(b=>b.id==='tactidex').scope.includes('不根据新反馈调整动作'));
+for(const [id,work] of [['suite-t04','T04'],['suite-c11','C11']])assert.equal(d.works.find(w=>w.id===work).relations.find(r=>r.benchmark===id).type,'proposes');
+for(const id of ['bench2dex','dexjoco','maniskill-vitac-2025'])assert.equal(d.benchmarks.find(b=>b.id===id).resourceType,'benchmark');
+const catalogueReview=JSON.parse(fs.readFileSync('research/benchmark_catalogue_review.json','utf8'));
+assert.deepEqual(new Set(d.benchmarks.map(b=>b.id)),new Set([...mainstreamBenchmarkIds,'bench2dex','dexjoco','maniskill-vitac-2025']));
+for(const id of catalogueReview.removedIds){
+ assert.ok(!d.benchmarks.some(b=>b.id===id),id+': removed from resource library');
+ assert.ok(!d.works.some(w=>w.relations.some(r=>r.benchmark===id)),id+': no dangling resource links');
+}
 console.log(`PASS: ${d.benchmarks.length} classified resources with original source works and protocol evidence.`);
 
 // Benchmark reading pages describe concrete tasks, scoring and force semantics.
 const benchmarkReadings=d.benchmarks.filter(b=>b.resourceType==='benchmark');
 assert.equal(benchmarkReadings.length,23);
+const contactPage=d.benchmarks.find(b=>b.id==='contactbench').reading.simulationDetail;
+assert.equal(contactPage.taskGroups.reduce((n,g)=>n+g.tasks.length,0),36,'ContactBench: all reference task names');
+assert.equal(contactPage.real.groups[0].tasks.length,6,'ContactBench: six actual real-world policy tasks');
+assert.equal(contactPage.generalization.other[0].domain,'真机','ContactBench: no relabeling physical generalization as simulation');
+assert.equal(contactPage.generalization.support.rows.length,9,'ContactBench: supported variations separated from actual validation');
+assert.equal(contactPage.generalization.support.columns.length,4,'ContactBench: support, simulation validation and real policy experiments are separate');
+assert.equal(contactPage.generalization.scene.status,'无','ContactBench: support does not imply a simulation policy generalization experiment');
+assert.ok(contactPage.facts.find(r=>r[0]==='任务数量')[1].includes('73'),'ContactBench: configurations distinguished from task count');
+assert.deepEqual(contactPage.comparisons,[]);
+const rmbench=d.benchmarks.find(b=>b.id==='rmbench');
+const rmPage=rmbench.reading.simulationDetail;
+assert.deepEqual(rmPage.taskGroups.map(g=>g.tasks.length),[5,4],'RMBench: nine paper tasks in two memory groups');
+assert.equal(rmPage.real.groups[0].tasks.length,3,'RMBench: separate three-task real validation');
+assert.equal(rmPage.sections.length,7);
+assert.deepEqual(rmPage.comparisons,[],'RMBench: no model result tables');
+assert.ok(!rmPage.taskGroups.some(g=>g.tasks.some(t=>t.englishName==='place_block_mat')),'Auxiliary repository task excluded from paper count');
+const taskCount=id=>d.benchmarks.find(b=>b.id===id).reading.simulationDetail.taskGroups.reduce((n,g)=>n+g.tasks.reduce((m,t)=>m+(t.subtasks?.length||1),0),0);
+for(const [id,count] of [['tabero',9],['suite-t04',11],['suite-c11',9],['libero',40],['rlbench',100],['calvin',34],['robotwin',50],['robotwin-phys',50],['colosseum',20],['robodojo',42],['dexmimicgen',12]])assert.equal(taskCount(id),count,id+': complete source task inventory');
+assert.equal(d.benchmarks.find(b=>b.id==='robocasa').reading.simulationDetail.taskGroups[0].tasks.reduce((n,t)=>n+t.subtasks.length,0),25,'RoboCasa: all 25 atomic tasks across eight skills');
+assert.equal(d.benchmarks.find(b=>b.id==='robodojo').reading.simulationDetail.real.groups.reduce((n,g)=>n+g.tasks[0].subtasks.length,0),18,'RoboDojo: all 18 real tasks');
+for(const b of benchmarkReadings){
+ const r=b.reading,p=r.simulationDetail||r.detailPage||r;
+ assert.ok(p.overviewFigure?.url,b.id+': official overview in basic information');
+ assert.ok(p.overviewFigure.url.startsWith('https://')||fs.existsSync('public/'+p.overviewFigure.url),b.id+': overview asset exists');
+ if(r.simulationDetail){
+  assert.ok(!p.figure,b.id+': overview moved out of task chapter');
+  for(const g of [...p.taskGroups,...(p.real?.groups||[])]){
+   assert.ok(!g.figure,b.id+': no task example images');
+   for(const t of g.tasks)if(t.subtasksComplete)assert.equal(t.subtaskCount,t.subtasks.length,b.id+': complete subtask count');
+  }
+ }
+}
 for(const b of benchmarkReadings){
  assert.ok(b.reading.introduction.length>=1,b.id+': explain purpose and scope');
  assert.ok(b.reading.inputs&&b.reading.evaluation.length>=2&&b.reading.force&&b.reading.relevance,b.id+': explain how models are tested');

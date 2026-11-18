@@ -1,0 +1,1615 @@
+{
+  "checked": "2026-11-17",
+  "scope": "Shown task examples and complete task lists; completion checks only; code predicates are identified separately from paper protocols.",
+  "records": {
+    "libero": {
+      "tasks": {
+        "sim/pick up the black bowl between the plate and the ramekin and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl next to the ramekin and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl from table center and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl on the cookie box and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl on the ramekin and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl next to the cookie box and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl on the stove and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl next to the plate and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the black bowl on the wooden cabinet and place it on the plate": {
+          "success": "指定黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the alphabet soup and place it in the basket": {
+          "success": "字母汤罐位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the cream cheese and place it in the basket": {
+          "success": "奶油奶酪位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the salad dressing and place it in the basket": {
+          "success": "沙拉酱位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the bbq sauce and place it in the basket": {
+          "success": "烧烤酱位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the ketchup and place it in the basket": {
+          "success": "番茄沙司位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the tomato sauce and place it in the basket": {
+          "success": "番茄酱位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the butter and place it in the basket": {
+          "success": "黄油位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the milk and place it in the basket": {
+          "success": "牛奶位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the chocolate pudding and place it in the basket": {
+          "success": "巧克力布丁位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the orange juice and place it in the basket": {
+          "success": "橙汁位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/open the middle drawer of the cabinet": {
+          "success": "中层抽屉打开。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the bowl on the stove": {
+          "success": "黑碗放在炉灶的烹饪区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the wine bottle on top of the cabinet": {
+          "success": "酒瓶放在柜顶。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/open the top drawer and put the bowl inside": {
+          "success": "黑碗放入上层抽屉。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the bowl on top of the cabinet": {
+          "success": "黑碗放在柜顶。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_bowl_on_top_of_the_cabinet.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/push the plate to the front of the stove": {
+          "success": "盘子位于炉灶前方的指定桌面区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the cream cheese in the bowl": {
+          "success": "奶油奶酪放在黑碗中。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_cream_cheese_in_the_bowl.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/turn on the stove": {
+          "success": "炉灶开启。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the bowl on the plate": {
+          "success": "黑碗放在盘子上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the wine bottle on the rack": {
+          "success": "酒瓶位于酒架顶部目标区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put both the alphabet soup and the tomato sauce in the basket": {
+          "success": "字母汤罐和番茄酱同时位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put both the cream cheese box and the butter in the basket": {
+          "success": "奶油奶酪盒和黄油同时位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/turn on the stove and put the moka pot on it": {
+          "success": "炉灶已开启，且摩卡壶位于炉灶烹饪区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the black bowl in the bottom drawer of the cabinet and close it": {
+          "success": "黑碗放入底层抽屉，且抽屉关闭。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the white mug on the left plate and put the yellow and white mug on the right plate": {
+          "success": "白杯位于左盘上，黄白杯位于右盘上。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/pick up the book and place it in the back compartment of the caddy": {
+          "success": "黑色书本位于收纳架后部的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the white mug on the plate and put the chocolate pudding to the right of the plate": {
+          "success": "白杯位于盘子上，巧克力布丁位于盘子右侧指定桌面区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put both the alphabet soup and the cream cheese box in the basket": {
+          "success": "字母汤罐和奶油奶酪盒同时位于篮筐的容纳区域。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put both moka pots on the stove": {
+          "success": "两只摩卡壶均位于炉灶烹饪区域，且炉灶已开启。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        },
+        "sim/put the yellow and white mug in the microwave and close it": {
+          "success": "黄白杯放入微波炉，且炉门关闭。",
+          "successSource": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.bddl",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 8f1084e3132a39270c3a13ebe37270a43ece2a01"
+        }
+      }
+    },
+    "libero-plus": {
+      "reuse": "libero"
+    },
+    "libero-rig": {
+      "reuse": "libero",
+      "tasks": {
+        "sim/Camera orientation": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Camera position": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Camera field of view": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Wrist-camera mount": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Action-frame rotation": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Actuation gain error": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Control-frequency mismatch": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Proprioception noise": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Robot-base pose shift": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Table-height change": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        },
+        "sim/Gripper-pad geometry": {
+          "success": "在该项故障下，仍完成对应任务的物体放置、设备开关或多步骤操作目标。",
+          "successSource": "https://arxiv.org/html/2610.18843v1",
+          "successBasis": "论文"
+        }
+      }
+    },
+    "robotwin": {
+      "tasks": {
+        "sim/adjust_bottle": {
+          "success": "瓶子功能点位于指定左侧或右侧区域，且世界高度超过 0.9 m。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/adjust_bottle.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/blocks_ranking_rgb": {
+          "success": "三块按指定颜色顺序横向排列，满足相邻间距限制，且双夹爪打开。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/blocks_ranking_rgb.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/blocks_ranking_size": {
+          "success": "三块按指定尺寸顺序横向排列，满足相邻间距限制，且双夹爪打开。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/blocks_ranking_size.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/dump_bin_bigbin": {
+          "success": "小桶高度至少 1 m，所有垃圾球的高度均在 0.13–0.25 m。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/dump_bin_bigbin.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/beat_block_hammer": {
+          "success": "锤头与木块接触，且两者目标点的水平各轴偏差小于 2 cm。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/beat_block_hammer.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/click_alarmclock": {
+          "success": "对应侧夹爪闭合，并在闹钟目标点各轴 3 cm 内发生接触，达到一次后即记成功。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/click_alarmclock.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/click_bell": {
+          "success": "对应侧夹爪闭合，并在铃铛目标点水平各轴 2.5 cm、竖直 3 cm 内发生接触，达到一次后即记成功。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/click_bell.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/grab_roller": {
+          "success": "双夹爪闭合，且滚筒的世界高度超过 0.8 m。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/grab_roller.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/open_laptop": {
+          "success": "屏幕关节达到可动范围的 40%，且末端距开盖目标点小于 10 cm。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/open_laptop.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/open_microwave": {
+          "success": "微波炉门关节位置达到关节上限的 60%。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/open_microwave.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/press_stapler": {
+          "success": "夹爪在订书机目标点各轴 3 cm 内发生接触，达到一次后即记成功。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/press_stapler.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/put_object_cabinet": {
+          "success": "物体距柜内目标点的水平各轴偏差小于 5 cm、比初始位置抬高 0.7–12 cm，且放置用夹爪打开。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/put_object_cabinet.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/scan_object": {
+          "success": "物体在扫描器前 7 cm 内对齐扫描区域，且双夹爪闭合。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/scan_object.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/stamp_seal": {
+          "success": "印章与目标点的水平各轴偏差小于 1 cm，且双夹爪打开。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/stamp_seal.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        },
+        "sim/turn_switch": {
+          "success": "开关关节位置距关节上限不超过 0.05 rad。",
+          "successSource": "https://github.com/RoboTwin-Platform/RoboTwin/blob/ea8b21121ebb3cd201ff5b3fe361944ac94eda3f/envs/turn_switch.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ ea8b21121ebb3cd201ff5b3fe361944ac94eda3f"
+        }
+      }
+    },
+    "robotwin-phys": {
+      "reuse": "robotwin"
+    },
+    "rlbench": {
+      "tasks": {
+        "sim/Reach Target": {
+          "success": "机械臂末端到达指定目标区域。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/reach_target.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Take Umbrella Out Of Umbrella Stand": {
+          "success": "雨伞从伞架内取出。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/take_umbrella_out_of_umbrella_stand.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Put Umbrella In Umbrella Stand": {
+          "success": "雨伞放入伞架的目标区域，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/put_umbrella_in_umbrella_stand.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Pick And Lift": {
+          "success": "夹爪抓住指定方块，并抬至目标区域。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/pick_and_lift.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Close Box": {
+          "success": "盒盖关节相对初始位置的转动量超过 2.6 rad。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/close_box.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Close Microwave": {
+          "success": "微波炉门关节相对初始位置的转动量超过 40°。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/close_microwave.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Toilet Seat Down": {
+          "success": "座圈关节相对初始位置的转动量超过 1.7 rad。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/toilet_seat_down.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Slide Cabinet Open": {
+          "success": "指定柜门关节位移超过 6 cm，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/slide_cabinet_open.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Plug Charger In Power Supply": {
+          "success": "插头两根插脚分别插入对应插孔，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/plug_charger_in_power_supply.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Unplug Charger": {
+          "success": "充电器拔出并移至指定目标区域。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/unplug_charger.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Light Bulb In": {
+          "success": "指定灯泡放入灯座的目标位置，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/light_bulb_in.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Light Bulb Out": {
+          "success": "取出的灯泡放到指定支架位置，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/light_bulb_out.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Beat The Buzz": {
+          "success": "圆环棒到达终点并释放，途中不得触碰中间导线。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/beat_the_buzz.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Hang Frame On Hanger": {
+          "success": "相框挂接部位到达挂钩目标位置，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/hang_frame_on_hanger.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Insert Onto Square Peg": {
+          "success": "方环套入方柱，各处位置均与装配目标对齐。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/insert_onto_square_peg.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Setup Checkers": {
+          "success": "全部棋子分别放回对应棋格，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/setup_checkers.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Insert Usb In Computer": {
+          "success": "插头尖端插入电脑接口的目标位置。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/insert_usb_in_computer.py",
+          "successBasis": "官方实现",
+          "displayName": "插头插入电脑",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Play Jenga": {
+          "success": "目标积木移出原塔范围，其余积木仍在原塔范围内，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/play_jenga.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Screw Nail": {
+          "success": "先抓住螺丝刀，再使螺钉关节相对初态转动超过 1.4 rad。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/screw_nail.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Place Shape In Shape Sorter": {
+          "success": "指定形状块放入分类盒的目标区域。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/place_shape_in_shape_sorter.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Put Knife In Knife Block": {
+          "success": "刀先插入刀座的目标位置，再释放夹爪。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/put_knife_in_knife_block.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Straighten Rope": {
+          "success": "绳索首尾两端分别到达对应目标位置。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/straighten_rope.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Take Frame Off Hanger": {
+          "success": "相框从挂架取下并移至目标放置区，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/take_frame_off_hanger.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Take Usb Out Of Computer": {
+          "success": "插头从电脑接口拔出，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/take_usb_out_of_computer.py",
+          "successBasis": "官方实现",
+          "displayName": "从电脑拔出插头",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        },
+        "sim/Solve Puzzle": {
+          "success": "目标拼图片放到对应位置，且夹爪未持物。",
+          "successSource": "https://github.com/stepjam/RLBench/blob/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/solve_puzzle.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ 02720bba4c73fe02eb75df946b8791b806028a9d"
+        }
+      }
+    },
+    "colosseum": {
+      "tasks": {
+        "sim/Basketball in Hoop": {
+          "success": "篮球进入篮筐的目标区域。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/basketball_in_hoop.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Meat on Grill": {
+          "success": "指定肉块放到烤架的目标区域；双肉变体要求两块均到位。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/meat_on_grill.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Empty Dishwasher": {
+          "success": "目标盘子从洗碗机内部取出。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/empty_dishwasher.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Put Money in Safe": {
+          "success": "钞票放入指定保险柜隔层，且夹爪未持物。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/put_money_in_safe.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Place Wine at Rack Location": {
+          "success": "酒瓶放到酒架的指定位置，且夹爪未持物。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/place_wine_at_rack_location.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Move Hanger": {
+          "success": "衣架放到目标位置，且夹爪未持物。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/move_hanger.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Stack Cups": {
+          "success": "两只上层杯叠入底杯的目标区域，且夹爪未持物。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/stack_cups.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Open Drawer": {
+          "success": "指定抽屉关节相对初态的位移超过 15 cm。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/open_drawer.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Close Box": {
+          "success": "盒盖关节相对初态的转动量超过 2.6 rad。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/close_box.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Close Laptop Lid": {
+          "success": "电脑盖关节相对初态的转动量超过 1.79 rad。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/close_laptop_lid.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Reach and Drag": {
+          "success": "被拖动方块到达目标区域。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/reach_and_drag.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Get Ice from Fridge": {
+          "success": "取冰机构关节转动超过 1°，且杯子位于接冰位置。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/get_ice_from_fridge.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Hockey": {
+          "success": "冰球进入球门，且夹爪仍握住球棍。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/hockey.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Wipe Desk": {
+          "success": "全部污点均经擦拭移除，污点列表清空。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/wipe_desk.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Turn Oven On": {
+          "success": "烤箱旋钮关节相对初态的转动量超过 1.5 rad。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/turn_oven_on.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Scoop with Spatula": {
+          "success": "被舀物体抬至目标区域，且夹爪仍握住铲子。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/scoop_with_spatula.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Slide Block to Target": {
+          "success": "方块到达目标区域。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/slide_block_to_target.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Straighten Rope": {
+          "success": "绳索首尾两端分别到达对应目标位置。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/straighten_rope.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Insert onto Square Peg": {
+          "success": "方环套入方柱，各处位置均与装配目标对齐。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/insert_onto_square_peg.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        },
+        "sim/Setup Chess": {
+          "success": "全部棋子分别放回对应棋格，且夹爪未持物。",
+          "successSource": "https://github.com/robot-colosseum/robot-colosseum/blob/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/rlbench/tasks/setup_chess.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 098a910ae1d490524adb49b8d50735b00a1a62de"
+        }
+      }
+    },
+    "calvin": {
+      "tasks": {
+        "sim/rotate_red_block_right": {
+          "success": "红块绕竖直轴顺时针转动超过 60°，横滚和俯仰变化各小于 30°，位移不超过 10 cm，并保留非机器人接触。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "红块右转",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/rotate_red_block_left": {
+          "success": "红块绕竖直轴逆时针转动超过 60°，横滚和俯仰变化各小于 30°，位移不超过 10 cm，并保留非机器人接触。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "红块左转",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/rotate_blue_block_right": {
+          "success": "蓝块绕竖直轴顺时针转动超过 60°，横滚和俯仰变化各小于 30°，位移不超过 10 cm，并保留非机器人接触。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "蓝块右转",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/rotate_blue_block_left": {
+          "success": "蓝块绕竖直轴逆时针转动超过 60°，横滚和俯仰变化各小于 30°，位移不超过 10 cm，并保留非机器人接触。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "蓝块左转",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/stack_block": {
+          "success": "积木从未叠放变为仅由另一积木支撑，且末态线速度各分量小于 1 m/s、角速度各分量小于 1 rad/s。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "堆叠积木",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/unstack_block": {
+          "success": "原来仅由其他积木支撑的积木在末态不再接触其他积木，且初态线速度各分量小于 1 m/s、角速度各分量小于 1 rad/s。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "拆开堆叠",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/move_slider_left": {
+          "success": "滑门关节相对初态向左移动超过 15 cm。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "滑门左移",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/move_slider_right": {
+          "success": "滑门关节相对初态向右移动超过 15 cm。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "滑门右移",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/open_drawer": {
+          "success": "抽屉关节相对初态向打开方向移动超过 12 cm。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "打开抽屉",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/close_drawer": {
+          "success": "抽屉关节相对初态向关闭方向移动超过 12 cm。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "关闭抽屉",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/place_in_slider": {
+          "success": "初态仅由机器人持有的物体在末态接触滑柜搁板，且机器人不再接触该物体。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "物品放入滑柜",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/place_in_drawer": {
+          "success": "初态仅由机器人持有的物体在末态接触抽屉底板，且机器人不再接触该物体。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "物品放入抽屉",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/push_into_drawer": {
+          "success": "物体从桌面推入抽屉，起始时仅接触桌面，结束时接触抽屉底板。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "推入抽屉",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/turn_on_lightbulb": {
+          "success": "灯泡的逻辑状态由关闭变为开启。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "开启灯泡",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/turn_off_lightbulb": {
+          "success": "灯泡的逻辑状态由开启变为关闭。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "关闭灯泡",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/turn_on_led": {
+          "success": "指示灯的逻辑状态由关闭变为开启。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "开启指示灯",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        },
+        "sim/turn_off_led": {
+          "success": "指示灯的逻辑状态由开启变为关闭。",
+          "successSource": "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+          "successBasis": "官方实现",
+          "displayName": "关闭指示灯",
+          "sourceVersion": "main @ 797142c588c21e76717268b7b430958dbd13bf48",
+          "successReferences": [
+            "https://github.com/mees/calvin_env/blob/797142c588c21e76717268b7b430958dbd13bf48/calvin_env/envs/tasks.py",
+            "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+          ]
+        }
+      }
+    },
+    "tabero": {
+      "tasks": {
+        "sim/Alphabet soup": {
+          "success": "字母汤罐放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Cream cheese": {
+          "success": "奶油奶酪放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Salad dressing": {
+          "success": "沙拉酱放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/BBQ sauce": {
+          "success": "烧烤酱放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Tomato sauce": {
+          "success": "番茄酱放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Butter": {
+          "success": "黄油放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Milk": {
+          "success": "牛奶放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Chocolate pudding": {
+          "success": "巧克力布丁放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        },
+        "sim/Orange juice": {
+          "success": "橙汁放入篮筐的目标区域。",
+          "successSource": "https://github.com/NathanWu7/Tabero/blob/f57f147c4abd0c223186878ff595e4a0089c0fbe/source/tac_manip/tac_manip/tasks/manipulation/libero/mdp/terminations.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ f57f147c4abd0c223186878ff595e4a0089c0fbe"
+        }
+      }
+    },
+    "dexmimicgen": {
+      "tasks": {
+        "sim/Piece Assembly": {
+          "success": "第一件与底座的水平距离小于 2 cm，第二件与第一件的水平距离、与目标高度的偏差均小于 2 cm，且双手释放装配件。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_three_piece_assembly.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Threading": {
+          "success": "针杆中心与圆环中心的距离小于圆环设定半径。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_threading.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Transport": {
+          "success": "载荷进入目标箱，同时杂物进入垃圾箱。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_transport.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Box Cleanup": {
+          "success": "盒盖与盒身水平中心距离小于 3 cm，且位于盖合的高度范围。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_box_cleanup.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Drawer Cleanup": {
+          "success": "收纳物与抽屉底部接触，且抽屉关节位置大于 −0.01 m。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_drawer_cleanup.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Tray Lift": {
+          "success": "托盘底部及两个物体均高出台面 10 cm，且两个物体仍与托盘底部接触。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_lift_tray.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Pouring": {
+          "success": "小球接触碗且水平中心距离小于 10 cm；碗直立接触垫子，且两者水平中心距离小于 6 cm。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_pouring.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Coffee": {
+          "success": "咖啡胶囊放入槽内的目标范围，且咖啡机盖的开启角度小于 15°。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_coffee.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/Can Sorting": {
+          "success": "罐子放入对应颜色容器的目标区域。",
+          "successSource": "https://github.com/NVlabs/dexmimicgen/blob/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_can_sort.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 940e8a1b3ad70eb1925ada6b364b197de6bb2af9"
+        },
+        "sim/FlipCup": {
+          "success": "杯子与竖直方向夹角不超过 5°、接触台面，且双手均不再持杯。",
+          "successSource": "https://github.com/chernyadev/bigym/blob/d98124454dfa3bc697f75536daec5989a47bfa8d/bigym/envs/manipulation.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ d98124454dfa3bc697f75536daec5989a47bfa8d"
+        },
+        "sim/DishwasherLoadPlates": {
+          "success": "两只盘子均接触洗碗机底篮、姿态误差不超过 20°，且双手均不再持盘。",
+          "successSource": "https://github.com/chernyadev/bigym/blob/d98124454dfa3bc697f75536daec5989a47bfa8d/bigym/envs/dishwasher_plates.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ d98124454dfa3bc697f75536daec5989a47bfa8d"
+        },
+        "sim/CupBoardsCloseAll": {
+          "success": "全部柜门和抽屉的归一化状态均在关闭值 0 的 0.1 容差内。",
+          "successSource": "https://github.com/chernyadev/bigym/blob/d98124454dfa3bc697f75536daec5989a47bfa8d/bigym/envs/cupboards.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "master @ d98124454dfa3bc697f75536daec5989a47bfa8d"
+        }
+      }
+    },
+    "robodojo": {
+      "tasks": {
+        "sim/Stack Bowls": {
+          "success": "三只碗正向堆叠，底碗平稳放在桌面，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/stack-bowls/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Push T": {
+          "success": "丁字形块的位置及朝向与目标匹配，机械臂回到初始位姿，且过程中未超限抬起方块。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/push-t/",
+          "successBasis": "官方任务文档",
+          "displayName": "推动丁字形块"
+        },
+        "sim/Pack Objects Into Box": {
+          "success": "四件物体均在箱内，箱子按要求朝左对齐，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/pack-objects-into-box/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Fold Clothes": {
+          "success": "双袖折向内侧、衣摆靠近肩部，衣摆线与肩线对齐，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/fold-clothes/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Hang Mugs": {
+          "success": "三只杯子均挂在杯架上，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/hang-mugs/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Sweep Blocks": {
+          "success": "所有方块进入簸箕，簸箕在扫帚左侧且直立稳放桌面，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/sweep-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Pour Liquid Into Cup": {
+          "success": "倒入杯中的液体达到规定量，且瓶子恢复直立。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/pour-liquid-into-cup/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Make Toast": {
+          "success": "两片面包插入烤面包机、另两片留在架上，开关压下，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/make-toast/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Arrange Largest Number": {
+          "success": "全部数字按降序放入对应垫位且朝向正确，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/arrange-largest-number/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Sort Nesting Dolls By Size": {
+          "success": "五只套娃直立排成从小到大的一行，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/sort-nesting-dolls-by-size/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Store Laptop And Headphones": {
+          "success": "耳机对齐放在支架上，合上的电脑竖直放入收纳架的目标范围，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/store-laptop-and-headphones/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Stack Blocks": {
+          "success": "三个方块完成堆叠，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/stack-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Cover Blocks": {
+          "success": "先从左到右盖住方块，再按红、绿、蓝顺序揭开，杯子朝向正确且机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/cover-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Match And Pick From Conveyor": {
+          "success": "与展示物匹配的目标物体被抬高至少 10 cm。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/match-and-pick-from-conveyor/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Swap Blocks": {
+          "success": "借助空垫位完成三次移动并在每次移动后按按钮，两个方块位置互换，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/swap-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Swap T": {
+          "success": "两块丁字形块互换位置并与各自目标朝向匹配，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/swap-t/",
+          "successBasis": "官方任务文档",
+          "displayName": "交换丁字形块"
+        },
+        "sim/Press By Number": {
+          "success": "依次按指定次数操作两个按钮并分别按确认键，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/press-by-number/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Imitate Sorting Sequence": {
+          "success": "五件物体按示范顺序摆放，示范物仍在篮内，夹爪打开且机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/imitate-sorting-sequence/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Fasten Screws": {
+          "success": "三组螺母与螺栓均完成紧固，夹爪打开且机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/fasten-screws/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Plug In Charger": {
+          "success": "充电器直立插入插座的目标位置和深度，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/plug-in-charger/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Insert Tubes": {
+          "success": "三根管子均正确插入，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/insert-tubes/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Pour Balls Into Vase": {
+          "success": "七个小球全部进入花瓶、杯子恢复直立，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/pour-balls-into-vase/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Play Xylophone": {
+          "success": "琴槌从左到右敲遍琴键，每次敲击后抬高至少 2.5 cm。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/play-xylophone/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Deposit Coin": {
+          "success": "硬币的包围盒进入存钱罐槽口区域，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/deposit-coin/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Insert Key": {
+          "success": "钥匙保持直立、对准槽口并插至目标深度，随后完成转动。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/insert-key/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Build Tower": {
+          "success": "八个部件全部按层对中并保持直立，夹爪打开且机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/build-tower/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Fill Pen Holder": {
+          "success": "四支笔均插入笔筒、笔筒保持直立，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/fill-pen-holder/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Classify Objects": {
+          "success": "三类物体分别放入三个篮筐并稳定落定，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/classify-objects/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Put Bottles Into Dustbin": {
+          "success": "四个瓶子全部进入垃圾桶，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/put-bottles-into-dustbin/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Play Tic-Tac-Toe": {
+          "success": "己方五颗棋子均在棋盘格内且高度正确、夹爪打开；对手机械臂移动时己方不得移动。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/play-tic-tac-toe/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Fill Egg Holder": {
+          "success": "四枚鸡蛋均进入蛋盒，盒盖完全合上并正确对齐，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/fill-egg-holder/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Organize Table": {
+          "success": "鼠标、键盘、摆件和闹钟分别进入指定位置，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/organize-table/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Make Kong": {
+          "success": "三张同类麻将牌推倒、其他牌保持直立，目标牌正确放置、夹爪打开，且无违规动作。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/make-kong/",
+          "successBasis": "官方任务文档",
+          "displayName": "麻将杠牌"
+        },
+        "sim/Play Stacking Toy": {
+          "success": "四组套叠部件按对应支柱正确装入底座，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/play-stacking-toy/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Align Blocks": {
+          "success": "三个方块对齐成直线，机械臂回到初始位姿，且过程中未超限抬起方块。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/align-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/General Pickup": {
+          "success": "指定物体被抬高至少 10 cm。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/general-pickup/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Solve Equation": {
+          "success": "正确的数字或运算符放在算式缺失位置的垫子上，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/solve-equation/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Stack Blocks By Language": {
+          "success": "三个方块按语言指定的顺序堆叠，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/stack-blocks-by-language/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Classify Objects By Language": {
+          "success": "三类指定物体分别进入对应的左、中、右篮筐且无多余物体，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/classify-objects-by-language/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Pick From Conveyor By Image": {
+          "success": "图像指定的物体位于篮内，且被抬高至少 8 cm。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/pick-from-conveyor-by-image/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Store Tools In Toolbox": {
+          "success": "四件工具分别落入匹配槽位并被工具箱覆盖，机械臂回到初始位姿。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/store-tools-in-toolbox/",
+          "successBasis": "官方任务文档"
+        },
+        "sim/Pour By Language": {
+          "success": "三种指定液体依次倒入各自对应的碗。",
+          "successSource": "https://robodojo-benchmark.com/doc/sim-tasks/pour-by-language/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Insert Tubes": {
+          "success": "三根管子均完全插入对应位置。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/insert-tubes/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Make Bread": {
+          "success": "两片面包放入烤面包机，随后完成碗和盘子的摆放。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/make-bread/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Make Food": {
+          "success": "完成菜板、刀和牛排摆放，将蔬菜与虾放入锅中，锅移至炉灶并正确盖上锅盖。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/make-food/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Pack And Pour Fruit": {
+          "success": "三件水果先装入小碗，再全部倒入大碗。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/pack-and-pour-fruit/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Cover Blocks": {
+          "success": "三个方块均被盖住，再按红、绿、蓝顺序揭开。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/cover-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Store In Safe": {
+          "success": "三个娃娃放入保险箱后，将保险箱拉至桌面中央并关闭盖子。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/store-in-safe/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Fill Pen Holder": {
+          "success": "拿起笔筒并插入三支笔，最后放下笔筒。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/fill-pen-holder/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Put Objects Into Basket": {
+          "success": "全部目标物体均放入篮筐。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/put-objects-into-basket/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Stack And Cover Blocks": {
+          "success": "三个方块完成堆叠，并用杯子盖住。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/stack-and-cover-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Stack Bowls": {
+          "success": "三只碗居中叠放。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/stack-bowls/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Stand Up Bottles": {
+          "success": "三个瓶子均由横放变为直立。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/stand-up-bottles/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Insert Charger": {
+          "success": "插头插入插线板，且充电线连接到插头。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/insert-charger/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Disassemble LEGO": {
+          "success": "先拆下两块积木放入碗中，再将余下一块经桌面和左夹爪转移至碗中。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/disassemble-lego/",
+          "successBasis": "官方任务文档",
+          "displayName": "拆卸积木"
+        },
+        "real/Cap Pen": {
+          "success": "拿起笔和笔帽并将笔帽套到笔上。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/cap-pen/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Classify Objects": {
+          "success": "全部物体按类别放入对应的两个篮筐。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/classify-objects/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Hang Mugs": {
+          "success": "三只杯子全部挂到杯架上。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/hang-mugs/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Sweep Blocks": {
+          "success": "全部方块扫入簸箕。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/sweep-blocks/",
+          "successBasis": "官方任务文档"
+        },
+        "real/Pack Objects Into Backpack": {
+          "success": "三件目标物体全部装入背包。",
+          "successSource": "https://robodojo-benchmark.com/doc/real-tasks/pack-objects-into-backpack/",
+          "successBasis": "官方任务文档"
+        }
+      }
+    },
+    "robocasa": {
+      "tasks": {
+        "sim/PickPlaceCounterToCabinet": {
+          "success": "物体位于目标柜内，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceCabinetToCounter": {
+          "success": "物体与目标台面接触，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceCounterToSink": {
+          "success": "物体至少部分进入水槽的目标区域，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceSinkToCounter": {
+          "success": "物体位于容器中、容器与台面接触，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceCounterToMicrowave": {
+          "success": "物体接触容器、容器接触微波炉，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceMicrowaveToCounter": {
+          "success": "物体位于台面目标容器中，且夹爪远离物体。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceCounterToStove": {
+          "success": "食材位于炉灶上的锅中，且夹爪远离食材。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PickPlaceStoveToCounter": {
+          "success": "食材位于台面目标容器中，且夹爪远离食材。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_pnp.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/OpenSingleDoor": {
+          "success": "目标单门的归一化开启量达到 90%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_doors.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CloseSingleDoor": {
+          "success": "目标单门的归一化开启量不超过 5%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_doors.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/OpenDoubleDoor": {
+          "success": "双门各自的归一化开启量均达到 90%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_doors.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CloseDoubleDoor": {
+          "success": "双门各自的归一化开启量均不超过 5%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_doors.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/OpenDrawer": {
+          "success": "抽屉的归一化开启量达到 95%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_drawer.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CloseDrawer": {
+          "success": "抽屉的归一化开启量不超过 5%。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_drawer.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOnStove": {
+          "success": "指定炉灶旋钮角度进入开启区间，即绝对角度在 0.35 至 2π−0.35 rad 内。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_stove.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOffStove": {
+          "success": "指定炉灶旋钮转至关闭角度范围。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_stove.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOnSinkFaucet": {
+          "success": "水龙头状态由关闭变为出水。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_sink.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOffSinkFaucet": {
+          "success": "水龙头状态由出水变为关闭。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_sink.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnSinkSpout": {
+          "success": "出水口朝向状态达到指令指定方向。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_sink.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CoffeePressButton": {
+          "success": "咖啡机处于开启状态，且夹爪远离按钮。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_coffee.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOnMicrowave": {
+          "success": "微波炉处于开启状态，且夹爪远离启动按钮。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_microwave.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/TurnOffMicrowave": {
+          "success": "微波炉处于关闭状态，且夹爪远离停止按钮。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_microwave.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CoffeeSetupMug": {
+          "success": "杯子放到咖啡机的接水位置，且夹爪远离杯子。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_coffee.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/CoffeeServeMug": {
+          "success": "杯子与目标台面接触，且夹爪远离杯子。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_coffee.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/NavigateKitchen": {
+          "success": "移动底座距目标水平位置不超过 20 cm，且朝向误差的余弦不小于 0.98。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/single_stage/kitchen_navigate.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PrepareCoffee": {
+          "success": "杯子正确放在接水位置、咖啡机开启，且夹爪远离杯子与按钮。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/multi_stage/brewing/prepare_coffee.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/ArrangeVegetables": {
+          "success": "两种蔬菜均位于砧板上，且夹爪远离砧板。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/multi_stage/chopping_food/arrange_vegetables.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/MicrowaveThawing": {
+          "success": "食物位于微波炉内、微波炉开启，且夹爪远离食物。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/multi_stage/defrosting_food/microwave_thawing.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        },
+        "sim/PreSoakPan": {
+          "success": "锅和海绵均位于水槽内、水龙头出水，且夹爪远离锅。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/756598a5be52e052339bb2d957426e39015c2afb/robocasa/environments/kitchen/multi_stage/washing_dishes/pre_soak_pan.py",
+          "successBasis": "官方实现 v0.2",
+          "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
+        }
+      },
+      "groups": {
+        "Composite kitchen activities": [
+          {
+            "englishName": "ArrangeVegetables",
+            "name": "整理蔬菜"
+          },
+          {
+            "englishName": "MicrowaveThawing",
+            "name": "微波炉解冻准备"
+          },
+          {
+            "englishName": "PreSoakPan",
+            "name": "准备浸泡锅具"
+          },
+          {
+            "englishName": "PrepareCoffee",
+            "name": "准备咖啡"
+          }
+        ]
+      }
+    },
+    "robocasa365": {
+      "groups": {
+        "Open Cabinet / Turn Stove / Pick-and-place": [
+          {
+            "name": "打开柜门",
+            "englishName": "OpenCabinet"
+          },
+          {
+            "name": "开启炉灶",
+            "englishName": "TurnOnStove"
+          }
+        ],
+        "Prepare Coffee / Steam Vegetables / Restock Supplies": [
+          {
+            "name": "准备咖啡",
+            "englishName": "PrepareCoffee"
+          },
+          {
+            "name": "补充食品储物柜",
+            "englishName": "RestockPantry"
+          }
+        ]
+      },
+      "tasks": {
+        "sim/OpenCabinet": {
+          "success": "指定柜门打开。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/425684d332f135f5b30a40b321f52d15a0fe9250/robocasa/environments/kitchen/atomic/kitchen_doors.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
+        },
+        "sim/TurnOnStove": {
+          "success": "指定炉头开启。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/425684d332f135f5b30a40b321f52d15a0fe9250/robocasa/environments/kitchen/atomic/kitchen_stove.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
+        },
+        "sim/PrepareCoffee": {
+          "success": "杯子正确放在接水位置、咖啡机开启，且夹爪远离杯子与按钮。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/425684d332f135f5b30a40b321f52d15a0fe9250/robocasa/environments/kitchen/composite/brewing/prepare_coffee.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
+        },
+        "sim/RestockPantry": {
+          "success": "两个罐头均在柜内且靠近原有罐头，夹爪远离两个罐头。",
+          "successSource": "https://github.com/robocasa/robocasa/blob/425684d332f135f5b30a40b321f52d15a0fe9250/robocasa/environments/kitchen/composite/restocking_supplies/restock_pantry.py",
+          "successBasis": "官方实现",
+          "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
+        }
+      }
+    },
+    "simplerenv": {
+      "tasks": {
+        "real/Pick Coke Can": {
+          "success": "指定可乐罐被机器人成功抓起。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Move Object Near Object": {
+          "success": "指定物体被移动到另一个目标物体附近。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Open / Close Drawer": {
+          "success": "指定抽屉完成指令要求的打开或关闭。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Open Drawer and Place Apple": {
+          "success": "打开指定抽屉，并将苹果放入该抽屉。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Put Spoon on Towel": {
+          "success": "勺子放到毛巾上。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Put Carrot on Plate": {
+          "success": "胡萝卜放到盘子上。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Stack Green Block on Yellow Block": {
+          "success": "绿色方块叠放在黄色方块上。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        },
+        "real/Put Eggplant in Basket": {
+          "success": "茄子放入篮筐。",
+          "successSource": "https://arxiv.org/html/2405.05941v1#A2",
+          "successBasis": "论文真机任务协议"
+        }
+      }
+    }
+  }
+}

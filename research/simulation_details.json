@@ -1322,34 +1322,88 @@
             "english": "Physical Property Perception",
             "tasks": [
               {
-                "englishName": "Weight / Hardness Classify",
-                "name": "重量／硬度分类",
-                "goal": "通过交互判断轻重或软硬，并放到对应目标盘。",
-                "mechanism": "外观相近但质量或接触响应不同。",
-                "scoring": "属性类别正确且放置正确。",
+                "englishName": "Weight Classify",
+                "name": "重量分类",
+                "goal": "抓取并判断物体轻重，将轻块放到蓝盘、重块放到黄盘。",
+                "scoring": "轻重类别与目标盘匹配，且物体达到目标位置与姿态要求。",
                 "criteria": [
-                  "原文任务目录按轻／重、软／硬定义类别；未把类别数写成连续物理参数估计。"
+                  "设置 weight_label=random 时，每回合等概率选择轻／重类别；默认值为 heavy。官方平衡采集脚本分别收集 50 条轻块、50 条重块成功轨迹。"
+                ],
+                "focus": "区分相同几何模型的两档重量；轻、重块密度分别固定为 100、10,000 kg/m³，同体积下质量相差 100 倍，不连续采样质量。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/weight_classification.py",
+                    "label": "重量设置 · 官方实现"
+                  }
                 ]
               },
               {
-                "englishName": "Roughness Classify / Regrasp",
-                "name": "粗糙度分类与再抓取",
-                "goal": "识别光滑／粗糙表面，必要时重新选择物体。",
-                "mechanism": "表面触觉与摩擦差异。",
-                "scoring": "选出要求的粗糙物体并放到目标盘。",
-                "criteria": []
+                "englishName": "Hardness Classify",
+                "name": "硬度分类",
+                "goal": "通过接触判断软硬，将软块放到蓝盘、硬块放到黄盘。",
+                "scoring": "软硬类别与目标盘匹配，且物体达到目标位置与姿态要求。",
+                "criteria": [
+                  "hardness_label 默认设为 random，每回合等概率选择软／硬类别，不连续采样模量；软、硬块密度同时分别为 300、1,000 kg/m³。"
+                ],
+                "focus": "区分两种固定材料配置；软块杨氏模量为 0.1 MPa、泊松比为 0.45，硬块采用默认仿射体模型（刚度参数 m_kappa=100 MPa）；两种参数不等同于同一定义的杨氏模量。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/hardness_classification.py",
+                    "label": "软硬设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Roughness Classify",
+                "name": "粗糙度分类",
+                "goal": "通过接触判断表面，将光滑块放到蓝盘、粗糙块放到黄盘。",
+                "scoring": "光滑／粗糙类别与目标盘匹配，且物体达到目标位置与姿态要求。",
+                "criteria": [
+                  "roughness_label 默认设为 random，每回合等概率选择光滑／粗糙类别，不连续采样粗糙度。"
+                ],
+                "focus": "区分两个固定的光滑／粗糙模型资产；任务代码未给出 Ra、Rq 数值范围或分类阈值，两类使用相同的任务级摩擦配置。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/roughness_classification.py",
+                    "label": "表面设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Roughness-Guided Regrasp",
+                "name": "粗糙度引导再抓取",
+                "goal": "触摸辨别两个物块；若先抓到光滑块则放回并重抓，将粗糙块放到黄盘。",
+                "scoring": "选出粗糙块并使其达到黄盘的目标位置与姿态要求。",
+                "criteria": [
+                  "粗糙块所在侧与首次抓取侧可分别设为 random，独立选择左／右；当前两项默认值均为 right。"
+                ],
+                "focus": "根据接触反馈决定保留或重新抓取；使用与粗糙度分类相同的两个固定模型，不连续采样粗糙度。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/roughness_guided_regrasp.py",
+                    "label": "再抓取设置 · 官方实现"
+                  }
+                ]
               },
               {
                 "englishName": "Empty-Can Selection",
                 "name": "空罐选择",
-                "goal": "从外观相近的罐子中找出空罐。",
-                "mechanism": "交互中的质量和接触差异。",
-                "scoring": "将空罐放入篮筐。",
-                "criteria": []
+                "goal": "通过抓取和提起，从外观相近的罐子中找出空罐并放入篮筐。",
+                "scoring": "正确选出空罐并放入篮筐。",
+                "criteria": [
+                  "empty_can 默认设为 random，在芬达、百事两个品牌中随机指定空罐，另一罐为重罐；不连续采样密度。"
+                ],
+                "focus": "区分空／满两种固定配置；仿真以密度 100、10,000 kg/m³ 分别表示轻罐与重罐，同品牌模型下质量相差 100 倍。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/empty_can_selection.py",
+                    "label": "空罐设置 · 官方实现"
+                  }
+                ]
               }
             ],
-            "count": "5 项，分类与再抓取分别计任务",
-            "note": "",
+            "count": "5 项",
+            "note": "训练演示采集与测试共用上述固定物性配置，随机的是类别或物体布局；没有另设连续物性测试范围。重量、软硬、粗糙度分类的初始 X、Y 位置各加入 ±1 cm 扰动。分类任务检查正确目标盘上的位置与姿态，不要求输出物性数值。",
             "sources": [
               {
                 "url": "https://arxiv.org/html/2610.10384v1",

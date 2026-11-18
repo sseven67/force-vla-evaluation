@@ -7,6 +7,12 @@ from urllib.parse import urlencode
 
 def apply_simulation_details(data):
     doc = json.loads((Path(__file__).parent / 'research' / 'simulation_details.json').read_text(encoding='utf-8'))
+    additions = json.loads((Path(__file__).parent / 'research' / 'benchmark_additions.json').read_text(encoding='utf-8'))
+    doc['records'].update(additions['records'])
+    doc['checked'] = max(doc['checked'], additions['checked'])
+    for bid, overrides in additions.get('pageOverrides', {}).items():
+        doc['records'][bid]['page'].update(copy.deepcopy(overrides))
+    data['resourceUpdated'] = max(data.get('resourceUpdated', ''), additions['checked'])
     by_id = {b['id']: b for b in data['benchmarks']}
     for bid, record in doc['records'].items():
         page = copy.deepcopy(record['page'])
@@ -20,7 +26,7 @@ def apply_simulation_details(data):
                      focus=page['introduction'], detail=page['introduction'], verdict='任务、评分与评测边界见详情',
                      reason=page['introduction'], protocol=page['evaluation'], release='论文与官方资源见详情页。',
                      scope=record['focus'], evidence=[dict(url=s['url'], locator=s['label']) for s in page['sources']],
-                     auditChecked=doc['checked'], newlyCollected=True, externalUsers=[],
+                     auditChecked=record.get('checked', doc['checked']), newlyCollected=True, externalUsers=[],
                      metadata=dict(scholar=None, scholarStatus='not-checked',
                                    scholarSource='https://scholar.google.com/scholar?' + urlencode({'q':record['paperTitle']}),
                                    stars=None, starsStatus='unavailable' if repository else 'no-repository', repository=repository,
@@ -28,6 +34,8 @@ def apply_simulation_details(data):
             data['benchmarks'].append(b)
             by_id[bid] = b
         b = by_id[bid]
+        if record.get('metadata'):
+            b['metadata'].update(copy.deepcopy(record['metadata']))
         b['name'] = record['name']
         b['domain'] = record.get('domain', b['domain'])
         if bid == 'libero-plus':
@@ -54,4 +62,5 @@ def apply_simulation_details(data):
             b['reading']['inputs'] = facts['输入']
             b['reading']['evaluation'] = [page['evaluation'], '按任务序列回测已学任务，分别衡量前向迁移、负向迁移与长期保留。']
     from benchmark_usage import apply_benchmark_usage
-    return apply_benchmark_usage(data)
+    from benchmark_catalogue_review import apply_benchmark_catalogue_review
+    return apply_benchmark_catalogue_review(apply_benchmark_usage(data))

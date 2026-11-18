@@ -1,0 +1,456 @@
+{
+  "records": {
+    "libero": {
+      "basic": [
+        "成功率：完整完成任务的测试比例。",
+        "前向迁移与学习曲线 AUC：衡量已学知识对新任务的帮助及任务序列中的学习表现。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Spatial selection": {
+          "scoring": "指定物体放到语言要求的目标位置。"
+        },
+        "Goal-conditioned manipulation": {
+          "scoring": "完成当前指令指定的操作目标。"
+        },
+        "LIBERO-Long / LIBERO-10": {
+          "scoring": "全部物体放置和设备操作目标均完成。"
+        }
+      },
+      "taskFocus": {
+        "Spatial selection": "根据语言描述的相对位置区分同类物体。",
+        "Object-conditioned placement": "识别不同目标物体并完成抓取放置。",
+        "Goal-conditioned manipulation": "在同一场景中按语言选择并完成不同操作目标。",
+        "LIBERO-Long / LIBERO-10": "连续完成具有先后依赖的抓取、放置与设备操作。"
+      }
+    },
+    "robotwin": {
+      "basic": [
+        "成功率：完整完成任务的测试比例，Clean 与随机化场景分别汇总。",
+        "专家生成成功率：专家程序成功生成完整演示的比例。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Pick Dual Bottles / Stack Bowls / Handover Block": {
+          "scoring": "完成对应任务的物体放置、堆叠或交接。"
+        }
+      },
+      "taskFocus": {
+        "Pick Dual Bottles / Stack Bowls / Handover Block": "双臂分工、物体交接与稳定堆叠。",
+        "Open Laptop / Turn Switch / Beat Block Hammer": "关节机构操作、工具使用与目标接触。",
+        "Stack Bowls": "双臂协作与稳定堆叠。",
+        "Handover Block": "双臂交接的时序协调与抓持转换。",
+        "Pick Bottle": "视觉干扰下的目标定位与抓取。",
+        "Click Bell": "铃铛定位与按压操作。"
+      }
+    },
+    "forcebench": {
+      "basic": [
+        "成功率：完整完成任务的测试比例；仿真总体取 8 项任务成功率的等权平均，真机单独统计。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "B01-e01": "区分外观相同物体的重量并分拣；质量仅取 0.06 kg、0.18 kg 两档。",
+        "B01-e02": "在外观和总质量相同的条件下识别质心位置并分拣。",
+        "B01-e03": "适应变化的旋转阻力，越过阻力峰值并完成开阀。",
+        "B01-e04": "判断两个旋转方向的阻力差异并选择低阻力方向。",
+        "B01-e05": "根据旋转阻力变化完成旋钮操作与点火。",
+        "B01-e06": "协调按压与旋转，完成须先压后转的机构操作。",
+        "B01-e07": "适应随开度变化的拉动阻力并完成开抽屉。",
+        "B01-e08": "螺纹装配中的精确对齐、接触啮合与旋转协调。",
+        "B01-e09": "区分外观相似的空罐与满罐并按重量分拣。",
+        "B01-e10": "受泡沫接触干扰时的取盘操作。",
+        "B01-e11": "印章与目标表面的对齐和按压。",
+        "B01-e12": "利用接触反馈调整插头并完成插接。",
+        "B01-e13": "受槽形约束的方块对齐与插入。"
+      }
+    },
+    "univtac": {
+      "basic": [
+        "成功率：完整完成各项任务的测试比例，并汇总任务平均值。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Lift Bottle": "受限空间中的抓取、姿态选择与碰撞规避。",
+        "Lift Can": "抓持稳定性与抗滑移控制。",
+        "Put Bottle in Shelf": "抓持位姿判断与狭窄开口中的精确放置。",
+        "Grasp Classify": "利用触觉表面差异识别物体并分类。",
+        "Pull-out Key": "在槽口约束下调整姿态并拔出物体。",
+        "Insert Hole": "未知孔轴朝向下的接触对齐与插入。",
+        "Insert HDMI": "细小接口的精确定位与插接。",
+        "Insert Tube": "细间隙插入与接触纠偏。",
+        "Insert USB": "插槽对齐与插入过程中的纠偏。",
+        "Bottle Upright": "手内姿态调整与稳定抓持。"
+      }
+    },
+    "suite-t04": {
+      "basic": [
+        "成功率：完整完成各项任务的测试比例，并汇总任务平均值。",
+        "仿真—真机一致性（Pearson r、MMRV）：衡量共有任务上模型成绩与相对排名的一致程度。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Weight Classify": "利用交互反馈区分物体重量并分类。",
+        "Hardness Classify": "利用接触反馈区分软硬属性并分类。",
+        "Roughness Classify": "利用表面触觉识别粗糙度并选择物体。",
+        "Roughness-Guided Regrasp": "根据粗糙度判断调整抓取与物体选择。",
+        "Empty-Can Selection": "区分视觉相似罐子的空满状态。",
+        "Grasp Chip": "在稳定抓持的同时避免损伤易碎物体。",
+        "Gear Assembly": "齿轮装配中的对齐与啮合。",
+        "Pull Drawer": "保持抓持并完成受约束的抽屉拉动。",
+        "Insert USB": "细小插槽的对齐与插入。",
+        "Insert Block v1": "按指令选择物体并对准开口插入。",
+        "Insert Block v2": "按指令选择物体并对准开口插入。"
+      }
+    },
+    "suite-c11": {
+      "basic": [
+        "成功率：完整完成各项任务的测试比例，仿真与真机分别汇总。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Peg Insertion": "细间隙轴孔对齐与插入。",
+        "USB Insertion": "细小接口的对齐与插接。",
+        "Power Plug Insertion": "电源插头的定位、对齐与插接。",
+        "Gear Assembly": "轴孔对准与齿轮啮合。",
+        "Nut–bolt Assembly": "螺纹装配中的轴向对齐与旋转协调。",
+        "Bulb Installation": "灯泡安装中的对齐与旋拧。",
+        "Peg Reorientation": "视觉遮挡下的手内姿态判断与调整。",
+        "Object Search": "通过主动接触搜索并定位目标。",
+        "Ball Sorting": "结合表面触觉与视觉区分目标并分类。",
+        "Ball Sorting — Normal / Dim": "正常光和暗光下结合触觉识别、分类目标。"
+      }
+    },
+    "tabero": {
+      "basic": [
+        "成功率：将指定物体成功放入篮筐的测试比例。",
+        "平均力（AG／AA）：分别衡量接触期间的平均夹持力与对外作用力。",
+        "高力读数均值（MG／MA）：分别汇总最高 5% 的夹持力与作用力读数，反映较大用力。"
+      ],
+      "taskMetric": "成功率＋力度指标：分别评价是否完成任务及操作用力大小，力值不并入成功率。",
+      "taskFocus": {
+        "Object-to-basket tasks": "兼顾抓取放置成功与夹持、接触用力。"
+      }
+    },
+    "rlbench": {
+      "basic": [
+        "成功率：满足各任务完整完成条件的测试比例。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Place Wine / Put Money in Safe / Stack Cups": "不同物体与容器上的抓取、放置和堆叠。",
+        "Open Drawer / Close Laptop / Sweep to Dustpan": "受约束机构的操作与工具使用。",
+        "Insert onto Square Peg / Straighten Rope": "精确装配、棋子摆放与柔性物体形状调整。"
+      }
+    },
+    "calvin": {
+      "basic": [
+        "单技能成功率：完成一条任务指令的测试比例。",
+        "连续任务成功率：连续完成至少 1–5 条指令的测试比例。",
+        "平均完成链长：一条五任务链中平均连续完成几项，失败后停止，范围为 0–5。"
+      ],
+      "taskMetric": "单技能成功率：按下述条件判断该技能是否完成；连续执行时另统计连续任务成功率和平均链长。",
+      "tasks": {
+        "Rotate / Push / Lift Block": {
+          "scoring": "旋转时绕 z 轴超过 60°，绕 x／y 不超过 30°；左右推动位移超过 10 cm 且起止帧均有表面接触；提起高度按来源区域分别至少 3 或 5 cm，并满足初始接触要求。"
+        },
+        "Move Slider / Open Drawer": {
+          "scoring": "相对起始状态，滑门至少移动 12 cm；抽屉开或关至少变化 10 cm。"
+        }
+      },
+      "taskFocus": {
+        "Rotate / Push / Lift Block": "物体的平移、旋转与抓取抬升。",
+        "Stack / Unstack Blocks": "建立或解除积木支撑关系。",
+        "Move Slider / Open Drawer": "按指令控制滑门与抽屉的移动方向和幅度。",
+        "Place in Slider / Drawer": "从抓持转为指定区域内的放置。",
+        "Turn On / Off Light / LED": "按指令切换灯光设备的开关状态。"
+      }
+    },
+    "robocasa365": {
+      "basic": [
+        "成功率：完整完成任务的测试比例；已见原子任务、已见组合任务和未见组合任务分别汇总。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Open Cabinet / Turn Stove / Pick-and-place": {
+          "scoring": "完成当前任务的开合、设备操作或物体放置目标。"
+        }
+      },
+      "taskFocus": {
+        "Open Cabinet / Turn Stove / Pick-and-place": "厨房中的基础抓放与设备操作。",
+        "Prepare Coffee / Steam Vegetables / Restock Supplies": "结合移动与操作，连续完成多阶段厨房活动。"
+      }
+    },
+    "colosseum": {
+      "basic": [
+        "成功率：完整完成任务的测试比例，分别统计无扰动、单项扰动和组合扰动条件。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Basketball / Place Wine / Stack Cups": "场景扰动下的抓取、放置与堆叠。",
+        "Open Drawer / Turn Oven / Scoop with Spatula": "场景扰动下的机构操作与工具使用。",
+        "Square Peg / Setup Chess / Straighten Rope": "场景扰动下的精确装配、摆放与柔性物体操作。",
+        "Insert onto Square Peg": "方环与方柱的精确对齐与装配。",
+        "Slide Block to Target": "推动物体并控制其停止位置。",
+        "Scoop with Spatula": "利用铲子接触并托起目标物体。",
+        "Setup Chess": "棋子识别与精确摆放。"
+      }
+    },
+    "robotwin-phys": {
+      "basic": [
+        "成功率：完整完成任务的测试比例；Clean、Official Random、Physical Random 分别汇总。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Pick-place / Handover / Stacking": "质量、质心、尺度和摩擦变化下的抓取、交接与堆叠。",
+        "Beat Block Hammer / Open Microwave / Turn Switch": "接触和阻尼变化下的工具使用与机构操作。"
+      }
+    },
+    "libero-plus": {
+      "basic": [
+        "成功率：完整完成原任务的测试比例，按扰动因素、难度及组合条件汇总。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Spatial selection": {
+          "scoring": "指定物体放到语言要求的目标位置。"
+        },
+        "Goal-conditioned manipulation": {
+          "scoring": "完成当前指令指定的操作目标。"
+        },
+        "LIBERO-Long / LIBERO-10": {
+          "scoring": "全部物体放置和设备操作目标均完成。"
+        },
+        "Language Instructions": {
+          "scoring": "按改写后的语言指令完成原任务目标。"
+        }
+      },
+      "taskFocus": {
+        "Spatial selection": "根据语言描述的相对位置区分同类物体。",
+        "Object-conditioned placement": "识别不同目标物体并完成抓取放置。",
+        "Goal-conditioned manipulation": "在同一场景中按语言选择并完成不同操作目标。",
+        "LIBERO-Long / LIBERO-10": "连续完成具有先后依赖的抓取、放置与设备操作。",
+        "Objects Layout": "物体布局变化下的目标定位与抓取。",
+        "Camera Viewpoints": "相机视角变化下的视觉定位与操作。",
+        "Robot Initial States": "机器人初始姿态变化下的到达与操作。",
+        "Language Instructions": "不同语言表述下对相同操作目标的理解。",
+        "Light Conditions": "照明变化下的视觉识别与操作。",
+        "Background Textures": "背景纹理变化下对目标物体的识别。",
+        "Sensor Noise": "图像噪声和模糊下的目标识别与操作。"
+      }
+    },
+    "libero-rig": {
+      "basic": [
+        "成功率：完整完成原任务的测试比例，按硬件扰动类别与强度分别汇总。",
+        "成功率退化：相对于无扰动条件下降的幅度，反映配置变化的影响。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Observable / Latent / Weakly observable faults": {
+          "scoring": "在指定故障条件下仍满足原任务的全部目标条件。条件可解性另作检查，不给策略额外加分。"
+        },
+        "Spatial selection": {
+          "scoring": "指定物体放到语言要求的目标位置。"
+        },
+        "Goal-conditioned manipulation": {
+          "scoring": "完成当前指令指定的操作目标。"
+        },
+        "LIBERO-Long / LIBERO-10": {
+          "scoring": "全部物体放置和设备操作目标均完成。"
+        }
+      },
+      "taskFocus": {
+        "Spatial selection": "根据语言描述的相对位置区分同类物体。",
+        "Object-conditioned placement": "识别不同目标物体并完成抓取放置。",
+        "Goal-conditioned manipulation": "在同一场景中按语言选择并完成不同操作目标。",
+        "LIBERO-Long / LIBERO-10": "连续完成具有先后依赖的抓取、放置与设备操作。",
+        "Observable / Latent / Weakly observable faults": "传感、动作执行及硬件状态变化下的操作稳定性。"
+      }
+    },
+    "dexmimicgen": {
+      "basic": [
+        "演示生成成功率：自动生成的操作轨迹中完整完成任务的比例。",
+        "策略成功率：用演示训练的策略在自主测试中完整完成任务的比例。"
+      ],
+      "taskMetric": "策略成功率：统计自主完成整项任务的测试比例；自动生成演示的成功率另计，子任务进度不替代整项成功。",
+      "taskFocus": {
+        "Bimanual Panda grippers": "双臂在装配、穿环与搬运中的时序和相对位姿协调。",
+        "Bimanual Panda dexterous hands": "双臂灵巧手在收纳与托盘搬运中的协同操作。",
+        "GR-1 humanoid": "人形双臂在倾倒、咖啡准备与分类任务中的协调。",
+        "BiGym extensions": "双臂在翻杯、装盘及柜门操作中的配合。",
+        "Can Sorting": "双臂配合将罐子放入对应容器。"
+      }
+    },
+    "robodojo": {
+      "basic": [
+        "成功率（SR）：完成整项任务全部要求的测试比例。",
+        "阶段分数（Score）：按各任务规定的阶段与分值累计，表示部分完成程度，与完整成功分开统计。"
+      ],
+      "taskMetric": "成功率（SR）＋阶段分数（Score）：分别统计完整完成的比例与已完成步骤的进度，分值按各任务规则确定。",
+      "taskFocus": {
+        "Scene and object generalization": "场景和物体变化下的定位与操作。",
+        "History-dependent manipulation": "利用历史观测和操作顺序完成当前决策。",
+        "Insertion and precise interaction": "受接触和孔槽约束时的精确定位与姿态调整。",
+        "Multi-stage manipulation": "连续完成多阶段操作并协调物体状态变化。",
+        "Unseen task specifications": "理解新的目标指令、语义关系与技能组合。",
+        "ARX X5 physical tasks": "真机上的精确对齐与多步骤操作。",
+        "Piper physical tasks": "真机上的稳定抓持、容器放置与插接。",
+        "Piper X physical tasks": "真机上的工具使用与多步骤协调。"
+      }
+    },
+    "robocasa": {
+      "basic": [
+        "成功率：完整完成任务的测试比例，并对对应任务子集求平均；原子、组合和真机结果分别统计。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "taskFocus": {
+        "Pick and place": "在台面、柜子和容器之间抓取并放置物体。",
+        "Opening and closing doors": "抓住把手并控制柜门的开合。",
+        "Opening and closing drawers": "沿滑轨方向拉动或推回抽屉。",
+        "Twisting knobs": "通过旋转指定旋钮切换设备状态。",
+        "Turning levers": "控制水龙头手柄及出水口方向。",
+        "Pressing buttons": "定位并按下设备按钮。",
+        "Insertion": "将杯子准确放到咖啡机的接水位置。",
+        "Navigation": "在厨房内移动至目标位置并朝向目标设备。",
+        "Composite kitchen activities": "协调多物体与设备状态，连续完成厨房活动。",
+        "Counter to sink": "真机上的物体抓取与水槽内放置。",
+        "Sink to counter": "真机水槽内的抓取与台面放置。",
+        "Counter to cabinet": "真机上的柜内定位与物体放置。"
+      }
+    },
+    "simplerenv": {
+      "basic": [
+        "成功率：满足各任务完整完成条件的测试比例，部分任务另记录中间阶段。",
+        "仿真—真机一致性（MMRV、Pearson r）：衡量模型的相对排名及成绩相关性，不表示两域成功率完全相同。"
+      ],
+      "taskMetric": "成功率：统计满足下述完整任务条件的测试比例。",
+      "tasks": {
+        "Pick Coke Can": {
+          "metricSummary": "成功率：统计达到抓起条件的比例；官方实现包含可锁存的抬升事件判定。",
+          "criteria": [
+            "三种初始姿态分别放置在 25 个网格位置，真机共 75 次；姿态数量是初始条件。",
+            "罐子抬升超过 1 cm 且脱离桌面等非机器人对象；若抬升超过 2 cm 的累计次数达到 5，最后放下也可记成功。",
+            "连续抓取 5 次是另一种可配置判定，不应当作所有抓罐评测统一采用的条件。"
+          ],
+          "scoring": "可乐罐被抓起；回合中明显抬升累计达到指定次数后，最后放下也可记成功。"
+        },
+        "Open Drawer and Place Apple": {
+          "metricSummary": "完整任务成功率：开抽屉与放苹果是连续两阶段，进入放物阶段本身不等于整项成功。",
+          "criteria": [
+            "3 个机器人位置×9 个苹果位置，共 27 次真机测试。",
+            "策略输出终止标志或达到一半时限后，指令从开抽屉切换为放苹果。",
+            "进入放苹果阶段后，抽屉至少打开 5 cm，且苹果曾与抽屉内的目标部位有效接触；不要求最终完全位于抽屉内。"
+          ],
+          "scoring": "完成开抽屉阶段后，苹果接触抽屉内的目标部位。"
+        },
+        "Bridge object placement": {
+          "metricSummary": "最终放置成功率：中间抓取与最终放置分别记录，最终 Success 才计为整项成功。"
+        },
+        "Move Object Near Object": {
+          "criteria": [
+            "5 组物体三元组×2 种三角布局×6 种源／目标排列，共 60 次真机测试。",
+            "源物体水平位移大于 3 cm，且大于其他物体位移；中心距离小于双方包围盒水平半对角线之和再加 10 cm。",
+            "还检查源物体最接近目标，并限制其他物体高度下降；不能只用中心距离判成功。"
+          ],
+          "scoring": "指定物体向目标移动并足够接近，同时其他物体未明显偏移或掉落。"
+        },
+        "Open / Close Drawer": {
+          "criteria": [
+            "9 个机器人起始位置×3 层抽屉×2 个方向，共 54 次真机测试；开、关各 27 次。",
+            "打开时抽屉位移至少 15 cm；关闭时剩余开启位移不超过 5 cm。"
+          ]
+        },
+        "Put Spoon on Towel": {
+          "criteria": [
+            "15 cm 边长正方形的不同顶点放勺和毛巾，勺子两种朝向，共 24 次真机测试。",
+            "允许勺子仅部分位于毛巾上，不要求完整支撑。"
+          ]
+        },
+        "Put Carrot on Plate": {
+          "criteria": [
+            "采用与勺子任务相似的初态枚举，每策略真机 24 次。",
+            "胡萝卜位于盘子的水平和高度范围内，且不与盘子、机器人以外的物体有效接触。"
+          ],
+          "scoring": "胡萝卜放到盘子的目标区域，并满足接触要求。"
+        }
+      },
+      "taskFocus": {
+        "Pick Coke Can": "稳定抓取并抬升可乐罐。",
+        "Move Object Near Object": "按目标空间关系移动物体，同时尽量保持干扰物不动。",
+        "Open / Close Drawer": "抓住把手并完成指定抽屉的开合。",
+        "Open Drawer and Place Apple": "按先后指令完成开抽屉与放入苹果。",
+        "Put Spoon on Towel": "细长物体的抓取、转向与平面放置。",
+        "Put Carrot on Plate": "细长物体的抓取与盘内放置。",
+        "Stack Green Block on Yellow Block": "积木的精确对齐与堆叠。",
+        "Put Eggplant in Basket": "水槽内的物体抓取与篮内放置。",
+        "Tabletop and drawer tasks": "真机上的物体操作、抽屉开合与多阶段执行。",
+        "Bridge object placement": "真机上的不同物体抓取、放置与堆叠。"
+      }
+    },
+    "rmbench": {
+      "basic": [
+        "成功率（SR）：完整完成整项任务的评测回合比例。",
+        "M(1)、M(n) 各组按任务取均值；真机三项单独统计。"
+      ],
+      "taskMetric": "成功率（SR）：完整完成该任务的评测回合比例。",
+      "taskFocus": {
+        "Observe and Pick Up": "保留消失的目标身份，避免抓取外观相似的干扰物。",
+        "Rearrange Blocks": "区分按键前后的任务阶段，记住已完成的移动。",
+        "Put Back Block": "保留物体最初所在位置，避免根据当前画面猜测归位目标。",
+        "Swap Blocks": "利用初始位置和中间暂存状态决定下一次搬运。",
+        "Swap T": "记住两块物体的原始位姿，并精确恢复到互换后的目标。",
+        "Battery Try": "累计试插反馈，排除失败的方向组合。",
+        "Blocks Ranking Try": "利用历史尝试和反馈避免重复无效的排列。",
+        "Cover Blocks": "记住遮挡前的颜色位置及已经揭开的对象。",
+        "Press Button": "累计已完成的按压事件，避免少按或多按。"
+      }
+    },
+    "contactbench": {
+      "basic": [
+        "成功率（SR）：完整完成任务的回合比例。",
+        "阶段进度（Prog）：已完成检查点占比的回合均值。",
+        "过载比例：腕部峰值力超过 40 N 的回合比例；不是六维力跟踪误差。",
+        "完成时间：仅对成功回合统计，并与人类操作时间比较。"
+      ],
+      "taskMetric": "成功率（SR）：完整满足任务条件的评测回合比例。",
+      "taskFocus": {
+        "Grasp target key from keychain": "在接触约束中分离目标并形成可用抓持。",
+        "Retrieve single utensil from bin": "在接触约束中分离目标并形成可用抓持。",
+        "Retrieve single fastener from bin": "在接触约束中分离目标并形成可用抓持。",
+        "Retrieve top cup from stack": "在接触约束中分离目标并形成可用抓持。",
+        "Retrieve single card from deck": "在接触约束中分离目标并形成可用抓持。",
+        "Pick up object from platform": "在接触约束中分离目标并形成可用抓持。",
+        "Collect utensils": "同时抓取与保持多个对象。",
+        "Collect fasteners": "同时抓取与保持多个对象。",
+        "Hang object": "利用环境约束稳定放置目标。",
+        "Place utensil into bin": "利用环境约束稳定放置目标。",
+        "In-hand repose": "保持抓持的同时改变手内位姿或接触方式。",
+        "In-hand grasp transition": "保持抓持的同时改变手内位姿或接触方式。",
+        "Tighten screw with Allen key": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Loosen screw with Allen key": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Tighten screw with screwdriver": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Loosen screw with screwdriver": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Tighten nut with wrench": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Loosen nut with wrench": "保持工具与目标啮合，并根据阻力调整动作。",
+        "Put bottle cap onto bottle": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Thread nut onto screw": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Insert key into lock": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Plug in charger": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Place card into holder": "利用环境约束稳定放置目标。",
+        "Stack cups": "利用环境约束稳定放置目标。",
+        "Plug in Ethernet": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Plug in USB": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Turn key to unlock door": "在约束运动中完成解锁、旋转与机构状态切换。",
+        "Turn doorknob to open door": "在约束运动中完成解锁、旋转与机构状态切换。",
+        "Turn door handle to open door": "在约束运动中完成解锁、旋转与机构状态切换。",
+        "Turn dial to target position": "在约束运动中完成解锁、旋转与机构状态切换。",
+        "Install light bulb": "在孔槽或螺纹约束下对齐、插入并确认接合。",
+        "Assemble toy block": "串联多种接触技能完成整个流程。",
+        "Add keys to keyring": "串联多种接触技能完成整个流程。",
+        "Unlock and open door": "串联多种接触技能完成整个流程。",
+        "Sort utensils": "串联多种接触技能完成整个流程。",
+        "Sort fasteners": "串联多种接触技能完成整个流程。"
+      }
+    }
+  }
+}

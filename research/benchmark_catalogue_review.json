@@ -1,0 +1,4986 @@
+{
+  "checked": "2026-11-17",
+  "removedIds": [
+    "suite-t08",
+    "suite-c12",
+    "taco",
+    "tactidex",
+    "tacverse",
+    "suite-c10",
+    "suite-c14"
+  ],
+  "records": {
+    "univtac": {
+      "sources": [
+        "https://arxiv.org/html/2602.10093v1"
+      ]
+    },
+    "forcebench": {
+      "sources": [
+        "https://arxiv.org/html/2610.19604v1"
+      ]
+    },
+    "tabero": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "语言条件入篮",
+            "english": "Language-conditioned pick-and-place",
+            "tasks": [
+              {
+                "englishName": "Object-to-basket tasks",
+                "name": "物体入篮",
+                "goal": "将指定的字母汤罐、奶油奶酪、沙拉酱、牛奶、橙汁等物体放入篮筐。",
+                "mechanism": "低夹持力可能滑移；高夹持力增加物理交互强度。",
+                "scoring": "物体入篮计成功；轻柔程度另以夹持力和作用力指标统计。",
+                "criteria": [
+                  "完整 9 类对象：alphabet soup、cream cheese、salad dressing、BBQ sauce、tomato sauce、butter、milk、chocolate pudding、orange juice。",
+                  "力度通过 Kp＝2,000／500／200 N/m、Kd＝100／25／10 N·s/m 三档产生，属于离散控制设置。",
+                  "A 数据：轻柔为 25%；B：轻柔为 10%；C：10% 且夹爪为二值控制；均与 100% 用力条件对照。",
+                  "AG／AA 为接触期间平均夹持／对外作用力；MG／MA 为最高 5% 力读数的均值，不是单点最大值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2605.27886v1#S4.SS2",
+                    "label": "论文 §4.2 · 力度与数据集"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2605.27886v1#A3",
+                    "label": "附录 C · 九项任务"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Alphabet soup",
+                    "name": "字母汤罐入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Cream cheese",
+                    "name": "奶油奶酪入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Salad dressing",
+                    "name": "沙拉酱入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "BBQ sauce",
+                    "name": "烧烤酱入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Tomato sauce",
+                    "name": "番茄酱入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Butter",
+                    "name": "黄油入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Milk",
+                    "name": "牛奶入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Chocolate pudding",
+                    "name": "巧克力布丁入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "Orange juice",
+                    "name": "橙汁入篮",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 9
+              }
+            ],
+            "count": "9 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2605.27886v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2605.27886v1"
+      ]
+    },
+    "libero": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "空间关系",
+            "english": "LIBERO-Spatial",
+            "tasks": [
+              {
+                "englishName": "Spatial selection",
+                "name": "空间选择",
+                "goal": "按位置关系选出目标碗并放入盘中。",
+                "mechanism": "同类物体共存，依赖相对位置消除目标歧义。",
+                "scoring": "目标物体与目标区域满足 BDDL 的空间谓词。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+                    "name": "取盘子与小碗之间的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the ramekin and place it on the plate",
+                    "name": "取小碗旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl from table center and place it on the plate",
+                    "name": "取桌面中央黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the cookie box and place it on the plate",
+                    "name": "取饼干盒上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+                    "name": "取木柜上层抽屉中黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the ramekin and place it on the plate",
+                    "name": "取小碗上的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the cookie box and place it on the plate",
+                    "name": "取饼干盒旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the stove and place it on the plate",
+                    "name": "取炉灶上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the plate and place it on the plate",
+                    "name": "取盘子旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the wooden cabinet and place it on the plate",
+                    "name": "取木柜上黑碗入盘"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "物体身份",
+            "english": "LIBERO-Object",
+            "tasks": [
+              {
+                "englishName": "Object-conditioned placement",
+                "name": "物体条件放置",
+                "goal": "把字母汤罐、奶油奶酪等指定物体放入篮筐。",
+                "mechanism": "抓取几何与外观变化，放置结构保持相近。",
+                "scoring": "指定物体处于目标容器中。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the alphabet soup and place it in the basket",
+                    "name": "字母汤罐入篮"
+                  },
+                  {
+                    "englishName": "pick up the cream cheese and place it in the basket",
+                    "name": "奶油奶酪入篮"
+                  },
+                  {
+                    "englishName": "pick up the salad dressing and place it in the basket",
+                    "name": "沙拉酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the bbq sauce and place it in the basket",
+                    "name": "烧烤酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the ketchup and place it in the basket",
+                    "name": "番茄沙司入篮"
+                  },
+                  {
+                    "englishName": "pick up the tomato sauce and place it in the basket",
+                    "name": "番茄酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the butter and place it in the basket",
+                    "name": "黄油入篮"
+                  },
+                  {
+                    "englishName": "pick up the milk and place it in the basket",
+                    "name": "牛奶入篮"
+                  },
+                  {
+                    "englishName": "pick up the chocolate pudding and place it in the basket",
+                    "name": "巧克力布丁入篮"
+                  },
+                  {
+                    "englishName": "pick up the orange juice and place it in the basket",
+                    "name": "橙汁入篮"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "目标变化",
+            "english": "LIBERO-Goal",
+            "tasks": [
+              {
+                "englishName": "Goal-conditioned manipulation",
+                "name": "目标条件操作",
+                "goal": "在相近场景中按指令开抽屉或移动物体。",
+                "mechanism": "同一场景允许多个可行目标，需由语言确定。",
+                "scoring": "当前指令对应的全部目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "open the middle drawer of the cabinet",
+                    "name": "打开柜子中层抽屉"
+                  },
+                  {
+                    "englishName": "put the bowl on the stove",
+                    "name": "碗放到炉灶上"
+                  },
+                  {
+                    "englishName": "put the wine bottle on top of the cabinet",
+                    "name": "酒瓶放到柜顶"
+                  },
+                  {
+                    "englishName": "open the top drawer and put the bowl inside",
+                    "name": "打开上层抽屉并放碗"
+                  },
+                  {
+                    "englishName": "put the bowl on top of the cabinet",
+                    "name": "碗放到柜顶"
+                  },
+                  {
+                    "englishName": "push the plate to the front of the stove",
+                    "name": "盘子推到炉灶前"
+                  },
+                  {
+                    "englishName": "put the cream cheese in the bowl",
+                    "name": "奶油奶酪放入碗"
+                  },
+                  {
+                    "englishName": "turn on the stove",
+                    "name": "打开炉灶"
+                  },
+                  {
+                    "englishName": "put the bowl on the plate",
+                    "name": "碗放到盘中"
+                  },
+                  {
+                    "englishName": "put the wine bottle on the rack",
+                    "name": "酒瓶放到酒架"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "技能与流程组合",
+            "english": "LIBERO-100 / LIBERO-Long",
+            "tasks": [
+              {
+                "englishName": "LIBERO-Long / LIBERO-10",
+                "name": "长程任务子集",
+                "goal": "列出 LIBERO-100 中用于长程评测的全部 10 项子集任务；其余 90 项为 LIBERO-90。",
+                "mechanism": "抓取、放置和关节操作存在顺序依赖。",
+                "scoring": "完整任务的所有目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "put both the alphabet soup and the tomato sauce in the basket",
+                    "name": "字母汤罐和番茄酱入篮"
+                  },
+                  {
+                    "englishName": "put both the cream cheese box and the butter in the basket",
+                    "name": "奶油奶酪盒和黄油入篮"
+                  },
+                  {
+                    "englishName": "turn on the stove and put the moka pot on it",
+                    "name": "打开炉灶并放摩卡壶"
+                  },
+                  {
+                    "englishName": "put the black bowl in the bottom drawer of the cabinet and close it",
+                    "name": "黑碗入下层抽屉并关好"
+                  },
+                  {
+                    "englishName": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+                    "name": "白杯放左盘且黄白杯放右盘"
+                  },
+                  {
+                    "englishName": "pick up the book and place it in the back compartment of the caddy",
+                    "name": "书放到收纳架后格"
+                  },
+                  {
+                    "englishName": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+                    "name": "白杯入盘且布丁放盘右侧"
+                  },
+                  {
+                    "englishName": "put both the alphabet soup and the cream cheese box in the basket",
+                    "name": "字母汤罐和奶油奶酪盒入篮"
+                  },
+                  {
+                    "englishName": "put both moka pots on the stove",
+                    "name": "两只摩卡壶放到炉灶"
+                  },
+                  {
+                    "englishName": "put the yellow and white mug in the microwave and close it",
+                    "name": "黄白杯入微波炉并关门"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "100 项",
+            "note": "LIBERO-100 共 100 项；下面完整列出 LIBERO-Long／LIBERO-10 的 10 项子集，不与总数重复相加。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/abs/2306.03310"
+      ]
+    },
+    "suite-t04": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "物理性质感知",
+            "english": "Physical Property Perception",
+            "tasks": [
+              {
+                "englishName": "Weight Classify",
+                "name": "重量分类",
+                "goal": "抓取并判断物体轻重，将轻块放到蓝盘、重块放到黄盘。",
+                "scoring": "轻重类别与目标盘匹配，且物体达到目标位置与姿态要求。",
+                "criteria": [
+                  "设置 weight_label=random 时，每回合等概率选择轻／重类别；默认值为 heavy。官方平衡采集脚本分别收集 50 条轻块、50 条重块成功轨迹。"
+                ],
+                "focus": "区分相同几何模型的两档重量；轻、重块密度分别固定为 100、10,000 kg/m³，同体积下质量相差 100 倍，不连续采样质量。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/weight_classification.py",
+                    "label": "重量设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Hardness Classify",
+                "name": "硬度分类",
+                "goal": "通过接触判断软硬，将软块放到蓝盘、硬块放到黄盘。",
+                "scoring": "软硬类别与目标盘匹配，且物体达到目标位置与姿态要求。",
+                "criteria": [
+                  "hardness_label 默认设为 random，每回合等概率选择软／硬类别，不连续采样模量；软、硬块密度同时分别为 300、1,000 kg/m³。"
+                ],
+                "focus": "区分两种固定材料配置；软块杨氏模量为 0.1 MPa、泊松比为 0.45，硬块采用默认仿射体模型（刚度参数 m_kappa=100 MPa）；两种参数不等同于同一定义的杨氏模量。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/hardness_classification.py",
+                    "label": "软硬设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Roughness Classify",
+                "name": "粗糙度分类",
+                "goal": "通过接触判断表面，将光滑块放到蓝盘、粗糙块放到黄盘。",
+                "scoring": "光滑／粗糙类别与目标盘匹配，且物体达到目标位置与姿态要求。",
+                "criteria": [
+                  "roughness_label 默认设为 random，每回合等概率选择光滑／粗糙类别，不连续采样粗糙度。"
+                ],
+                "focus": "区分两个固定的光滑／粗糙模型资产；任务代码未给出 Ra、Rq 数值范围或分类阈值，两类使用相同的任务级摩擦配置。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/roughness_classification.py",
+                    "label": "表面设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Roughness-Guided Regrasp",
+                "name": "粗糙度引导再抓取",
+                "goal": "触摸辨别两个物块；若先抓到光滑块则放回并重抓，将粗糙块放到黄盘。",
+                "scoring": "选出粗糙块并使其达到黄盘的目标位置与姿态要求。",
+                "criteria": [
+                  "粗糙块所在侧与首次抓取侧可分别设为 random，独立选择左／右；当前两项默认值均为 right。"
+                ],
+                "focus": "根据接触反馈决定保留或重新抓取；使用与粗糙度分类相同的两个固定模型，不连续采样粗糙度。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/roughness_guided_regrasp.py",
+                    "label": "再抓取设置 · 官方实现"
+                  }
+                ]
+              },
+              {
+                "englishName": "Empty-Can Selection",
+                "name": "空罐选择",
+                "goal": "通过抓取和提起，从外观相近的罐子中找出空罐并放入篮筐。",
+                "scoring": "正确选出空罐并放入篮筐。",
+                "criteria": [
+                  "empty_can 默认设为 random，在芬达、百事两个品牌中随机指定空罐，另一罐为重罐；不连续采样密度。"
+                ],
+                "focus": "区分空／满两种固定配置；仿真以密度 100、10,000 kg/m³ 分别表示轻罐与重罐，同品牌模型下质量相差 100 倍。",
+                "parameterSources": [
+                  {
+                    "url": "https://github.com/FVL-Repo/OpenViTac/blob/main/envs/empty_can_selection.py",
+                    "label": "空罐设置 · 官方实现"
+                  }
+                ]
+              }
+            ],
+            "count": "5 项",
+            "note": "训练演示采集与测试共用上述固定物性配置，随机的是类别或物体布局；没有另设连续物性测试范围。重量、软硬、粗糙度分类的初始 X、Y 位置各加入 ±1 cm 扰动。分类任务检查正确目标盘上的位置与姿态，不要求输出物性数值。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.10384v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "易碎物操作",
+            "english": "Fragility-Aware Manipulation",
+            "tasks": [
+              {
+                "englishName": "Grasp Chip",
+                "name": "薯片抓放",
+                "goal": "抓取、移动并放下易碎薯片。",
+                "mechanism": "夹持过大会损伤对象。",
+                "scoring": "完成抓放且物体未损坏，满足物理安全约束。",
+                "criteria": []
+              }
+            ],
+            "count": "1 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.10384v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "持续接触",
+            "english": "Contact-Rich Manipulation",
+            "tasks": [
+              {
+                "englishName": "Gear Assembly",
+                "name": "齿轮装配",
+                "goal": "安装齿轮并带动另一齿轮旋转。",
+                "mechanism": "齿面啮合与持续接触。",
+                "scoring": "装配成功且形成耦合转动。",
+                "criteria": []
+              },
+              {
+                "englishName": "Pull Drawer",
+                "name": "拉抽屉",
+                "goal": "抓稳把手并拉开抽屉。",
+                "mechanism": "抓持稳定与关节位移。",
+                "scoring": "保持抓持并达到要求位移。",
+                "criteria": []
+              }
+            ],
+            "count": "2 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.10384v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "精密操作",
+            "english": "Precision Manipulation",
+            "tasks": [
+              {
+                "englishName": "Insert USB",
+                "name": "USB 插入",
+                "goal": "对齐插头并完成插接。",
+                "mechanism": "细间隙几何约束。",
+                "scoring": "USB 对准并插入目标槽。",
+                "criteria": []
+              },
+              {
+                "englishName": "Insert Block v1",
+                "name": "方块插入 v1",
+                "goal": "抓取指定方块并插入匹配开口。",
+                "mechanism": "对象选择与开口配合。",
+                "scoring": "对象选择和最终插入均正确。",
+                "criteria": []
+              },
+              {
+                "englishName": "Insert Block v2",
+                "name": "方块插入 v2",
+                "goal": "按语言选择物体并插入对应开口。",
+                "mechanism": "对象选择与开口配合。",
+                "scoring": "对象选择和最终插入均正确。",
+                "criteria": []
+              }
+            ],
+            "count": "3 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.10384v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          }
+        ],
+        "real": {
+          "protocol": "8 类对应任务：RC、ECS、GC、GA、PD、USB、Block v1、Block v2。真机示教池分别为 100、100、100、200、100、200、400、1,200 条；各策略仅抽取每项 100 条，Block v2 为 300 条。",
+          "figure": {
+            "url": "figures/benchmarks/openvitac-real.png",
+            "source": "https://arxiv.org/html/2610.10384v1/x5.png",
+            "caption": "OpenViTac · 论文 F18（点击查看原图）",
+            "paper": "https://arxiv.org/html/2610.10384v1#A5.F18"
+          },
+          "groups": [
+            {
+              "title": "真机任务",
+              "english": "Real-world tasks",
+              "tasks": [
+                {
+                  "englishName": "Roughness Classify",
+                  "name": "粗糙度分类",
+                  "goal": "判断表面粗糙度并放置。",
+                  "mechanism": "视觉歧义下的属性识别。",
+                  "scoring": "选出要求的粗糙物体并放到目标盘。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Empty-Can Selection",
+                  "name": "空罐选择",
+                  "goal": "选出空罐并放入篮筐。",
+                  "mechanism": "视觉歧义下的属性识别。",
+                  "scoring": "将空罐放入篮筐。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Grasp Chip",
+                  "name": "薯片抓放",
+                  "goal": "无损抓取、移动和放下薯片。",
+                  "mechanism": "易碎接触、啮合与抓持。",
+                  "scoring": "完成抓放且物体未损坏，满足物理安全约束。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Gear Assembly",
+                  "name": "齿轮装配",
+                  "goal": "安装齿轮并形成啮合转动。",
+                  "mechanism": "易碎接触、啮合与抓持。",
+                  "scoring": "装配成功且形成耦合转动。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Pull Drawer",
+                  "name": "拉抽屉",
+                  "goal": "抓住把手并拉开抽屉。",
+                  "mechanism": "易碎接触、啮合与抓持。",
+                  "scoring": "保持抓持并达到要求位移。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Insert USB",
+                  "name": "USB 插入",
+                  "goal": "对齐接口并完成插接。",
+                  "mechanism": "接触对齐和语言选择。",
+                  "scoring": "USB 对准并插入目标槽。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Insert Block v1",
+                  "name": "方块插入 v1",
+                  "goal": "将指定方块插入开口。",
+                  "mechanism": "接触对齐和语言选择。",
+                  "scoring": "对象选择和最终插入均正确。",
+                  "criteria": []
+                },
+                {
+                  "englishName": "Insert Block v2",
+                  "name": "方块插入 v2",
+                  "goal": "按语言选物并插入对应开口。",
+                  "mechanism": "接触对齐和语言选择。",
+                  "scoring": "对象选择和最终插入均正确。",
+                  "criteria": []
+                }
+              ],
+              "count": "8 项任务",
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2610.10384v1",
+              "label": "论文 · 真机协议与结果"
+            }
+          ],
+          "figures": [
+            {
+              "url": "figures/benchmarks/openvitac-real-cans.png",
+              "source": "https://arxiv.org/html/2610.10384v1/x1.png",
+              "caption": "OpenViTac · 论文 A5.F14（点击查看原图）"
+            },
+            {
+              "url": "figures/benchmarks/openvitac-real-gears.png",
+              "source": "https://arxiv.org/html/2610.10384v1/x2.png",
+              "caption": "OpenViTac · 论文 A5.F15（点击查看原图）"
+            },
+            {
+              "url": "figures/benchmarks/openvitac-real-chip.png",
+              "source": "https://arxiv.org/html/2610.10384v1/x3.png",
+              "caption": "OpenViTac · 论文 A5.F16（点击查看原图）"
+            },
+            {
+              "url": "figures/benchmarks/openvitac-real-drawer.png",
+              "source": "https://arxiv.org/html/2610.10384v1/x4.png",
+              "caption": "OpenViTac · 论文 A5.F17（点击查看原图）"
+            },
+            {
+              "url": "figures/benchmarks/openvitac-real-block.png",
+              "source": "https://arxiv.org/html/2610.10384v1/x6.png",
+              "caption": "OpenViTac · 论文 A5.F19（点击查看原图）"
+            }
+          ],
+          "correspondence": "与对应仿真一致：粗糙度分类、空罐选择、薯片抓放、齿轮装配、拉抽屉、USB 插入、方块插入 v1／v2，共 8 项，任务目标与成功条件一致。重量分类、硬度分类、粗糙度再抓取仅在仿真中评测。"
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2610.10384v1"
+      ]
+    },
+    "suite-c11": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "插入与装配",
+            "english": "Insertion",
+            "tasks": [
+              {
+                "englishName": "Peg Insertion",
+                "name": "销孔插入",
+                "goal": "将销对准孔并插入。",
+                "mechanism": "有限间隙与接触对齐。",
+                "scoring": "达到对应任务插入终态。",
+                "criteria": []
+              },
+              {
+                "englishName": "USB Insertion",
+                "name": "USB 插入",
+                "goal": "对齐 USB 连接器并插接。",
+                "mechanism": "有限间隙与接触对齐。",
+                "scoring": "达到对应任务插入终态。",
+                "criteria": []
+              },
+              {
+                "englishName": "Power Plug Insertion",
+                "name": "电源插头插入",
+                "goal": "将电源插头插入插座。",
+                "mechanism": "有限间隙与接触对齐。",
+                "scoring": "达到对应任务插入终态。",
+                "criteria": []
+              },
+              {
+                "englishName": "Gear Assembly",
+                "name": "齿轮装配",
+                "goal": "把齿轮装到中心轴并与两侧齿轮咬合。",
+                "mechanism": "轴孔对准及齿面啮合。",
+                "scoring": "齿轮正确就位且与相邻齿轮配合。",
+                "criteria": []
+              }
+            ],
+            "count": "4 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2505.18472v2",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "旋紧",
+            "english": "Screwing",
+            "tasks": [
+              {
+                "englishName": "Nut–bolt Assembly",
+                "name": "螺母旋入",
+                "goal": "对齐螺纹并旋紧螺母。",
+                "mechanism": "螺纹约束和轴向接触。",
+                "scoring": "螺母或灯泡完成规定旋紧状态。",
+                "criteria": []
+              },
+              {
+                "englishName": "Bulb Installation",
+                "name": "灯泡安装",
+                "goal": "对准灯座并旋入灯泡。",
+                "mechanism": "螺纹约束和轴向接触。",
+                "scoring": "螺母或灯泡完成规定旋紧状态。",
+                "criteria": []
+              }
+            ],
+            "count": "2 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2505.18472v2",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "受限视觉探索",
+            "english": "Exploration",
+            "tasks": [
+              {
+                "englishName": "Peg Reorientation",
+                "name": "盲区调姿",
+                "goal": "借孔边接触摆正方销后插入。",
+                "mechanism": "视觉遮挡下估计手内姿态。",
+                "scoring": "摆正并完成插入。",
+                "criteria": []
+              },
+              {
+                "englishName": "Object Search",
+                "name": "盲区搜索",
+                "goal": "在不可见区域寻找并抓起目标。",
+                "mechanism": "主动接触探索与定位。",
+                "scoring": "找到并成功抓起目标物。",
+                "criteria": []
+              },
+              {
+                "englishName": "Ball Sorting",
+                "name": "暗光分球",
+                "goal": "在暗光下区分高尔夫球与乒乓球。",
+                "mechanism": "纹理触觉补充视觉信息。",
+                "scoring": "选出或分类放置正确的球。",
+                "criteria": []
+              }
+            ],
+            "count": "3 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2505.18472v2",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2505.18472v2"
+      ]
+    },
+    "bench2dex": {
+      "reading": {
+        "taskGroups": [
+          {
+            "title": "二十六项双臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "平稳端送酒杯",
+                "goal": "把三只酒杯放到指定位置。",
+                "scoring": "杯子直立、到位并停止。"
+              },
+              {
+                "name": "水果入碗",
+                "goal": "移动碗并装入苹果和香蕉。",
+                "scoring": "碗直立，水果全部入碗。"
+              },
+              {
+                "name": "柑橘摆盘",
+                "goal": "把柠檬和橙子放到盘中。",
+                "scoring": "四个水果都到指定盘内位置。"
+              },
+              {
+                "name": "架锅并倒调料",
+                "goal": "放好锅，再依次倒入两瓶调料。",
+                "scoring": "完成倾倒，瓶子放回并直立。"
+              },
+              {
+                "name": "清洁用品装箱",
+                "goal": "放入清洁剂和肥皂。",
+                "scoring": "箱子和清洁剂直立，物品入箱。"
+              },
+              {
+                "name": "螺丝刀装箱与敲击",
+                "goal": "放入两把螺丝刀，再用锤敲木块。",
+                "scoring": "完成敲击，工具全部入箱。"
+              },
+              {
+                "name": "调味品装箱",
+                "goal": "将三种调味品装入木箱。",
+                "scoring": "物品入箱，瓶子直立。"
+              },
+              {
+                "name": "工具装箱",
+                "goal": "双手配合收纳四件工具。",
+                "scoring": "四件工具全部入箱。"
+              },
+              {
+                "name": "文具分类",
+                "goal": "把笔类与电池、胶水分开放。",
+                "scoring": "各物品进入对应容器。"
+              },
+              {
+                "name": "罐装食品摆盘",
+                "goal": "把四件食品摆上托盘。",
+                "scoring": "全部到位、直立并稳定。"
+              },
+              {
+                "name": "球类装箱",
+                "goal": "把四种球装入箱中。",
+                "scoring": "四个球全部入箱。"
+              },
+              {
+                "name": "准备烘焙托盘",
+                "goal": "摆放刷子、刮刀和食品盒。",
+                "scoring": "全部物品放到托盘上。"
+              },
+              {
+                "name": "冰箱取酒与双手传递",
+                "goal": "取酒、换手倒酒，再放回冰箱。",
+                "scoring": "完成倒酒和放回，冰箱门关闭。"
+              },
+              {
+                "name": "丢弃垃圾",
+                "goal": "打开垃圾桶，放入三件垃圾。",
+                "scoring": "垃圾全部入桶并稳定。"
+              },
+              {
+                "name": "冰箱水果分层收纳",
+                "goal": "把水果放进冰箱不同层。",
+                "scoring": "水果入冰箱，两扇门关闭。"
+              },
+              {
+                "name": "微波炉装碗",
+                "goal": "将面包放碗中，再送入微波炉。",
+                "scoring": "碗直立入炉，炉门关闭。"
+              },
+              {
+                "name": "开马桶盖倒清洁剂",
+                "goal": "开盖、倾倒，再关盖。",
+                "scoring": "倾倒动作及关盖均完成。"
+              },
+              {
+                "name": "快餐入篮",
+                "goal": "移动篮子并装入面包等快餐。",
+                "scoring": "四件食品入篮，篮子直立。"
+              },
+              {
+                "name": "药品用品装鞋盒",
+                "goal": "移动鞋盒并装入三件用品。",
+                "scoring": "用品全部入盒。"
+              },
+              {
+                "name": "配件装鞋盒",
+                "goal": "放入印章、鞋和宠物项圈。",
+                "scoring": "物品入盒并稳定。"
+              },
+              {
+                "name": "球类分杯",
+                "goal": "把四种球分到大杯和小杯。",
+                "scoring": "两组球进入对应杯中。"
+              },
+              {
+                "name": "水龙头接水",
+                "goal": "放勺、接水，再把杯子放托盘。",
+                "scoring": "开关水顺序完成，杯子到位。"
+              },
+              {
+                "name": "拼图装配",
+                "goal": "双手交替放置四块彩色拼图。",
+                "scoring": "各块在要求位置并停止。"
+              },
+              {
+                "name": "盛汤",
+                "goal": "一手端碗，一手连续舀两次。",
+                "scoring": "完成盛放、送碗及归还勺子。"
+              },
+              {
+                "name": "双手弹琴",
+                "goal": "双手分别按顺序弹奏指定旋律。",
+                "scoring": "两组琴键顺序均正确。"
+              },
+              {
+                "name": "整理电脑桌",
+                "goal": "摆正屏幕、按键、归位并点击鼠标。",
+                "scoring": "全部指定动作完成。"
+              }
+            ],
+            "locator": "Appendix A，Table S1；Appendix E",
+            "source": "https://arxiv.org/html/2609.15726v1"
+          }
+        ],
+        "overviewFigure": {
+          "url": "figures/benchmarks/bench2dex-overview.png",
+          "source": "https://arxiv.org/html/2609.15726v1",
+          "originalUrl": "https://arxiv.org/html/2609.15726v1/overview.png",
+          "caption": "Bench2Dex · 官方 Figure 1：任务与平台总览"
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2609.15726v1"
+      ]
+    },
+    "maniskill-vitac-2025": {
+      "reading": {
+        "taskGroups": [
+          {
+            "title": "赛道任务",
+            "domain": "仿真＋真机",
+            "items": [
+              {
+                "name": "插销入孔",
+                "goal": "通过接触判断形状和位置，将插销插入目标孔。",
+                "scoring": "任务成功率；与开锁任务合成赛道 1 成绩。"
+              },
+              {
+                "name": "开锁",
+                "goal": "调整钥匙位置和转动以完成开锁。",
+                "scoring": "按开锁完成条件记成功，测试未见钥匙形状。"
+              },
+              {
+                "name": "视觉触觉融合插入",
+                "goal": "根据深度画面和触觉判断插销对应孔，再完成插入。",
+                "scoring": "成功率乘 100；真机与仿真阶段分开。"
+              },
+              {
+                "name": "传感器结构设计",
+                "goal": "改变 GelSight Mini 软胶形状和表面标记布局。",
+                "scoring": "操作成功率与结构主观评分各占一半。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2411.12503v1",
+            "locator": "§III–V；官方赛道规则"
+          }
+        ],
+        "overviewFigure": {
+          "url": "figures/benchmarks/maniskill-vitac-2025-overview.png",
+          "source": "https://arxiv.org/html/2411.12503v1",
+          "originalUrl": "https://arxiv.org/html/2411.12503v1/head.png",
+          "caption": "ManiSkill-ViTac 2025 · 官方 Figure 1：仿真与真机平台总览"
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2411.12503v1"
+      ]
+    },
+    "robotwin": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "抓放、排序与双臂协同",
+            "english": "Pick-place / Sorting / Coordination",
+            "tasks": [
+              {
+                "englishName": "Pick Dual Bottles / Stack Bowls / Handover Block",
+                "name": "双瓶抓取、叠碗与方块交接",
+                "goal": "例如两臂分别抓瓶、逐层叠碗，或把方块交给另一只手。",
+                "mechanism": "双臂空间分工、交接时序及堆叠接触约束。",
+                "scoring": "目标物体到位，满足各任务代码中的放置、堆叠或交接条件。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "adjust_bottle",
+                    "name": "扶正瓶子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "blocks_ranking_rgb",
+                    "name": "方块按颜色排序",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "blocks_ranking_size",
+                    "name": "方块按尺寸排序",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "dump_bin_bigbin",
+                    "name": "小桶倒入大桶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "handover_block",
+                    "name": "交接方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "handover_mic",
+                    "name": "交接麦克风",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "hanging_mug",
+                    "name": "挂杯子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "lift_pot",
+                    "name": "双臂抬锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_can_pot",
+                    "name": "移动罐与锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_playingcard_away",
+                    "name": "移开扑克牌",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_stapler_pad",
+                    "name": "订书机移至垫上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "pick_diverse_bottles",
+                    "name": "抓取不同瓶子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "pick_dual_bottles",
+                    "name": "双瓶抓取",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_a2b_left",
+                    "name": "从 A 放到左侧 B",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_a2b_right",
+                    "name": "从 A 放到右侧 B",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_bread_basket",
+                    "name": "面包入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_bread_skillet",
+                    "name": "面包放平底锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_burger_fries",
+                    "name": "摆放汉堡和薯条",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_can_basket",
+                    "name": "罐子入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_cans_plasticbox",
+                    "name": "罐子入塑料盒",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_container_plate",
+                    "name": "容器放盘上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_dual_shoes",
+                    "name": "双鞋摆放",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_empty_cup",
+                    "name": "空杯放置",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_fan",
+                    "name": "摆放风扇",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_mouse_pad",
+                    "name": "鼠标放鼠标垫",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_basket",
+                    "name": "物体入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_scale",
+                    "name": "物体放秤上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_stand",
+                    "name": "物体放支架",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_phone_stand",
+                    "name": "手机放支架",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_shoe",
+                    "name": "摆放鞋子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "put_bottles_dustbin",
+                    "name": "瓶子入垃圾桶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "rotate_qrcode",
+                    "name": "旋转二维码",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "shake_bottle_horizontally",
+                    "name": "水平摇瓶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "shake_bottle",
+                    "name": "摇瓶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_blocks_three",
+                    "name": "叠三个方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_blocks_two",
+                    "name": "叠两个方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_bowls_three",
+                    "name": "叠三个碗",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_bowls_two",
+                    "name": "叠两个碗",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_pillbottle_pad",
+                    "name": "药瓶移至垫上",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 39
+              }
+            ],
+            "count": "39 项",
+            "note": "按本页操作能力归纳，完整列出该组任务；两组合计 50 项，不增加原项目任务数量。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2506.18088v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://robotwin-platform.github.io/doc/tasks/index.html",
+                "label": "RoboTwin 官方 · 全部 50 项任务"
+              }
+            ]
+          },
+          {
+            "title": "关节物体与工具交互",
+            "english": "Articulated objects / Tool interaction",
+            "tasks": [
+              {
+                "englishName": "Open Laptop / Turn Switch / Beat Block Hammer",
+                "name": "开电脑、转开关与锤击",
+                "goal": "例如打开电脑盖、转动开关，或拿锤子敲击方块。",
+                "mechanism": "关节运动约束、工具抓取和接触传力。",
+                "scoring": "机构或目标物体达到对应任务的状态检查条件。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "beat_block_hammer",
+                    "name": "锤击方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "click_alarmclock",
+                    "name": "按闹钟",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "click_bell",
+                    "name": "按铃",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "grab_roller",
+                    "name": "抓取滚筒",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "open_laptop",
+                    "name": "打开电脑盖",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "open_microwave",
+                    "name": "打开微波炉",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "press_stapler",
+                    "name": "按订书机",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "put_object_cabinet",
+                    "name": "物体入柜",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "scan_object",
+                    "name": "扫描物体",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stamp_seal",
+                    "name": "盖章",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "turn_switch",
+                    "name": "转动开关",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 11
+              }
+            ],
+            "count": "11 项",
+            "note": "按本页操作能力归纳，完整列出该组任务；两组合计 50 项，不增加原项目任务数量。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2506.18088v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://robotwin-platform.github.io/doc/tasks/index.html",
+                "label": "RoboTwin 官方 · 全部 50 项任务"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2506.18088v2"
+      ]
+    },
+    "dexjoco": {
+      "reading": {
+        "taskGroups": [
+          {
+            "title": "单臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "钉钉子",
+                "goal": "用锤子完成钉入。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "点击鼠标",
+                "goal": "移动并点击鼠标。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "提桶",
+                "goal": "抓住并提起桶。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "夹钳",
+                "goal": "抓取并挤压夹钳。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "折眼镜",
+                "goal": "操作眼镜铰链。",
+                "scoring": "按原任务完成条件判断成功。"
+              },
+              {
+                "name": "浇花",
+                "goal": "用容器完成浇水。",
+                "scoring": "按原任务完成条件判断成功。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2605.16257v1",
+            "locator": "§3.3；附录 B"
+          },
+          {
+            "title": "双臂任务",
+            "domain": "仿真",
+            "items": [
+              {
+                "name": "解锁平板",
+                "goal": "抓持平板并操作按钮。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "汉诺塔",
+                "goal": "配合完成环的转移。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "装配",
+                "goal": "配合完成部件插入装配。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "微波炉操作",
+                "goal": "操作微波炉并放入目标物体。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              },
+              {
+                "name": "拍照",
+                "goal": "配合抓持相机并按键。",
+                "scoring": "按原任务整体完成条件判断成功；ME-Dex 另报双臂平均成功率。"
+              }
+            ],
+            "source": "https://arxiv.org/html/2605.16257v1",
+            "locator": "§3.3；附录 B；ME-Dex Table 3"
+          }
+        ],
+        "overviewFigure": {
+          "url": "figures/benchmarks/dexjoco-overview.png",
+          "source": "https://arxiv.org/html/2605.16257v1",
+          "originalUrl": "https://arxiv.org/html/2605.16257v1/teaser.png",
+          "caption": "DexJoCo（通用灵巧操作基准） · 官方 Figure 1：任务与平台总览"
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2605.16257v1"
+      ]
+    },
+    "rlbench": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "抓放与整理",
+            "english": "Pick-place / Arrangement",
+            "tasks": [
+              {
+                "englishName": "Place Wine / Put Money in Safe / Stack Cups",
+                "name": "放酒瓶、存钱与叠杯",
+                "goal": "抓起目标并放入酒架、保险箱或形成杯子堆叠。",
+                "mechanism": "抓取几何、容器与堆叠约束。",
+                "scoring": "对应目标区域或堆叠的成功条件成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Reach Target",
+                    "name": "触达目标"
+                  },
+                  {
+                    "englishName": "Take Umbrella Out Of Umbrella Stand",
+                    "name": "取出雨伞"
+                  },
+                  {
+                    "englishName": "Put Umbrella In Umbrella Stand",
+                    "name": "雨伞入伞架"
+                  },
+                  {
+                    "englishName": "Pick And Lift",
+                    "name": "抓取并抬起"
+                  },
+                  {
+                    "englishName": "Basketball In Hoop",
+                    "name": "篮球入筐"
+                  },
+                  {
+                    "englishName": "Put Item In Drawer",
+                    "name": "物品入抽屉"
+                  },
+                  {
+                    "englishName": "Take Item Out Of Drawer",
+                    "name": "从抽屉取物"
+                  },
+                  {
+                    "englishName": "Block Pyramid",
+                    "name": "搭积木金字塔"
+                  },
+                  {
+                    "englishName": "Empty Container",
+                    "name": "清空容器"
+                  },
+                  {
+                    "englishName": "Empty Dishwasher",
+                    "name": "清空洗碗机"
+                  },
+                  {
+                    "englishName": "Put Rubbish In Bin",
+                    "name": "垃圾入桶"
+                  },
+                  {
+                    "englishName": "Put Shoes In Box",
+                    "name": "鞋子入盒"
+                  },
+                  {
+                    "englishName": "Put Toilet Roll On Stand",
+                    "name": "纸卷放支架"
+                  },
+                  {
+                    "englishName": "Put Tray In Oven",
+                    "name": "托盘入烤箱"
+                  },
+                  {
+                    "englishName": "Remove Cups",
+                    "name": "移走杯子"
+                  },
+                  {
+                    "englishName": "Set The Table",
+                    "name": "摆餐桌"
+                  },
+                  {
+                    "englishName": "Slide Block To Target",
+                    "name": "滑块到目标"
+                  },
+                  {
+                    "englishName": "Meat Off Grill",
+                    "name": "肉移出烤架"
+                  },
+                  {
+                    "englishName": "Meat On Grill",
+                    "name": "肉放烤架"
+                  },
+                  {
+                    "englishName": "Move Hanger",
+                    "name": "移动衣架"
+                  },
+                  {
+                    "englishName": "Place Cups",
+                    "name": "放置杯子"
+                  },
+                  {
+                    "englishName": "Place Hanger On Rack",
+                    "name": "衣架放架上"
+                  },
+                  {
+                    "englishName": "Put Bottle In Fridge",
+                    "name": "瓶子入冰箱"
+                  },
+                  {
+                    "englishName": "Put Money In Safe",
+                    "name": "钱放保险箱"
+                  },
+                  {
+                    "englishName": "Put Plate In Colored Dish Rack",
+                    "name": "盘子放对应碗碟架"
+                  },
+                  {
+                    "englishName": "Stack Blocks",
+                    "name": "叠方块"
+                  },
+                  {
+                    "englishName": "Stack Cups",
+                    "name": "叠杯"
+                  },
+                  {
+                    "englishName": "Stack Wine",
+                    "name": "叠放酒瓶"
+                  },
+                  {
+                    "englishName": "Take Cup Out From Cabinet",
+                    "name": "从柜中取杯"
+                  },
+                  {
+                    "englishName": "Take Lid Off Saucepan",
+                    "name": "取下锅盖"
+                  },
+                  {
+                    "englishName": "Take Money Out Safe",
+                    "name": "从保险箱取钱"
+                  },
+                  {
+                    "englishName": "Take Off Weighing Scales",
+                    "name": "物体移出秤盘"
+                  },
+                  {
+                    "englishName": "Take Plate Off Colored Dish Rack",
+                    "name": "从碗碟架取盘"
+                  },
+                  {
+                    "englishName": "Take Shoes Out Of Box",
+                    "name": "鞋子移出盒"
+                  },
+                  {
+                    "englishName": "Take Toilet Roll Off Stand",
+                    "name": "取下纸卷"
+                  },
+                  {
+                    "englishName": "Weighing Scales",
+                    "name": "物体放秤盘"
+                  },
+                  {
+                    "englishName": "Pick Up Cup",
+                    "name": "抓起杯子"
+                  },
+                  {
+                    "englishName": "Phone On Base",
+                    "name": "电话放回底座"
+                  },
+                  {
+                    "englishName": "Put Knife On Chopping Board",
+                    "name": "刀放砧板"
+                  },
+                  {
+                    "englishName": "Put Books On Bookshelf",
+                    "name": "书放书架"
+                  },
+                  {
+                    "englishName": "Put Groceries In Cupboard",
+                    "name": "食品放橱柜"
+                  },
+                  {
+                    "englishName": "Take Tray Out Of Oven",
+                    "name": "托盘移出烤箱"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 42
+              }
+            ],
+            "count": "42 项",
+            "note": "按本页操作能力归纳，依据官方 MT100_V1 完整列出；三组合计 100 项，任务变体另计。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/1909.12271v1",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/stepjam/RLBench/blob/master/rlbench/tasks/__init__.py",
+                "label": "官方实现 · MT100_V1 任务集合"
+              }
+            ]
+          },
+          {
+            "title": "关节物体与工具操作",
+            "english": "Articulation / Tool use",
+            "tasks": [
+              {
+                "englishName": "Open Drawer / Close Laptop / Sweep to Dustpan",
+                "name": "开抽屉、关电脑与扫入簸箕",
+                "goal": "操作关节物体，或先拿工具再作用于目标。",
+                "mechanism": "关节限位、工具接触和目标区域约束。",
+                "scoring": "任务脚本的目标位移、角度或区域检查通过。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Close Box",
+                    "name": "关闭盒子"
+                  },
+                  {
+                    "englishName": "Close Microwave",
+                    "name": "关闭微波炉"
+                  },
+                  {
+                    "englishName": "Toilet Seat Down",
+                    "name": "放下马桶盖"
+                  },
+                  {
+                    "englishName": "Slide Cabinet Open",
+                    "name": "滑开柜门"
+                  },
+                  {
+                    "englishName": "Close Fridge",
+                    "name": "关闭冰箱"
+                  },
+                  {
+                    "englishName": "Open Box",
+                    "name": "打开盒子"
+                  },
+                  {
+                    "englishName": "Open Microwave",
+                    "name": "打开微波炉"
+                  },
+                  {
+                    "englishName": "Toilet Seat Up",
+                    "name": "掀起马桶盖"
+                  },
+                  {
+                    "englishName": "Open Fridge",
+                    "name": "打开冰箱"
+                  },
+                  {
+                    "englishName": "Turn Tap",
+                    "name": "转水龙头"
+                  },
+                  {
+                    "englishName": "Open Window",
+                    "name": "打开窗户"
+                  },
+                  {
+                    "englishName": "Close Door",
+                    "name": "关闭门"
+                  },
+                  {
+                    "englishName": "Push Button",
+                    "name": "按按钮"
+                  },
+                  {
+                    "englishName": "Open Drawer",
+                    "name": "打开抽屉"
+                  },
+                  {
+                    "englishName": "Close Drawer",
+                    "name": "关闭抽屉"
+                  },
+                  {
+                    "englishName": "Turn Oven On",
+                    "name": "打开烤箱"
+                  },
+                  {
+                    "englishName": "Tv On",
+                    "name": "打开电视"
+                  },
+                  {
+                    "englishName": "Open Oven",
+                    "name": "打开烤箱"
+                  },
+                  {
+                    "englishName": "Open Door",
+                    "name": "打开门"
+                  },
+                  {
+                    "englishName": "Change Clock",
+                    "name": "调整时钟"
+                  },
+                  {
+                    "englishName": "Close Jar",
+                    "name": "关闭罐子"
+                  },
+                  {
+                    "englishName": "Close Laptop Lid",
+                    "name": "关闭电脑盖"
+                  },
+                  {
+                    "englishName": "Get Ice From Fridge",
+                    "name": "从冰箱取冰"
+                  },
+                  {
+                    "englishName": "Reach And Drag",
+                    "name": "伸取并拖拽"
+                  },
+                  {
+                    "englishName": "Scoop With Spatula",
+                    "name": "用铲铲取"
+                  },
+                  {
+                    "englishName": "Hockey",
+                    "name": "冰球推送"
+                  },
+                  {
+                    "englishName": "Press Switch",
+                    "name": "按开关"
+                  },
+                  {
+                    "englishName": "Hit Ball With Queue",
+                    "name": "球杆击球"
+                  },
+                  {
+                    "englishName": "Lamp Off",
+                    "name": "关闭台灯"
+                  },
+                  {
+                    "englishName": "Lamp On",
+                    "name": "打开台灯"
+                  },
+                  {
+                    "englishName": "Open Jar",
+                    "name": "打开罐子"
+                  },
+                  {
+                    "englishName": "Open Wine Bottle",
+                    "name": "打开酒瓶"
+                  },
+                  {
+                    "englishName": "Slide Cabinet Open And Place Cups",
+                    "name": "滑开柜门并放杯"
+                  },
+                  {
+                    "englishName": "Sweep To Dustpan",
+                    "name": "扫入簸箕"
+                  },
+                  {
+                    "englishName": "Water Plants",
+                    "name": "浇植物"
+                  },
+                  {
+                    "englishName": "Wipe Desk",
+                    "name": "擦桌"
+                  },
+                  {
+                    "englishName": "Change Channel",
+                    "name": "切换频道"
+                  },
+                  {
+                    "englishName": "Open Grill",
+                    "name": "打开烤架"
+                  },
+                  {
+                    "englishName": "Close Grill",
+                    "name": "关闭烤架"
+                  },
+                  {
+                    "englishName": "Pour From Cup To Cup",
+                    "name": "杯间倾倒"
+                  },
+                  {
+                    "englishName": "Push Buttons",
+                    "name": "依次按按钮"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 41
+              }
+            ],
+            "count": "41 项",
+            "note": "按本页操作能力归纳，依据官方 MT100_V1 完整列出；三组合计 100 项，任务变体另计。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/1909.12271v1",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/stepjam/RLBench/blob/master/rlbench/tasks/__init__.py",
+                "label": "官方实现 · MT100_V1 任务集合"
+              }
+            ]
+          },
+          {
+            "title": "精密与柔性操作",
+            "english": "Precision / Deformable manipulation",
+            "tasks": [
+              {
+                "englishName": "Insert onto Square Peg / Straighten Rope",
+                "name": "方孔套销与拉直绳子",
+                "goal": "将配合物套到方销，或把绳子摆成目标形状。",
+                "mechanism": "受约束几何与柔性形状。",
+                "scoring": "分别满足装配位置或绳子形状条件。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Plug Charger In Power Supply",
+                    "name": "充电器插入电源"
+                  },
+                  {
+                    "englishName": "Unplug Charger",
+                    "name": "拔出充电器"
+                  },
+                  {
+                    "englishName": "Light Bulb In",
+                    "name": "装入灯泡"
+                  },
+                  {
+                    "englishName": "Light Bulb Out",
+                    "name": "取下灯泡"
+                  },
+                  {
+                    "englishName": "Beat The Buzz",
+                    "name": "沿金属线移动环"
+                  },
+                  {
+                    "englishName": "Hang Frame On Hanger",
+                    "name": "挂相框"
+                  },
+                  {
+                    "englishName": "Insert Onto Square Peg",
+                    "name": "方孔套销"
+                  },
+                  {
+                    "englishName": "Setup Checkers",
+                    "name": "摆跳棋"
+                  },
+                  {
+                    "englishName": "Insert Usb In Computer",
+                    "name": "USB 插入电脑"
+                  },
+                  {
+                    "englishName": "Play Jenga",
+                    "name": "叠叠乐"
+                  },
+                  {
+                    "englishName": "Screw Nail",
+                    "name": "拧螺钉"
+                  },
+                  {
+                    "englishName": "Place Shape In Shape Sorter",
+                    "name": "形状块放入匹配槽"
+                  },
+                  {
+                    "englishName": "Put Knife In Knife Block",
+                    "name": "刀插刀架"
+                  },
+                  {
+                    "englishName": "Straighten Rope",
+                    "name": "拉直绳子"
+                  },
+                  {
+                    "englishName": "Take Frame Off Hanger",
+                    "name": "取下相框"
+                  },
+                  {
+                    "englishName": "Take Usb Out Of Computer",
+                    "name": "拔出 USB"
+                  },
+                  {
+                    "englishName": "Solve Puzzle",
+                    "name": "完成拼图"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 17
+              }
+            ],
+            "count": "17 项",
+            "note": "按本页操作能力归纳，依据官方 MT100_V1 完整列出；三组合计 100 项，任务变体另计。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/1909.12271v1",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/stepjam/RLBench/blob/master/rlbench/tasks/__init__.py",
+                "label": "官方实现 · MT100_V1 任务集合"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/1909.12271v1"
+      ]
+    },
+    "calvin": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "积木与堆叠",
+            "english": "Block manipulation",
+            "tasks": [
+              {
+                "englishName": "Rotate / Push / Lift Block",
+                "name": "旋转、推动与提起积木",
+                "goal": "按指令移动或转动指定颜色积木。",
+                "mechanism": "桌面接触、抓取与姿态变化。",
+                "scoring": "满足对应位移或角度变化。",
+                "criteria": [
+                  "旋转：绕 z 轴超过 60°，绕 x／y 不超过 30°。",
+                  "左右推动：位移超过 10 cm，起止帧均有表面接触。",
+                  "从桌面提起至少 5 cm、从滑柜提起至少 3 cm、从抽屉提起至少 5 cm；起始帧夹爪不能已接触目标。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2112.03227#S3.F6",
+                    "label": "论文 Figure 6 · 34 技能判定"
+                  },
+                  {
+                    "url": "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml",
+                    "label": "官方实现 · 34 个技能标识"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "rotate_red_block_right",
+                    "name": "旋转 红块 向右"
+                  },
+                  {
+                    "englishName": "rotate_red_block_left",
+                    "name": "旋转 红块 向左"
+                  },
+                  {
+                    "englishName": "rotate_blue_block_right",
+                    "name": "旋转 蓝块 向右"
+                  },
+                  {
+                    "englishName": "rotate_blue_block_left",
+                    "name": "旋转 蓝块 向左"
+                  },
+                  {
+                    "englishName": "rotate_pink_block_right",
+                    "name": "旋转 粉块 向右"
+                  },
+                  {
+                    "englishName": "rotate_pink_block_left",
+                    "name": "旋转 粉块 向左"
+                  },
+                  {
+                    "englishName": "push_red_block_right",
+                    "name": "推动 红块 向右"
+                  },
+                  {
+                    "englishName": "push_red_block_left",
+                    "name": "推动 红块 向左"
+                  },
+                  {
+                    "englishName": "push_blue_block_right",
+                    "name": "推动 蓝块 向右"
+                  },
+                  {
+                    "englishName": "push_blue_block_left",
+                    "name": "推动 蓝块 向左"
+                  },
+                  {
+                    "englishName": "push_pink_block_right",
+                    "name": "推动 粉块 向右"
+                  },
+                  {
+                    "englishName": "push_pink_block_left",
+                    "name": "推动 粉块 向左"
+                  },
+                  {
+                    "englishName": "lift_red_block_table",
+                    "name": "提起 红块 从桌面"
+                  },
+                  {
+                    "englishName": "lift_red_block_slider",
+                    "name": "提起 红块 从滑柜"
+                  },
+                  {
+                    "englishName": "lift_red_block_drawer",
+                    "name": "提起 红块 从抽屉"
+                  },
+                  {
+                    "englishName": "lift_blue_block_table",
+                    "name": "提起 蓝块 从桌面"
+                  },
+                  {
+                    "englishName": "lift_blue_block_slider",
+                    "name": "提起 蓝块 从滑柜"
+                  },
+                  {
+                    "englishName": "lift_blue_block_drawer",
+                    "name": "提起 蓝块 从抽屉"
+                  },
+                  {
+                    "englishName": "lift_pink_block_table",
+                    "name": "提起 粉块 从桌面"
+                  },
+                  {
+                    "englishName": "lift_pink_block_slider",
+                    "name": "提起 粉块 从滑柜"
+                  },
+                  {
+                    "englishName": "lift_pink_block_drawer",
+                    "name": "提起 粉块 从抽屉"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 21
+              },
+              {
+                "englishName": "Stack / Unstack Blocks",
+                "name": "叠放／拆开积木",
+                "goal": "把积木叠起来或移开顶部积木。",
+                "mechanism": "块间支撑与释放条件。",
+                "scoring": "分别形成堆叠或移走上层积木。",
+                "criteria": [
+                  "Stack：最终不能仍与夹爪接触。",
+                  "Unstack：初始不能与夹爪接触。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2112.03227#S3.F6",
+                    "label": "论文 Figure 6 · 34 技能判定"
+                  },
+                  {
+                    "url": "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml",
+                    "label": "官方实现 · 34 个技能标识"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "stack_block",
+                    "name": "堆叠积木"
+                  },
+                  {
+                    "englishName": "unstack_block",
+                    "name": "拆开堆叠"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 2
+              }
+            ],
+            "count": "23 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2112.03227",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "收纳与关节物体",
+            "english": "Storage / Articulation",
+            "tasks": [
+              {
+                "englishName": "Move Slider / Open Drawer",
+                "name": "滑门与抽屉",
+                "goal": "把滑门推向指定方向，或开关抽屉。",
+                "mechanism": "受限关节运动。",
+                "scoring": "达到相对起态的目标位移。",
+                "criteria": [
+                  "滑门至少移动 12 cm；抽屉开关至少变化 10 cm。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2112.03227#S3.F6",
+                    "label": "论文 Figure 6 · 34 技能判定"
+                  },
+                  {
+                    "url": "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml",
+                    "label": "官方实现 · 34 个技能标识"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "move_slider_left",
+                    "name": "滑门向左"
+                  },
+                  {
+                    "englishName": "move_slider_right",
+                    "name": "滑门向右"
+                  },
+                  {
+                    "englishName": "open_drawer",
+                    "name": "打开抽屉"
+                  },
+                  {
+                    "englishName": "close_drawer",
+                    "name": "关闭抽屉"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 4
+              },
+              {
+                "englishName": "Place in Slider / Drawer",
+                "name": "放入滑柜或抽屉",
+                "goal": "将抓持物放进指定收纳区域。",
+                "mechanism": "抓持到放置的状态转换。",
+                "scoring": "目标物进入对应区域，且初始由夹爪举起。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "place_in_slider",
+                    "name": "物品放入滑柜"
+                  },
+                  {
+                    "englishName": "place_in_drawer",
+                    "name": "物品放入抽屉"
+                  },
+                  {
+                    "englishName": "push_into_drawer",
+                    "name": "推入抽屉"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3,
+                "sources": [
+                  {
+                    "url": "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml",
+                    "label": "官方实现 · 34 个技能标识"
+                  }
+                ]
+              }
+            ],
+            "count": "7 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2112.03227",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          },
+          {
+            "title": "灯光开关",
+            "english": "Light / LED",
+            "tasks": [
+              {
+                "englishName": "Turn On / Off Light / LED",
+                "name": "开关灯泡与 LED",
+                "goal": "按按钮或拨开关改变指定灯状态。",
+                "mechanism": "开关触发与离散状态变化。",
+                "scoring": "指定灯切换至指令目标状态。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "turn_on_lightbulb",
+                    "name": "打开灯泡"
+                  },
+                  {
+                    "englishName": "turn_off_lightbulb",
+                    "name": "关闭灯泡"
+                  },
+                  {
+                    "englishName": "turn_on_led",
+                    "name": "打开 LED"
+                  },
+                  {
+                    "englishName": "turn_off_led",
+                    "name": "关闭 LED"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 4,
+                "sources": [
+                  {
+                    "url": "https://github.com/mees/calvin/blob/main/calvin_models/conf/callbacks/rollout/tasks/new_playtable_tasks.yaml",
+                    "label": "官方实现 · 34 个技能标识"
+                  }
+                ]
+              }
+            ],
+            "count": "4 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2112.03227",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2112.03227"
+      ]
+    },
+    "robocasa365": {
+      "sources": [
+        "https://robocasa.ai/assets/robocasa365_iclr26.pdf"
+      ]
+    },
+    "colosseum": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "抓放与容器操作",
+            "english": "Pick-place / Containers",
+            "tasks": [
+              {
+                "englishName": "Basketball / Place Wine / Stack Cups",
+                "name": "投篮、放酒瓶与叠杯",
+                "goal": "把篮球放进篮筐、酒瓶放进架子，或按目标叠杯。",
+                "mechanism": "抓取、容器尺寸与放置几何。",
+                "scoring": "完整满足原 RLBench 对应任务判定。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Basketball in Hoop",
+                    "name": "篮球入筐",
+                    "goal": "将篮球放入篮筐。"
+                  },
+                  {
+                    "englishName": "Meat on Grill",
+                    "name": "肉放烤架",
+                    "goal": "把肉块放到指定烤架。"
+                  },
+                  {
+                    "englishName": "Empty Dishwasher",
+                    "name": "清空洗碗机",
+                    "goal": "取出洗碗机内餐具。"
+                  },
+                  {
+                    "englishName": "Put Money in Safe",
+                    "name": "钱放保险箱",
+                    "goal": "把钱放入保险箱。"
+                  },
+                  {
+                    "englishName": "Place Wine at Rack Location",
+                    "name": "酒瓶入架",
+                    "goal": "把酒瓶放到酒架目标位。"
+                  },
+                  {
+                    "englishName": "Move Hanger",
+                    "name": "移动衣架",
+                    "goal": "移动衣架到目标位置。"
+                  },
+                  {
+                    "englishName": "Stack Cups",
+                    "name": "叠杯",
+                    "goal": "按任务要求堆叠杯子。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 7
+              }
+            ],
+            "count": "7 项",
+            "note": "按能力归纳 20 项具名任务，任务与扰动组合不算新增独立环境。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2402.08191",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://arxiv.org/html/2402.08191v2#S10",
+                "label": "论文附录 X · 全部 20 项任务"
+              }
+            ]
+          },
+          {
+            "title": "关节与工具操作",
+            "english": "Articulation / Tools",
+            "tasks": [
+              {
+                "englishName": "Open Drawer / Turn Oven / Scoop with Spatula",
+                "name": "抽屉、烤箱与铲取",
+                "goal": "改变关节状态，或先抓工具再处理目标。",
+                "mechanism": "受限运动及工具接触。",
+                "scoring": "抽屉／旋钮状态或铲取目标达标。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Open Drawer",
+                    "name": "打开抽屉",
+                    "goal": "拉开目标抽屉。"
+                  },
+                  {
+                    "englishName": "Close Box",
+                    "name": "关闭盒子",
+                    "goal": "关上盒盖。"
+                  },
+                  {
+                    "englishName": "Close Laptop Lid",
+                    "name": "关闭电脑盖",
+                    "goal": "合上笔记本电脑。"
+                  },
+                  {
+                    "englishName": "Reach and Drag",
+                    "name": "伸取并拖拽",
+                    "goal": "抓住目标并拖到指定区域。"
+                  },
+                  {
+                    "englishName": "Get Ice from Fridge",
+                    "name": "从冰箱取冰",
+                    "goal": "操作冰箱取冰机构。"
+                  },
+                  {
+                    "englishName": "Hockey",
+                    "name": "冰球推送",
+                    "goal": "用球杆将球送到目标。"
+                  },
+                  {
+                    "englishName": "Wipe Desk",
+                    "name": "擦桌",
+                    "goal": "完成桌面清理目标。"
+                  },
+                  {
+                    "englishName": "Turn Oven On",
+                    "name": "打开烤箱",
+                    "goal": "转动控制旋钮。"
+                  },
+                  {
+                    "englishName": "Scoop with Spatula",
+                    "name": "铲取物体",
+                    "goal": "抓铲并铲起目标。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 9
+              }
+            ],
+            "count": "9 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2402.08191",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://arxiv.org/html/2402.08191v2#S10",
+                "label": "论文附录 X · 全部 20 项任务"
+              }
+            ]
+          },
+          {
+            "title": "装配与形状控制",
+            "english": "Assembly / Shape control",
+            "tasks": [
+              {
+                "englishName": "Square Peg / Setup Chess / Straighten Rope",
+                "name": "方孔套销、摆棋与拉直绳子",
+                "goal": "完成配合装配、棋子放置或绳子形状调整。",
+                "mechanism": "几何对准、接触与柔性物体形状。",
+                "scoring": "分别达到原任务的目标关系。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Slide Block to Target",
+                    "name": "方块滑到目标",
+                    "goal": "推动方块进入目标区域。"
+                  },
+                  {
+                    "englishName": "Straighten Rope",
+                    "name": "拉直绳子",
+                    "goal": "把柔性绳子整理到目标形状。"
+                  },
+                  {
+                    "englishName": "Insert onto Square Peg",
+                    "name": "方孔套销",
+                    "goal": "将方孔件套入方销。"
+                  },
+                  {
+                    "englishName": "Setup Chess",
+                    "name": "摆放棋子",
+                    "goal": "把棋子放入目标棋盘位置。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 4
+              }
+            ],
+            "count": "4 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2402.08191",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://arxiv.org/html/2402.08191v2#S10",
+                "label": "论文附录 X · 全部 20 项任务"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2402.08191"
+      ]
+    },
+    "robotwin-phys": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "抓放、协同与动力学",
+            "english": "Manipulation under physical variation",
+            "tasks": [
+              {
+                "englishName": "Pick-place / Handover / Stacking",
+                "name": "抓放、交接与堆叠",
+                "goal": "例如把瓶子放入垃圾桶、交接方块或叠碗。",
+                "mechanism": "质量、质心、尺度与摩擦改变抓取和物体运动。",
+                "scoring": "沿用原 RoboTwin 对应任务成功条件。",
+                "criteria": [
+                  "全局质量缩放 [0.125,4] 倍，惯性同步缩放；质心各轴偏移 [-1.5,1.5] cm。",
+                  "摩擦系数 [0.01,1.25]，恢复系数 [0,0.5]；几何缩放 [0.85,1.05] 倍。",
+                  "参数在每回合初始化时连续采样，回合内固定。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2609.26292#A1",
+                    "label": "论文附录 A · 参数范围"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2609.26292#A2",
+                    "label": "附录 B · 敏感任务专用范围"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "adjust_bottle",
+                    "name": "扶正瓶子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "blocks_ranking_rgb",
+                    "name": "方块按颜色排序",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "blocks_ranking_size",
+                    "name": "方块按尺寸排序",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "dump_bin_bigbin",
+                    "name": "小桶倒入大桶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "handover_block",
+                    "name": "交接方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "handover_mic",
+                    "name": "交接麦克风",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "hanging_mug",
+                    "name": "挂杯子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "lift_pot",
+                    "name": "双臂抬锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_can_pot",
+                    "name": "移动罐与锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_playingcard_away",
+                    "name": "移开扑克牌",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_stapler_pad",
+                    "name": "订书机移至垫上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "pick_diverse_bottles",
+                    "name": "抓取不同瓶子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "pick_dual_bottles",
+                    "name": "双瓶抓取",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_a2b_left",
+                    "name": "从 A 放到左侧 B",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_a2b_right",
+                    "name": "从 A 放到右侧 B",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_bread_basket",
+                    "name": "面包入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_bread_skillet",
+                    "name": "面包放平底锅",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_burger_fries",
+                    "name": "摆放汉堡和薯条",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_can_basket",
+                    "name": "罐子入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_cans_plasticbox",
+                    "name": "罐子入塑料盒",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_container_plate",
+                    "name": "容器放盘上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_dual_shoes",
+                    "name": "双鞋摆放",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_empty_cup",
+                    "name": "空杯放置",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_fan",
+                    "name": "摆放风扇",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_mouse_pad",
+                    "name": "鼠标放鼠标垫",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_basket",
+                    "name": "物体入篮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_scale",
+                    "name": "物体放秤上",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_object_stand",
+                    "name": "物体放支架",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_phone_stand",
+                    "name": "手机放支架",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "place_shoe",
+                    "name": "摆放鞋子",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "put_bottles_dustbin",
+                    "name": "瓶子入垃圾桶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "rotate_qrcode",
+                    "name": "旋转二维码",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "shake_bottle_horizontally",
+                    "name": "水平摇瓶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "shake_bottle",
+                    "name": "摇瓶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_blocks_three",
+                    "name": "叠三个方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_blocks_two",
+                    "name": "叠两个方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_bowls_three",
+                    "name": "叠三个碗",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stack_bowls_two",
+                    "name": "叠两个碗",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "move_pillbottle_pad",
+                    "name": "药瓶移至垫上",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 39
+              }
+            ],
+            "count": "39 项",
+            "note": "按本页操作能力归纳，完整列出该组任务；两组合计 50 项，不增加原项目任务数量。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2609.26292",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://robotwin-platform.github.io/doc/tasks/index.html",
+                "label": "RoboTwin 官方 · 全部 50 项任务"
+              }
+            ]
+          },
+          {
+            "title": "工具与关节物体",
+            "english": "Tool / Articulated interaction",
+            "tasks": [
+              {
+                "englishName": "Beat Block Hammer / Open Microwave / Turn Switch",
+                "name": "锤击、微波炉与开关",
+                "goal": "用工具敲击，或操作带关节的物体。",
+                "mechanism": "接触传力、对象关节阻尼与机械臂阻尼变化。",
+                "scoring": "达到原任务要求的物体或关节终态。",
+                "criteria": [
+                  "全局对象关节阻尼 [0,25]；手臂和夹爪共享 [0.5,3] 倍阻尼缩放。",
+                  "微波炉任务关节阻尼缩小到 [0,0.25]，开关为 [0,1]；不能套用全局范围。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2609.26292#A1",
+                    "label": "论文附录 A · 参数范围"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2609.26292#A2",
+                    "label": "附录 B · 敏感任务专用范围"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "beat_block_hammer",
+                    "name": "锤击方块",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "click_alarmclock",
+                    "name": "按闹钟",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "click_bell",
+                    "name": "按铃",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "grab_roller",
+                    "name": "抓取滚筒",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "open_laptop",
+                    "name": "打开电脑盖",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "open_microwave",
+                    "name": "打开微波炉",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "press_stapler",
+                    "name": "按订书机",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "put_object_cabinet",
+                    "name": "物体入柜",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "scan_object",
+                    "name": "扫描物体",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "stamp_seal",
+                    "name": "盖章",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "turn_switch",
+                    "name": "转动开关",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 11
+              }
+            ],
+            "count": "11 项",
+            "note": "按本页操作能力归纳，完整列出该组任务；两组合计 50 项，不增加原项目任务数量。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2609.26292",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://robotwin-platform.github.io/doc/tasks/index.html",
+                "label": "RoboTwin 官方 · 全部 50 项任务"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2609.26292"
+      ]
+    },
+    "libero-plus": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "空间关系",
+            "english": "LIBERO-Spatial",
+            "tasks": [
+              {
+                "englishName": "Spatial selection",
+                "name": "空间选择",
+                "goal": "按位置关系选出目标碗并放入盘中。",
+                "mechanism": "同类物体共存，依赖相对位置消除目标歧义。",
+                "scoring": "目标物体与目标区域满足 BDDL 的空间谓词。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+                    "name": "取盘子与小碗之间的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the ramekin and place it on the plate",
+                    "name": "取小碗旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl from table center and place it on the plate",
+                    "name": "取桌面中央黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the cookie box and place it on the plate",
+                    "name": "取饼干盒上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+                    "name": "取木柜上层抽屉中黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the ramekin and place it on the plate",
+                    "name": "取小碗上的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the cookie box and place it on the plate",
+                    "name": "取饼干盒旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the stove and place it on the plate",
+                    "name": "取炉灶上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the plate and place it on the plate",
+                    "name": "取盘子旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the wooden cabinet and place it on the plate",
+                    "name": "取木柜上黑碗入盘"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "物体身份",
+            "english": "LIBERO-Object",
+            "tasks": [
+              {
+                "englishName": "Object-conditioned placement",
+                "name": "物体条件放置",
+                "goal": "把字母汤罐、奶油奶酪等指定物体放入篮筐。",
+                "mechanism": "抓取几何与外观变化，放置结构保持相近。",
+                "scoring": "指定物体处于目标容器中。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the alphabet soup and place it in the basket",
+                    "name": "字母汤罐入篮"
+                  },
+                  {
+                    "englishName": "pick up the cream cheese and place it in the basket",
+                    "name": "奶油奶酪入篮"
+                  },
+                  {
+                    "englishName": "pick up the salad dressing and place it in the basket",
+                    "name": "沙拉酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the bbq sauce and place it in the basket",
+                    "name": "烧烤酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the ketchup and place it in the basket",
+                    "name": "番茄沙司入篮"
+                  },
+                  {
+                    "englishName": "pick up the tomato sauce and place it in the basket",
+                    "name": "番茄酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the butter and place it in the basket",
+                    "name": "黄油入篮"
+                  },
+                  {
+                    "englishName": "pick up the milk and place it in the basket",
+                    "name": "牛奶入篮"
+                  },
+                  {
+                    "englishName": "pick up the chocolate pudding and place it in the basket",
+                    "name": "巧克力布丁入篮"
+                  },
+                  {
+                    "englishName": "pick up the orange juice and place it in the basket",
+                    "name": "橙汁入篮"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "目标变化",
+            "english": "LIBERO-Goal",
+            "tasks": [
+              {
+                "englishName": "Goal-conditioned manipulation",
+                "name": "目标条件操作",
+                "goal": "在相近场景中按指令开抽屉或移动物体。",
+                "mechanism": "同一场景允许多个可行目标，需由语言确定。",
+                "scoring": "当前指令对应的全部目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "open the middle drawer of the cabinet",
+                    "name": "打开柜子中层抽屉"
+                  },
+                  {
+                    "englishName": "put the bowl on the stove",
+                    "name": "碗放到炉灶上"
+                  },
+                  {
+                    "englishName": "put the wine bottle on top of the cabinet",
+                    "name": "酒瓶放到柜顶"
+                  },
+                  {
+                    "englishName": "open the top drawer and put the bowl inside",
+                    "name": "打开上层抽屉并放碗"
+                  },
+                  {
+                    "englishName": "put the bowl on top of the cabinet",
+                    "name": "碗放到柜顶"
+                  },
+                  {
+                    "englishName": "push the plate to the front of the stove",
+                    "name": "盘子推到炉灶前"
+                  },
+                  {
+                    "englishName": "put the cream cheese in the bowl",
+                    "name": "奶油奶酪放入碗"
+                  },
+                  {
+                    "englishName": "turn on the stove",
+                    "name": "打开炉灶"
+                  },
+                  {
+                    "englishName": "put the bowl on the plate",
+                    "name": "碗放到盘中"
+                  },
+                  {
+                    "englishName": "put the wine bottle on the rack",
+                    "name": "酒瓶放到酒架"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "长程组合",
+            "english": "LIBERO-100 / LIBERO-Long",
+            "tasks": [
+              {
+                "englishName": "LIBERO-Long / LIBERO-10",
+                "name": "长程任务子集",
+                "goal": "列出 LIBERO-100 中用于长程评测的全部 10 项子集任务；其余 90 项为 LIBERO-90。",
+                "mechanism": "抓取、放置和关节操作存在顺序依赖。",
+                "scoring": "完整任务的所有目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "put both the alphabet soup and the tomato sauce in the basket",
+                    "name": "字母汤罐和番茄酱入篮"
+                  },
+                  {
+                    "englishName": "put both the cream cheese box and the butter in the basket",
+                    "name": "奶油奶酪盒和黄油入篮"
+                  },
+                  {
+                    "englishName": "turn on the stove and put the moka pot on it",
+                    "name": "打开炉灶并放摩卡壶"
+                  },
+                  {
+                    "englishName": "put the black bowl in the bottom drawer of the cabinet and close it",
+                    "name": "黑碗入下层抽屉并关好"
+                  },
+                  {
+                    "englishName": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+                    "name": "白杯放左盘且黄白杯放右盘"
+                  },
+                  {
+                    "englishName": "pick up the book and place it in the back compartment of the caddy",
+                    "name": "书放到收纳架后格"
+                  },
+                  {
+                    "englishName": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+                    "name": "白杯入盘且布丁放盘右侧"
+                  },
+                  {
+                    "englishName": "put both the alphabet soup and the cream cheese box in the basket",
+                    "name": "字母汤罐和奶油奶酪盒入篮"
+                  },
+                  {
+                    "englishName": "put both moka pots on the stove",
+                    "name": "两只摩卡壶放到炉灶"
+                  },
+                  {
+                    "englishName": "put the yellow and white mug in the microwave and close it",
+                    "name": "黄白杯入微波炉并关门"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项长程子集",
+            "note": "本基准沿用的 LIBERO-Long／LIBERO-10；此处不包含 LIBERO-90。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "七类扰动任务",
+            "english": "Seven perturbation families",
+            "count": "7 类／21 子维度",
+            "note": "目标沿用 LIBERO 的 Spatial、Object、Goal、Long 四套件；以下按变化条件分组说明。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2510.13626v3#A1",
+                "label": "论文 v3 附录 A · 全部扰动定义"
+              }
+            ],
+            "tasks": [
+              {
+                "englishName": "Objects Layout",
+                "name": "物体布局",
+                "goal": "改变目标位置或加入混淆物体。",
+                "mechanism": "空间关系和抓取初态变化。",
+                "scoring": "按原任务目标判断，不能只碰到任意同类物体。",
+                "examples": [
+                  "移动目标碗；在目标旁加入同类物体。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Camera Viewpoints",
+                "name": "相机视角",
+                "goal": "改变第三视角相机距离、位置或朝向。",
+                "mechanism": "透视、遮挡和图像尺度变化。",
+                "scoring": "在新视角下完成原任务。",
+                "examples": [
+                  "拉远相机、移动观察方位或转动相机。"
+                ],
+                "criteria": [
+                  "距离 1.01–2.00 倍；球面位置角 15°–75°；固定位置朝向扰动 2°–10°。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Robot Initial States",
+                "name": "机械臂初态",
+                "goal": "改变机械臂起始关节状态。",
+                "mechanism": "到达路径与初始遮挡变化。",
+                "scoring": "从变化的初态完成相同目标。",
+                "examples": [
+                  "从不同手臂姿态开始抓取同一目标。"
+                ],
+                "criteria": [
+                  "扰动幅度参数为 0.1–0.5；不表示更换机械臂或注入硬件故障。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Language Instructions",
+                "name": "语言指令",
+                "goal": "改写任务指令的表达。",
+                "mechanism": "语义等价的语言输入变化。",
+                "scoring": "仍按原目标谓词判断完整成功。",
+                "examples": [
+                  "用同义表达、不同句式指定同一物体。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Light Conditions",
+                "name": "光照",
+                "goal": "改变光强、方向、颜色或阴影。",
+                "mechanism": "成像亮度、颜色和阴影变化。",
+                "scoring": "在新照明下完成相同目标。",
+                "examples": [
+                  "调暗场景；改变光源方向和颜色。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Background Textures",
+                "name": "背景纹理",
+                "goal": "替换桌面或场景材质外观。",
+                "mechanism": "背景和物体的视觉对比度变化。",
+                "scoring": "替换背景后完成原目标。",
+                "examples": [
+                  "更换木纹；增加与目标颜色接近的纹理。"
+                ],
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              },
+              {
+                "englishName": "Sensor Noise",
+                "name": "传感器噪声",
+                "goal": "给输入图像加入模糊、雾化等变化。",
+                "mechanism": "图像细节和可辨识性下降。",
+                "scoring": "使用受扰图像完成原目标。",
+                "examples": [
+                  "加入高斯、运动、缩放、雾或玻璃模糊。"
+                ],
+                "criteria": [
+                  "高斯模糊 σ＝1–10；运动模糊半径 5–35、σ＝2–20，方向在 −45°至45°之间采样。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2510.13626v3#A1",
+                    "label": "论文 v3 附录 A · 扰动设置"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "taskNote": "完整列出 Spatial、Object、Goal、Long 四套件的 40 项基础操作目标；扰动条件和测试实例另计，不作为新增操作技能。"
+      },
+      "sources": [
+        "https://arxiv.org/html/2510.13626v3"
+      ]
+    },
+    "libero-rig": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "空间关系",
+            "english": "LIBERO-Spatial",
+            "tasks": [
+              {
+                "englishName": "Spatial selection",
+                "name": "空间选择",
+                "goal": "按位置关系选出目标碗并放入盘中。",
+                "mechanism": "同类物体共存，依赖相对位置消除目标歧义。",
+                "scoring": "目标物体与目标区域满足 BDDL 的空间谓词。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+                    "name": "取盘子与小碗之间的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the ramekin and place it on the plate",
+                    "name": "取小碗旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl from table center and place it on the plate",
+                    "name": "取桌面中央黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the cookie box and place it on the plate",
+                    "name": "取饼干盒上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+                    "name": "取木柜上层抽屉中黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the ramekin and place it on the plate",
+                    "name": "取小碗上的黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the cookie box and place it on the plate",
+                    "name": "取饼干盒旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the stove and place it on the plate",
+                    "name": "取炉灶上黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl next to the plate and place it on the plate",
+                    "name": "取盘子旁黑碗入盘"
+                  },
+                  {
+                    "englishName": "pick up the black bowl on the wooden cabinet and place it on the plate",
+                    "name": "取木柜上黑碗入盘"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "物体身份",
+            "english": "LIBERO-Object",
+            "tasks": [
+              {
+                "englishName": "Object-conditioned placement",
+                "name": "物体条件放置",
+                "goal": "把字母汤罐、奶油奶酪等指定物体放入篮筐。",
+                "mechanism": "抓取几何与外观变化，放置结构保持相近。",
+                "scoring": "指定物体处于目标容器中。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "pick up the alphabet soup and place it in the basket",
+                    "name": "字母汤罐入篮"
+                  },
+                  {
+                    "englishName": "pick up the cream cheese and place it in the basket",
+                    "name": "奶油奶酪入篮"
+                  },
+                  {
+                    "englishName": "pick up the salad dressing and place it in the basket",
+                    "name": "沙拉酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the bbq sauce and place it in the basket",
+                    "name": "烧烤酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the ketchup and place it in the basket",
+                    "name": "番茄沙司入篮"
+                  },
+                  {
+                    "englishName": "pick up the tomato sauce and place it in the basket",
+                    "name": "番茄酱入篮"
+                  },
+                  {
+                    "englishName": "pick up the butter and place it in the basket",
+                    "name": "黄油入篮"
+                  },
+                  {
+                    "englishName": "pick up the milk and place it in the basket",
+                    "name": "牛奶入篮"
+                  },
+                  {
+                    "englishName": "pick up the chocolate pudding and place it in the basket",
+                    "name": "巧克力布丁入篮"
+                  },
+                  {
+                    "englishName": "pick up the orange juice and place it in the basket",
+                    "name": "橙汁入篮"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "目标变化",
+            "english": "LIBERO-Goal",
+            "tasks": [
+              {
+                "englishName": "Goal-conditioned manipulation",
+                "name": "目标条件操作",
+                "goal": "在相近场景中按指令开抽屉或移动物体。",
+                "mechanism": "同一场景允许多个可行目标，需由语言确定。",
+                "scoring": "当前指令对应的全部目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "open the middle drawer of the cabinet",
+                    "name": "打开柜子中层抽屉"
+                  },
+                  {
+                    "englishName": "put the bowl on the stove",
+                    "name": "碗放到炉灶上"
+                  },
+                  {
+                    "englishName": "put the wine bottle on top of the cabinet",
+                    "name": "酒瓶放到柜顶"
+                  },
+                  {
+                    "englishName": "open the top drawer and put the bowl inside",
+                    "name": "打开上层抽屉并放碗"
+                  },
+                  {
+                    "englishName": "put the bowl on top of the cabinet",
+                    "name": "碗放到柜顶"
+                  },
+                  {
+                    "englishName": "push the plate to the front of the stove",
+                    "name": "盘子推到炉灶前"
+                  },
+                  {
+                    "englishName": "put the cream cheese in the bowl",
+                    "name": "奶油奶酪放入碗"
+                  },
+                  {
+                    "englishName": "turn on the stove",
+                    "name": "打开炉灶"
+                  },
+                  {
+                    "englishName": "put the bowl on the plate",
+                    "name": "碗放到盘中"
+                  },
+                  {
+                    "englishName": "put the wine bottle on the rack",
+                    "name": "酒瓶放到酒架"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "长程组合",
+            "english": "LIBERO-100 / LIBERO-Long",
+            "tasks": [
+              {
+                "englishName": "LIBERO-Long / LIBERO-10",
+                "name": "长程任务子集",
+                "goal": "列出 LIBERO-100 中用于长程评测的全部 10 项子集任务；其余 90 项为 LIBERO-90。",
+                "mechanism": "抓取、放置和关节操作存在顺序依赖。",
+                "scoring": "完整任务的所有目标谓词成立。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "put both the alphabet soup and the tomato sauce in the basket",
+                    "name": "字母汤罐和番茄酱入篮"
+                  },
+                  {
+                    "englishName": "put both the cream cheese box and the butter in the basket",
+                    "name": "奶油奶酪盒和黄油入篮"
+                  },
+                  {
+                    "englishName": "turn on the stove and put the moka pot on it",
+                    "name": "打开炉灶并放摩卡壶"
+                  },
+                  {
+                    "englishName": "put the black bowl in the bottom drawer of the cabinet and close it",
+                    "name": "黑碗入下层抽屉并关好"
+                  },
+                  {
+                    "englishName": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+                    "name": "白杯放左盘且黄白杯放右盘"
+                  },
+                  {
+                    "englishName": "pick up the book and place it in the back compartment of the caddy",
+                    "name": "书放到收纳架后格"
+                  },
+                  {
+                    "englishName": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+                    "name": "白杯入盘且布丁放盘右侧"
+                  },
+                  {
+                    "englishName": "put both the alphabet soup and the cream cheese box in the basket",
+                    "name": "字母汤罐和奶油奶酪盒入篮"
+                  },
+                  {
+                    "englishName": "put both moka pots on the stove",
+                    "name": "两只摩卡壶放到炉灶"
+                  },
+                  {
+                    "englishName": "put the yellow and white mug in the microwave and close it",
+                    "name": "黄白杯入微波炉并关门"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 10,
+                "sources": [
+                  {
+                    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                    "label": "官方实现 · 完整具名任务"
+                  }
+                ]
+              }
+            ],
+            "count": "10 项长程子集",
+            "note": "本基准沿用的 LIBERO-Long／LIBERO-10；此处不包含 LIBERO-90。",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2306.03310v2",
+                "label": "论文 · 任务定义"
+              },
+              {
+                "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/master/libero/libero/benchmark/libero_suite_task_map.py",
+                "label": "官方实现 · 完整具名任务"
+              }
+            ]
+          },
+          {
+            "title": "部署故障条件",
+            "english": "Hardware / Setup faults",
+            "tasks": [
+              {
+                "englishName": "Observable / Latent / Weakly observable faults",
+                "name": "可见、隐性与弱可见故障",
+                "goal": "逐轴改变相机、标定、控制、机器人基座、桌高和夹爪垫。",
+                "mechanism": "观测几何、动作映射及接触几何变化。",
+                "scoring": "故障下完成原任务；先验证条件至少可由一个模型或特权控制器解出。",
+                "criteria": [
+                  "相机朝向 2°–25°；位置球面角 5°–50°，距离最多 1.6 倍；视场相对 45° 改变 ±2°–±18°。",
+                  "手眼标定等效动作坐标系旋转 2°–25°；动作增益误差 ±5%–±50%。",
+                  "状态噪声位置 2–50 mm、姿态 0.5°–8°；夹爪垫尺度 ±5%–±25%。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2610.18843v1#S2.T1",
+                    "label": "论文 Table 1 · 11 轴范围"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Camera orientation",
+                    "name": "相机朝向",
+                    "goal": "改变相机旋转角度。"
+                  },
+                  {
+                    "englishName": "Camera position",
+                    "name": "相机位置",
+                    "goal": "改变相机距离和观察方位。"
+                  },
+                  {
+                    "englishName": "Camera field of view",
+                    "name": "相机视场",
+                    "goal": "改变视场角。"
+                  },
+                  {
+                    "englishName": "Wrist-camera mount",
+                    "name": "腕部相机安装",
+                    "goal": "改变腕相机安装位姿。"
+                  },
+                  {
+                    "englishName": "Action-frame rotation",
+                    "name": "动作坐标系旋转",
+                    "goal": "改变动作参考方向。"
+                  },
+                  {
+                    "englishName": "Actuation gain error",
+                    "name": "动作增益误差",
+                    "goal": "改变指令到执行位移的比例。"
+                  },
+                  {
+                    "englishName": "Control-frequency mismatch",
+                    "name": "控制频率不匹配",
+                    "goal": "改变动作执行频率。"
+                  },
+                  {
+                    "englishName": "Proprioception noise",
+                    "name": "本体状态噪声",
+                    "goal": "扰动状态测量。"
+                  },
+                  {
+                    "englishName": "Robot-base pose shift",
+                    "name": "机器人基座偏移",
+                    "goal": "改变基座位姿。"
+                  },
+                  {
+                    "englishName": "Table-height change",
+                    "name": "桌面高度变化",
+                    "goal": "改变工作平面高度。"
+                  },
+                  {
+                    "englishName": "Gripper-pad geometry",
+                    "name": "夹爪垫几何",
+                    "goal": "改变夹持接触几何。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 11,
+                "subtasksLabel": "全部 11 类部署扰动（不是新增操作任务）"
+              }
+            ],
+            "count": "",
+            "note": "",
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2610.18843v1",
+                "label": "论文 · 任务定义"
+              }
+            ]
+          }
+        ],
+        "taskNote": "完整列出 Spatial、Object、Goal、Long 四套件的 40 项基础操作目标；扰动条件和测试实例另计，不作为新增操作技能。"
+      },
+      "sources": [
+        "https://arxiv.org/html/2610.18843v1"
+      ]
+    },
+    "dexmimicgen": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "双 Panda＋平行夹爪",
+            "english": "Bimanual Panda grippers",
+            "count": "3 项",
+            "tasks": [
+              {
+                "englishName": "Bimanual Panda grippers",
+                "name": "双 Panda＋平行夹爪",
+                "goal": "完成该本体对应的双臂操作任务。",
+                "mechanism": "左右臂到达时机、相对位姿及交接约束。",
+                "scoring": "分别采用各任务的完整目标判定；子任务进度不替代整任务成功。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Piece Assembly",
+                    "name": "零件装配",
+                    "goal": "两臂配合完成三件零件装配。"
+                  },
+                  {
+                    "englishName": "Threading",
+                    "name": "穿孔",
+                    "goal": "一臂持孔件，另一臂将杆件穿入。"
+                  },
+                  {
+                    "englishName": "Transport",
+                    "name": "转运",
+                    "goal": "协同移动障碍物和目标物，完成物品转运。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2410.24185v2#S5",
+                "label": "论文 Figure 4 · 三种本体九项主任务"
+              }
+            ]
+          },
+          {
+            "title": "双 Panda＋灵巧手",
+            "english": "Bimanual Panda dexterous hands",
+            "count": "3 项",
+            "tasks": [
+              {
+                "englishName": "Bimanual Panda dexterous hands",
+                "name": "双 Panda＋灵巧手",
+                "goal": "完成该本体对应的双臂操作任务。",
+                "mechanism": "左右臂到达时机、相对位姿及交接约束。",
+                "scoring": "分别采用各任务的完整目标判定；子任务进度不替代整任务成功。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Box Cleanup",
+                    "name": "盒子收纳",
+                    "goal": "将物品收进盒中并放好盒盖。"
+                  },
+                  {
+                    "englishName": "Drawer Cleanup",
+                    "name": "抽屉收纳",
+                    "goal": "打开抽屉、放入物体并关好。"
+                  },
+                  {
+                    "englishName": "Tray Lift",
+                    "name": "托盘抬升",
+                    "goal": "双手协调抓持并抬起托盘。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2410.24185v2#S5",
+                "label": "论文 Figure 4 · 三种本体九项主任务"
+              }
+            ]
+          },
+          {
+            "title": "GR-1＋灵巧手",
+            "english": "GR-1 humanoid",
+            "count": "3 项",
+            "tasks": [
+              {
+                "englishName": "GR-1 humanoid",
+                "name": "GR-1＋灵巧手",
+                "goal": "完成该本体对应的双臂操作任务。",
+                "mechanism": "左右臂到达时机、相对位姿及交接约束。",
+                "scoring": "分别采用各任务的完整目标判定；子任务进度不替代整任务成功。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "Pouring",
+                    "name": "倾倒",
+                    "goal": "一手持容器，另一手完成倾倒。"
+                  },
+                  {
+                    "englishName": "Coffee",
+                    "name": "制作咖啡",
+                    "goal": "配合操作杯子和咖啡机。"
+                  },
+                  {
+                    "englishName": "Can Sorting",
+                    "name": "罐子分拣",
+                    "goal": "将罐子分拣到指定目标。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2410.24185v2#S5",
+                "label": "论文 Figure 4 · 三种本体九项主任务"
+              }
+            ]
+          },
+          {
+            "title": "BiGym 扩展验证",
+            "english": "Additional BiGym tasks",
+            "count": "另 3 项",
+            "tasks": [
+              {
+                "englishName": "BiGym extensions",
+                "name": "BiGym 扩展任务",
+                "goal": "在移动双臂环境中验证数据生成方法。",
+                "mechanism": "左右臂到达时机、相对位姿及交接约束。",
+                "scoring": "分别采用各任务的完整目标判定；子任务进度不替代整任务成功。",
+                "criteria": [],
+                "subtasks": [
+                  {
+                    "englishName": "FlipCup",
+                    "name": "翻杯",
+                    "goal": "将杯子翻转到要求状态。"
+                  },
+                  {
+                    "englishName": "DishwasherLoadPlates",
+                    "name": "洗碗机装盘",
+                    "goal": "把盘子装入洗碗机。"
+                  },
+                  {
+                    "englishName": "CupBoardsCloseAll",
+                    "name": "关闭全部橱柜",
+                    "goal": "依次关上橱柜门。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2410.24185v2#S5",
+                "label": "论文 Figure 4 · 三种本体九项主任务"
+              }
+            ]
+          }
+        ],
+        "taskNote": "主套件共 9 项任务，按实际本体完整列出；BiGym 的 3 项扩展验证另计。"
+      },
+      "sources": [
+        "https://arxiv.org/html/2410.24185"
+      ]
+    },
+    "robodojo": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "泛化",
+            "english": "Generalization",
+            "count": "12 项",
+            "tasks": [
+              {
+                "englishName": "Scene and object generalization",
+                "name": "场景与物体泛化",
+                "goal": "在标准和随机场景中完成相同的物体操作目标。",
+                "mechanism": "物体几何、布局及外观变化影响抓持和空间定位。",
+                "scoring": "按各任务的完整目标条件记成功，标准与随机条件分别统计。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/",
+                    "label": "官方文档 · 完整任务目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Stack Bowls",
+                    "name": "叠碗",
+                    "goal": "将多个碗依次堆叠。"
+                  },
+                  {
+                    "englishName": "Push T",
+                    "name": "推动 T 形块",
+                    "goal": "将 T 形块推到目标位姿。"
+                  },
+                  {
+                    "englishName": "Pack Objects Into Box",
+                    "name": "物品装箱",
+                    "goal": "把指定物品放入箱中。"
+                  },
+                  {
+                    "englishName": "Fold Clothes",
+                    "name": "叠衣服",
+                    "goal": "将衣物折叠到要求状态。"
+                  },
+                  {
+                    "englishName": "Hang Mugs",
+                    "name": "挂杯子",
+                    "goal": "抓杯并挂上杯架。"
+                  },
+                  {
+                    "englishName": "Sweep Blocks",
+                    "name": "扫方块",
+                    "goal": "使用清扫工具收集方块。"
+                  },
+                  {
+                    "englishName": "Pour Liquid Into Cup",
+                    "name": "向杯中倒液体",
+                    "goal": "将液体倒入指定杯中。"
+                  },
+                  {
+                    "englishName": "Make Toast",
+                    "name": "制作吐司",
+                    "goal": "完成吐司准备操作。"
+                  },
+                  {
+                    "englishName": "Arrange Largest Number",
+                    "name": "排列最大数字",
+                    "goal": "调整数字块顺序。"
+                  },
+                  {
+                    "englishName": "Sort Nesting Dolls By Size",
+                    "name": "套娃按大小排序",
+                    "goal": "按尺寸排列套娃。"
+                  },
+                  {
+                    "englishName": "Store Laptop And Headphones",
+                    "name": "收纳电脑与耳机",
+                    "goal": "把电脑和耳机收进目标区域。"
+                  },
+                  {
+                    "englishName": "Stack Blocks",
+                    "name": "叠方块",
+                    "goal": "完成指定堆叠。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 12
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/",
+                "label": "官方文档 · 完整任务目录"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "记忆",
+            "english": "Memory",
+            "count": "6 项",
+            "tasks": [
+              {
+                "englishName": "History-dependent manipulation",
+                "name": "依赖历史信息的操作",
+                "goal": "利用先前出现的对象、数字或顺序完成后续操作。",
+                "mechanism": "遮挡、物体交换及演示顺序使当前单帧不能包含全部决策信息。",
+                "scoring": "目标对象及执行顺序均满足对应任务规则才算完整成功。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/",
+                    "label": "官方文档 · 完整任务目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Cover Blocks",
+                    "name": "盖住方块",
+                    "goal": "记住方块信息并盖住指定目标。"
+                  },
+                  {
+                    "englishName": "Match And Pick From Conveyor",
+                    "name": "传送带匹配抓取",
+                    "goal": "记住目标并从移动物品中抓取。"
+                  },
+                  {
+                    "englishName": "Swap Blocks",
+                    "name": "交换方块",
+                    "goal": "跟踪并交换指定方块。"
+                  },
+                  {
+                    "englishName": "Swap T",
+                    "name": "交换 T 形块",
+                    "goal": "完成指定 T 形块的位置交换。"
+                  },
+                  {
+                    "englishName": "Press By Number",
+                    "name": "按数字操作",
+                    "goal": "依据数字信息完成按压。"
+                  },
+                  {
+                    "englishName": "Imitate Sorting Sequence",
+                    "name": "模仿排序顺序",
+                    "goal": "复现观察到的排列顺序。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 6
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/",
+                "label": "官方文档 · 完整任务目录"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "精密操作",
+            "english": "Precision",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Insertion and precise interaction",
+                "name": "插接与精细交互",
+                "goal": "完成小目标对齐、插入、旋转或精确放置。",
+                "mechanism": "孔槽配合、关节约束和物体接触使位置与姿态偏差影响完成。",
+                "scoring": "按任务的深度、方向和完整流程检查判定，部分完成只计进度分。",
+                "criteria": [
+                  "Insert Tubes：一根正确插入得 20 分，两根得 40 分；三根正确插入并回到初始位姿得 100 分。单根还检查深度、直立及夹爪打开。",
+                  "Plug In Charger：插入规定深度、姿态直立并回到初始位姿得 100 分；不采用插管任务的分阶段分值。",
+                  "Fasten Screws（紧固螺栓）：一组、两组、三组同色配合完成分别得 20、50、100 分；文档中的几何与深度检查不等于验证真实螺纹力学。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/",
+                    "label": "官方文档 · 完整任务目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Fasten Screws",
+                    "name": "拧螺丝",
+                    "goal": "对准并拧紧螺丝。"
+                  },
+                  {
+                    "englishName": "Plug In Charger",
+                    "name": "插充电器",
+                    "goal": "对齐充电器并插接。"
+                  },
+                  {
+                    "englishName": "Insert Tubes",
+                    "name": "插管",
+                    "goal": "把管件插入匹配位置。"
+                  },
+                  {
+                    "englishName": "Pour Balls Into Vase",
+                    "name": "小球倒入花瓶",
+                    "goal": "把小球送入窄口容器。"
+                  },
+                  {
+                    "englishName": "Play Xylophone",
+                    "name": "敲木琴",
+                    "goal": "按要求敲击琴键。"
+                  },
+                  {
+                    "englishName": "Deposit Coin",
+                    "name": "投币",
+                    "goal": "将硬币插入投币口。"
+                  },
+                  {
+                    "englishName": "Insert Key",
+                    "name": "插钥匙",
+                    "goal": "将钥匙对准并插入锁孔。"
+                  },
+                  {
+                    "englishName": "Build Tower",
+                    "name": "搭塔",
+                    "goal": "精细放置积木构建塔。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 8
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/",
+                "label": "官方文档 · 完整任务目录"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "长程操作",
+            "english": "Long-Horizon",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Multi-stage manipulation",
+                "name": "多阶段操作",
+                "goal": "连续完成多个物体或多个依赖步骤的操作。",
+                "mechanism": "抓放、交接、容器及机构约束在长流程中累积执行误差。",
+                "scoring": "完整任务的所有必要子步骤均完成才记成功。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/",
+                    "label": "官方文档 · 完整任务目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Fill Pen Holder",
+                    "name": "笔筒收纳",
+                    "goal": "把多支笔放入笔筒。"
+                  },
+                  {
+                    "englishName": "Classify Objects",
+                    "name": "物品分类",
+                    "goal": "将多件物品归入对应类别。"
+                  },
+                  {
+                    "englishName": "Put Bottles Into Dustbin",
+                    "name": "瓶子入垃圾桶",
+                    "goal": "把多个瓶子放入桶中。"
+                  },
+                  {
+                    "englishName": "Play Tic-Tac-Toe",
+                    "name": "井字棋",
+                    "goal": "依照规则放置棋子。"
+                  },
+                  {
+                    "englishName": "Fill Egg Holder",
+                    "name": "鸡蛋入蛋架",
+                    "goal": "把多个鸡蛋放入蛋架。"
+                  },
+                  {
+                    "englishName": "Organize Table",
+                    "name": "整理桌面",
+                    "goal": "完成多件物品的桌面归位。"
+                  },
+                  {
+                    "englishName": "Make Kong",
+                    "name": "制作 Kong 食物玩具",
+                    "goal": "完成玩具填充流程。"
+                  },
+                  {
+                    "englishName": "Play Stacking Toy",
+                    "name": "堆叠玩具",
+                    "goal": "依次完成玩具组件堆叠。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 8
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/",
+                "label": "官方文档 · 完整任务目录"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "开放任务要求",
+            "english": "Open",
+            "count": "8 项",
+            "tasks": [
+              {
+                "englishName": "Unseen task specifications",
+                "name": "未见任务要求",
+                "goal": "依据新的语言或图像要求组合训练中已有的操作技能。",
+                "mechanism": "目标身份、语义关系或技能组合变化，而非增加一种统一的接触机制。",
+                "scoring": "同时满足新要求中的目标选择与操作完成条件。",
+                "criteria": [
+                  "此类别不提供任务专属训练示教；不是从未见过任何相关抓取技能。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                    "label": "官方文档 · 全部仿真任务"
+                  },
+                  {
+                    "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                    "label": "论文 §3.1 · 能力分组"
+                  },
+                  {
+                    "url": "https://robodojo-benchmark.com/doc/",
+                    "label": "官方文档 · 完整任务目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "Align Blocks",
+                    "name": "对齐方块",
+                    "goal": "按要求排列对齐方块。"
+                  },
+                  {
+                    "englishName": "General Pickup",
+                    "name": "通用抓取",
+                    "goal": "抓取指令指定的物体。"
+                  },
+                  {
+                    "englishName": "Solve Equation",
+                    "name": "解算式",
+                    "goal": "根据算式选择和排列目标。"
+                  },
+                  {
+                    "englishName": "Stack Blocks By Language",
+                    "name": "按语言叠方块",
+                    "goal": "按新指令完成方块堆叠。"
+                  },
+                  {
+                    "englishName": "Classify Objects By Language",
+                    "name": "按语言分类",
+                    "goal": "按指令定义的规则分类。"
+                  },
+                  {
+                    "englishName": "Pick From Conveyor By Image",
+                    "name": "按图从传送带抓取",
+                    "goal": "依据目标图像选择移动物体。"
+                  },
+                  {
+                    "englishName": "Store Tools In Toolbox",
+                    "name": "工具收纳",
+                    "goal": "把指定工具放入工具箱。"
+                  },
+                  {
+                    "englishName": "Pour By Language",
+                    "name": "按语言倾倒",
+                    "goal": "按指令完成倾倒目标。"
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 8
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://robodojo-benchmark.com/doc/sim-tasks/",
+                "label": "官方文档 · 全部仿真任务"
+              },
+              {
+                "url": "https://arxiv.org/html/2607.04434v3#S3.SS1",
+                "label": "论文 §3.1 · 能力分组"
+              },
+              {
+                "url": "https://robodojo-benchmark.com/doc/",
+                "label": "官方文档 · 完整任务目录"
+              }
+            ],
+            "note": ""
+          }
+        ],
+        "taskNote": "按五种能力完整列出全部 42 项基础任务；随机版本与测试初态不作为新增技能计数。",
+        "real": {
+          "correspondence": "真机任务与仿真不是逐项配对；该部分测试物理部署能力，不作为同任务的直接 sim-to-real 迁移成绩。",
+          "protocol": "三种本体各 6 项任务；每任务 100 条真机示教，重新进行对应本体的策略训练；每策略每任务 10 次，固定布局重放并独立评分。",
+          "figure": {
+            "url": "figures/benchmarks/robodojo-real.png",
+            "originalUrl": "https://arxiv.org/html/2607.04434v3/real_highlight.png",
+            "source": "https://arxiv.org/html/2607.04434v3#S3.SS2",
+            "caption": "RoboDojo · 论文 Figure 4：真机任务关键帧"
+          },
+          "groups": [
+            {
+              "title": "ARX X5",
+              "english": "ARX X5",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "ARX X5 physical tasks",
+                  "name": "ARX X5 真机操作",
+                  "goal": "完成该本体对应的遮挡、厨房准备、收纳及插管任务。",
+                  "mechanism": "真实接触、对齐及多步骤执行。",
+                  "scoring": "按各任务的最终目标与独立阶段规则评分。",
+                  "criteria": [],
+                  "sources": [],
+                  "subtasks": [
+                    {
+                      "englishName": "Insert Tubes",
+                      "name": "插管",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Make Bread",
+                      "name": "制作面包",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Make Food",
+                      "name": "制作食物",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Pack And Pour Fruit",
+                      "name": "水果装袋与倾倒",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Cover Blocks",
+                      "name": "盖住方块",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Store In Safe",
+                      "name": "保险箱收纳",
+                      "goal": ""
+                    }
+                  ],
+                  "subtasksComplete": true,
+                  "subtaskCount": 6
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "Piper",
+              "english": "Piper",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "Piper physical tasks",
+                  "name": "Piper 真机操作",
+                  "goal": "完成多物体收纳、插接、堆叠及扶正。",
+                  "mechanism": "夹持稳定性、容器约束与插接对齐。",
+                  "scoring": "每项以自己的最终目标及阶段规则计分。",
+                  "criteria": [],
+                  "sources": [],
+                  "subtasks": [
+                    {
+                      "englishName": "Fill Pen Holder",
+                      "name": "笔筒收纳",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Put Objects Into Basket",
+                      "name": "物品入篮",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Stack And Cover Blocks",
+                      "name": "堆叠并盖住方块",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Stack Bowls",
+                      "name": "叠碗",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Stand Up Bottles",
+                      "name": "立起瓶子",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Insert Charger",
+                      "name": "插充电器",
+                      "goal": ""
+                    }
+                  ],
+                  "subtasksComplete": true,
+                  "subtaskCount": 6
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "Piper X",
+              "english": "Piper X",
+              "count": "6 项",
+              "tasks": [
+                {
+                  "englishName": "Piper X physical tasks",
+                  "name": "Piper X 真机操作",
+                  "goal": "完成拆解、盖笔帽、分类、挂杯、扫物和背包收纳。",
+                  "mechanism": "物体接触、工具使用和多步骤协调。",
+                  "scoring": "按各任务的全部必要步骤判断完整成功。",
+                  "criteria": [],
+                  "sources": [],
+                  "subtasks": [
+                    {
+                      "englishName": "Disassemble LEGO",
+                      "name": "拆乐高",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Cap Pen",
+                      "name": "盖笔帽",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Classify Objects",
+                      "name": "物品分类",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Hang Mugs",
+                      "name": "挂杯子",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Sweep Blocks",
+                      "name": "扫方块",
+                      "goal": ""
+                    },
+                    {
+                      "englishName": "Pack Objects Into Backpack",
+                      "name": "物品装入背包",
+                      "goal": ""
+                    }
+                  ],
+                  "subtasksComplete": true,
+                  "subtaskCount": 6
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://robodojo-benchmark.com/doc/real-tasks/",
+                  "label": "官方文档 · 全部真机任务"
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#S3.SS2",
+              "label": "论文 §3.2 · 真机协议"
+            },
+            {
+              "url": "https://arxiv.org/html/2607.04434v3#A5",
+              "label": "论文附录 E · 数据、评分与次数"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2607.04434v3"
+      ]
+    },
+    "robocasa": {
+      "page": {
+        "taskGroups": [
+          {
+            "title": "原子任务",
+            "english": "Atomic tasks",
+            "count": "25 项／8 种技能",
+            "tasks": [
+              {
+                "englishName": "Pick and place",
+                "name": "抓取与放置",
+                "goal": "在台面、柜子、水槽、微波炉和炉灶之间转移物体。",
+                "mechanism": "夹持、物体与容器的接触及空间包含关系。",
+                "scoring": "物体到达该任务指定区域，并满足该任务的接触或夹爪退出条件。",
+                "criteria": [
+                  "官方 v0.2 的柜内放物检查物体在柜内且夹爪远离；其他抓放任务分别检查目标区域或容器接触，不共用一个统一距离阈值。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "PickPlaceCounterToCabinet",
+                    "name": "台面物品入柜",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceCabinetToCounter",
+                    "name": "柜中物品放台面",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceCounterToSink",
+                    "name": "台面物品入水槽",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceSinkToCounter",
+                    "name": "水槽物品放台面",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceCounterToMicrowave",
+                    "name": "台面物品入微波炉",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceMicrowaveToCounter",
+                    "name": "微波炉物品放台面",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceCounterToStove",
+                    "name": "台面食物放炉灶锅具",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "PickPlaceStoveToCounter",
+                    "name": "炉灶食物放台面",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 8
+              },
+              {
+                "englishName": "Opening and closing doors",
+                "name": "开关柜门",
+                "goal": "打开或关闭单门、双门柜子及微波炉门。",
+                "mechanism": "铰链转动、把手接触与门的角度约束。",
+                "scoring": "目标门达到该任务规定的打开或关闭状态。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "OpenSingleDoor",
+                    "name": "打开单扇门",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "CloseSingleDoor",
+                    "name": "关闭单扇门",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "OpenDoubleDoor",
+                    "name": "打开双扇门",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "CloseDoubleDoor",
+                    "name": "关闭双扇门",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 4
+              },
+              {
+                "englishName": "Opening and closing drawers",
+                "name": "开关抽屉",
+                "goal": "将指定抽屉拉开或推回。",
+                "mechanism": "沿滑轨移动的关节约束与把手接触。",
+                "scoring": "抽屉关节达到目标开合状态。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "OpenDrawer",
+                    "name": "打开抽屉",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "CloseDrawer",
+                    "name": "关闭抽屉",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 2
+              },
+              {
+                "englishName": "Twisting knobs",
+                "name": "旋转旋钮",
+                "goal": "转动对应炉头的旋钮以开关炉灶。",
+                "mechanism": "旋转关节及旋钮角度与设备状态之间的映射。",
+                "scoring": "指定炉头达到对应开或关状态。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "TurnOnStove",
+                    "name": "打开炉灶",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "TurnOffStove",
+                    "name": "关闭炉灶",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 2
+              },
+              {
+                "englishName": "Turning levers",
+                "name": "拨动水龙头",
+                "goal": "操作水龙头手柄或转动出水口。",
+                "mechanism": "手柄与出水口的旋转约束。",
+                "scoring": "水龙头或出水口达到任务指定状态。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "TurnOnSinkFaucet",
+                    "name": "打开水龙头",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "TurnOffSinkFaucet",
+                    "name": "关闭水龙头",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "TurnSinkSpout",
+                    "name": "转动出水口",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              },
+              {
+                "englishName": "Pressing buttons",
+                "name": "按设备按钮",
+                "goal": "按下咖啡机或微波炉指定按钮。",
+                "mechanism": "末端接触按钮及离散设备状态变化。",
+                "scoring": "目标设备进入对应启动或停止状态。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "CoffeePressButton",
+                    "name": "按咖啡机按钮",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "TurnOnMicrowave",
+                    "name": "打开微波炉",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "TurnOffMicrowave",
+                    "name": "关闭微波炉",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 3
+              },
+              {
+                "englishName": "Insertion",
+                "name": "杯子入位",
+                "goal": "将杯子放入咖啡机承托位置或从中取出。",
+                "mechanism": "杯子几何与有限承托空间之间的对齐。",
+                "scoring": "杯子进入指定承托区或被移至目标台面。",
+                "criteria": [],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "CoffeeSetupMug",
+                    "name": "杯子放上咖啡机",
+                    "goal": ""
+                  },
+                  {
+                    "englishName": "CoffeeServeMug",
+                    "name": "杯子移出咖啡机",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 2
+              },
+              {
+                "englishName": "Navigation",
+                "name": "厨房导航",
+                "goal": "移动到指定厨房设备前。",
+                "mechanism": "底盘运动与厨房空间可达性约束。",
+                "scoring": "到达语言指定的目标设备位置。",
+                "criteria": [
+                  "共 25 项原子任务中的 1 项；原论文的 MimicGen 生成与 24 项操作评测未包含此导航任务。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "原论文附录 VIII · 原子任务全目录"
+                  }
+                ],
+                "subtasks": [
+                  {
+                    "englishName": "NavigateKitchen",
+                    "name": "厨房导航",
+                    "goal": ""
+                  }
+                ],
+                "subtasksComplete": true,
+                "subtaskCount": 1
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S8",
+                "label": "论文附录 VIII · 全部任务类别"
+              }
+            ],
+            "note": ""
+          },
+          {
+            "title": "组合任务",
+            "english": "Composite tasks",
+            "count": "75 项／20 种活动",
+            "tasks": [
+              {
+                "englishName": "Composite kitchen activities",
+                "name": "组合厨房活动",
+                "goal": "按活动要求串联取放、设备操作和物体整理。",
+                "mechanism": "长程顺序依赖、机构接触与多物体目标约束。",
+                "scoring": "满足整项活动的联合目标；只完成一个原子动作不记整项成功。",
+                "examples": [
+                  "ArrangeVegetables（整理蔬菜）：把两种蔬菜从水槽移到砧板。",
+                  "MicrowaveThawing（微波炉解冻准备）：放入食品并启动微波炉。",
+                  "PreSoakPan（准备浸泡锅具）：把锅和海绵放进水槽并打开水龙头。",
+                  "PrepareCoffee（准备咖啡）：从柜中取杯，放入咖啡机并按启动按钮。"
+                ],
+                "criteria": [
+                  "75 项组合任务归属 20 种厨房活动；原论文只训练测试其中 5 项代表任务，不能把这 5 项结果扩展到全部 75 项。"
+                ],
+                "sources": [
+                  {
+                    "url": "https://arxiv.org/html/2406.02523v1#S8",
+                    "label": "论文附录 VIII · 全部任务类别"
+                  }
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "url": "https://arxiv.org/html/2406.02523v1#S8",
+                "label": "论文附录 VIII · 全部任务类别"
+              }
+            ],
+            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。",
+            "figure": {
+              "url": "figures/benchmarks/robocasa-composite.png",
+              "originalUrl": "https://arxiv.org/html/2406.02523v1/task_gen_fig_v3_comp.png",
+              "source": "https://arxiv.org/html/2406.02523v1#S3",
+              "caption": "RoboCasa · 原论文 Figure 5：组合任务示例"
+            }
+          }
+        ]
+      },
+      "sources": [
+        "https://arxiv.org/html/2406.02523v1"
+      ]
+    },
+    "simplerenv": {
+      "page": {
+        "real": {
+          "correspondence": "同一真实数据训练的策略在对应真机和仿真中分别运行，验证 real-to-sim 评测代理；不是仿真训练后迁移到真机。",
+          "protocol": "真实任务初态按附录 B 枚举；Google 与 WidowX 分别记录任务完成及中间进度，真机次数与仿真颜色／种子扩展分开统计。",
+          "figure": {
+            "url": "figures/benchmarks/simpler-real.png",
+            "originalUrl": "https://simpler-env.github.io/static/images/visual_matching.png",
+            "source": "https://simpler-env.github.io/#visual-matching-mitigates-the-real-to-sim-visual-gap",
+            "caption": "SimplerEnv · 官方项目：真实场景与视觉匹配仿真的对照"
+          },
+          "groups": [
+            {
+              "title": "Google Robot 真机",
+              "english": "Google Robot real evaluation",
+              "count": "4 类",
+              "tasks": [
+                {
+                  "englishName": "Tabletop and drawer tasks",
+                  "name": "桌面与抽屉操作",
+                  "goal": "执行抓罐、移近、开关抽屉及开抽屉后放苹果。",
+                  "mechanism": "真实夹持、机构运动和多阶段交互。",
+                  "scoring": "人工按对应任务判断最终完成；不把仿真的关节和接触阈值直接作为真机测量。",
+                  "criteria": [
+                    "每策略：75＋60＋54＋27 次；开关抽屉分别为 27 次。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2405.05941v1#A2",
+                      "label": "论文附录 B · 各任务测试次数"
+                    }
+                  ],
+                  "subtasks": [
+                    {
+                      "englishName": "Pick Coke Can",
+                      "name": "抓起可乐罐",
+                      "goal": "从桌面抓起空可乐罐。"
+                    },
+                    {
+                      "englishName": "Move Object Near Object",
+                      "name": "将物体移近目标",
+                      "goal": "在三物体场景中，把语言指定源物体移到指定目标旁。"
+                    },
+                    {
+                      "englishName": "Open / Close Drawer",
+                      "name": "打开／关闭指定抽屉",
+                      "goal": "根据指令拉开或关闭上、中、下层抽屉。"
+                    },
+                    {
+                      "englishName": "Open Drawer and Place Apple",
+                      "name": "开抽屉后放苹果",
+                      "goal": "先打开顶层抽屉，再把柜顶苹果放入。"
+                    }
+                  ],
+                  "subtasksComplete": true,
+                  "subtaskCount": 4
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2405.05941v1#A2",
+                  "label": "论文附录 B · 各任务测试次数"
+                }
+              ],
+              "note": ""
+            },
+            {
+              "title": "WidowX 真机",
+              "english": "WidowX real evaluation",
+              "count": "4 类",
+              "tasks": [
+                {
+                  "englishName": "Bridge object placement",
+                  "name": "Bridge 物体放置",
+                  "goal": "完成勺子放毛巾、胡萝卜放盘、叠方块和茄子入篮。",
+                  "mechanism": "真实物体支撑、抓持及容器放置。",
+                  "scoring": "分别记录中间抓取与最终放置；最终 Success 才作为完整任务成功。",
+                  "criteria": [
+                    "每任务、每策略各 24 次。"
+                  ],
+                  "sources": [
+                    {
+                      "url": "https://arxiv.org/html/2405.05941v1#A2",
+                      "label": "论文附录 B · 各任务测试次数"
+                    }
+                  ],
+                  "subtasks": [
+                    {
+                      "englishName": "Put Spoon on Towel",
+                      "name": "勺子放毛巾上",
+                      "goal": "抓勺并放到指定毛巾上。"
+                    },
+                    {
+                      "englishName": "Put Carrot on Plate",
+                      "name": "胡萝卜放盘子上",
+                      "goal": "抓起胡萝卜并放到盘中。"
+                    },
+                    {
+                      "englishName": "Stack Green Block on Yellow Block",
+                      "name": "绿块叠黄块",
+                      "goal": "把绿色方块叠到黄色方块上。"
+                    },
+                    {
+                      "englishName": "Put Eggplant in Basket",
+                      "name": "茄子放篮子",
+                      "goal": "从水槽右侧抓起茄子，放入左侧黄色篮子。"
+                    }
+                  ],
+                  "subtasksComplete": true,
+                  "subtaskCount": 4
+                }
+              ],
+              "sources": [
+                {
+                  "url": "https://arxiv.org/html/2405.05941v1#A2",
+                  "label": "论文附录 B · 各任务测试次数"
+                }
+              ],
+              "note": ""
+            }
+          ],
+          "sources": [
+            {
+              "url": "https://arxiv.org/html/2405.05941v1",
+              "label": "原始论文 v1 · 任务、协议和结果"
+            },
+            {
+              "url": "https://arxiv.org/html/2405.05941v1#A2",
+              "label": "论文附录 B · 各任务测试次数"
+            }
+          ]
+        }
+      },
+      "sources": [
+        "https://arxiv.org/html/2405.05941v1"
+      ]
+    },
+    "rmbench": {
+      "sources": [
+        "https://arxiv.org/html/2603.01229v4"
+      ]
+    },
+    "contactbench": {
+      "sources": [
+        "https://arxiv.org/html/2610.24512v2"
+      ]
+    }
+  }
+}

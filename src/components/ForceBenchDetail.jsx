@@ -3,6 +3,7 @@ import { PageIntro, External, SaveControls } from "./ui.jsx";
 import { Figure } from "./Figures.jsx";
 import BenchmarkNavigation from "./BenchmarkNavigation.jsx";
 import BenchmarkUsage from "./BenchmarkUsage.jsx";
+import TaskScoring from "./TaskScoring.jsx";
 
 const SECTIONS = ["基本信息", "任务体系与评价标准", "泛化评测（仿真）", "传感器与硬件鲁棒性（仿真）", "专家演示生成", "值得关注的设计", "局限性", "使用工作"];
 
@@ -40,22 +41,21 @@ export default function ForceBenchDetail({ b, goto, saved, save, section }) {
             {page.basicInfo.map(([label, value]) => <tr key={label}><th scope="row">{label}</th><td>{Array.isArray(value) ? value.map(line => <div key={line}>{line}</div>) : value}</td></tr>)}
             <tr><th scope="row">输入</th><td><Vector items={page.input} /></td></tr>
             <tr><th scope="row">输出</th><td><Vector items={page.output} /><span className="forcebench-inline-note">共 7 维</span></td></tr>
-            <tr><th scope="row">主要评价指标</th><td>Success Rate（任务成功率）；八项任务成功率的等权平均</td></tr>
+            <tr><th scope="row">主要评价指标</th><td>{page.metricSummary.map(line => <div key={line}>{line}</div>)}</td></tr>
           </tbody>
         </table>
         <p className="forcebench-note">无力觉基线省略腕部力觉输入。</p>
         <div className="source-links"><External href={`${reading.source}#A1`}>输入、动作与仿真协议 · 论文附录 A</External></div>
+        <Figure figure={page.overviewFigure || page.figure} />
       </Section>
 
       <Section index={1}>
         <h3 className="benchmark-domain-title">仿真任务（8 项）</h3>
-        <Figure figure={page.figure} />
         {page.categories.map((category, i) => <React.Fragment key={category.title}>
           {category.domain === "真机" && <><h3 className="benchmark-domain-title">真机任务（5 项）</h3><p className="benchmark-domain-correspondence">重量分类与仿真属于同类任务，但操作对象不同；泡沫中取盘、盖章、插头插入、积木插槽为另设的真机验证任务。</p></>}
           <section className="forcebench-category" data-evaluation-domain={category.domain === "真机" ? "real" : "sim"} aria-labelledby={`forcebench-category-${i}`}>
           <header><h3 id={`forcebench-category-${i}`}>2.{i + 1} {category.title}<span>{category.english}</span></h3><span className="forcebench-task-count">{category.tasks.length} 项任务</span></header>
           {category.description && <p className="forcebench-category-description">{category.description}</p>}
-          {category.figure && <Figure figure={category.figure} />}
           <div className="forcebench-task-list">
             {category.tasks.map((index, taskIndex) => {
               const task = tasks[index];
@@ -63,8 +63,8 @@ export default function ForceBenchDetail({ b, goto, saved, save, section }) {
                 <h4>{category.domain === "真机" ? taskIndex + 1 : index + 1}. {task.englishName}<span>{task.name}</span></h4>
                 <dl>
                   <div><dt>任务</dt><dd>{task.goal}</dd></div>
-                  <div><dt>物理机制</dt><dd>{task.mechanism}</dd></div>
-                  <div><dt>成功判定</dt><dd>{task.scoring}</dd></div>
+                  <div><dt>评测重点</dt><dd>{task.focus}</dd></div>
+                  <div><dt>成功判定</dt><dd><TaskScoring task={task} /></dd></div>
                 </dl>
                 {task.parameterSource && <div className="forcebench-task-source"><External href={task.parameterSource}>质量设置 · 官方实现</External></div>}
                 {task.criteria?.length > 0 && <details className="forcebench-criteria">

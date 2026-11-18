@@ -9,7 +9,8 @@ import ResourceUsage from "../components/ResourceUsage.jsx";
 import ForceBenchDetail from "../components/ForceBenchDetail.jsx";
 import SimulationBenchmarkDetail from "../components/SimulationBenchmarkDetail.jsx";
 import BenchmarkOverview from "../components/BenchmarkOverview.jsx";
-import { mainstreamBenchmarkIds } from "../data/benchmarkOverview.js";
+import { benchmarkOverview, mainstreamBenchmarkIds } from "../data/benchmarkOverview.js";
+import { Figure } from "../components/Figures.jsx";
 
 const ENVIRONMENTS = {
   "offline": "离线", "sim": "仿真", "real": "真机",
@@ -63,8 +64,8 @@ function Benchmarks({ item, section, ...p }) {
           <button className="reset" onClick={() => { setQuery(""); setEnvironment(""); setResourceType(""); setMainstreamOnly(false); setSort("scholar"); }}>重置</button>
         </div>
         <div className="resource-mainstream-options"><label className="resource-mainstream-control"><input type="checkbox" checked={mainstreamOnly}
-          onChange={e => setMainstreamOnly(e.target.checked)} />主流 benchmark（15 项）</label>
-        <a className="resource-overview-link" href="#benchmarks/mainstream-overview">查看 15 项对比总览 ↗</a></div>
+          onChange={e => setMainstreamOnly(e.target.checked)} />主流 benchmark（{mainstreamBenchmarkIds.size} 项）</label>
+        <a className="resource-overview-link" href="#benchmarks/mainstream-overview">查看 {benchmarkOverview.length} 项对比总览 ↗</a></div>
       </section>
       <div className="results-head resource-results-head"><div><strong>找到 {visible.length} 项{RESOURCE_TYPES.find(([id]) => id === resourceType)?.[1] || "资源"}</strong><p className="resource-count-note">已收录的采用工作数，含衍生评测，不含提出者。</p></div>
         <label className="resource-sort">排序<select aria-label="评测资源排序" value={sort} onChange={e => setSort(e.target.value)}>
@@ -118,8 +119,9 @@ function BenchmarkDetail({ b, ...p }) {
         <Tag>{b.domain}</Tag>
         <Tag>{b.verdict}</Tag>
       </div>
-      <BenchmarkNavigation resourceId={b.id} />
+      <BenchmarkNavigation resourceId={b.id} sections={["基本信息", "任务体系与评价标准", "使用工作", "相关资料", "研究记录"]} />
       <section id="benchmark-section-0" className="benchmark-reader-section" tabIndex={-1} aria-label="资源概况">
+      <h2>01. 基本信息</h2>
       <section className="benchmark-origin">
         <h2>提出这项资源的工作</h2>
         <External href={b.introducedBy.source}>{b.introducedBy.title}</External>
@@ -131,8 +133,10 @@ function BenchmarkDetail({ b, ...p }) {
         {b.reading ? b.reading.introduction.map((text, i) => <p key={i}>{text}</p>) : <p>{b.detail}</p>}
         <External href={b.source}>原始论文／报告</External>
       </div>
+      <Figure figure={b.reading?.overviewFigure} />
       </section>
       <section id="benchmark-section-1" className="benchmark-reader-section" tabIndex={-1} aria-label="任务与评分">
+      <h2>02. 任务体系与评价标准</h2>
       <BenchmarkReading b={b} />
       <section className="benchmark-assessment">
         <h2>{isBench(b) ? "为何列为评测基准？" : "分类依据与评测边界"}</h2>

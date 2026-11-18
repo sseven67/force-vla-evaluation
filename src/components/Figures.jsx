@@ -7,7 +7,7 @@ export function Figure({ figure, compact = false }) {
   return (
     <figure className={"paper-figure " + (compact ? "compact" : "")}>
       {!failed ? (
-        <a href={figure.source} target="_blank" rel="noreferrer">
+        <a href={figure.originalUrl || figure.source} target="_blank" rel="noreferrer">
           <img
             src={figure.url}
             alt={figure.caption}
