@@ -28,7 +28,7 @@ function Benchmarks({ item, section, ...p }) {
   const [sort, setSort] = useState("scholar");
   useEffect(() => setEnvironment(ENVIRONMENTS[item] || ""), [item]);
   const b = bmById.get(item);
-  if (item === "mainstream-overview") return <BenchmarkOverview {...p} />;
+  if (!item || item === "mainstream-overview") return <BenchmarkOverview {...p} />;
   if (b?.id === "forcebench") return <ForceBenchDetail b={b} section={section} {...p} />;
   if (b?.reading?.simulationDetail) return <SimulationBenchmarkDetail b={b} section={section} {...p} />;
   if (b) return <BenchmarkDetail b={b} {...p} />;

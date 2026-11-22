@@ -27,7 +27,7 @@ for(const b of d.benchmarks){
  for(const study of studies.filter(s=>s.rows))assert.ok((page.includeRealStudies ? ['仿真','真机'] : ['仿真']).includes(study.domain),b.id+': study domain is explicit and supported by this page');
  assert.ok(simulationReview.records[b.id]?.sources.length,b.id+': scope has original-source evidence');
 }
-assert.deepEqual(benchmarkOverview.map(row=>row.id),['libero','robocasa','robotwin','libero-plus','rmbench','robodojo','univtac','suite-t04','forcebench','contactbench']);
+assert.deepEqual(benchmarkOverview.map(row=>row.id),['libero','robocasa','robotwin','libero-plus','rmbench','robodojo','univtac','suite-t04','contactbench','forcebench']);
 assert.equal(mainstreamBenchmarkIds.size,20);
 for(const row of benchmarkOverview){
  assert.ok(d.benchmarks.some(b=>b.id===row.id),row.id+': overview detail exists');
