@@ -1,6 +1,5 @@
 import React from "react";
 import { PageIntro, External, SaveControls } from "./ui.jsx";
-import { Figure } from "./Figures.jsx";
 import BenchmarkNavigation from "./BenchmarkNavigation.jsx";
 import BenchmarkUsage from "./BenchmarkUsage.jsx";
 import TaskScoring from "./TaskScoring.jsx";
@@ -51,7 +50,7 @@ export default function SimulationBenchmarkDetail({ b, goto, saved, save, showPa
   const sections = page.sections || SECTIONS;
   const simulationRobustness = (page.robustness.studies || []).filter(study => study.domain === "仿真");
   const content = [
-    <><Facts rows={page.facts} label={`${b.name} 基本信息`} />{page.inputNote && <p className="forcebench-note">{page.inputNote}</p>}<Sources items={page.basicSources} /><Figure figure={page.overviewFigure} /></>,
+    <><Facts rows={page.facts} label={`${b.name} 基本信息`} />{page.inputNote && <p className="forcebench-note">{page.inputNote}</p>}<Sources items={page.basicSources} /></>,
     <TaskEvaluation page={page} />,
     <>{page.generalization.support && <GeneralizationSupport support={page.generalization.support} />}<Study title={page.generalization.scene.title || "3.1 场景随机化"} study={page.generalization.scene} />{!page.generalization.support && <Study title={page.generalization.physics.title || "3.2 物理 OOD"} study={page.generalization.physics} />}{page.generalization.other?.filter(study => study.domain === "仿真" || (page.includeRealStudies && study.domain === "真机")).map(study => <Study key={study.title} title={study.title} study={study} />)}</>,
     simulationRobustness.length === 0 ? <p>无</p> : <>{simulationRobustness.map(study => <Study key={study.title} title={study.title} study={study} />)}</>,

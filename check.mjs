@@ -384,13 +384,9 @@ for(const [id,count] of [['tabero',9],['suite-t04',11],['suite-c11',9],['libero'
 assert.equal(d.benchmarks.find(b=>b.id==='robocasa').reading.simulationDetail.taskGroups[0].tasks.reduce((n,t)=>n+t.subtasks.length,0),25,'RoboCasa: all 25 atomic tasks across eight skills');
 assert.equal(d.benchmarks.find(b=>b.id==='robodojo').reading.simulationDetail.real.groups.reduce((n,g)=>n+g.tasks[0].subtasks.length,0),18,'RoboDojo: all 18 real tasks');
 for(const b of benchmarkReadings){
- const r=b.reading,p=r.simulationDetail||r.detailPage||r;
- assert.ok(p.overviewFigure?.url,b.id+': official overview in basic information');
- assert.ok(p.overviewFigure.url.startsWith('https://')||fs.existsSync('public/'+p.overviewFigure.url),b.id+': overview asset exists');
- if(r.simulationDetail){
-  assert.ok(!p.figure,b.id+': overview moved out of task chapter');
+ const p=b.reading.simulationDetail;
+ if(p){
   for(const g of [...p.taskGroups,...(p.real?.groups||[])]){
-   assert.ok(!g.figure,b.id+': no task example images');
    for(const t of g.tasks)if(t.subtasksComplete)assert.equal(t.subtaskCount,t.subtasks.length,b.id+': complete subtask count');
   }
  }

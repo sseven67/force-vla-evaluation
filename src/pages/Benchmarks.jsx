@@ -10,7 +10,6 @@ import ForceBenchDetail from "../components/ForceBenchDetail.jsx";
 import SimulationBenchmarkDetail from "../components/SimulationBenchmarkDetail.jsx";
 import BenchmarkOverview from "../components/BenchmarkOverview.jsx";
 import { benchmarkOverview, mainstreamBenchmarkIds } from "../data/benchmarkOverview.js";
-import { Figure } from "../components/Figures.jsx";
 
 const ENVIRONMENTS = {
   "offline": "离线", "sim": "仿真", "real": "真机",
@@ -133,7 +132,6 @@ function BenchmarkDetail({ b, ...p }) {
         {b.reading ? b.reading.introduction.map((text, i) => <p key={i}>{text}</p>) : <p>{b.detail}</p>}
         <External href={b.source}>原始论文／报告</External>
       </div>
-      <Figure figure={b.reading?.overviewFigure} />
       </section>
       <section id="benchmark-section-1" className="benchmark-reader-section" tabIndex={-1} aria-label="任务与评分">
       <h2>02. 任务体系与评价标准</h2>

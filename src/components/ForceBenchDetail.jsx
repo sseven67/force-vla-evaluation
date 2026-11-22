@@ -1,6 +1,5 @@
 import React from "react";
 import { PageIntro, External, SaveControls } from "./ui.jsx";
-import { Figure } from "./Figures.jsx";
 import BenchmarkNavigation from "./BenchmarkNavigation.jsx";
 import BenchmarkUsage from "./BenchmarkUsage.jsx";
 import TaskScoring from "./TaskScoring.jsx";
@@ -46,7 +45,6 @@ export default function ForceBenchDetail({ b, goto, saved, save, section }) {
         </table>
         <p className="forcebench-note">无力觉基线省略腕部力觉输入。</p>
         <div className="source-links"><External href={`${reading.source}#A1`}>输入、动作与仿真协议 · 论文附录 A</External></div>
-        <Figure figure={page.overviewFigure || page.figure} />
       </Section>
 
       <Section index={1}>

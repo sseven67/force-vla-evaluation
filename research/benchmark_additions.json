@@ -362,12 +362,6 @@
           }
         ],
         "taskNote": "以下按五种能力概述全部 42 项基础任务，并举代表任务；分类页链接可查看完整目录与每项评分。",
-        "figure": {
-          "url": "figures/benchmarks/robodojo-tasks.png",
-          "originalUrl": "https://arxiv.org/html/2607.04434v3/tasks.png",
-          "source": "https://arxiv.org/html/2607.04434v3#S3",
-          "caption": "RoboDojo · 论文 Figure 2：42 项仿真与 18 项真机任务"
-        },
         "evaluation": "完整成功率与阶段 Score 分别计算，仿真按五种能力等权平均。",
         "comparisons": [
           {
@@ -530,12 +524,6 @@
         "real": {
           "correspondence": "真机任务与仿真不是逐项配对；该部分测试物理部署能力，不作为同任务的直接 sim-to-real 迁移成绩。",
           "protocol": "三种本体各 6 项任务；每任务 100 条真机示教，重新进行对应本体的策略训练；每策略每任务 10 次，固定布局重放并独立评分。",
-          "figure": {
-            "url": "figures/benchmarks/robodojo-real.png",
-            "originalUrl": "https://arxiv.org/html/2607.04434v3/real_highlight.png",
-            "source": "https://arxiv.org/html/2607.04434v3#S3.SS2",
-            "caption": "RoboDojo · 论文 Figure 4：真机任务关键帧"
-          },
           "groups": [
             {
               "title": "ARX X5",
@@ -1091,22 +1079,10 @@
                 "label": "论文附录 VIII · 全部任务类别"
               }
             ],
-            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。",
-            "figure": {
-              "url": "figures/benchmarks/robocasa-composite.png",
-              "originalUrl": "https://arxiv.org/html/2406.02523v1/task_gen_fig_v3_comp.png",
-              "source": "https://arxiv.org/html/2406.02523v1#S3",
-              "caption": "RoboCasa · 原论文 Figure 5：组合任务示例"
-            }
+            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。"
           }
         ],
         "taskNote": "按 25 项原子任务的八种技能和 75 项组合任务说明；物体类别、炉头位置等语言变体不另计为新技能。",
-        "figure": {
-          "url": "figures/benchmarks/robocasa-tasks.png",
-          "originalUrl": "https://arxiv.org/html/2406.02523v1/fig3_4_comp.png",
-          "source": "https://arxiv.org/html/2406.02523v1#S3",
-          "caption": "RoboCasa · 原论文 Figure 3：可交互厨房设备"
-        },
         "evaluation": "逐任务检查目标谓词，分别汇总原子、组合和真机子集的成功率。",
         "comparisons": [
           {
@@ -1277,12 +1253,6 @@
         "real": {
           "correspondence": "三项真实厨房抓放与原子技能对应；Real＋Sim 使用真实示教共同训练，不是仿真策略直接零样本迁移。",
           "protocol": "每项真机任务 50 条演示，共 150 条；每任务训练独立策略，3 个训练种子，分别测试真实示教中已见的 5 类与未见的 3 类物体。",
-          "figure": {
-            "url": "figures/benchmarks/robocasa-real.png",
-            "originalUrl": "https://arxiv.org/html/2406.02523v1/images/real_robot_exps/real_robot_setup.png",
-            "source": "https://arxiv.org/html/2406.02523v1#S5.SS3",
-            "caption": "RoboCasa · 原论文 Figure 8：真实厨房中的抓放"
-          },
           "groups": [
             {
               "title": "真实厨房抓放",
@@ -1826,12 +1796,6 @@
           }
         ],
         "taskNote": "按原论文的两种本体分别列任务；开／关、物体朝向及初态网格属于任务变体。成功细则中的数值来自当前官方实现，区别于论文的真实人工评分。",
-        "figure": {
-          "url": "figures/benchmarks/simpler-tasks.png",
-          "originalUrl": "https://simpler-env.github.io/static/images/teaser.png",
-          "source": "https://simpler-env.github.io/",
-          "caption": "SimplerEnv · 官方项目：对应真机与仿真及成功率关联"
-        },
         "evaluation": "报告各任务成功率，并用最大排名反转的平均值 MMRV 与 Pearson r 衡量仿真和真机策略表现的关联。",
         "comparisons": [
           {
@@ -2058,12 +2022,6 @@
         "real": {
           "correspondence": "同一真实数据训练的策略在对应真机和仿真中分别运行，验证 real-to-sim 评测代理；不是仿真训练后迁移到真机。",
           "protocol": "真实任务初态按附录 B 枚举；Google 与 WidowX 分别记录任务完成及中间进度，真机次数与仿真颜色／种子扩展分开统计。",
-          "figure": {
-            "url": "figures/benchmarks/simpler-real.png",
-            "originalUrl": "https://simpler-env.github.io/static/images/visual_matching.png",
-            "source": "https://simpler-env.github.io/#visual-matching-mitigates-the-real-to-sim-visual-gap",
-            "caption": "SimplerEnv · 官方项目：真实场景与视觉匹配仿真的对照"
-          },
           "groups": [
             {
               "title": "Google Robot 真机",
@@ -2468,12 +2426,6 @@
             "label": "官方实现 · 相机尺寸"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/rmbench-overview.png",
-          "originalUrl": "https://arxiv.org/html/2603.01229v4/benchmark.png",
-          "source": "https://arxiv.org/html/2603.01229v4#S3.F1",
-          "caption": "RMBench · 官方 Figure 1：九项记忆操作任务总览"
-        },
         "taskNote": "按论文的 M(1) 与 M(n) 两类完整列出九项任务；下列数值细则来自固定版本的官方实现，不套用于真机。",
         "taskGroups": [
           {
@@ -3004,12 +2956,6 @@
             "label": "官方实现 · 仿真轨迹格式"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/contactbench-overview.png",
-          "originalUrl": "https://jingyi-xiang.github.io/contactbench/website_assets/images/teaser.png",
-          "source": "https://jingyi-xiang.github.io/contactbench/",
-          "caption": "ContactBench 1.0 · 官方总览：实体资产、仿真与策略评测"
-        },
         "taskNote": "以下完整列出 36 项参考任务及原论文成功规范，不能把它们全部当成已完成的仿真策略实验。当前有脚本的论文任务编号：4–6、9、13–20、22–31；第 2 项只有场景。脚本配置中的对象／弹簧变体不增加独立任务数。",
         "taskGroups": [
           {

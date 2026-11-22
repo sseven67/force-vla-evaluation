@@ -20013,11 +20013,6 @@
         "§6、Tables 1–4",
         "Appendix A–B、Table A.1"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
-        "caption": "FACT 插头插入实验，原文Figure 1（局部）",
-        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
-      },
       "experiments": [
         {
           "task": "插头插入",
@@ -20486,11 +20481,6 @@
         "§V-A、Table I",
         "Appendix E"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
-        "caption": "FACT 十任务真机评测随机化，原文Figure 4",
-        "source": "https://arxiv.org/html/2610.19155v1#S5"
-      },
       "experiments": [
         {
           "task": "实验室移液",
@@ -21680,11 +21670,6 @@
       "locators": [
         "§IV-A–D、Tables I–III"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
-        "caption": "DEFT-VLA 三类真机任务及阶段分解，原文Figure 4",
-        "source": "https://arxiv.org/html/2610.14854v1#S4"
-      },
       "experiments": [
         {
           "task": "移液器吸头安装",
@@ -22340,14 +22325,6 @@
         "https://github.com/clear-nus/vla-touch"
       ],
       "status": "论文评测已核实",
-      "figure": {
-        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
-        "caption": "三类真机实验流程",
-        "locator": "Figure 2",
-        "sourceUrl": "https://arxiv.org/html/2507.17294v2",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T01",
       "name": "VLA-Touch",
       "fullTitle": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback",
@@ -22556,11 +22533,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
-        "caption": "三类真机实验流程；Figure 2",
-        "source": "https://arxiv.org/html/2507.17294v2"
-      },
       "notes": "VLA-Touch: Enhancing Vision-Language-Action Models with Dual-Level Tactile Feedback\n自建3任务；代码公开，不能等同通用benchmark。\n\n原文定位：§4.1–4.5；Tables 1–2；Figure 2\n核查来源：https://arxiv.org/html/2507.17294v2 https://github.com/clear-nus/vla-touch",
       "sensorOrigin": "视触觉图像与标记点位移",
       "relations": [
@@ -22716,14 +22688,6 @@
       ],
       "status": "v3评测已核实；代码仓库待核实",
       "warning": "与OmniVTA为不同论文。",
-      "figure": {
-        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
-        "caption": "夹爪、灵巧手平台与实验物体",
-        "locator": "Figure 4",
-        "sourceUrl": "https://arxiv.org/html/2508.08706v3",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T02",
       "name": "OmniVTLA",
       "fullTitle": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing",
@@ -23161,11 +23125,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
-        "caption": "夹爪、灵巧手平台与实验物体；Figure 4",
-        "source": "https://arxiv.org/html/2508.08706v3"
-      },
       "notes": "OmniVTLA: Vision-Tactile-Language-Action Models with Semantic-Aligned Tactile Sensing\n自建抓放/插入；ObjTac为135K触觉视觉语言预训练样本，非策略benchmark。\n\n原文定位：v3 §4.1；Tables 3–7；Figure 4\n核查来源：https://arxiv.org/html/2508.08706v3 https://readerek.github.io/Objtac.github.io/",
       "sensorOrigin": "力分布阵列",
       "relations": [
@@ -23340,14 +23299,6 @@
       ],
       "status": "论文评测已核实",
       "warning": "VTLA/RDP对照方法仅测试人工初始化后的接触段，与完整流程列不可直接混比较。",
-      "figure": {
-        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
-        "caption": "四项接触任务的执行进展",
-        "locator": "Figure 4",
-        "sourceUrl": "https://arxiv.org/html/2605.07308v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T03",
       "name": "AT-VLA",
       "fullTitle": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
@@ -23746,11 +23697,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
-        "caption": "四项接触任务的执行进展；Figure 4",
-        "source": "https://arxiv.org/html/2605.07308v1"
-      },
       "notes": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models\n自建6任务；官方repo明确仅推理相关代码，不公开完整训练及真机评测harness。\n\n原文定位：§4.1–4.4；Tables 1–3\n核查来源：https://arxiv.org/html/2605.07308v1 https://github.com/clorislili/AT-VLA",
       "sensorOrigin": "视触觉图像与派生接触信息",
       "relations": [
@@ -23927,14 +23873,6 @@
         "https://github.com/FVL-Repo/OpenViTac"
       ],
       "status": "2026-10-07预印本；论文评测已核实",
-      "figure": {
-        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
-        "caption": "真机与仿真任务对应关系",
-        "locator": "Figure 2b",
-        "sourceUrl": "https://arxiv.org/html/2610.10384v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T04",
       "name": "OpenViTac / OpenVTLA",
       "fullTitle": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework",
@@ -25081,11 +25019,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
-        "caption": "真机与仿真任务对应关系；Figure 2b",
-        "source": "https://arxiv.org/html/2610.10384v1"
-      },
       "notes": "OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework\n提出OpenViTac并提出OpenVTLA；独立仿真真机对齐benchmark。代码公开，模型/数据release链接部分仍待添加。\n\n原文定位：§3.1–3.3；Tables 2–3；Appendix B；Figure 2\n核查来源：https://arxiv.org/html/2610.10384v1 https://github.com/FVL-Repo/OpenViTac",
       "sensorOrigin": "仿真／真机视触觉图像",
       "relations": [
@@ -25335,14 +25268,6 @@
         "https://dt-tacvla.github.io/"
       ],
       "status": "官网协议已核实；论文元信息待核实",
-      "figure": {
-        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
-        "caption": "三类真机接触操作",
-        "locator": "官网任务图",
-        "sourceUrl": "https://dt-tacvla.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T05",
       "name": "DT-TacVLA",
       "fullTitle": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation",
@@ -25568,11 +25493,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
-        "caption": "三类真机接触操作；官网任务图",
-        "source": "https://dt-tacvla.github.io/"
-      },
       "notes": "DT-TacVLA: A Dual-Timescale Tactile-Enhanced Vision-Language-Action Model for Contact-Rich Manipulation\n自建3任务；仅官网可核实，arxiv/代码/正式发表信息未核实。\n\n原文定位：官网 Contact-Rich Manipulation Tasks；官网 Main Results\n核查来源：https://dt-tacvla.github.io/",
       "sensorOrigin": "双指视触觉图像与标记点",
       "relations": [
@@ -25727,14 +25647,6 @@
       ],
       "status": "论文评测已核实；官方代码归属待核实",
       "warning": "不是另一篇2026 Dream-Tac WAM。",
-      "figure": {
-        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
-        "caption": "四项接触任务",
-        "locator": "Figure 5",
-        "sourceUrl": "https://arxiv.org/html/2512.23864v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T06",
       "name": "DreamTacVLA",
       "fullTitle": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation",
@@ -25994,11 +25906,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
-        "caption": "四项接触任务；Figure 5",
-        "source": "https://arxiv.org/html/2512.23864v1"
-      },
       "notes": "Learning to Feel the Future: DreamTacVLA for Contact-Rich Manipulation\n自建4任务；仿真用于数据生成，公开主表为真机结果，不能把生成数据等同完整仿真闭环评测。\n\n原文定位：§4.1–4.3；Table 1；Figure 5\n核查来源：https://arxiv.org/html/2512.23864v1",
       "sensorOrigin": "视触觉图像",
       "relations": [
@@ -26168,14 +26075,6 @@
         "https://github.com/codingbabyguy/univtac"
       ],
       "status": "官方任务与来源已核实",
-      "figure": {
-        "url": "https://univtac.github.io/tasks.svg",
-        "caption": "八任务基准组成",
-        "locator": "官网 Benchmark Tasks",
-        "sourceUrl": "https://univtac.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T07",
       "name": "UniVTAC",
       "fullTitle": "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking",
@@ -26581,11 +26480,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://univtac.github.io/tasks.svg",
-        "caption": "八任务基准组成；官网 Benchmark Tasks",
-        "source": "https://univtac.github.io/"
-      },
       "notes": "原论文直接确认仿真每任务100次（不是从FTP-1借用）；真机为插管、USB和扶瓶三项，每项20次，成功由人观察判断。\n\n已查阅：§IV-A/B；Tables I、IV。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2602.10093",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -26759,14 +26653,6 @@
         "https://github.com/facebookresearch/sparsh"
       ],
       "status": "官方任务和指标已核实",
-      "figure": {
-        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
-        "caption": "六类触觉感知与操作评测概览",
-        "locator": "官网主图",
-        "sourceUrl": "https://sparsh-ssl.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T08",
       "name": "Sparsh / TacBench",
       "fullTitle": "Sparsh: Self-supervised touch representations for vision-based tactile sensing",
@@ -27000,11 +26886,6 @@
           "originalTask": "Bead Maze"
         }
       ],
-      "image": {
-        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
-        "caption": "六类触觉感知与操作评测概览；官网主图",
-        "source": "https://sparsh-ssl.github.io/"
-      },
       "notes": "补齐滑移测试规模、类别不平衡、抓取测试规模及珠迷宫10个新起点；明确离线分类与真机执行的区别。\n\n已查阅：§5–7；Appendix D.1–D.9。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2410.24090",
       "sensorOrigin": "触觉图像",
       "relations": [],
@@ -27134,14 +27015,6 @@
         "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.pdf"
       ],
       "status": "论文表示评测已核实",
-      "figure": {
-        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
-        "caption": "触觉跨模态任务概览",
-        "locator": "官网主图",
-        "sourceUrl": "https://cfeng16.github.io/UniTouch/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T09",
       "name": "UniTouch",
       "fullTitle": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
@@ -27302,11 +27175,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
-        "caption": "触觉跨模态任务概览；官网主图",
-        "source": "https://cfeng16.github.io/UniTouch/"
-      },
       "notes": "补齐按物体划分训练/测试、抓取8:1:1划分和Touch-LLM的GPT-4人工参考评分方法。\n\n已查阅：§4.1、4.2、4.5；Appendix A.1、A.3。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2401.18084",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -27443,14 +27311,6 @@
         "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d893f766ab60e5337659b9e71883af4-Abstract-Conference.html"
       ],
       "status": "任务方向已核实；协议待深入",
-      "figure": {
-        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
-        "caption": "多传感器对齐数据采集示意",
-        "locator": "官网数据图",
-        "sourceUrl": "https://gewu-lab.github.io/AnyTouch/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T10",
       "name": "AnyTouch",
       "fullTitle": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
@@ -27646,11 +27506,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
-        "caption": "多传感器对齐数据采集示意；官网数据图",
-        "source": "https://gewu-lab.github.io/AnyTouch/"
-      },
       "notes": "确认四项离线分类遵循已有数据划分；将误写的“动态触觉感知”泛卡纠正为TacQuad跨传感器特征的定性可视化。\n\n已查阅：§5.3–5.6；Appendix A.3、A.8。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2502.12191",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -27825,14 +27680,6 @@
         "https://github.com/clear-nus/octopi"
       ],
       "status": "定位与评测方向已核实",
-      "figure": {
-        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
-        "caption": "物理属性触觉数据物体",
-        "locator": "官网Dataset items",
-        "sourceUrl": "https://octopi-tactile-lvlm.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T11",
       "name": "Octopi",
       "fullTitle": "Octopi: Object Property Reasoning with Large Tactile-Language Models",
@@ -28027,11 +27874,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
-        "caption": "物理属性触觉数据物体；官网Dataset items",
-        "source": "https://octopi-tactile-lvlm.github.io/"
-      },
       "notes": "核对PhysiCLeAR的属性分类、三类物理推理与场景选择；属性描述不是机器人执行成功率，物理理解测试合计500道题。\n\n已查阅：§III-B/C；§VI-A/B/D；Tables III–VI。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2405.02794",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -28193,14 +28035,6 @@
       ],
       "status": "官方数据规模与方向已核实",
       "warning": "官网Paper按钮误链别篇；应使用2402.13232或ICML论文。",
-      "figure": {
-        "url": "https://tactile-vlm.github.io/images/sensor.png",
-        "caption": "手持视觉触觉采集装置",
-        "locator": "官网 The TVL Dataset",
-        "sourceUrl": "https://tactile-vlm.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T12",
       "name": "TVL",
       "fullTitle": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
@@ -28360,11 +28194,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://tactile-vlm.github.io/images/sensor.png",
-        "caption": "手持视觉触觉采集装置；官网 The TVL Dataset",
-        "source": "https://tactile-vlm.github.io/"
-      },
       "notes": "确认TVL评测集402组三模态样本、top-1/top-5分类及GPT-4的1–10分文本评分。\n\n已查阅：§5.1；Figure 5；Appendix C.5。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2402.13232",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -28504,14 +28333,6 @@
         "https://github.com/alanzjl/t3"
       ],
       "status": "官方任务与资源已核实",
-      "figure": {
-        "url": "https://t3.alanz.info/imgs/robot_perf.png",
-        "caption": "精密电子器件插入评测",
-        "locator": "官网插入评测",
-        "sourceUrl": "https://t3.alanz.info/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T13",
       "name": "T3",
       "fullTitle": "Transferable Tactile Transformers for Representation Learning Across Diverse Sensors and Tasks",
@@ -28846,11 +28667,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://t3.alanz.info/imgs/robot_perf.png",
-        "caption": "精密电子器件插入评测；官网插入评测",
-        "source": "https://t3.alanz.info/"
-      },
       "notes": "纠正接触面积误写为图像细节程度；补三项真机电子元件插入各15次、最多30步、约2Hz和初始位置变化。\n\n已查阅：§4；§5.1–5.3；Figure 4。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2406.13640",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -29006,14 +28822,6 @@
         "https://touch-and-go.github.io/"
       ],
       "status": "数据定位已核实",
-      "figure": {
-        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
-        "caption": "自然场景中的手持触觉采集",
-        "locator": "官网 Human-Powered Data Collection",
-        "sourceUrl": "https://touch-and-go.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T14",
       "name": "Touch and Go",
       "fullTitle": "Touch and Go: Learning from Human-Collected Vision and Touch",
@@ -29140,11 +28948,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
-        "caption": "自然场景中的手持触觉采集；官网 Human-Powered Data Collection",
-        "source": "https://touch-and-go.github.io/"
-      },
       "notes": "补齐图像风格化与未来触觉预测的实际指标，保留人手采集离线评测定位。\n\n已查阅：§4–5；Tables 1–4；Appendix H。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2211.12498",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -29284,14 +29087,6 @@
       ],
       "status": "论文协议已核实",
       "warning": "主适应新条件的能力表人工初始化近目标，不能当完整VLM导航成功率；导航单列Table5。",
-      "figure": {
-        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
-        "caption": "四类精密接触操作真机轨迹",
-        "locator": "Figure 3",
-        "sourceUrl": "https://arxiv.org/html/2506.13762v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T16",
       "name": "ViTaL Local",
       "fullTitle": "Touch begins where vision ends: Generalizable policies for contact-rich manipulation",
@@ -29610,11 +29405,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
-        "caption": "四类精密接触操作真机轨迹；Figure 3",
-        "source": "https://arxiv.org/html/2506.13762v1"
-      },
       "notes": "确认域内10次、位置/背景变化各3配置×10次；按作者动作目标保留成功条件，不额外追问未作为主指标的数值。\n\n已查阅：§4.2–4.6；Tables 1–5。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2506.13762v1",
       "sensorOrigin": "原始磁触觉读数",
       "relations": [
@@ -29763,14 +29553,6 @@
         "https://yilin-wu98.github.io/vital_website/"
       ],
       "status": "官方协议已核实",
-      "figure": {
-        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
-        "caption": "视觉选目标与触觉调接触的概览",
-        "locator": "官网方法概览（非单纯实验照片）",
-        "sourceUrl": "https://yilin-wu98.github.io/vital_website/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T17",
       "name": "ViTaL Steering",
       "fullTitle": "Inference-time Policy Steering via Vision and Touch",
@@ -29972,11 +29754,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
-        "caption": "视觉选目标与触觉调接触的概览；官网方法概览（非单纯实验照片）",
-        "source": "https://yilin-wu98.github.io/vital_website/"
-      },
       "notes": "补齐三项分开判断选对目标与完成接触动作的标准，移液不洒出、擦净、孔位选择均有原文定义。\n\n已查阅：§5.1；Appendix A.1–A.3。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2606.14981",
       "sensorOrigin": "视触觉图像",
       "relations": [
@@ -30128,14 +29905,6 @@
         "https://rino-workshop.github.io/imgs/posters/RINO_HENG.pdf"
       ],
       "status": "官方任务与接口已核实",
-      "figure": {
-        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
-        "caption": "双臂灵巧手真机与遥操作装置",
-        "locator": "官网 Hardware Setup",
-        "sourceUrl": "https://roboverseorg.github.io/ViTacFormerPage/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T18",
       "name": "ViTacFormer",
       "fullTitle": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
@@ -30469,11 +30238,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
-        "caption": "双臂灵巧手真机与遥操作装置；官网 Hardware Setup",
-        "source": "https://roboverseorg.github.io/ViTacFormerPage/"
-      },
       "notes": "阶段按0–3分评分并加权。汉堡任务只要某阶段低于1分，整任务即失败；原文说明会纠正错误以继续测试后续阶段，不能把这部分成绩算作整任务自主成功，也不能声称作者另列两套有／无干预的完整成功率表。\n\n依据：§5.2–5.3；Table2；附录B.2、Table11。完整测试重复数仍尚未核实。\n\n来源：https://arxiv.org/html/2506.15953v1",
       "sensorOrigin": "指尖力／力矩",
       "relations": [
@@ -30677,14 +30441,6 @@
         "https://github.com/GeWu-Lab/AnyTouch2"
       ],
       "status": "官方任务和规模已核实",
-      "figure": {
-        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
-        "caption": "四项真机操作评测",
-        "locator": "官网 Online Real-World Manipulation",
-        "sourceUrl": "https://gewu-lab.github.io/AnyTouch2/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      },
       "id": "T19",
       "name": "AnyTouch 2",
       "fullTitle": "AnyTouch 2: General Optical Tactile Representation Learning For Dynamic Tactile Perception",
@@ -31095,11 +30851,6 @@
           }
         }
       ],
-      "image": {
-        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
-        "caption": "四项真机操作评测；官网 Online Real-World Manipulation",
-        "source": "https://gewu-lab.github.io/AnyTouch2/"
-      },
       "notes": "补齐四项真机任务的实际目标及每项50示教/20测试；离线沿用官方划分；纠正泛化“动态属性预测”为位姿变化分类。\n\n已查阅：§5.1–5.3；Appendices 10、12、13。各任务的指标、设置、完成要求和未明事项见逐任务评测卡。\n\n来源：https://arxiv.org/html/2602.09617v1",
       "sensorOrigin": "触觉图像",
       "relations": [
@@ -37662,11 +37413,6 @@
         "note": "官方仓库提供实现与使用说明；真机任务由作者自建。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2607.18231v1/teaser_v1.png",
-        "caption": "FM-VLA接触记忆任务示意，原文Figure 1",
-        "source": "https://arxiv.org/html/2607.18231"
-      },
       "tasks": "按按钮；擦碗；揭杯找物",
       "evidence": "论文 / 项目核查",
       "experiments": [
@@ -38079,11 +37825,6 @@
         "note": "官网标注ECCV 2026已接收，代码和数据待公开；真机任务自建，离线编码器测试采用T3及TacBench。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2603.14604v2/task_setup.png",
-        "caption": "TacFiLM插入和抽屉任务，原文Figure 3",
-        "source": "https://arxiv.org/html/2603.14604"
-      },
       "relations": [
         {
           "benchmark": "suite-n02",
@@ -38971,11 +38712,6 @@
         "note": "论文提供平台、任务和实现说明；本轮未确认独立官方代码入口。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2606.31723v1/setup.png",
-        "caption": "UniTacVLA硬件和任务，原文Figure 2",
-        "source": "https://arxiv.org/html/2606.31723"
-      },
       "tasks": "USB插入；两脚电源插头插入；铅笔入杯；管子入架；齿轮装配；擦白板；擦花瓶",
       "evidence": "论文 / 项目核查",
       "experiments": [
@@ -39650,11 +39386,6 @@
         "note": "项目页展示系统与实验；本轮未确认独立官方代码入口。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2607.07287v2/task_setting.png",
-        "caption": "TouchWorld六项真机任务，原文Figure 4",
-        "source": "https://arxiv.org/html/2607.07287"
-      },
       "tasks": "电源插头插入；杯子入架；擦锅；抽取纸巾；给花浇水；清理桌面",
       "evidence": "论文 / 项目核查",
       "experiments": [
@@ -40253,11 +39984,6 @@
         "note": "正文和附录公开任务评分、测试划分及实现设置；本轮未确认独立官方代码入口。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2608.01824v2/figure3.png",
-        "caption": "ReTouch七项真机任务，原文Figure 3",
-        "source": "https://arxiv.org/html/2608.01824"
-      },
       "tasks": "按按钮；移液器按压；移液；擦白板；抓取水瓶；抓取玉米棒；开抽屉取烧杯",
       "evidence": "论文 / 项目核查",
       "experiments": [
@@ -41508,13 +41234,7 @@
             ],
             "correspondence": "真机为插管、USB 插入、扶正瓶子 3 项；其中插管与仿真同类任务对应，其余涉及不同接口或操作目标，不将真机 3 项视为仿真 8 项的完整复现。"
           },
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/univtac.png",
-            "source": "https://arxiv.org/html/2602.10093v1/tasks.png",
-            "caption": "UniVTAC · 论文 F3（点击查看原图）",
-            "paper": "https://arxiv.org/html/2602.10093v1#S3.F3"
-          }
+          "schemaVersion": 2
         }
       },
       "metadata": {
@@ -42141,11 +41861,6 @@
           "robustness": {
             "status": "无"
           },
-          "overviewFigure": {
-            "url": "https://forcebench-platform.github.io/assets/figures/simulation-tasks.webp",
-            "source": "https://forcebench-platform.github.io/assets/figures/simulation-tasks.webp",
-            "caption": "ForceBench 官方任务图：六种仿真环境承载八项任务，水龙头和炉灶环境分别包含两项任务。"
-          },
           "metricSummary": [
             "成功率：完整完成任务的测试比例；仿真总体取 8 项任务成功率的等权平均，真机单独统计。"
           ]
@@ -42759,13 +42474,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/tabero.png",
-            "source": "https://arxiv.org/html/2605.27886v1/figs/mul_task_new.png",
-            "caption": "Tabero · 论文 F4（点击查看原图）",
-            "paper": "https://arxiv.org/html/2605.27886v1#S3.F4"
-          }
+          "schemaVersion": 2
         }
       },
       "metadata": {
@@ -44029,13 +43738,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/libero.png",
-            "source": "https://arxiv.org/html/2306.03310v2/libero_fig1.png",
-            "caption": "LIBERO · 论文 F1（点击查看原图）",
-            "paper": "https://arxiv.org/html/2306.03310#S1.F1"
-          }
+          "schemaVersion": 2
         }
       },
       "newlyCollected": false,
@@ -45117,13 +44820,7 @@
             ],
             "correspondence": "与对应仿真一致：粗糙度分类、空罐选择、薯片抓放、齿轮装配、拉抽屉、USB 插入、方块插入 v1／v2，共 8 项，任务目标与成功条件一致。重量分类、硬度分类、粗糙度再抓取仅在仿真中评测。"
           },
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/openvitac.png",
-            "source": "https://arxiv.org/html/2610.10384v1/main_teaser.png",
-            "caption": "OpenViTac · 论文 F1（点击查看原图）",
-            "paper": "https://arxiv.org/html/2610.10384v1#S0.F1"
-          }
+          "schemaVersion": 2
         }
       },
       "metadata": {
@@ -45864,13 +45561,7 @@
             ],
             "correspondence": "真机选取与仿真对应的齿轮装配、灯泡安装、分球 3 类任务；分球另分正常光、暗光，共 4 种真机设置。"
           },
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/manifeel.png",
-            "source": "https://arxiv.org/html/2505.18472v2/Figure_tasksuite.png",
-            "caption": "ManiFeel · 论文 F1（点击查看原图）",
-            "paper": "https://arxiv.org/html/2505.18472v2#S1.F1"
-          }
+          "schemaVersion": 2
         }
       },
       "metadata": {
@@ -46228,13 +45919,7 @@
         ],
         "taskNote": "二十六项是任务与本体的配套设置，并不意味着每个任务都在十二种灵巧手上测试。",
         "using": [],
-        "source": "https://arxiv.org/html/2609.15726v1",
-        "overviewFigure": {
-          "url": "figures/benchmarks/bench2dex-overview.png",
-          "source": "https://arxiv.org/html/2609.15726v1",
-          "originalUrl": "https://arxiv.org/html/2609.15726v1/overview.png",
-          "caption": "Bench2Dex · 官方 Figure 1：任务与平台总览"
-        }
+        "source": "https://arxiv.org/html/2609.15726v1"
       },
       "metadata": {
         "scholar": null,
@@ -46323,13 +46008,7 @@
           }
         ],
         "source": "https://arxiv.org/html/2411.12503v1",
-        "using": [],
-        "overviewFigure": {
-          "url": "figures/benchmarks/maniskill-vitac-2025-overview.png",
-          "source": "https://arxiv.org/html/2411.12503v1",
-          "originalUrl": "https://arxiv.org/html/2411.12503v1/head.png",
-          "caption": "ManiSkill-ViTac 2025 · 官方 Figure 1：仿真与真机平台总览"
-        }
+        "using": []
       },
       "reason": "作者提供独立赛道、操作任务、观测接口、评分规则与统一真机评测入口。",
       "protocol": "操作赛道先按仿真成功率排名，晋级模型由组织方在真实平台上测试。；赛道 1：插入与开锁成功率各乘 50 后相加；赛道 2：成功率乘 100；赛道 3：成功率乘 50 加结构主观评分乘 50。；改变插销、孔或钥匙形状测试新物体；完整测试次数和参数以官方评测脚本、阶段规则为准。",
@@ -47450,13 +47129,7 @@
             ],
             "correspondence": "真机选取叠碗、交接方块、抓瓶、按铃 4 项，与仿真任务目标对应；真机本体、演示数据和测试条件单独统计。"
           },
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/robotwin.png",
-            "source": "https://arxiv.org/html/2506.18088v2/demo_tasks.png",
-            "caption": "RoboTwin 2.0 · 论文 F8（点击查看原图）",
-            "paper": "https://arxiv.org/html/2506.18088v2#S3.F8"
-          }
+          "schemaVersion": 2
         }
       },
       "reason": "独立通用操作基准，作为 ME-Dex 触觉扩展的上游任务来源。",
@@ -47726,13 +47399,7 @@
           }
         ],
         "source": "https://arxiv.org/html/2605.16257v1",
-        "using": [],
-        "overviewFigure": {
-          "url": "figures/benchmarks/dexjoco-overview.png",
-          "source": "https://arxiv.org/html/2605.16257v1",
-          "originalUrl": "https://arxiv.org/html/2605.16257v1/teaser.png",
-          "caption": "DexJoCo（通用灵巧操作基准） · 官方 Figure 1：任务与平台总览"
-        }
+        "using": []
       },
       "reason": "独立灵巧操作基准，作为 ME-Dex 添加触觉的任务与轨迹来源。",
       "protocol": "按每个任务的原成功条件计算成功率；比较单任务、多任务与物体／动力学变化。；ME-Dex 采用 11 项任务的 1,100 条示范，多任务训练后在物体随机变化配置下测试。",
@@ -49239,13 +48906,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/rlbench.png",
-            "source": "https://arxiv.org/html/1909.12271v1/task_grid.png",
-            "caption": "RLBench · 论文 F1（点击查看原图）",
-            "paper": "https://arxiv.org/html/1909.12271#S1.F1"
-          }
+          "schemaVersion": 2
         },
         "summary": "覆盖多种桌面操作的可扩展学习环境，以任务变化、可自动生成的演示和少样本任务划分支持机器人学习研究。",
         "introduction": [
@@ -50352,13 +50013,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/calvin.png",
-            "source": "https://arxiv.org/html/2112.03227v4/figures/scene.png",
-            "caption": "CALVIN · 论文 F3（点击查看原图）",
-            "paper": "https://arxiv.org/html/2112.03227#S3.F3"
-          }
+          "schemaVersion": 2
         },
         "summary": "从无结构的机器人游玩数据中学习语言条件技能，以连续执行五条指令评测长流程操作与环境泛化。",
         "introduction": [
@@ -50698,6 +50353,7 @@
                   "criteria": [],
                   "metricSummary": "成功率：统计满足下述完整任务条件的测试比例。",
                   "metricLabel": "成功率",
+                  "focus": "厨房中的基础抓放与设备操作。",
                   "subtasks": [
                     {
                       "name": "打开柜门",
@@ -50716,8 +50372,7 @@
                       "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
                     }
                   ],
-                  "subtasksLabel": "任务示例",
-                  "focus": "厨房中的基础抓放与设备操作。"
+                  "subtasksLabel": "任务示例"
                 }
               ],
               "count": "65 项",
@@ -50750,6 +50405,7 @@
                   ],
                   "metricSummary": "成功率：统计满足下述完整任务条件的测试比例。",
                   "metricLabel": "成功率",
+                  "focus": "结合移动与操作，连续完成多阶段厨房活动。",
                   "subtasks": [
                     {
                       "name": "准备咖啡",
@@ -50768,8 +50424,7 @@
                       "sourceVersion": "main @ 425684d332f135f5b30a40b321f52d15a0fe9250"
                     }
                   ],
-                  "subtasksLabel": "任务示例",
-                  "focus": "结合移动与操作，连续完成多阶段厨房活动。"
+                  "subtasksLabel": "任务示例"
                 }
               ],
               "count": "300 项",
@@ -50845,12 +50500,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/robocasa365.png",
-            "source": "https://robocasa.ai/assets/robocasa365_iclr26.pdf#page=1",
-            "caption": "RoboCasa365 · 论文 Figure 1（原始论文图像）"
-          }
+          "schemaVersion": 2
         },
         "summary": "面向家庭厨房移动操作的大规模仿真框架，提供原子技能、长流程组合任务和系统化的数据与场景泛化协议。",
         "introduction": [
@@ -51819,13 +51469,7 @@
             ],
             "correspondence": "真机选取方孔套销、滑块到目标、铲取、摆棋子 4 项，与仿真同名任务目标对应；物体及判定参数按各自环境设置。"
           },
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/colosseum.png",
-            "source": "https://arxiv.org/html/2402.08191v2/figure2.png",
-            "caption": "THE COLOSSEUM · 论文 F2（点击查看原图）",
-            "paper": "https://arxiv.org/html/2402.08191#S1.F2"
-          }
+          "schemaVersion": 2
         },
         "summary": "在 RLBench 代表任务上系统加入外观、几何和物理扰动，测量策略从名义环境向变化条件的泛化。",
         "introduction": [
@@ -52856,13 +52500,7 @@
               "label": "论文 · 评测协议"
             }
           ],
-          "schemaVersion": 2,
-          "overviewFigure": {
-            "url": "figures/benchmarks/robotwin-phys.jpg",
-            "source": "https://arxiv.org/html/2609.26292v1/figures/dataset.jpg",
-            "caption": "RoboTwin-Phys · 论文 F2（点击查看原图）",
-            "paper": "https://arxiv.org/html/2609.26292#S2.F2"
-          }
+          "schemaVersion": 2
         },
         "summary": "为 RoboTwin 2.0 的双臂任务加入连续物理条件变化，检验视觉和布局随机化之外的物理鲁棒性。",
         "introduction": [
@@ -54254,13 +53892,7 @@
               "text": "将 LIBERO 权重直接用于 LIBERO-Plus，报告七类扰动下的零样本表现。"
             }
           ],
-          "inputNote": "观测随模型配置变化：OpenVLA-OFT_w 仅用第三视角；上述 8 维状态示例不代表所有参评模型都使用本体状态。",
-          "overviewFigure": {
-            "url": "figures/benchmarks/libero-plus.png",
-            "source": "https://arxiv.org/html/2510.13626v3/imgs/benchmark_component.png",
-            "caption": "LIBERO-Plus · 论文 F6（点击查看原图）",
-            "paper": "https://arxiv.org/html/2510.13626#S6.F6"
-          }
+          "inputNote": "观测随模型配置变化：OpenVLA-OFT_w 仅用第三视角；上述 8 维状态示例不代表所有参评模型都使用本体状态。"
         },
         "summary": "在 LIBERO 任务上系统改变视觉、布局、语言和机器人初态，以分因素、分难度测试 VLA 的鲁棒性。",
         "introduction": [
@@ -55524,13 +55156,7 @@
             }
           ],
           "schemaVersion": 2,
-          "taskNote": "完整列出 Spatial、Object、Goal、Long 四套件的 40 项基础操作目标；扰动条件和测试实例另计，不作为新增操作技能。",
-          "overviewFigure": {
-            "url": "figures/benchmarks/libero-rig.png",
-            "source": "https://arxiv.org/html/2610.18843v1/teaser.png",
-            "caption": "LIBERO-RIG · 论文 F1（点击查看原图）",
-            "paper": "https://arxiv.org/html/2610.18843v1#S0.F1"
-          }
+          "taskNote": "完整列出 Spatial、Object、Goal、Long 四套件的 40 项基础操作目标；扰动条件和测试实例另计，不作为新增操作技能。"
         },
         "summary": "保持 LIBERO 任务及成功判定不变，只改变机器人硬件与部署配置，定位策略对相机、标定、控制和末端设置的依赖。",
         "introduction": [
@@ -56271,13 +55897,7 @@
             "correspondence": "真机仅验证罐子分拣，与仿真同类任务目标对应；其余 8 项主套件任务仅在仿真中评测。"
           },
           "schemaVersion": 2,
-          "taskNote": "主套件共 9 项任务，按实际本体完整列出；BiGym 的 3 项扩展验证另计。",
-          "overviewFigure": {
-            "url": "figures/benchmarks/dexmimicgen.png",
-            "source": "https://arxiv.org/html/2410.24185v2/fig_task_v1.png",
-            "caption": "DexMimicGen · 论文 F4（点击查看原图）",
-            "paper": "https://arxiv.org/html/2410.24185#S5.F4"
-          }
+          "taskNote": "主套件共 9 项任务，按实际本体完整列出；BiGym 的 3 项扩展验证另计。"
         },
         "summary": "面向双臂灵巧操作的自动数据生成系统，配套发布九项仿真任务与模仿学习评测，重点研究少量示教如何扩展为多样的双臂协同轨迹。",
         "introduction": [
@@ -57918,13 +57538,7 @@
               "url": "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf",
               "text": "用三组布局评测基础策略，并另列 RL 和 Agent 设置。"
             }
-          ],
-          "overviewFigure": {
-            "url": "figures/benchmarks/robodojo-tasks.png",
-            "originalUrl": "https://arxiv.org/html/2607.04434v3/tasks.png",
-            "source": "https://arxiv.org/html/2607.04434v3#S3",
-            "caption": "RoboDojo · 论文 Figure 2：42 项仿真与 18 项真机任务"
-          }
+          ]
         },
         "summary": "通过双臂仿真和三种真机平台，分能力评价通用操作策略的成功率与阶段完成度。",
         "introduction": [
@@ -58725,6 +58339,7 @@
                   ],
                   "metricSummary": "成功率：统计满足下述完整任务条件的测试比例。",
                   "metricLabel": "成功率",
+                  "focus": "协调多物体与设备状态，连续完成厨房活动。",
                   "subtasks": [
                     {
                       "englishName": "ArrangeVegetables",
@@ -58759,8 +58374,7 @@
                       "sourceVersion": "v0.2 @ 756598a5be52e052339bb2d957426e39015c2afb"
                     }
                   ],
-                  "subtasksLabel": "任务示例",
-                  "focus": "协调多物体与设备状态，连续完成厨房活动。"
+                  "subtasksLabel": "任务示例"
                 }
               ],
               "sources": [
@@ -59145,13 +58759,7 @@
               "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/examples/robocasa/README.md",
               "text": "官方提供 PandaOmron 的 24 项厨房操作训练与评测入口；与 GR1 Tabletop 及 RoboCasa365 分开。"
             }
-          ],
-          "overviewFigure": {
-            "url": "figures/benchmarks/robocasa-tasks.png",
-            "originalUrl": "https://arxiv.org/html/2406.02523v1/fig3_4_comp.png",
-            "source": "https://arxiv.org/html/2406.02523v1#S3",
-            "caption": "RoboCasa · 原论文 Figure 3：可交互厨房设备"
-          }
+          ]
         },
         "summary": "在多样厨房中评价原子技能、组合活动及新物体泛化，并检验仿真数据对真机操作学习的帮助。",
         "introduction": [
@@ -60242,13 +59850,7 @@
               "url": "https://arxiv.org/html/2607.04988",
               "text": "在 WidowX／Bridge 设置中按 Visual Matching 协议评测。"
             }
-          ],
-          "overviewFigure": {
-            "url": "figures/benchmarks/simpler-tasks.png",
-            "originalUrl": "https://simpler-env.github.io/static/images/teaser.png",
-            "source": "https://simpler-env.github.io/",
-            "caption": "SimplerEnv · 官方项目：对应真机与仿真及成功率关联"
-          }
+          ]
         },
         "summary": "将真实机器人策略放入匹配的仿真环境，评价任务成功率及仿真与真机的策略排名一致性。",
         "introduction": [
@@ -60934,13 +60536,7 @@
               "url": "https://github.com/RoboTwin-Platform/RMBench",
               "label": "官方代码与数据入口"
             }
-          ],
-          "overviewFigure": {
-            "url": "figures/benchmarks/rmbench-overview.png",
-            "originalUrl": "https://arxiv.org/html/2603.01229v4/benchmark.png",
-            "source": "https://arxiv.org/html/2603.01229v4#S3.F1",
-            "caption": "RMBench · 官方 Figure 1：九项记忆操作任务总览"
-          }
+          ]
         },
         "summary": "基于 RoboTwin 2.0 的双臂记忆操作基准，用九项任务检查策略能否保留关键历史信息、跟踪阶段并利用试错反馈。",
         "introduction": [
@@ -62474,13 +62070,7 @@
               "url": "https://github.com/Michaelwyx/contactbench-sim",
               "label": "官方仿真仓库"
             }
-          ],
-          "overviewFigure": {
-            "url": "figures/benchmarks/contactbench-overview.png",
-            "originalUrl": "https://jingyi-xiang.github.io/contactbench/website_assets/images/teaser.png",
-            "source": "https://jingyi-xiang.github.io/contactbench/",
-            "caption": "ContactBench 1.0 · 官方总览：实体资产、仿真与策略评测"
-          }
+          ]
         },
         "summary": "以八类日常接触技能组织的可打印实体与仿真任务基准；36 项参考任务中，论文在六项真机任务上评测视觉及视觉触觉策略。",
         "introduction": [
@@ -62620,53 +62210,31 @@
       "id": "precision",
       "name": "接触对准",
       "description": "插接、装配与按压到位：检查接触后的位置调整、到位判断与停止。",
-      "color": "#24768c",
-      "icon": "insertion",
-      "image": {
-        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
-        "caption": "FACT 插头插入实验，Figure 1局部",
-        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
-      }
+      "color": "#24768c"
     },
     {
       "id": "surface",
       "name": "持续接触",
       "description": "擦拭、削切、接触扫描与机构运动：检查持续接触和用力调节。",
-      "color": "#3868a6",
-      "icon": "wipe",
-      "image": {
-        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
-        "caption": "DEFT-VLA 任务阶段图，Figure 4（含擦板）",
-        "source": "https://arxiv.org/html/2610.14854v1#S4"
-      }
+      "color": "#3868a6"
     },
     {
       "id": "grasp",
       "name": "稳定夹持与保护",
       "description": "抓放、搬运与手内操作：检查是否抓稳、滑落、夹坏或损伤。",
-      "color": "#7562a9",
-      "icon": "grasp",
-      "image": {
-        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
-        "caption": "FACT 灵巧手真机评测随机化，Figure 4",
-        "source": "https://arxiv.org/html/2610.19155v1#S5"
-      }
+      "color": "#7562a9"
     },
     {
       "id": "reason",
       "name": "力觉感知、判断与决策",
       "description": "利用接触信息判断重量、材质或阻力，再选择对象、方向或下一步动作。",
-      "color": "#377b60",
-      "icon": "weigh",
-      "image": null
+      "color": "#377b60"
     },
     {
       "id": "long",
       "name": "长程多步骤操作",
       "description": "连续完成多个操作阶段：检查技能衔接、整流程完成与错误累积。",
-      "color": "#8d6c3b",
-      "icon": "sequence",
-      "image": null
+      "color": "#8d6c3b"
     }
   ],
   "taskTypes": [

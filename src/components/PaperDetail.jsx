@@ -8,7 +8,6 @@ import {
   SaveControls,
 } from "./ui.jsx";
 import { CompareButton, CategoryTags, ScreeningInfo, ScreeningTag } from "./papers.jsx";
-import { Figure } from "./Figures.jsx";
 import TaskProtocol from "./TaskProtocol.jsx";
 import ComparisonMethods from "./ComparisonMethods.jsx";
 import EvaluationHighlights, { EvaluationReferenceTag } from "./EvaluationHighlights.jsx";
@@ -153,7 +152,6 @@ function PaperDetail({ w, ...p }) {
             <TaskProtocol key={e.id} e={e} />
           ))}
         </div>
-        <Figure figure={w.image} />
       </section>
       <section id="paper-section-2" data-section="2" tabIndex={-1}>
         <h3 className="detail-subhead">对比实验</h3>

@@ -42,15 +42,7 @@
         "https://arxiv.org/html/2507.17294v2",
         "https://github.com/clear-nus/vla-touch"
       ],
-      "status": "论文评测已核实",
-      "figure": {
-        "url": "https://arxiv.org/html/2507.17294v2/3_exp_demo.png",
-        "caption": "三类真机实验流程",
-        "locator": "Figure 2",
-        "sourceUrl": "https://arxiv.org/html/2507.17294v2",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "论文评测已核实"
     },
     {
       "short": "OmniVTLA",
@@ -95,15 +87,7 @@
         "https://readerek.github.io/Objtac.github.io/"
       ],
       "status": "v3评测已核实；代码仓库待核实",
-      "warning": "与OmniVTA为不同论文。",
-      "figure": {
-        "url": "https://arxiv.org/html/2508.08706v3/setup-small-new.png",
-        "caption": "夹爪、灵巧手平台与实验物体",
-        "locator": "Figure 4",
-        "sourceUrl": "https://arxiv.org/html/2508.08706v3",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "与OmniVTA为不同论文。"
     },
     {
       "short": "AT-VLA",
@@ -147,15 +131,7 @@
         "https://github.com/clorislili/AT-VLA"
       ],
       "status": "论文评测已核实",
-      "warning": "VTLA/RDP基线仅测试人工初始化后的接触段，与完整流程列不可直接混比较。",
-      "figure": {
-        "url": "https://arxiv.org/html/2605.07308v1/viz-v6.png",
-        "caption": "四项接触任务的执行进展",
-        "locator": "Figure 4",
-        "sourceUrl": "https://arxiv.org/html/2605.07308v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "VTLA/RDP基线仅测试人工初始化后的接触段，与完整流程列不可直接混比较。"
     },
     {
       "short": "OpenViTac / OpenVTLA",
@@ -203,15 +179,7 @@
         "https://arxiv.org/html/2610.10384v1",
         "https://github.com/FVL-Repo/OpenViTac"
       ],
-      "status": "2026-10-07预印本；论文评测已核实",
-      "figure": {
-        "url": "https://arxiv.org/html/2610.10384v1/real_sim_alignment.png",
-        "caption": "真机与仿真任务对应关系",
-        "locator": "Figure 2b",
-        "sourceUrl": "https://arxiv.org/html/2610.10384v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "2026-10-07预印本；论文评测已核实"
     },
     {
       "short": "DT-TacVLA",
@@ -247,15 +215,7 @@
       "sources": [
         "https://dt-tacvla.github.io/"
       ],
-      "status": "官网协议已核实；论文元信息待核实",
-      "figure": {
-        "url": "https://dt-tacvla.github.io/assets/images/task_01.png",
-        "caption": "三类真机接触操作",
-        "locator": "官网任务图",
-        "sourceUrl": "https://dt-tacvla.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官网协议已核实；论文元信息待核实"
     },
     {
       "short": "DreamTacVLA",
@@ -296,15 +256,7 @@
         "https://arxiv.org/html/2512.23864v1"
       ],
       "status": "论文评测已核实；官方代码归属待核实",
-      "warning": "不是另一篇2026 Dream-Tac WAM。",
-      "figure": {
-        "url": "https://arxiv.org/html/2512.23864v1/sim_real1.png",
-        "caption": "四项接触任务",
-        "locator": "Figure 5",
-        "sourceUrl": "https://arxiv.org/html/2512.23864v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "不是另一篇2026 Dream-Tac WAM。"
     },
     {
       "short": "UniVTAC",
@@ -350,15 +302,7 @@
         "https://arxiv.org/abs/2602.10093",
         "https://github.com/codingbabyguy/univtac"
       ],
-      "status": "官方任务与来源已核实",
-      "figure": {
-        "url": "https://univtac.github.io/tasks.svg",
-        "caption": "八任务基准组成",
-        "locator": "官网 Benchmark Tasks",
-        "sourceUrl": "https://univtac.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方任务与来源已核实"
     },
     {
       "short": "Sparsh / TacBench",
@@ -404,15 +348,7 @@
         "https://sparsh-ssl.github.io/",
         "https://github.com/facebookresearch/sparsh"
       ],
-      "status": "官方任务和指标已核实",
-      "figure": {
-        "url": "https://sparsh-ssl.github.io/media/figures/teaser2.png",
-        "caption": "六类触觉感知与操作评测概览",
-        "locator": "官网主图",
-        "sourceUrl": "https://sparsh-ssl.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方任务和指标已核实"
     },
     {
       "short": "UniTouch",
@@ -453,15 +389,7 @@
         "https://arxiv.org/abs/2401.18084",
         "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Binding_Touch_to_Everything_Learning_Unified_Multimodal_Tactile_Representations_CVPR_2024_paper.pdf"
       ],
-      "status": "论文表示评测已核实",
-      "figure": {
-        "url": "https://cfeng16.github.io/UniTouch/static/images/teaser.jpg",
-        "caption": "触觉跨模态任务概览",
-        "locator": "官网主图",
-        "sourceUrl": "https://cfeng16.github.io/UniTouch/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "论文表示评测已核实"
     },
     {
       "short": "AnyTouch",
@@ -500,15 +428,7 @@
         "https://arxiv.org/abs/2502.12191",
         "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d893f766ab60e5337659b9e71883af4-Abstract-Conference.html"
       ],
-      "status": "任务方向已核实；协议待深入",
-      "figure": {
-        "url": "https://gewu-lab.github.io/AnyTouch/static/images/dataset.png",
-        "caption": "多传感器对齐数据采集示意",
-        "locator": "官网数据图",
-        "sourceUrl": "https://gewu-lab.github.io/AnyTouch/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "任务方向已核实；协议待深入"
     },
     {
       "short": "Octopi",
@@ -547,15 +467,7 @@
         "https://octopi-tactile-lvlm.github.io/",
         "https://github.com/clear-nus/octopi"
       ],
-      "status": "定位与评测方向已核实",
-      "figure": {
-        "url": "https://octopi-tactile-lvlm.github.io/media/items.png",
-        "caption": "物理属性触觉数据物体",
-        "locator": "官网Dataset items",
-        "sourceUrl": "https://octopi-tactile-lvlm.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "定位与评测方向已核实"
     },
     {
       "short": "TVL",
@@ -598,15 +510,7 @@
         "https://github.com/Max-Fu/tvl"
       ],
       "status": "官方数据规模与方向已核实",
-      "warning": "官网Paper按钮误链别篇；应使用2402.13232或ICML论文。",
-      "figure": {
-        "url": "https://tactile-vlm.github.io/images/sensor.png",
-        "caption": "手持视觉触觉采集装置",
-        "locator": "官网 The TVL Dataset",
-        "sourceUrl": "https://tactile-vlm.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "官网Paper按钮误链别篇；应使用2402.13232或ICML论文。"
     },
     {
       "short": "T3",
@@ -648,15 +552,7 @@
         "https://t3.alanz.info/",
         "https://github.com/alanzjl/t3"
       ],
-      "status": "官方任务与资源已核实",
-      "figure": {
-        "url": "https://t3.alanz.info/imgs/robot_perf.png",
-        "caption": "精密电子器件插入评测",
-        "locator": "官网插入评测",
-        "sourceUrl": "https://t3.alanz.info/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方任务与资源已核实"
     },
     {
       "short": "Touch and Go",
@@ -695,15 +591,7 @@
         "https://arxiv.org/abs/2211.12498",
         "https://touch-and-go.github.io/"
       ],
-      "status": "数据定位已核实",
-      "figure": {
-        "url": "https://touch-and-go.github.io/resources/images/human_collect2.jpg",
-        "caption": "自然场景中的手持触觉采集",
-        "locator": "官网 Human-Powered Data Collection",
-        "sourceUrl": "https://touch-and-go.github.io/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "数据定位已核实"
     },
     {
       "short": "VITaL Pretraining",
@@ -744,15 +632,7 @@
         "https://sites.google.com/andrew.cmu.edu/visuo-tactile-pretraining"
       ],
       "status": "论文协议已核实",
-      "warning": "与2025 ViTaL Local和2026 ViTaL Steering是3篇独立工作。",
-      "figure": {
-        "url": "https://arxiv.org/html/2403.11898v2/figures/Scene_layout_all_tasks.jpg",
-        "caption": "USB插入与两项积木堆叠实验",
-        "locator": "Figure 4",
-        "sourceUrl": "https://arxiv.org/html/2403.11898v2",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "与2025 ViTaL Local和2026 ViTaL Steering是3篇独立工作。"
     },
     {
       "short": "ViTaL Local",
@@ -795,15 +675,7 @@
         "https://vitalprecise.github.io/"
       ],
       "status": "论文协议已核实",
-      "warning": "主泛化表人工初始化近目标，不能当完整VLM导航成功率；导航单列Table5。",
-      "figure": {
-        "url": "https://arxiv.org/html/2506.13762v1/rollouts.png",
-        "caption": "四类精密接触操作真机轨迹",
-        "locator": "Figure 3",
-        "sourceUrl": "https://arxiv.org/html/2506.13762v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "主泛化表人工初始化近目标，不能当完整VLM导航成功率；导航单列Table5。"
     },
     {
       "short": "ViTaL Steering",
@@ -844,15 +716,7 @@
         "https://arxiv.org/abs/2606.14981",
         "https://yilin-wu98.github.io/vital_website/"
       ],
-      "status": "官方协议已核实",
-      "figure": {
-        "url": "https://yilin-wu98.github.io/vital_website/static/images/front_figure.png",
-        "caption": "视觉选目标与触觉调接触的概览",
-        "locator": "官网方法概览（非单纯实验照片）",
-        "sourceUrl": "https://yilin-wu98.github.io/vital_website/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方协议已核实"
     },
     {
       "short": "ViTacFormer",
@@ -897,15 +761,7 @@
         "https://github.com/RoboVerseOrg/ViTacFormer",
         "https://rino-workshop.github.io/imgs/posters/RINO_HENG.pdf"
       ],
-      "status": "官方任务与接口已核实",
-      "figure": {
-        "url": "https://roboverseorg.github.io/ViTacFormerPage/static/images/vitacformer_hardware.png",
-        "caption": "双臂灵巧手真机与遥操作装置",
-        "locator": "官网 Hardware Setup",
-        "sourceUrl": "https://roboverseorg.github.io/ViTacFormerPage/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方任务与接口已核实"
     },
     {
       "short": "AnyTouch 2",
@@ -948,15 +804,7 @@
         "https://gewu-lab.github.io/AnyTouch2/",
         "https://github.com/GeWu-Lab/AnyTouch2"
       ],
-      "status": "官方任务和规模已核实",
-      "figure": {
-        "url": "https://gewu-lab.github.io/AnyTouch2/asset/onlineresult.png",
-        "caption": "四项真机操作评测",
-        "locator": "官网 Online Real-World Manipulation",
-        "sourceUrl": "https://gewu-lab.github.io/AnyTouch2/",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方任务和规模已核实"
     },
     {
       "short": "See, Hear, and Feel",
@@ -996,15 +844,7 @@
         "https://ruohangao.github.io/assets/supps/seel_hear_feel_supp.pdf",
         "https://github.com/JunzheJosephZhu/see_hear_feel"
       ],
-      "status": "官方定位与消融已核实",
-      "figure": {
-        "url": "https://arxiv.org/html/2212.03858v2/setup_pack.png",
-        "caption": "紧密装箱操作实验装置",
-        "locator": "论文实验装置图",
-        "sourceUrl": "https://arxiv.org/html/2212.03858v2",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "status": "官方定位与消融已核实"
     },
     {
       "short": "ManiWAV",
@@ -1049,15 +889,7 @@
         "https://github.com/real-stanford/maniwav"
       ],
       "status": "论文协议已核实",
-      "warning": "不是VLA，也不应把audio当力值；翻转试次分母有原文歧义。",
-      "figure": {
-        "url": "https://arxiv.org/html/2406.19464v1/audio_wipe.png",
-        "caption": "擦白板条件、失败案例与成功率",
-        "locator": "Figure 6",
-        "sourceUrl": "https://arxiv.org/html/2406.19464v1",
-        "note": "仅远程引用作者原图；未下载、裁剪或改绘。",
-        "httpStatus": 200
-      }
+      "warning": "不是VLA，也不应把audio当力值；翻转试次分母有原文歧义。"
     }
   ]
 }

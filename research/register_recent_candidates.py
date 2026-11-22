@@ -54,7 +54,6 @@ fm = dict(id='N01', name='FM-VLA', arxiv='2607.18231', first='2026-07-20',
           sections=['§4；Table1–2；Fig.4', 'Appendix B、D–E'],
           openStatus='官方代码已公开', openNote='官方仓库提供实现与使用说明；真机任务由作者自建。',
           scholar=(5, '9966605111508553898'), openalex='W7169875807',
-          figure=('2607.18231v1/teaser_v1.png', 'FM-VLA接触记忆任务示意，原文Figure 1'),
           tasks=[
               task('揭杯寻找隐藏物块', '检查是否记得已经查看过哪个杯子，并完成双臂分工。', '成功率（完整完成／失败）',
                    fm_setup+'物块藏在前杯、后杯各9次。',
@@ -97,7 +96,7 @@ tf = dict(id='N02', name='TacFiLM', arxiv='2603.14604', first='2026-03-15',
           sections=['§4.1–4.3；Tables1–3', 'Fig.3–5；§5.1'],
           openStatus='项目页和论文公开', openNote='官网代码和数据标为待公开；操作任务为作者自建，离线编码器测试采用T3及TacBench。',
           scholar=(7, '16277709111848379163'), openalex='W7138099466',
-          figure=('2603.14604v2/task_setup.png', 'TacFiLM插入和抽屉任务，原文Figure 3'), tasks=[],
+          tasks=[],
           comparisons=[
               ['换一种触觉融合方式，是否更容易一次完成且减少硬推？', '无触觉／特征拼接／交叉注意力／TacFiLM', '圆销、USB、抽屉及新形状插入',
                '固定OpenVLA-OFT基础模型和训练步骤；按同一任务分别比较', tf_metric,
@@ -146,7 +145,7 @@ ut = dict(id='N03', name='UniTacVLA', arxiv='2606.31723', first='2026-06-30',
           sections=['§4.1–4.3；Tables1–2', 'Appendix A、C'],
           openStatus='论文全文公开', openNote='论文提供平台、任务和实现说明；本轮未确认独立官方代码入口。',
           scholar=(10, '11625990079224437374'), openalex='W7166871254',
-          figure=('2606.31723v1/setup.png', 'UniTacVLA硬件和任务，原文Figure 2'), tasks=[],
+          tasks=[],
           comparisons=[
               ['预测触觉和快速纠正是否能应对执行中干扰？', 'UniTacVLA／π0／π0.5／重新实现的VTLA和TacVLA', '八项真机任务',
                '每任务分别比较正常与人为干扰，每种条件50次', '各任务成功率',
@@ -185,7 +184,7 @@ tw = dict(id='N04', name='TouchWorld', arxiv='2607.07287', first='2026-07-08',
           sections=['§4.1–4.6；Tables1–3', 'Fig.3–4；§5'],
           openStatus='项目页和论文公开', openNote='项目页展示系统与实验；本轮未确认独立官方代码入口。',
           scholar=(15, '11872767412716213089'), openalex='W7167798204',
-          figure=('2607.07287v2/task_setting.png', 'TouchWorld六项真机任务，原文Figure 4'), tasks=[],
+          tasks=[],
           comparisons=[
               ['分层规划与触觉纠正是否比整体策略更能应对干扰？', 'TouchWorld／π0.5／FTP-1／GR00T N1.7', '六项真机任务',
                '相同任务分别测试正常和有人移动目标、干扰抓取等情况', '各任务成功率及六任务平均值',
@@ -229,7 +228,7 @@ rt = dict(id='N05', name='ReTouch', arxiv='2608.01824', first='2026-08-03',
           sections=['§4.1–4.4；Tables1–3', 'Appendix B.3–B.4、D.2–D.3'],
           openStatus='论文全文公开', openNote='正文和附录公开任务评分、测试划分及实现设置；本轮未确认独立官方代码入口。',
           scholar=(4, '2616597255828097126'), openalex='W7172398188',
-          figure=('2608.01824v2/figure3.png', 'ReTouch七项真机任务，原文Figure 3'), tasks=[],
+          tasks=[],
           comparisons=[
               ['执行中更新预测和动作，是否比一次生成整段动作更有效？', 'ReTouch／RDP／ViTacFormer／π0与π0.5及加触觉版本／Tactile-VLA', '七项真机任务',
                '使用共同训练数据池与动作接口；各方法按原文训练方式适配', '按阶段计算的任务得分，按钮为成功率',
@@ -322,8 +321,7 @@ def register():
                    trials='；'.join(dict.fromkeys(t['setting'] for t in p['tasks'])),locators=p['sections'],
                    warning=p['limitation'],notes=p['fullTitle']+'\n原文已核对：'+'；'.join(p['sections'])+'\n'+p['limitation'],
                    openness=dict(status=p['openStatus'],url=p['github'] or p['project'] or source,note=p['openNote']),
-                   benchmark='作者自建真机任务；任务、评分和对照见本论文。',
-                   image=dict(url='https://arxiv.org/html/'+p['figure'][0],caption=p['figure'][1],source=source))
+                   benchmark='作者自建真机任务；任务、评分和对照见本论文。')
         additions.append(raw)
         if wid=='N02':
             raw['relations']=[

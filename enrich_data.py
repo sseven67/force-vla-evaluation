@@ -8,11 +8,11 @@ ROOT=Path(__file__).resolve().parent
 DATE='2026-10-22'
 
 TASK_GROUPS=[
- dict(id='precision',name='接触对准',description='插接、装配与按压到位：检查接触后的位置调整、到位判断与停止。',color='#24768c',icon='insertion'),
- dict(id='surface',name='持续接触',description='擦拭、削切、接触扫描与机构运动：检查持续接触和用力调节。',color='#3868a6',icon='wipe'),
- dict(id='grasp',name='稳定夹持与保护',description='抓放、搬运与手内操作：检查是否抓稳、滑落、夹坏或损伤。',color='#7562a9',icon='grasp'),
- dict(id='reason',name='力反馈判断与决策',description='利用接触信息判断重量、材质或阻力，再选择对象、方向或下一步动作。',color='#377b60',icon='weigh'),
- dict(id='long',name='长程多步骤操作',description='连续完成多个操作阶段：检查技能衔接、整流程完成与错误累积。',color='#8d6c3b',icon='sequence'),
+ dict(id='precision',name='接触对准',description='插接、装配与按压到位：检查接触后的位置调整、到位判断与停止。',color='#24768c'),
+ dict(id='surface',name='持续接触',description='擦拭、削切、接触扫描与机构运动：检查持续接触和用力调节。',color='#3868a6'),
+ dict(id='grasp',name='稳定夹持与保护',description='抓放、搬运与手内操作：检查是否抓稳、滑落、夹坏或损伤。',color='#7562a9'),
+ dict(id='reason',name='力反馈判断与决策',description='利用接触信息判断重量、材质或阻力，再选择对象、方向或下一步动作。',color='#377b60'),
+ dict(id='long',name='长程多步骤操作',description='连续完成多个操作阶段：检查技能衔接、整流程完成与错误累积。',color='#8d6c3b'),
 ]
 # Matching only indexes explicitly named tasks; it does not invent task protocols.
 TASKS=[
@@ -90,8 +90,6 @@ def normalise(raw,index,prefix):
     w['openness']=raw.get('openness') if isinstance(raw.get('openness'),dict) else dict(status='有官方代码入口' if w.get('github') else '完整发布情况待核验',url=w.get('github') or raw.get('project') or w['source'],note=txt(raw.get('benchmark')) or '论文或代码入口不等于完整评测环境已可运行。')
     w['warning']=raw.get('warning') or ('相邻方法 / 资源，不作为带力VLA本体计数。' if 'VLA' not in w['kind'] else '不同任务、对象、控制器和评分协议的成功率不能直接合并排行。')
     w['experiments']=raw.get('experiments') or []
-    if raw.get('figure'):
-        f=raw['figure'];w['image']=dict(url=f['url'],caption=f.get('caption','')+'；'+f.get('locator',''),source=f.get('sourceUrl',w['source']))
     w['notes']=raw.get('notes') or '\n'.join([w['fullTitle'],txt(raw.get('benchmark')),txt(raw.get('publication')), '原文定位：'+txt(w['locators']), '核查来源：'+' '.join(sources or [w['source']])])
     w['sensorOrigin']=raw.get('sensorOrigin') or ('真实F/T传感器' if 'F/T传感器' in raw.get('sensorSource','') or 'OptoForce' in raw.get('sensorSource','') else infer_sensor(w))
     return w
@@ -199,13 +197,6 @@ def enrich(data):
             if not matches:continue
             def collect(key):return '；'.join(e['task']+'：'+e[key] for e in matches)
             instances.append(dict(id=w['id']+'-'+task['id'],work=w['id'],task=task['id'],label=task['name'],purpose=collect('purpose'),method=collect('method'),metrics=collect('metric'),setting=collect('setting'),source=matches[0]['source'],locator=collect('locator'),level='逐任务已整理',protocols=matches,offline=all(e['evaluationModes']==['离线'] for e in matches)))
-    # Original evaluation figures, linked directly to authors/arXiv with attribution.
-    images={
-        'precision':dict(url='https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg',caption='FACT 插头插入实验，Figure 1局部',source='https://arxiv.org/html/2608.01402v1#S1.F1'),
-        'surface':dict(url='https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png',caption='DEFT-VLA 任务阶段图，Figure 4（含擦板）',source='https://arxiv.org/html/2610.14854v1#S4'),
-        'grasp':dict(url='https://arxiv.org/html/2610.19155v1/randomness_v7.png',caption='FACT 灵巧手真机评测随机化，Figure 4',source='https://arxiv.org/html/2610.19155v1#S5'),
-    }
-    for g in TASK_GROUPS:g['image']=images.get(g['id'])
     used={i['task'] for i in instances};categories=[t for t in categories if t['id'] in used]
     for t in categories:t.pop('pattern',None)
     data.update(updated=DATE,originalSnapshot='2026-10-15',taskGroups=TASK_GROUPS,taskTypes=categories,taskInstances=instances,attentionMethodology=attention.get('methodology',{}))

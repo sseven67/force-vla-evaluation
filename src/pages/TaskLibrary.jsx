@@ -2,11 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useCatalogue } from "../data/catalogue.js";
 import {
   PageIntro,
-  External,
   Filter,
   Icon,
 } from "../components/ui.jsx";
-import { CategoryVisual, TaskSketch } from "../components/Figures.jsx";
 import {
   DEFAULT_WORK_FILTERS,
   filterTaskInstances,
@@ -324,30 +322,16 @@ function TaskLibrary({ item, ...p }) {
                   key={g.id}
                   style={{ "--color": g.color }}
                 >
-                  <button
-                    className="category-image"
-                    aria-label={"筛选" + g.name}
-                    onClick={() => setCategory(category === g.id ? "" : g.id)}
-                  >
-                    {g.image ? (
-                      <CategoryVisual group={g} />
-                    ) : (
-                      <TaskSketch type={g.icon} />
-                    )}
-                  </button>
-                  {g.image && (
-                    <div className="image-credit">
-                      <External href={g.image.source}>
-                        {g.image.caption}
-                      </External>
-                    </div>
-                  )}
                   <div className="category-content">
-                    <button
-                      onClick={() => setCategory(category === g.id ? "" : g.id)}
-                    >
-                      <h2>{g.name}</h2>
-                    </button>
+                    <h2>
+                      <button
+                        type="button"
+                        aria-pressed={category === g.id}
+                        onClick={() => setCategory(category === g.id ? "" : g.id)}
+                      >
+                        {g.name}
+                      </button>
+                    </h2>
                     <p>{g.description}</p>
                     <small>
                       {ts.length} 个小分类 · {workCount} 项相关工作

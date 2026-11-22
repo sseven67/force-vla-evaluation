@@ -304,11 +304,6 @@
           "目标姿态〔3〕",
           "夹爪目标〔1〕"
         ],
-        "figure": {
-          "url": "https://forcebench-platform.github.io/assets/figures/simulation-tasks.webp",
-          "source": "https://forcebench-platform.github.io/assets/figures/simulation-tasks.webp",
-          "caption": "ForceBench 官方任务图：六种仿真环境承载八项任务，水龙头和炉灶环境分别包含两项任务。"
-        },
         "categories": [
           {
             "title": "物理属性推断",
@@ -348,11 +343,6 @@
               12
             ],
             "description": "使用真机演示单独训练策略，检验力觉融合方法在真实操作中是否仍然有效。每项任务提供 200 条演示，每种方法在相同的 20 个初始条件下测试；真机结果单独统计。",
-            "figure": {
-              "url": "https://forcebench-platform.github.io/assets/figures/real-world-tasks.webp",
-              "source": "https://forcebench-platform.github.io/",
-              "caption": "ForceBench 官方真机任务图：重量分类、泡沫中取盘、盖章、插头插入、积木插槽。"
-            },
             "source": "https://arxiv.org/html/2610.19604v1#A3.SS2",
             "locator": "真机任务与测试协议 · 论文附录 C-B"
           }

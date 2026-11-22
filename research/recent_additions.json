@@ -37,12 +37,7 @@
         "url": "https://github.com/qft-333/FM-VLA",
         "note": "官方仓库提供实现与使用说明；真机任务由作者自建。"
       },
-      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2607.18231v1/teaser_v1.png",
-        "caption": "FM-VLA接触记忆任务示意，原文Figure 1",
-        "source": "https://arxiv.org/html/2607.18231"
-      }
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。"
     },
     {
       "id": "N02",
@@ -81,11 +76,6 @@
         "note": "官网标注ECCV 2026已接收，代码和数据待公开；真机任务自建，离线编码器测试采用T3及TacBench。"
       },
       "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2603.14604v2/task_setup.png",
-        "caption": "TacFiLM插入和抽屉任务，原文Figure 3",
-        "source": "https://arxiv.org/html/2603.14604"
-      },
       "relations": [
         {
           "benchmark": "suite-n02",
@@ -139,12 +129,7 @@
         "url": "https://arxiv.org/html/2606.31723",
         "note": "论文提供平台、任务和实现说明；本轮未确认独立官方代码入口。"
       },
-      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2606.31723v1/setup.png",
-        "caption": "UniTacVLA硬件和任务，原文Figure 2",
-        "source": "https://arxiv.org/html/2606.31723"
-      }
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。"
     },
     {
       "id": "N04",
@@ -182,12 +167,7 @@
         "url": "https://phanes-lab.github.io/TouchWorld-website/",
         "note": "项目页展示系统与实验；本轮未确认独立官方代码入口。"
       },
-      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2607.07287v2/task_setting.png",
-        "caption": "TouchWorld六项真机任务，原文Figure 4",
-        "source": "https://arxiv.org/html/2607.07287"
-      }
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。"
     },
     {
       "id": "N05",
@@ -225,12 +205,7 @@
         "url": "https://arxiv.org/html/2608.01824",
         "note": "正文和附录公开任务评分、测试划分及实现设置；本轮未确认独立官方代码入口。"
       },
-      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。",
-      "image": {
-        "url": "https://arxiv.org/html/2608.01824v2/figure3.png",
-        "caption": "ReTouch七项真机任务，原文Figure 3",
-        "source": "https://arxiv.org/html/2608.01824"
-      }
+      "benchmark": "作者自建真机任务；任务、评分和对照见本论文。"
     }
   ]
 }

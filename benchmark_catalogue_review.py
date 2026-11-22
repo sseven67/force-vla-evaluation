@@ -4,6 +4,25 @@ import json
 from pathlib import Path
 
 
+def reviewed_task_groups(page, source, previews):
+    groups = []
+    for group in page['taskGroups']:
+        items = []
+        for task in group['tasks']:
+            for subtask in task.get('subtasks') or [task]:
+                name = subtask['name']
+                items.append({
+                    'name': name,
+                    'goal': subtask.get('goal') or task['goal'],
+                    'scoring': task['scoring'],
+                    **previews.get(name, {}),
+                })
+        groups.append(dict(title=group['title'], domain='仿真',
+                           source=group['sources'][0]['url'] if group.get('sources') else source,
+                           locator='官方任务目录', items=items))
+    return groups
+
+
 def apply_benchmark_catalogue_review(data):
     review = json.loads((Path(__file__).parent / 'research' / 'benchmark_catalogue_review.json').read_text(encoding='utf-8'))
     removed = set(review['removedIds'])
@@ -15,28 +34,12 @@ def apply_benchmark_catalogue_review(data):
         b['relatedResources'] = [bid for bid in b.get('relatedResources', []) if bid not in removed]
         reading = b['reading']
         record = review['records'][b['id']]
-        if b['id'] == 'forcebench':
-            page = reading['detailPage']
-            page['overviewFigure'] = page.pop('figure', None)
-            for group in page['categories']:
-                group.pop('figure', None)
-        elif 'simulationDetail' in reading:
+        if 'simulationDetail' in reading:
             page = reading['simulationDetail']
             page.update(copy.deepcopy(record.get('page', {})))
-            page['overviewFigure'] = page.pop('figure', None)
-            for group in page['taskGroups']:
-                group.pop('figure', None)
-            if page.get('real'):
-                page['real'].pop('figure', None)
-                page['real'].pop('figures', None)
-                for group in page['real']['groups']:
-                    group.pop('figure', None)
-            for comparison in page['comparisons']:
-                comparison.pop('figure', None)
             # Search and previews use the same reviewed names as the detail page.
-            reading['taskGroups'] = [dict(title=g['title'], domain='仿真', source=g['sources'][0]['url'] if g.get('sources') else reading['source'], locator='官方任务目录',
-                items=[dict(name=s['name'], goal=s.get('goal') or t['goal'], scoring=t['scoring']) for t in g['tasks'] for s in (t.get('subtasks') or [t])]) for g in page['taskGroups']]
-        else:
+            reading['taskGroups'] = reviewed_task_groups(page, reading['source'], record.get('taskPreviews', {}))
+        elif b['id'] != 'forcebench':
             reading.update(copy.deepcopy(record.get('reading', {})))
         b['tasks'] = [t['name'] for g in reading['taskGroups'] for t in g['items']]
     data['resourceUpdated'] = review['checked']

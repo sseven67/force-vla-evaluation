@@ -37,11 +37,6 @@
         "§6、Tables 1–4",
         "Appendix A–B、Table A.1"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2608.01402v1/images/plug_1.jpeg",
-        "caption": "FACT 插头插入实验，原文Figure 1（局部）",
-        "source": "https://arxiv.org/html/2608.01402v1#S1.F1"
-      },
       "experiments": [
         {
           "task": "插头 / USB",
@@ -115,11 +110,6 @@
         "§V-A、Table I",
         "Appendix E"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2610.19155v1/randomness_v7.png",
-        "caption": "FACT 十任务真机评测随机化，原文Figure 4",
-        "source": "https://arxiv.org/html/2610.19155v1#S5"
-      },
       "experiments": [
         {
           "task": "移液器调量",
@@ -220,11 +210,6 @@
       "locators": [
         "§IV-A–D、Tables I–III"
       ],
-      "image": {
-        "url": "https://arxiv.org/html/2610.14854v1/figures/DEFT_VLA_task_montage_revised_slide1.png",
-        "caption": "DEFT-VLA 三类真机任务及阶段分解，原文Figure 4",
-        "source": "https://arxiv.org/html/2610.14854v1#S4"
-      },
       "experiments": [
         {
           "task": "擦白板",

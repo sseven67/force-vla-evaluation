@@ -10,13 +10,13 @@
 
 日常打开：双击本目录的 `start-local.bat`，保持启动窗口开启，访问 http://127.0.0.1:8765/#works 。按 Ctrl+C 停止。
 
-也可在本目录执行：
+在 Linux 或新克隆的仓库中，首次运行 `npm ci` 安装依赖。在网站目录执行：
 
 ```powershell
 npm start
 ```
 
-依赖已安装，无需每次重装；复制到新电脑时先运行 `npm ci`。修改 React / CSS 后自动刷新；修改研究 JSON 后运行 `python prepare_data.py` 并刷新页面。
+修改 React 或 CSS 后，页面会自动刷新。修改研究 JSON 或 `public/documents/` 中的调研资料后，运行 `python prepare_data.py` 并刷新页面。
 
 地址固定为 127.0.0.1:8765，保留原地址下的浏览器收藏和笔记。仅监听本机，无需登录。论文链接和远程图片仍需网络。端口占用时会报错，不自动换端口。
 
@@ -34,7 +34,7 @@ dist 由 Vite 生成，不手工修改。
 
 仓库首次发布时，在 Settings → Pages → Build and deployment 中将 Source 设为 GitHub Actions。`.github/workflows/pages.yml` 会在推送到 `main` 后检查现有目录数据、构建网站并发布 `dist`，也可从 Actions 页面手动运行。
 
-日常修改 React / CSS 后提交并推送即可自动更新网站。修改研究资料后，先在本地运行 `python prepare_data.py`，再将更新的研究资料及 `public/catalogue.json`、`public/data.js` 一并提交；云端直接使用这些生成文件，不依赖上级目录中的原始文档。通过检查与部署后，在线网址保持不变。
+修改 React 或 CSS 后，提交并推送到 `main` 即可更新网站。修改研究资料后，在网站仓库运行 `python prepare_data.py`，再将更新的资料及 `public/catalogue.json`、`public/data.js` 一并提交。发布流程使用这些生成文件，成功后沿用原有网址。
 
 收藏和笔记保存在当前浏览器对应网址的 localStorage 中，本地地址和线上地址的数据不互通。迁移前可在来源窗口导出 JSON 备份。`public/documents` 中的原始文档会随网站公开提供下载。
 
@@ -48,7 +48,7 @@ dist 由 Vite 生成，不手工修改。
 - src/hooks/：Hash 路由、本地阅读记录、论文库状态及移动导航行为；useScrollLock 统一管理导航和弹窗的滚动锁定；兼容原有链接及笔记存储键。
 - src/main.jsx：异步读取 catalogue.json，建立索引；加载失败时提供重试入口。
 - src/styles.css：桌面/移动端样式。
-- prepare_data.py：读取上级四份调研文档及原始32项结构化数据。
+- prepare_data.py：读取仓库内的调研文档和原始 32 项结构化数据，生成网站目录。
 - enrich_data.py：合并新增研究、关注度记录，生成任务交叉索引。
 - review_data.py、research/verification_*.json：逐篇核对来源、逐任务修正及状态；verified=所需评测信息已核对，not_reported=查过的相关原文未说明某项细节，pending=仍未查清。只调研评测，不以是否完成机器人复现作为核查条件。生成页面时将专业说法换为易懂表述，保留原始数字、单位和出处。
 - task_protocols.py、research/task_protocols_*.json：逐任务的评测目的、指标、设置、原始判分要求及原文定位，覆盖全部研究记录；缺少任何必需字段时生成检查会失败，不回退到论文级字段。
@@ -65,7 +65,7 @@ dist 由 Vite 生成，不手工修改。
 - research/contact_additions.json：力控、灵巧手、硬件与仿真前序。
 - research/attention.json、attention_new.json：带来源/日期的引用及GitHub计数。
 - public/catalogue.json：页面读取和下载使用的完整目录。public/data.js 保留生成兼容，页面不再依赖全局变量。
-- public/documents：四份原始调研文档的副本，原文件未改动。
+- public/documents：四份调研文档，供网站生成目录和读者下载。
 
 新增论文时，在研究JSON的works数组加入一条，保留唯一id、name/fullTitle、year、source、信号、输出以及任务/目的/指标/设置/对比/资源六项字段，然后运行python prepare_data.py。在research/taxonomy.json中为该条目指定一类或多类，或归入resourceOnly；页面与任务覆盖索引自动更新，无需修改React组件。若要新增任务主题，在enrich_data.py的TASKS中增加明确的关键词映射。
 
@@ -87,7 +87,7 @@ dist 由 Vite 生成，不手工修改。
 
 null=未知/未获取，0=API明确返回0；缺失值排序在后。每个可用数值附原始API和记录链接。不生成无来源的综合热度分。
 
-任务同名不意味着共享benchmark。分别记录原论文采用、自建、上游衍生、后续重新评测。任务和能力映射为阅读归纳，未逐表核实的成绩不生成排行榜。论文原图使用作者/arXiv远程资源并注明出处；网络不可用时显示明确的任务示意与原图入口。
+任务同名不意味着共享 Benchmark。分别记录原论文采用、自建、上游衍生和后续重新评测。任务和能力映射为阅读归纳，未逐表核实的成绩不生成排行榜。论文和 Benchmark 详情保留原文来源链接。
 
 收藏、阅读状态与笔记仅保存在当前浏览器localStorage，可在来源窗口导出JSON；不跨设备同步。
 

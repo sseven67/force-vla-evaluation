@@ -3,12 +3,10 @@
 from pathlib import Path
 import json
 import re
-import shutil
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT.parent
-DIST = ROOT / 'public'
-DIST.mkdir(exist_ok=True)
+PUBLIC = ROOT / 'public'
+DOCUMENTS = PUBLIC / 'documents'
 
 
 # id, name, year, family, signal, role, platform, short contribution, tasks, metrics
@@ -63,7 +61,7 @@ SIMREAL = {'W11':['仿真'],'E02':['仿真','真机'],'E03':['仿真','真机'],
 
 texts = {}
 for filename in ['带力控制VLA评测调研_详细版.md','带力控制VLA扩展调研_详细版.md']:
-    raw = (SOURCE / filename).read_text(encoding='utf-8')
+    raw = (DOCUMENTS / filename).read_text(encoding='utf-8')
     matches = list(re.finditer(r'^### ((?:W|E)\d{2})\s+[—–-].*$', raw, re.M))
     for i,m in enumerate(matches):
         end = matches[i+1].start() if i+1 < len(matches) else len(raw)
@@ -193,15 +191,13 @@ for work in works:
     work['experiments']=[]
     work['purpose']=work['summary']
 
-documents=[]
-for p in sorted(SOURCE.glob('*.md')):
-    target=DIST/'documents'/p.name
-    target.parent.mkdir(exist_ok=True)
-    shutil.copy2(p,target)
-    documents.append(dict(name=p.stem,url='documents/'+p.name))
+documents = [
+    dict(name=path.stem, url=path.relative_to(PUBLIC).as_posix())
+    for path in sorted(DOCUMENTS.glob('*.md'))
+]
 
 from enrich_data import enrich
 data=enrich(dict(updated='2026-10-15',groups=[],works=works,benchmarks=benchmarks,extraRelations=EXTRA,features=FEATURES,documents=documents))
-(DIST/'data.js').write_text('window.RESEARCH_DATA = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
-(DIST/'catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+(PUBLIC/'data.js').write_text('window.RESEARCH_DATA = '+json.dumps(data,ensure_ascii=False,separators=(',', ':'))+';\n',encoding='utf-8')
+(PUBLIC/'catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(works=len(data['works']),benchmarks=len(data['benchmarks']),sources=len(documents),missingNotes=[w['id'] for w in data['works'] if not w['notes']]),ensure_ascii=False))

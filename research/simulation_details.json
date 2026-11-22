@@ -168,12 +168,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/libero.png",
-          "source": "https://arxiv.org/html/2306.03310v2/libero_fig1.png",
-          "caption": "LIBERO · 论文 F1（点击查看原图）",
-          "paper": "https://arxiv.org/html/2306.03310#S1.F1"
-        },
         "taskGroups": [
           {
             "title": "空间关系",
@@ -527,12 +521,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/robotwin.png",
-          "source": "https://arxiv.org/html/2506.18088v2/demo_tasks.png",
-          "caption": "RoboTwin 2.0 · 论文 F8（点击查看原图）",
-          "paper": "https://arxiv.org/html/2506.18088v2#S3.F8"
-        },
         "taskGroups": [
           {
             "title": "抓放、排序与双臂协同",
@@ -680,12 +668,6 @@
         ],
         "real": {
           "protocol": "4 项任务均使用 RDT；对比每任务 10 条真机示教、10 条真机＋1,000 条仿真、仅 1,000 条仿真。分别测试已见／未见背景与有／无杂物；论文未单独给出每格试验次数。",
-          "figure": {
-            "url": "figures/benchmarks/robotwin-real.png",
-            "source": "https://arxiv.org/html/2506.18088v2/real-world-experiment.png",
-            "caption": "RoboTwin 2.0 · 论文 F10（点击查看原图）",
-            "paper": "https://arxiv.org/html/2506.18088v2#S4.F10"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -876,12 +858,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/univtac.png",
-          "source": "https://arxiv.org/html/2602.10093v1/tasks.png",
-          "caption": "UniVTAC · 论文 F3（点击查看原图）",
-          "paper": "https://arxiv.org/html/2602.10093v1#S3.F3"
-        },
         "taskGroups": [
           {
             "title": "姿态推理",
@@ -1133,12 +1109,6 @@
         ],
         "real": {
           "protocol": "Marvin 7-DoF 机械臂、平行夹爪和两枚 ViTai GF225；每任务 150 条真机遥操作演示训练策略，仿真预训练编码器冻结迁移。真机次数未单列，结果与仿真分开。",
-          "figure": {
-            "url": "figures/benchmarks/univtac-real.png",
-            "source": "https://arxiv.org/html/2602.10093v1/real_world_tasks.png",
-            "caption": "UniVTAC · 论文 F6（点击查看原图）",
-            "paper": "https://arxiv.org/html/2602.10093v1#S4.F6"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -1310,12 +1280,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/openvitac.png",
-          "source": "https://arxiv.org/html/2610.10384v1/main_teaser.png",
-          "caption": "OpenViTac · 论文 F1（点击查看原图）",
-          "paper": "https://arxiv.org/html/2610.10384v1#S0.F1"
-        },
         "taskGroups": [
           {
             "title": "物理性质感知",
@@ -1825,12 +1789,6 @@
         ],
         "real": {
           "protocol": "8 类对应任务：RC、ECS、GC、GA、PD、USB、Block v1、Block v2。真机示教池分别为 100、100、100、200、100、200、400、1,200 条；各策略仅抽取每项 100 条，Block v2 为 300 条。",
-          "figure": {
-            "url": "figures/benchmarks/openvitac-real.png",
-            "source": "https://arxiv.org/html/2610.10384v1/x5.png",
-            "caption": "OpenViTac · 论文 F18（点击查看原图）",
-            "paper": "https://arxiv.org/html/2610.10384v1#A5.F18"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -1869,33 +1827,6 @@
             {
               "url": "https://arxiv.org/html/2610.10384v1",
               "label": "论文 · 真机协议与结果"
-            }
-          ],
-          "figures": [
-            {
-              "url": "figures/benchmarks/openvitac-real-cans.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x1.png",
-              "caption": "OpenViTac · 论文 A5.F14（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-gears.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x2.png",
-              "caption": "OpenViTac · 论文 A5.F15（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-chip.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x3.png",
-              "caption": "OpenViTac · 论文 A5.F16（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-drawer.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x4.png",
-              "caption": "OpenViTac · 论文 A5.F17（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-block.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x6.png",
-              "caption": "OpenViTac · 论文 A5.F19（点击查看原图）"
             }
           ],
           "correspondence": "与对应仿真一致：粗糙度分类、空罐选择、薯片抓放、齿轮装配、拉抽屉、USB 插入、方块插入 v1／v2，共 8 项，任务目标与成功条件一致。重量分类、硬度分类、粗糙度再抓取仅在仿真中评测。"
@@ -2085,12 +2016,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/manifeel.png",
-          "source": "https://arxiv.org/html/2505.18472v2/Figure_tasksuite.png",
-          "caption": "ManiFeel · 论文 F1（点击查看原图）",
-          "paper": "https://arxiv.org/html/2505.18472v2#S1.F1"
-        },
         "taskGroups": [
           {
             "title": "插入与装配",
@@ -2229,11 +2154,6 @@
           {
             "title": "真机模态对照",
             "protocol": "三类任务、四种设置的实测成功率由论文 Figure 11 给出；每设置 15 次，保留原图，避免从图中估读小数。",
-            "figure": {
-              "url": "figures/benchmarks/manifeel-real-results.svg",
-              "source": "https://arxiv.org/html/2505.18472v2/Fig_real_sim_compare.svg",
-              "caption": "ManiFeel · 论文 Figure 11（点击查看原始矢量图）"
-            },
             "sources": [
               {
                 "url": "https://arxiv.org/html/2505.18472v2#S4.F11",
@@ -2257,12 +2177,6 @@
         ],
         "real": {
           "protocol": "Franka＋GelSight R1.5；4 种设置。使用真机数据从头训练 DP，比较 Vision、Vision＋TacRGB、Vision＋TacFF；不是仿真策略直接迁移，每设置 15 次。",
-          "figure": {
-            "url": "figures/benchmarks/manifeel-real.png",
-            "source": "https://arxiv.org/html/2505.18472v2/Fig_real_demo_gear.png",
-            "caption": "ManiFeel · 论文 sf1（点击查看原图）",
-            "paper": "https://arxiv.org/html/2505.18472v2#S4.F10.sf1"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -2301,23 +2215,6 @@
             {
               "url": "https://arxiv.org/html/2505.18472v2",
               "label": "论文 · 真机协议与结果"
-            }
-          ],
-          "figures": [
-            {
-              "url": "figures/benchmarks/manifeel-real-bulb.png",
-              "source": "https://arxiv.org/html/2505.18472v2/Fig_real_demo_bulb.png",
-              "caption": "ManiFeel · 论文 S4.F10.sf2（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/manifeel-real-normal.png",
-              "source": "https://arxiv.org/html/2505.18472v2/Fig_real_demo_ball_normal.png",
-              "caption": "ManiFeel · 论文 S4.F10.sf3（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/manifeel-real-dim.png",
-              "source": "https://arxiv.org/html/2505.18472v2/Fig_real_demo_ball_dim.png",
-              "caption": "ManiFeel · 论文 S4.F10.sf4（点击查看原图）"
             }
           ],
           "correspondence": "真机选取与仿真对应的齿轮装配、灯泡安装、分球 3 类任务；分球另分正常光、暗光，共 4 种真机设置。"
@@ -2486,12 +2383,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/tabero.png",
-          "source": "https://arxiv.org/html/2605.27886v1/figs/mul_task_new.png",
-          "caption": "Tabero · 论文 F4（点击查看原图）",
-          "paper": "https://arxiv.org/html/2605.27886v1#S3.F4"
-        },
         "taskGroups": [
           {
             "title": "语言条件入篮",
@@ -2757,12 +2648,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/rlbench.png",
-          "source": "https://arxiv.org/html/1909.12271v1/task_grid.png",
-          "caption": "RLBench · 论文 F1（点击查看原图）",
-          "paper": "https://arxiv.org/html/1909.12271#S1.F1"
-        },
         "taskGroups": [
           {
             "title": "抓放与整理",
@@ -3109,12 +2994,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/calvin.png",
-          "source": "https://arxiv.org/html/2112.03227v4/figures/scene.png",
-          "caption": "CALVIN · 论文 F3（点击查看原图）",
-          "paper": "https://arxiv.org/html/2112.03227#S3.F3"
-        },
         "taskGroups": [
           {
             "title": "积木与堆叠",
@@ -3507,11 +3386,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/robocasa365.png",
-          "source": "https://robocasa.ai/assets/robocasa365_iclr26.pdf#page=1",
-          "caption": "RoboCasa365 · 论文 Figure 1（原始论文图像）"
-        },
         "taskGroups": [
           {
             "title": "原子任务",
@@ -3853,12 +3727,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/colosseum.png",
-          "source": "https://arxiv.org/html/2402.08191v2/figure2.png",
-          "caption": "THE COLOSSEUM · 论文 F2（点击查看原图）",
-          "paper": "https://arxiv.org/html/2402.08191#S1.F2"
-        },
         "taskGroups": [
           {
             "title": "抓放与容器操作",
@@ -4147,12 +4015,6 @@
         ],
         "real": {
           "protocol": "Panda、平行夹爪与 Kinect-2 RGB-D；方孔套销、滑块、铲取、摆棋四任务，每项 5 条 HTC Vive 遥操作演示。真机 PerAct 用真机数据训练；对应仿真模型另行训练。每条件 10 次、重复 3 轮。",
-          "figure": {
-            "url": "figures/benchmarks/colosseum-real.jpg",
-            "source": "https://arxiv.org/html/2402.08191v2/figures/realworld.jpg",
-            "caption": "THE COLOSSEUM · 论文 F4（点击查看原图）",
-            "paper": "https://arxiv.org/html/2402.08191#S3.F4"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -4421,12 +4283,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/robotwin-phys.jpg",
-          "source": "https://arxiv.org/html/2609.26292v1/figures/dataset.jpg",
-          "caption": "RoboTwin-Phys · 论文 F2（点击查看原图）",
-          "paper": "https://arxiv.org/html/2609.26292#S2.F2"
-        },
         "taskGroups": [
           {
             "title": "抓放、协同与动力学",
@@ -4750,12 +4606,6 @@
             "label": "论文 v3 · 增强数据与划分"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/libero-plus.png",
-          "source": "https://arxiv.org/html/2510.13626v3/imgs/benchmark_component.png",
-          "caption": "LIBERO-Plus · 论文 F6（点击查看原图）",
-          "paper": "https://arxiv.org/html/2510.13626#S6.F6"
-        },
         "taskGroups": [
           {
             "title": "任务语义不变的扰动实例",
@@ -5131,12 +4981,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/libero-rig.png",
-          "source": "https://arxiv.org/html/2610.18843v1/teaser.png",
-          "caption": "LIBERO-RIG · 论文 F1（点击查看原图）",
-          "paper": "https://arxiv.org/html/2610.18843v1#S0.F1"
-        },
         "taskGroups": [
           {
             "title": "保留原始操作目标",
@@ -5461,12 +5305,6 @@
             "label": "论文 · 配置、数据与测试协议"
           }
         ],
-        "figure": {
-          "url": "figures/benchmarks/dexmimicgen.png",
-          "source": "https://arxiv.org/html/2410.24185v2/fig_task_v1.png",
-          "caption": "DexMimicGen · 论文 F4（点击查看原图）",
-          "paper": "https://arxiv.org/html/2410.24185#S5.F4"
-        },
         "taskGroups": [
           {
             "title": "并行与协调",
@@ -5647,12 +5485,6 @@
         ],
         "real": {
           "protocol": "GR-1 人形机器人与灵巧手；仅 Can Sorting。4 条真机源示教重放到数字孪生，在仿真验证新轨迹后回放真机，收集 40 条成功真机演示训练 DP。",
-          "figure": {
-            "url": "figures/benchmarks/dexmimicgen-real.png",
-            "source": "https://arxiv.org/html/2410.24185v2/fig_real_v0.png",
-            "caption": "DexMimicGen · 论文 F6（点击查看原图）",
-            "paper": "https://arxiv.org/html/2410.24185#S6.F6"
-          },
           "groups": [
             {
               "title": "真机任务",

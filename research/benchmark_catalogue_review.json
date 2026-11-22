@@ -429,6 +429,28 @@
       ]
     },
     "suite-t04": {
+      "taskPreviews": {
+        "重量分类": {
+          "goal": "判断轻重并放到对应目标盘。",
+          "scoring": "属性类别正确且放置正确。"
+        },
+        "硬度分类": {
+          "goal": "判断软硬并放到对应目标盘。",
+          "scoring": "属性类别正确且放置正确。"
+        },
+        "粗糙度分类": {
+          "goal": "判断光滑或粗糙并分类放置。",
+          "scoring": "选出要求的粗糙物体并放到目标盘。"
+        },
+        "粗糙度引导再抓取": {
+          "goal": "根据粗糙度保留或重新选择物体。",
+          "scoring": "选出要求的粗糙物体并放到目标盘。"
+        },
+        "空罐选择": {
+          "goal": "从外观相近的罐子中找出空罐。",
+          "scoring": "将空罐放入篮筐。"
+        }
+      },
       "page": {
         "taskGroups": [
           {
@@ -618,12 +640,6 @@
         ],
         "real": {
           "protocol": "8 类对应任务：RC、ECS、GC、GA、PD、USB、Block v1、Block v2。真机示教池分别为 100、100、100、200、100、200、400、1,200 条；各策略仅抽取每项 100 条，Block v2 为 300 条。",
-          "figure": {
-            "url": "figures/benchmarks/openvitac-real.png",
-            "source": "https://arxiv.org/html/2610.10384v1/x5.png",
-            "caption": "OpenViTac · 论文 F18（点击查看原图）",
-            "paper": "https://arxiv.org/html/2610.10384v1#A5.F18"
-          },
           "groups": [
             {
               "title": "真机任务",
@@ -702,33 +718,6 @@
             {
               "url": "https://arxiv.org/html/2610.10384v1",
               "label": "论文 · 真机协议与结果"
-            }
-          ],
-          "figures": [
-            {
-              "url": "figures/benchmarks/openvitac-real-cans.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x1.png",
-              "caption": "OpenViTac · 论文 A5.F14（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-gears.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x2.png",
-              "caption": "OpenViTac · 论文 A5.F15（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-chip.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x3.png",
-              "caption": "OpenViTac · 论文 A5.F16（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-drawer.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x4.png",
-              "caption": "OpenViTac · 论文 A5.F17（点击查看原图）"
-            },
-            {
-              "url": "figures/benchmarks/openvitac-real-block.png",
-              "source": "https://arxiv.org/html/2610.10384v1/x6.png",
-              "caption": "OpenViTac · 论文 A5.F19（点击查看原图）"
             }
           ],
           "correspondence": "与对应仿真一致：粗糙度分类、空罐选择、薯片抓放、齿轮装配、拉抽屉、USB 插入、方块插入 v1／v2，共 8 项，任务目标与成功条件一致。重量分类、硬度分类、粗糙度再抓取仅在仿真中评测。"
@@ -1002,13 +991,7 @@
             "locator": "Appendix A，Table S1；Appendix E",
             "source": "https://arxiv.org/html/2609.15726v1"
           }
-        ],
-        "overviewFigure": {
-          "url": "figures/benchmarks/bench2dex-overview.png",
-          "source": "https://arxiv.org/html/2609.15726v1",
-          "originalUrl": "https://arxiv.org/html/2609.15726v1/overview.png",
-          "caption": "Bench2Dex · 官方 Figure 1：任务与平台总览"
-        }
+        ]
       },
       "sources": [
         "https://arxiv.org/html/2609.15726v1"
@@ -1045,13 +1028,7 @@
             "source": "https://arxiv.org/html/2411.12503v1",
             "locator": "§III–V；官方赛道规则"
           }
-        ],
-        "overviewFigure": {
-          "url": "figures/benchmarks/maniskill-vitac-2025-overview.png",
-          "source": "https://arxiv.org/html/2411.12503v1",
-          "originalUrl": "https://arxiv.org/html/2411.12503v1/head.png",
-          "caption": "ManiSkill-ViTac 2025 · 官方 Figure 1：仿真与真机平台总览"
-        }
+        ]
       },
       "sources": [
         "https://arxiv.org/html/2411.12503v1"
@@ -1450,13 +1427,7 @@
             "source": "https://arxiv.org/html/2605.16257v1",
             "locator": "§3.3；附录 B；ME-Dex Table 3"
           }
-        ],
-        "overviewFigure": {
-          "url": "figures/benchmarks/dexjoco-overview.png",
-          "source": "https://arxiv.org/html/2605.16257v1",
-          "originalUrl": "https://arxiv.org/html/2605.16257v1/teaser.png",
-          "caption": "DexJoCo（通用灵巧操作基准） · 官方 Figure 1：任务与平台总览"
-        }
+        ]
       },
       "sources": [
         "https://arxiv.org/html/2605.16257v1"
@@ -4302,12 +4273,6 @@
         "real": {
           "correspondence": "真机任务与仿真不是逐项配对；该部分测试物理部署能力，不作为同任务的直接 sim-to-real 迁移成绩。",
           "protocol": "三种本体各 6 项任务；每任务 100 条真机示教，重新进行对应本体的策略训练；每策略每任务 10 次，固定布局重放并独立评分。",
-          "figure": {
-            "url": "figures/benchmarks/robodojo-real.png",
-            "originalUrl": "https://arxiv.org/html/2607.04434v3/real_highlight.png",
-            "source": "https://arxiv.org/html/2607.04434v3#S3.SS2",
-            "caption": "RoboDojo · 论文 Figure 4：真机任务关键帧"
-          },
           "groups": [
             {
               "title": "ARX X5",
@@ -4821,13 +4786,7 @@
                 "label": "论文附录 VIII · 全部任务类别"
               }
             ],
-            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。",
-            "figure": {
-              "url": "figures/benchmarks/robocasa-composite.png",
-              "originalUrl": "https://arxiv.org/html/2406.02523v1/task_gen_fig_v3_comp.png",
-              "source": "https://arxiv.org/html/2406.02523v1#S3",
-              "caption": "RoboCasa · 原论文 Figure 5：组合任务示例"
-            }
+            "note": "20 种活动：煮咖啡或茶、洗碗、补充用品、切菜准备、做吐司、解冻、烧水、肉类准备、摆餐桌、清餐桌、消毒准备、零食准备、整理柜子抽屉、洗果蔬、煎炒准备、加热、混合、烘焙准备、盛装食物、蒸菜准备。"
           }
         ]
       },
@@ -4840,12 +4799,6 @@
         "real": {
           "correspondence": "同一真实数据训练的策略在对应真机和仿真中分别运行，验证 real-to-sim 评测代理；不是仿真训练后迁移到真机。",
           "protocol": "真实任务初态按附录 B 枚举；Google 与 WidowX 分别记录任务完成及中间进度，真机次数与仿真颜色／种子扩展分开统计。",
-          "figure": {
-            "url": "figures/benchmarks/simpler-real.png",
-            "originalUrl": "https://simpler-env.github.io/static/images/visual_matching.png",
-            "source": "https://simpler-env.github.io/#visual-matching-mitigates-the-real-to-sim-visual-gap",
-            "caption": "SimplerEnv · 官方项目：真实场景与视觉匹配仿真的对照"
-          },
           "groups": [
             {
               "title": "Google Robot 真机",
