@@ -59,9 +59,12 @@ WARNINGS = {
 
 SIMREAL = {'W11':['仿真'],'E02':['仿真','真机'],'E03':['仿真','真机'],'E04':['仿真','真机'],'E09':['仿真','真机'],'E11':['仿真'],'B01':['仿真','真机'],'X01':['仿真','真机']}
 
+detailed_notes = [
+    (DOCUMENTS / filename).read_text(encoding='utf-8')
+    for filename in ('带力控制VLA评测调研_详细版.md', '带力控制VLA扩展调研_详细版.md')
+]
 texts = {}
-for filename in ['带力控制VLA评测调研_详细版.md','带力控制VLA扩展调研_详细版.md']:
-    raw = (DOCUMENTS / filename).read_text(encoding='utf-8')
+for raw in detailed_notes:
     matches = list(re.finditer(r'^### ((?:W|E)\d{2})\s+[—–-].*$', raw, re.M))
     for i,m in enumerate(matches):
         end = matches[i+1].start() if i+1 < len(matches) else len(raw)
@@ -197,7 +200,15 @@ documents = [
 ]
 
 from enrich_data import enrich
-data=enrich(dict(updated='2026-10-15',groups=[],works=works,benchmarks=benchmarks,extraRelations=EXTRA,features=FEATURES,documents=documents))
+data = enrich({
+    'updated': '2026-10-15',
+    'groups': [],
+    'works': works,
+    'benchmarks': benchmarks,
+    'extraRelations': EXTRA,
+    'features': FEATURES,
+    'documents': documents,
+}, detailed_notes)
 (PUBLIC/'data.js').write_text('window.RESEARCH_DATA = '+json.dumps(data,ensure_ascii=False,separators=(',', ':'))+';\n',encoding='utf-8')
 (PUBLIC/'catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(works=len(data['works']),benchmarks=len(data['benchmarks']),sources=len(documents),missingNotes=[w['id'] for w in data['works'] if not w['notes']]),ensure_ascii=False))

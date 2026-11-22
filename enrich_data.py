@@ -103,12 +103,12 @@ def infer_sensor(w):
     if any(k in s for k in ['F/T','wrench','六轴']):return 'F/T读数（测量链待核验）'
     return '其他 / 待核验'
 
-def enrich(data):
+def enrich(data, detailed_notes):
     works=data['works']; benches=data['benchmarks']
     # Extract verified locators from the existing detailed notes.
     provenance={}
-    for p in ROOT.parent.glob('*详细版.md'):
-        for line in p.read_text(encoding='utf-8').splitlines():
+    for notes in detailed_notes:
+        for line in notes.splitlines():
             m=re.match(r'\| ((?:W|E)\d{2}) \|.*\| ([^|]+) \|$',line)
             if m and ('§' in m.group(2) or 'Table' in m.group(2)):provenance[m.group(1)]=m.group(2).strip()
     audit={r['id']:r for r in load('arxiv_audit.json',[]) } if isinstance(load('arxiv_audit.json',[]),list) else {}
